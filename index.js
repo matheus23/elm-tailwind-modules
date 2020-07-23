@@ -5,22 +5,17 @@ const { promisify } = require("util");
 const mkdir = promisify(fs.mkdir);
 let h = require("./helpers.js");
 
-// successful
-// let marginSelectors = /^\.m[xy]?-.*$/;
-// let paddingSelectors = /^\.p[xy]?-.*$/;
-// let backgroundSelectors = /^\.bg-.*$/;
-// let shadowSelectors = /^\.shadow.*$/;
-// let hoverVariantSelectors = /^\.hover\\:.*$/;
-
 let supportedSelectors = {
   marginSelectors: /^\.m[xy]?-.*$/,
   paddingSelectors: /^\.p[xy]?-.*$/,
   backgroundSelectors: /^\.bg-.*$/,
   shadowSelectors: /^\.shadow.*$/,
   hoverVariantSelectors: /^\.hover\\:.*$/,
+  mediaQuerySelectors: /^\.lg\\:ml.*$/,
 };
 
 //TODO
+
 let roundedSelectors = /^\.rounded.*$/;
 let focusVariantSelectors;
 let breakpointVariants;
@@ -33,21 +28,24 @@ module.exports = postcss.plugin("postcss-elm-tailwind", (opts) => {
 
   let rawDeclarations = [];
   return (root, result) => {
-    root.walkAtRules((rule) => {
-      console.log(rule);
-    });
-
     Object.values(supportedSelectors).forEach((supportedRegex) => {
       root.walkRules(supportedRegex, (rule) => {
         rule.walkDecls((d) => {
+          let mediaQuery;
+          if (d.parent && d.parent.parent && d.parent.parent.name === "media") {
+            mediaQuery = d.parent.parent.params;
+          }
+
           rawDeclarations.push({
             selector: d.parent.selector,
             prop: d.prop,
             value: d.value,
+            mediaQuery: mediaQuery,
           });
         });
       });
     });
+    // let declarations = groupBy(rawDeclarations, "mediaQuery");
     let declarations = groupBy(rawDeclarations, "selector");
 
     // put back into a real map for handling through the helper functions.
@@ -55,7 +53,7 @@ module.exports = postcss.plugin("postcss-elm-tailwind", (opts) => {
     for (const [key, value] of Object.entries(declarations)) {
       let className = h.fixClass(key);
       let pseudoSelector = getPseudoSelector(key);
-      let processedDeclarations = processDeclarations(value, pseudoSelector);
+      let processedDeclarations = processDeclarations(value);
       // only add if we didn't filter out all unsupported declarations
       if (processedDeclarations.length > 0) {
         classes.set(key, {
@@ -63,6 +61,7 @@ module.exports = postcss.plugin("postcss-elm-tailwind", (opts) => {
           elmName: h.toElmName(className),
           pseudoSelector: pseudoSelector,
           declarations: processedDeclarations,
+          mediaQuery: processedDeclarations[0].mediaQuery, // clumsy way to do this.
         });
       }
     }
@@ -94,7 +93,7 @@ function processDeclarations(declaration) {
   return (
     declaration
       .map((d) => {
-        return { prop: d.prop, value: d.value };
+        return { prop: d.prop, value: d.value, mediaQuery: d.mediaQuery };
       })
       // can't support the custom property overrides inside of things like bg-color
       // as we need a var() function in Elm

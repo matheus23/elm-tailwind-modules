@@ -423,6 +423,2228 @@ module TW exposing
     , hover__text_yellow_800
     , hover__text_yellow_900
     , hover__underline
+    , lg__absolute
+    , lg__align_baseline
+    , lg__align_bottom
+    , lg__align_middle
+    , lg__align_text_bottom
+    , lg__align_text_top
+    , lg__align_top
+    , lg__antialiased
+    , lg__appearance_none
+    , lg__bg_auto
+    , lg__bg_black
+    , lg__bg_blue_100
+    , lg__bg_blue_200
+    , lg__bg_blue_300
+    , lg__bg_blue_400
+    , lg__bg_blue_500
+    , lg__bg_blue_600
+    , lg__bg_blue_700
+    , lg__bg_blue_800
+    , lg__bg_blue_900
+    , lg__bg_bottom
+    , lg__bg_center
+    , lg__bg_contain
+    , lg__bg_cover
+    , lg__bg_current
+    , lg__bg_fixed
+    , lg__bg_gray_100
+    , lg__bg_gray_200
+    , lg__bg_gray_300
+    , lg__bg_gray_400
+    , lg__bg_gray_500
+    , lg__bg_gray_600
+    , lg__bg_gray_700
+    , lg__bg_gray_800
+    , lg__bg_gray_900
+    , lg__bg_green_100
+    , lg__bg_green_200
+    , lg__bg_green_300
+    , lg__bg_green_400
+    , lg__bg_green_500
+    , lg__bg_green_600
+    , lg__bg_green_700
+    , lg__bg_green_800
+    , lg__bg_green_900
+    , lg__bg_indigo_100
+    , lg__bg_indigo_200
+    , lg__bg_indigo_300
+    , lg__bg_indigo_400
+    , lg__bg_indigo_500
+    , lg__bg_indigo_600
+    , lg__bg_indigo_700
+    , lg__bg_indigo_800
+    , lg__bg_indigo_900
+    , lg__bg_left
+    , lg__bg_left_bottom
+    , lg__bg_left_top
+    , lg__bg_local
+    , lg__bg_no_repeat
+    , lg__bg_orange_100
+    , lg__bg_orange_200
+    , lg__bg_orange_300
+    , lg__bg_orange_400
+    , lg__bg_orange_500
+    , lg__bg_orange_600
+    , lg__bg_orange_700
+    , lg__bg_orange_800
+    , lg__bg_orange_900
+    , lg__bg_pink_100
+    , lg__bg_pink_200
+    , lg__bg_pink_300
+    , lg__bg_pink_400
+    , lg__bg_pink_500
+    , lg__bg_pink_600
+    , lg__bg_pink_700
+    , lg__bg_pink_800
+    , lg__bg_pink_900
+    , lg__bg_purple_100
+    , lg__bg_purple_200
+    , lg__bg_purple_300
+    , lg__bg_purple_400
+    , lg__bg_purple_500
+    , lg__bg_purple_600
+    , lg__bg_purple_700
+    , lg__bg_purple_800
+    , lg__bg_purple_900
+    , lg__bg_red_100
+    , lg__bg_red_200
+    , lg__bg_red_300
+    , lg__bg_red_400
+    , lg__bg_red_500
+    , lg__bg_red_600
+    , lg__bg_red_700
+    , lg__bg_red_800
+    , lg__bg_red_900
+    , lg__bg_repeat
+    , lg__bg_repeat_round
+    , lg__bg_repeat_space
+    , lg__bg_repeat_x
+    , lg__bg_repeat_y
+    , lg__bg_right
+    , lg__bg_right_bottom
+    , lg__bg_right_top
+    , lg__bg_scroll
+    , lg__bg_teal_100
+    , lg__bg_teal_200
+    , lg__bg_teal_300
+    , lg__bg_teal_400
+    , lg__bg_teal_500
+    , lg__bg_teal_600
+    , lg__bg_teal_700
+    , lg__bg_teal_800
+    , lg__bg_teal_900
+    , lg__bg_top
+    , lg__bg_transparent
+    , lg__bg_white
+    , lg__bg_yellow_100
+    , lg__bg_yellow_200
+    , lg__bg_yellow_300
+    , lg__bg_yellow_400
+    , lg__bg_yellow_500
+    , lg__bg_yellow_600
+    , lg__bg_yellow_700
+    , lg__bg_yellow_800
+    , lg__bg_yellow_900
+    , lg__block
+    , lg__border
+    , lg__border_0
+    , lg__border_2
+    , lg__border_4
+    , lg__border_8
+    , lg__border_b
+    , lg__border_b_0
+    , lg__border_b_2
+    , lg__border_b_4
+    , lg__border_b_8
+    , lg__border_black
+    , lg__border_blue_100
+    , lg__border_blue_200
+    , lg__border_blue_300
+    , lg__border_blue_400
+    , lg__border_blue_500
+    , lg__border_blue_600
+    , lg__border_blue_700
+    , lg__border_blue_800
+    , lg__border_blue_900
+    , lg__border_collapse
+    , lg__border_current
+    , lg__border_dashed
+    , lg__border_dotted
+    , lg__border_double
+    , lg__border_gray_100
+    , lg__border_gray_200
+    , lg__border_gray_300
+    , lg__border_gray_400
+    , lg__border_gray_500
+    , lg__border_gray_600
+    , lg__border_gray_700
+    , lg__border_gray_800
+    , lg__border_gray_900
+    , lg__border_green_100
+    , lg__border_green_200
+    , lg__border_green_300
+    , lg__border_green_400
+    , lg__border_green_500
+    , lg__border_green_600
+    , lg__border_green_700
+    , lg__border_green_800
+    , lg__border_green_900
+    , lg__border_indigo_100
+    , lg__border_indigo_200
+    , lg__border_indigo_300
+    , lg__border_indigo_400
+    , lg__border_indigo_500
+    , lg__border_indigo_600
+    , lg__border_indigo_700
+    , lg__border_indigo_800
+    , lg__border_indigo_900
+    , lg__border_l
+    , lg__border_l_0
+    , lg__border_l_2
+    , lg__border_l_4
+    , lg__border_l_8
+    , lg__border_none
+    , lg__border_orange_100
+    , lg__border_orange_200
+    , lg__border_orange_300
+    , lg__border_orange_400
+    , lg__border_orange_500
+    , lg__border_orange_600
+    , lg__border_orange_700
+    , lg__border_orange_800
+    , lg__border_orange_900
+    , lg__border_pink_100
+    , lg__border_pink_200
+    , lg__border_pink_300
+    , lg__border_pink_400
+    , lg__border_pink_500
+    , lg__border_pink_600
+    , lg__border_pink_700
+    , lg__border_pink_800
+    , lg__border_pink_900
+    , lg__border_purple_100
+    , lg__border_purple_200
+    , lg__border_purple_300
+    , lg__border_purple_400
+    , lg__border_purple_500
+    , lg__border_purple_600
+    , lg__border_purple_700
+    , lg__border_purple_800
+    , lg__border_purple_900
+    , lg__border_r
+    , lg__border_r_0
+    , lg__border_r_2
+    , lg__border_r_4
+    , lg__border_r_8
+    , lg__border_red_100
+    , lg__border_red_200
+    , lg__border_red_300
+    , lg__border_red_400
+    , lg__border_red_500
+    , lg__border_red_600
+    , lg__border_red_700
+    , lg__border_red_800
+    , lg__border_red_900
+    , lg__border_separate
+    , lg__border_solid
+    , lg__border_t
+    , lg__border_t_0
+    , lg__border_t_2
+    , lg__border_t_4
+    , lg__border_t_8
+    , lg__border_teal_100
+    , lg__border_teal_200
+    , lg__border_teal_300
+    , lg__border_teal_400
+    , lg__border_teal_500
+    , lg__border_teal_600
+    , lg__border_teal_700
+    , lg__border_teal_800
+    , lg__border_teal_900
+    , lg__border_transparent
+    , lg__border_white
+    , lg__border_yellow_100
+    , lg__border_yellow_200
+    , lg__border_yellow_300
+    , lg__border_yellow_400
+    , lg__border_yellow_500
+    , lg__border_yellow_600
+    , lg__border_yellow_700
+    , lg__border_yellow_800
+    , lg__border_yellow_900
+    , lg__bottom_0
+    , lg__bottom_auto
+    , lg__box_border
+    , lg__box_content
+    , lg__break_all
+    , lg__break_normal
+    , lg__break_words
+    , lg__capitalize
+    , lg__clear_both
+    , lg__clear_left
+    , lg__clear_none
+    , lg__clear_right
+    , lg__clearfix
+    , lg__col_auto
+    , lg__col_end_1
+    , lg__col_end_10
+    , lg__col_end_11
+    , lg__col_end_12
+    , lg__col_end_13
+    , lg__col_end_2
+    , lg__col_end_3
+    , lg__col_end_4
+    , lg__col_end_5
+    , lg__col_end_6
+    , lg__col_end_7
+    , lg__col_end_8
+    , lg__col_end_9
+    , lg__col_end_auto
+    , lg__col_gap_0
+    , lg__col_gap_1
+    , lg__col_gap_10
+    , lg__col_gap_12
+    , lg__col_gap_16
+    , lg__col_gap_2
+    , lg__col_gap_20
+    , lg__col_gap_24
+    , lg__col_gap_3
+    , lg__col_gap_32
+    , lg__col_gap_4
+    , lg__col_gap_40
+    , lg__col_gap_48
+    , lg__col_gap_5
+    , lg__col_gap_56
+    , lg__col_gap_6
+    , lg__col_gap_64
+    , lg__col_gap_8
+    , lg__col_gap_px
+    , lg__col_span_1
+    , lg__col_span_10
+    , lg__col_span_11
+    , lg__col_span_12
+    , lg__col_span_2
+    , lg__col_span_3
+    , lg__col_span_4
+    , lg__col_span_5
+    , lg__col_span_6
+    , lg__col_span_7
+    , lg__col_span_8
+    , lg__col_span_9
+    , lg__col_start_1
+    , lg__col_start_10
+    , lg__col_start_11
+    , lg__col_start_12
+    , lg__col_start_13
+    , lg__col_start_2
+    , lg__col_start_3
+    , lg__col_start_4
+    , lg__col_start_5
+    , lg__col_start_6
+    , lg__col_start_7
+    , lg__col_start_8
+    , lg__col_start_9
+    , lg__col_start_auto
+    , lg__container
+    , lg__content_around
+    , lg__content_between
+    , lg__content_center
+    , lg__content_end
+    , lg__content_start
+    , lg__cursor_auto
+    , lg__cursor_default
+    , lg__cursor_move
+    , lg__cursor_not_allowed
+    , lg__cursor_pointer
+    , lg__cursor_text
+    , lg__cursor_wait
+    , lg__delay_100
+    , lg__delay_1000
+    , lg__delay_150
+    , lg__delay_200
+    , lg__delay_300
+    , lg__delay_500
+    , lg__delay_700
+    , lg__delay_75
+    , lg__divide_black
+    , lg__divide_blue_100
+    , lg__divide_blue_200
+    , lg__divide_blue_300
+    , lg__divide_blue_400
+    , lg__divide_blue_500
+    , lg__divide_blue_600
+    , lg__divide_blue_700
+    , lg__divide_blue_800
+    , lg__divide_blue_900
+    , lg__divide_current
+    , lg__divide_gray_100
+    , lg__divide_gray_200
+    , lg__divide_gray_300
+    , lg__divide_gray_400
+    , lg__divide_gray_500
+    , lg__divide_gray_600
+    , lg__divide_gray_700
+    , lg__divide_gray_800
+    , lg__divide_gray_900
+    , lg__divide_green_100
+    , lg__divide_green_200
+    , lg__divide_green_300
+    , lg__divide_green_400
+    , lg__divide_green_500
+    , lg__divide_green_600
+    , lg__divide_green_700
+    , lg__divide_green_800
+    , lg__divide_green_900
+    , lg__divide_indigo_100
+    , lg__divide_indigo_200
+    , lg__divide_indigo_300
+    , lg__divide_indigo_400
+    , lg__divide_indigo_500
+    , lg__divide_indigo_600
+    , lg__divide_indigo_700
+    , lg__divide_indigo_800
+    , lg__divide_indigo_900
+    , lg__divide_orange_100
+    , lg__divide_orange_200
+    , lg__divide_orange_300
+    , lg__divide_orange_400
+    , lg__divide_orange_500
+    , lg__divide_orange_600
+    , lg__divide_orange_700
+    , lg__divide_orange_800
+    , lg__divide_orange_900
+    , lg__divide_pink_100
+    , lg__divide_pink_200
+    , lg__divide_pink_300
+    , lg__divide_pink_400
+    , lg__divide_pink_500
+    , lg__divide_pink_600
+    , lg__divide_pink_700
+    , lg__divide_pink_800
+    , lg__divide_pink_900
+    , lg__divide_purple_100
+    , lg__divide_purple_200
+    , lg__divide_purple_300
+    , lg__divide_purple_400
+    , lg__divide_purple_500
+    , lg__divide_purple_600
+    , lg__divide_purple_700
+    , lg__divide_purple_800
+    , lg__divide_purple_900
+    , lg__divide_red_100
+    , lg__divide_red_200
+    , lg__divide_red_300
+    , lg__divide_red_400
+    , lg__divide_red_500
+    , lg__divide_red_600
+    , lg__divide_red_700
+    , lg__divide_red_800
+    , lg__divide_red_900
+    , lg__divide_teal_100
+    , lg__divide_teal_200
+    , lg__divide_teal_300
+    , lg__divide_teal_400
+    , lg__divide_teal_500
+    , lg__divide_teal_600
+    , lg__divide_teal_700
+    , lg__divide_teal_800
+    , lg__divide_teal_900
+    , lg__divide_transparent
+    , lg__divide_white
+    , lg__divide_yellow_100
+    , lg__divide_yellow_200
+    , lg__divide_yellow_300
+    , lg__divide_yellow_400
+    , lg__divide_yellow_500
+    , lg__divide_yellow_600
+    , lg__divide_yellow_700
+    , lg__divide_yellow_800
+    , lg__divide_yellow_900
+    , lg__duration_100
+    , lg__duration_1000
+    , lg__duration_150
+    , lg__duration_200
+    , lg__duration_300
+    , lg__duration_500
+    , lg__duration_700
+    , lg__duration_75
+    , lg__ease_in
+    , lg__ease_in_out
+    , lg__ease_linear
+    , lg__ease_out
+    , lg__fill_current
+    , lg__fixed
+    , lg__flex
+    , lg__flex_1
+    , lg__flex_auto
+    , lg__flex_col
+    , lg__flex_col_reverse
+    , lg__flex_grow
+    , lg__flex_grow_0
+    , lg__flex_initial
+    , lg__flex_no_wrap
+    , lg__flex_none
+    , lg__flex_row
+    , lg__flex_row_reverse
+    , lg__flex_shrink
+    , lg__flex_shrink_0
+    , lg__flex_wrap
+    , lg__flex_wrap_reverse
+    , lg__float_left
+    , lg__float_none
+    , lg__float_right
+    , lg__flow_root
+    , lg__focus__bg_black
+    , lg__focus__bg_blue_100
+    , lg__focus__bg_blue_200
+    , lg__focus__bg_blue_300
+    , lg__focus__bg_blue_400
+    , lg__focus__bg_blue_500
+    , lg__focus__bg_blue_600
+    , lg__focus__bg_blue_700
+    , lg__focus__bg_blue_800
+    , lg__focus__bg_blue_900
+    , lg__focus__bg_current
+    , lg__focus__bg_gray_100
+    , lg__focus__bg_gray_200
+    , lg__focus__bg_gray_300
+    , lg__focus__bg_gray_400
+    , lg__focus__bg_gray_500
+    , lg__focus__bg_gray_600
+    , lg__focus__bg_gray_700
+    , lg__focus__bg_gray_800
+    , lg__focus__bg_gray_900
+    , lg__focus__bg_green_100
+    , lg__focus__bg_green_200
+    , lg__focus__bg_green_300
+    , lg__focus__bg_green_400
+    , lg__focus__bg_green_500
+    , lg__focus__bg_green_600
+    , lg__focus__bg_green_700
+    , lg__focus__bg_green_800
+    , lg__focus__bg_green_900
+    , lg__focus__bg_indigo_100
+    , lg__focus__bg_indigo_200
+    , lg__focus__bg_indigo_300
+    , lg__focus__bg_indigo_400
+    , lg__focus__bg_indigo_500
+    , lg__focus__bg_indigo_600
+    , lg__focus__bg_indigo_700
+    , lg__focus__bg_indigo_800
+    , lg__focus__bg_indigo_900
+    , lg__focus__bg_orange_100
+    , lg__focus__bg_orange_200
+    , lg__focus__bg_orange_300
+    , lg__focus__bg_orange_400
+    , lg__focus__bg_orange_500
+    , lg__focus__bg_orange_600
+    , lg__focus__bg_orange_700
+    , lg__focus__bg_orange_800
+    , lg__focus__bg_orange_900
+    , lg__focus__bg_pink_100
+    , lg__focus__bg_pink_200
+    , lg__focus__bg_pink_300
+    , lg__focus__bg_pink_400
+    , lg__focus__bg_pink_500
+    , lg__focus__bg_pink_600
+    , lg__focus__bg_pink_700
+    , lg__focus__bg_pink_800
+    , lg__focus__bg_pink_900
+    , lg__focus__bg_purple_100
+    , lg__focus__bg_purple_200
+    , lg__focus__bg_purple_300
+    , lg__focus__bg_purple_400
+    , lg__focus__bg_purple_500
+    , lg__focus__bg_purple_600
+    , lg__focus__bg_purple_700
+    , lg__focus__bg_purple_800
+    , lg__focus__bg_purple_900
+    , lg__focus__bg_red_100
+    , lg__focus__bg_red_200
+    , lg__focus__bg_red_300
+    , lg__focus__bg_red_400
+    , lg__focus__bg_red_500
+    , lg__focus__bg_red_600
+    , lg__focus__bg_red_700
+    , lg__focus__bg_red_800
+    , lg__focus__bg_red_900
+    , lg__focus__bg_teal_100
+    , lg__focus__bg_teal_200
+    , lg__focus__bg_teal_300
+    , lg__focus__bg_teal_400
+    , lg__focus__bg_teal_500
+    , lg__focus__bg_teal_600
+    , lg__focus__bg_teal_700
+    , lg__focus__bg_teal_800
+    , lg__focus__bg_teal_900
+    , lg__focus__bg_transparent
+    , lg__focus__bg_white
+    , lg__focus__bg_yellow_100
+    , lg__focus__bg_yellow_200
+    , lg__focus__bg_yellow_300
+    , lg__focus__bg_yellow_400
+    , lg__focus__bg_yellow_500
+    , lg__focus__bg_yellow_600
+    , lg__focus__bg_yellow_700
+    , lg__focus__bg_yellow_800
+    , lg__focus__bg_yellow_900
+    , lg__focus__border_black
+    , lg__focus__border_blue_100
+    , lg__focus__border_blue_200
+    , lg__focus__border_blue_300
+    , lg__focus__border_blue_400
+    , lg__focus__border_blue_500
+    , lg__focus__border_blue_600
+    , lg__focus__border_blue_700
+    , lg__focus__border_blue_800
+    , lg__focus__border_blue_900
+    , lg__focus__border_current
+    , lg__focus__border_gray_100
+    , lg__focus__border_gray_200
+    , lg__focus__border_gray_300
+    , lg__focus__border_gray_400
+    , lg__focus__border_gray_500
+    , lg__focus__border_gray_600
+    , lg__focus__border_gray_700
+    , lg__focus__border_gray_800
+    , lg__focus__border_gray_900
+    , lg__focus__border_green_100
+    , lg__focus__border_green_200
+    , lg__focus__border_green_300
+    , lg__focus__border_green_400
+    , lg__focus__border_green_500
+    , lg__focus__border_green_600
+    , lg__focus__border_green_700
+    , lg__focus__border_green_800
+    , lg__focus__border_green_900
+    , lg__focus__border_indigo_100
+    , lg__focus__border_indigo_200
+    , lg__focus__border_indigo_300
+    , lg__focus__border_indigo_400
+    , lg__focus__border_indigo_500
+    , lg__focus__border_indigo_600
+    , lg__focus__border_indigo_700
+    , lg__focus__border_indigo_800
+    , lg__focus__border_indigo_900
+    , lg__focus__border_orange_100
+    , lg__focus__border_orange_200
+    , lg__focus__border_orange_300
+    , lg__focus__border_orange_400
+    , lg__focus__border_orange_500
+    , lg__focus__border_orange_600
+    , lg__focus__border_orange_700
+    , lg__focus__border_orange_800
+    , lg__focus__border_orange_900
+    , lg__focus__border_pink_100
+    , lg__focus__border_pink_200
+    , lg__focus__border_pink_300
+    , lg__focus__border_pink_400
+    , lg__focus__border_pink_500
+    , lg__focus__border_pink_600
+    , lg__focus__border_pink_700
+    , lg__focus__border_pink_800
+    , lg__focus__border_pink_900
+    , lg__focus__border_purple_100
+    , lg__focus__border_purple_200
+    , lg__focus__border_purple_300
+    , lg__focus__border_purple_400
+    , lg__focus__border_purple_500
+    , lg__focus__border_purple_600
+    , lg__focus__border_purple_700
+    , lg__focus__border_purple_800
+    , lg__focus__border_purple_900
+    , lg__focus__border_red_100
+    , lg__focus__border_red_200
+    , lg__focus__border_red_300
+    , lg__focus__border_red_400
+    , lg__focus__border_red_500
+    , lg__focus__border_red_600
+    , lg__focus__border_red_700
+    , lg__focus__border_red_800
+    , lg__focus__border_red_900
+    , lg__focus__border_teal_100
+    , lg__focus__border_teal_200
+    , lg__focus__border_teal_300
+    , lg__focus__border_teal_400
+    , lg__focus__border_teal_500
+    , lg__focus__border_teal_600
+    , lg__focus__border_teal_700
+    , lg__focus__border_teal_800
+    , lg__focus__border_teal_900
+    , lg__focus__border_transparent
+    , lg__focus__border_white
+    , lg__focus__border_yellow_100
+    , lg__focus__border_yellow_200
+    , lg__focus__border_yellow_300
+    , lg__focus__border_yellow_400
+    , lg__focus__border_yellow_500
+    , lg__focus__border_yellow_600
+    , lg__focus__border_yellow_700
+    , lg__focus__border_yellow_800
+    , lg__focus__border_yellow_900
+    , lg__focus__font_black
+    , lg__focus__font_bold
+    , lg__focus__font_extrabold
+    , lg__focus__font_hairline
+    , lg__focus__font_light
+    , lg__focus__font_medium
+    , lg__focus__font_normal
+    , lg__focus__font_semibold
+    , lg__focus__font_thin
+    , lg__focus__line_through
+    , lg__focus__no_underline
+    , lg__focus__not_sr_only
+    , lg__focus__opacity_0
+    , lg__focus__opacity_100
+    , lg__focus__opacity_25
+    , lg__focus__opacity_50
+    , lg__focus__opacity_75
+    , lg__focus__outline_none
+    , lg__focus__placeholder_black
+    , lg__focus__placeholder_blue_100
+    , lg__focus__placeholder_blue_200
+    , lg__focus__placeholder_blue_300
+    , lg__focus__placeholder_blue_400
+    , lg__focus__placeholder_blue_500
+    , lg__focus__placeholder_blue_600
+    , lg__focus__placeholder_blue_700
+    , lg__focus__placeholder_blue_800
+    , lg__focus__placeholder_blue_900
+    , lg__focus__placeholder_current
+    , lg__focus__placeholder_gray_100
+    , lg__focus__placeholder_gray_200
+    , lg__focus__placeholder_gray_300
+    , lg__focus__placeholder_gray_400
+    , lg__focus__placeholder_gray_500
+    , lg__focus__placeholder_gray_600
+    , lg__focus__placeholder_gray_700
+    , lg__focus__placeholder_gray_800
+    , lg__focus__placeholder_gray_900
+    , lg__focus__placeholder_green_100
+    , lg__focus__placeholder_green_200
+    , lg__focus__placeholder_green_300
+    , lg__focus__placeholder_green_400
+    , lg__focus__placeholder_green_500
+    , lg__focus__placeholder_green_600
+    , lg__focus__placeholder_green_700
+    , lg__focus__placeholder_green_800
+    , lg__focus__placeholder_green_900
+    , lg__focus__placeholder_indigo_100
+    , lg__focus__placeholder_indigo_200
+    , lg__focus__placeholder_indigo_300
+    , lg__focus__placeholder_indigo_400
+    , lg__focus__placeholder_indigo_500
+    , lg__focus__placeholder_indigo_600
+    , lg__focus__placeholder_indigo_700
+    , lg__focus__placeholder_indigo_800
+    , lg__focus__placeholder_indigo_900
+    , lg__focus__placeholder_orange_100
+    , lg__focus__placeholder_orange_200
+    , lg__focus__placeholder_orange_300
+    , lg__focus__placeholder_orange_400
+    , lg__focus__placeholder_orange_500
+    , lg__focus__placeholder_orange_600
+    , lg__focus__placeholder_orange_700
+    , lg__focus__placeholder_orange_800
+    , lg__focus__placeholder_orange_900
+    , lg__focus__placeholder_pink_100
+    , lg__focus__placeholder_pink_200
+    , lg__focus__placeholder_pink_300
+    , lg__focus__placeholder_pink_400
+    , lg__focus__placeholder_pink_500
+    , lg__focus__placeholder_pink_600
+    , lg__focus__placeholder_pink_700
+    , lg__focus__placeholder_pink_800
+    , lg__focus__placeholder_pink_900
+    , lg__focus__placeholder_purple_100
+    , lg__focus__placeholder_purple_200
+    , lg__focus__placeholder_purple_300
+    , lg__focus__placeholder_purple_400
+    , lg__focus__placeholder_purple_500
+    , lg__focus__placeholder_purple_600
+    , lg__focus__placeholder_purple_700
+    , lg__focus__placeholder_purple_800
+    , lg__focus__placeholder_purple_900
+    , lg__focus__placeholder_red_100
+    , lg__focus__placeholder_red_200
+    , lg__focus__placeholder_red_300
+    , lg__focus__placeholder_red_400
+    , lg__focus__placeholder_red_500
+    , lg__focus__placeholder_red_600
+    , lg__focus__placeholder_red_700
+    , lg__focus__placeholder_red_800
+    , lg__focus__placeholder_red_900
+    , lg__focus__placeholder_teal_100
+    , lg__focus__placeholder_teal_200
+    , lg__focus__placeholder_teal_300
+    , lg__focus__placeholder_teal_400
+    , lg__focus__placeholder_teal_500
+    , lg__focus__placeholder_teal_600
+    , lg__focus__placeholder_teal_700
+    , lg__focus__placeholder_teal_800
+    , lg__focus__placeholder_teal_900
+    , lg__focus__placeholder_transparent
+    , lg__focus__placeholder_white
+    , lg__focus__placeholder_yellow_100
+    , lg__focus__placeholder_yellow_200
+    , lg__focus__placeholder_yellow_300
+    , lg__focus__placeholder_yellow_400
+    , lg__focus__placeholder_yellow_500
+    , lg__focus__placeholder_yellow_600
+    , lg__focus__placeholder_yellow_700
+    , lg__focus__placeholder_yellow_800
+    , lg__focus__placeholder_yellow_900
+    , lg__focus__shadow
+    , lg__focus__shadow_2xl
+    , lg__focus__shadow_inner
+    , lg__focus__shadow_lg
+    , lg__focus__shadow_md
+    , lg__focus__shadow_none
+    , lg__focus__shadow_outline
+    , lg__focus__shadow_sm
+    , lg__focus__shadow_xl
+    , lg__focus__shadow_xs
+    , lg__focus__sr_only
+    , lg__focus__text_black
+    , lg__focus__text_blue_100
+    , lg__focus__text_blue_200
+    , lg__focus__text_blue_300
+    , lg__focus__text_blue_400
+    , lg__focus__text_blue_500
+    , lg__focus__text_blue_600
+    , lg__focus__text_blue_700
+    , lg__focus__text_blue_800
+    , lg__focus__text_blue_900
+    , lg__focus__text_current
+    , lg__focus__text_gray_100
+    , lg__focus__text_gray_200
+    , lg__focus__text_gray_300
+    , lg__focus__text_gray_400
+    , lg__focus__text_gray_500
+    , lg__focus__text_gray_600
+    , lg__focus__text_gray_700
+    , lg__focus__text_gray_800
+    , lg__focus__text_gray_900
+    , lg__focus__text_green_100
+    , lg__focus__text_green_200
+    , lg__focus__text_green_300
+    , lg__focus__text_green_400
+    , lg__focus__text_green_500
+    , lg__focus__text_green_600
+    , lg__focus__text_green_700
+    , lg__focus__text_green_800
+    , lg__focus__text_green_900
+    , lg__focus__text_indigo_100
+    , lg__focus__text_indigo_200
+    , lg__focus__text_indigo_300
+    , lg__focus__text_indigo_400
+    , lg__focus__text_indigo_500
+    , lg__focus__text_indigo_600
+    , lg__focus__text_indigo_700
+    , lg__focus__text_indigo_800
+    , lg__focus__text_indigo_900
+    , lg__focus__text_orange_100
+    , lg__focus__text_orange_200
+    , lg__focus__text_orange_300
+    , lg__focus__text_orange_400
+    , lg__focus__text_orange_500
+    , lg__focus__text_orange_600
+    , lg__focus__text_orange_700
+    , lg__focus__text_orange_800
+    , lg__focus__text_orange_900
+    , lg__focus__text_pink_100
+    , lg__focus__text_pink_200
+    , lg__focus__text_pink_300
+    , lg__focus__text_pink_400
+    , lg__focus__text_pink_500
+    , lg__focus__text_pink_600
+    , lg__focus__text_pink_700
+    , lg__focus__text_pink_800
+    , lg__focus__text_pink_900
+    , lg__focus__text_purple_100
+    , lg__focus__text_purple_200
+    , lg__focus__text_purple_300
+    , lg__focus__text_purple_400
+    , lg__focus__text_purple_500
+    , lg__focus__text_purple_600
+    , lg__focus__text_purple_700
+    , lg__focus__text_purple_800
+    , lg__focus__text_purple_900
+    , lg__focus__text_red_100
+    , lg__focus__text_red_200
+    , lg__focus__text_red_300
+    , lg__focus__text_red_400
+    , lg__focus__text_red_500
+    , lg__focus__text_red_600
+    , lg__focus__text_red_700
+    , lg__focus__text_red_800
+    , lg__focus__text_red_900
+    , lg__focus__text_teal_100
+    , lg__focus__text_teal_200
+    , lg__focus__text_teal_300
+    , lg__focus__text_teal_400
+    , lg__focus__text_teal_500
+    , lg__focus__text_teal_600
+    , lg__focus__text_teal_700
+    , lg__focus__text_teal_800
+    , lg__focus__text_teal_900
+    , lg__focus__text_transparent
+    , lg__focus__text_white
+    , lg__focus__text_yellow_100
+    , lg__focus__text_yellow_200
+    , lg__focus__text_yellow_300
+    , lg__focus__text_yellow_400
+    , lg__focus__text_yellow_500
+    , lg__focus__text_yellow_600
+    , lg__focus__text_yellow_700
+    , lg__focus__text_yellow_800
+    , lg__focus__text_yellow_900
+    , lg__focus__underline
+    , lg__font_black
+    , lg__font_bold
+    , lg__font_extrabold
+    , lg__font_hairline
+    , lg__font_light
+    , lg__font_medium
+    , lg__font_mono
+    , lg__font_normal
+    , lg__font_sans
+    , lg__font_semibold
+    , lg__font_serif
+    , lg__font_thin
+    , lg__gap_0
+    , lg__gap_1
+    , lg__gap_10
+    , lg__gap_12
+    , lg__gap_16
+    , lg__gap_2
+    , lg__gap_20
+    , lg__gap_24
+    , lg__gap_3
+    , lg__gap_32
+    , lg__gap_4
+    , lg__gap_40
+    , lg__gap_48
+    , lg__gap_5
+    , lg__gap_56
+    , lg__gap_6
+    , lg__gap_64
+    , lg__gap_8
+    , lg__gap_px
+    , lg__grid
+    , lg__grid_cols_1
+    , lg__grid_cols_10
+    , lg__grid_cols_11
+    , lg__grid_cols_12
+    , lg__grid_cols_2
+    , lg__grid_cols_3
+    , lg__grid_cols_4
+    , lg__grid_cols_5
+    , lg__grid_cols_6
+    , lg__grid_cols_7
+    , lg__grid_cols_8
+    , lg__grid_cols_9
+    , lg__grid_cols_none
+    , lg__grid_flow_col
+    , lg__grid_flow_col_dense
+    , lg__grid_flow_row
+    , lg__grid_flow_row_dense
+    , lg__grid_rows_1
+    , lg__grid_rows_2
+    , lg__grid_rows_3
+    , lg__grid_rows_4
+    , lg__grid_rows_5
+    , lg__grid_rows_6
+    , lg__grid_rows_none
+    , lg__h_0
+    , lg__h_1
+    , lg__h_10
+    , lg__h_12
+    , lg__h_16
+    , lg__h_2
+    , lg__h_20
+    , lg__h_24
+    , lg__h_3
+    , lg__h_32
+    , lg__h_4
+    , lg__h_40
+    , lg__h_48
+    , lg__h_5
+    , lg__h_56
+    , lg__h_6
+    , lg__h_64
+    , lg__h_8
+    , lg__h_auto
+    , lg__h_full
+    , lg__h_px
+    , lg__h_screen
+    , lg__hidden
+    , lg__hover__bg_black
+    , lg__hover__bg_blue_100
+    , lg__hover__bg_blue_200
+    , lg__hover__bg_blue_300
+    , lg__hover__bg_blue_400
+    , lg__hover__bg_blue_500
+    , lg__hover__bg_blue_600
+    , lg__hover__bg_blue_700
+    , lg__hover__bg_blue_800
+    , lg__hover__bg_blue_900
+    , lg__hover__bg_current
+    , lg__hover__bg_gray_100
+    , lg__hover__bg_gray_200
+    , lg__hover__bg_gray_300
+    , lg__hover__bg_gray_400
+    , lg__hover__bg_gray_500
+    , lg__hover__bg_gray_600
+    , lg__hover__bg_gray_700
+    , lg__hover__bg_gray_800
+    , lg__hover__bg_gray_900
+    , lg__hover__bg_green_100
+    , lg__hover__bg_green_200
+    , lg__hover__bg_green_300
+    , lg__hover__bg_green_400
+    , lg__hover__bg_green_500
+    , lg__hover__bg_green_600
+    , lg__hover__bg_green_700
+    , lg__hover__bg_green_800
+    , lg__hover__bg_green_900
+    , lg__hover__bg_indigo_100
+    , lg__hover__bg_indigo_200
+    , lg__hover__bg_indigo_300
+    , lg__hover__bg_indigo_400
+    , lg__hover__bg_indigo_500
+    , lg__hover__bg_indigo_600
+    , lg__hover__bg_indigo_700
+    , lg__hover__bg_indigo_800
+    , lg__hover__bg_indigo_900
+    , lg__hover__bg_orange_100
+    , lg__hover__bg_orange_200
+    , lg__hover__bg_orange_300
+    , lg__hover__bg_orange_400
+    , lg__hover__bg_orange_500
+    , lg__hover__bg_orange_600
+    , lg__hover__bg_orange_700
+    , lg__hover__bg_orange_800
+    , lg__hover__bg_orange_900
+    , lg__hover__bg_pink_100
+    , lg__hover__bg_pink_200
+    , lg__hover__bg_pink_300
+    , lg__hover__bg_pink_400
+    , lg__hover__bg_pink_500
+    , lg__hover__bg_pink_600
+    , lg__hover__bg_pink_700
+    , lg__hover__bg_pink_800
+    , lg__hover__bg_pink_900
+    , lg__hover__bg_purple_100
+    , lg__hover__bg_purple_200
+    , lg__hover__bg_purple_300
+    , lg__hover__bg_purple_400
+    , lg__hover__bg_purple_500
+    , lg__hover__bg_purple_600
+    , lg__hover__bg_purple_700
+    , lg__hover__bg_purple_800
+    , lg__hover__bg_purple_900
+    , lg__hover__bg_red_100
+    , lg__hover__bg_red_200
+    , lg__hover__bg_red_300
+    , lg__hover__bg_red_400
+    , lg__hover__bg_red_500
+    , lg__hover__bg_red_600
+    , lg__hover__bg_red_700
+    , lg__hover__bg_red_800
+    , lg__hover__bg_red_900
+    , lg__hover__bg_teal_100
+    , lg__hover__bg_teal_200
+    , lg__hover__bg_teal_300
+    , lg__hover__bg_teal_400
+    , lg__hover__bg_teal_500
+    , lg__hover__bg_teal_600
+    , lg__hover__bg_teal_700
+    , lg__hover__bg_teal_800
+    , lg__hover__bg_teal_900
+    , lg__hover__bg_transparent
+    , lg__hover__bg_white
+    , lg__hover__bg_yellow_100
+    , lg__hover__bg_yellow_200
+    , lg__hover__bg_yellow_300
+    , lg__hover__bg_yellow_400
+    , lg__hover__bg_yellow_500
+    , lg__hover__bg_yellow_600
+    , lg__hover__bg_yellow_700
+    , lg__hover__bg_yellow_800
+    , lg__hover__bg_yellow_900
+    , lg__hover__border_black
+    , lg__hover__border_blue_100
+    , lg__hover__border_blue_200
+    , lg__hover__border_blue_300
+    , lg__hover__border_blue_400
+    , lg__hover__border_blue_500
+    , lg__hover__border_blue_600
+    , lg__hover__border_blue_700
+    , lg__hover__border_blue_800
+    , lg__hover__border_blue_900
+    , lg__hover__border_current
+    , lg__hover__border_gray_100
+    , lg__hover__border_gray_200
+    , lg__hover__border_gray_300
+    , lg__hover__border_gray_400
+    , lg__hover__border_gray_500
+    , lg__hover__border_gray_600
+    , lg__hover__border_gray_700
+    , lg__hover__border_gray_800
+    , lg__hover__border_gray_900
+    , lg__hover__border_green_100
+    , lg__hover__border_green_200
+    , lg__hover__border_green_300
+    , lg__hover__border_green_400
+    , lg__hover__border_green_500
+    , lg__hover__border_green_600
+    , lg__hover__border_green_700
+    , lg__hover__border_green_800
+    , lg__hover__border_green_900
+    , lg__hover__border_indigo_100
+    , lg__hover__border_indigo_200
+    , lg__hover__border_indigo_300
+    , lg__hover__border_indigo_400
+    , lg__hover__border_indigo_500
+    , lg__hover__border_indigo_600
+    , lg__hover__border_indigo_700
+    , lg__hover__border_indigo_800
+    , lg__hover__border_indigo_900
+    , lg__hover__border_orange_100
+    , lg__hover__border_orange_200
+    , lg__hover__border_orange_300
+    , lg__hover__border_orange_400
+    , lg__hover__border_orange_500
+    , lg__hover__border_orange_600
+    , lg__hover__border_orange_700
+    , lg__hover__border_orange_800
+    , lg__hover__border_orange_900
+    , lg__hover__border_pink_100
+    , lg__hover__border_pink_200
+    , lg__hover__border_pink_300
+    , lg__hover__border_pink_400
+    , lg__hover__border_pink_500
+    , lg__hover__border_pink_600
+    , lg__hover__border_pink_700
+    , lg__hover__border_pink_800
+    , lg__hover__border_pink_900
+    , lg__hover__border_purple_100
+    , lg__hover__border_purple_200
+    , lg__hover__border_purple_300
+    , lg__hover__border_purple_400
+    , lg__hover__border_purple_500
+    , lg__hover__border_purple_600
+    , lg__hover__border_purple_700
+    , lg__hover__border_purple_800
+    , lg__hover__border_purple_900
+    , lg__hover__border_red_100
+    , lg__hover__border_red_200
+    , lg__hover__border_red_300
+    , lg__hover__border_red_400
+    , lg__hover__border_red_500
+    , lg__hover__border_red_600
+    , lg__hover__border_red_700
+    , lg__hover__border_red_800
+    , lg__hover__border_red_900
+    , lg__hover__border_teal_100
+    , lg__hover__border_teal_200
+    , lg__hover__border_teal_300
+    , lg__hover__border_teal_400
+    , lg__hover__border_teal_500
+    , lg__hover__border_teal_600
+    , lg__hover__border_teal_700
+    , lg__hover__border_teal_800
+    , lg__hover__border_teal_900
+    , lg__hover__border_transparent
+    , lg__hover__border_white
+    , lg__hover__border_yellow_100
+    , lg__hover__border_yellow_200
+    , lg__hover__border_yellow_300
+    , lg__hover__border_yellow_400
+    , lg__hover__border_yellow_500
+    , lg__hover__border_yellow_600
+    , lg__hover__border_yellow_700
+    , lg__hover__border_yellow_800
+    , lg__hover__border_yellow_900
+    , lg__hover__font_black
+    , lg__hover__font_bold
+    , lg__hover__font_extrabold
+    , lg__hover__font_hairline
+    , lg__hover__font_light
+    , lg__hover__font_medium
+    , lg__hover__font_normal
+    , lg__hover__font_semibold
+    , lg__hover__font_thin
+    , lg__hover__line_through
+    , lg__hover__no_underline
+    , lg__hover__opacity_0
+    , lg__hover__opacity_100
+    , lg__hover__opacity_25
+    , lg__hover__opacity_50
+    , lg__hover__opacity_75
+    , lg__hover__shadow
+    , lg__hover__shadow_2xl
+    , lg__hover__shadow_inner
+    , lg__hover__shadow_lg
+    , lg__hover__shadow_md
+    , lg__hover__shadow_none
+    , lg__hover__shadow_outline
+    , lg__hover__shadow_sm
+    , lg__hover__shadow_xl
+    , lg__hover__shadow_xs
+    , lg__hover__text_black
+    , lg__hover__text_blue_100
+    , lg__hover__text_blue_200
+    , lg__hover__text_blue_300
+    , lg__hover__text_blue_400
+    , lg__hover__text_blue_500
+    , lg__hover__text_blue_600
+    , lg__hover__text_blue_700
+    , lg__hover__text_blue_800
+    , lg__hover__text_blue_900
+    , lg__hover__text_current
+    , lg__hover__text_gray_100
+    , lg__hover__text_gray_200
+    , lg__hover__text_gray_300
+    , lg__hover__text_gray_400
+    , lg__hover__text_gray_500
+    , lg__hover__text_gray_600
+    , lg__hover__text_gray_700
+    , lg__hover__text_gray_800
+    , lg__hover__text_gray_900
+    , lg__hover__text_green_100
+    , lg__hover__text_green_200
+    , lg__hover__text_green_300
+    , lg__hover__text_green_400
+    , lg__hover__text_green_500
+    , lg__hover__text_green_600
+    , lg__hover__text_green_700
+    , lg__hover__text_green_800
+    , lg__hover__text_green_900
+    , lg__hover__text_indigo_100
+    , lg__hover__text_indigo_200
+    , lg__hover__text_indigo_300
+    , lg__hover__text_indigo_400
+    , lg__hover__text_indigo_500
+    , lg__hover__text_indigo_600
+    , lg__hover__text_indigo_700
+    , lg__hover__text_indigo_800
+    , lg__hover__text_indigo_900
+    , lg__hover__text_orange_100
+    , lg__hover__text_orange_200
+    , lg__hover__text_orange_300
+    , lg__hover__text_orange_400
+    , lg__hover__text_orange_500
+    , lg__hover__text_orange_600
+    , lg__hover__text_orange_700
+    , lg__hover__text_orange_800
+    , lg__hover__text_orange_900
+    , lg__hover__text_pink_100
+    , lg__hover__text_pink_200
+    , lg__hover__text_pink_300
+    , lg__hover__text_pink_400
+    , lg__hover__text_pink_500
+    , lg__hover__text_pink_600
+    , lg__hover__text_pink_700
+    , lg__hover__text_pink_800
+    , lg__hover__text_pink_900
+    , lg__hover__text_purple_100
+    , lg__hover__text_purple_200
+    , lg__hover__text_purple_300
+    , lg__hover__text_purple_400
+    , lg__hover__text_purple_500
+    , lg__hover__text_purple_600
+    , lg__hover__text_purple_700
+    , lg__hover__text_purple_800
+    , lg__hover__text_purple_900
+    , lg__hover__text_red_100
+    , lg__hover__text_red_200
+    , lg__hover__text_red_300
+    , lg__hover__text_red_400
+    , lg__hover__text_red_500
+    , lg__hover__text_red_600
+    , lg__hover__text_red_700
+    , lg__hover__text_red_800
+    , lg__hover__text_red_900
+    , lg__hover__text_teal_100
+    , lg__hover__text_teal_200
+    , lg__hover__text_teal_300
+    , lg__hover__text_teal_400
+    , lg__hover__text_teal_500
+    , lg__hover__text_teal_600
+    , lg__hover__text_teal_700
+    , lg__hover__text_teal_800
+    , lg__hover__text_teal_900
+    , lg__hover__text_transparent
+    , lg__hover__text_white
+    , lg__hover__text_yellow_100
+    , lg__hover__text_yellow_200
+    , lg__hover__text_yellow_300
+    , lg__hover__text_yellow_400
+    , lg__hover__text_yellow_500
+    , lg__hover__text_yellow_600
+    , lg__hover__text_yellow_700
+    , lg__hover__text_yellow_800
+    , lg__hover__text_yellow_900
+    , lg__hover__underline
+    , lg__inline
+    , lg__inline_block
+    , lg__inline_flex
+    , lg__inline_grid
+    , lg__inset_0
+    , lg__inset_auto
+    , lg__inset_x_0
+    , lg__inset_x_auto
+    , lg__inset_y_0
+    , lg__inset_y_auto
+    , lg__invisible
+    , lg__italic
+    , lg__items_baseline
+    , lg__items_center
+    , lg__items_end
+    , lg__items_start
+    , lg__items_stretch
+    , lg__justify_around
+    , lg__justify_between
+    , lg__justify_center
+    , lg__justify_end
+    , lg__justify_evenly
+    , lg__justify_start
+    , lg__leading_10
+    , lg__leading_3
+    , lg__leading_4
+    , lg__leading_5
+    , lg__leading_6
+    , lg__leading_7
+    , lg__leading_8
+    , lg__leading_9
+    , lg__leading_loose
+    , lg__leading_none
+    , lg__leading_normal
+    , lg__leading_relaxed
+    , lg__leading_snug
+    , lg__leading_tight
+    , lg__left_0
+    , lg__left_auto
+    , lg__line_through
+    , lg__list_decimal
+    , lg__list_disc
+    , lg__list_inside
+    , lg__list_none
+    , lg__list_outside
+    , lg__lowercase
+    , lg__m_0
+    , lg__m_1
+    , lg__m_10
+    , lg__m_12
+    , lg__m_16
+    , lg__m_2
+    , lg__m_20
+    , lg__m_24
+    , lg__m_3
+    , lg__m_32
+    , lg__m_4
+    , lg__m_40
+    , lg__m_48
+    , lg__m_5
+    , lg__m_56
+    , lg__m_6
+    , lg__m_64
+    , lg__m_8
+    , lg__m_auto
+    , lg__m_px
+    , lg__max_h_full
+    , lg__max_h_screen
+    , lg__max_w_2xl
+    , lg__max_w_3xl
+    , lg__max_w_4xl
+    , lg__max_w_5xl
+    , lg__max_w_6xl
+    , lg__max_w_full
+    , lg__max_w_lg
+    , lg__max_w_md
+    , lg__max_w_none
+    , lg__max_w_screen_lg
+    , lg__max_w_screen_md
+    , lg__max_w_screen_sm
+    , lg__max_w_screen_xl
+    , lg__max_w_sm
+    , lg__max_w_xl
+    , lg__max_w_xs
+    , lg__mb_0
+    , lg__mb_1
+    , lg__mb_10
+    , lg__mb_12
+    , lg__mb_16
+    , lg__mb_2
+    , lg__mb_20
+    , lg__mb_24
+    , lg__mb_3
+    , lg__mb_32
+    , lg__mb_4
+    , lg__mb_40
+    , lg__mb_48
+    , lg__mb_5
+    , lg__mb_56
+    , lg__mb_6
+    , lg__mb_64
+    , lg__mb_8
+    , lg__mb_auto
+    , lg__mb_px
+    , lg__min_h_0
+    , lg__min_h_full
+    , lg__min_h_screen
+    , lg__min_w_0
+    , lg__min_w_full
+    , lg__ml_0
+    , lg__ml_1
+    , lg__ml_10
+    , lg__ml_12
+    , lg__ml_16
+    , lg__ml_2
+    , lg__ml_20
+    , lg__ml_24
+    , lg__ml_3
+    , lg__ml_32
+    , lg__ml_4
+    , lg__ml_40
+    , lg__ml_48
+    , lg__ml_5
+    , lg__ml_56
+    , lg__ml_6
+    , lg__ml_64
+    , lg__ml_8
+    , lg__ml_auto
+    , lg__ml_px
+    , lg__mr_0
+    , lg__mr_1
+    , lg__mr_10
+    , lg__mr_12
+    , lg__mr_16
+    , lg__mr_2
+    , lg__mr_20
+    , lg__mr_24
+    , lg__mr_3
+    , lg__mr_32
+    , lg__mr_4
+    , lg__mr_40
+    , lg__mr_48
+    , lg__mr_5
+    , lg__mr_56
+    , lg__mr_6
+    , lg__mr_64
+    , lg__mr_8
+    , lg__mr_auto
+    , lg__mr_px
+    , lg__mt_0
+    , lg__mt_1
+    , lg__mt_10
+    , lg__mt_12
+    , lg__mt_16
+    , lg__mt_2
+    , lg__mt_20
+    , lg__mt_24
+    , lg__mt_3
+    , lg__mt_32
+    , lg__mt_4
+    , lg__mt_40
+    , lg__mt_48
+    , lg__mt_5
+    , lg__mt_56
+    , lg__mt_6
+    , lg__mt_64
+    , lg__mt_8
+    , lg__mt_auto
+    , lg__mt_px
+    , lg__mx_0
+    , lg__mx_1
+    , lg__mx_10
+    , lg__mx_12
+    , lg__mx_16
+    , lg__mx_2
+    , lg__mx_20
+    , lg__mx_24
+    , lg__mx_3
+    , lg__mx_32
+    , lg__mx_4
+    , lg__mx_40
+    , lg__mx_48
+    , lg__mx_5
+    , lg__mx_56
+    , lg__mx_6
+    , lg__mx_64
+    , lg__mx_8
+    , lg__mx_auto
+    , lg__mx_px
+    , lg__my_0
+    , lg__my_1
+    , lg__my_10
+    , lg__my_12
+    , lg__my_16
+    , lg__my_2
+    , lg__my_20
+    , lg__my_24
+    , lg__my_3
+    , lg__my_32
+    , lg__my_4
+    , lg__my_40
+    , lg__my_48
+    , lg__my_5
+    , lg__my_56
+    , lg__my_6
+    , lg__my_64
+    , lg__my_8
+    , lg__my_auto
+    , lg__my_px
+    , lg__neg_m_1
+    , lg__neg_m_10
+    , lg__neg_m_12
+    , lg__neg_m_16
+    , lg__neg_m_2
+    , lg__neg_m_20
+    , lg__neg_m_24
+    , lg__neg_m_3
+    , lg__neg_m_32
+    , lg__neg_m_4
+    , lg__neg_m_40
+    , lg__neg_m_48
+    , lg__neg_m_5
+    , lg__neg_m_56
+    , lg__neg_m_6
+    , lg__neg_m_64
+    , lg__neg_m_8
+    , lg__neg_m_px
+    , lg__neg_mb_1
+    , lg__neg_mb_10
+    , lg__neg_mb_12
+    , lg__neg_mb_16
+    , lg__neg_mb_2
+    , lg__neg_mb_20
+    , lg__neg_mb_24
+    , lg__neg_mb_3
+    , lg__neg_mb_32
+    , lg__neg_mb_4
+    , lg__neg_mb_40
+    , lg__neg_mb_48
+    , lg__neg_mb_5
+    , lg__neg_mb_56
+    , lg__neg_mb_6
+    , lg__neg_mb_64
+    , lg__neg_mb_8
+    , lg__neg_mb_px
+    , lg__neg_ml_1
+    , lg__neg_ml_10
+    , lg__neg_ml_12
+    , lg__neg_ml_16
+    , lg__neg_ml_2
+    , lg__neg_ml_20
+    , lg__neg_ml_24
+    , lg__neg_ml_3
+    , lg__neg_ml_32
+    , lg__neg_ml_4
+    , lg__neg_ml_40
+    , lg__neg_ml_48
+    , lg__neg_ml_5
+    , lg__neg_ml_56
+    , lg__neg_ml_6
+    , lg__neg_ml_64
+    , lg__neg_ml_8
+    , lg__neg_ml_px
+    , lg__neg_mr_1
+    , lg__neg_mr_10
+    , lg__neg_mr_12
+    , lg__neg_mr_16
+    , lg__neg_mr_2
+    , lg__neg_mr_20
+    , lg__neg_mr_24
+    , lg__neg_mr_3
+    , lg__neg_mr_32
+    , lg__neg_mr_4
+    , lg__neg_mr_40
+    , lg__neg_mr_48
+    , lg__neg_mr_5
+    , lg__neg_mr_56
+    , lg__neg_mr_6
+    , lg__neg_mr_64
+    , lg__neg_mr_8
+    , lg__neg_mr_px
+    , lg__neg_mt_1
+    , lg__neg_mt_10
+    , lg__neg_mt_12
+    , lg__neg_mt_16
+    , lg__neg_mt_2
+    , lg__neg_mt_20
+    , lg__neg_mt_24
+    , lg__neg_mt_3
+    , lg__neg_mt_32
+    , lg__neg_mt_4
+    , lg__neg_mt_40
+    , lg__neg_mt_48
+    , lg__neg_mt_5
+    , lg__neg_mt_56
+    , lg__neg_mt_6
+    , lg__neg_mt_64
+    , lg__neg_mt_8
+    , lg__neg_mt_px
+    , lg__neg_mx_1
+    , lg__neg_mx_10
+    , lg__neg_mx_12
+    , lg__neg_mx_16
+    , lg__neg_mx_2
+    , lg__neg_mx_20
+    , lg__neg_mx_24
+    , lg__neg_mx_3
+    , lg__neg_mx_32
+    , lg__neg_mx_4
+    , lg__neg_mx_40
+    , lg__neg_mx_48
+    , lg__neg_mx_5
+    , lg__neg_mx_56
+    , lg__neg_mx_6
+    , lg__neg_mx_64
+    , lg__neg_mx_8
+    , lg__neg_mx_px
+    , lg__neg_my_1
+    , lg__neg_my_10
+    , lg__neg_my_12
+    , lg__neg_my_16
+    , lg__neg_my_2
+    , lg__neg_my_20
+    , lg__neg_my_24
+    , lg__neg_my_3
+    , lg__neg_my_32
+    , lg__neg_my_4
+    , lg__neg_my_40
+    , lg__neg_my_48
+    , lg__neg_my_5
+    , lg__neg_my_56
+    , lg__neg_my_6
+    , lg__neg_my_64
+    , lg__neg_my_8
+    , lg__neg_my_px
+    , lg__no_underline
+    , lg__normal_case
+    , lg__not_italic
+    , lg__not_sr_only
+    , lg__object_bottom
+    , lg__object_center
+    , lg__object_contain
+    , lg__object_cover
+    , lg__object_fill
+    , lg__object_left
+    , lg__object_left_bottom
+    , lg__object_left_top
+    , lg__object_none
+    , lg__object_right
+    , lg__object_right_bottom
+    , lg__object_right_top
+    , lg__object_scale_down
+    , lg__object_top
+    , lg__opacity_0
+    , lg__opacity_100
+    , lg__opacity_25
+    , lg__opacity_50
+    , lg__opacity_75
+    , lg__order_1
+    , lg__order_10
+    , lg__order_11
+    , lg__order_12
+    , lg__order_2
+    , lg__order_3
+    , lg__order_4
+    , lg__order_5
+    , lg__order_6
+    , lg__order_7
+    , lg__order_8
+    , lg__order_9
+    , lg__order_first
+    , lg__order_last
+    , lg__order_none
+    , lg__origin_bottom
+    , lg__origin_bottom_left
+    , lg__origin_bottom_right
+    , lg__origin_center
+    , lg__origin_left
+    , lg__origin_right
+    , lg__origin_top
+    , lg__origin_top_left
+    , lg__origin_top_right
+    , lg__outline_none
+    , lg__overflow_auto
+    , lg__overflow_hidden
+    , lg__overflow_scroll
+    , lg__overflow_visible
+    , lg__overflow_x_auto
+    , lg__overflow_x_hidden
+    , lg__overflow_x_scroll
+    , lg__overflow_x_visible
+    , lg__overflow_y_auto
+    , lg__overflow_y_hidden
+    , lg__overflow_y_scroll
+    , lg__overflow_y_visible
+    , lg__p_0
+    , lg__p_1
+    , lg__p_10
+    , lg__p_12
+    , lg__p_16
+    , lg__p_2
+    , lg__p_20
+    , lg__p_24
+    , lg__p_3
+    , lg__p_32
+    , lg__p_4
+    , lg__p_40
+    , lg__p_48
+    , lg__p_5
+    , lg__p_56
+    , lg__p_6
+    , lg__p_64
+    , lg__p_8
+    , lg__p_px
+    , lg__pb_0
+    , lg__pb_1
+    , lg__pb_10
+    , lg__pb_12
+    , lg__pb_16
+    , lg__pb_2
+    , lg__pb_20
+    , lg__pb_24
+    , lg__pb_3
+    , lg__pb_32
+    , lg__pb_4
+    , lg__pb_40
+    , lg__pb_48
+    , lg__pb_5
+    , lg__pb_56
+    , lg__pb_6
+    , lg__pb_64
+    , lg__pb_8
+    , lg__pb_px
+    , lg__pl_0
+    , lg__pl_1
+    , lg__pl_10
+    , lg__pl_12
+    , lg__pl_16
+    , lg__pl_2
+    , lg__pl_20
+    , lg__pl_24
+    , lg__pl_3
+    , lg__pl_32
+    , lg__pl_4
+    , lg__pl_40
+    , lg__pl_48
+    , lg__pl_5
+    , lg__pl_56
+    , lg__pl_6
+    , lg__pl_64
+    , lg__pl_8
+    , lg__pl_px
+    , lg__placeholder_black
+    , lg__placeholder_blue_100
+    , lg__placeholder_blue_200
+    , lg__placeholder_blue_300
+    , lg__placeholder_blue_400
+    , lg__placeholder_blue_500
+    , lg__placeholder_blue_600
+    , lg__placeholder_blue_700
+    , lg__placeholder_blue_800
+    , lg__placeholder_blue_900
+    , lg__placeholder_current
+    , lg__placeholder_gray_100
+    , lg__placeholder_gray_200
+    , lg__placeholder_gray_300
+    , lg__placeholder_gray_400
+    , lg__placeholder_gray_500
+    , lg__placeholder_gray_600
+    , lg__placeholder_gray_700
+    , lg__placeholder_gray_800
+    , lg__placeholder_gray_900
+    , lg__placeholder_green_100
+    , lg__placeholder_green_200
+    , lg__placeholder_green_300
+    , lg__placeholder_green_400
+    , lg__placeholder_green_500
+    , lg__placeholder_green_600
+    , lg__placeholder_green_700
+    , lg__placeholder_green_800
+    , lg__placeholder_green_900
+    , lg__placeholder_indigo_100
+    , lg__placeholder_indigo_200
+    , lg__placeholder_indigo_300
+    , lg__placeholder_indigo_400
+    , lg__placeholder_indigo_500
+    , lg__placeholder_indigo_600
+    , lg__placeholder_indigo_700
+    , lg__placeholder_indigo_800
+    , lg__placeholder_indigo_900
+    , lg__placeholder_orange_100
+    , lg__placeholder_orange_200
+    , lg__placeholder_orange_300
+    , lg__placeholder_orange_400
+    , lg__placeholder_orange_500
+    , lg__placeholder_orange_600
+    , lg__placeholder_orange_700
+    , lg__placeholder_orange_800
+    , lg__placeholder_orange_900
+    , lg__placeholder_pink_100
+    , lg__placeholder_pink_200
+    , lg__placeholder_pink_300
+    , lg__placeholder_pink_400
+    , lg__placeholder_pink_500
+    , lg__placeholder_pink_600
+    , lg__placeholder_pink_700
+    , lg__placeholder_pink_800
+    , lg__placeholder_pink_900
+    , lg__placeholder_purple_100
+    , lg__placeholder_purple_200
+    , lg__placeholder_purple_300
+    , lg__placeholder_purple_400
+    , lg__placeholder_purple_500
+    , lg__placeholder_purple_600
+    , lg__placeholder_purple_700
+    , lg__placeholder_purple_800
+    , lg__placeholder_purple_900
+    , lg__placeholder_red_100
+    , lg__placeholder_red_200
+    , lg__placeholder_red_300
+    , lg__placeholder_red_400
+    , lg__placeholder_red_500
+    , lg__placeholder_red_600
+    , lg__placeholder_red_700
+    , lg__placeholder_red_800
+    , lg__placeholder_red_900
+    , lg__placeholder_teal_100
+    , lg__placeholder_teal_200
+    , lg__placeholder_teal_300
+    , lg__placeholder_teal_400
+    , lg__placeholder_teal_500
+    , lg__placeholder_teal_600
+    , lg__placeholder_teal_700
+    , lg__placeholder_teal_800
+    , lg__placeholder_teal_900
+    , lg__placeholder_transparent
+    , lg__placeholder_white
+    , lg__placeholder_yellow_100
+    , lg__placeholder_yellow_200
+    , lg__placeholder_yellow_300
+    , lg__placeholder_yellow_400
+    , lg__placeholder_yellow_500
+    , lg__placeholder_yellow_600
+    , lg__placeholder_yellow_700
+    , lg__placeholder_yellow_800
+    , lg__placeholder_yellow_900
+    , lg__pointer_events_auto
+    , lg__pointer_events_none
+    , lg__pr_0
+    , lg__pr_1
+    , lg__pr_10
+    , lg__pr_12
+    , lg__pr_16
+    , lg__pr_2
+    , lg__pr_20
+    , lg__pr_24
+    , lg__pr_3
+    , lg__pr_32
+    , lg__pr_4
+    , lg__pr_40
+    , lg__pr_48
+    , lg__pr_5
+    , lg__pr_56
+    , lg__pr_6
+    , lg__pr_64
+    , lg__pr_8
+    , lg__pr_px
+    , lg__pt_0
+    , lg__pt_1
+    , lg__pt_10
+    , lg__pt_12
+    , lg__pt_16
+    , lg__pt_2
+    , lg__pt_20
+    , lg__pt_24
+    , lg__pt_3
+    , lg__pt_32
+    , lg__pt_4
+    , lg__pt_40
+    , lg__pt_48
+    , lg__pt_5
+    , lg__pt_56
+    , lg__pt_6
+    , lg__pt_64
+    , lg__pt_8
+    , lg__pt_px
+    , lg__px_0
+    , lg__px_1
+    , lg__px_10
+    , lg__px_12
+    , lg__px_16
+    , lg__px_2
+    , lg__px_20
+    , lg__px_24
+    , lg__px_3
+    , lg__px_32
+    , lg__px_4
+    , lg__px_40
+    , lg__px_48
+    , lg__px_5
+    , lg__px_56
+    , lg__px_6
+    , lg__px_64
+    , lg__px_8
+    , lg__px_px
+    , lg__py_0
+    , lg__py_1
+    , lg__py_10
+    , lg__py_12
+    , lg__py_16
+    , lg__py_2
+    , lg__py_20
+    , lg__py_24
+    , lg__py_3
+    , lg__py_32
+    , lg__py_4
+    , lg__py_40
+    , lg__py_48
+    , lg__py_5
+    , lg__py_56
+    , lg__py_6
+    , lg__py_64
+    , lg__py_8
+    , lg__py_px
+    , lg__relative
+    , lg__resize
+    , lg__resize_none
+    , lg__resize_x
+    , lg__resize_y
+    , lg__right_0
+    , lg__right_auto
+    , lg__rounded
+    , lg__rounded_b
+    , lg__rounded_b_full
+    , lg__rounded_b_lg
+    , lg__rounded_b_md
+    , lg__rounded_b_none
+    , lg__rounded_b_sm
+    , lg__rounded_bl
+    , lg__rounded_bl_full
+    , lg__rounded_bl_lg
+    , lg__rounded_bl_md
+    , lg__rounded_bl_none
+    , lg__rounded_bl_sm
+    , lg__rounded_br
+    , lg__rounded_br_full
+    , lg__rounded_br_lg
+    , lg__rounded_br_md
+    , lg__rounded_br_none
+    , lg__rounded_br_sm
+    , lg__rounded_full
+    , lg__rounded_l
+    , lg__rounded_l_full
+    , lg__rounded_l_lg
+    , lg__rounded_l_md
+    , lg__rounded_l_none
+    , lg__rounded_l_sm
+    , lg__rounded_lg
+    , lg__rounded_md
+    , lg__rounded_none
+    , lg__rounded_r
+    , lg__rounded_r_full
+    , lg__rounded_r_lg
+    , lg__rounded_r_md
+    , lg__rounded_r_none
+    , lg__rounded_r_sm
+    , lg__rounded_sm
+    , lg__rounded_t
+    , lg__rounded_t_full
+    , lg__rounded_t_lg
+    , lg__rounded_t_md
+    , lg__rounded_t_none
+    , lg__rounded_t_sm
+    , lg__rounded_tl
+    , lg__rounded_tl_full
+    , lg__rounded_tl_lg
+    , lg__rounded_tl_md
+    , lg__rounded_tl_none
+    , lg__rounded_tl_sm
+    , lg__rounded_tr
+    , lg__rounded_tr_full
+    , lg__rounded_tr_lg
+    , lg__rounded_tr_md
+    , lg__rounded_tr_none
+    , lg__rounded_tr_sm
+    , lg__row_auto
+    , lg__row_end_1
+    , lg__row_end_2
+    , lg__row_end_3
+    , lg__row_end_4
+    , lg__row_end_5
+    , lg__row_end_6
+    , lg__row_end_7
+    , lg__row_end_auto
+    , lg__row_gap_0
+    , lg__row_gap_1
+    , lg__row_gap_10
+    , lg__row_gap_12
+    , lg__row_gap_16
+    , lg__row_gap_2
+    , lg__row_gap_20
+    , lg__row_gap_24
+    , lg__row_gap_3
+    , lg__row_gap_32
+    , lg__row_gap_4
+    , lg__row_gap_40
+    , lg__row_gap_48
+    , lg__row_gap_5
+    , lg__row_gap_56
+    , lg__row_gap_6
+    , lg__row_gap_64
+    , lg__row_gap_8
+    , lg__row_gap_px
+    , lg__row_span_1
+    , lg__row_span_2
+    , lg__row_span_3
+    , lg__row_span_4
+    , lg__row_span_5
+    , lg__row_span_6
+    , lg__row_start_1
+    , lg__row_start_2
+    , lg__row_start_3
+    , lg__row_start_4
+    , lg__row_start_5
+    , lg__row_start_6
+    , lg__row_start_7
+    , lg__row_start_auto
+    , lg__scrolling_auto
+    , lg__scrolling_touch
+    , lg__select_all
+    , lg__select_auto
+    , lg__select_none
+    , lg__select_text
+    , lg__self_auto
+    , lg__self_center
+    , lg__self_end
+    , lg__self_start
+    , lg__self_stretch
+    , lg__shadow
+    , lg__shadow_2xl
+    , lg__shadow_inner
+    , lg__shadow_lg
+    , lg__shadow_md
+    , lg__shadow_none
+    , lg__shadow_outline
+    , lg__shadow_sm
+    , lg__shadow_xl
+    , lg__shadow_xs
+    , lg__sr_only
+    , lg__static
+    , lg__sticky
+    , lg__stroke_0
+    , lg__stroke_1
+    , lg__stroke_2
+    , lg__stroke_current
+    , lg__subpixel_antialiased
+    , lg__table
+    , lg__table_auto
+    , lg__table_caption
+    , lg__table_cell
+    , lg__table_column
+    , lg__table_column_group
+    , lg__table_fixed
+    , lg__table_footer_group
+    , lg__table_header_group
+    , lg__table_row
+    , lg__table_row_group
+    , lg__text_2xl
+    , lg__text_3xl
+    , lg__text_4xl
+    , lg__text_5xl
+    , lg__text_6xl
+    , lg__text_base
+    , lg__text_black
+    , lg__text_blue_100
+    , lg__text_blue_200
+    , lg__text_blue_300
+    , lg__text_blue_400
+    , lg__text_blue_500
+    , lg__text_blue_600
+    , lg__text_blue_700
+    , lg__text_blue_800
+    , lg__text_blue_900
+    , lg__text_center
+    , lg__text_current
+    , lg__text_gray_100
+    , lg__text_gray_200
+    , lg__text_gray_300
+    , lg__text_gray_400
+    , lg__text_gray_500
+    , lg__text_gray_600
+    , lg__text_gray_700
+    , lg__text_gray_800
+    , lg__text_gray_900
+    , lg__text_green_100
+    , lg__text_green_200
+    , lg__text_green_300
+    , lg__text_green_400
+    , lg__text_green_500
+    , lg__text_green_600
+    , lg__text_green_700
+    , lg__text_green_800
+    , lg__text_green_900
+    , lg__text_indigo_100
+    , lg__text_indigo_200
+    , lg__text_indigo_300
+    , lg__text_indigo_400
+    , lg__text_indigo_500
+    , lg__text_indigo_600
+    , lg__text_indigo_700
+    , lg__text_indigo_800
+    , lg__text_indigo_900
+    , lg__text_justify
+    , lg__text_left
+    , lg__text_lg
+    , lg__text_orange_100
+    , lg__text_orange_200
+    , lg__text_orange_300
+    , lg__text_orange_400
+    , lg__text_orange_500
+    , lg__text_orange_600
+    , lg__text_orange_700
+    , lg__text_orange_800
+    , lg__text_orange_900
+    , lg__text_pink_100
+    , lg__text_pink_200
+    , lg__text_pink_300
+    , lg__text_pink_400
+    , lg__text_pink_500
+    , lg__text_pink_600
+    , lg__text_pink_700
+    , lg__text_pink_800
+    , lg__text_pink_900
+    , lg__text_purple_100
+    , lg__text_purple_200
+    , lg__text_purple_300
+    , lg__text_purple_400
+    , lg__text_purple_500
+    , lg__text_purple_600
+    , lg__text_purple_700
+    , lg__text_purple_800
+    , lg__text_purple_900
+    , lg__text_red_100
+    , lg__text_red_200
+    , lg__text_red_300
+    , lg__text_red_400
+    , lg__text_red_500
+    , lg__text_red_600
+    , lg__text_red_700
+    , lg__text_red_800
+    , lg__text_red_900
+    , lg__text_right
+    , lg__text_sm
+    , lg__text_teal_100
+    , lg__text_teal_200
+    , lg__text_teal_300
+    , lg__text_teal_400
+    , lg__text_teal_500
+    , lg__text_teal_600
+    , lg__text_teal_700
+    , lg__text_teal_800
+    , lg__text_teal_900
+    , lg__text_transparent
+    , lg__text_white
+    , lg__text_xl
+    , lg__text_xs
+    , lg__text_yellow_100
+    , lg__text_yellow_200
+    , lg__text_yellow_300
+    , lg__text_yellow_400
+    , lg__text_yellow_500
+    , lg__text_yellow_600
+    , lg__text_yellow_700
+    , lg__text_yellow_800
+    , lg__text_yellow_900
+    , lg__top_0
+    , lg__top_auto
+    , lg__tracking_normal
+    , lg__tracking_tight
+    , lg__tracking_tighter
+    , lg__tracking_wide
+    , lg__tracking_wider
+    , lg__tracking_widest
+    , lg__transform_none
+    , lg__transition
+    , lg__transition_all
+    , lg__transition_colors
+    , lg__transition_none
+    , lg__transition_opacity
+    , lg__transition_shadow
+    , lg__transition_transform
+    , lg__truncate
+    , lg__underline
+    , lg__uppercase
+    , lg__visible
+    , lg__w_0
+    , lg__w_1
+    , lg__w_10
+    , lg__w_10over12
+    , lg__w_11over12
+    , lg__w_12
+    , lg__w_16
+    , lg__w_1over12
+    , lg__w_1over2
+    , lg__w_1over3
+    , lg__w_1over4
+    , lg__w_1over5
+    , lg__w_1over6
+    , lg__w_2
+    , lg__w_20
+    , lg__w_24
+    , lg__w_2over12
+    , lg__w_2over3
+    , lg__w_2over4
+    , lg__w_2over5
+    , lg__w_2over6
+    , lg__w_3
+    , lg__w_32
+    , lg__w_3over12
+    , lg__w_3over4
+    , lg__w_3over5
+    , lg__w_3over6
+    , lg__w_4
+    , lg__w_40
+    , lg__w_48
+    , lg__w_4over12
+    , lg__w_4over5
+    , lg__w_4over6
+    , lg__w_5
+    , lg__w_56
+    , lg__w_5over12
+    , lg__w_5over6
+    , lg__w_6
+    , lg__w_64
+    , lg__w_6over12
+    , lg__w_7over12
+    , lg__w_8
+    , lg__w_8over12
+    , lg__w_9over12
+    , lg__w_auto
+    , lg__w_full
+    , lg__w_px
+    , lg__w_screen
+    , lg__whitespace_no_wrap
+    , lg__whitespace_normal
+    , lg__whitespace_pre
+    , lg__whitespace_pre_line
+    , lg__whitespace_pre_wrap
+    , lg__z_0
+    , lg__z_10
+    , lg__z_20
+    , lg__z_30
+    , lg__z_40
+    , lg__z_50
+    , lg__z_auto
     , m_0
     , m_1
     , m_10
@@ -552,4558 +2774,12 @@ module TW exposing
     , shadow_xs
     )
 
-import Css 
-
+import Css
+import Css.Media
 
 
 m_0 : Css.Style
 m_0 =
-    Css.batch [
-      Css.margin (Css.px 0)
-    ]
-
-
-m_1 : Css.Style
-m_1 =
-    Css.batch [
-      Css.margin (Css.rem 0.25)
-    ]
-
-
-m_2 : Css.Style
-m_2 =
-    Css.batch [
-      Css.margin (Css.rem 0.5)
-    ]
-
-
-m_3 : Css.Style
-m_3 =
-    Css.batch [
-      Css.margin (Css.rem 0.75)
-    ]
-
-
-m_4 : Css.Style
-m_4 =
-    Css.batch [
-      Css.margin (Css.rem 1)
-    ]
-
-
-m_5 : Css.Style
-m_5 =
-    Css.batch [
-      Css.margin (Css.rem 1.25)
-    ]
-
-
-m_6 : Css.Style
-m_6 =
-    Css.batch [
-      Css.margin (Css.rem 1.5)
-    ]
-
-
-m_8 : Css.Style
-m_8 =
-    Css.batch [
-      Css.margin (Css.rem 2)
-    ]
-
-
-m_10 : Css.Style
-m_10 =
-    Css.batch [
-      Css.margin (Css.rem 2.5)
-    ]
-
-
-m_12 : Css.Style
-m_12 =
-    Css.batch [
-      Css.margin (Css.rem 3)
-    ]
-
-
-m_16 : Css.Style
-m_16 =
-    Css.batch [
-      Css.margin (Css.rem 4)
-    ]
-
-
-m_20 : Css.Style
-m_20 =
-    Css.batch [
-      Css.margin (Css.rem 5)
-    ]
-
-
-m_24 : Css.Style
-m_24 =
-    Css.batch [
-      Css.margin (Css.rem 6)
-    ]
-
-
-m_32 : Css.Style
-m_32 =
-    Css.batch [
-      Css.margin (Css.rem 8)
-    ]
-
-
-m_40 : Css.Style
-m_40 =
-    Css.batch [
-      Css.margin (Css.rem 10)
-    ]
-
-
-m_48 : Css.Style
-m_48 =
-    Css.batch [
-      Css.margin (Css.rem 12)
-    ]
-
-
-m_56 : Css.Style
-m_56 =
-    Css.batch [
-      Css.margin (Css.rem 14)
-    ]
-
-
-m_64 : Css.Style
-m_64 =
-    Css.batch [
-      Css.margin (Css.rem 16)
-    ]
-
-
-m_auto : Css.Style
-m_auto =
-    Css.batch [
-      Css.margin Css.auto
-    ]
-
-
-m_px : Css.Style
-m_px =
-    Css.batch [
-      Css.margin (Css.px 1)
-    ]
-
-
-my_0 : Css.Style
-my_0 =
-    Css.batch [
-      Css.marginTop (Css.px 0), 
-      Css.marginBottom (Css.px 0)
-    ]
-
-
-mx_0 : Css.Style
-mx_0 =
-    Css.batch [
-      Css.marginLeft (Css.px 0), 
-      Css.marginRight (Css.px 0)
-    ]
-
-
-my_1 : Css.Style
-my_1 =
-    Css.batch [
-      Css.marginTop (Css.rem 0.25), 
-      Css.marginBottom (Css.rem 0.25)
-    ]
-
-
-mx_1 : Css.Style
-mx_1 =
-    Css.batch [
-      Css.marginLeft (Css.rem 0.25), 
-      Css.marginRight (Css.rem 0.25)
-    ]
-
-
-my_2 : Css.Style
-my_2 =
-    Css.batch [
-      Css.marginTop (Css.rem 0.5), 
-      Css.marginBottom (Css.rem 0.5)
-    ]
-
-
-mx_2 : Css.Style
-mx_2 =
-    Css.batch [
-      Css.marginLeft (Css.rem 0.5), 
-      Css.marginRight (Css.rem 0.5)
-    ]
-
-
-my_3 : Css.Style
-my_3 =
-    Css.batch [
-      Css.marginTop (Css.rem 0.75), 
-      Css.marginBottom (Css.rem 0.75)
-    ]
-
-
-mx_3 : Css.Style
-mx_3 =
-    Css.batch [
-      Css.marginLeft (Css.rem 0.75), 
-      Css.marginRight (Css.rem 0.75)
-    ]
-
-
-my_4 : Css.Style
-my_4 =
-    Css.batch [
-      Css.marginTop (Css.rem 1), 
-      Css.marginBottom (Css.rem 1)
-    ]
-
-
-mx_4 : Css.Style
-mx_4 =
-    Css.batch [
-      Css.marginLeft (Css.rem 1), 
-      Css.marginRight (Css.rem 1)
-    ]
-
-
-my_5 : Css.Style
-my_5 =
-    Css.batch [
-      Css.marginTop (Css.rem 1.25), 
-      Css.marginBottom (Css.rem 1.25)
-    ]
-
-
-mx_5 : Css.Style
-mx_5 =
-    Css.batch [
-      Css.marginLeft (Css.rem 1.25), 
-      Css.marginRight (Css.rem 1.25)
-    ]
-
-
-my_6 : Css.Style
-my_6 =
-    Css.batch [
-      Css.marginTop (Css.rem 1.5), 
-      Css.marginBottom (Css.rem 1.5)
-    ]
-
-
-mx_6 : Css.Style
-mx_6 =
-    Css.batch [
-      Css.marginLeft (Css.rem 1.5), 
-      Css.marginRight (Css.rem 1.5)
-    ]
-
-
-my_8 : Css.Style
-my_8 =
-    Css.batch [
-      Css.marginTop (Css.rem 2), 
-      Css.marginBottom (Css.rem 2)
-    ]
-
-
-mx_8 : Css.Style
-mx_8 =
-    Css.batch [
-      Css.marginLeft (Css.rem 2), 
-      Css.marginRight (Css.rem 2)
-    ]
-
-
-my_10 : Css.Style
-my_10 =
-    Css.batch [
-      Css.marginTop (Css.rem 2.5), 
-      Css.marginBottom (Css.rem 2.5)
-    ]
-
-
-mx_10 : Css.Style
-mx_10 =
-    Css.batch [
-      Css.marginLeft (Css.rem 2.5), 
-      Css.marginRight (Css.rem 2.5)
-    ]
-
-
-my_12 : Css.Style
-my_12 =
-    Css.batch [
-      Css.marginTop (Css.rem 3), 
-      Css.marginBottom (Css.rem 3)
-    ]
-
-
-mx_12 : Css.Style
-mx_12 =
-    Css.batch [
-      Css.marginLeft (Css.rem 3), 
-      Css.marginRight (Css.rem 3)
-    ]
-
-
-my_16 : Css.Style
-my_16 =
-    Css.batch [
-      Css.marginTop (Css.rem 4), 
-      Css.marginBottom (Css.rem 4)
-    ]
-
-
-mx_16 : Css.Style
-mx_16 =
-    Css.batch [
-      Css.marginLeft (Css.rem 4), 
-      Css.marginRight (Css.rem 4)
-    ]
-
-
-my_20 : Css.Style
-my_20 =
-    Css.batch [
-      Css.marginTop (Css.rem 5), 
-      Css.marginBottom (Css.rem 5)
-    ]
-
-
-mx_20 : Css.Style
-mx_20 =
-    Css.batch [
-      Css.marginLeft (Css.rem 5), 
-      Css.marginRight (Css.rem 5)
-    ]
-
-
-my_24 : Css.Style
-my_24 =
-    Css.batch [
-      Css.marginTop (Css.rem 6), 
-      Css.marginBottom (Css.rem 6)
-    ]
-
-
-mx_24 : Css.Style
-mx_24 =
-    Css.batch [
-      Css.marginLeft (Css.rem 6), 
-      Css.marginRight (Css.rem 6)
-    ]
-
-
-my_32 : Css.Style
-my_32 =
-    Css.batch [
-      Css.marginTop (Css.rem 8), 
-      Css.marginBottom (Css.rem 8)
-    ]
-
-
-mx_32 : Css.Style
-mx_32 =
-    Css.batch [
-      Css.marginLeft (Css.rem 8), 
-      Css.marginRight (Css.rem 8)
-    ]
-
-
-my_40 : Css.Style
-my_40 =
-    Css.batch [
-      Css.marginTop (Css.rem 10), 
-      Css.marginBottom (Css.rem 10)
-    ]
-
-
-mx_40 : Css.Style
-mx_40 =
-    Css.batch [
-      Css.marginLeft (Css.rem 10), 
-      Css.marginRight (Css.rem 10)
-    ]
-
-
-my_48 : Css.Style
-my_48 =
-    Css.batch [
-      Css.marginTop (Css.rem 12), 
-      Css.marginBottom (Css.rem 12)
-    ]
-
-
-mx_48 : Css.Style
-mx_48 =
-    Css.batch [
-      Css.marginLeft (Css.rem 12), 
-      Css.marginRight (Css.rem 12)
-    ]
-
-
-my_56 : Css.Style
-my_56 =
-    Css.batch [
-      Css.marginTop (Css.rem 14), 
-      Css.marginBottom (Css.rem 14)
-    ]
-
-
-mx_56 : Css.Style
-mx_56 =
-    Css.batch [
-      Css.marginLeft (Css.rem 14), 
-      Css.marginRight (Css.rem 14)
-    ]
-
-
-my_64 : Css.Style
-my_64 =
-    Css.batch [
-      Css.marginTop (Css.rem 16), 
-      Css.marginBottom (Css.rem 16)
-    ]
-
-
-mx_64 : Css.Style
-mx_64 =
-    Css.batch [
-      Css.marginLeft (Css.rem 16), 
-      Css.marginRight (Css.rem 16)
-    ]
-
-
-my_auto : Css.Style
-my_auto =
-    Css.batch [
-      Css.marginTop Css.auto, 
-      Css.marginBottom Css.auto
-    ]
-
-
-mx_auto : Css.Style
-mx_auto =
-    Css.batch [
-      Css.marginLeft Css.auto, 
-      Css.marginRight Css.auto
-    ]
-
-
-my_px : Css.Style
-my_px =
-    Css.batch [
-      Css.marginTop (Css.px 1), 
-      Css.marginBottom (Css.px 1)
-    ]
-
-
-mx_px : Css.Style
-mx_px =
-    Css.batch [
-      Css.marginLeft (Css.px 1), 
-      Css.marginRight (Css.px 1)
-    ]
-
-
-p_0 : Css.Style
-p_0 =
-    Css.batch [
-      Css.padding (Css.px 0)
-    ]
-
-
-p_1 : Css.Style
-p_1 =
-    Css.batch [
-      Css.padding (Css.rem 0.25)
-    ]
-
-
-p_2 : Css.Style
-p_2 =
-    Css.batch [
-      Css.padding (Css.rem 0.5)
-    ]
-
-
-p_3 : Css.Style
-p_3 =
-    Css.batch [
-      Css.padding (Css.rem 0.75)
-    ]
-
-
-p_4 : Css.Style
-p_4 =
-    Css.batch [
-      Css.padding (Css.rem 1)
-    ]
-
-
-p_5 : Css.Style
-p_5 =
-    Css.batch [
-      Css.padding (Css.rem 1.25)
-    ]
-
-
-p_6 : Css.Style
-p_6 =
-    Css.batch [
-      Css.padding (Css.rem 1.5)
-    ]
-
-
-p_8 : Css.Style
-p_8 =
-    Css.batch [
-      Css.padding (Css.rem 2)
-    ]
-
-
-p_10 : Css.Style
-p_10 =
-    Css.batch [
-      Css.padding (Css.rem 2.5)
-    ]
-
-
-p_12 : Css.Style
-p_12 =
-    Css.batch [
-      Css.padding (Css.rem 3)
-    ]
-
-
-p_16 : Css.Style
-p_16 =
-    Css.batch [
-      Css.padding (Css.rem 4)
-    ]
-
-
-p_20 : Css.Style
-p_20 =
-    Css.batch [
-      Css.padding (Css.rem 5)
-    ]
-
-
-p_24 : Css.Style
-p_24 =
-    Css.batch [
-      Css.padding (Css.rem 6)
-    ]
-
-
-p_32 : Css.Style
-p_32 =
-    Css.batch [
-      Css.padding (Css.rem 8)
-    ]
-
-
-p_40 : Css.Style
-p_40 =
-    Css.batch [
-      Css.padding (Css.rem 10)
-    ]
-
-
-p_48 : Css.Style
-p_48 =
-    Css.batch [
-      Css.padding (Css.rem 12)
-    ]
-
-
-p_56 : Css.Style
-p_56 =
-    Css.batch [
-      Css.padding (Css.rem 14)
-    ]
-
-
-p_64 : Css.Style
-p_64 =
-    Css.batch [
-      Css.padding (Css.rem 16)
-    ]
-
-
-p_px : Css.Style
-p_px =
-    Css.batch [
-      Css.padding (Css.px 1)
-    ]
-
-
-py_0 : Css.Style
-py_0 =
-    Css.batch [
-      Css.paddingTop (Css.px 0), 
-      Css.paddingBottom (Css.px 0)
-    ]
-
-
-px_0 : Css.Style
-px_0 =
-    Css.batch [
-      Css.paddingLeft (Css.px 0), 
-      Css.paddingRight (Css.px 0)
-    ]
-
-
-py_1 : Css.Style
-py_1 =
-    Css.batch [
-      Css.paddingTop (Css.rem 0.25), 
-      Css.paddingBottom (Css.rem 0.25)
-    ]
-
-
-px_1 : Css.Style
-px_1 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 0.25), 
-      Css.paddingRight (Css.rem 0.25)
-    ]
-
-
-py_2 : Css.Style
-py_2 =
-    Css.batch [
-      Css.paddingTop (Css.rem 0.5), 
-      Css.paddingBottom (Css.rem 0.5)
-    ]
-
-
-px_2 : Css.Style
-px_2 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 0.5), 
-      Css.paddingRight (Css.rem 0.5)
-    ]
-
-
-py_3 : Css.Style
-py_3 =
-    Css.batch [
-      Css.paddingTop (Css.rem 0.75), 
-      Css.paddingBottom (Css.rem 0.75)
-    ]
-
-
-px_3 : Css.Style
-px_3 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 0.75), 
-      Css.paddingRight (Css.rem 0.75)
-    ]
-
-
-py_4 : Css.Style
-py_4 =
-    Css.batch [
-      Css.paddingTop (Css.rem 1), 
-      Css.paddingBottom (Css.rem 1)
-    ]
-
-
-px_4 : Css.Style
-px_4 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 1), 
-      Css.paddingRight (Css.rem 1)
-    ]
-
-
-py_5 : Css.Style
-py_5 =
-    Css.batch [
-      Css.paddingTop (Css.rem 1.25), 
-      Css.paddingBottom (Css.rem 1.25)
-    ]
-
-
-px_5 : Css.Style
-px_5 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 1.25), 
-      Css.paddingRight (Css.rem 1.25)
-    ]
-
-
-py_6 : Css.Style
-py_6 =
-    Css.batch [
-      Css.paddingTop (Css.rem 1.5), 
-      Css.paddingBottom (Css.rem 1.5)
-    ]
-
-
-px_6 : Css.Style
-px_6 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 1.5), 
-      Css.paddingRight (Css.rem 1.5)
-    ]
-
-
-py_8 : Css.Style
-py_8 =
-    Css.batch [
-      Css.paddingTop (Css.rem 2), 
-      Css.paddingBottom (Css.rem 2)
-    ]
-
-
-px_8 : Css.Style
-px_8 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 2), 
-      Css.paddingRight (Css.rem 2)
-    ]
-
-
-py_10 : Css.Style
-py_10 =
-    Css.batch [
-      Css.paddingTop (Css.rem 2.5), 
-      Css.paddingBottom (Css.rem 2.5)
-    ]
-
-
-px_10 : Css.Style
-px_10 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 2.5), 
-      Css.paddingRight (Css.rem 2.5)
-    ]
-
-
-py_12 : Css.Style
-py_12 =
-    Css.batch [
-      Css.paddingTop (Css.rem 3), 
-      Css.paddingBottom (Css.rem 3)
-    ]
-
-
-px_12 : Css.Style
-px_12 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 3), 
-      Css.paddingRight (Css.rem 3)
-    ]
-
-
-py_16 : Css.Style
-py_16 =
-    Css.batch [
-      Css.paddingTop (Css.rem 4), 
-      Css.paddingBottom (Css.rem 4)
-    ]
-
-
-px_16 : Css.Style
-px_16 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 4), 
-      Css.paddingRight (Css.rem 4)
-    ]
-
-
-py_20 : Css.Style
-py_20 =
-    Css.batch [
-      Css.paddingTop (Css.rem 5), 
-      Css.paddingBottom (Css.rem 5)
-    ]
-
-
-px_20 : Css.Style
-px_20 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 5), 
-      Css.paddingRight (Css.rem 5)
-    ]
-
-
-py_24 : Css.Style
-py_24 =
-    Css.batch [
-      Css.paddingTop (Css.rem 6), 
-      Css.paddingBottom (Css.rem 6)
-    ]
-
-
-px_24 : Css.Style
-px_24 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 6), 
-      Css.paddingRight (Css.rem 6)
-    ]
-
-
-py_32 : Css.Style
-py_32 =
-    Css.batch [
-      Css.paddingTop (Css.rem 8), 
-      Css.paddingBottom (Css.rem 8)
-    ]
-
-
-px_32 : Css.Style
-px_32 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 8), 
-      Css.paddingRight (Css.rem 8)
-    ]
-
-
-py_40 : Css.Style
-py_40 =
-    Css.batch [
-      Css.paddingTop (Css.rem 10), 
-      Css.paddingBottom (Css.rem 10)
-    ]
-
-
-px_40 : Css.Style
-px_40 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 10), 
-      Css.paddingRight (Css.rem 10)
-    ]
-
-
-py_48 : Css.Style
-py_48 =
-    Css.batch [
-      Css.paddingTop (Css.rem 12), 
-      Css.paddingBottom (Css.rem 12)
-    ]
-
-
-px_48 : Css.Style
-px_48 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 12), 
-      Css.paddingRight (Css.rem 12)
-    ]
-
-
-py_56 : Css.Style
-py_56 =
-    Css.batch [
-      Css.paddingTop (Css.rem 14), 
-      Css.paddingBottom (Css.rem 14)
-    ]
-
-
-px_56 : Css.Style
-px_56 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 14), 
-      Css.paddingRight (Css.rem 14)
-    ]
-
-
-py_64 : Css.Style
-py_64 =
-    Css.batch [
-      Css.paddingTop (Css.rem 16), 
-      Css.paddingBottom (Css.rem 16)
-    ]
-
-
-px_64 : Css.Style
-px_64 =
-    Css.batch [
-      Css.paddingLeft (Css.rem 16), 
-      Css.paddingRight (Css.rem 16)
-    ]
-
-
-py_px : Css.Style
-py_px =
-    Css.batch [
-      Css.paddingTop (Css.px 1), 
-      Css.paddingBottom (Css.px 1)
-    ]
-
-
-px_px : Css.Style
-px_px =
-    Css.batch [
-      Css.paddingLeft (Css.px 1), 
-      Css.paddingRight (Css.px 1)
-    ]
-
-
-bg_fixed : Css.Style
-bg_fixed =
-    Css.batch [
-      Css.backgroundAttachment Css.fixed
-    ]
-
-
-bg_local : Css.Style
-bg_local =
-    Css.batch [
-      Css.backgroundAttachment Css.local
-    ]
-
-
-bg_scroll : Css.Style
-bg_scroll =
-    Css.batch [
-      Css.backgroundAttachment Css.scroll
-    ]
-
-
-bg_transparent : Css.Style
-bg_transparent =
-    Css.batch [
-      Css.backgroundColor Css.transparent
-    ]
-
-
-bg_current : Css.Style
-bg_current =
-    Css.batch [
-      Css.backgroundColor Css.currentColor
-    ]
-
-
-bg_black : Css.Style
-bg_black =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#000")
-    ]
-
-
-bg_white : Css.Style
-bg_white =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#fff")
-    ]
-
-
-bg_gray_100 : Css.Style
-bg_gray_100 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#f7fafc")
-    ]
-
-
-bg_gray_200 : Css.Style
-bg_gray_200 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#edf2f7")
-    ]
-
-
-bg_gray_300 : Css.Style
-bg_gray_300 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#e2e8f0")
-    ]
-
-
-bg_gray_400 : Css.Style
-bg_gray_400 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#cbd5e0")
-    ]
-
-
-bg_gray_500 : Css.Style
-bg_gray_500 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#a0aec0")
-    ]
-
-
-bg_gray_600 : Css.Style
-bg_gray_600 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#718096")
-    ]
-
-
-bg_gray_700 : Css.Style
-bg_gray_700 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#4a5568")
-    ]
-
-
-bg_gray_800 : Css.Style
-bg_gray_800 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#2d3748")
-    ]
-
-
-bg_gray_900 : Css.Style
-bg_gray_900 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#1a202c")
-    ]
-
-
-bg_red_100 : Css.Style
-bg_red_100 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#fff5f5")
-    ]
-
-
-bg_red_200 : Css.Style
-bg_red_200 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#fed7d7")
-    ]
-
-
-bg_red_300 : Css.Style
-bg_red_300 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#feb2b2")
-    ]
-
-
-bg_red_400 : Css.Style
-bg_red_400 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#fc8181")
-    ]
-
-
-bg_red_500 : Css.Style
-bg_red_500 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#f56565")
-    ]
-
-
-bg_red_600 : Css.Style
-bg_red_600 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#e53e3e")
-    ]
-
-
-bg_red_700 : Css.Style
-bg_red_700 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#c53030")
-    ]
-
-
-bg_red_800 : Css.Style
-bg_red_800 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#9b2c2c")
-    ]
-
-
-bg_red_900 : Css.Style
-bg_red_900 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#742a2a")
-    ]
-
-
-bg_orange_100 : Css.Style
-bg_orange_100 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#fffaf0")
-    ]
-
-
-bg_orange_200 : Css.Style
-bg_orange_200 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#feebc8")
-    ]
-
-
-bg_orange_300 : Css.Style
-bg_orange_300 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#fbd38d")
-    ]
-
-
-bg_orange_400 : Css.Style
-bg_orange_400 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#f6ad55")
-    ]
-
-
-bg_orange_500 : Css.Style
-bg_orange_500 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#ed8936")
-    ]
-
-
-bg_orange_600 : Css.Style
-bg_orange_600 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#dd6b20")
-    ]
-
-
-bg_orange_700 : Css.Style
-bg_orange_700 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#c05621")
-    ]
-
-
-bg_orange_800 : Css.Style
-bg_orange_800 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#9c4221")
-    ]
-
-
-bg_orange_900 : Css.Style
-bg_orange_900 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#7b341e")
-    ]
-
-
-bg_yellow_100 : Css.Style
-bg_yellow_100 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#fffff0")
-    ]
-
-
-bg_yellow_200 : Css.Style
-bg_yellow_200 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#fefcbf")
-    ]
-
-
-bg_yellow_300 : Css.Style
-bg_yellow_300 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#faf089")
-    ]
-
-
-bg_yellow_400 : Css.Style
-bg_yellow_400 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#f6e05e")
-    ]
-
-
-bg_yellow_500 : Css.Style
-bg_yellow_500 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#ecc94b")
-    ]
-
-
-bg_yellow_600 : Css.Style
-bg_yellow_600 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#d69e2e")
-    ]
-
-
-bg_yellow_700 : Css.Style
-bg_yellow_700 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#b7791f")
-    ]
-
-
-bg_yellow_800 : Css.Style
-bg_yellow_800 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#975a16")
-    ]
-
-
-bg_yellow_900 : Css.Style
-bg_yellow_900 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#744210")
-    ]
-
-
-bg_green_100 : Css.Style
-bg_green_100 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#f0fff4")
-    ]
-
-
-bg_green_200 : Css.Style
-bg_green_200 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#c6f6d5")
-    ]
-
-
-bg_green_300 : Css.Style
-bg_green_300 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#9ae6b4")
-    ]
-
-
-bg_green_400 : Css.Style
-bg_green_400 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#68d391")
-    ]
-
-
-bg_green_500 : Css.Style
-bg_green_500 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#48bb78")
-    ]
-
-
-bg_green_600 : Css.Style
-bg_green_600 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#38a169")
-    ]
-
-
-bg_green_700 : Css.Style
-bg_green_700 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#2f855a")
-    ]
-
-
-bg_green_800 : Css.Style
-bg_green_800 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#276749")
-    ]
-
-
-bg_green_900 : Css.Style
-bg_green_900 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#22543d")
-    ]
-
-
-bg_teal_100 : Css.Style
-bg_teal_100 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#e6fffa")
-    ]
-
-
-bg_teal_200 : Css.Style
-bg_teal_200 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#b2f5ea")
-    ]
-
-
-bg_teal_300 : Css.Style
-bg_teal_300 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#81e6d9")
-    ]
-
-
-bg_teal_400 : Css.Style
-bg_teal_400 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#4fd1c5")
-    ]
-
-
-bg_teal_500 : Css.Style
-bg_teal_500 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#38b2ac")
-    ]
-
-
-bg_teal_600 : Css.Style
-bg_teal_600 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#319795")
-    ]
-
-
-bg_teal_700 : Css.Style
-bg_teal_700 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#2c7a7b")
-    ]
-
-
-bg_teal_800 : Css.Style
-bg_teal_800 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#285e61")
-    ]
-
-
-bg_teal_900 : Css.Style
-bg_teal_900 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#234e52")
-    ]
-
-
-bg_blue_100 : Css.Style
-bg_blue_100 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#ebf8ff")
-    ]
-
-
-bg_blue_200 : Css.Style
-bg_blue_200 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#bee3f8")
-    ]
-
-
-bg_blue_300 : Css.Style
-bg_blue_300 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#90cdf4")
-    ]
-
-
-bg_blue_400 : Css.Style
-bg_blue_400 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#63b3ed")
-    ]
-
-
-bg_blue_500 : Css.Style
-bg_blue_500 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#4299e1")
-    ]
-
-
-bg_blue_600 : Css.Style
-bg_blue_600 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#3182ce")
-    ]
-
-
-bg_blue_700 : Css.Style
-bg_blue_700 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#2b6cb0")
-    ]
-
-
-bg_blue_800 : Css.Style
-bg_blue_800 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#2c5282")
-    ]
-
-
-bg_blue_900 : Css.Style
-bg_blue_900 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#2a4365")
-    ]
-
-
-bg_indigo_100 : Css.Style
-bg_indigo_100 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#ebf4ff")
-    ]
-
-
-bg_indigo_200 : Css.Style
-bg_indigo_200 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#c3dafe")
-    ]
-
-
-bg_indigo_300 : Css.Style
-bg_indigo_300 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#a3bffa")
-    ]
-
-
-bg_indigo_400 : Css.Style
-bg_indigo_400 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#7f9cf5")
-    ]
-
-
-bg_indigo_500 : Css.Style
-bg_indigo_500 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#667eea")
-    ]
-
-
-bg_indigo_600 : Css.Style
-bg_indigo_600 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#5a67d8")
-    ]
-
-
-bg_indigo_700 : Css.Style
-bg_indigo_700 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#4c51bf")
-    ]
-
-
-bg_indigo_800 : Css.Style
-bg_indigo_800 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#434190")
-    ]
-
-
-bg_indigo_900 : Css.Style
-bg_indigo_900 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#3c366b")
-    ]
-
-
-bg_purple_100 : Css.Style
-bg_purple_100 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#faf5ff")
-    ]
-
-
-bg_purple_200 : Css.Style
-bg_purple_200 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#e9d8fd")
-    ]
-
-
-bg_purple_300 : Css.Style
-bg_purple_300 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#d6bcfa")
-    ]
-
-
-bg_purple_400 : Css.Style
-bg_purple_400 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#b794f4")
-    ]
-
-
-bg_purple_500 : Css.Style
-bg_purple_500 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#9f7aea")
-    ]
-
-
-bg_purple_600 : Css.Style
-bg_purple_600 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#805ad5")
-    ]
-
-
-bg_purple_700 : Css.Style
-bg_purple_700 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#6b46c1")
-    ]
-
-
-bg_purple_800 : Css.Style
-bg_purple_800 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#553c9a")
-    ]
-
-
-bg_purple_900 : Css.Style
-bg_purple_900 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#44337a")
-    ]
-
-
-bg_pink_100 : Css.Style
-bg_pink_100 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#fff5f7")
-    ]
-
-
-bg_pink_200 : Css.Style
-bg_pink_200 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#fed7e2")
-    ]
-
-
-bg_pink_300 : Css.Style
-bg_pink_300 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#fbb6ce")
-    ]
-
-
-bg_pink_400 : Css.Style
-bg_pink_400 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#f687b3")
-    ]
-
-
-bg_pink_500 : Css.Style
-bg_pink_500 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#ed64a6")
-    ]
-
-
-bg_pink_600 : Css.Style
-bg_pink_600 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#d53f8c")
-    ]
-
-
-bg_pink_700 : Css.Style
-bg_pink_700 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#b83280")
-    ]
-
-
-bg_pink_800 : Css.Style
-bg_pink_800 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#97266d")
-    ]
-
-
-bg_pink_900 : Css.Style
-bg_pink_900 =
-    Css.batch [
-      Css.backgroundColor (Css.hex "#702459")
-    ]
-
-
-bg_bottom : Css.Style
-bg_bottom =
-    Css.batch [
-      Css.property "background-position" "bottom"
-    ]
-
-
-bg_center : Css.Style
-bg_center =
-    Css.batch [
-      Css.property "background-position" "center"
-    ]
-
-
-bg_left : Css.Style
-bg_left =
-    Css.batch [
-      Css.property "background-position" "left"
-    ]
-
-
-bg_left_bottom : Css.Style
-bg_left_bottom =
-    Css.batch [
-      Css.property "background-position" "left bottom"
-    ]
-
-
-bg_left_top : Css.Style
-bg_left_top =
-    Css.batch [
-      Css.property "background-position" "left top"
-    ]
-
-
-bg_right : Css.Style
-bg_right =
-    Css.batch [
-      Css.property "background-position" "right"
-    ]
-
-
-bg_right_bottom : Css.Style
-bg_right_bottom =
-    Css.batch [
-      Css.property "background-position" "right bottom"
-    ]
-
-
-bg_right_top : Css.Style
-bg_right_top =
-    Css.batch [
-      Css.property "background-position" "right top"
-    ]
-
-
-bg_top : Css.Style
-bg_top =
-    Css.batch [
-      Css.property "background-position" "top"
-    ]
-
-
-bg_repeat : Css.Style
-bg_repeat =
-    Css.batch [
-      Css.backgroundRepeat Css.repeat
-    ]
-
-
-bg_no_repeat : Css.Style
-bg_no_repeat =
-    Css.batch [
-      Css.backgroundRepeat Css.noRepeat
-    ]
-
-
-bg_repeat_x : Css.Style
-bg_repeat_x =
-    Css.batch [
-      Css.backgroundRepeat Css.repeatX
-    ]
-
-
-bg_repeat_y : Css.Style
-bg_repeat_y =
-    Css.batch [
-      Css.backgroundRepeat Css.repeatY
-    ]
-
-
-bg_repeat_round : Css.Style
-bg_repeat_round =
-    Css.batch [
-      Css.backgroundRepeat Css.round
-    ]
-
-
-bg_repeat_space : Css.Style
-bg_repeat_space =
-    Css.batch [
-      Css.backgroundRepeat Css.space
-    ]
-
-
-bg_auto : Css.Style
-bg_auto =
-    Css.batch [
-      Css.backgroundSize Css.auto
-    ]
-
-
-bg_cover : Css.Style
-bg_cover =
-    Css.batch [
-      Css.backgroundSize Css.cover
-    ]
-
-
-bg_contain : Css.Style
-bg_contain =
-    Css.batch [
-      Css.backgroundSize Css.contain
-    ]
-
-
-shadow_xs : Css.Style
-shadow_xs =
-    Css.batch [
-      Css.property "box-shadow" "0 0 0 1px rgba(0, 0, 0, 0.05)"
-    ]
-
-
-shadow_sm : Css.Style
-shadow_sm =
-    Css.batch [
-      Css.property "box-shadow" "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
-    ]
-
-
-shadow : Css.Style
-shadow =
-    Css.batch [
-      Css.property "box-shadow" "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
-    ]
-
-
-shadow_md : Css.Style
-shadow_md =
-    Css.batch [
-      Css.property "box-shadow" "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-    ]
-
-
-shadow_lg : Css.Style
-shadow_lg =
-    Css.batch [
-      Css.property "box-shadow" "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
-    ]
-
-
-shadow_xl : Css.Style
-shadow_xl =
-    Css.batch [
-      Css.property "box-shadow" "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-    ]
-
-
-shadow_2xl : Css.Style
-shadow_2xl =
-    Css.batch [
-      Css.property "box-shadow" "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
-    ]
-
-
-shadow_inner : Css.Style
-shadow_inner =
-    Css.batch [
-      Css.property "box-shadow" "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)"
-    ]
-
-
-shadow_outline : Css.Style
-shadow_outline =
-    Css.batch [
-      Css.property "box-shadow" "0 0 0 3px rgba(66, 153, 225, 0.5)"
-    ]
-
-
-shadow_none : Css.Style
-shadow_none =
-    Css.batch [
-      Css.property "box-shadow" "none"
-    ]
-
-
-hover__bg_transparent : Css.Style
-hover__bg_transparent =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor Css.transparent
-      ]
-    ]
-
-
-hover__bg_current : Css.Style
-hover__bg_current =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor Css.currentColor
-      ]
-    ]
-
-
-hover__bg_black : Css.Style
-hover__bg_black =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#000")
-      ]
-    ]
-
-
-hover__bg_white : Css.Style
-hover__bg_white =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#fff")
-      ]
-    ]
-
-
-hover__bg_gray_100 : Css.Style
-hover__bg_gray_100 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#f7fafc")
-      ]
-    ]
-
-
-hover__bg_gray_200 : Css.Style
-hover__bg_gray_200 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#edf2f7")
-      ]
-    ]
-
-
-hover__bg_gray_300 : Css.Style
-hover__bg_gray_300 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#e2e8f0")
-      ]
-    ]
-
-
-hover__bg_gray_400 : Css.Style
-hover__bg_gray_400 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#cbd5e0")
-      ]
-    ]
-
-
-hover__bg_gray_500 : Css.Style
-hover__bg_gray_500 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#a0aec0")
-      ]
-    ]
-
-
-hover__bg_gray_600 : Css.Style
-hover__bg_gray_600 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#718096")
-      ]
-    ]
-
-
-hover__bg_gray_700 : Css.Style
-hover__bg_gray_700 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#4a5568")
-      ]
-    ]
-
-
-hover__bg_gray_800 : Css.Style
-hover__bg_gray_800 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#2d3748")
-      ]
-    ]
-
-
-hover__bg_gray_900 : Css.Style
-hover__bg_gray_900 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#1a202c")
-      ]
-    ]
-
-
-hover__bg_red_100 : Css.Style
-hover__bg_red_100 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#fff5f5")
-      ]
-    ]
-
-
-hover__bg_red_200 : Css.Style
-hover__bg_red_200 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#fed7d7")
-      ]
-    ]
-
-
-hover__bg_red_300 : Css.Style
-hover__bg_red_300 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#feb2b2")
-      ]
-    ]
-
-
-hover__bg_red_400 : Css.Style
-hover__bg_red_400 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#fc8181")
-      ]
-    ]
-
-
-hover__bg_red_500 : Css.Style
-hover__bg_red_500 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#f56565")
-      ]
-    ]
-
-
-hover__bg_red_600 : Css.Style
-hover__bg_red_600 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#e53e3e")
-      ]
-    ]
-
-
-hover__bg_red_700 : Css.Style
-hover__bg_red_700 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#c53030")
-      ]
-    ]
-
-
-hover__bg_red_800 : Css.Style
-hover__bg_red_800 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#9b2c2c")
-      ]
-    ]
-
-
-hover__bg_red_900 : Css.Style
-hover__bg_red_900 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#742a2a")
-      ]
-    ]
-
-
-hover__bg_orange_100 : Css.Style
-hover__bg_orange_100 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#fffaf0")
-      ]
-    ]
-
-
-hover__bg_orange_200 : Css.Style
-hover__bg_orange_200 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#feebc8")
-      ]
-    ]
-
-
-hover__bg_orange_300 : Css.Style
-hover__bg_orange_300 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#fbd38d")
-      ]
-    ]
-
-
-hover__bg_orange_400 : Css.Style
-hover__bg_orange_400 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#f6ad55")
-      ]
-    ]
-
-
-hover__bg_orange_500 : Css.Style
-hover__bg_orange_500 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#ed8936")
-      ]
-    ]
-
-
-hover__bg_orange_600 : Css.Style
-hover__bg_orange_600 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#dd6b20")
-      ]
-    ]
-
-
-hover__bg_orange_700 : Css.Style
-hover__bg_orange_700 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#c05621")
-      ]
-    ]
-
-
-hover__bg_orange_800 : Css.Style
-hover__bg_orange_800 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#9c4221")
-      ]
-    ]
-
-
-hover__bg_orange_900 : Css.Style
-hover__bg_orange_900 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#7b341e")
-      ]
-    ]
-
-
-hover__bg_yellow_100 : Css.Style
-hover__bg_yellow_100 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#fffff0")
-      ]
-    ]
-
-
-hover__bg_yellow_200 : Css.Style
-hover__bg_yellow_200 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#fefcbf")
-      ]
-    ]
-
-
-hover__bg_yellow_300 : Css.Style
-hover__bg_yellow_300 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#faf089")
-      ]
-    ]
-
-
-hover__bg_yellow_400 : Css.Style
-hover__bg_yellow_400 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#f6e05e")
-      ]
-    ]
-
-
-hover__bg_yellow_500 : Css.Style
-hover__bg_yellow_500 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#ecc94b")
-      ]
-    ]
-
-
-hover__bg_yellow_600 : Css.Style
-hover__bg_yellow_600 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#d69e2e")
-      ]
-    ]
-
-
-hover__bg_yellow_700 : Css.Style
-hover__bg_yellow_700 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#b7791f")
-      ]
-    ]
-
-
-hover__bg_yellow_800 : Css.Style
-hover__bg_yellow_800 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#975a16")
-      ]
-    ]
-
-
-hover__bg_yellow_900 : Css.Style
-hover__bg_yellow_900 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#744210")
-      ]
-    ]
-
-
-hover__bg_green_100 : Css.Style
-hover__bg_green_100 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#f0fff4")
-      ]
-    ]
-
-
-hover__bg_green_200 : Css.Style
-hover__bg_green_200 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#c6f6d5")
-      ]
-    ]
-
-
-hover__bg_green_300 : Css.Style
-hover__bg_green_300 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#9ae6b4")
-      ]
-    ]
-
-
-hover__bg_green_400 : Css.Style
-hover__bg_green_400 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#68d391")
-      ]
-    ]
-
-
-hover__bg_green_500 : Css.Style
-hover__bg_green_500 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#48bb78")
-      ]
-    ]
-
-
-hover__bg_green_600 : Css.Style
-hover__bg_green_600 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#38a169")
-      ]
-    ]
-
-
-hover__bg_green_700 : Css.Style
-hover__bg_green_700 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#2f855a")
-      ]
-    ]
-
-
-hover__bg_green_800 : Css.Style
-hover__bg_green_800 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#276749")
-      ]
-    ]
-
-
-hover__bg_green_900 : Css.Style
-hover__bg_green_900 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#22543d")
-      ]
-    ]
-
-
-hover__bg_teal_100 : Css.Style
-hover__bg_teal_100 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#e6fffa")
-      ]
-    ]
-
-
-hover__bg_teal_200 : Css.Style
-hover__bg_teal_200 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#b2f5ea")
-      ]
-    ]
-
-
-hover__bg_teal_300 : Css.Style
-hover__bg_teal_300 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#81e6d9")
-      ]
-    ]
-
-
-hover__bg_teal_400 : Css.Style
-hover__bg_teal_400 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#4fd1c5")
-      ]
-    ]
-
-
-hover__bg_teal_500 : Css.Style
-hover__bg_teal_500 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#38b2ac")
-      ]
-    ]
-
-
-hover__bg_teal_600 : Css.Style
-hover__bg_teal_600 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#319795")
-      ]
-    ]
-
-
-hover__bg_teal_700 : Css.Style
-hover__bg_teal_700 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#2c7a7b")
-      ]
-    ]
-
-
-hover__bg_teal_800 : Css.Style
-hover__bg_teal_800 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#285e61")
-      ]
-    ]
-
-
-hover__bg_teal_900 : Css.Style
-hover__bg_teal_900 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#234e52")
-      ]
-    ]
-
-
-hover__bg_blue_100 : Css.Style
-hover__bg_blue_100 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#ebf8ff")
-      ]
-    ]
-
-
-hover__bg_blue_200 : Css.Style
-hover__bg_blue_200 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#bee3f8")
-      ]
-    ]
-
-
-hover__bg_blue_300 : Css.Style
-hover__bg_blue_300 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#90cdf4")
-      ]
-    ]
-
-
-hover__bg_blue_400 : Css.Style
-hover__bg_blue_400 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#63b3ed")
-      ]
-    ]
-
-
-hover__bg_blue_500 : Css.Style
-hover__bg_blue_500 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#4299e1")
-      ]
-    ]
-
-
-hover__bg_blue_600 : Css.Style
-hover__bg_blue_600 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#3182ce")
-      ]
-    ]
-
-
-hover__bg_blue_700 : Css.Style
-hover__bg_blue_700 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#2b6cb0")
-      ]
-    ]
-
-
-hover__bg_blue_800 : Css.Style
-hover__bg_blue_800 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#2c5282")
-      ]
-    ]
-
-
-hover__bg_blue_900 : Css.Style
-hover__bg_blue_900 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#2a4365")
-      ]
-    ]
-
-
-hover__bg_indigo_100 : Css.Style
-hover__bg_indigo_100 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#ebf4ff")
-      ]
-    ]
-
-
-hover__bg_indigo_200 : Css.Style
-hover__bg_indigo_200 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#c3dafe")
-      ]
-    ]
-
-
-hover__bg_indigo_300 : Css.Style
-hover__bg_indigo_300 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#a3bffa")
-      ]
-    ]
-
-
-hover__bg_indigo_400 : Css.Style
-hover__bg_indigo_400 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#7f9cf5")
-      ]
-    ]
-
-
-hover__bg_indigo_500 : Css.Style
-hover__bg_indigo_500 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#667eea")
-      ]
-    ]
-
-
-hover__bg_indigo_600 : Css.Style
-hover__bg_indigo_600 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#5a67d8")
-      ]
-    ]
-
-
-hover__bg_indigo_700 : Css.Style
-hover__bg_indigo_700 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#4c51bf")
-      ]
-    ]
-
-
-hover__bg_indigo_800 : Css.Style
-hover__bg_indigo_800 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#434190")
-      ]
-    ]
-
-
-hover__bg_indigo_900 : Css.Style
-hover__bg_indigo_900 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#3c366b")
-      ]
-    ]
-
-
-hover__bg_purple_100 : Css.Style
-hover__bg_purple_100 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#faf5ff")
-      ]
-    ]
-
-
-hover__bg_purple_200 : Css.Style
-hover__bg_purple_200 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#e9d8fd")
-      ]
-    ]
-
-
-hover__bg_purple_300 : Css.Style
-hover__bg_purple_300 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#d6bcfa")
-      ]
-    ]
-
-
-hover__bg_purple_400 : Css.Style
-hover__bg_purple_400 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#b794f4")
-      ]
-    ]
-
-
-hover__bg_purple_500 : Css.Style
-hover__bg_purple_500 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#9f7aea")
-      ]
-    ]
-
-
-hover__bg_purple_600 : Css.Style
-hover__bg_purple_600 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#805ad5")
-      ]
-    ]
-
-
-hover__bg_purple_700 : Css.Style
-hover__bg_purple_700 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#6b46c1")
-      ]
-    ]
-
-
-hover__bg_purple_800 : Css.Style
-hover__bg_purple_800 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#553c9a")
-      ]
-    ]
-
-
-hover__bg_purple_900 : Css.Style
-hover__bg_purple_900 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#44337a")
-      ]
-    ]
-
-
-hover__bg_pink_100 : Css.Style
-hover__bg_pink_100 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#fff5f7")
-      ]
-    ]
-
-
-hover__bg_pink_200 : Css.Style
-hover__bg_pink_200 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#fed7e2")
-      ]
-    ]
-
-
-hover__bg_pink_300 : Css.Style
-hover__bg_pink_300 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#fbb6ce")
-      ]
-    ]
-
-
-hover__bg_pink_400 : Css.Style
-hover__bg_pink_400 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#f687b3")
-      ]
-    ]
-
-
-hover__bg_pink_500 : Css.Style
-hover__bg_pink_500 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#ed64a6")
-      ]
-    ]
-
-
-hover__bg_pink_600 : Css.Style
-hover__bg_pink_600 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#d53f8c")
-      ]
-    ]
-
-
-hover__bg_pink_700 : Css.Style
-hover__bg_pink_700 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#b83280")
-      ]
-    ]
-
-
-hover__bg_pink_800 : Css.Style
-hover__bg_pink_800 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#97266d")
-      ]
-    ]
-
-
-hover__bg_pink_900 : Css.Style
-hover__bg_pink_900 =
-    Css.batch [
-      Css.hover [
-        Css.backgroundColor (Css.hex "#702459")
-      ]
-    ]
-
-
-hover__border_transparent : Css.Style
-hover__border_transparent =
-    Css.batch [
-      Css.hover [
-        Css.borderColor Css.transparent
-      ]
-    ]
-
-
-hover__border_current : Css.Style
-hover__border_current =
-    Css.batch [
-      Css.hover [
-        Css.borderColor Css.currentColor
-      ]
-    ]
-
-
-hover__border_black : Css.Style
-hover__border_black =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#000")
-      ]
-    ]
-
-
-hover__border_white : Css.Style
-hover__border_white =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#fff")
-      ]
-    ]
-
-
-hover__border_gray_100 : Css.Style
-hover__border_gray_100 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#f7fafc")
-      ]
-    ]
-
-
-hover__border_gray_200 : Css.Style
-hover__border_gray_200 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#edf2f7")
-      ]
-    ]
-
-
-hover__border_gray_300 : Css.Style
-hover__border_gray_300 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#e2e8f0")
-      ]
-    ]
-
-
-hover__border_gray_400 : Css.Style
-hover__border_gray_400 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#cbd5e0")
-      ]
-    ]
-
-
-hover__border_gray_500 : Css.Style
-hover__border_gray_500 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#a0aec0")
-      ]
-    ]
-
-
-hover__border_gray_600 : Css.Style
-hover__border_gray_600 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#718096")
-      ]
-    ]
-
-
-hover__border_gray_700 : Css.Style
-hover__border_gray_700 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#4a5568")
-      ]
-    ]
-
-
-hover__border_gray_800 : Css.Style
-hover__border_gray_800 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#2d3748")
-      ]
-    ]
-
-
-hover__border_gray_900 : Css.Style
-hover__border_gray_900 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#1a202c")
-      ]
-    ]
-
-
-hover__border_red_100 : Css.Style
-hover__border_red_100 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#fff5f5")
-      ]
-    ]
-
-
-hover__border_red_200 : Css.Style
-hover__border_red_200 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#fed7d7")
-      ]
-    ]
-
-
-hover__border_red_300 : Css.Style
-hover__border_red_300 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#feb2b2")
-      ]
-    ]
-
-
-hover__border_red_400 : Css.Style
-hover__border_red_400 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#fc8181")
-      ]
-    ]
-
-
-hover__border_red_500 : Css.Style
-hover__border_red_500 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#f56565")
-      ]
-    ]
-
-
-hover__border_red_600 : Css.Style
-hover__border_red_600 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#e53e3e")
-      ]
-    ]
-
-
-hover__border_red_700 : Css.Style
-hover__border_red_700 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#c53030")
-      ]
-    ]
-
-
-hover__border_red_800 : Css.Style
-hover__border_red_800 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#9b2c2c")
-      ]
-    ]
-
-
-hover__border_red_900 : Css.Style
-hover__border_red_900 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#742a2a")
-      ]
-    ]
-
-
-hover__border_orange_100 : Css.Style
-hover__border_orange_100 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#fffaf0")
-      ]
-    ]
-
-
-hover__border_orange_200 : Css.Style
-hover__border_orange_200 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#feebc8")
-      ]
-    ]
-
-
-hover__border_orange_300 : Css.Style
-hover__border_orange_300 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#fbd38d")
-      ]
-    ]
-
-
-hover__border_orange_400 : Css.Style
-hover__border_orange_400 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#f6ad55")
-      ]
-    ]
-
-
-hover__border_orange_500 : Css.Style
-hover__border_orange_500 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#ed8936")
-      ]
-    ]
-
-
-hover__border_orange_600 : Css.Style
-hover__border_orange_600 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#dd6b20")
-      ]
-    ]
-
-
-hover__border_orange_700 : Css.Style
-hover__border_orange_700 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#c05621")
-      ]
-    ]
-
-
-hover__border_orange_800 : Css.Style
-hover__border_orange_800 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#9c4221")
-      ]
-    ]
-
-
-hover__border_orange_900 : Css.Style
-hover__border_orange_900 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#7b341e")
-      ]
-    ]
-
-
-hover__border_yellow_100 : Css.Style
-hover__border_yellow_100 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#fffff0")
-      ]
-    ]
-
-
-hover__border_yellow_200 : Css.Style
-hover__border_yellow_200 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#fefcbf")
-      ]
-    ]
-
-
-hover__border_yellow_300 : Css.Style
-hover__border_yellow_300 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#faf089")
-      ]
-    ]
-
-
-hover__border_yellow_400 : Css.Style
-hover__border_yellow_400 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#f6e05e")
-      ]
-    ]
-
-
-hover__border_yellow_500 : Css.Style
-hover__border_yellow_500 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#ecc94b")
-      ]
-    ]
-
-
-hover__border_yellow_600 : Css.Style
-hover__border_yellow_600 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#d69e2e")
-      ]
-    ]
-
-
-hover__border_yellow_700 : Css.Style
-hover__border_yellow_700 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#b7791f")
-      ]
-    ]
-
-
-hover__border_yellow_800 : Css.Style
-hover__border_yellow_800 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#975a16")
-      ]
-    ]
-
-
-hover__border_yellow_900 : Css.Style
-hover__border_yellow_900 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#744210")
-      ]
-    ]
-
-
-hover__border_green_100 : Css.Style
-hover__border_green_100 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#f0fff4")
-      ]
-    ]
-
-
-hover__border_green_200 : Css.Style
-hover__border_green_200 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#c6f6d5")
-      ]
-    ]
-
-
-hover__border_green_300 : Css.Style
-hover__border_green_300 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#9ae6b4")
-      ]
-    ]
-
-
-hover__border_green_400 : Css.Style
-hover__border_green_400 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#68d391")
-      ]
-    ]
-
-
-hover__border_green_500 : Css.Style
-hover__border_green_500 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#48bb78")
-      ]
-    ]
-
-
-hover__border_green_600 : Css.Style
-hover__border_green_600 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#38a169")
-      ]
-    ]
-
-
-hover__border_green_700 : Css.Style
-hover__border_green_700 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#2f855a")
-      ]
-    ]
-
-
-hover__border_green_800 : Css.Style
-hover__border_green_800 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#276749")
-      ]
-    ]
-
-
-hover__border_green_900 : Css.Style
-hover__border_green_900 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#22543d")
-      ]
-    ]
-
-
-hover__border_teal_100 : Css.Style
-hover__border_teal_100 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#e6fffa")
-      ]
-    ]
-
-
-hover__border_teal_200 : Css.Style
-hover__border_teal_200 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#b2f5ea")
-      ]
-    ]
-
-
-hover__border_teal_300 : Css.Style
-hover__border_teal_300 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#81e6d9")
-      ]
-    ]
-
-
-hover__border_teal_400 : Css.Style
-hover__border_teal_400 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#4fd1c5")
-      ]
-    ]
-
-
-hover__border_teal_500 : Css.Style
-hover__border_teal_500 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#38b2ac")
-      ]
-    ]
-
-
-hover__border_teal_600 : Css.Style
-hover__border_teal_600 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#319795")
-      ]
-    ]
-
-
-hover__border_teal_700 : Css.Style
-hover__border_teal_700 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#2c7a7b")
-      ]
-    ]
-
-
-hover__border_teal_800 : Css.Style
-hover__border_teal_800 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#285e61")
-      ]
-    ]
-
-
-hover__border_teal_900 : Css.Style
-hover__border_teal_900 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#234e52")
-      ]
-    ]
-
-
-hover__border_blue_100 : Css.Style
-hover__border_blue_100 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#ebf8ff")
-      ]
-    ]
-
-
-hover__border_blue_200 : Css.Style
-hover__border_blue_200 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#bee3f8")
-      ]
-    ]
-
-
-hover__border_blue_300 : Css.Style
-hover__border_blue_300 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#90cdf4")
-      ]
-    ]
-
-
-hover__border_blue_400 : Css.Style
-hover__border_blue_400 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#63b3ed")
-      ]
-    ]
-
-
-hover__border_blue_500 : Css.Style
-hover__border_blue_500 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#4299e1")
-      ]
-    ]
-
-
-hover__border_blue_600 : Css.Style
-hover__border_blue_600 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#3182ce")
-      ]
-    ]
-
-
-hover__border_blue_700 : Css.Style
-hover__border_blue_700 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#2b6cb0")
-      ]
-    ]
-
-
-hover__border_blue_800 : Css.Style
-hover__border_blue_800 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#2c5282")
-      ]
-    ]
-
-
-hover__border_blue_900 : Css.Style
-hover__border_blue_900 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#2a4365")
-      ]
-    ]
-
-
-hover__border_indigo_100 : Css.Style
-hover__border_indigo_100 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#ebf4ff")
-      ]
-    ]
-
-
-hover__border_indigo_200 : Css.Style
-hover__border_indigo_200 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#c3dafe")
-      ]
-    ]
-
-
-hover__border_indigo_300 : Css.Style
-hover__border_indigo_300 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#a3bffa")
-      ]
-    ]
-
-
-hover__border_indigo_400 : Css.Style
-hover__border_indigo_400 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#7f9cf5")
-      ]
-    ]
-
-
-hover__border_indigo_500 : Css.Style
-hover__border_indigo_500 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#667eea")
-      ]
-    ]
-
-
-hover__border_indigo_600 : Css.Style
-hover__border_indigo_600 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#5a67d8")
-      ]
-    ]
-
-
-hover__border_indigo_700 : Css.Style
-hover__border_indigo_700 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#4c51bf")
-      ]
-    ]
-
-
-hover__border_indigo_800 : Css.Style
-hover__border_indigo_800 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#434190")
-      ]
-    ]
-
-
-hover__border_indigo_900 : Css.Style
-hover__border_indigo_900 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#3c366b")
-      ]
-    ]
-
-
-hover__border_purple_100 : Css.Style
-hover__border_purple_100 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#faf5ff")
-      ]
-    ]
-
-
-hover__border_purple_200 : Css.Style
-hover__border_purple_200 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#e9d8fd")
-      ]
-    ]
-
-
-hover__border_purple_300 : Css.Style
-hover__border_purple_300 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#d6bcfa")
-      ]
-    ]
-
-
-hover__border_purple_400 : Css.Style
-hover__border_purple_400 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#b794f4")
-      ]
-    ]
-
-
-hover__border_purple_500 : Css.Style
-hover__border_purple_500 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#9f7aea")
-      ]
-    ]
-
-
-hover__border_purple_600 : Css.Style
-hover__border_purple_600 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#805ad5")
-      ]
-    ]
-
-
-hover__border_purple_700 : Css.Style
-hover__border_purple_700 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#6b46c1")
-      ]
-    ]
-
-
-hover__border_purple_800 : Css.Style
-hover__border_purple_800 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#553c9a")
-      ]
-    ]
-
-
-hover__border_purple_900 : Css.Style
-hover__border_purple_900 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#44337a")
-      ]
-    ]
-
-
-hover__border_pink_100 : Css.Style
-hover__border_pink_100 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#fff5f7")
-      ]
-    ]
-
-
-hover__border_pink_200 : Css.Style
-hover__border_pink_200 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#fed7e2")
-      ]
-    ]
-
-
-hover__border_pink_300 : Css.Style
-hover__border_pink_300 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#fbb6ce")
-      ]
-    ]
-
-
-hover__border_pink_400 : Css.Style
-hover__border_pink_400 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#f687b3")
-      ]
-    ]
-
-
-hover__border_pink_500 : Css.Style
-hover__border_pink_500 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#ed64a6")
-      ]
-    ]
-
-
-hover__border_pink_600 : Css.Style
-hover__border_pink_600 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#d53f8c")
-      ]
-    ]
-
-
-hover__border_pink_700 : Css.Style
-hover__border_pink_700 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#b83280")
-      ]
-    ]
-
-
-hover__border_pink_800 : Css.Style
-hover__border_pink_800 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#97266d")
-      ]
-    ]
-
-
-hover__border_pink_900 : Css.Style
-hover__border_pink_900 =
-    Css.batch [
-      Css.hover [
-        Css.borderColor (Css.hex "#702459")
-      ]
-    ]
-
-
-hover__font_hairline : Css.Style
-hover__font_hairline =
-    Css.batch [
-      Css.hover [
-        Css.fontWeight (Css.int 100)
-      ]
-    ]
-
-
-hover__font_thin : Css.Style
-hover__font_thin =
-    Css.batch [
-      Css.hover [
-        Css.fontWeight (Css.int 200)
-      ]
-    ]
-
-
-hover__font_light : Css.Style
-hover__font_light =
-    Css.batch [
-      Css.hover [
-        Css.fontWeight (Css.int 300)
-      ]
-    ]
-
-
-hover__font_normal : Css.Style
-hover__font_normal =
-    Css.batch [
-      Css.hover [
-        Css.fontWeight (Css.int 400)
-      ]
-    ]
-
-
-hover__font_medium : Css.Style
-hover__font_medium =
-    Css.batch [
-      Css.hover [
-        Css.fontWeight (Css.int 500)
-      ]
-    ]
-
-
-hover__font_semibold : Css.Style
-hover__font_semibold =
-    Css.batch [
-      Css.hover [
-        Css.fontWeight (Css.int 600)
-      ]
-    ]
-
-
-hover__font_bold : Css.Style
-hover__font_bold =
-    Css.batch [
-      Css.hover [
-        Css.fontWeight (Css.int 700)
-      ]
-    ]
-
-
-hover__font_extrabold : Css.Style
-hover__font_extrabold =
-    Css.batch [
-      Css.hover [
-        Css.fontWeight (Css.int 800)
-      ]
-    ]
-
-
-hover__font_black : Css.Style
-hover__font_black =
-    Css.batch [
-      Css.hover [
-        Css.fontWeight (Css.int 900)
-      ]
-    ]
-
-
-hover__opacity_0 : Css.Style
-hover__opacity_0 =
-    Css.batch [
-      Css.hover [
-        Css.opacity (Css.int 0)
-      ]
-    ]
-
-
-hover__opacity_25 : Css.Style
-hover__opacity_25 =
-    Css.batch [
-      Css.hover [
-        Css.opacity (Css.num 0.25)
-      ]
-    ]
-
-
-hover__opacity_50 : Css.Style
-hover__opacity_50 =
-    Css.batch [
-      Css.hover [
-        Css.opacity (Css.num 0.5)
-      ]
-    ]
-
-
-hover__opacity_75 : Css.Style
-hover__opacity_75 =
-    Css.batch [
-      Css.hover [
-        Css.opacity (Css.num 0.75)
-      ]
-    ]
-
-
-hover__opacity_100 : Css.Style
-hover__opacity_100 =
-    Css.batch [
-      Css.hover [
-        Css.opacity (Css.int 1)
-      ]
-    ]
-
-
-hover__shadow_xs : Css.Style
-hover__shadow_xs =
-    Css.batch [
-      Css.hover [
-        Css.property "box-shadow" "0 0 0 1px rgba(0, 0, 0, 0.05)"
-      ]
-    ]
-
-
-hover__shadow_sm : Css.Style
-hover__shadow_sm =
-    Css.batch [
-      Css.hover [
-        Css.property "box-shadow" "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
-      ]
-    ]
-
-
-hover__shadow : Css.Style
-hover__shadow =
-    Css.batch [
-      Css.hover [
-        Css.property "box-shadow" "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
-      ]
-    ]
-
-
-hover__shadow_md : Css.Style
-hover__shadow_md =
-    Css.batch [
-      Css.hover [
-        Css.property "box-shadow" "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-      ]
-    ]
-
-
-hover__shadow_lg : Css.Style
-hover__shadow_lg =
-    Css.batch [
-      Css.hover [
-        Css.property "box-shadow" "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
-      ]
-    ]
-
-
-hover__shadow_xl : Css.Style
-hover__shadow_xl =
-    Css.batch [
-      Css.hover [
-        Css.property "box-shadow" "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-      ]
-    ]
-
-
-hover__shadow_2xl : Css.Style
-hover__shadow_2xl =
-    Css.batch [
-      Css.hover [
-        Css.property "box-shadow" "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
-      ]
-    ]
-
-
-hover__shadow_inner : Css.Style
-hover__shadow_inner =
-    Css.batch [
-      Css.hover [
-        Css.property "box-shadow" "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)"
-      ]
-    ]
-
-
-hover__shadow_outline : Css.Style
-hover__shadow_outline =
-    Css.batch [
-      Css.hover [
-        Css.property "box-shadow" "0 0 0 3px rgba(66, 153, 225, 0.5)"
-      ]
-    ]
-
-
-hover__shadow_none : Css.Style
-hover__shadow_none =
-    Css.batch [
-      Css.hover [
-        Css.property "box-shadow" "none"
-      ]
-    ]
-
-
-hover__text_transparent : Css.Style
-hover__text_transparent =
-    Css.batch [
-      Css.hover [
-        Css.color Css.transparent
-      ]
-    ]
-
-
-hover__text_current : Css.Style
-hover__text_current =
-    Css.batch [
-      Css.hover [
-        Css.color Css.currentColor
-      ]
-    ]
-
-
-hover__text_black : Css.Style
-hover__text_black =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#000")
-      ]
-    ]
-
-
-hover__text_white : Css.Style
-hover__text_white =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#fff")
-      ]
-    ]
-
-
-hover__text_gray_100 : Css.Style
-hover__text_gray_100 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#f7fafc")
-      ]
-    ]
-
-
-hover__text_gray_200 : Css.Style
-hover__text_gray_200 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#edf2f7")
-      ]
-    ]
-
-
-hover__text_gray_300 : Css.Style
-hover__text_gray_300 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#e2e8f0")
-      ]
-    ]
-
-
-hover__text_gray_400 : Css.Style
-hover__text_gray_400 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#cbd5e0")
-      ]
-    ]
-
-
-hover__text_gray_500 : Css.Style
-hover__text_gray_500 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#a0aec0")
-      ]
-    ]
-
-
-hover__text_gray_600 : Css.Style
-hover__text_gray_600 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#718096")
-      ]
-    ]
-
-
-hover__text_gray_700 : Css.Style
-hover__text_gray_700 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#4a5568")
-      ]
-    ]
-
-
-hover__text_gray_800 : Css.Style
-hover__text_gray_800 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#2d3748")
-      ]
-    ]
-
-
-hover__text_gray_900 : Css.Style
-hover__text_gray_900 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#1a202c")
-      ]
-    ]
-
-
-hover__text_red_100 : Css.Style
-hover__text_red_100 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#fff5f5")
-      ]
-    ]
-
-
-hover__text_red_200 : Css.Style
-hover__text_red_200 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#fed7d7")
-      ]
-    ]
-
-
-hover__text_red_300 : Css.Style
-hover__text_red_300 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#feb2b2")
-      ]
-    ]
-
-
-hover__text_red_400 : Css.Style
-hover__text_red_400 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#fc8181")
-      ]
-    ]
-
-
-hover__text_red_500 : Css.Style
-hover__text_red_500 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#f56565")
-      ]
-    ]
-
-
-hover__text_red_600 : Css.Style
-hover__text_red_600 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#e53e3e")
-      ]
-    ]
-
-
-hover__text_red_700 : Css.Style
-hover__text_red_700 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#c53030")
-      ]
-    ]
-
-
-hover__text_red_800 : Css.Style
-hover__text_red_800 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#9b2c2c")
-      ]
-    ]
-
-
-hover__text_red_900 : Css.Style
-hover__text_red_900 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#742a2a")
-      ]
-    ]
-
-
-hover__text_orange_100 : Css.Style
-hover__text_orange_100 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#fffaf0")
-      ]
-    ]
-
-
-hover__text_orange_200 : Css.Style
-hover__text_orange_200 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#feebc8")
-      ]
-    ]
-
-
-hover__text_orange_300 : Css.Style
-hover__text_orange_300 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#fbd38d")
-      ]
-    ]
-
-
-hover__text_orange_400 : Css.Style
-hover__text_orange_400 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#f6ad55")
-      ]
-    ]
-
-
-hover__text_orange_500 : Css.Style
-hover__text_orange_500 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#ed8936")
-      ]
-    ]
-
-
-hover__text_orange_600 : Css.Style
-hover__text_orange_600 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#dd6b20")
-      ]
-    ]
-
-
-hover__text_orange_700 : Css.Style
-hover__text_orange_700 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#c05621")
-      ]
-    ]
-
-
-hover__text_orange_800 : Css.Style
-hover__text_orange_800 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#9c4221")
-      ]
-    ]
-
-
-hover__text_orange_900 : Css.Style
-hover__text_orange_900 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#7b341e")
-      ]
-    ]
-
-
-hover__text_yellow_100 : Css.Style
-hover__text_yellow_100 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#fffff0")
-      ]
-    ]
-
-
-hover__text_yellow_200 : Css.Style
-hover__text_yellow_200 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#fefcbf")
-      ]
-    ]
-
-
-hover__text_yellow_300 : Css.Style
-hover__text_yellow_300 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#faf089")
-      ]
-    ]
-
-
-hover__text_yellow_400 : Css.Style
-hover__text_yellow_400 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#f6e05e")
-      ]
-    ]
-
-
-hover__text_yellow_500 : Css.Style
-hover__text_yellow_500 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#ecc94b")
-      ]
-    ]
-
-
-hover__text_yellow_600 : Css.Style
-hover__text_yellow_600 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#d69e2e")
-      ]
-    ]
-
-
-hover__text_yellow_700 : Css.Style
-hover__text_yellow_700 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#b7791f")
-      ]
-    ]
-
-
-hover__text_yellow_800 : Css.Style
-hover__text_yellow_800 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#975a16")
-      ]
-    ]
-
-
-hover__text_yellow_900 : Css.Style
-hover__text_yellow_900 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#744210")
-      ]
-    ]
-
-
-hover__text_green_100 : Css.Style
-hover__text_green_100 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#f0fff4")
-      ]
-    ]
-
-
-hover__text_green_200 : Css.Style
-hover__text_green_200 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#c6f6d5")
-      ]
-    ]
-
-
-hover__text_green_300 : Css.Style
-hover__text_green_300 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#9ae6b4")
-      ]
-    ]
-
-
-hover__text_green_400 : Css.Style
-hover__text_green_400 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#68d391")
-      ]
-    ]
-
-
-hover__text_green_500 : Css.Style
-hover__text_green_500 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#48bb78")
-      ]
-    ]
-
-
-hover__text_green_600 : Css.Style
-hover__text_green_600 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#38a169")
-      ]
-    ]
-
-
-hover__text_green_700 : Css.Style
-hover__text_green_700 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#2f855a")
-      ]
-    ]
-
-
-hover__text_green_800 : Css.Style
-hover__text_green_800 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#276749")
-      ]
-    ]
-
-
-hover__text_green_900 : Css.Style
-hover__text_green_900 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#22543d")
-      ]
-    ]
-
-
-hover__text_teal_100 : Css.Style
-hover__text_teal_100 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#e6fffa")
-      ]
-    ]
-
-
-hover__text_teal_200 : Css.Style
-hover__text_teal_200 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#b2f5ea")
-      ]
-    ]
-
-
-hover__text_teal_300 : Css.Style
-hover__text_teal_300 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#81e6d9")
-      ]
-    ]
-
-
-hover__text_teal_400 : Css.Style
-hover__text_teal_400 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#4fd1c5")
-      ]
-    ]
-
-
-hover__text_teal_500 : Css.Style
-hover__text_teal_500 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#38b2ac")
-      ]
-    ]
-
-
-hover__text_teal_600 : Css.Style
-hover__text_teal_600 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#319795")
-      ]
-    ]
-
-
-hover__text_teal_700 : Css.Style
-hover__text_teal_700 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#2c7a7b")
-      ]
-    ]
-
-
-hover__text_teal_800 : Css.Style
-hover__text_teal_800 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#285e61")
-      ]
-    ]
-
-
-hover__text_teal_900 : Css.Style
-hover__text_teal_900 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#234e52")
-      ]
-    ]
-
-
-hover__text_blue_100 : Css.Style
-hover__text_blue_100 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#ebf8ff")
-      ]
-    ]
-
-
-hover__text_blue_200 : Css.Style
-hover__text_blue_200 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#bee3f8")
-      ]
-    ]
-
-
-hover__text_blue_300 : Css.Style
-hover__text_blue_300 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#90cdf4")
-      ]
-    ]
-
-
-hover__text_blue_400 : Css.Style
-hover__text_blue_400 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#63b3ed")
-      ]
-    ]
-
-
-hover__text_blue_500 : Css.Style
-hover__text_blue_500 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#4299e1")
-      ]
-    ]
-
-
-hover__text_blue_600 : Css.Style
-hover__text_blue_600 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#3182ce")
-      ]
-    ]
-
-
-hover__text_blue_700 : Css.Style
-hover__text_blue_700 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#2b6cb0")
-      ]
-    ]
-
-
-hover__text_blue_800 : Css.Style
-hover__text_blue_800 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#2c5282")
-      ]
-    ]
-
-
-hover__text_blue_900 : Css.Style
-hover__text_blue_900 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#2a4365")
-      ]
-    ]
-
-
-hover__text_indigo_100 : Css.Style
-hover__text_indigo_100 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#ebf4ff")
-      ]
-    ]
-
-
-hover__text_indigo_200 : Css.Style
-hover__text_indigo_200 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#c3dafe")
-      ]
-    ]
-
-
-hover__text_indigo_300 : Css.Style
-hover__text_indigo_300 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#a3bffa")
-      ]
-    ]
-
-
-hover__text_indigo_400 : Css.Style
-hover__text_indigo_400 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#7f9cf5")
-      ]
-    ]
-
-
-hover__text_indigo_500 : Css.Style
-hover__text_indigo_500 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#667eea")
-      ]
-    ]
-
-
-hover__text_indigo_600 : Css.Style
-hover__text_indigo_600 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#5a67d8")
-      ]
-    ]
-
-
-hover__text_indigo_700 : Css.Style
-hover__text_indigo_700 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#4c51bf")
-      ]
-    ]
-
-
-hover__text_indigo_800 : Css.Style
-hover__text_indigo_800 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#434190")
-      ]
-    ]
-
-
-hover__text_indigo_900 : Css.Style
-hover__text_indigo_900 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#3c366b")
-      ]
-    ]
-
-
-hover__text_purple_100 : Css.Style
-hover__text_purple_100 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#faf5ff")
-      ]
-    ]
-
-
-hover__text_purple_200 : Css.Style
-hover__text_purple_200 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#e9d8fd")
-      ]
-    ]
-
-
-hover__text_purple_300 : Css.Style
-hover__text_purple_300 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#d6bcfa")
-      ]
-    ]
-
-
-hover__text_purple_400 : Css.Style
-hover__text_purple_400 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#b794f4")
-      ]
-    ]
-
-
-hover__text_purple_500 : Css.Style
-hover__text_purple_500 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#9f7aea")
-      ]
-    ]
-
-
-hover__text_purple_600 : Css.Style
-hover__text_purple_600 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#805ad5")
-      ]
-    ]
-
-
-hover__text_purple_700 : Css.Style
-hover__text_purple_700 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#6b46c1")
-      ]
-    ]
-
-
-hover__text_purple_800 : Css.Style
-hover__text_purple_800 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#553c9a")
-      ]
-    ]
-
-
-hover__text_purple_900 : Css.Style
-hover__text_purple_900 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#44337a")
-      ]
-    ]
-
-
-hover__text_pink_100 : Css.Style
-hover__text_pink_100 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#fff5f7")
-      ]
-    ]
-
-
-hover__text_pink_200 : Css.Style
-hover__text_pink_200 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#fed7e2")
-      ]
-    ]
-
-
-hover__text_pink_300 : Css.Style
-hover__text_pink_300 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#fbb6ce")
-      ]
-    ]
-
-
-hover__text_pink_400 : Css.Style
-hover__text_pink_400 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#f687b3")
-      ]
-    ]
-
-
-hover__text_pink_500 : Css.Style
-hover__text_pink_500 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#ed64a6")
-      ]
-    ]
-
-
-hover__text_pink_600 : Css.Style
-hover__text_pink_600 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#d53f8c")
-      ]
-    ]
-
-
-hover__text_pink_700 : Css.Style
-hover__text_pink_700 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#b83280")
-      ]
-    ]
-
-
-hover__text_pink_800 : Css.Style
-hover__text_pink_800 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#97266d")
-      ]
-    ]
-
-
-hover__text_pink_900 : Css.Style
-hover__text_pink_900 =
-    Css.batch [
-      Css.hover [
-        Css.color (Css.hex "#702459")
-      ]
-    ]
-
-
-hover__underline : Css.Style
-hover__underline =
-    Css.batch [
-      Css.hover [
-        Css.textDecoration Css.underline
-      ]
-    ]
-
-
-hover__line_through : Css.Style
-hover__line_through =
-    Css.batch [
-      Css.hover [
-        Css.textDecoration Css.lineThrough
-      ]
-    ]
-
-
-hover__no_underline : Css.Style
-hover__no_underline =
-    Css.batch [
-      Css.hover [
-        Css.textDecoration Css.none
-      ]
-    ]
+    Css.batch
+        [ Css.margin (Css.px 0)
+        ]

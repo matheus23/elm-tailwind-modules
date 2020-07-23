@@ -25,6 +25,7 @@ function elmHeaderCss(elmModuleName, classes) {
     )
 
 import Css 
+import Css.Media
 
 `;
 }
@@ -43,14 +44,33 @@ function elmFunction(config, { cls, elm }) {
 ${elm.elmName} : ${config.type}
 ${elm.elmName} =
     Css.batch [
-      ${pseudoSelectorContainer(
-        elm.pseudoSelector,
-        elm.declarations.map((d) => convertDeclaration(d)).join(", \n      ")
+      ${mediaQueryContainer(
+        elm.mediaQuery,
+        pseudoSelectorContainer(
+          elm.pseudoSelector,
+          elm.declarations.map((d) => convertDeclaration(d)).join(", \n      ")
+        )
       )}
     ]
 `;
 }
 
+/**
+ *  wrap a Css declaration with a media query wrapper
+ */
+function mediaQueryContainer(mediaQuery, declarationString) {
+  if (mediaQuery) {
+    return `Css.Media.withMediaQuery ["${mediaQuery}"] [
+        ${declarationString}
+      ]`;
+  } else {
+    return declarationString;
+  }
+}
+
+/**
+ * wrap a CSS declaration with a pseudo selector (e.g. focus)
+ */
 function pseudoSelectorContainer(pseudoSelector, declarationString) {
   if (pseudoSelector) {
     return `Css.${pseudoSelector} [
