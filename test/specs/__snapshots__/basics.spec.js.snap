@@ -1233,6 +1233,60 @@ exports[`snapshot test 1`] = `
     , my_8
     , my_auto
     , my_px
+    , neg_m_1
+    , neg_m_10
+    , neg_m_12
+    , neg_m_16
+    , neg_m_2
+    , neg_m_20
+    , neg_m_24
+    , neg_m_3
+    , neg_m_32
+    , neg_m_4
+    , neg_m_40
+    , neg_m_48
+    , neg_m_5
+    , neg_m_56
+    , neg_m_6
+    , neg_m_64
+    , neg_m_8
+    , neg_m_px
+    , neg_mx_1
+    , neg_mx_10
+    , neg_mx_12
+    , neg_mx_16
+    , neg_mx_2
+    , neg_mx_20
+    , neg_mx_24
+    , neg_mx_3
+    , neg_mx_32
+    , neg_mx_4
+    , neg_mx_40
+    , neg_mx_48
+    , neg_mx_5
+    , neg_mx_56
+    , neg_mx_6
+    , neg_mx_64
+    , neg_mx_8
+    , neg_mx_px
+    , neg_my_1
+    , neg_my_10
+    , neg_my_12
+    , neg_my_16
+    , neg_my_2
+    , neg_my_20
+    , neg_my_24
+    , neg_my_3
+    , neg_my_32
+    , neg_my_4
+    , neg_my_40
+    , neg_my_48
+    , neg_my_5
+    , neg_my_56
+    , neg_my_6
+    , neg_my_64
+    , neg_my_8
+    , neg_my_px
     , order_1
     , order_10
     , order_11
@@ -2373,6 +2427,132 @@ m_px =
         ]
 
 
+neg_m_1 : Css.Style
+neg_m_1 =
+    Css.batch
+        [ Css.margin (Css.rem -0.25)
+        ]
+
+
+neg_m_2 : Css.Style
+neg_m_2 =
+    Css.batch
+        [ Css.margin (Css.rem -0.5)
+        ]
+
+
+neg_m_3 : Css.Style
+neg_m_3 =
+    Css.batch
+        [ Css.margin (Css.rem -0.75)
+        ]
+
+
+neg_m_4 : Css.Style
+neg_m_4 =
+    Css.batch
+        [ Css.margin (Css.rem -1)
+        ]
+
+
+neg_m_5 : Css.Style
+neg_m_5 =
+    Css.batch
+        [ Css.margin (Css.rem -1.25)
+        ]
+
+
+neg_m_6 : Css.Style
+neg_m_6 =
+    Css.batch
+        [ Css.margin (Css.rem -1.5)
+        ]
+
+
+neg_m_8 : Css.Style
+neg_m_8 =
+    Css.batch
+        [ Css.margin (Css.rem -2)
+        ]
+
+
+neg_m_10 : Css.Style
+neg_m_10 =
+    Css.batch
+        [ Css.margin (Css.rem -2.5)
+        ]
+
+
+neg_m_12 : Css.Style
+neg_m_12 =
+    Css.batch
+        [ Css.margin (Css.rem -3)
+        ]
+
+
+neg_m_16 : Css.Style
+neg_m_16 =
+    Css.batch
+        [ Css.margin (Css.rem -4)
+        ]
+
+
+neg_m_20 : Css.Style
+neg_m_20 =
+    Css.batch
+        [ Css.margin (Css.rem -5)
+        ]
+
+
+neg_m_24 : Css.Style
+neg_m_24 =
+    Css.batch
+        [ Css.margin (Css.rem -6)
+        ]
+
+
+neg_m_32 : Css.Style
+neg_m_32 =
+    Css.batch
+        [ Css.margin (Css.rem -8)
+        ]
+
+
+neg_m_40 : Css.Style
+neg_m_40 =
+    Css.batch
+        [ Css.margin (Css.rem -10)
+        ]
+
+
+neg_m_48 : Css.Style
+neg_m_48 =
+    Css.batch
+        [ Css.margin (Css.rem -12)
+        ]
+
+
+neg_m_56 : Css.Style
+neg_m_56 =
+    Css.batch
+        [ Css.margin (Css.rem -14)
+        ]
+
+
+neg_m_64 : Css.Style
+neg_m_64 =
+    Css.batch
+        [ Css.margin (Css.rem -16)
+        ]
+
+
+neg_m_px : Css.Style
+neg_m_px =
+    Css.batch
+        [ Css.margin (Css.px -1)
+        ]
+
+
 my_0 : Css.Style
 my_0 =
     Css.batch
@@ -2690,6 +2870,294 @@ mx_px =
     Css.batch
         [ Css.marginLeft (Css.px 1)
         , Css.marginRight (Css.px 1)
+        ]
+
+
+neg_my_1 : Css.Style
+neg_my_1 =
+    Css.batch
+        [ Css.marginTop (Css.rem -0.25)
+        , Css.marginBottom (Css.rem -0.25)
+        ]
+
+
+neg_mx_1 : Css.Style
+neg_mx_1 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -0.25)
+        , Css.marginRight (Css.rem -0.25)
+        ]
+
+
+neg_my_2 : Css.Style
+neg_my_2 =
+    Css.batch
+        [ Css.marginTop (Css.rem -0.5)
+        , Css.marginBottom (Css.rem -0.5)
+        ]
+
+
+neg_mx_2 : Css.Style
+neg_mx_2 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -0.5)
+        , Css.marginRight (Css.rem -0.5)
+        ]
+
+
+neg_my_3 : Css.Style
+neg_my_3 =
+    Css.batch
+        [ Css.marginTop (Css.rem -0.75)
+        , Css.marginBottom (Css.rem -0.75)
+        ]
+
+
+neg_mx_3 : Css.Style
+neg_mx_3 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -0.75)
+        , Css.marginRight (Css.rem -0.75)
+        ]
+
+
+neg_my_4 : Css.Style
+neg_my_4 =
+    Css.batch
+        [ Css.marginTop (Css.rem -1)
+        , Css.marginBottom (Css.rem -1)
+        ]
+
+
+neg_mx_4 : Css.Style
+neg_mx_4 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -1)
+        , Css.marginRight (Css.rem -1)
+        ]
+
+
+neg_my_5 : Css.Style
+neg_my_5 =
+    Css.batch
+        [ Css.marginTop (Css.rem -1.25)
+        , Css.marginBottom (Css.rem -1.25)
+        ]
+
+
+neg_mx_5 : Css.Style
+neg_mx_5 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -1.25)
+        , Css.marginRight (Css.rem -1.25)
+        ]
+
+
+neg_my_6 : Css.Style
+neg_my_6 =
+    Css.batch
+        [ Css.marginTop (Css.rem -1.5)
+        , Css.marginBottom (Css.rem -1.5)
+        ]
+
+
+neg_mx_6 : Css.Style
+neg_mx_6 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -1.5)
+        , Css.marginRight (Css.rem -1.5)
+        ]
+
+
+neg_my_8 : Css.Style
+neg_my_8 =
+    Css.batch
+        [ Css.marginTop (Css.rem -2)
+        , Css.marginBottom (Css.rem -2)
+        ]
+
+
+neg_mx_8 : Css.Style
+neg_mx_8 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -2)
+        , Css.marginRight (Css.rem -2)
+        ]
+
+
+neg_my_10 : Css.Style
+neg_my_10 =
+    Css.batch
+        [ Css.marginTop (Css.rem -2.5)
+        , Css.marginBottom (Css.rem -2.5)
+        ]
+
+
+neg_mx_10 : Css.Style
+neg_mx_10 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -2.5)
+        , Css.marginRight (Css.rem -2.5)
+        ]
+
+
+neg_my_12 : Css.Style
+neg_my_12 =
+    Css.batch
+        [ Css.marginTop (Css.rem -3)
+        , Css.marginBottom (Css.rem -3)
+        ]
+
+
+neg_mx_12 : Css.Style
+neg_mx_12 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -3)
+        , Css.marginRight (Css.rem -3)
+        ]
+
+
+neg_my_16 : Css.Style
+neg_my_16 =
+    Css.batch
+        [ Css.marginTop (Css.rem -4)
+        , Css.marginBottom (Css.rem -4)
+        ]
+
+
+neg_mx_16 : Css.Style
+neg_mx_16 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -4)
+        , Css.marginRight (Css.rem -4)
+        ]
+
+
+neg_my_20 : Css.Style
+neg_my_20 =
+    Css.batch
+        [ Css.marginTop (Css.rem -5)
+        , Css.marginBottom (Css.rem -5)
+        ]
+
+
+neg_mx_20 : Css.Style
+neg_mx_20 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -5)
+        , Css.marginRight (Css.rem -5)
+        ]
+
+
+neg_my_24 : Css.Style
+neg_my_24 =
+    Css.batch
+        [ Css.marginTop (Css.rem -6)
+        , Css.marginBottom (Css.rem -6)
+        ]
+
+
+neg_mx_24 : Css.Style
+neg_mx_24 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -6)
+        , Css.marginRight (Css.rem -6)
+        ]
+
+
+neg_my_32 : Css.Style
+neg_my_32 =
+    Css.batch
+        [ Css.marginTop (Css.rem -8)
+        , Css.marginBottom (Css.rem -8)
+        ]
+
+
+neg_mx_32 : Css.Style
+neg_mx_32 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -8)
+        , Css.marginRight (Css.rem -8)
+        ]
+
+
+neg_my_40 : Css.Style
+neg_my_40 =
+    Css.batch
+        [ Css.marginTop (Css.rem -10)
+        , Css.marginBottom (Css.rem -10)
+        ]
+
+
+neg_mx_40 : Css.Style
+neg_mx_40 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -10)
+        , Css.marginRight (Css.rem -10)
+        ]
+
+
+neg_my_48 : Css.Style
+neg_my_48 =
+    Css.batch
+        [ Css.marginTop (Css.rem -12)
+        , Css.marginBottom (Css.rem -12)
+        ]
+
+
+neg_mx_48 : Css.Style
+neg_mx_48 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -12)
+        , Css.marginRight (Css.rem -12)
+        ]
+
+
+neg_my_56 : Css.Style
+neg_my_56 =
+    Css.batch
+        [ Css.marginTop (Css.rem -14)
+        , Css.marginBottom (Css.rem -14)
+        ]
+
+
+neg_mx_56 : Css.Style
+neg_mx_56 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -14)
+        , Css.marginRight (Css.rem -14)
+        ]
+
+
+neg_my_64 : Css.Style
+neg_my_64 =
+    Css.batch
+        [ Css.marginTop (Css.rem -16)
+        , Css.marginBottom (Css.rem -16)
+        ]
+
+
+neg_mx_64 : Css.Style
+neg_mx_64 =
+    Css.batch
+        [ Css.marginLeft (Css.rem -16)
+        , Css.marginRight (Css.rem -16)
+        ]
+
+
+neg_my_px : Css.Style
+neg_my_px =
+    Css.batch
+        [ Css.marginTop (Css.px -1)
+        , Css.marginBottom (Css.px -1)
+        ]
+
+
+neg_mx_px : Css.Style
+neg_mx_px =
+    Css.batch
+        [ Css.marginLeft (Css.px -1)
+        , Css.marginRight (Css.px -1)
         ]
 
 

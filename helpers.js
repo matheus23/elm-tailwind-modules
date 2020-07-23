@@ -135,7 +135,7 @@ function convertDeclarationValue(declarationProp, declarationValue) {
   let numericalVal;
   let unit;
   // 1rem, 1px
-  let numberPlusUnit = declarationValue.match(/([\d\.]+)([a-z]*)/);
+  let numberPlusUnit = declarationValue.match(/(-?[\d\.]+)([a-z]*)/);
 
   // percent
   let percentValue = declarationValue.match(/([-]?[0-9]*\.?[0-9]+)\%/);

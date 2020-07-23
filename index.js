@@ -7,7 +7,7 @@ const mkdir = promisify(fs.mkdir);
 let helpers = require("./helpers.js");
 
 let supportedSelectors = {
-  marginSelectors: /^\.m[xy]?-.*$/,
+  marginSelectors: /^\.-?m[xy]?-.*$/,
   paddingSelectors: /^\.p[xy]?-.*$/,
   backgroundSelectors: /^\.bg-.*$/,
   shadowSelectors: /^\.shadow.*$/,
