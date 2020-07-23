@@ -54,11 +54,11 @@ This now becomes our reusable style that is comprised of all the base Tailwind u
 ## Supported
 * Padding/margin
 * Background and many color based selectors
-* Breakpoint based selectors 
-* Hover variants
+* Width and height Hover variants
+* Breakpoint based selectors  (width, height, margin, padding)
 
 ## Not (yet) supported
-* Width and height
+
 * Text colors and sizes
 * Font
 * display properties

@@ -11,15 +11,14 @@ let supportedSelectors = {
   paddingSelectors: /^\.p[xy]?-.*$/,
   backgroundSelectors: /^\.bg-.*$/,
   shadowSelectors: /^\.shadow.*$/,
-  hoverVariantSelectors: /^\.hover\\:.*$/,
-  mediaQuerySpacingSelectors: /^\.(sm|md|lg|xl)\\:[mp][xytblr]+-.*$$/,
+  hoverVariantSelectors: /^\.(hover)\\:.*$/,
+  mediaQueryBasics: /^\.(sm|md|lg|xl)\\:[mpwh][xytblr]?-.*$/,
   roundedSelectors: /^\.rounded.*$/,
+  widthAndHeightSelectors: /^\.(w|h)-.*$/,
 };
 
 //TODO
 
-let widthAndHeight;
-let mediaQueryWidthAndHeight;
 let displayProps;
 let focusVariantSelectors;
 let breakpointVariants;
@@ -115,6 +114,8 @@ function processDeclarations(declaration) {
 function getPseudoSelector(selector) {
   if (selector.indexOf(":hover") > -1) {
     return "hover";
+  } else if (selector.indexOf(":focus") > -1) {
+    return "focus";
   }
 }
 

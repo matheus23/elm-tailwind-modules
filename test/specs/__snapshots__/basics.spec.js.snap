@@ -117,6 +117,28 @@ exports[`snapshot test 1`] = `
     , bg_yellow_700
     , bg_yellow_800
     , bg_yellow_900
+    , h_0
+    , h_1
+    , h_10
+    , h_12
+    , h_16
+    , h_2
+    , h_20
+    , h_24
+    , h_3
+    , h_32
+    , h_4
+    , h_40
+    , h_48
+    , h_5
+    , h_56
+    , h_6
+    , h_64
+    , h_8
+    , h_auto
+    , h_full
+    , h_px
+    , h_screen
     , hover__bg_black
     , hover__bg_blue_100
     , hover__bg_blue_200
@@ -426,6 +448,48 @@ exports[`snapshot test 1`] = `
     , hover__text_yellow_800
     , hover__text_yellow_900
     , hover__underline
+    , lg__h_0
+    , lg__h_1
+    , lg__h_10
+    , lg__h_12
+    , lg__h_16
+    , lg__h_2
+    , lg__h_20
+    , lg__h_24
+    , lg__h_3
+    , lg__h_32
+    , lg__h_4
+    , lg__h_40
+    , lg__h_48
+    , lg__h_5
+    , lg__h_56
+    , lg__h_6
+    , lg__h_64
+    , lg__h_8
+    , lg__h_auto
+    , lg__h_full
+    , lg__h_px
+    , lg__h_screen
+    , lg__m_0
+    , lg__m_1
+    , lg__m_10
+    , lg__m_12
+    , lg__m_16
+    , lg__m_2
+    , lg__m_20
+    , lg__m_24
+    , lg__m_3
+    , lg__m_32
+    , lg__m_4
+    , lg__m_40
+    , lg__m_48
+    , lg__m_5
+    , lg__m_56
+    , lg__m_6
+    , lg__m_64
+    , lg__m_8
+    , lg__m_auto
+    , lg__m_px
     , lg__mb_0
     , lg__mb_1
     , lg__mb_10
@@ -546,6 +610,25 @@ exports[`snapshot test 1`] = `
     , lg__my_8
     , lg__my_auto
     , lg__my_px
+    , lg__p_0
+    , lg__p_1
+    , lg__p_10
+    , lg__p_12
+    , lg__p_16
+    , lg__p_2
+    , lg__p_20
+    , lg__p_24
+    , lg__p_3
+    , lg__p_32
+    , lg__p_4
+    , lg__p_40
+    , lg__p_48
+    , lg__p_5
+    , lg__p_56
+    , lg__p_6
+    , lg__p_64
+    , lg__p_8
+    , lg__p_px
     , lg__pb_0
     , lg__pb_1
     , lg__pb_10
@@ -660,6 +743,54 @@ exports[`snapshot test 1`] = `
     , lg__py_64
     , lg__py_8
     , lg__py_px
+    , lg__w_0
+    , lg__w_1
+    , lg__w_10
+    , lg__w_10over12
+    , lg__w_11over12
+    , lg__w_12
+    , lg__w_16
+    , lg__w_1over12
+    , lg__w_1over2
+    , lg__w_1over3
+    , lg__w_1over4
+    , lg__w_1over5
+    , lg__w_1over6
+    , lg__w_2
+    , lg__w_20
+    , lg__w_24
+    , lg__w_2over12
+    , lg__w_2over3
+    , lg__w_2over4
+    , lg__w_2over5
+    , lg__w_2over6
+    , lg__w_3
+    , lg__w_32
+    , lg__w_3over12
+    , lg__w_3over4
+    , lg__w_3over5
+    , lg__w_3over6
+    , lg__w_4
+    , lg__w_40
+    , lg__w_48
+    , lg__w_4over12
+    , lg__w_4over5
+    , lg__w_4over6
+    , lg__w_5
+    , lg__w_56
+    , lg__w_5over12
+    , lg__w_5over6
+    , lg__w_6
+    , lg__w_64
+    , lg__w_6over12
+    , lg__w_7over12
+    , lg__w_8
+    , lg__w_8over12
+    , lg__w_9over12
+    , lg__w_auto
+    , lg__w_full
+    , lg__w_px
+    , lg__w_screen
     , m_0
     , m_1
     , m_10
@@ -680,6 +811,48 @@ exports[`snapshot test 1`] = `
     , m_8
     , m_auto
     , m_px
+    , md__h_0
+    , md__h_1
+    , md__h_10
+    , md__h_12
+    , md__h_16
+    , md__h_2
+    , md__h_20
+    , md__h_24
+    , md__h_3
+    , md__h_32
+    , md__h_4
+    , md__h_40
+    , md__h_48
+    , md__h_5
+    , md__h_56
+    , md__h_6
+    , md__h_64
+    , md__h_8
+    , md__h_auto
+    , md__h_full
+    , md__h_px
+    , md__h_screen
+    , md__m_0
+    , md__m_1
+    , md__m_10
+    , md__m_12
+    , md__m_16
+    , md__m_2
+    , md__m_20
+    , md__m_24
+    , md__m_3
+    , md__m_32
+    , md__m_4
+    , md__m_40
+    , md__m_48
+    , md__m_5
+    , md__m_56
+    , md__m_6
+    , md__m_64
+    , md__m_8
+    , md__m_auto
+    , md__m_px
     , md__mb_0
     , md__mb_1
     , md__mb_10
@@ -800,6 +973,25 @@ exports[`snapshot test 1`] = `
     , md__my_8
     , md__my_auto
     , md__my_px
+    , md__p_0
+    , md__p_1
+    , md__p_10
+    , md__p_12
+    , md__p_16
+    , md__p_2
+    , md__p_20
+    , md__p_24
+    , md__p_3
+    , md__p_32
+    , md__p_4
+    , md__p_40
+    , md__p_48
+    , md__p_5
+    , md__p_56
+    , md__p_6
+    , md__p_64
+    , md__p_8
+    , md__p_px
     , md__pb_0
     , md__pb_1
     , md__pb_10
@@ -914,6 +1106,54 @@ exports[`snapshot test 1`] = `
     , md__py_64
     , md__py_8
     , md__py_px
+    , md__w_0
+    , md__w_1
+    , md__w_10
+    , md__w_10over12
+    , md__w_11over12
+    , md__w_12
+    , md__w_16
+    , md__w_1over12
+    , md__w_1over2
+    , md__w_1over3
+    , md__w_1over4
+    , md__w_1over5
+    , md__w_1over6
+    , md__w_2
+    , md__w_20
+    , md__w_24
+    , md__w_2over12
+    , md__w_2over3
+    , md__w_2over4
+    , md__w_2over5
+    , md__w_2over6
+    , md__w_3
+    , md__w_32
+    , md__w_3over12
+    , md__w_3over4
+    , md__w_3over5
+    , md__w_3over6
+    , md__w_4
+    , md__w_40
+    , md__w_48
+    , md__w_4over12
+    , md__w_4over5
+    , md__w_4over6
+    , md__w_5
+    , md__w_56
+    , md__w_5over12
+    , md__w_5over6
+    , md__w_6
+    , md__w_64
+    , md__w_6over12
+    , md__w_7over12
+    , md__w_8
+    , md__w_8over12
+    , md__w_9over12
+    , md__w_auto
+    , md__w_full
+    , md__w_px
+    , md__w_screen
     , mx_0
     , mx_1
     , mx_10
@@ -1075,6 +1315,48 @@ exports[`snapshot test 1`] = `
     , shadow_sm
     , shadow_xl
     , shadow_xs
+    , sm__h_0
+    , sm__h_1
+    , sm__h_10
+    , sm__h_12
+    , sm__h_16
+    , sm__h_2
+    , sm__h_20
+    , sm__h_24
+    , sm__h_3
+    , sm__h_32
+    , sm__h_4
+    , sm__h_40
+    , sm__h_48
+    , sm__h_5
+    , sm__h_56
+    , sm__h_6
+    , sm__h_64
+    , sm__h_8
+    , sm__h_auto
+    , sm__h_full
+    , sm__h_px
+    , sm__h_screen
+    , sm__m_0
+    , sm__m_1
+    , sm__m_10
+    , sm__m_12
+    , sm__m_16
+    , sm__m_2
+    , sm__m_20
+    , sm__m_24
+    , sm__m_3
+    , sm__m_32
+    , sm__m_4
+    , sm__m_40
+    , sm__m_48
+    , sm__m_5
+    , sm__m_56
+    , sm__m_6
+    , sm__m_64
+    , sm__m_8
+    , sm__m_auto
+    , sm__m_px
     , sm__mb_0
     , sm__mb_1
     , sm__mb_10
@@ -1195,6 +1477,25 @@ exports[`snapshot test 1`] = `
     , sm__my_8
     , sm__my_auto
     , sm__my_px
+    , sm__p_0
+    , sm__p_1
+    , sm__p_10
+    , sm__p_12
+    , sm__p_16
+    , sm__p_2
+    , sm__p_20
+    , sm__p_24
+    , sm__p_3
+    , sm__p_32
+    , sm__p_4
+    , sm__p_40
+    , sm__p_48
+    , sm__p_5
+    , sm__p_56
+    , sm__p_6
+    , sm__p_64
+    , sm__p_8
+    , sm__p_px
     , sm__pb_0
     , sm__pb_1
     , sm__pb_10
@@ -1309,6 +1610,144 @@ exports[`snapshot test 1`] = `
     , sm__py_64
     , sm__py_8
     , sm__py_px
+    , sm__w_0
+    , sm__w_1
+    , sm__w_10
+    , sm__w_10over12
+    , sm__w_11over12
+    , sm__w_12
+    , sm__w_16
+    , sm__w_1over12
+    , sm__w_1over2
+    , sm__w_1over3
+    , sm__w_1over4
+    , sm__w_1over5
+    , sm__w_1over6
+    , sm__w_2
+    , sm__w_20
+    , sm__w_24
+    , sm__w_2over12
+    , sm__w_2over3
+    , sm__w_2over4
+    , sm__w_2over5
+    , sm__w_2over6
+    , sm__w_3
+    , sm__w_32
+    , sm__w_3over12
+    , sm__w_3over4
+    , sm__w_3over5
+    , sm__w_3over6
+    , sm__w_4
+    , sm__w_40
+    , sm__w_48
+    , sm__w_4over12
+    , sm__w_4over5
+    , sm__w_4over6
+    , sm__w_5
+    , sm__w_56
+    , sm__w_5over12
+    , sm__w_5over6
+    , sm__w_6
+    , sm__w_64
+    , sm__w_6over12
+    , sm__w_7over12
+    , sm__w_8
+    , sm__w_8over12
+    , sm__w_9over12
+    , sm__w_auto
+    , sm__w_full
+    , sm__w_px
+    , sm__w_screen
+    , w_0
+    , w_1
+    , w_10
+    , w_10over12
+    , w_11over12
+    , w_12
+    , w_16
+    , w_1over12
+    , w_1over2
+    , w_1over3
+    , w_1over4
+    , w_1over5
+    , w_1over6
+    , w_2
+    , w_20
+    , w_24
+    , w_2over12
+    , w_2over3
+    , w_2over4
+    , w_2over5
+    , w_2over6
+    , w_3
+    , w_32
+    , w_3over12
+    , w_3over4
+    , w_3over5
+    , w_3over6
+    , w_4
+    , w_40
+    , w_48
+    , w_4over12
+    , w_4over5
+    , w_4over6
+    , w_5
+    , w_56
+    , w_5over12
+    , w_5over6
+    , w_6
+    , w_64
+    , w_6over12
+    , w_7over12
+    , w_8
+    , w_8over12
+    , w_9over12
+    , w_auto
+    , w_full
+    , w_px
+    , w_screen
+    , xl__h_0
+    , xl__h_1
+    , xl__h_10
+    , xl__h_12
+    , xl__h_16
+    , xl__h_2
+    , xl__h_20
+    , xl__h_24
+    , xl__h_3
+    , xl__h_32
+    , xl__h_4
+    , xl__h_40
+    , xl__h_48
+    , xl__h_5
+    , xl__h_56
+    , xl__h_6
+    , xl__h_64
+    , xl__h_8
+    , xl__h_auto
+    , xl__h_full
+    , xl__h_px
+    , xl__h_screen
+    , xl__m_0
+    , xl__m_1
+    , xl__m_10
+    , xl__m_12
+    , xl__m_16
+    , xl__m_2
+    , xl__m_20
+    , xl__m_24
+    , xl__m_3
+    , xl__m_32
+    , xl__m_4
+    , xl__m_40
+    , xl__m_48
+    , xl__m_5
+    , xl__m_56
+    , xl__m_6
+    , xl__m_64
+    , xl__m_8
+    , xl__m_auto
+    , xl__m_px
     , xl__mb_0
     , xl__mb_1
     , xl__mb_10
@@ -1429,6 +1868,25 @@ exports[`snapshot test 1`] = `
     , xl__my_8
     , xl__my_auto
     , xl__my_px
+    , xl__p_0
+    , xl__p_1
+    , xl__p_10
+    , xl__p_12
+    , xl__p_16
+    , xl__p_2
+    , xl__p_20
+    , xl__p_24
+    , xl__p_3
+    , xl__p_32
+    , xl__p_4
+    , xl__p_40
+    , xl__p_48
+    , xl__p_5
+    , xl__p_56
+    , xl__p_6
+    , xl__p_64
+    , xl__p_8
+    , xl__p_px
     , xl__pb_0
     , xl__pb_1
     , xl__pb_10
@@ -1543,6 +2001,54 @@ exports[`snapshot test 1`] = `
     , xl__py_64
     , xl__py_8
     , xl__py_px
+    , xl__w_0
+    , xl__w_1
+    , xl__w_10
+    , xl__w_10over12
+    , xl__w_11over12
+    , xl__w_12
+    , xl__w_16
+    , xl__w_1over12
+    , xl__w_1over2
+    , xl__w_1over3
+    , xl__w_1over4
+    , xl__w_1over5
+    , xl__w_1over6
+    , xl__w_2
+    , xl__w_20
+    , xl__w_24
+    , xl__w_2over12
+    , xl__w_2over3
+    , xl__w_2over4
+    , xl__w_2over5
+    , xl__w_2over6
+    , xl__w_3
+    , xl__w_32
+    , xl__w_3over12
+    , xl__w_3over4
+    , xl__w_3over5
+    , xl__w_3over6
+    , xl__w_4
+    , xl__w_40
+    , xl__w_48
+    , xl__w_4over12
+    , xl__w_4over5
+    , xl__w_4over6
+    , xl__w_5
+    , xl__w_56
+    , xl__w_5over12
+    , xl__w_5over6
+    , xl__w_6
+    , xl__w_64
+    , xl__w_6over12
+    , xl__w_7over12
+    , xl__w_8
+    , xl__w_8over12
+    , xl__w_9over12
+    , xl__w_auto
+    , xl__w_full
+    , xl__w_px
+    , xl__w_screen
     )
 
 import Css
@@ -6102,6 +6608,384 @@ hover__no_underline =
         ]
 
 
+sm__h_0 : Css.Style
+sm__h_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.px 0)
+            ]
+        ]
+
+
+sm__h_1 : Css.Style
+sm__h_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 0.25)
+            ]
+        ]
+
+
+sm__h_2 : Css.Style
+sm__h_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 0.5)
+            ]
+        ]
+
+
+sm__h_3 : Css.Style
+sm__h_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 0.75)
+            ]
+        ]
+
+
+sm__h_4 : Css.Style
+sm__h_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 1)
+            ]
+        ]
+
+
+sm__h_5 : Css.Style
+sm__h_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 1.25)
+            ]
+        ]
+
+
+sm__h_6 : Css.Style
+sm__h_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 1.5)
+            ]
+        ]
+
+
+sm__h_8 : Css.Style
+sm__h_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 2)
+            ]
+        ]
+
+
+sm__h_10 : Css.Style
+sm__h_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 2.5)
+            ]
+        ]
+
+
+sm__h_12 : Css.Style
+sm__h_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 3)
+            ]
+        ]
+
+
+sm__h_16 : Css.Style
+sm__h_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 4)
+            ]
+        ]
+
+
+sm__h_20 : Css.Style
+sm__h_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 5)
+            ]
+        ]
+
+
+sm__h_24 : Css.Style
+sm__h_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 6)
+            ]
+        ]
+
+
+sm__h_32 : Css.Style
+sm__h_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 8)
+            ]
+        ]
+
+
+sm__h_40 : Css.Style
+sm__h_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 10)
+            ]
+        ]
+
+
+sm__h_48 : Css.Style
+sm__h_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 12)
+            ]
+        ]
+
+
+sm__h_56 : Css.Style
+sm__h_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 14)
+            ]
+        ]
+
+
+sm__h_64 : Css.Style
+sm__h_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.rem 16)
+            ]
+        ]
+
+
+sm__h_auto : Css.Style
+sm__h_auto =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height Css.auto
+            ]
+        ]
+
+
+sm__h_px : Css.Style
+sm__h_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.px 1)
+            ]
+        ]
+
+
+sm__h_full : Css.Style
+sm__h_full =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.pct 100)
+            ]
+        ]
+
+
+sm__h_screen : Css.Style
+sm__h_screen =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.height (Css.vh 100)
+            ]
+        ]
+
+
+sm__m_0 : Css.Style
+sm__m_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.px 0)
+            ]
+        ]
+
+
+sm__m_1 : Css.Style
+sm__m_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 0.25)
+            ]
+        ]
+
+
+sm__m_2 : Css.Style
+sm__m_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 0.5)
+            ]
+        ]
+
+
+sm__m_3 : Css.Style
+sm__m_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 0.75)
+            ]
+        ]
+
+
+sm__m_4 : Css.Style
+sm__m_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 1)
+            ]
+        ]
+
+
+sm__m_5 : Css.Style
+sm__m_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 1.25)
+            ]
+        ]
+
+
+sm__m_6 : Css.Style
+sm__m_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 1.5)
+            ]
+        ]
+
+
+sm__m_8 : Css.Style
+sm__m_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 2)
+            ]
+        ]
+
+
+sm__m_10 : Css.Style
+sm__m_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 2.5)
+            ]
+        ]
+
+
+sm__m_12 : Css.Style
+sm__m_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 3)
+            ]
+        ]
+
+
+sm__m_16 : Css.Style
+sm__m_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 4)
+            ]
+        ]
+
+
+sm__m_20 : Css.Style
+sm__m_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 5)
+            ]
+        ]
+
+
+sm__m_24 : Css.Style
+sm__m_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 6)
+            ]
+        ]
+
+
+sm__m_32 : Css.Style
+sm__m_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 8)
+            ]
+        ]
+
+
+sm__m_40 : Css.Style
+sm__m_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 10)
+            ]
+        ]
+
+
+sm__m_48 : Css.Style
+sm__m_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 12)
+            ]
+        ]
+
+
+sm__m_56 : Css.Style
+sm__m_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 14)
+            ]
+        ]
+
+
+sm__m_64 : Css.Style
+sm__m_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.rem 16)
+            ]
+        ]
+
+
+sm__m_auto : Css.Style
+sm__m_auto =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin Css.auto
+            ]
+        ]
+
+
+sm__m_px : Css.Style
+sm__m_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.margin (Css.px 1)
+            ]
+        ]
+
+
 sm__my_0 : Css.Style
 sm__my_0 =
     Css.batch
@@ -7222,6 +8106,177 @@ sm__ml_px =
         ]
 
 
+sm__p_0 : Css.Style
+sm__p_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.px 0)
+            ]
+        ]
+
+
+sm__p_1 : Css.Style
+sm__p_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 0.25)
+            ]
+        ]
+
+
+sm__p_2 : Css.Style
+sm__p_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 0.5)
+            ]
+        ]
+
+
+sm__p_3 : Css.Style
+sm__p_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 0.75)
+            ]
+        ]
+
+
+sm__p_4 : Css.Style
+sm__p_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 1)
+            ]
+        ]
+
+
+sm__p_5 : Css.Style
+sm__p_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 1.25)
+            ]
+        ]
+
+
+sm__p_6 : Css.Style
+sm__p_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 1.5)
+            ]
+        ]
+
+
+sm__p_8 : Css.Style
+sm__p_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 2)
+            ]
+        ]
+
+
+sm__p_10 : Css.Style
+sm__p_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 2.5)
+            ]
+        ]
+
+
+sm__p_12 : Css.Style
+sm__p_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 3)
+            ]
+        ]
+
+
+sm__p_16 : Css.Style
+sm__p_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 4)
+            ]
+        ]
+
+
+sm__p_20 : Css.Style
+sm__p_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 5)
+            ]
+        ]
+
+
+sm__p_24 : Css.Style
+sm__p_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 6)
+            ]
+        ]
+
+
+sm__p_32 : Css.Style
+sm__p_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 8)
+            ]
+        ]
+
+
+sm__p_40 : Css.Style
+sm__p_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 10)
+            ]
+        ]
+
+
+sm__p_48 : Css.Style
+sm__p_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 12)
+            ]
+        ]
+
+
+sm__p_56 : Css.Style
+sm__p_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 14)
+            ]
+        ]
+
+
+sm__p_64 : Css.Style
+sm__p_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.rem 16)
+            ]
+        ]
+
+
+sm__p_px : Css.Style
+sm__p_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.padding (Css.px 1)
+            ]
+        ]
+
+
 sm__py_0 : Css.Style
 sm__py_0 =
     Css.batch
@@ -8282,6 +9337,816 @@ sm__pl_px =
     Css.batch
         [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
             [ Css.paddingLeft (Css.px 1)
+            ]
+        ]
+
+
+sm__w_0 : Css.Style
+sm__w_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.px 0)
+            ]
+        ]
+
+
+sm__w_1 : Css.Style
+sm__w_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 0.25)
+            ]
+        ]
+
+
+sm__w_2 : Css.Style
+sm__w_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 0.5)
+            ]
+        ]
+
+
+sm__w_3 : Css.Style
+sm__w_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 0.75)
+            ]
+        ]
+
+
+sm__w_4 : Css.Style
+sm__w_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 1)
+            ]
+        ]
+
+
+sm__w_5 : Css.Style
+sm__w_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 1.25)
+            ]
+        ]
+
+
+sm__w_6 : Css.Style
+sm__w_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 1.5)
+            ]
+        ]
+
+
+sm__w_8 : Css.Style
+sm__w_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 2)
+            ]
+        ]
+
+
+sm__w_10 : Css.Style
+sm__w_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 2.5)
+            ]
+        ]
+
+
+sm__w_12 : Css.Style
+sm__w_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 3)
+            ]
+        ]
+
+
+sm__w_16 : Css.Style
+sm__w_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 4)
+            ]
+        ]
+
+
+sm__w_20 : Css.Style
+sm__w_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 5)
+            ]
+        ]
+
+
+sm__w_24 : Css.Style
+sm__w_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 6)
+            ]
+        ]
+
+
+sm__w_32 : Css.Style
+sm__w_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 8)
+            ]
+        ]
+
+
+sm__w_40 : Css.Style
+sm__w_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 10)
+            ]
+        ]
+
+
+sm__w_48 : Css.Style
+sm__w_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 12)
+            ]
+        ]
+
+
+sm__w_56 : Css.Style
+sm__w_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 14)
+            ]
+        ]
+
+
+sm__w_64 : Css.Style
+sm__w_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.rem 16)
+            ]
+        ]
+
+
+sm__w_auto : Css.Style
+sm__w_auto =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width Css.auto
+            ]
+        ]
+
+
+sm__w_px : Css.Style
+sm__w_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.px 1)
+            ]
+        ]
+
+
+sm__w_1over2 : Css.Style
+sm__w_1over2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+sm__w_1over3 : Css.Style
+sm__w_1over3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 33.333333)
+            ]
+        ]
+
+
+sm__w_2over3 : Css.Style
+sm__w_2over3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 66.666667)
+            ]
+        ]
+
+
+sm__w_1over4 : Css.Style
+sm__w_1over4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 25)
+            ]
+        ]
+
+
+sm__w_2over4 : Css.Style
+sm__w_2over4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+sm__w_3over4 : Css.Style
+sm__w_3over4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 75)
+            ]
+        ]
+
+
+sm__w_1over5 : Css.Style
+sm__w_1over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 20)
+            ]
+        ]
+
+
+sm__w_2over5 : Css.Style
+sm__w_2over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 40)
+            ]
+        ]
+
+
+sm__w_3over5 : Css.Style
+sm__w_3over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 60)
+            ]
+        ]
+
+
+sm__w_4over5 : Css.Style
+sm__w_4over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 80)
+            ]
+        ]
+
+
+sm__w_1over6 : Css.Style
+sm__w_1over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 16.666667)
+            ]
+        ]
+
+
+sm__w_2over6 : Css.Style
+sm__w_2over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 33.333333)
+            ]
+        ]
+
+
+sm__w_3over6 : Css.Style
+sm__w_3over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+sm__w_4over6 : Css.Style
+sm__w_4over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 66.666667)
+            ]
+        ]
+
+
+sm__w_5over6 : Css.Style
+sm__w_5over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 83.333333)
+            ]
+        ]
+
+
+sm__w_1over12 : Css.Style
+sm__w_1over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 8.333333)
+            ]
+        ]
+
+
+sm__w_2over12 : Css.Style
+sm__w_2over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 16.666667)
+            ]
+        ]
+
+
+sm__w_3over12 : Css.Style
+sm__w_3over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 25)
+            ]
+        ]
+
+
+sm__w_4over12 : Css.Style
+sm__w_4over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 33.333333)
+            ]
+        ]
+
+
+sm__w_5over12 : Css.Style
+sm__w_5over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 41.666667)
+            ]
+        ]
+
+
+sm__w_6over12 : Css.Style
+sm__w_6over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+sm__w_7over12 : Css.Style
+sm__w_7over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 58.333333)
+            ]
+        ]
+
+
+sm__w_8over12 : Css.Style
+sm__w_8over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 66.666667)
+            ]
+        ]
+
+
+sm__w_9over12 : Css.Style
+sm__w_9over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 75)
+            ]
+        ]
+
+
+sm__w_10over12 : Css.Style
+sm__w_10over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 83.333333)
+            ]
+        ]
+
+
+sm__w_11over12 : Css.Style
+sm__w_11over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 91.666667)
+            ]
+        ]
+
+
+sm__w_full : Css.Style
+sm__w_full =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.pct 100)
+            ]
+        ]
+
+
+sm__w_screen : Css.Style
+sm__w_screen =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 640px)\\" ]
+            [ Css.width (Css.vw 100)
+            ]
+        ]
+
+
+md__h_0 : Css.Style
+md__h_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.px 0)
+            ]
+        ]
+
+
+md__h_1 : Css.Style
+md__h_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 0.25)
+            ]
+        ]
+
+
+md__h_2 : Css.Style
+md__h_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 0.5)
+            ]
+        ]
+
+
+md__h_3 : Css.Style
+md__h_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 0.75)
+            ]
+        ]
+
+
+md__h_4 : Css.Style
+md__h_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 1)
+            ]
+        ]
+
+
+md__h_5 : Css.Style
+md__h_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 1.25)
+            ]
+        ]
+
+
+md__h_6 : Css.Style
+md__h_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 1.5)
+            ]
+        ]
+
+
+md__h_8 : Css.Style
+md__h_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 2)
+            ]
+        ]
+
+
+md__h_10 : Css.Style
+md__h_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 2.5)
+            ]
+        ]
+
+
+md__h_12 : Css.Style
+md__h_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 3)
+            ]
+        ]
+
+
+md__h_16 : Css.Style
+md__h_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 4)
+            ]
+        ]
+
+
+md__h_20 : Css.Style
+md__h_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 5)
+            ]
+        ]
+
+
+md__h_24 : Css.Style
+md__h_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 6)
+            ]
+        ]
+
+
+md__h_32 : Css.Style
+md__h_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 8)
+            ]
+        ]
+
+
+md__h_40 : Css.Style
+md__h_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 10)
+            ]
+        ]
+
+
+md__h_48 : Css.Style
+md__h_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 12)
+            ]
+        ]
+
+
+md__h_56 : Css.Style
+md__h_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 14)
+            ]
+        ]
+
+
+md__h_64 : Css.Style
+md__h_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.rem 16)
+            ]
+        ]
+
+
+md__h_auto : Css.Style
+md__h_auto =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height Css.auto
+            ]
+        ]
+
+
+md__h_px : Css.Style
+md__h_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.px 1)
+            ]
+        ]
+
+
+md__h_full : Css.Style
+md__h_full =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.pct 100)
+            ]
+        ]
+
+
+md__h_screen : Css.Style
+md__h_screen =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.height (Css.vh 100)
+            ]
+        ]
+
+
+md__m_0 : Css.Style
+md__m_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.px 0)
+            ]
+        ]
+
+
+md__m_1 : Css.Style
+md__m_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 0.25)
+            ]
+        ]
+
+
+md__m_2 : Css.Style
+md__m_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 0.5)
+            ]
+        ]
+
+
+md__m_3 : Css.Style
+md__m_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 0.75)
+            ]
+        ]
+
+
+md__m_4 : Css.Style
+md__m_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 1)
+            ]
+        ]
+
+
+md__m_5 : Css.Style
+md__m_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 1.25)
+            ]
+        ]
+
+
+md__m_6 : Css.Style
+md__m_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 1.5)
+            ]
+        ]
+
+
+md__m_8 : Css.Style
+md__m_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 2)
+            ]
+        ]
+
+
+md__m_10 : Css.Style
+md__m_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 2.5)
+            ]
+        ]
+
+
+md__m_12 : Css.Style
+md__m_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 3)
+            ]
+        ]
+
+
+md__m_16 : Css.Style
+md__m_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 4)
+            ]
+        ]
+
+
+md__m_20 : Css.Style
+md__m_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 5)
+            ]
+        ]
+
+
+md__m_24 : Css.Style
+md__m_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 6)
+            ]
+        ]
+
+
+md__m_32 : Css.Style
+md__m_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 8)
+            ]
+        ]
+
+
+md__m_40 : Css.Style
+md__m_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 10)
+            ]
+        ]
+
+
+md__m_48 : Css.Style
+md__m_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 12)
+            ]
+        ]
+
+
+md__m_56 : Css.Style
+md__m_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 14)
+            ]
+        ]
+
+
+md__m_64 : Css.Style
+md__m_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.rem 16)
+            ]
+        ]
+
+
+md__m_auto : Css.Style
+md__m_auto =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin Css.auto
+            ]
+        ]
+
+
+md__m_px : Css.Style
+md__m_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.margin (Css.px 1)
             ]
         ]
 
@@ -9406,6 +11271,177 @@ md__ml_px =
         ]
 
 
+md__p_0 : Css.Style
+md__p_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.px 0)
+            ]
+        ]
+
+
+md__p_1 : Css.Style
+md__p_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 0.25)
+            ]
+        ]
+
+
+md__p_2 : Css.Style
+md__p_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 0.5)
+            ]
+        ]
+
+
+md__p_3 : Css.Style
+md__p_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 0.75)
+            ]
+        ]
+
+
+md__p_4 : Css.Style
+md__p_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 1)
+            ]
+        ]
+
+
+md__p_5 : Css.Style
+md__p_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 1.25)
+            ]
+        ]
+
+
+md__p_6 : Css.Style
+md__p_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 1.5)
+            ]
+        ]
+
+
+md__p_8 : Css.Style
+md__p_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 2)
+            ]
+        ]
+
+
+md__p_10 : Css.Style
+md__p_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 2.5)
+            ]
+        ]
+
+
+md__p_12 : Css.Style
+md__p_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 3)
+            ]
+        ]
+
+
+md__p_16 : Css.Style
+md__p_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 4)
+            ]
+        ]
+
+
+md__p_20 : Css.Style
+md__p_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 5)
+            ]
+        ]
+
+
+md__p_24 : Css.Style
+md__p_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 6)
+            ]
+        ]
+
+
+md__p_32 : Css.Style
+md__p_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 8)
+            ]
+        ]
+
+
+md__p_40 : Css.Style
+md__p_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 10)
+            ]
+        ]
+
+
+md__p_48 : Css.Style
+md__p_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 12)
+            ]
+        ]
+
+
+md__p_56 : Css.Style
+md__p_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 14)
+            ]
+        ]
+
+
+md__p_64 : Css.Style
+md__p_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.rem 16)
+            ]
+        ]
+
+
+md__p_px : Css.Style
+md__p_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.padding (Css.px 1)
+            ]
+        ]
+
+
 md__py_0 : Css.Style
 md__py_0 =
     Css.batch
@@ -10466,6 +12502,816 @@ md__pl_px =
     Css.batch
         [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
             [ Css.paddingLeft (Css.px 1)
+            ]
+        ]
+
+
+md__w_0 : Css.Style
+md__w_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.px 0)
+            ]
+        ]
+
+
+md__w_1 : Css.Style
+md__w_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 0.25)
+            ]
+        ]
+
+
+md__w_2 : Css.Style
+md__w_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 0.5)
+            ]
+        ]
+
+
+md__w_3 : Css.Style
+md__w_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 0.75)
+            ]
+        ]
+
+
+md__w_4 : Css.Style
+md__w_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 1)
+            ]
+        ]
+
+
+md__w_5 : Css.Style
+md__w_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 1.25)
+            ]
+        ]
+
+
+md__w_6 : Css.Style
+md__w_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 1.5)
+            ]
+        ]
+
+
+md__w_8 : Css.Style
+md__w_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 2)
+            ]
+        ]
+
+
+md__w_10 : Css.Style
+md__w_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 2.5)
+            ]
+        ]
+
+
+md__w_12 : Css.Style
+md__w_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 3)
+            ]
+        ]
+
+
+md__w_16 : Css.Style
+md__w_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 4)
+            ]
+        ]
+
+
+md__w_20 : Css.Style
+md__w_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 5)
+            ]
+        ]
+
+
+md__w_24 : Css.Style
+md__w_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 6)
+            ]
+        ]
+
+
+md__w_32 : Css.Style
+md__w_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 8)
+            ]
+        ]
+
+
+md__w_40 : Css.Style
+md__w_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 10)
+            ]
+        ]
+
+
+md__w_48 : Css.Style
+md__w_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 12)
+            ]
+        ]
+
+
+md__w_56 : Css.Style
+md__w_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 14)
+            ]
+        ]
+
+
+md__w_64 : Css.Style
+md__w_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.rem 16)
+            ]
+        ]
+
+
+md__w_auto : Css.Style
+md__w_auto =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width Css.auto
+            ]
+        ]
+
+
+md__w_px : Css.Style
+md__w_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.px 1)
+            ]
+        ]
+
+
+md__w_1over2 : Css.Style
+md__w_1over2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+md__w_1over3 : Css.Style
+md__w_1over3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 33.333333)
+            ]
+        ]
+
+
+md__w_2over3 : Css.Style
+md__w_2over3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 66.666667)
+            ]
+        ]
+
+
+md__w_1over4 : Css.Style
+md__w_1over4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 25)
+            ]
+        ]
+
+
+md__w_2over4 : Css.Style
+md__w_2over4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+md__w_3over4 : Css.Style
+md__w_3over4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 75)
+            ]
+        ]
+
+
+md__w_1over5 : Css.Style
+md__w_1over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 20)
+            ]
+        ]
+
+
+md__w_2over5 : Css.Style
+md__w_2over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 40)
+            ]
+        ]
+
+
+md__w_3over5 : Css.Style
+md__w_3over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 60)
+            ]
+        ]
+
+
+md__w_4over5 : Css.Style
+md__w_4over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 80)
+            ]
+        ]
+
+
+md__w_1over6 : Css.Style
+md__w_1over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 16.666667)
+            ]
+        ]
+
+
+md__w_2over6 : Css.Style
+md__w_2over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 33.333333)
+            ]
+        ]
+
+
+md__w_3over6 : Css.Style
+md__w_3over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+md__w_4over6 : Css.Style
+md__w_4over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 66.666667)
+            ]
+        ]
+
+
+md__w_5over6 : Css.Style
+md__w_5over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 83.333333)
+            ]
+        ]
+
+
+md__w_1over12 : Css.Style
+md__w_1over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 8.333333)
+            ]
+        ]
+
+
+md__w_2over12 : Css.Style
+md__w_2over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 16.666667)
+            ]
+        ]
+
+
+md__w_3over12 : Css.Style
+md__w_3over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 25)
+            ]
+        ]
+
+
+md__w_4over12 : Css.Style
+md__w_4over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 33.333333)
+            ]
+        ]
+
+
+md__w_5over12 : Css.Style
+md__w_5over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 41.666667)
+            ]
+        ]
+
+
+md__w_6over12 : Css.Style
+md__w_6over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+md__w_7over12 : Css.Style
+md__w_7over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 58.333333)
+            ]
+        ]
+
+
+md__w_8over12 : Css.Style
+md__w_8over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 66.666667)
+            ]
+        ]
+
+
+md__w_9over12 : Css.Style
+md__w_9over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 75)
+            ]
+        ]
+
+
+md__w_10over12 : Css.Style
+md__w_10over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 83.333333)
+            ]
+        ]
+
+
+md__w_11over12 : Css.Style
+md__w_11over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 91.666667)
+            ]
+        ]
+
+
+md__w_full : Css.Style
+md__w_full =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.pct 100)
+            ]
+        ]
+
+
+md__w_screen : Css.Style
+md__w_screen =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 768px)\\" ]
+            [ Css.width (Css.vw 100)
+            ]
+        ]
+
+
+lg__h_0 : Css.Style
+lg__h_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.px 0)
+            ]
+        ]
+
+
+lg__h_1 : Css.Style
+lg__h_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 0.25)
+            ]
+        ]
+
+
+lg__h_2 : Css.Style
+lg__h_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 0.5)
+            ]
+        ]
+
+
+lg__h_3 : Css.Style
+lg__h_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 0.75)
+            ]
+        ]
+
+
+lg__h_4 : Css.Style
+lg__h_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 1)
+            ]
+        ]
+
+
+lg__h_5 : Css.Style
+lg__h_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 1.25)
+            ]
+        ]
+
+
+lg__h_6 : Css.Style
+lg__h_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 1.5)
+            ]
+        ]
+
+
+lg__h_8 : Css.Style
+lg__h_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 2)
+            ]
+        ]
+
+
+lg__h_10 : Css.Style
+lg__h_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 2.5)
+            ]
+        ]
+
+
+lg__h_12 : Css.Style
+lg__h_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 3)
+            ]
+        ]
+
+
+lg__h_16 : Css.Style
+lg__h_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 4)
+            ]
+        ]
+
+
+lg__h_20 : Css.Style
+lg__h_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 5)
+            ]
+        ]
+
+
+lg__h_24 : Css.Style
+lg__h_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 6)
+            ]
+        ]
+
+
+lg__h_32 : Css.Style
+lg__h_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 8)
+            ]
+        ]
+
+
+lg__h_40 : Css.Style
+lg__h_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 10)
+            ]
+        ]
+
+
+lg__h_48 : Css.Style
+lg__h_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 12)
+            ]
+        ]
+
+
+lg__h_56 : Css.Style
+lg__h_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 14)
+            ]
+        ]
+
+
+lg__h_64 : Css.Style
+lg__h_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.rem 16)
+            ]
+        ]
+
+
+lg__h_auto : Css.Style
+lg__h_auto =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height Css.auto
+            ]
+        ]
+
+
+lg__h_px : Css.Style
+lg__h_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.px 1)
+            ]
+        ]
+
+
+lg__h_full : Css.Style
+lg__h_full =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.pct 100)
+            ]
+        ]
+
+
+lg__h_screen : Css.Style
+lg__h_screen =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.height (Css.vh 100)
+            ]
+        ]
+
+
+lg__m_0 : Css.Style
+lg__m_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.px 0)
+            ]
+        ]
+
+
+lg__m_1 : Css.Style
+lg__m_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 0.25)
+            ]
+        ]
+
+
+lg__m_2 : Css.Style
+lg__m_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 0.5)
+            ]
+        ]
+
+
+lg__m_3 : Css.Style
+lg__m_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 0.75)
+            ]
+        ]
+
+
+lg__m_4 : Css.Style
+lg__m_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 1)
+            ]
+        ]
+
+
+lg__m_5 : Css.Style
+lg__m_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 1.25)
+            ]
+        ]
+
+
+lg__m_6 : Css.Style
+lg__m_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 1.5)
+            ]
+        ]
+
+
+lg__m_8 : Css.Style
+lg__m_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 2)
+            ]
+        ]
+
+
+lg__m_10 : Css.Style
+lg__m_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 2.5)
+            ]
+        ]
+
+
+lg__m_12 : Css.Style
+lg__m_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 3)
+            ]
+        ]
+
+
+lg__m_16 : Css.Style
+lg__m_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 4)
+            ]
+        ]
+
+
+lg__m_20 : Css.Style
+lg__m_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 5)
+            ]
+        ]
+
+
+lg__m_24 : Css.Style
+lg__m_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 6)
+            ]
+        ]
+
+
+lg__m_32 : Css.Style
+lg__m_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 8)
+            ]
+        ]
+
+
+lg__m_40 : Css.Style
+lg__m_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 10)
+            ]
+        ]
+
+
+lg__m_48 : Css.Style
+lg__m_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 12)
+            ]
+        ]
+
+
+lg__m_56 : Css.Style
+lg__m_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 14)
+            ]
+        ]
+
+
+lg__m_64 : Css.Style
+lg__m_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.rem 16)
+            ]
+        ]
+
+
+lg__m_auto : Css.Style
+lg__m_auto =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin Css.auto
+            ]
+        ]
+
+
+lg__m_px : Css.Style
+lg__m_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.margin (Css.px 1)
             ]
         ]
 
@@ -11590,6 +14436,177 @@ lg__ml_px =
         ]
 
 
+lg__p_0 : Css.Style
+lg__p_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.px 0)
+            ]
+        ]
+
+
+lg__p_1 : Css.Style
+lg__p_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 0.25)
+            ]
+        ]
+
+
+lg__p_2 : Css.Style
+lg__p_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 0.5)
+            ]
+        ]
+
+
+lg__p_3 : Css.Style
+lg__p_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 0.75)
+            ]
+        ]
+
+
+lg__p_4 : Css.Style
+lg__p_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 1)
+            ]
+        ]
+
+
+lg__p_5 : Css.Style
+lg__p_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 1.25)
+            ]
+        ]
+
+
+lg__p_6 : Css.Style
+lg__p_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 1.5)
+            ]
+        ]
+
+
+lg__p_8 : Css.Style
+lg__p_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 2)
+            ]
+        ]
+
+
+lg__p_10 : Css.Style
+lg__p_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 2.5)
+            ]
+        ]
+
+
+lg__p_12 : Css.Style
+lg__p_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 3)
+            ]
+        ]
+
+
+lg__p_16 : Css.Style
+lg__p_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 4)
+            ]
+        ]
+
+
+lg__p_20 : Css.Style
+lg__p_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 5)
+            ]
+        ]
+
+
+lg__p_24 : Css.Style
+lg__p_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 6)
+            ]
+        ]
+
+
+lg__p_32 : Css.Style
+lg__p_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 8)
+            ]
+        ]
+
+
+lg__p_40 : Css.Style
+lg__p_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 10)
+            ]
+        ]
+
+
+lg__p_48 : Css.Style
+lg__p_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 12)
+            ]
+        ]
+
+
+lg__p_56 : Css.Style
+lg__p_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 14)
+            ]
+        ]
+
+
+lg__p_64 : Css.Style
+lg__p_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.rem 16)
+            ]
+        ]
+
+
+lg__p_px : Css.Style
+lg__p_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.padding (Css.px 1)
+            ]
+        ]
+
+
 lg__py_0 : Css.Style
 lg__py_0 =
     Css.batch
@@ -12650,6 +15667,816 @@ lg__pl_px =
     Css.batch
         [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
             [ Css.paddingLeft (Css.px 1)
+            ]
+        ]
+
+
+lg__w_0 : Css.Style
+lg__w_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.px 0)
+            ]
+        ]
+
+
+lg__w_1 : Css.Style
+lg__w_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 0.25)
+            ]
+        ]
+
+
+lg__w_2 : Css.Style
+lg__w_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 0.5)
+            ]
+        ]
+
+
+lg__w_3 : Css.Style
+lg__w_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 0.75)
+            ]
+        ]
+
+
+lg__w_4 : Css.Style
+lg__w_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 1)
+            ]
+        ]
+
+
+lg__w_5 : Css.Style
+lg__w_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 1.25)
+            ]
+        ]
+
+
+lg__w_6 : Css.Style
+lg__w_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 1.5)
+            ]
+        ]
+
+
+lg__w_8 : Css.Style
+lg__w_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 2)
+            ]
+        ]
+
+
+lg__w_10 : Css.Style
+lg__w_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 2.5)
+            ]
+        ]
+
+
+lg__w_12 : Css.Style
+lg__w_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 3)
+            ]
+        ]
+
+
+lg__w_16 : Css.Style
+lg__w_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 4)
+            ]
+        ]
+
+
+lg__w_20 : Css.Style
+lg__w_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 5)
+            ]
+        ]
+
+
+lg__w_24 : Css.Style
+lg__w_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 6)
+            ]
+        ]
+
+
+lg__w_32 : Css.Style
+lg__w_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 8)
+            ]
+        ]
+
+
+lg__w_40 : Css.Style
+lg__w_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 10)
+            ]
+        ]
+
+
+lg__w_48 : Css.Style
+lg__w_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 12)
+            ]
+        ]
+
+
+lg__w_56 : Css.Style
+lg__w_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 14)
+            ]
+        ]
+
+
+lg__w_64 : Css.Style
+lg__w_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.rem 16)
+            ]
+        ]
+
+
+lg__w_auto : Css.Style
+lg__w_auto =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width Css.auto
+            ]
+        ]
+
+
+lg__w_px : Css.Style
+lg__w_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.px 1)
+            ]
+        ]
+
+
+lg__w_1over2 : Css.Style
+lg__w_1over2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+lg__w_1over3 : Css.Style
+lg__w_1over3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 33.333333)
+            ]
+        ]
+
+
+lg__w_2over3 : Css.Style
+lg__w_2over3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 66.666667)
+            ]
+        ]
+
+
+lg__w_1over4 : Css.Style
+lg__w_1over4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 25)
+            ]
+        ]
+
+
+lg__w_2over4 : Css.Style
+lg__w_2over4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+lg__w_3over4 : Css.Style
+lg__w_3over4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 75)
+            ]
+        ]
+
+
+lg__w_1over5 : Css.Style
+lg__w_1over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 20)
+            ]
+        ]
+
+
+lg__w_2over5 : Css.Style
+lg__w_2over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 40)
+            ]
+        ]
+
+
+lg__w_3over5 : Css.Style
+lg__w_3over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 60)
+            ]
+        ]
+
+
+lg__w_4over5 : Css.Style
+lg__w_4over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 80)
+            ]
+        ]
+
+
+lg__w_1over6 : Css.Style
+lg__w_1over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 16.666667)
+            ]
+        ]
+
+
+lg__w_2over6 : Css.Style
+lg__w_2over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 33.333333)
+            ]
+        ]
+
+
+lg__w_3over6 : Css.Style
+lg__w_3over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+lg__w_4over6 : Css.Style
+lg__w_4over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 66.666667)
+            ]
+        ]
+
+
+lg__w_5over6 : Css.Style
+lg__w_5over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 83.333333)
+            ]
+        ]
+
+
+lg__w_1over12 : Css.Style
+lg__w_1over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 8.333333)
+            ]
+        ]
+
+
+lg__w_2over12 : Css.Style
+lg__w_2over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 16.666667)
+            ]
+        ]
+
+
+lg__w_3over12 : Css.Style
+lg__w_3over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 25)
+            ]
+        ]
+
+
+lg__w_4over12 : Css.Style
+lg__w_4over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 33.333333)
+            ]
+        ]
+
+
+lg__w_5over12 : Css.Style
+lg__w_5over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 41.666667)
+            ]
+        ]
+
+
+lg__w_6over12 : Css.Style
+lg__w_6over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+lg__w_7over12 : Css.Style
+lg__w_7over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 58.333333)
+            ]
+        ]
+
+
+lg__w_8over12 : Css.Style
+lg__w_8over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 66.666667)
+            ]
+        ]
+
+
+lg__w_9over12 : Css.Style
+lg__w_9over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 75)
+            ]
+        ]
+
+
+lg__w_10over12 : Css.Style
+lg__w_10over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 83.333333)
+            ]
+        ]
+
+
+lg__w_11over12 : Css.Style
+lg__w_11over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 91.666667)
+            ]
+        ]
+
+
+lg__w_full : Css.Style
+lg__w_full =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.pct 100)
+            ]
+        ]
+
+
+lg__w_screen : Css.Style
+lg__w_screen =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1024px)\\" ]
+            [ Css.width (Css.vw 100)
+            ]
+        ]
+
+
+xl__h_0 : Css.Style
+xl__h_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.px 0)
+            ]
+        ]
+
+
+xl__h_1 : Css.Style
+xl__h_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 0.25)
+            ]
+        ]
+
+
+xl__h_2 : Css.Style
+xl__h_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 0.5)
+            ]
+        ]
+
+
+xl__h_3 : Css.Style
+xl__h_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 0.75)
+            ]
+        ]
+
+
+xl__h_4 : Css.Style
+xl__h_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 1)
+            ]
+        ]
+
+
+xl__h_5 : Css.Style
+xl__h_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 1.25)
+            ]
+        ]
+
+
+xl__h_6 : Css.Style
+xl__h_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 1.5)
+            ]
+        ]
+
+
+xl__h_8 : Css.Style
+xl__h_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 2)
+            ]
+        ]
+
+
+xl__h_10 : Css.Style
+xl__h_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 2.5)
+            ]
+        ]
+
+
+xl__h_12 : Css.Style
+xl__h_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 3)
+            ]
+        ]
+
+
+xl__h_16 : Css.Style
+xl__h_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 4)
+            ]
+        ]
+
+
+xl__h_20 : Css.Style
+xl__h_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 5)
+            ]
+        ]
+
+
+xl__h_24 : Css.Style
+xl__h_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 6)
+            ]
+        ]
+
+
+xl__h_32 : Css.Style
+xl__h_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 8)
+            ]
+        ]
+
+
+xl__h_40 : Css.Style
+xl__h_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 10)
+            ]
+        ]
+
+
+xl__h_48 : Css.Style
+xl__h_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 12)
+            ]
+        ]
+
+
+xl__h_56 : Css.Style
+xl__h_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 14)
+            ]
+        ]
+
+
+xl__h_64 : Css.Style
+xl__h_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.rem 16)
+            ]
+        ]
+
+
+xl__h_auto : Css.Style
+xl__h_auto =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height Css.auto
+            ]
+        ]
+
+
+xl__h_px : Css.Style
+xl__h_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.px 1)
+            ]
+        ]
+
+
+xl__h_full : Css.Style
+xl__h_full =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.pct 100)
+            ]
+        ]
+
+
+xl__h_screen : Css.Style
+xl__h_screen =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.height (Css.vh 100)
+            ]
+        ]
+
+
+xl__m_0 : Css.Style
+xl__m_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.px 0)
+            ]
+        ]
+
+
+xl__m_1 : Css.Style
+xl__m_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 0.25)
+            ]
+        ]
+
+
+xl__m_2 : Css.Style
+xl__m_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 0.5)
+            ]
+        ]
+
+
+xl__m_3 : Css.Style
+xl__m_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 0.75)
+            ]
+        ]
+
+
+xl__m_4 : Css.Style
+xl__m_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 1)
+            ]
+        ]
+
+
+xl__m_5 : Css.Style
+xl__m_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 1.25)
+            ]
+        ]
+
+
+xl__m_6 : Css.Style
+xl__m_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 1.5)
+            ]
+        ]
+
+
+xl__m_8 : Css.Style
+xl__m_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 2)
+            ]
+        ]
+
+
+xl__m_10 : Css.Style
+xl__m_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 2.5)
+            ]
+        ]
+
+
+xl__m_12 : Css.Style
+xl__m_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 3)
+            ]
+        ]
+
+
+xl__m_16 : Css.Style
+xl__m_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 4)
+            ]
+        ]
+
+
+xl__m_20 : Css.Style
+xl__m_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 5)
+            ]
+        ]
+
+
+xl__m_24 : Css.Style
+xl__m_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 6)
+            ]
+        ]
+
+
+xl__m_32 : Css.Style
+xl__m_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 8)
+            ]
+        ]
+
+
+xl__m_40 : Css.Style
+xl__m_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 10)
+            ]
+        ]
+
+
+xl__m_48 : Css.Style
+xl__m_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 12)
+            ]
+        ]
+
+
+xl__m_56 : Css.Style
+xl__m_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 14)
+            ]
+        ]
+
+
+xl__m_64 : Css.Style
+xl__m_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.rem 16)
+            ]
+        ]
+
+
+xl__m_auto : Css.Style
+xl__m_auto =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin Css.auto
+            ]
+        ]
+
+
+xl__m_px : Css.Style
+xl__m_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.margin (Css.px 1)
             ]
         ]
 
@@ -13774,6 +17601,177 @@ xl__ml_px =
         ]
 
 
+xl__p_0 : Css.Style
+xl__p_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.px 0)
+            ]
+        ]
+
+
+xl__p_1 : Css.Style
+xl__p_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 0.25)
+            ]
+        ]
+
+
+xl__p_2 : Css.Style
+xl__p_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 0.5)
+            ]
+        ]
+
+
+xl__p_3 : Css.Style
+xl__p_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 0.75)
+            ]
+        ]
+
+
+xl__p_4 : Css.Style
+xl__p_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 1)
+            ]
+        ]
+
+
+xl__p_5 : Css.Style
+xl__p_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 1.25)
+            ]
+        ]
+
+
+xl__p_6 : Css.Style
+xl__p_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 1.5)
+            ]
+        ]
+
+
+xl__p_8 : Css.Style
+xl__p_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 2)
+            ]
+        ]
+
+
+xl__p_10 : Css.Style
+xl__p_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 2.5)
+            ]
+        ]
+
+
+xl__p_12 : Css.Style
+xl__p_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 3)
+            ]
+        ]
+
+
+xl__p_16 : Css.Style
+xl__p_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 4)
+            ]
+        ]
+
+
+xl__p_20 : Css.Style
+xl__p_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 5)
+            ]
+        ]
+
+
+xl__p_24 : Css.Style
+xl__p_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 6)
+            ]
+        ]
+
+
+xl__p_32 : Css.Style
+xl__p_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 8)
+            ]
+        ]
+
+
+xl__p_40 : Css.Style
+xl__p_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 10)
+            ]
+        ]
+
+
+xl__p_48 : Css.Style
+xl__p_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 12)
+            ]
+        ]
+
+
+xl__p_56 : Css.Style
+xl__p_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 14)
+            ]
+        ]
+
+
+xl__p_64 : Css.Style
+xl__p_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.rem 16)
+            ]
+        ]
+
+
+xl__p_px : Css.Style
+xl__p_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.padding (Css.px 1)
+            ]
+        ]
+
+
 xl__py_0 : Css.Style
 xl__py_0 =
     Css.batch
@@ -14838,6 +18836,438 @@ xl__pl_px =
         ]
 
 
+xl__w_0 : Css.Style
+xl__w_0 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.px 0)
+            ]
+        ]
+
+
+xl__w_1 : Css.Style
+xl__w_1 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 0.25)
+            ]
+        ]
+
+
+xl__w_2 : Css.Style
+xl__w_2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 0.5)
+            ]
+        ]
+
+
+xl__w_3 : Css.Style
+xl__w_3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 0.75)
+            ]
+        ]
+
+
+xl__w_4 : Css.Style
+xl__w_4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 1)
+            ]
+        ]
+
+
+xl__w_5 : Css.Style
+xl__w_5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 1.25)
+            ]
+        ]
+
+
+xl__w_6 : Css.Style
+xl__w_6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 1.5)
+            ]
+        ]
+
+
+xl__w_8 : Css.Style
+xl__w_8 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 2)
+            ]
+        ]
+
+
+xl__w_10 : Css.Style
+xl__w_10 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 2.5)
+            ]
+        ]
+
+
+xl__w_12 : Css.Style
+xl__w_12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 3)
+            ]
+        ]
+
+
+xl__w_16 : Css.Style
+xl__w_16 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 4)
+            ]
+        ]
+
+
+xl__w_20 : Css.Style
+xl__w_20 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 5)
+            ]
+        ]
+
+
+xl__w_24 : Css.Style
+xl__w_24 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 6)
+            ]
+        ]
+
+
+xl__w_32 : Css.Style
+xl__w_32 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 8)
+            ]
+        ]
+
+
+xl__w_40 : Css.Style
+xl__w_40 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 10)
+            ]
+        ]
+
+
+xl__w_48 : Css.Style
+xl__w_48 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 12)
+            ]
+        ]
+
+
+xl__w_56 : Css.Style
+xl__w_56 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 14)
+            ]
+        ]
+
+
+xl__w_64 : Css.Style
+xl__w_64 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.rem 16)
+            ]
+        ]
+
+
+xl__w_auto : Css.Style
+xl__w_auto =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width Css.auto
+            ]
+        ]
+
+
+xl__w_px : Css.Style
+xl__w_px =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.px 1)
+            ]
+        ]
+
+
+xl__w_1over2 : Css.Style
+xl__w_1over2 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+xl__w_1over3 : Css.Style
+xl__w_1over3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 33.333333)
+            ]
+        ]
+
+
+xl__w_2over3 : Css.Style
+xl__w_2over3 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 66.666667)
+            ]
+        ]
+
+
+xl__w_1over4 : Css.Style
+xl__w_1over4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 25)
+            ]
+        ]
+
+
+xl__w_2over4 : Css.Style
+xl__w_2over4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+xl__w_3over4 : Css.Style
+xl__w_3over4 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 75)
+            ]
+        ]
+
+
+xl__w_1over5 : Css.Style
+xl__w_1over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 20)
+            ]
+        ]
+
+
+xl__w_2over5 : Css.Style
+xl__w_2over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 40)
+            ]
+        ]
+
+
+xl__w_3over5 : Css.Style
+xl__w_3over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 60)
+            ]
+        ]
+
+
+xl__w_4over5 : Css.Style
+xl__w_4over5 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 80)
+            ]
+        ]
+
+
+xl__w_1over6 : Css.Style
+xl__w_1over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 16.666667)
+            ]
+        ]
+
+
+xl__w_2over6 : Css.Style
+xl__w_2over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 33.333333)
+            ]
+        ]
+
+
+xl__w_3over6 : Css.Style
+xl__w_3over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+xl__w_4over6 : Css.Style
+xl__w_4over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 66.666667)
+            ]
+        ]
+
+
+xl__w_5over6 : Css.Style
+xl__w_5over6 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 83.333333)
+            ]
+        ]
+
+
+xl__w_1over12 : Css.Style
+xl__w_1over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 8.333333)
+            ]
+        ]
+
+
+xl__w_2over12 : Css.Style
+xl__w_2over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 16.666667)
+            ]
+        ]
+
+
+xl__w_3over12 : Css.Style
+xl__w_3over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 25)
+            ]
+        ]
+
+
+xl__w_4over12 : Css.Style
+xl__w_4over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 33.333333)
+            ]
+        ]
+
+
+xl__w_5over12 : Css.Style
+xl__w_5over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 41.666667)
+            ]
+        ]
+
+
+xl__w_6over12 : Css.Style
+xl__w_6over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 50)
+            ]
+        ]
+
+
+xl__w_7over12 : Css.Style
+xl__w_7over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 58.333333)
+            ]
+        ]
+
+
+xl__w_8over12 : Css.Style
+xl__w_8over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 66.666667)
+            ]
+        ]
+
+
+xl__w_9over12 : Css.Style
+xl__w_9over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 75)
+            ]
+        ]
+
+
+xl__w_10over12 : Css.Style
+xl__w_10over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 83.333333)
+            ]
+        ]
+
+
+xl__w_11over12 : Css.Style
+xl__w_11over12 =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 91.666667)
+            ]
+        ]
+
+
+xl__w_full : Css.Style
+xl__w_full =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.pct 100)
+            ]
+        ]
+
+
+xl__w_screen : Css.Style
+xl__w_screen =
+    Css.batch
+        [ Css.Media.withMediaQuery [ \\"(min-width: 1280px)\\" ]
+            [ Css.width (Css.vw 100)
+            ]
+        ]
+
+
 rounded_none : Css.Style
 rounded_none =
     Css.batch
@@ -15237,6 +19667,496 @@ rounded_bl_full : Css.Style
 rounded_bl_full =
     Css.batch
         [ Css.borderBottomLeftRadius (Css.px 9999)
+        ]
+
+
+h_0 : Css.Style
+h_0 =
+    Css.batch
+        [ Css.height (Css.px 0)
+        ]
+
+
+h_1 : Css.Style
+h_1 =
+    Css.batch
+        [ Css.height (Css.rem 0.25)
+        ]
+
+
+h_2 : Css.Style
+h_2 =
+    Css.batch
+        [ Css.height (Css.rem 0.5)
+        ]
+
+
+h_3 : Css.Style
+h_3 =
+    Css.batch
+        [ Css.height (Css.rem 0.75)
+        ]
+
+
+h_4 : Css.Style
+h_4 =
+    Css.batch
+        [ Css.height (Css.rem 1)
+        ]
+
+
+h_5 : Css.Style
+h_5 =
+    Css.batch
+        [ Css.height (Css.rem 1.25)
+        ]
+
+
+h_6 : Css.Style
+h_6 =
+    Css.batch
+        [ Css.height (Css.rem 1.5)
+        ]
+
+
+h_8 : Css.Style
+h_8 =
+    Css.batch
+        [ Css.height (Css.rem 2)
+        ]
+
+
+h_10 : Css.Style
+h_10 =
+    Css.batch
+        [ Css.height (Css.rem 2.5)
+        ]
+
+
+h_12 : Css.Style
+h_12 =
+    Css.batch
+        [ Css.height (Css.rem 3)
+        ]
+
+
+h_16 : Css.Style
+h_16 =
+    Css.batch
+        [ Css.height (Css.rem 4)
+        ]
+
+
+h_20 : Css.Style
+h_20 =
+    Css.batch
+        [ Css.height (Css.rem 5)
+        ]
+
+
+h_24 : Css.Style
+h_24 =
+    Css.batch
+        [ Css.height (Css.rem 6)
+        ]
+
+
+h_32 : Css.Style
+h_32 =
+    Css.batch
+        [ Css.height (Css.rem 8)
+        ]
+
+
+h_40 : Css.Style
+h_40 =
+    Css.batch
+        [ Css.height (Css.rem 10)
+        ]
+
+
+h_48 : Css.Style
+h_48 =
+    Css.batch
+        [ Css.height (Css.rem 12)
+        ]
+
+
+h_56 : Css.Style
+h_56 =
+    Css.batch
+        [ Css.height (Css.rem 14)
+        ]
+
+
+h_64 : Css.Style
+h_64 =
+    Css.batch
+        [ Css.height (Css.rem 16)
+        ]
+
+
+h_auto : Css.Style
+h_auto =
+    Css.batch
+        [ Css.height Css.auto
+        ]
+
+
+h_px : Css.Style
+h_px =
+    Css.batch
+        [ Css.height (Css.px 1)
+        ]
+
+
+h_full : Css.Style
+h_full =
+    Css.batch
+        [ Css.height (Css.pct 100)
+        ]
+
+
+h_screen : Css.Style
+h_screen =
+    Css.batch
+        [ Css.height (Css.vh 100)
+        ]
+
+
+w_0 : Css.Style
+w_0 =
+    Css.batch
+        [ Css.width (Css.px 0)
+        ]
+
+
+w_1 : Css.Style
+w_1 =
+    Css.batch
+        [ Css.width (Css.rem 0.25)
+        ]
+
+
+w_2 : Css.Style
+w_2 =
+    Css.batch
+        [ Css.width (Css.rem 0.5)
+        ]
+
+
+w_3 : Css.Style
+w_3 =
+    Css.batch
+        [ Css.width (Css.rem 0.75)
+        ]
+
+
+w_4 : Css.Style
+w_4 =
+    Css.batch
+        [ Css.width (Css.rem 1)
+        ]
+
+
+w_5 : Css.Style
+w_5 =
+    Css.batch
+        [ Css.width (Css.rem 1.25)
+        ]
+
+
+w_6 : Css.Style
+w_6 =
+    Css.batch
+        [ Css.width (Css.rem 1.5)
+        ]
+
+
+w_8 : Css.Style
+w_8 =
+    Css.batch
+        [ Css.width (Css.rem 2)
+        ]
+
+
+w_10 : Css.Style
+w_10 =
+    Css.batch
+        [ Css.width (Css.rem 2.5)
+        ]
+
+
+w_12 : Css.Style
+w_12 =
+    Css.batch
+        [ Css.width (Css.rem 3)
+        ]
+
+
+w_16 : Css.Style
+w_16 =
+    Css.batch
+        [ Css.width (Css.rem 4)
+        ]
+
+
+w_20 : Css.Style
+w_20 =
+    Css.batch
+        [ Css.width (Css.rem 5)
+        ]
+
+
+w_24 : Css.Style
+w_24 =
+    Css.batch
+        [ Css.width (Css.rem 6)
+        ]
+
+
+w_32 : Css.Style
+w_32 =
+    Css.batch
+        [ Css.width (Css.rem 8)
+        ]
+
+
+w_40 : Css.Style
+w_40 =
+    Css.batch
+        [ Css.width (Css.rem 10)
+        ]
+
+
+w_48 : Css.Style
+w_48 =
+    Css.batch
+        [ Css.width (Css.rem 12)
+        ]
+
+
+w_56 : Css.Style
+w_56 =
+    Css.batch
+        [ Css.width (Css.rem 14)
+        ]
+
+
+w_64 : Css.Style
+w_64 =
+    Css.batch
+        [ Css.width (Css.rem 16)
+        ]
+
+
+w_auto : Css.Style
+w_auto =
+    Css.batch
+        [ Css.width Css.auto
+        ]
+
+
+w_px : Css.Style
+w_px =
+    Css.batch
+        [ Css.width (Css.px 1)
+        ]
+
+
+w_1over2 : Css.Style
+w_1over2 =
+    Css.batch
+        [ Css.width (Css.pct 50)
+        ]
+
+
+w_1over3 : Css.Style
+w_1over3 =
+    Css.batch
+        [ Css.width (Css.pct 33.333333)
+        ]
+
+
+w_2over3 : Css.Style
+w_2over3 =
+    Css.batch
+        [ Css.width (Css.pct 66.666667)
+        ]
+
+
+w_1over4 : Css.Style
+w_1over4 =
+    Css.batch
+        [ Css.width (Css.pct 25)
+        ]
+
+
+w_2over4 : Css.Style
+w_2over4 =
+    Css.batch
+        [ Css.width (Css.pct 50)
+        ]
+
+
+w_3over4 : Css.Style
+w_3over4 =
+    Css.batch
+        [ Css.width (Css.pct 75)
+        ]
+
+
+w_1over5 : Css.Style
+w_1over5 =
+    Css.batch
+        [ Css.width (Css.pct 20)
+        ]
+
+
+w_2over5 : Css.Style
+w_2over5 =
+    Css.batch
+        [ Css.width (Css.pct 40)
+        ]
+
+
+w_3over5 : Css.Style
+w_3over5 =
+    Css.batch
+        [ Css.width (Css.pct 60)
+        ]
+
+
+w_4over5 : Css.Style
+w_4over5 =
+    Css.batch
+        [ Css.width (Css.pct 80)
+        ]
+
+
+w_1over6 : Css.Style
+w_1over6 =
+    Css.batch
+        [ Css.width (Css.pct 16.666667)
+        ]
+
+
+w_2over6 : Css.Style
+w_2over6 =
+    Css.batch
+        [ Css.width (Css.pct 33.333333)
+        ]
+
+
+w_3over6 : Css.Style
+w_3over6 =
+    Css.batch
+        [ Css.width (Css.pct 50)
+        ]
+
+
+w_4over6 : Css.Style
+w_4over6 =
+    Css.batch
+        [ Css.width (Css.pct 66.666667)
+        ]
+
+
+w_5over6 : Css.Style
+w_5over6 =
+    Css.batch
+        [ Css.width (Css.pct 83.333333)
+        ]
+
+
+w_1over12 : Css.Style
+w_1over12 =
+    Css.batch
+        [ Css.width (Css.pct 8.333333)
+        ]
+
+
+w_2over12 : Css.Style
+w_2over12 =
+    Css.batch
+        [ Css.width (Css.pct 16.666667)
+        ]
+
+
+w_3over12 : Css.Style
+w_3over12 =
+    Css.batch
+        [ Css.width (Css.pct 25)
+        ]
+
+
+w_4over12 : Css.Style
+w_4over12 =
+    Css.batch
+        [ Css.width (Css.pct 33.333333)
+        ]
+
+
+w_5over12 : Css.Style
+w_5over12 =
+    Css.batch
+        [ Css.width (Css.pct 41.666667)
+        ]
+
+
+w_6over12 : Css.Style
+w_6over12 =
+    Css.batch
+        [ Css.width (Css.pct 50)
+        ]
+
+
+w_7over12 : Css.Style
+w_7over12 =
+    Css.batch
+        [ Css.width (Css.pct 58.333333)
+        ]
+
+
+w_8over12 : Css.Style
+w_8over12 =
+    Css.batch
+        [ Css.width (Css.pct 66.666667)
+        ]
+
+
+w_9over12 : Css.Style
+w_9over12 =
+    Css.batch
+        [ Css.width (Css.pct 75)
+        ]
+
+
+w_10over12 : Css.Style
+w_10over12 =
+    Css.batch
+        [ Css.width (Css.pct 83.333333)
+        ]
+
+
+w_11over12 : Css.Style
+w_11over12 =
+    Css.batch
+        [ Css.width (Css.pct 91.666667)
+        ]
+
+
+w_full : Css.Style
+w_full =
+    Css.batch
+        [ Css.width (Css.pct 100)
+        ]
+
+
+w_screen : Css.Style
+w_screen =
+    Css.batch
+        [ Css.width (Css.vw 100)
         ]
 "
 `;

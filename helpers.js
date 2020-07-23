@@ -117,6 +117,9 @@ function convertDeclarationValue(declarationProp, declarationValue) {
   // 1rem, 1px
   let numberPlusUnit = declarationValue.match(/([\d\.]+)([a-z]*)/);
 
+  // percent
+  let percentValue = declarationValue.match(/([-]?[0-9]*\.?[0-9]+)\%/);
+
   // font-weight: 100
   let intValue = declarationValue.match(/([-]?[0-9]+)$/);
 
@@ -139,6 +142,8 @@ function convertDeclarationValue(declarationProp, declarationValue) {
   } else if (!numberPlusUnit) {
     // if a single word value like 'auto' then just use that directly
     return `Css.${camelize(declarationValue)}`;
+  } else if (percentValue) {
+    return `(Css.pct ${percentValue[1]})`;
   } else {
     numericalVal = numberPlusUnit[1];
     unit = numberPlusUnit[2];
@@ -179,6 +184,8 @@ function isCamelizable(prop) {
     "border-top-left-radius",
     "border-top-right-radius",
     "border-radius",
+    "height",
+    "width",
   ];
 
   return camelizable.indexOf(prop) > -1;
