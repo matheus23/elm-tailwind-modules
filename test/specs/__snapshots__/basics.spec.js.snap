@@ -117,6 +117,30 @@ exports[`snapshot test 1`] = `
     , bg_yellow_700
     , bg_yellow_800
     , bg_yellow_900
+    , block
+    , content_around
+    , content_between
+    , content_center
+    , content_end
+    , content_start
+    , flex
+    , flex_1
+    , flex_auto
+    , flex_col
+    , flex_col_reverse
+    , flex_grow
+    , flex_grow_0
+    , flex_initial
+    , flex_no_wrap
+    , flex_none
+    , flex_row
+    , flex_row_reverse
+    , flex_shrink
+    , flex_shrink_0
+    , flex_wrap
+    , flex_wrap_reverse
+    , flow_root
+    , grid
     , h_0
     , h_1
     , h_10
@@ -139,6 +163,7 @@ exports[`snapshot test 1`] = `
     , h_full
     , h_px
     , h_screen
+    , hidden
     , hover__bg_black
     , hover__bg_blue_100
     , hover__bg_blue_200
@@ -448,6 +473,20 @@ exports[`snapshot test 1`] = `
     , hover__text_yellow_800
     , hover__text_yellow_900
     , hover__underline
+    , inline
+    , inline_block
+    , inline_grid
+    , items_baseline
+    , items_center
+    , items_end
+    , items_start
+    , items_stretch
+    , justify_around
+    , justify_between
+    , justify_center
+    , justify_end
+    , justify_evenly
+    , justify_start
     , lg__h_0
     , lg__h_1
     , lg__h_10
@@ -1194,6 +1233,21 @@ exports[`snapshot test 1`] = `
     , my_8
     , my_auto
     , my_px
+    , order_1
+    , order_10
+    , order_11
+    , order_12
+    , order_2
+    , order_3
+    , order_4
+    , order_5
+    , order_6
+    , order_7
+    , order_8
+    , order_9
+    , order_first
+    , order_last
+    , order_none
     , p_0
     , p_1
     , p_10
@@ -1305,6 +1359,11 @@ exports[`snapshot test 1`] = `
     , rounded_tr_md
     , rounded_tr_none
     , rounded_tr_sm
+    , self_auto
+    , self_center
+    , self_end
+    , self_start
+    , self_stretch
     , shadow
     , shadow_2xl
     , shadow_inner
@@ -1658,6 +1717,17 @@ exports[`snapshot test 1`] = `
     , sm__w_full
     , sm__w_px
     , sm__w_screen
+    , table
+    , table_auto
+    , table_caption
+    , table_cell
+    , table_column
+    , table_column_group
+    , table_fixed
+    , table_footer_group
+    , table_header_group
+    , table_row
+    , table_row_group
     , text_2xl
     , text_3xl
     , text_4xl
@@ -21021,6 +21091,496 @@ text_pink_900 : Css.Style
 text_pink_900 =
     Css.batch
         [ Css.color (Css.hex \\"#702459\\")
+        ]
+
+
+block : Css.Style
+block =
+    Css.batch
+        [ Css.display Css.block
+        ]
+
+
+inline_block : Css.Style
+inline_block =
+    Css.batch
+        [ Css.display Css.inlineBlock
+        ]
+
+
+inline : Css.Style
+inline =
+    Css.batch
+        [ Css.display Css.inline
+        ]
+
+
+table : Css.Style
+table =
+    Css.batch
+        [ Css.display Css.table
+        ]
+
+
+table_caption : Css.Style
+table_caption =
+    Css.batch
+        [ Css.display Css.tableCaption
+        ]
+
+
+table_cell : Css.Style
+table_cell =
+    Css.batch
+        [ Css.display Css.tableCell
+        ]
+
+
+table_column : Css.Style
+table_column =
+    Css.batch
+        [ Css.display Css.tableColumn
+        ]
+
+
+table_column_group : Css.Style
+table_column_group =
+    Css.batch
+        [ Css.display Css.tableColumnGroup
+        ]
+
+
+table_footer_group : Css.Style
+table_footer_group =
+    Css.batch
+        [ Css.display Css.tableFooterGroup
+        ]
+
+
+table_header_group : Css.Style
+table_header_group =
+    Css.batch
+        [ Css.display Css.tableHeaderGroup
+        ]
+
+
+table_row_group : Css.Style
+table_row_group =
+    Css.batch
+        [ Css.display Css.tableRowGroup
+        ]
+
+
+table_row : Css.Style
+table_row =
+    Css.batch
+        [ Css.display Css.tableRow
+        ]
+
+
+flow_root : Css.Style
+flow_root =
+    Css.batch
+        [ Css.property \\"display\\" \\"flow-root\\"
+        ]
+
+
+grid : Css.Style
+grid =
+    Css.batch
+        [ Css.property \\"display\\" \\"grid\\"
+        ]
+
+
+inline_grid : Css.Style
+inline_grid =
+    Css.batch
+        [ Css.property \\"display\\" \\"inline-grid\\"
+        ]
+
+
+hidden : Css.Style
+hidden =
+    Css.batch
+        [ Css.display Css.none
+        ]
+
+
+table_auto : Css.Style
+table_auto =
+    Css.batch
+        [ Css.tableLayout Css.auto
+        ]
+
+
+table_fixed : Css.Style
+table_fixed =
+    Css.batch
+        [ Css.tableLayout Css.fixed
+        ]
+
+
+flex : Css.Style
+flex =
+    Css.batch
+        [ Css.displayFlex
+        ]
+
+
+flex_row : Css.Style
+flex_row =
+    Css.batch
+        [ Css.flexDirection Css.row
+        ]
+
+
+flex_row_reverse : Css.Style
+flex_row_reverse =
+    Css.batch
+        [ Css.flexDirection Css.rowReverse
+        ]
+
+
+flex_col : Css.Style
+flex_col =
+    Css.batch
+        [ Css.flexDirection Css.column
+        ]
+
+
+flex_col_reverse : Css.Style
+flex_col_reverse =
+    Css.batch
+        [ Css.flexDirection Css.columnReverse
+        ]
+
+
+flex_wrap : Css.Style
+flex_wrap =
+    Css.batch
+        [ Css.flexWrap Css.wrap
+        ]
+
+
+flex_wrap_reverse : Css.Style
+flex_wrap_reverse =
+    Css.batch
+        [ Css.flexWrap Css.wrapReverse
+        ]
+
+
+flex_no_wrap : Css.Style
+flex_no_wrap =
+    Css.batch
+        [ Css.flexWrap Css.noWrap
+        ]
+
+
+items_start : Css.Style
+items_start =
+    Css.batch
+        [ Css.alignItems Css.flexStart
+        ]
+
+
+items_end : Css.Style
+items_end =
+    Css.batch
+        [ Css.alignItems Css.flexEnd
+        ]
+
+
+items_center : Css.Style
+items_center =
+    Css.batch
+        [ Css.alignItems Css.center
+        ]
+
+
+items_baseline : Css.Style
+items_baseline =
+    Css.batch
+        [ Css.alignItems Css.baseline
+        ]
+
+
+items_stretch : Css.Style
+items_stretch =
+    Css.batch
+        [ Css.alignItems Css.stretch
+        ]
+
+
+self_auto : Css.Style
+self_auto =
+    Css.batch
+        [ Css.property \\"align-self\\" \\"auto\\"
+        ]
+
+
+self_start : Css.Style
+self_start =
+    Css.batch
+        [ Css.alignSelf Css.flexStart
+        ]
+
+
+self_end : Css.Style
+self_end =
+    Css.batch
+        [ Css.alignSelf Css.flexEnd
+        ]
+
+
+self_center : Css.Style
+self_center =
+    Css.batch
+        [ Css.alignSelf Css.center
+        ]
+
+
+self_stretch : Css.Style
+self_stretch =
+    Css.batch
+        [ Css.alignSelf Css.stretch
+        ]
+
+
+justify_start : Css.Style
+justify_start =
+    Css.batch
+        [ Css.justifyContent Css.flexStart
+        ]
+
+
+justify_end : Css.Style
+justify_end =
+    Css.batch
+        [ Css.justifyContent Css.flexEnd
+        ]
+
+
+justify_center : Css.Style
+justify_center =
+    Css.batch
+        [ Css.justifyContent Css.center
+        ]
+
+
+justify_between : Css.Style
+justify_between =
+    Css.batch
+        [ Css.justifyContent Css.spaceBetween
+        ]
+
+
+justify_around : Css.Style
+justify_around =
+    Css.batch
+        [ Css.justifyContent Css.spaceAround
+        ]
+
+
+justify_evenly : Css.Style
+justify_evenly =
+    Css.batch
+        [ Css.property \\"justify-content\\" \\"space-evenly\\"
+        ]
+
+
+content_center : Css.Style
+content_center =
+    Css.batch
+        [ Css.property \\"align-content\\" \\"center\\"
+        ]
+
+
+content_start : Css.Style
+content_start =
+    Css.batch
+        [ Css.property \\"align-content\\" \\"flex-start\\"
+        ]
+
+
+content_end : Css.Style
+content_end =
+    Css.batch
+        [ Css.property \\"align-content\\" \\"flex-end\\"
+        ]
+
+
+content_between : Css.Style
+content_between =
+    Css.batch
+        [ Css.property \\"align-content\\" \\"space-between\\"
+        ]
+
+
+content_around : Css.Style
+content_around =
+    Css.batch
+        [ Css.property \\"align-content\\" \\"space-around\\"
+        ]
+
+
+flex_1 : Css.Style
+flex_1 =
+    Css.batch
+        [ Css.property \\"flex\\" \\"1 1 0%\\"
+        ]
+
+
+flex_auto : Css.Style
+flex_auto =
+    Css.batch
+        [ Css.property \\"flex\\" \\"1 1 auto\\"
+        ]
+
+
+flex_initial : Css.Style
+flex_initial =
+    Css.batch
+        [ Css.property \\"flex\\" \\"0 1 auto\\"
+        ]
+
+
+flex_none : Css.Style
+flex_none =
+    Css.batch
+        [ Css.property \\"flex\\" \\"none\\"
+        ]
+
+
+flex_grow_0 : Css.Style
+flex_grow_0 =
+    Css.batch
+        [ Css.flexGrow (Css.int 0)
+        ]
+
+
+flex_grow : Css.Style
+flex_grow =
+    Css.batch
+        [ Css.flexGrow (Css.int 1)
+        ]
+
+
+flex_shrink_0 : Css.Style
+flex_shrink_0 =
+    Css.batch
+        [ Css.flexShrink (Css.int 0)
+        ]
+
+
+flex_shrink : Css.Style
+flex_shrink =
+    Css.batch
+        [ Css.flexShrink (Css.int 1)
+        ]
+
+
+order_1 : Css.Style
+order_1 =
+    Css.batch
+        [ Css.order (Css.int 1)
+        ]
+
+
+order_2 : Css.Style
+order_2 =
+    Css.batch
+        [ Css.order (Css.int 2)
+        ]
+
+
+order_3 : Css.Style
+order_3 =
+    Css.batch
+        [ Css.order (Css.int 3)
+        ]
+
+
+order_4 : Css.Style
+order_4 =
+    Css.batch
+        [ Css.order (Css.int 4)
+        ]
+
+
+order_5 : Css.Style
+order_5 =
+    Css.batch
+        [ Css.order (Css.int 5)
+        ]
+
+
+order_6 : Css.Style
+order_6 =
+    Css.batch
+        [ Css.order (Css.int 6)
+        ]
+
+
+order_7 : Css.Style
+order_7 =
+    Css.batch
+        [ Css.order (Css.int 7)
+        ]
+
+
+order_8 : Css.Style
+order_8 =
+    Css.batch
+        [ Css.order (Css.int 8)
+        ]
+
+
+order_9 : Css.Style
+order_9 =
+    Css.batch
+        [ Css.order (Css.int 9)
+        ]
+
+
+order_10 : Css.Style
+order_10 =
+    Css.batch
+        [ Css.order (Css.int 10)
+        ]
+
+
+order_11 : Css.Style
+order_11 =
+    Css.batch
+        [ Css.order (Css.int 11)
+        ]
+
+
+order_12 : Css.Style
+order_12 =
+    Css.batch
+        [ Css.order (Css.int 12)
+        ]
+
+
+order_first : Css.Style
+order_first =
+    Css.batch
+        [ Css.order (Css.int -9999)
+        ]
+
+
+order_last : Css.Style
+order_last =
+    Css.batch
+        [ Css.order (Css.int 9999)
+        ]
+
+
+order_none : Css.Style
+order_none =
+    Css.batch
+        [ Css.order (Css.int 0)
         ]
 "
 `;

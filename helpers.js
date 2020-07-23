@@ -1,7 +1,17 @@
 // code gen stuff
 
-// list to punt on and just go right to Css.property string. Try to keep this list small
-const puntList = ["box-shadow", "background-position"];
+// this is a map of declarations and values that either aren't supported by elm-css,
+// or there is not a super straight-forward conversion, or I'm too lazy. Keep this list as small as possible
+const notSupported = {
+  display: ["flow-root", "inline-grid", "grid"],
+  "box-shadow": "*", // the values in Tailwind don't easily map to the mult-param version in elm
+  "background-position": "*",
+  clip: "*", // rect looks more complicated at the moment than I want to deal with
+  flex: "*", //the order of flex3 doesn't match directly. Will need better parsing
+  "align-content": "*", // couldn't see an align-content. Punting
+  "align-self": ["auto"], // not supported https://package.elm-lang.org/packages/rtfeldman/elm-css/latest/Css#alignSelf
+  "justify-content": ["space-evenly"],
+};
 
 function elmBodyCss(elmModuleName, classes) {
   return (
@@ -84,27 +94,37 @@ function pseudoSelectorContainer(pseudoSelector, declarationString) {
 function convertDeclaration(declaration) {
   let elmCssFunctionName;
   let elmCssFunctionUnit;
-  console.log("convertDeclaration -> declaration", declaration);
+  // console.log("convertDeclaration -> declaration", declaration);
   const isCustomProperty = declaration.prop.startsWith("--");
 
-  const valueWords = declaration.value.split(" ");
+  const valueSeparateUnits = declaration.value.split(" ");
 
   // filtering these out in index.js for now, but the start of support
   if (isCustomProperty) {
     return `Css.property "${declaration.prop}" "${declaration.value}"`;
-  } else if (puntList.includes(declaration.prop)) {
+  } else if (
+    notSupported[declaration.prop] &&
+    (notSupported[declaration.prop] === "*" ||
+      notSupported[declaration.prop].includes(declaration.value))
+  ) {
+    // if one or all of the declarations are not supported, drop back to Css.property
     return `Css.property "${declaration.prop}" "${declaration.value}"`;
   } else {
     if (isCamelizable(declaration.prop)) {
       elmCssFunctionName = camelize(declaration.prop);
     }
 
+    // display: flex so far is the only one that needs to do this. Any more and we will extract
+    if (declaration.prop === "display" && declaration.value === "flex") {
+      return "Css.displayFlex";
+    }
+
     // if a declaration value had multi word, we need to convert it to a
     // elm function with like backgroundPosition2
     elmCssFunctionName +=
-      valueWords.length > 1 ? valueWords.length.toString() : "";
+      valueSeparateUnits.length > 1 ? valueSeparateUnits.length.toString() : "";
 
-    elmCssFunctionUnit = valueWords
+    elmCssFunctionUnit = valueSeparateUnits
       .map((w) => convertDeclarationValue(declaration.prop, w))
       .join(" ");
 
@@ -132,7 +152,12 @@ function convertDeclarationValue(declarationProp, declarationValue) {
   // careful mucking with the order. There is fall through logic like 0 is an int, but we need it as a px
   if (hexValue) {
     return `(Css.hex "${declarationValue}")`;
-  } else if (declarationValue === "0" && declarationProp !== "opacity") {
+  } else if (
+    declarationValue === "0" &&
+    !["opacity", "flex-shrink", "flex-grow", "flex", "order"].includes(
+      declarationProp
+    )
+  ) {
     // plain 0 needs a unit in Elm, so set it to px
     return `(Css.px 0)`;
   } else if (numValue) {
@@ -154,7 +179,11 @@ function convertDeclarationValue(declarationProp, declarationValue) {
 // parse, clean up stuff
 
 function camelize(s) {
-  return s.replace(/-./g, (x) => x.toUpperCase()[1]);
+  // a value that has a direct replacement in elm-css. eg: flex-wrap: nowrap needs noWrap
+  const overrideList = { nowrap: "noWrap" };
+  let camelized = s.replace(/-./g, (x) => x.toUpperCase()[1]);
+
+  return overrideList[s] || camelized;
 }
 
 function isCamelizable(prop) {
@@ -188,6 +217,23 @@ function isCamelizable(prop) {
     "width",
     "font-size",
     "text-align",
+    "display",
+    "max-width",
+    "overflow",
+    "border-width",
+    "position",
+    "table-layout",
+    "table-fixed",
+    "flex",
+    "flex-direction",
+    "flex-wrap",
+    "flex-grow",
+    "flex-shrink",
+    "align-items",
+    "align-content",
+    "align-self",
+    "justify-content",
+    "order",
   ];
 
   return camelizable.indexOf(prop) > -1;

@@ -16,12 +16,14 @@ let supportedSelectors = {
   roundedSelectors: /^\.rounded.*$/,
   widthAndHeightSelectors: /^\.(w|h)-.*$/,
   textSelectors: /^\.text-.*$/,
-  // screenReaderSelectors : /^\.sr-.*$/,
+  displaySelectors: /^\.(hidden|block|flow\-root|inline\-block|inline$|table|grid$|inline\-grid$).*$/, //
+  flexSelectors: /^\.(flex|items\-|content\-|self\-|justify\-|order\-).*$/,
+
+  // screenReaderSelectors: /^\.sr-.*$/,
 };
 
 //TODO
 
-let displayProps;
 let focusVariantSelectors;
 
 const unsupportedDeclarationsForNow = [];
