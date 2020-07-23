@@ -1658,6 +1658,114 @@ exports[`snapshot test 1`] = `
     , sm__w_full
     , sm__w_px
     , sm__w_screen
+    , text_2xl
+    , text_3xl
+    , text_4xl
+    , text_5xl
+    , text_6xl
+    , text_base
+    , text_black
+    , text_blue_100
+    , text_blue_200
+    , text_blue_300
+    , text_blue_400
+    , text_blue_500
+    , text_blue_600
+    , text_blue_700
+    , text_blue_800
+    , text_blue_900
+    , text_center
+    , text_current
+    , text_gray_100
+    , text_gray_200
+    , text_gray_300
+    , text_gray_400
+    , text_gray_500
+    , text_gray_600
+    , text_gray_700
+    , text_gray_800
+    , text_gray_900
+    , text_green_100
+    , text_green_200
+    , text_green_300
+    , text_green_400
+    , text_green_500
+    , text_green_600
+    , text_green_700
+    , text_green_800
+    , text_green_900
+    , text_indigo_100
+    , text_indigo_200
+    , text_indigo_300
+    , text_indigo_400
+    , text_indigo_500
+    , text_indigo_600
+    , text_indigo_700
+    , text_indigo_800
+    , text_indigo_900
+    , text_justify
+    , text_left
+    , text_lg
+    , text_orange_100
+    , text_orange_200
+    , text_orange_300
+    , text_orange_400
+    , text_orange_500
+    , text_orange_600
+    , text_orange_700
+    , text_orange_800
+    , text_orange_900
+    , text_pink_100
+    , text_pink_200
+    , text_pink_300
+    , text_pink_400
+    , text_pink_500
+    , text_pink_600
+    , text_pink_700
+    , text_pink_800
+    , text_pink_900
+    , text_purple_100
+    , text_purple_200
+    , text_purple_300
+    , text_purple_400
+    , text_purple_500
+    , text_purple_600
+    , text_purple_700
+    , text_purple_800
+    , text_purple_900
+    , text_red_100
+    , text_red_200
+    , text_red_300
+    , text_red_400
+    , text_red_500
+    , text_red_600
+    , text_red_700
+    , text_red_800
+    , text_red_900
+    , text_right
+    , text_sm
+    , text_teal_100
+    , text_teal_200
+    , text_teal_300
+    , text_teal_400
+    , text_teal_500
+    , text_teal_600
+    , text_teal_700
+    , text_teal_800
+    , text_teal_900
+    , text_transparent
+    , text_white
+    , text_xl
+    , text_xs
+    , text_yellow_100
+    , text_yellow_200
+    , text_yellow_300
+    , text_yellow_400
+    , text_yellow_500
+    , text_yellow_600
+    , text_yellow_700
+    , text_yellow_800
+    , text_yellow_900
     , w_0
     , w_1
     , w_10
@@ -20157,6 +20265,762 @@ w_screen : Css.Style
 w_screen =
     Css.batch
         [ Css.width (Css.vw 100)
+        ]
+
+
+text_xs : Css.Style
+text_xs =
+    Css.batch
+        [ Css.fontSize (Css.rem 0.75)
+        ]
+
+
+text_sm : Css.Style
+text_sm =
+    Css.batch
+        [ Css.fontSize (Css.rem 0.875)
+        ]
+
+
+text_base : Css.Style
+text_base =
+    Css.batch
+        [ Css.fontSize (Css.rem 1)
+        ]
+
+
+text_lg : Css.Style
+text_lg =
+    Css.batch
+        [ Css.fontSize (Css.rem 1.125)
+        ]
+
+
+text_xl : Css.Style
+text_xl =
+    Css.batch
+        [ Css.fontSize (Css.rem 1.25)
+        ]
+
+
+text_2xl : Css.Style
+text_2xl =
+    Css.batch
+        [ Css.fontSize (Css.rem 1.5)
+        ]
+
+
+text_3xl : Css.Style
+text_3xl =
+    Css.batch
+        [ Css.fontSize (Css.rem 1.875)
+        ]
+
+
+text_4xl : Css.Style
+text_4xl =
+    Css.batch
+        [ Css.fontSize (Css.rem 2.25)
+        ]
+
+
+text_5xl : Css.Style
+text_5xl =
+    Css.batch
+        [ Css.fontSize (Css.rem 3)
+        ]
+
+
+text_6xl : Css.Style
+text_6xl =
+    Css.batch
+        [ Css.fontSize (Css.rem 4)
+        ]
+
+
+text_left : Css.Style
+text_left =
+    Css.batch
+        [ Css.textAlign Css.left
+        ]
+
+
+text_center : Css.Style
+text_center =
+    Css.batch
+        [ Css.textAlign Css.center
+        ]
+
+
+text_right : Css.Style
+text_right =
+    Css.batch
+        [ Css.textAlign Css.right
+        ]
+
+
+text_justify : Css.Style
+text_justify =
+    Css.batch
+        [ Css.textAlign Css.justify
+        ]
+
+
+text_transparent : Css.Style
+text_transparent =
+    Css.batch
+        [ Css.color Css.transparent
+        ]
+
+
+text_current : Css.Style
+text_current =
+    Css.batch
+        [ Css.color Css.currentColor
+        ]
+
+
+text_black : Css.Style
+text_black =
+    Css.batch
+        [ Css.color (Css.hex \\"#000\\")
+        ]
+
+
+text_white : Css.Style
+text_white =
+    Css.batch
+        [ Css.color (Css.hex \\"#fff\\")
+        ]
+
+
+text_gray_100 : Css.Style
+text_gray_100 =
+    Css.batch
+        [ Css.color (Css.hex \\"#f7fafc\\")
+        ]
+
+
+text_gray_200 : Css.Style
+text_gray_200 =
+    Css.batch
+        [ Css.color (Css.hex \\"#edf2f7\\")
+        ]
+
+
+text_gray_300 : Css.Style
+text_gray_300 =
+    Css.batch
+        [ Css.color (Css.hex \\"#e2e8f0\\")
+        ]
+
+
+text_gray_400 : Css.Style
+text_gray_400 =
+    Css.batch
+        [ Css.color (Css.hex \\"#cbd5e0\\")
+        ]
+
+
+text_gray_500 : Css.Style
+text_gray_500 =
+    Css.batch
+        [ Css.color (Css.hex \\"#a0aec0\\")
+        ]
+
+
+text_gray_600 : Css.Style
+text_gray_600 =
+    Css.batch
+        [ Css.color (Css.hex \\"#718096\\")
+        ]
+
+
+text_gray_700 : Css.Style
+text_gray_700 =
+    Css.batch
+        [ Css.color (Css.hex \\"#4a5568\\")
+        ]
+
+
+text_gray_800 : Css.Style
+text_gray_800 =
+    Css.batch
+        [ Css.color (Css.hex \\"#2d3748\\")
+        ]
+
+
+text_gray_900 : Css.Style
+text_gray_900 =
+    Css.batch
+        [ Css.color (Css.hex \\"#1a202c\\")
+        ]
+
+
+text_red_100 : Css.Style
+text_red_100 =
+    Css.batch
+        [ Css.color (Css.hex \\"#fff5f5\\")
+        ]
+
+
+text_red_200 : Css.Style
+text_red_200 =
+    Css.batch
+        [ Css.color (Css.hex \\"#fed7d7\\")
+        ]
+
+
+text_red_300 : Css.Style
+text_red_300 =
+    Css.batch
+        [ Css.color (Css.hex \\"#feb2b2\\")
+        ]
+
+
+text_red_400 : Css.Style
+text_red_400 =
+    Css.batch
+        [ Css.color (Css.hex \\"#fc8181\\")
+        ]
+
+
+text_red_500 : Css.Style
+text_red_500 =
+    Css.batch
+        [ Css.color (Css.hex \\"#f56565\\")
+        ]
+
+
+text_red_600 : Css.Style
+text_red_600 =
+    Css.batch
+        [ Css.color (Css.hex \\"#e53e3e\\")
+        ]
+
+
+text_red_700 : Css.Style
+text_red_700 =
+    Css.batch
+        [ Css.color (Css.hex \\"#c53030\\")
+        ]
+
+
+text_red_800 : Css.Style
+text_red_800 =
+    Css.batch
+        [ Css.color (Css.hex \\"#9b2c2c\\")
+        ]
+
+
+text_red_900 : Css.Style
+text_red_900 =
+    Css.batch
+        [ Css.color (Css.hex \\"#742a2a\\")
+        ]
+
+
+text_orange_100 : Css.Style
+text_orange_100 =
+    Css.batch
+        [ Css.color (Css.hex \\"#fffaf0\\")
+        ]
+
+
+text_orange_200 : Css.Style
+text_orange_200 =
+    Css.batch
+        [ Css.color (Css.hex \\"#feebc8\\")
+        ]
+
+
+text_orange_300 : Css.Style
+text_orange_300 =
+    Css.batch
+        [ Css.color (Css.hex \\"#fbd38d\\")
+        ]
+
+
+text_orange_400 : Css.Style
+text_orange_400 =
+    Css.batch
+        [ Css.color (Css.hex \\"#f6ad55\\")
+        ]
+
+
+text_orange_500 : Css.Style
+text_orange_500 =
+    Css.batch
+        [ Css.color (Css.hex \\"#ed8936\\")
+        ]
+
+
+text_orange_600 : Css.Style
+text_orange_600 =
+    Css.batch
+        [ Css.color (Css.hex \\"#dd6b20\\")
+        ]
+
+
+text_orange_700 : Css.Style
+text_orange_700 =
+    Css.batch
+        [ Css.color (Css.hex \\"#c05621\\")
+        ]
+
+
+text_orange_800 : Css.Style
+text_orange_800 =
+    Css.batch
+        [ Css.color (Css.hex \\"#9c4221\\")
+        ]
+
+
+text_orange_900 : Css.Style
+text_orange_900 =
+    Css.batch
+        [ Css.color (Css.hex \\"#7b341e\\")
+        ]
+
+
+text_yellow_100 : Css.Style
+text_yellow_100 =
+    Css.batch
+        [ Css.color (Css.hex \\"#fffff0\\")
+        ]
+
+
+text_yellow_200 : Css.Style
+text_yellow_200 =
+    Css.batch
+        [ Css.color (Css.hex \\"#fefcbf\\")
+        ]
+
+
+text_yellow_300 : Css.Style
+text_yellow_300 =
+    Css.batch
+        [ Css.color (Css.hex \\"#faf089\\")
+        ]
+
+
+text_yellow_400 : Css.Style
+text_yellow_400 =
+    Css.batch
+        [ Css.color (Css.hex \\"#f6e05e\\")
+        ]
+
+
+text_yellow_500 : Css.Style
+text_yellow_500 =
+    Css.batch
+        [ Css.color (Css.hex \\"#ecc94b\\")
+        ]
+
+
+text_yellow_600 : Css.Style
+text_yellow_600 =
+    Css.batch
+        [ Css.color (Css.hex \\"#d69e2e\\")
+        ]
+
+
+text_yellow_700 : Css.Style
+text_yellow_700 =
+    Css.batch
+        [ Css.color (Css.hex \\"#b7791f\\")
+        ]
+
+
+text_yellow_800 : Css.Style
+text_yellow_800 =
+    Css.batch
+        [ Css.color (Css.hex \\"#975a16\\")
+        ]
+
+
+text_yellow_900 : Css.Style
+text_yellow_900 =
+    Css.batch
+        [ Css.color (Css.hex \\"#744210\\")
+        ]
+
+
+text_green_100 : Css.Style
+text_green_100 =
+    Css.batch
+        [ Css.color (Css.hex \\"#f0fff4\\")
+        ]
+
+
+text_green_200 : Css.Style
+text_green_200 =
+    Css.batch
+        [ Css.color (Css.hex \\"#c6f6d5\\")
+        ]
+
+
+text_green_300 : Css.Style
+text_green_300 =
+    Css.batch
+        [ Css.color (Css.hex \\"#9ae6b4\\")
+        ]
+
+
+text_green_400 : Css.Style
+text_green_400 =
+    Css.batch
+        [ Css.color (Css.hex \\"#68d391\\")
+        ]
+
+
+text_green_500 : Css.Style
+text_green_500 =
+    Css.batch
+        [ Css.color (Css.hex \\"#48bb78\\")
+        ]
+
+
+text_green_600 : Css.Style
+text_green_600 =
+    Css.batch
+        [ Css.color (Css.hex \\"#38a169\\")
+        ]
+
+
+text_green_700 : Css.Style
+text_green_700 =
+    Css.batch
+        [ Css.color (Css.hex \\"#2f855a\\")
+        ]
+
+
+text_green_800 : Css.Style
+text_green_800 =
+    Css.batch
+        [ Css.color (Css.hex \\"#276749\\")
+        ]
+
+
+text_green_900 : Css.Style
+text_green_900 =
+    Css.batch
+        [ Css.color (Css.hex \\"#22543d\\")
+        ]
+
+
+text_teal_100 : Css.Style
+text_teal_100 =
+    Css.batch
+        [ Css.color (Css.hex \\"#e6fffa\\")
+        ]
+
+
+text_teal_200 : Css.Style
+text_teal_200 =
+    Css.batch
+        [ Css.color (Css.hex \\"#b2f5ea\\")
+        ]
+
+
+text_teal_300 : Css.Style
+text_teal_300 =
+    Css.batch
+        [ Css.color (Css.hex \\"#81e6d9\\")
+        ]
+
+
+text_teal_400 : Css.Style
+text_teal_400 =
+    Css.batch
+        [ Css.color (Css.hex \\"#4fd1c5\\")
+        ]
+
+
+text_teal_500 : Css.Style
+text_teal_500 =
+    Css.batch
+        [ Css.color (Css.hex \\"#38b2ac\\")
+        ]
+
+
+text_teal_600 : Css.Style
+text_teal_600 =
+    Css.batch
+        [ Css.color (Css.hex \\"#319795\\")
+        ]
+
+
+text_teal_700 : Css.Style
+text_teal_700 =
+    Css.batch
+        [ Css.color (Css.hex \\"#2c7a7b\\")
+        ]
+
+
+text_teal_800 : Css.Style
+text_teal_800 =
+    Css.batch
+        [ Css.color (Css.hex \\"#285e61\\")
+        ]
+
+
+text_teal_900 : Css.Style
+text_teal_900 =
+    Css.batch
+        [ Css.color (Css.hex \\"#234e52\\")
+        ]
+
+
+text_blue_100 : Css.Style
+text_blue_100 =
+    Css.batch
+        [ Css.color (Css.hex \\"#ebf8ff\\")
+        ]
+
+
+text_blue_200 : Css.Style
+text_blue_200 =
+    Css.batch
+        [ Css.color (Css.hex \\"#bee3f8\\")
+        ]
+
+
+text_blue_300 : Css.Style
+text_blue_300 =
+    Css.batch
+        [ Css.color (Css.hex \\"#90cdf4\\")
+        ]
+
+
+text_blue_400 : Css.Style
+text_blue_400 =
+    Css.batch
+        [ Css.color (Css.hex \\"#63b3ed\\")
+        ]
+
+
+text_blue_500 : Css.Style
+text_blue_500 =
+    Css.batch
+        [ Css.color (Css.hex \\"#4299e1\\")
+        ]
+
+
+text_blue_600 : Css.Style
+text_blue_600 =
+    Css.batch
+        [ Css.color (Css.hex \\"#3182ce\\")
+        ]
+
+
+text_blue_700 : Css.Style
+text_blue_700 =
+    Css.batch
+        [ Css.color (Css.hex \\"#2b6cb0\\")
+        ]
+
+
+text_blue_800 : Css.Style
+text_blue_800 =
+    Css.batch
+        [ Css.color (Css.hex \\"#2c5282\\")
+        ]
+
+
+text_blue_900 : Css.Style
+text_blue_900 =
+    Css.batch
+        [ Css.color (Css.hex \\"#2a4365\\")
+        ]
+
+
+text_indigo_100 : Css.Style
+text_indigo_100 =
+    Css.batch
+        [ Css.color (Css.hex \\"#ebf4ff\\")
+        ]
+
+
+text_indigo_200 : Css.Style
+text_indigo_200 =
+    Css.batch
+        [ Css.color (Css.hex \\"#c3dafe\\")
+        ]
+
+
+text_indigo_300 : Css.Style
+text_indigo_300 =
+    Css.batch
+        [ Css.color (Css.hex \\"#a3bffa\\")
+        ]
+
+
+text_indigo_400 : Css.Style
+text_indigo_400 =
+    Css.batch
+        [ Css.color (Css.hex \\"#7f9cf5\\")
+        ]
+
+
+text_indigo_500 : Css.Style
+text_indigo_500 =
+    Css.batch
+        [ Css.color (Css.hex \\"#667eea\\")
+        ]
+
+
+text_indigo_600 : Css.Style
+text_indigo_600 =
+    Css.batch
+        [ Css.color (Css.hex \\"#5a67d8\\")
+        ]
+
+
+text_indigo_700 : Css.Style
+text_indigo_700 =
+    Css.batch
+        [ Css.color (Css.hex \\"#4c51bf\\")
+        ]
+
+
+text_indigo_800 : Css.Style
+text_indigo_800 =
+    Css.batch
+        [ Css.color (Css.hex \\"#434190\\")
+        ]
+
+
+text_indigo_900 : Css.Style
+text_indigo_900 =
+    Css.batch
+        [ Css.color (Css.hex \\"#3c366b\\")
+        ]
+
+
+text_purple_100 : Css.Style
+text_purple_100 =
+    Css.batch
+        [ Css.color (Css.hex \\"#faf5ff\\")
+        ]
+
+
+text_purple_200 : Css.Style
+text_purple_200 =
+    Css.batch
+        [ Css.color (Css.hex \\"#e9d8fd\\")
+        ]
+
+
+text_purple_300 : Css.Style
+text_purple_300 =
+    Css.batch
+        [ Css.color (Css.hex \\"#d6bcfa\\")
+        ]
+
+
+text_purple_400 : Css.Style
+text_purple_400 =
+    Css.batch
+        [ Css.color (Css.hex \\"#b794f4\\")
+        ]
+
+
+text_purple_500 : Css.Style
+text_purple_500 =
+    Css.batch
+        [ Css.color (Css.hex \\"#9f7aea\\")
+        ]
+
+
+text_purple_600 : Css.Style
+text_purple_600 =
+    Css.batch
+        [ Css.color (Css.hex \\"#805ad5\\")
+        ]
+
+
+text_purple_700 : Css.Style
+text_purple_700 =
+    Css.batch
+        [ Css.color (Css.hex \\"#6b46c1\\")
+        ]
+
+
+text_purple_800 : Css.Style
+text_purple_800 =
+    Css.batch
+        [ Css.color (Css.hex \\"#553c9a\\")
+        ]
+
+
+text_purple_900 : Css.Style
+text_purple_900 =
+    Css.batch
+        [ Css.color (Css.hex \\"#44337a\\")
+        ]
+
+
+text_pink_100 : Css.Style
+text_pink_100 =
+    Css.batch
+        [ Css.color (Css.hex \\"#fff5f7\\")
+        ]
+
+
+text_pink_200 : Css.Style
+text_pink_200 =
+    Css.batch
+        [ Css.color (Css.hex \\"#fed7e2\\")
+        ]
+
+
+text_pink_300 : Css.Style
+text_pink_300 =
+    Css.batch
+        [ Css.color (Css.hex \\"#fbb6ce\\")
+        ]
+
+
+text_pink_400 : Css.Style
+text_pink_400 =
+    Css.batch
+        [ Css.color (Css.hex \\"#f687b3\\")
+        ]
+
+
+text_pink_500 : Css.Style
+text_pink_500 =
+    Css.batch
+        [ Css.color (Css.hex \\"#ed64a6\\")
+        ]
+
+
+text_pink_600 : Css.Style
+text_pink_600 =
+    Css.batch
+        [ Css.color (Css.hex \\"#d53f8c\\")
+        ]
+
+
+text_pink_700 : Css.Style
+text_pink_700 =
+    Css.batch
+        [ Css.color (Css.hex \\"#b83280\\")
+        ]
+
+
+text_pink_800 : Css.Style
+text_pink_800 =
+    Css.batch
+        [ Css.color (Css.hex \\"#97266d\\")
+        ]
+
+
+text_pink_900 : Css.Style
+text_pink_900 =
+    Css.batch
+        [ Css.color (Css.hex \\"#702459\\")
         ]
 "
 `;

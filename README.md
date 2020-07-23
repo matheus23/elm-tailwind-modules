@@ -20,9 +20,7 @@ By default, Tailwind generates A LOT of CSS. They have done a great job at makin
 
 Tailwind recommends that you setup [PurgeCSS](https://purgecss.com) as part of your build, and actually started [shipping with a purge option as of 1.4.1](https://github.com/tailwindlabs/tailwindcss/releases?after=v1.4.1#built-in-purgecss)
 
-This is fine and all, but this feels like an extra step. Elm has [function-level dead code elmination](https://elm-lang.org/news/small-assets-without-the-headache)
-
-By the nature of writing in pure Elm with elm-css, means we only bundle the styles that are used right out of the box! No need to purge your stylesheet.
+This is fine and all, but this feels like an extra step. Elm has [function-level dead code elmination](https://elm-lang.org/news/small-assets-without-the-headache) built in by default. Therefor by writing in pure Elm with elm-css,  it means we only bundle the styles that are used right out of the box! No need to purge your stylesheet.
 
 ### Composable 
 Those who are first introduced to Tailwind have a pretty visceral reaction to seeing something like this in their markup:
@@ -56,13 +54,13 @@ This now becomes our reusable style that is comprised of all the base Tailwind u
 * Background and many color based selectors
 * Width and height Hover variants
 * Breakpoint based selectors  (width, height, margin, padding)
+* Text colors and sizes
 
 ## Not (yet) supported
 
-* Text colors and sizes
 * Font
 * display properties
-* Space helpers
+* Space helpers (e.g. `space-x`)
 
 ## Future enhancements
 * Include the normalize CSS stylesheet as part of the package. Tailwind assumes you leverage the CSS reset

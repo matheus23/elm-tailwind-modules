@@ -16,13 +16,13 @@ let supportedSelectors = {
   roundedSelectors: /^\.rounded.*$/,
   widthAndHeightSelectors: /^\.(w|h)-.*$/,
   textSelectors: /^\.text-.*$/,
+  // screenReaderSelectors : /^\.sr-.*$/,
 };
 
 //TODO
 
 let displayProps;
 let focusVariantSelectors;
-let breakpointVariants;
 
 const unsupportedDeclarationsForNow = [];
 let classes = new Map();
