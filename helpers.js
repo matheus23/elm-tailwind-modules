@@ -186,6 +186,8 @@ function isCamelizable(prop) {
     "border-radius",
     "height",
     "width",
+    "font-size",
+    "text-align",
   ];
 
   return camelizable.indexOf(prop) > -1;

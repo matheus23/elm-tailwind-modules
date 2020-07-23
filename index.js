@@ -15,6 +15,7 @@ let supportedSelectors = {
   mediaQueryBasics: /^\.(sm|md|lg|xl)\\:[mpwh][xytblr]?-.*$/,
   roundedSelectors: /^\.rounded.*$/,
   widthAndHeightSelectors: /^\.(w|h)-.*$/,
+  textSelectors: /^\.text-.*$/,
 };
 
 //TODO
