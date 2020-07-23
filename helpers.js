@@ -11,6 +11,7 @@ const notSupported = {
   "align-content": "*", // couldn't see an align-content. Punting
   "align-self": ["auto"], // not supported https://package.elm-lang.org/packages/rtfeldman/elm-css/latest/Css#alignSelf
   "justify-content": ["space-evenly"],
+  "font-family": "*",
 };
 
 function elmBodyCss(elmModuleName, classes) {
@@ -108,7 +109,10 @@ function convertDeclaration(declaration) {
       notSupported[declaration.prop].includes(declaration.value))
   ) {
     // if one or all of the declarations are not supported, drop back to Css.property
-    return `Css.property "${declaration.prop}" "${declaration.value}"`;
+    return `Css.property "${declaration.prop}" "${declaration.value.replace(
+      /"/g,
+      '\\"'
+    )}"`;
   } else {
     if (isCamelizable(declaration.prop)) {
       elmCssFunctionName = camelize(declaration.prop);

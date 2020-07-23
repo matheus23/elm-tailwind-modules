@@ -18,6 +18,7 @@ let supportedSelectors = {
   textSelectors: /^\.text-.*$/,
   displaySelectors: /^\.(hidden|block|flow\-root|inline\-block|inline$|table|grid$|inline\-grid$).*$/, //
   flexSelectors: /^\.(flex|items\-|content\-|self\-|justify\-|order\-).*$/,
+  fontSelectors: /^\.font-.*$/,
 
   // screenReaderSelectors: /^\.sr-.*$/,
 };

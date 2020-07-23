@@ -140,6 +140,18 @@ exports[`snapshot test 1`] = `
     , flex_wrap
     , flex_wrap_reverse
     , flow_root
+    , font_black
+    , font_bold
+    , font_extrabold
+    , font_hairline
+    , font_light
+    , font_medium
+    , font_mono
+    , font_normal
+    , font_sans
+    , font_semibold
+    , font_serif
+    , font_thin
     , grid
     , h_0
     , h_1
@@ -22049,6 +22061,90 @@ order_none : Css.Style
 order_none =
     Css.batch
         [ Css.order (Css.int 0)
+        ]
+
+
+font_sans : Css.Style
+font_sans =
+    Css.batch
+        [ Css.property \\"font-family\\" \\"system-ui, -apple-system, BlinkMacSystemFont, \\\\\\"Segoe UI\\\\\\", Roboto, \\\\\\"Helvetica Neue\\\\\\", Arial, \\\\\\"Noto Sans\\\\\\", sans-serif, \\\\\\"Apple Color Emoji\\\\\\", \\\\\\"Segoe UI Emoji\\\\\\", \\\\\\"Segoe UI Symbol\\\\\\", \\\\\\"Noto Color Emoji\\\\\\"\\"
+        ]
+
+
+font_serif : Css.Style
+font_serif =
+    Css.batch
+        [ Css.property \\"font-family\\" \\"Georgia, Cambria, \\\\\\"Times New Roman\\\\\\", Times, serif\\"
+        ]
+
+
+font_mono : Css.Style
+font_mono =
+    Css.batch
+        [ Css.property \\"font-family\\" \\"Menlo, Monaco, Consolas, \\\\\\"Liberation Mono\\\\\\", \\\\\\"Courier New\\\\\\", monospace\\"
+        ]
+
+
+font_hairline : Css.Style
+font_hairline =
+    Css.batch
+        [ Css.fontWeight (Css.int 100)
+        ]
+
+
+font_thin : Css.Style
+font_thin =
+    Css.batch
+        [ Css.fontWeight (Css.int 200)
+        ]
+
+
+font_light : Css.Style
+font_light =
+    Css.batch
+        [ Css.fontWeight (Css.int 300)
+        ]
+
+
+font_normal : Css.Style
+font_normal =
+    Css.batch
+        [ Css.fontWeight (Css.int 400)
+        ]
+
+
+font_medium : Css.Style
+font_medium =
+    Css.batch
+        [ Css.fontWeight (Css.int 500)
+        ]
+
+
+font_semibold : Css.Style
+font_semibold =
+    Css.batch
+        [ Css.fontWeight (Css.int 600)
+        ]
+
+
+font_bold : Css.Style
+font_bold =
+    Css.batch
+        [ Css.fontWeight (Css.int 700)
+        ]
+
+
+font_extrabold : Css.Style
+font_extrabold =
+    Css.batch
+        [ Css.fontWeight (Css.int 800)
+        ]
+
+
+font_black : Css.Style
+font_black =
+    Css.batch
+        [ Css.fontWeight (Css.int 900)
         ]
 "
 `;
