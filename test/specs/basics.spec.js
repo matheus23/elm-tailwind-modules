@@ -26,5 +26,5 @@ test("snapshot test", () => {
     path.resolve(__dirname, "..", "src", "TW.elm")
   );
 
-  expect(outputFile).toMatchSnapshot();
+  expect(outputFile.toString()).toMatchSnapshot();
 });

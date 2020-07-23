@@ -1,9 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 let postcss = require("postcss");
+const { execSync } = require("child_process");
 const { promisify } = require("util");
 const mkdir = promisify(fs.mkdir);
-let h = require("./helpers.js");
+let helpers = require("./helpers.js");
 
 let supportedSelectors = {
   marginSelectors: /^\.m[xy]?-.*$/,
@@ -11,12 +12,15 @@ let supportedSelectors = {
   backgroundSelectors: /^\.bg-.*$/,
   shadowSelectors: /^\.shadow.*$/,
   hoverVariantSelectors: /^\.hover\\:.*$/,
-  mediaQuerySelectors: /^\.lg\\:ml.*$/,
+  mediaQuerySpacingSelectors: /^\.(sm|md|lg|xl)\\:[mp][xytblr]+-.*$$/,
+  roundedSelectors: /^\.rounded.*$/,
 };
 
 //TODO
 
-let roundedSelectors = /^\.rounded.*$/;
+let widthAndHeight;
+let mediaQueryWidthAndHeight;
+let displayProps;
 let focusVariantSelectors;
 let breakpointVariants;
 
@@ -24,7 +28,7 @@ const unsupportedDeclarationsForNow = [];
 let classes = new Map();
 
 module.exports = postcss.plugin("postcss-elm-tailwind", (opts) => {
-  opts = h.cleanOpts(opts);
+  opts = helpers.cleanOpts(opts);
 
   let rawDeclarations = [];
   return (root, result) => {
@@ -51,28 +55,33 @@ module.exports = postcss.plugin("postcss-elm-tailwind", (opts) => {
     // put back into a real map for handling through the helper functions.
     // this can be done way better
     for (const [key, value] of Object.entries(declarations)) {
-      let className = h.fixClass(key);
+      let className = helpers.fixClass(key);
       let pseudoSelector = getPseudoSelector(key);
       let processedDeclarations = processDeclarations(value);
       // only add if we didn't filter out all unsupported declarations
       if (processedDeclarations.length > 0) {
         classes.set(key, {
           cleanedClassName: className,
-          elmName: h.toElmName(className),
+          elmName: helpers.toElmName(className),
           pseudoSelector: pseudoSelector,
           declarations: processedDeclarations,
-          mediaQuery: processedDeclarations[0].mediaQuery, // clumsy way to do this.
+          // clumsy way to do this. Since we group by selector, we can just get the media query from the first child
+          mediaQuery: processedDeclarations[0].mediaQuery,
         });
       }
     }
 
-    const formats = h
+    const formats = helpers
       .formats(opts)
       .map(({ elmFile, elmModuleName, elmBodyFn }) =>
         writeFile(elmFile, elmBodyFn(elmModuleName, classes))
       );
     return tap(Promise.all(formats), (p) =>
-      p.then((files) => console.log("Saved", files))
+      p.then((files) => {
+        // run elm-format on the output file for good measure
+        execSync(`elm-format --yes ${files}`);
+        console.log("Saved", files);
+      })
     );
   };
 });
