@@ -94,7 +94,7 @@ module.exports = {
 ### Create a `postcss.config.js` file
 
 ```js
-const postcssElmCssTailwind = require("../index.js");
+const postcssElmCssTailwind = require("postcss-elm-css-tailwind");
 
 module.exports = {
   plugins: [
@@ -113,7 +113,7 @@ PostCSS is going to still kick out a generated CSS file, you can either leverage
 
 
 ```shell
- postcss -o dist/main.css tailwind.css
+ npx postcss -o dist/main.css tailwind.css
 ```
 
 ### Include CSS normalize file
