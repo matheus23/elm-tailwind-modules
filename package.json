@@ -1,6 +1,6 @@
 {
   "name": "postcss-elm-css-tailwind",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Justin Rassier",
   "description": "Generate elm-css versions of your Tailwind utilities",
   "repository": {
