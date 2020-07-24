@@ -44,22 +44,60 @@ This now becomes our reusable style that is comprised of all the base Tailwind u
 
 
 ## Getting Started
-**Note:** This is still pretty early. Not everything in Tailwind is supported (yet) but I'm working through big chunks of utility features at a time, and hope to get to near feature parity with Tailwind, where it makes sense.
+**Note:** This is still pretty early. A large amount of the utilities are generated and compile, but have not been verified. Feel free to report an issue and I'll dig into what property isn't generating correctly.
 
+
+### Install postcss and the postcss plugin
+```shell
+npm install -D postcss-elm-css-tailwind
+```
+
+### Create a base `tailwind.css` file
+```css
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+```
+
+### Create a `tailwind.config.js` file and turn off unsupported options
+As of now, you won't end up with an Elm file that will compile unless you turn off CSS Grid and Transition support.
+
+```js
+module.exports = {
+  theme: {},
+  variants: {},
+  corePlugins: {
+    transitionProperty: false,
+    transitionTimingFunction: false,
+    transitionDelay: false,
+    transitionDuration: false,
+    gap: false,
+    gridAutoFlow: false,
+    gridRow: false,
+    gridRowStart: false,
+    gridRowEnd: false,
+    gridColumn: false,
+    gridColumnStart: false,
+    gridColumnEnd: false,
+    gridTemplateColumns: false,
+    gridTemplateRows: false,
+  },
+  plugins: [],
+};
+
+```
 
 
 
 ## Supported
-* Padding/margin
-* Background and many color based selectors
-* Width and height Hover variants
-* Breakpoint based selectors  (width, height, margin, padding)
-* Text colors and sizes
-* display properties (e.g. flex, inline-block, block)
+* Almost everything compiles. I tried to get as much into raw elm-css to help guarantee a valid stylesheet. I sometimes had use the escape hatch and use [Css.property](https://package.elm-lang.org/packages/rtfeldman/elm-css/latest/Css#property) when either the support (or ambition) was lacking. 
 
 ## Not (yet) supported
 
-* Font
+* CSS Transitions
+* CSS Grid
 * Space helpers (e.g. `space-x`)
 
 ## Future enhancements

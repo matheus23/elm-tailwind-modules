@@ -35,7 +35,7 @@ update msg model =
 
 buttonStyle: Css.Style
 buttonStyle = 
-    Css.batch[TW.bg_blue_500, TW.hover__bg_blue_700, TW.py_2 ,TW.px_4]
+    Css.batch[TW.bg_blue_500, TW.hover__bg_blue_700, TW.text_white, TW.font_bold, TW.py_2 ,TW.px_4, TW.rounded]
 ---- VIEW ----
 
 

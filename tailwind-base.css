@@ -1,13 +1,3 @@
-/*
-  elm-hot creates an additional div wrapper around the app to make HMR possible.
-  This could break styling in development mode if you are using Elm UI.
-
-  More context in the issue:
-    https://github.com/halfzebra/create-elm-app/issues/320
-*/
-[data-elm-hot="true"] {
-  height: inherit;
-}
 /* basic tailwind import. TODO: Make more complicated examples */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
