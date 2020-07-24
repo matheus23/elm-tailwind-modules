@@ -1,15 +1,28 @@
 {
   "name": "postcss-elm-css-tailwind",
   "version": "0.0.0",
-  "description": "",
+  "author": "Justin Rassier",
+  "description": "Generate elm-css versions of your Tailwind utilities",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justinrassier/postcss-elm-css-tailwind"
+  },
   "main": "index.js",
   "scripts": {
     "test": "npm run test:elm-compile && jest",
     "test:elm-compile": "cd test && postcss -o dist/main.css tailwind.css && elm make src/TW.elm"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "postcss",
+    "postcss-plugin",
+    "elm",
+    "tailwind",
+    "tailwindcss"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "tailwindcss": "^1.5.2"
+  },
   "devDependencies": {
     "autoprefixer": "^9.8.5",
     "elm": "^0.19.1-3",
