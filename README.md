@@ -119,7 +119,9 @@ PostCSS is going to still kick out a generated CSS file, you can either leverage
 ### Include CSS normalize file
 Tailwind operates and generates a built in [normalize.css](https://github.com/necolas/normalize.css/) file. This plugin only generates the utilities, you will still want to include a normalize CSS to get the expected behavior. For convenience, you can grab the `tailwind-base.css` file from this repo directly, which is just the `@tailwind base` output.
 
+### Use your utilities!
 
+You can now import your `TW` module and use all the utilities. Remember that these are elm-css utilities, so you must be using the `Html.Styled` module instead of the standard `Html` module.
 
 ## Developing
 Coming Soon!
