@@ -47,9 +47,9 @@ This now becomes our reusable style that is comprised of all the base Tailwind u
 **Note:** This is still pretty early. A large amount of the utilities are generated and compile, but have not been verified. Feel free to report an issue and I'll dig into what property isn't generating correctly.
 
 
-### Install postcss and the postcss plugin
+### Install tailwind, postcss and the postcss plugin
 ```shell
-npm install -D postcss-elm-css-tailwind
+npm install -D tailwindcss postcss-cli postcss-elm-css-tailwind
 ```
 
 ### Create a base `tailwind.css` file
@@ -89,6 +89,40 @@ module.exports = {
 
 ```
 
+**Note:** If you have a heavily customized Tailwind.config file, things may not work properly. Initial development was based off of the default config. The goal is to have robust support of all the ways you can configure Tailwind. That being said, basic configs should work (e.g. color names and definitions, breakpoint sizes).
+
+### Create a `postcss.config.js` file
+
+```js
+const postcssElmCssTailwind = require("../index.js");
+
+module.exports = {
+  plugins: [
+    require("tailwindcss")("./tailwind.config.js"),
+    postcssElmCssTailwind(),
+  ],
+};
+
+```
+
+### Run PostCSS CLI to generate your files
+
+This will generate a `TW.elm` file (with a corresponding `TW` module) inside of your `src/` directory. Right now there isn't a way to configure the output, but that should be coming soon
+
+PostCSS is going to still kick out a generated CSS file, you can either leverage it, or discard it.
+
+
+```shell
+ postcss -o dist/main.css tailwind.css
+```
+
+### Include CSS normalize file
+Tailwind operates and generates a built in [normalize.css](https://github.com/necolas/normalize.css/) file. This plugin only generates the utilities, you will still want to include a normalize CSS to get the expected behavior. For convenience, you can grab the `tailwind-base.css` file from this repo directly, which is just the `@tailwind base` output.
+
+
+
+## Developing
+Coming Soon!
 
 
 ## Supported
@@ -101,10 +135,11 @@ module.exports = {
 * Space helpers (e.g. `space-x`)
 
 ## Future enhancements
+* Add auto prefixer support. Adding it now causes duplicate function definitions that I need to determine how to group. 
 * Include the normalize CSS stylesheet as part of the package. Tailwind assumes you leverage the CSS reset
 * Work with custom Tailwind configuraitons. Right now everything is being worked on with a default Tailwind config
 * Extract media query and reuse instead of duplicating `withMediaQuery` raw constructor
-* Extract color palette definitions into exported colors or maybe opaque types
+* Extract color palette definitions into exported values or maybe opaque types
 
 
 
