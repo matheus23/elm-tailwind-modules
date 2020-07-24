@@ -21,9 +21,16 @@ const elmCssTailwind = require("../../index");
 //       });
 //   });
 // });
-test("snapshot test", () => {
+test("snapshot output of Utility module", () => {
   const outputFile = fs.readFileSync(
-    path.resolve(__dirname, "..", "src", "TW.elm")
+    path.resolve(__dirname, "..", "src", "TW", "Utilities.elm")
+  );
+
+  expect(outputFile.toString()).toMatchSnapshot();
+});
+test("snapshot output of Breakpoint Module", () => {
+  const outputFile = fs.readFileSync(
+    path.resolve(__dirname, "..", "src", "TW", "Breakpoints.elm")
   );
 
   expect(outputFile.toString()).toMatchSnapshot();

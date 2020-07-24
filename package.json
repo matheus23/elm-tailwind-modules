@@ -10,7 +10,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test:elm-compile && jest",
-    "test:elm-compile": "cd test && postcss -o dist/main.css tailwind.css && elm make src/TW.elm"
+    "test:elm-compile": "cd test && postcss -o dist/main.css tailwind.css && elm make src/TW/Utilities.elm && elm make src/TW/Breakpoints.elm",
+    "test:node-only": "cd test && postcss -o dist/main.css tailwind.css"
   },
   "keywords": [
     "postcss",

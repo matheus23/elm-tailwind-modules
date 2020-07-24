@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "postcss -o dist/main.css tailwind.css && elm make src/TW.elm && elm-app start"
+    "start": "postcss -o dist/main.css tailwind.css && elm-app start"
   },
   "keywords": [],
   "author": "",

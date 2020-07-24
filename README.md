@@ -52,6 +52,12 @@ This now becomes our reusable style that is comprised of all the base Tailwind u
 npm install -D tailwindcss postcss-cli postcss-elm-css-tailwind
 ```
 
+### Install `elm/regex` into you Elm dependencies
+The generated Breakpoint helpers (see below) have a dependency on `elm/regex` Perhaps a companion Elm package would be more appropriate, but for now you manually have to install this dependency.
+```shell
+elm install elm/regex
+```
+
 ### Create a base `tailwind.css` file
 ```css
 @tailwind base;
@@ -121,7 +127,35 @@ Tailwind operates and generates a built in [normalize.css](https://github.com/ne
 
 ### Use your utilities!
 
-You can now import your `TW` module and use all the utilities. Remember that these are elm-css utilities, so you must be using the `Html.Styled` module instead of the standard `Html` module.
+postcss-elm-css-tailwind generates a couple things for you:
+
+#### `TW/Utilities.elm`
+These are all of your base Tailwind utility classes. Their naming convention is changed to work with Elm as follows:
+
+* The '`-`' is replaced with '`_`' (e.g. `mb_4`, `bg_blue_400`)
+* Negative margins are prefixed with `neg` (e.g. `neg_m_4`)
+* Focus and active variants, separated with '`:`'  in Tailwind, are now separated by a `__` (e.g. `focus__bg_green_200`)
+
+
+#### `TW/Breakpoints.elm`
+Media-query/breakpoint definitions are not generated as discrete funtions. Instead, a new module `TW/Breakpoints.elm` is generated with a new opaque `Breakpoint`type  and a contruction function  for each of your breakpoint names. (e.g. `sm`, `md`, `lg`, `xl`) along with the following utility function:
+
+```elm
+atBreakpoint : List ( Breakpoint, Css.Style ) -> Css.Style
+atBreakpoint styles =
+```
+
+Because of the way elm-css processes the rules, this function guarantees that if you have multiple breakpoint definitions, that they will be applied in the correct order to not be overwritten by each other:
+
+```elm
+view : Model -> Html Msg
+view model =
+    div [ css [ TW.bg_purple_200, atBreakpoint [ ( sm, TW.bg_red_800 ), ( lg, TW.bg_green_200 ) ] ] ]
+        [ div []
+            [ text "Hello World!"
+            ]
+        ]
+```
 
 ## Developing
 Coming Soon!
@@ -139,11 +173,10 @@ Coming Soon!
 ## Future enhancements
 * Add auto prefixer support. Adding it now causes duplicate function definitions that I need to determine how to group. 
 * Include the normalize CSS stylesheet as part of the package. Tailwind assumes you leverage the CSS reset
-* Work with custom Tailwind configuraitons. Right now everything is being worked on with a default Tailwind config
-* Extract media query and reuse instead of duplicating `withMediaQuery` raw constructor
+* Work with custom Tailwind configuration. Right now everything is developed with a default Tailwind config
 * Extract color palette definitions into exported values or maybe opaque types
 
 
 
 
-**Shout out to [postcss-elm-tailwind](https://github.com/monty5811/postcss-elm-tailwind)**: They did some great foundational work that I leveraged. I attempted to fit my new code in with theirs, but the data structures I needed were a little more complex/nested and would require a full refactor of their code. You will still see some remnants of their code lingering around.
+**Shout out to [monty5811/postcss-elm-tailwind](https://github.com/monty5811/postcss-elm-tailwind)**: They did some great foundational work that I leveraged. I attempted to fit my new code in with theirs, but the data structures I needed were a little more complex/nested and would require a full refactor of their code. You will still see some remnants of their code lingering around.
