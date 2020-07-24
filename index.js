@@ -7,23 +7,24 @@ const mkdir = promisify(fs.mkdir);
 let helpers = require("./helpers.js");
 
 let supportedSelectors = {
-  marginSelectors: /^\.-?m[xy]?-.*$/,
-  paddingSelectors: /^\.p[xy]?-.*$/,
-  backgroundSelectors: /^\.bg-.*$/,
-  shadowSelectors: /^\.shadow.*$/,
-  hoverVariantSelectors: /^\.(hover)\\:.*$/,
-  mediaQueryBasics: /^\.(sm|md|lg|xl)\\:[mpwh][xytblr]?-.*$/,
-  roundedSelectors: /^\.rounded.*$/,
-  widthAndHeightSelectors: /^\.(w|h)-.*$/,
-  textSelectors: /^\.text-.*$/,
-  displaySelectors: /^\.(hidden|block|flow\-root|inline\-block|inline$|table|grid$|inline\-grid$).*$/, //
-  flexSelectors: /^\.(flex|items\-|content\-|self\-|justify\-|order\-).*$/,
-  fontSelectors: /^\.font-.*$/,
-
+  // marginSelectors: /^\.-?m[xy]?-.*$/,
+  // paddingSelectors: /^\.p[xy]?-.*$/,
+  // backgroundSelectors: /^\.bg-.*$/,
+  // shadowSelectors: /^\.shadow.*$/,
+  // hoverVariantSelectors: /^\.(hover)\\:.*$/,
+  // mediaQuery: /^\.(sm|md|lg|xl)\\:.*$/,
+  // roundedSelectors: /^\.rounded.*$/,
+  // widthAndHeightSelectors: /^\.(w|h)-.*$/,
+  // textSelectors: /^\.text-.*$/,
+  // displaySelectors: /^\.(hidden|block|flow\-root|inline\-block|inline$|table|grid$|inline\-grid$).*$/, //
+  // flexSelectors: /^\.(flex|items\-|content\-|self\-|justify\-|order\-).*$/,
+  // fontSelectors: /^\.font-.*$/,
   // screenReaderSelectors: /^\.sr-.*$/,
+  allClasses: /^\..*$/,
 };
 
 //TODO
+// transitions
 
 let focusVariantSelectors;
 

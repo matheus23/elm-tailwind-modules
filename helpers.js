@@ -3,6 +3,7 @@
 // this is a map of declarations and values that either aren't supported by elm-css,
 // or there is not a super straight-forward conversion, or I'm too lazy. Keep this list as small as possible
 const notSupported = {
+  appearance: "*",
   display: ["flow-root", "inline-grid", "grid"],
   "box-shadow": "*", // the values in Tailwind don't easily map to the mult-param version in elm
   "background-position": "*",
@@ -10,8 +11,28 @@ const notSupported = {
   flex: "*", //the order of flex3 doesn't match directly. Will need better parsing
   "align-content": "*", // couldn't see an align-content. Punting
   "align-self": ["auto"], // not supported https://package.elm-lang.org/packages/rtfeldman/elm-css/latest/Css#alignSelf
-  "justify-content": ["space-evenly"],
-  "font-family": "*",
+  "justify-content": ["space-evenly"], // didn't see a value
+  "font-family": "*", //font family was easier just to take the string
+  content: "*", // no support from what I can tell
+  "object-fit": "*",
+  "object-position": "*",
+  cursor: ["text"],
+  clear: "*",
+  "stroke-width": "*",
+  stroke: "*",
+  "transform-origin": "*",
+  "word-break": "*",
+  "user-select": "*",
+  float: "*", // getting lazy
+  outline: ["0"], // I think needs an explicit 'none' type
+  // "grid-row": "*",
+  // "grid-row-start": "*",
+  // "grid-template-rows": "*",
+  // "grid-template-columns": "*",
+  // "grid-column": "*",
+  "-webkit-overflow-scrolling": "*",
+  "-webkit-font-smoothing": "*",
+  "-moz-osx-font-smoothing": "*",
 };
 
 function elmBodyCss(elmModuleName, classes) {
@@ -158,9 +179,15 @@ function convertDeclarationValue(declarationProp, declarationValue) {
     return `(Css.hex "${declarationValue}")`;
   } else if (
     declarationValue === "0" &&
-    !["opacity", "flex-shrink", "flex-grow", "flex", "order"].includes(
-      declarationProp
-    )
+    ![
+      "opacity",
+      "flex-shrink",
+      "flex-grow",
+      "flex",
+      "order",
+      "outline",
+      "z-index",
+    ].includes(declarationProp)
   ) {
     // plain 0 needs a unit in Elm, so set it to px
     return `(Css.px 0)`;
@@ -177,7 +204,8 @@ function convertDeclarationValue(declarationProp, declarationValue) {
     numericalVal = numberPlusUnit[1];
     unit = numberPlusUnit[2];
 
-    return `(Css.${unit} ${numericalVal})`;
+    // quick dirty way to force decimal values to have leading 0
+    return `(Css.${unit} ${Number(numericalVal).toString()})`;
   }
 }
 // parse, clean up stuff
@@ -191,6 +219,8 @@ function camelize(s) {
 }
 
 function isCamelizable(prop) {
+  // went in thinking the list of camel casing would be small in comparison to the one off. Smarter to
+  // change this to an opt-out list instead of an opt-in. Do this after we get passing tests
   const camelizable = [
     "margin",
     "margin-top",
@@ -238,6 +268,48 @@ function isCamelizable(prop) {
     "align-self",
     "justify-content",
     "order",
+    "clear",
+    "line-height",
+    "white-space",
+    "appearance",
+    "border-collapse",
+    "border-style",
+    "border-bottom",
+    "border-top-width",
+    "border-right-width",
+    "border-bottom-width",
+    "border-left-width",
+    "box-sizing",
+    "cursor",
+    "float",
+    "list-style-position",
+    "list-style-type",
+    "max-height",
+    "min-height",
+    "min-width",
+    "outline",
+    "overflow",
+    "overflow-x",
+    "overflow-y",
+    "pointer-events",
+    "top",
+    "bottom",
+    "left",
+    "right",
+    "resize",
+    "stroke",
+    "fill",
+    "text-transform",
+    "transform",
+    "stroke",
+    "font-style",
+    "letter-spacing",
+    "visibility",
+    "vertical-align",
+    "overflow-wrap",
+    "word-break",
+    "text-overflow",
+    "z-index",
   ];
 
   return camelizable.indexOf(prop) > -1;
