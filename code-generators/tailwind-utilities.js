@@ -136,9 +136,7 @@ function convertDeclaration(declaration) {
       '\\"'
     )}"`;
   } else {
-    if (isCamelizable(declaration.prop)) {
-      elmCssFunctionName = camelize(declaration.prop);
-    }
+    elmCssFunctionName = camelize(declaration.prop);
 
     // display: flex so far is the only one that needs to do this. Any more and we will extract
     if (declaration.prop === "display" && declaration.value === "flex") {
@@ -217,103 +215,6 @@ function camelize(s) {
   let camelized = s.replace(/-./g, (x) => x.toUpperCase()[1]);
 
   return overrideList[s] || camelized;
-}
-
-function isCamelizable(prop) {
-  // went in thinking the list of camel casing would be small in comparison to the one off. Smarter to
-  // change this to an opt-out list instead of an opt-in. Do this after we get passing tests
-  const camelizable = [
-    "margin",
-    "margin-top",
-    "margin-bottom",
-    "margin-left",
-    "margin-right",
-    "padding",
-    "padding-top",
-    "padding-bottom",
-    "padding-left",
-    "padding-right",
-    "background-attachment",
-    "background-color",
-    "background-position",
-    "background-repeat",
-    "background-size",
-    "text-decoration",
-    "border-color",
-    "font-weight",
-    "color",
-    "opacity",
-    "border-bottom-right-radius",
-    "border-bottom-left-radius",
-    "border-top-left-radius",
-    "border-top-right-radius",
-    "border-radius",
-    "height",
-    "width",
-    "font-size",
-    "text-align",
-    "display",
-    "max-width",
-    "overflow",
-    "border-width",
-    "position",
-    "table-layout",
-    "table-fixed",
-    "flex",
-    "flex-direction",
-    "flex-wrap",
-    "flex-grow",
-    "flex-shrink",
-    "align-items",
-    "align-content",
-    "align-self",
-    "justify-content",
-    "order",
-    "clear",
-    "line-height",
-    "white-space",
-    "appearance",
-    "border-collapse",
-    "border-style",
-    "border-bottom",
-    "border-top-width",
-    "border-right-width",
-    "border-bottom-width",
-    "border-left-width",
-    "box-sizing",
-    "cursor",
-    "float",
-    "list-style-position",
-    "list-style-type",
-    "max-height",
-    "min-height",
-    "min-width",
-    "outline",
-    "overflow",
-    "overflow-x",
-    "overflow-y",
-    "pointer-events",
-    "top",
-    "bottom",
-    "left",
-    "right",
-    "resize",
-    "stroke",
-    "fill",
-    "text-transform",
-    "transform",
-    "stroke",
-    "font-style",
-    "letter-spacing",
-    "visibility",
-    "vertical-align",
-    "overflow-wrap",
-    "word-break",
-    "text-overflow",
-    "z-index",
-  ];
-
-  return camelizable.indexOf(prop) > -1;
 }
 
 // options stuff
