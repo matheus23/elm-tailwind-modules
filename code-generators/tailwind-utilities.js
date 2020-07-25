@@ -77,28 +77,12 @@ function elmFunction(config, { cls, elm }) {
 ${elm.elmName} : ${config.type}
 ${elm.elmName} =
     Css.batch [
-      ${mediaQueryContainer(
-        elm.mediaQuery,
-        pseudoSelectorContainer(
-          elm.pseudoSelector,
-          elm.declarations.map((d) => convertDeclaration(d)).join(", \n      ")
-        )
+      ${pseudoSelectorContainer(
+        elm.pseudoSelector,
+        elm.declarations.map((d) => convertDeclaration(d)).join(", \n      ")
       )}
     ]
 `;
-}
-
-/**
- *  wrap a Css declaration with a media query wrapper
- */
-function mediaQueryContainer(mediaQuery, declarationString) {
-  if (mediaQuery) {
-    return `Css.Media.withMediaQuery ["${mediaQuery}"] [
-        ${declarationString}
-      ]`;
-  } else {
-    return declarationString;
-  }
 }
 
 /**
