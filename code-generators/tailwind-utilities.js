@@ -43,22 +43,10 @@ function elmBodyCss(elmModuleName, classes) {
   );
 }
 
-function elmHeaderExports(classes) {
-  let tmp = Array.from(classes.values()).map((v) => v.elmName);
-
-  tmp.sort();
-  return tmp.join("\n    , ");
-}
-
 function elmHeaderCss(elmModuleName, classes) {
-  l = elmHeaderExports(classes);
-
-  return `module ${elmModuleName} exposing
-    ( ${l}
-    )
+  return `module ${elmModuleName} exposing (..)
 
 import Css 
-import Css.Media
 
 `;
 }
