@@ -72,16 +72,24 @@ function elmBody(config, classes) {
 }
 
 function elmFunction(config, { cls, elm }) {
-  return `
-
-${elm.elmName} : ${config.type}
-${elm.elmName} =
-    Css.batch [
+  let declarationBlock = `
       ${pseudoSelectorContainer(
         elm.pseudoSelector,
         elm.declarations.map((d) => convertDeclaration(d)).join(", \n      ")
       )}
+  `;
+  if (elm.declarations.length > 1) {
+    declarationBlock = `
+    Css.batch [
+      ${declarationBlock}
     ]
+    `;
+  }
+  return `
+
+${elm.elmName} : ${config.type}
+${elm.elmName} =
+  ${declarationBlock}
 `;
 }
 
