@@ -47,6 +47,7 @@ function elmHeaderCss(elmModuleName, classes) {
   return `module ${elmModuleName} exposing (..)
 
 import Css 
+import Css.Global
 
 `;
 }
@@ -61,15 +62,12 @@ function elmBody(config, classes) {
 
 function elmFunction(config, { cls, elm }) {
   let declarationBlock = `
-      ${pseudoSelectorContainer(
-        elm.pseudoSelector,
-        elm.declarations.map((d) => convertDeclaration(d)).join(", \n      ")
-      )}
+        ${elm.declarations.map((d) => convertDeclaration(d)).join(", \n      ")}
   `;
-  if (elm.declarations.length > 1) {
+  if (elm.declarations.length > 1 || elm.advancedSelector) {
     declarationBlock = `
     Css.batch [
-      ${declarationBlock}
+      ${advancedSelectorContainer(elm.advancedSelector, declarationBlock)}
     ]
     `;
   }
@@ -81,14 +79,20 @@ ${elm.elmName} =
 `;
 }
 
-/**
- * wrap a CSS declaration with a pseudo selector (e.g. focus)
- */
-function pseudoSelectorContainer(pseudoSelector, declarationString) {
-  if (pseudoSelector) {
-    return `Css.${pseudoSelector} [
+function advancedSelectorContainer(advancedSelector, declarationString) {
+  if (advancedSelector) {
+    // super rudamentary just for first pass to get space utilities workin
+    let initialGlobalSelector =
+      advancedSelector[0] === ">" ? "children" : undefined;
+    advancedSelector = advancedSelector.substr(1).trim();
+    return `Css.Global.${initialGlobalSelector}
+     [Css.Global.selector "${advancedSelector}"
+      [
         ${declarationString}
-      ]`;
+      ]
+       
+     ]
+     `;
   } else {
     return declarationString;
   }
@@ -97,13 +101,13 @@ function pseudoSelectorContainer(pseudoSelector, declarationString) {
 function convertDeclaration(declaration) {
   let elmCssFunctionName;
   let elmCssFunctionUnit;
-  // console.log("convertDeclaration -> declaration", declaration);
-  const isCustomProperty = declaration.prop.startsWith("--");
+  const containsCustomProperty =
+    declaration.prop.indexOf("--") > -1 || declaration.value.indexOf("--") > -1;
 
   const valueSeparateUnits = declaration.value.split(" ");
 
-  // filtering these out in index.js for now, but the start of support
-  if (isCustomProperty) {
+  // if the prop contains a custom property, we got to punt back to Css.property directly
+  if (containsCustomProperty) {
     return `Css.property "${declaration.prop}" "${declaration.value}"`;
   } else if (
     notSupported[declaration.prop] &&

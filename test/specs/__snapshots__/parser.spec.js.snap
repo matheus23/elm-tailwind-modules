@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`process declaration handles space helpers 1`] = `
+Array [
+  Object {
+    "mediaQuery": undefined,
+    "prop": "margin-left",
+    "pseudoSelector": undefined,
+    "selector": ".mx-4",
+    "value": "1rem",
+  },
+  Object {
+    "mediaQuery": undefined,
+    "prop": "margin-right",
+    "pseudoSelector": undefined,
+    "selector": ".mx-4",
+    "value": "1rem",
+  },
+  Object {
+    "mediaQuery": undefined,
+    "prop": "--bg-opacity",
+    "pseudoSelector": "hover",
+    "selector": ".hover:bg-black:hover",
+    "value": "1",
+  },
+  Object {
+    "mediaQuery": undefined,
+    "prop": "background-color",
+    "pseudoSelector": "hover",
+    "selector": ".hover:bg-black:hover",
+    "value": "#000",
+  },
+  Object {
+    "mediaQuery": undefined,
+    "prop": "background-color",
+    "pseudoSelector": "hover",
+    "selector": ".hover:bg-black:hover",
+    "value": "rgba(0, 0, 0, var(--bg-opacity))",
+  },
+  Object {
+    "mediaQuery": undefined,
+    "prop": "--space-y-reverse",
+    "pseudoSelector": undefined,
+    "selector": ".-space-y-0 > :not(template) ~ :not(template)",
+    "value": "0",
+  },
+  Object {
+    "mediaQuery": undefined,
+    "prop": "margin-top",
+    "pseudoSelector": undefined,
+    "selector": ".-space-y-0 > :not(template) ~ :not(template)",
+    "value": "calc(0px * calc(1 - var(--space-y-reverse)))",
+  },
+  Object {
+    "mediaQuery": undefined,
+    "prop": "margin-bottom",
+    "pseudoSelector": undefined,
+    "selector": ".-space-y-0 > :not(template) ~ :not(template)",
+    "value": "calc(0px * var(--space-y-reverse))",
+  },
+  Object {
+    "mediaQuery": "(min-width: 640px)",
+    "prop": "--space-y-reverse",
+    "pseudoSelector": undefined,
+    "selector": ".sm\\\\:space-y-0 > :not(template) ~ :not(template)",
+    "value": "0",
+  },
+  Object {
+    "mediaQuery": "(min-width: 640px)",
+    "prop": "margin-top",
+    "pseudoSelector": undefined,
+    "selector": ".sm\\\\:space-y-0 > :not(template) ~ :not(template)",
+    "value": "calc(0px * calc(1 - var(--space-y-reverse)))",
+  },
+  Object {
+    "mediaQuery": "(min-width: 640px)",
+    "prop": "margin-bottom",
+    "pseudoSelector": undefined,
+    "selector": ".sm\\\\:space-y-0 > :not(template) ~ :not(template)",
+    "value": "calc(0px * var(--space-y-reverse))",
+  },
+]
+`;
+
+exports[`process declaration handles space helpers 2`] = `
+Map {
+  "sm" => "(min-width: 640px)",
+}
+`;
+
+exports[`process declaration handles space helpers 3`] = `
+Map {
+  ".mx-4" => Object {
+    "advancedSelector": undefined,
+    "cleanedClassName": "mx-4",
+    "declarations": Array [
+      Object {
+        "mediaQuery": undefined,
+        "prop": "margin-left",
+        "value": "1rem",
+      },
+      Object {
+        "mediaQuery": undefined,
+        "prop": "margin-right",
+        "value": "1rem",
+      },
+    ],
+    "elmName": "mx_4",
+  },
+  ".hover:bg-black:hover" => Object {
+    "advancedSelector": undefined,
+    "cleanedClassName": "hover:bg-black",
+    "declarations": Array [
+      Object {
+        "mediaQuery": undefined,
+        "prop": "--bg-opacity",
+        "value": "1",
+      },
+      Object {
+        "mediaQuery": undefined,
+        "prop": "background-color",
+        "value": "#000",
+      },
+      Object {
+        "mediaQuery": undefined,
+        "prop": "background-color",
+        "value": "rgba(0, 0, 0, var(--bg-opacity))",
+      },
+    ],
+    "elmName": "hover__bg_black",
+  },
+  ".-space-y-0 > :not(template) ~ :not(template)" => Object {
+    "advancedSelector": "> :not(template) ~ :not(template)",
+    "cleanedClassName": "-space-y-0",
+    "declarations": Array [
+      Object {
+        "mediaQuery": undefined,
+        "prop": "--space-y-reverse",
+        "value": "0",
+      },
+      Object {
+        "mediaQuery": undefined,
+        "prop": "margin-top",
+        "value": "calc(0px * calc(1 - var(--space-y-reverse)))",
+      },
+      Object {
+        "mediaQuery": undefined,
+        "prop": "margin-bottom",
+        "value": "calc(0px * var(--space-y-reverse))",
+      },
+    ],
+    "elmName": "neg_space_y_0",
+  },
+}
+`;

@@ -1,6 +1,7 @@
 module TW.Utilities exposing (..)
 
 import Css
+import Css.Global
 
 
 container : Css.Style
@@ -8,474 +9,2413 @@ container =
     Css.width (Css.pct 100)
 
 
+space_y_0 : Css.Style
+space_y_0 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(0px * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(0px * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_0 : Css.Style
+space_x_0 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(0px * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(0px * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_1 : Css.Style
+space_y_1 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(0.25rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(0.25rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_1 : Css.Style
+space_x_1 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(0.25rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(0.25rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_2 : Css.Style
+space_y_2 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(0.5rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(0.5rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_2 : Css.Style
+space_x_2 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(0.5rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(0.5rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_3 : Css.Style
+space_y_3 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(0.75rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(0.75rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_3 : Css.Style
+space_x_3 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(0.75rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(0.75rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_4 : Css.Style
+space_y_4 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(1rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(1rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_4 : Css.Style
+space_x_4 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(1rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(1rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_5 : Css.Style
+space_y_5 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(1.25rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(1.25rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_5 : Css.Style
+space_x_5 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(1.25rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(1.25rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_6 : Css.Style
+space_y_6 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(1.5rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(1.5rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_6 : Css.Style
+space_x_6 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(1.5rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(1.5rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_8 : Css.Style
+space_y_8 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(2rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(2rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_8 : Css.Style
+space_x_8 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(2rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(2rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_10 : Css.Style
+space_y_10 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(2.5rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(2.5rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_10 : Css.Style
+space_x_10 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(2.5rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(2.5rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_12 : Css.Style
+space_y_12 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(3rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(3rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_12 : Css.Style
+space_x_12 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(3rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(3rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_16 : Css.Style
+space_y_16 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(4rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(4rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_16 : Css.Style
+space_x_16 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(4rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(4rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_20 : Css.Style
+space_y_20 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(5rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(5rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_20 : Css.Style
+space_x_20 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(5rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(5rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_24 : Css.Style
+space_y_24 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(6rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(6rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_24 : Css.Style
+space_x_24 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(6rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(6rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_32 : Css.Style
+space_y_32 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(8rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(8rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_32 : Css.Style
+space_x_32 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(8rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(8rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_40 : Css.Style
+space_y_40 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(10rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(10rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_40 : Css.Style
+space_x_40 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(10rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(10rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_48 : Css.Style
+space_y_48 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(12rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(12rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_48 : Css.Style
+space_x_48 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(12rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(12rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_56 : Css.Style
+space_y_56 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(14rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(14rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_56 : Css.Style
+space_x_56 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(14rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(14rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_64 : Css.Style
+space_y_64 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(16rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(16rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_64 : Css.Style
+space_x_64 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(16rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(16rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_px : Css.Style
+space_y_px =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(1px * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(1px * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+space_x_px : Css.Style
+space_x_px =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(1px * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(1px * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_1 : Css.Style
+neg_space_y_1 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-0.25rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-0.25rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_1 : Css.Style
+neg_space_x_1 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-0.25rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-0.25rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_2 : Css.Style
+neg_space_y_2 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-0.5rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-0.5rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_2 : Css.Style
+neg_space_x_2 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-0.5rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-0.5rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_3 : Css.Style
+neg_space_y_3 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-0.75rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-0.75rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_3 : Css.Style
+neg_space_x_3 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-0.75rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-0.75rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_4 : Css.Style
+neg_space_y_4 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-1rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-1rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_4 : Css.Style
+neg_space_x_4 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-1rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-1rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_5 : Css.Style
+neg_space_y_5 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-1.25rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-1.25rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_5 : Css.Style
+neg_space_x_5 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-1.25rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-1.25rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_6 : Css.Style
+neg_space_y_6 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-1.5rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-1.5rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_6 : Css.Style
+neg_space_x_6 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-1.5rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-1.5rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_8 : Css.Style
+neg_space_y_8 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-2rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-2rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_8 : Css.Style
+neg_space_x_8 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-2rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-2rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_10 : Css.Style
+neg_space_y_10 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-2.5rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-2.5rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_10 : Css.Style
+neg_space_x_10 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-2.5rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-2.5rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_12 : Css.Style
+neg_space_y_12 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-3rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-3rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_12 : Css.Style
+neg_space_x_12 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-3rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-3rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_16 : Css.Style
+neg_space_y_16 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-4rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-4rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_16 : Css.Style
+neg_space_x_16 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-4rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-4rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_20 : Css.Style
+neg_space_y_20 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-5rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-5rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_20 : Css.Style
+neg_space_x_20 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-5rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-5rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_24 : Css.Style
+neg_space_y_24 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-6rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-6rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_24 : Css.Style
+neg_space_x_24 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-6rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-6rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_32 : Css.Style
+neg_space_y_32 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-8rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-8rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_32 : Css.Style
+neg_space_x_32 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-8rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-8rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_40 : Css.Style
+neg_space_y_40 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-10rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-10rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_40 : Css.Style
+neg_space_x_40 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-10rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-10rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_48 : Css.Style
+neg_space_y_48 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-12rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-12rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_48 : Css.Style
+neg_space_x_48 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-12rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-12rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_56 : Css.Style
+neg_space_y_56 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-14rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-14rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_56 : Css.Style
+neg_space_x_56 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-14rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-14rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_64 : Css.Style
+neg_space_y_64 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-16rem * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-16rem * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_64 : Css.Style
+neg_space_x_64 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-16rem * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-16rem * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+neg_space_y_px : Css.Style
+neg_space_y_px =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "0"
+                , Css.property "margin-top" "calc(-1px * calc(1 - var(--space-y-reverse)))"
+                , Css.property "margin-bottom" "calc(-1px * var(--space-y-reverse))"
+                ]
+            ]
+        ]
+
+
+neg_space_x_px : Css.Style
+neg_space_x_px =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "0"
+                , Css.property "margin-right" "calc(-1px * var(--space-x-reverse))"
+                , Css.property "margin-left" "calc(-1px * calc(1 - var(--space-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+space_y_reverse : Css.Style
+space_y_reverse =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-y-reverse" "1"
+                ]
+            ]
+        ]
+
+
+space_x_reverse : Css.Style
+space_x_reverse =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--space-x-reverse" "1"
+                ]
+            ]
+        ]
+
+
+divide_y_0 : Css.Style
+divide_y_0 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-y-reverse" "0"
+                , Css.property "border-top-width" "calc(0px * calc(1 - var(--divide-y-reverse)))"
+                , Css.property "border-bottom-width" "calc(0px * var(--divide-y-reverse))"
+                ]
+            ]
+        ]
+
+
+divide_x_0 : Css.Style
+divide_x_0 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-x-reverse" "0"
+                , Css.property "border-right-width" "calc(0px * var(--divide-x-reverse))"
+                , Css.property "border-left-width" "calc(0px * calc(1 - var(--divide-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+divide_y_2 : Css.Style
+divide_y_2 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-y-reverse" "0"
+                , Css.property "border-top-width" "calc(2px * calc(1 - var(--divide-y-reverse)))"
+                , Css.property "border-bottom-width" "calc(2px * var(--divide-y-reverse))"
+                ]
+            ]
+        ]
+
+
+divide_x_2 : Css.Style
+divide_x_2 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-x-reverse" "0"
+                , Css.property "border-right-width" "calc(2px * var(--divide-x-reverse))"
+                , Css.property "border-left-width" "calc(2px * calc(1 - var(--divide-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+divide_y_4 : Css.Style
+divide_y_4 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-y-reverse" "0"
+                , Css.property "border-top-width" "calc(4px * calc(1 - var(--divide-y-reverse)))"
+                , Css.property "border-bottom-width" "calc(4px * var(--divide-y-reverse))"
+                ]
+            ]
+        ]
+
+
+divide_x_4 : Css.Style
+divide_x_4 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-x-reverse" "0"
+                , Css.property "border-right-width" "calc(4px * var(--divide-x-reverse))"
+                , Css.property "border-left-width" "calc(4px * calc(1 - var(--divide-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+divide_y_8 : Css.Style
+divide_y_8 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-y-reverse" "0"
+                , Css.property "border-top-width" "calc(8px * calc(1 - var(--divide-y-reverse)))"
+                , Css.property "border-bottom-width" "calc(8px * var(--divide-y-reverse))"
+                ]
+            ]
+        ]
+
+
+divide_x_8 : Css.Style
+divide_x_8 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-x-reverse" "0"
+                , Css.property "border-right-width" "calc(8px * var(--divide-x-reverse))"
+                , Css.property "border-left-width" "calc(8px * calc(1 - var(--divide-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+divide_y : Css.Style
+divide_y =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-y-reverse" "0"
+                , Css.property "border-top-width" "calc(1px * calc(1 - var(--divide-y-reverse)))"
+                , Css.property "border-bottom-width" "calc(1px * var(--divide-y-reverse))"
+                ]
+            ]
+        ]
+
+
+divide_x : Css.Style
+divide_x =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-x-reverse" "0"
+                , Css.property "border-right-width" "calc(1px * var(--divide-x-reverse))"
+                , Css.property "border-left-width" "calc(1px * calc(1 - var(--divide-x-reverse)))"
+                ]
+            ]
+        ]
+
+
+divide_y_reverse : Css.Style
+divide_y_reverse =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-y-reverse" "1"
+                ]
+            ]
+        ]
+
+
+divide_x_reverse : Css.Style
+divide_x_reverse =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-x-reverse" "1"
+                ]
+            ]
+        ]
+
+
 divide_transparent : Css.Style
 divide_transparent =
-    Css.borderColor Css.transparent
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.borderColor Css.transparent
+                ]
+            ]
+        ]
 
 
 divide_current : Css.Style
 divide_current =
-    Css.borderColor Css.currentColor
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.borderColor Css.currentColor
+                ]
+            ]
+        ]
 
 
 divide_black : Css.Style
 divide_black =
-    Css.borderColor (Css.hex "#000")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#000")
+                , Css.property "border-color" "rgba(0, 0, 0, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_white : Css.Style
 divide_white =
-    Css.borderColor (Css.hex "#fff")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#fff")
+                , Css.property "border-color" "rgba(255, 255, 255, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_gray_100 : Css.Style
 divide_gray_100 =
-    Css.borderColor (Css.hex "#f7fafc")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#f7fafc")
+                , Css.property "border-color" "rgba(247, 250, 252, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_gray_200 : Css.Style
 divide_gray_200 =
-    Css.borderColor (Css.hex "#edf2f7")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#edf2f7")
+                , Css.property "border-color" "rgba(237, 242, 247, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_gray_300 : Css.Style
 divide_gray_300 =
-    Css.borderColor (Css.hex "#e2e8f0")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#e2e8f0")
+                , Css.property "border-color" "rgba(226, 232, 240, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_gray_400 : Css.Style
 divide_gray_400 =
-    Css.borderColor (Css.hex "#cbd5e0")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#cbd5e0")
+                , Css.property "border-color" "rgba(203, 213, 224, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_gray_500 : Css.Style
 divide_gray_500 =
-    Css.borderColor (Css.hex "#a0aec0")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#a0aec0")
+                , Css.property "border-color" "rgba(160, 174, 192, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_gray_600 : Css.Style
 divide_gray_600 =
-    Css.borderColor (Css.hex "#718096")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#718096")
+                , Css.property "border-color" "rgba(113, 128, 150, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_gray_700 : Css.Style
 divide_gray_700 =
-    Css.borderColor (Css.hex "#4a5568")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#4a5568")
+                , Css.property "border-color" "rgba(74, 85, 104, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_gray_800 : Css.Style
 divide_gray_800 =
-    Css.borderColor (Css.hex "#2d3748")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#2d3748")
+                , Css.property "border-color" "rgba(45, 55, 72, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_gray_900 : Css.Style
 divide_gray_900 =
-    Css.borderColor (Css.hex "#1a202c")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#1a202c")
+                , Css.property "border-color" "rgba(26, 32, 44, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_red_100 : Css.Style
 divide_red_100 =
-    Css.borderColor (Css.hex "#fff5f5")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#fff5f5")
+                , Css.property "border-color" "rgba(255, 245, 245, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_red_200 : Css.Style
 divide_red_200 =
-    Css.borderColor (Css.hex "#fed7d7")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#fed7d7")
+                , Css.property "border-color" "rgba(254, 215, 215, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_red_300 : Css.Style
 divide_red_300 =
-    Css.borderColor (Css.hex "#feb2b2")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#feb2b2")
+                , Css.property "border-color" "rgba(254, 178, 178, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_red_400 : Css.Style
 divide_red_400 =
-    Css.borderColor (Css.hex "#fc8181")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#fc8181")
+                , Css.property "border-color" "rgba(252, 129, 129, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_red_500 : Css.Style
 divide_red_500 =
-    Css.borderColor (Css.hex "#f56565")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#f56565")
+                , Css.property "border-color" "rgba(245, 101, 101, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_red_600 : Css.Style
 divide_red_600 =
-    Css.borderColor (Css.hex "#e53e3e")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#e53e3e")
+                , Css.property "border-color" "rgba(229, 62, 62, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_red_700 : Css.Style
 divide_red_700 =
-    Css.borderColor (Css.hex "#c53030")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#c53030")
+                , Css.property "border-color" "rgba(197, 48, 48, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_red_800 : Css.Style
 divide_red_800 =
-    Css.borderColor (Css.hex "#9b2c2c")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#9b2c2c")
+                , Css.property "border-color" "rgba(155, 44, 44, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_red_900 : Css.Style
 divide_red_900 =
-    Css.borderColor (Css.hex "#742a2a")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#742a2a")
+                , Css.property "border-color" "rgba(116, 42, 42, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_orange_100 : Css.Style
 divide_orange_100 =
-    Css.borderColor (Css.hex "#fffaf0")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#fffaf0")
+                , Css.property "border-color" "rgba(255, 250, 240, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_orange_200 : Css.Style
 divide_orange_200 =
-    Css.borderColor (Css.hex "#feebc8")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#feebc8")
+                , Css.property "border-color" "rgba(254, 235, 200, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_orange_300 : Css.Style
 divide_orange_300 =
-    Css.borderColor (Css.hex "#fbd38d")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#fbd38d")
+                , Css.property "border-color" "rgba(251, 211, 141, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_orange_400 : Css.Style
 divide_orange_400 =
-    Css.borderColor (Css.hex "#f6ad55")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#f6ad55")
+                , Css.property "border-color" "rgba(246, 173, 85, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_orange_500 : Css.Style
 divide_orange_500 =
-    Css.borderColor (Css.hex "#ed8936")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#ed8936")
+                , Css.property "border-color" "rgba(237, 137, 54, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_orange_600 : Css.Style
 divide_orange_600 =
-    Css.borderColor (Css.hex "#dd6b20")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#dd6b20")
+                , Css.property "border-color" "rgba(221, 107, 32, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_orange_700 : Css.Style
 divide_orange_700 =
-    Css.borderColor (Css.hex "#c05621")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#c05621")
+                , Css.property "border-color" "rgba(192, 86, 33, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_orange_800 : Css.Style
 divide_orange_800 =
-    Css.borderColor (Css.hex "#9c4221")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#9c4221")
+                , Css.property "border-color" "rgba(156, 66, 33, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_orange_900 : Css.Style
 divide_orange_900 =
-    Css.borderColor (Css.hex "#7b341e")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#7b341e")
+                , Css.property "border-color" "rgba(123, 52, 30, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_yellow_100 : Css.Style
 divide_yellow_100 =
-    Css.borderColor (Css.hex "#fffff0")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#fffff0")
+                , Css.property "border-color" "rgba(255, 255, 240, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_yellow_200 : Css.Style
 divide_yellow_200 =
-    Css.borderColor (Css.hex "#fefcbf")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#fefcbf")
+                , Css.property "border-color" "rgba(254, 252, 191, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_yellow_300 : Css.Style
 divide_yellow_300 =
-    Css.borderColor (Css.hex "#faf089")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#faf089")
+                , Css.property "border-color" "rgba(250, 240, 137, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_yellow_400 : Css.Style
 divide_yellow_400 =
-    Css.borderColor (Css.hex "#f6e05e")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#f6e05e")
+                , Css.property "border-color" "rgba(246, 224, 94, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_yellow_500 : Css.Style
 divide_yellow_500 =
-    Css.borderColor (Css.hex "#ecc94b")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#ecc94b")
+                , Css.property "border-color" "rgba(236, 201, 75, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_yellow_600 : Css.Style
 divide_yellow_600 =
-    Css.borderColor (Css.hex "#d69e2e")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#d69e2e")
+                , Css.property "border-color" "rgba(214, 158, 46, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_yellow_700 : Css.Style
 divide_yellow_700 =
-    Css.borderColor (Css.hex "#b7791f")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#b7791f")
+                , Css.property "border-color" "rgba(183, 121, 31, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_yellow_800 : Css.Style
 divide_yellow_800 =
-    Css.borderColor (Css.hex "#975a16")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#975a16")
+                , Css.property "border-color" "rgba(151, 90, 22, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_yellow_900 : Css.Style
 divide_yellow_900 =
-    Css.borderColor (Css.hex "#744210")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#744210")
+                , Css.property "border-color" "rgba(116, 66, 16, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_green_100 : Css.Style
 divide_green_100 =
-    Css.borderColor (Css.hex "#f0fff4")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#f0fff4")
+                , Css.property "border-color" "rgba(240, 255, 244, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_green_200 : Css.Style
 divide_green_200 =
-    Css.borderColor (Css.hex "#c6f6d5")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#c6f6d5")
+                , Css.property "border-color" "rgba(198, 246, 213, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_green_300 : Css.Style
 divide_green_300 =
-    Css.borderColor (Css.hex "#9ae6b4")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#9ae6b4")
+                , Css.property "border-color" "rgba(154, 230, 180, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_green_400 : Css.Style
 divide_green_400 =
-    Css.borderColor (Css.hex "#68d391")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#68d391")
+                , Css.property "border-color" "rgba(104, 211, 145, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_green_500 : Css.Style
 divide_green_500 =
-    Css.borderColor (Css.hex "#48bb78")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#48bb78")
+                , Css.property "border-color" "rgba(72, 187, 120, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_green_600 : Css.Style
 divide_green_600 =
-    Css.borderColor (Css.hex "#38a169")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#38a169")
+                , Css.property "border-color" "rgba(56, 161, 105, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_green_700 : Css.Style
 divide_green_700 =
-    Css.borderColor (Css.hex "#2f855a")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#2f855a")
+                , Css.property "border-color" "rgba(47, 133, 90, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_green_800 : Css.Style
 divide_green_800 =
-    Css.borderColor (Css.hex "#276749")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#276749")
+                , Css.property "border-color" "rgba(39, 103, 73, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_green_900 : Css.Style
 divide_green_900 =
-    Css.borderColor (Css.hex "#22543d")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#22543d")
+                , Css.property "border-color" "rgba(34, 84, 61, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_teal_100 : Css.Style
 divide_teal_100 =
-    Css.borderColor (Css.hex "#e6fffa")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#e6fffa")
+                , Css.property "border-color" "rgba(230, 255, 250, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_teal_200 : Css.Style
 divide_teal_200 =
-    Css.borderColor (Css.hex "#b2f5ea")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#b2f5ea")
+                , Css.property "border-color" "rgba(178, 245, 234, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_teal_300 : Css.Style
 divide_teal_300 =
-    Css.borderColor (Css.hex "#81e6d9")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#81e6d9")
+                , Css.property "border-color" "rgba(129, 230, 217, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_teal_400 : Css.Style
 divide_teal_400 =
-    Css.borderColor (Css.hex "#4fd1c5")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#4fd1c5")
+                , Css.property "border-color" "rgba(79, 209, 197, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_teal_500 : Css.Style
 divide_teal_500 =
-    Css.borderColor (Css.hex "#38b2ac")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#38b2ac")
+                , Css.property "border-color" "rgba(56, 178, 172, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_teal_600 : Css.Style
 divide_teal_600 =
-    Css.borderColor (Css.hex "#319795")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#319795")
+                , Css.property "border-color" "rgba(49, 151, 149, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_teal_700 : Css.Style
 divide_teal_700 =
-    Css.borderColor (Css.hex "#2c7a7b")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#2c7a7b")
+                , Css.property "border-color" "rgba(44, 122, 123, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_teal_800 : Css.Style
 divide_teal_800 =
-    Css.borderColor (Css.hex "#285e61")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#285e61")
+                , Css.property "border-color" "rgba(40, 94, 97, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_teal_900 : Css.Style
 divide_teal_900 =
-    Css.borderColor (Css.hex "#234e52")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#234e52")
+                , Css.property "border-color" "rgba(35, 78, 82, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_blue_100 : Css.Style
 divide_blue_100 =
-    Css.borderColor (Css.hex "#ebf8ff")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#ebf8ff")
+                , Css.property "border-color" "rgba(235, 248, 255, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_blue_200 : Css.Style
 divide_blue_200 =
-    Css.borderColor (Css.hex "#bee3f8")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#bee3f8")
+                , Css.property "border-color" "rgba(190, 227, 248, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_blue_300 : Css.Style
 divide_blue_300 =
-    Css.borderColor (Css.hex "#90cdf4")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#90cdf4")
+                , Css.property "border-color" "rgba(144, 205, 244, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_blue_400 : Css.Style
 divide_blue_400 =
-    Css.borderColor (Css.hex "#63b3ed")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#63b3ed")
+                , Css.property "border-color" "rgba(99, 179, 237, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_blue_500 : Css.Style
 divide_blue_500 =
-    Css.borderColor (Css.hex "#4299e1")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#4299e1")
+                , Css.property "border-color" "rgba(66, 153, 225, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_blue_600 : Css.Style
 divide_blue_600 =
-    Css.borderColor (Css.hex "#3182ce")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#3182ce")
+                , Css.property "border-color" "rgba(49, 130, 206, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_blue_700 : Css.Style
 divide_blue_700 =
-    Css.borderColor (Css.hex "#2b6cb0")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#2b6cb0")
+                , Css.property "border-color" "rgba(43, 108, 176, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_blue_800 : Css.Style
 divide_blue_800 =
-    Css.borderColor (Css.hex "#2c5282")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#2c5282")
+                , Css.property "border-color" "rgba(44, 82, 130, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_blue_900 : Css.Style
 divide_blue_900 =
-    Css.borderColor (Css.hex "#2a4365")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#2a4365")
+                , Css.property "border-color" "rgba(42, 67, 101, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_indigo_100 : Css.Style
 divide_indigo_100 =
-    Css.borderColor (Css.hex "#ebf4ff")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#ebf4ff")
+                , Css.property "border-color" "rgba(235, 244, 255, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_indigo_200 : Css.Style
 divide_indigo_200 =
-    Css.borderColor (Css.hex "#c3dafe")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#c3dafe")
+                , Css.property "border-color" "rgba(195, 218, 254, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_indigo_300 : Css.Style
 divide_indigo_300 =
-    Css.borderColor (Css.hex "#a3bffa")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#a3bffa")
+                , Css.property "border-color" "rgba(163, 191, 250, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_indigo_400 : Css.Style
 divide_indigo_400 =
-    Css.borderColor (Css.hex "#7f9cf5")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#7f9cf5")
+                , Css.property "border-color" "rgba(127, 156, 245, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_indigo_500 : Css.Style
 divide_indigo_500 =
-    Css.borderColor (Css.hex "#667eea")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#667eea")
+                , Css.property "border-color" "rgba(102, 126, 234, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_indigo_600 : Css.Style
 divide_indigo_600 =
-    Css.borderColor (Css.hex "#5a67d8")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#5a67d8")
+                , Css.property "border-color" "rgba(90, 103, 216, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_indigo_700 : Css.Style
 divide_indigo_700 =
-    Css.borderColor (Css.hex "#4c51bf")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#4c51bf")
+                , Css.property "border-color" "rgba(76, 81, 191, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_indigo_800 : Css.Style
 divide_indigo_800 =
-    Css.borderColor (Css.hex "#434190")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#434190")
+                , Css.property "border-color" "rgba(67, 65, 144, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_indigo_900 : Css.Style
 divide_indigo_900 =
-    Css.borderColor (Css.hex "#3c366b")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#3c366b")
+                , Css.property "border-color" "rgba(60, 54, 107, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_purple_100 : Css.Style
 divide_purple_100 =
-    Css.borderColor (Css.hex "#faf5ff")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#faf5ff")
+                , Css.property "border-color" "rgba(250, 245, 255, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_purple_200 : Css.Style
 divide_purple_200 =
-    Css.borderColor (Css.hex "#e9d8fd")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#e9d8fd")
+                , Css.property "border-color" "rgba(233, 216, 253, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_purple_300 : Css.Style
 divide_purple_300 =
-    Css.borderColor (Css.hex "#d6bcfa")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#d6bcfa")
+                , Css.property "border-color" "rgba(214, 188, 250, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_purple_400 : Css.Style
 divide_purple_400 =
-    Css.borderColor (Css.hex "#b794f4")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#b794f4")
+                , Css.property "border-color" "rgba(183, 148, 244, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_purple_500 : Css.Style
 divide_purple_500 =
-    Css.borderColor (Css.hex "#9f7aea")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#9f7aea")
+                , Css.property "border-color" "rgba(159, 122, 234, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_purple_600 : Css.Style
 divide_purple_600 =
-    Css.borderColor (Css.hex "#805ad5")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#805ad5")
+                , Css.property "border-color" "rgba(128, 90, 213, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_purple_700 : Css.Style
 divide_purple_700 =
-    Css.borderColor (Css.hex "#6b46c1")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#6b46c1")
+                , Css.property "border-color" "rgba(107, 70, 193, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_purple_800 : Css.Style
 divide_purple_800 =
-    Css.borderColor (Css.hex "#553c9a")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#553c9a")
+                , Css.property "border-color" "rgba(85, 60, 154, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_purple_900 : Css.Style
 divide_purple_900 =
-    Css.borderColor (Css.hex "#44337a")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#44337a")
+                , Css.property "border-color" "rgba(68, 51, 122, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_pink_100 : Css.Style
 divide_pink_100 =
-    Css.borderColor (Css.hex "#fff5f7")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#fff5f7")
+                , Css.property "border-color" "rgba(255, 245, 247, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_pink_200 : Css.Style
 divide_pink_200 =
-    Css.borderColor (Css.hex "#fed7e2")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#fed7e2")
+                , Css.property "border-color" "rgba(254, 215, 226, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_pink_300 : Css.Style
 divide_pink_300 =
-    Css.borderColor (Css.hex "#fbb6ce")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#fbb6ce")
+                , Css.property "border-color" "rgba(251, 182, 206, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_pink_400 : Css.Style
 divide_pink_400 =
-    Css.borderColor (Css.hex "#f687b3")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#f687b3")
+                , Css.property "border-color" "rgba(246, 135, 179, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_pink_500 : Css.Style
 divide_pink_500 =
-    Css.borderColor (Css.hex "#ed64a6")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#ed64a6")
+                , Css.property "border-color" "rgba(237, 100, 166, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_pink_600 : Css.Style
 divide_pink_600 =
-    Css.borderColor (Css.hex "#d53f8c")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#d53f8c")
+                , Css.property "border-color" "rgba(213, 63, 140, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_pink_700 : Css.Style
 divide_pink_700 =
-    Css.borderColor (Css.hex "#b83280")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#b83280")
+                , Css.property "border-color" "rgba(184, 50, 128, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_pink_800 : Css.Style
 divide_pink_800 =
-    Css.borderColor (Css.hex "#97266d")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#97266d")
+                , Css.property "border-color" "rgba(151, 38, 109, var(--divide-opacity))"
+                ]
+            ]
+        ]
 
 
 divide_pink_900 : Css.Style
 divide_pink_900 =
-    Css.borderColor (Css.hex "#702459")
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                , Css.borderColor (Css.hex "#702459")
+                , Css.property "border-color" "rgba(112, 36, 89, var(--divide-opacity))"
+                ]
+            ]
+        ]
+
+
+divide_opacity_0 : Css.Style
+divide_opacity_0 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "0"
+                ]
+            ]
+        ]
+
+
+divide_opacity_25 : Css.Style
+divide_opacity_25 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "0.25"
+                ]
+            ]
+        ]
+
+
+divide_opacity_50 : Css.Style
+divide_opacity_50 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "0.5"
+                ]
+            ]
+        ]
+
+
+divide_opacity_75 : Css.Style
+divide_opacity_75 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "0.75"
+                ]
+            ]
+        ]
+
+
+divide_opacity_100 : Css.Style
+divide_opacity_100 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not(template) ~ :not(template)"
+                [ Css.property "--divide-opacity" "1"
+                ]
+            ]
+        ]
 
 
 sr_only : Css.Style
@@ -504,39 +2444,6 @@ not_sr_only =
         , Css.overflow Css.visible
         , Css.property "clip" "auto"
         , Css.whiteSpace Css.normal
-        ]
-
-
-focus__sr_only : Css.Style
-focus__sr_only =
-    Css.batch
-        [ Css.focus
-            [ Css.position Css.absolute
-            , Css.width (Css.px 1)
-            , Css.height (Css.px 1)
-            , Css.padding (Css.px 0)
-            , Css.margin (Css.px -1)
-            , Css.overflow Css.hidden
-            , Css.property "clip" "rect(0, 0, 0, 0)"
-            , Css.whiteSpace Css.noWrap
-            , Css.borderWidth (Css.px 0)
-            ]
-        ]
-
-
-focus__not_sr_only : Css.Style
-focus__not_sr_only =
-    Css.batch
-        [ Css.focus
-            [ Css.position Css.static
-            , Css.width Css.auto
-            , Css.height Css.auto
-            , Css.padding (Css.px 0)
-            , Css.margin (Css.px 0)
-            , Css.overflow Css.visible
-            , Css.property "clip" "auto"
-            , Css.whiteSpace Css.normal
-            ]
         ]
 
 
@@ -572,1778 +2479,855 @@ bg_current =
 
 bg_black : Css.Style
 bg_black =
-    Css.backgroundColor (Css.hex "#000")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#000")
+        , Css.property "background-color" "rgba(0, 0, 0, var(--bg-opacity))"
+        ]
 
 
 bg_white : Css.Style
 bg_white =
-    Css.backgroundColor (Css.hex "#fff")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#fff")
+        , Css.property "background-color" "rgba(255, 255, 255, var(--bg-opacity))"
+        ]
 
 
 bg_gray_100 : Css.Style
 bg_gray_100 =
-    Css.backgroundColor (Css.hex "#f7fafc")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#f7fafc")
+        , Css.property "background-color" "rgba(247, 250, 252, var(--bg-opacity))"
+        ]
 
 
 bg_gray_200 : Css.Style
 bg_gray_200 =
-    Css.backgroundColor (Css.hex "#edf2f7")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#edf2f7")
+        , Css.property "background-color" "rgba(237, 242, 247, var(--bg-opacity))"
+        ]
 
 
 bg_gray_300 : Css.Style
 bg_gray_300 =
-    Css.backgroundColor (Css.hex "#e2e8f0")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#e2e8f0")
+        , Css.property "background-color" "rgba(226, 232, 240, var(--bg-opacity))"
+        ]
 
 
 bg_gray_400 : Css.Style
 bg_gray_400 =
-    Css.backgroundColor (Css.hex "#cbd5e0")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#cbd5e0")
+        , Css.property "background-color" "rgba(203, 213, 224, var(--bg-opacity))"
+        ]
 
 
 bg_gray_500 : Css.Style
 bg_gray_500 =
-    Css.backgroundColor (Css.hex "#a0aec0")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#a0aec0")
+        , Css.property "background-color" "rgba(160, 174, 192, var(--bg-opacity))"
+        ]
 
 
 bg_gray_600 : Css.Style
 bg_gray_600 =
-    Css.backgroundColor (Css.hex "#718096")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#718096")
+        , Css.property "background-color" "rgba(113, 128, 150, var(--bg-opacity))"
+        ]
 
 
 bg_gray_700 : Css.Style
 bg_gray_700 =
-    Css.backgroundColor (Css.hex "#4a5568")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#4a5568")
+        , Css.property "background-color" "rgba(74, 85, 104, var(--bg-opacity))"
+        ]
 
 
 bg_gray_800 : Css.Style
 bg_gray_800 =
-    Css.backgroundColor (Css.hex "#2d3748")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#2d3748")
+        , Css.property "background-color" "rgba(45, 55, 72, var(--bg-opacity))"
+        ]
 
 
 bg_gray_900 : Css.Style
 bg_gray_900 =
-    Css.backgroundColor (Css.hex "#1a202c")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#1a202c")
+        , Css.property "background-color" "rgba(26, 32, 44, var(--bg-opacity))"
+        ]
 
 
 bg_red_100 : Css.Style
 bg_red_100 =
-    Css.backgroundColor (Css.hex "#fff5f5")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#fff5f5")
+        , Css.property "background-color" "rgba(255, 245, 245, var(--bg-opacity))"
+        ]
 
 
 bg_red_200 : Css.Style
 bg_red_200 =
-    Css.backgroundColor (Css.hex "#fed7d7")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#fed7d7")
+        , Css.property "background-color" "rgba(254, 215, 215, var(--bg-opacity))"
+        ]
 
 
 bg_red_300 : Css.Style
 bg_red_300 =
-    Css.backgroundColor (Css.hex "#feb2b2")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#feb2b2")
+        , Css.property "background-color" "rgba(254, 178, 178, var(--bg-opacity))"
+        ]
 
 
 bg_red_400 : Css.Style
 bg_red_400 =
-    Css.backgroundColor (Css.hex "#fc8181")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#fc8181")
+        , Css.property "background-color" "rgba(252, 129, 129, var(--bg-opacity))"
+        ]
 
 
 bg_red_500 : Css.Style
 bg_red_500 =
-    Css.backgroundColor (Css.hex "#f56565")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#f56565")
+        , Css.property "background-color" "rgba(245, 101, 101, var(--bg-opacity))"
+        ]
 
 
 bg_red_600 : Css.Style
 bg_red_600 =
-    Css.backgroundColor (Css.hex "#e53e3e")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#e53e3e")
+        , Css.property "background-color" "rgba(229, 62, 62, var(--bg-opacity))"
+        ]
 
 
 bg_red_700 : Css.Style
 bg_red_700 =
-    Css.backgroundColor (Css.hex "#c53030")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#c53030")
+        , Css.property "background-color" "rgba(197, 48, 48, var(--bg-opacity))"
+        ]
 
 
 bg_red_800 : Css.Style
 bg_red_800 =
-    Css.backgroundColor (Css.hex "#9b2c2c")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#9b2c2c")
+        , Css.property "background-color" "rgba(155, 44, 44, var(--bg-opacity))"
+        ]
 
 
 bg_red_900 : Css.Style
 bg_red_900 =
-    Css.backgroundColor (Css.hex "#742a2a")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#742a2a")
+        , Css.property "background-color" "rgba(116, 42, 42, var(--bg-opacity))"
+        ]
 
 
 bg_orange_100 : Css.Style
 bg_orange_100 =
-    Css.backgroundColor (Css.hex "#fffaf0")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#fffaf0")
+        , Css.property "background-color" "rgba(255, 250, 240, var(--bg-opacity))"
+        ]
 
 
 bg_orange_200 : Css.Style
 bg_orange_200 =
-    Css.backgroundColor (Css.hex "#feebc8")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#feebc8")
+        , Css.property "background-color" "rgba(254, 235, 200, var(--bg-opacity))"
+        ]
 
 
 bg_orange_300 : Css.Style
 bg_orange_300 =
-    Css.backgroundColor (Css.hex "#fbd38d")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#fbd38d")
+        , Css.property "background-color" "rgba(251, 211, 141, var(--bg-opacity))"
+        ]
 
 
 bg_orange_400 : Css.Style
 bg_orange_400 =
-    Css.backgroundColor (Css.hex "#f6ad55")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#f6ad55")
+        , Css.property "background-color" "rgba(246, 173, 85, var(--bg-opacity))"
+        ]
 
 
 bg_orange_500 : Css.Style
 bg_orange_500 =
-    Css.backgroundColor (Css.hex "#ed8936")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#ed8936")
+        , Css.property "background-color" "rgba(237, 137, 54, var(--bg-opacity))"
+        ]
 
 
 bg_orange_600 : Css.Style
 bg_orange_600 =
-    Css.backgroundColor (Css.hex "#dd6b20")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#dd6b20")
+        , Css.property "background-color" "rgba(221, 107, 32, var(--bg-opacity))"
+        ]
 
 
 bg_orange_700 : Css.Style
 bg_orange_700 =
-    Css.backgroundColor (Css.hex "#c05621")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#c05621")
+        , Css.property "background-color" "rgba(192, 86, 33, var(--bg-opacity))"
+        ]
 
 
 bg_orange_800 : Css.Style
 bg_orange_800 =
-    Css.backgroundColor (Css.hex "#9c4221")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#9c4221")
+        , Css.property "background-color" "rgba(156, 66, 33, var(--bg-opacity))"
+        ]
 
 
 bg_orange_900 : Css.Style
 bg_orange_900 =
-    Css.backgroundColor (Css.hex "#7b341e")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#7b341e")
+        , Css.property "background-color" "rgba(123, 52, 30, var(--bg-opacity))"
+        ]
 
 
 bg_yellow_100 : Css.Style
 bg_yellow_100 =
-    Css.backgroundColor (Css.hex "#fffff0")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#fffff0")
+        , Css.property "background-color" "rgba(255, 255, 240, var(--bg-opacity))"
+        ]
 
 
 bg_yellow_200 : Css.Style
 bg_yellow_200 =
-    Css.backgroundColor (Css.hex "#fefcbf")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#fefcbf")
+        , Css.property "background-color" "rgba(254, 252, 191, var(--bg-opacity))"
+        ]
 
 
 bg_yellow_300 : Css.Style
 bg_yellow_300 =
-    Css.backgroundColor (Css.hex "#faf089")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#faf089")
+        , Css.property "background-color" "rgba(250, 240, 137, var(--bg-opacity))"
+        ]
 
 
 bg_yellow_400 : Css.Style
 bg_yellow_400 =
-    Css.backgroundColor (Css.hex "#f6e05e")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#f6e05e")
+        , Css.property "background-color" "rgba(246, 224, 94, var(--bg-opacity))"
+        ]
 
 
 bg_yellow_500 : Css.Style
 bg_yellow_500 =
-    Css.backgroundColor (Css.hex "#ecc94b")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#ecc94b")
+        , Css.property "background-color" "rgba(236, 201, 75, var(--bg-opacity))"
+        ]
 
 
 bg_yellow_600 : Css.Style
 bg_yellow_600 =
-    Css.backgroundColor (Css.hex "#d69e2e")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#d69e2e")
+        , Css.property "background-color" "rgba(214, 158, 46, var(--bg-opacity))"
+        ]
 
 
 bg_yellow_700 : Css.Style
 bg_yellow_700 =
-    Css.backgroundColor (Css.hex "#b7791f")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#b7791f")
+        , Css.property "background-color" "rgba(183, 121, 31, var(--bg-opacity))"
+        ]
 
 
 bg_yellow_800 : Css.Style
 bg_yellow_800 =
-    Css.backgroundColor (Css.hex "#975a16")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#975a16")
+        , Css.property "background-color" "rgba(151, 90, 22, var(--bg-opacity))"
+        ]
 
 
 bg_yellow_900 : Css.Style
 bg_yellow_900 =
-    Css.backgroundColor (Css.hex "#744210")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#744210")
+        , Css.property "background-color" "rgba(116, 66, 16, var(--bg-opacity))"
+        ]
 
 
 bg_green_100 : Css.Style
 bg_green_100 =
-    Css.backgroundColor (Css.hex "#f0fff4")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#f0fff4")
+        , Css.property "background-color" "rgba(240, 255, 244, var(--bg-opacity))"
+        ]
 
 
 bg_green_200 : Css.Style
 bg_green_200 =
-    Css.backgroundColor (Css.hex "#c6f6d5")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#c6f6d5")
+        , Css.property "background-color" "rgba(198, 246, 213, var(--bg-opacity))"
+        ]
 
 
 bg_green_300 : Css.Style
 bg_green_300 =
-    Css.backgroundColor (Css.hex "#9ae6b4")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#9ae6b4")
+        , Css.property "background-color" "rgba(154, 230, 180, var(--bg-opacity))"
+        ]
 
 
 bg_green_400 : Css.Style
 bg_green_400 =
-    Css.backgroundColor (Css.hex "#68d391")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#68d391")
+        , Css.property "background-color" "rgba(104, 211, 145, var(--bg-opacity))"
+        ]
 
 
 bg_green_500 : Css.Style
 bg_green_500 =
-    Css.backgroundColor (Css.hex "#48bb78")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#48bb78")
+        , Css.property "background-color" "rgba(72, 187, 120, var(--bg-opacity))"
+        ]
 
 
 bg_green_600 : Css.Style
 bg_green_600 =
-    Css.backgroundColor (Css.hex "#38a169")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#38a169")
+        , Css.property "background-color" "rgba(56, 161, 105, var(--bg-opacity))"
+        ]
 
 
 bg_green_700 : Css.Style
 bg_green_700 =
-    Css.backgroundColor (Css.hex "#2f855a")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#2f855a")
+        , Css.property "background-color" "rgba(47, 133, 90, var(--bg-opacity))"
+        ]
 
 
 bg_green_800 : Css.Style
 bg_green_800 =
-    Css.backgroundColor (Css.hex "#276749")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#276749")
+        , Css.property "background-color" "rgba(39, 103, 73, var(--bg-opacity))"
+        ]
 
 
 bg_green_900 : Css.Style
 bg_green_900 =
-    Css.backgroundColor (Css.hex "#22543d")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#22543d")
+        , Css.property "background-color" "rgba(34, 84, 61, var(--bg-opacity))"
+        ]
 
 
 bg_teal_100 : Css.Style
 bg_teal_100 =
-    Css.backgroundColor (Css.hex "#e6fffa")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#e6fffa")
+        , Css.property "background-color" "rgba(230, 255, 250, var(--bg-opacity))"
+        ]
 
 
 bg_teal_200 : Css.Style
 bg_teal_200 =
-    Css.backgroundColor (Css.hex "#b2f5ea")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#b2f5ea")
+        , Css.property "background-color" "rgba(178, 245, 234, var(--bg-opacity))"
+        ]
 
 
 bg_teal_300 : Css.Style
 bg_teal_300 =
-    Css.backgroundColor (Css.hex "#81e6d9")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#81e6d9")
+        , Css.property "background-color" "rgba(129, 230, 217, var(--bg-opacity))"
+        ]
 
 
 bg_teal_400 : Css.Style
 bg_teal_400 =
-    Css.backgroundColor (Css.hex "#4fd1c5")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#4fd1c5")
+        , Css.property "background-color" "rgba(79, 209, 197, var(--bg-opacity))"
+        ]
 
 
 bg_teal_500 : Css.Style
 bg_teal_500 =
-    Css.backgroundColor (Css.hex "#38b2ac")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#38b2ac")
+        , Css.property "background-color" "rgba(56, 178, 172, var(--bg-opacity))"
+        ]
 
 
 bg_teal_600 : Css.Style
 bg_teal_600 =
-    Css.backgroundColor (Css.hex "#319795")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#319795")
+        , Css.property "background-color" "rgba(49, 151, 149, var(--bg-opacity))"
+        ]
 
 
 bg_teal_700 : Css.Style
 bg_teal_700 =
-    Css.backgroundColor (Css.hex "#2c7a7b")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#2c7a7b")
+        , Css.property "background-color" "rgba(44, 122, 123, var(--bg-opacity))"
+        ]
 
 
 bg_teal_800 : Css.Style
 bg_teal_800 =
-    Css.backgroundColor (Css.hex "#285e61")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#285e61")
+        , Css.property "background-color" "rgba(40, 94, 97, var(--bg-opacity))"
+        ]
 
 
 bg_teal_900 : Css.Style
 bg_teal_900 =
-    Css.backgroundColor (Css.hex "#234e52")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#234e52")
+        , Css.property "background-color" "rgba(35, 78, 82, var(--bg-opacity))"
+        ]
 
 
 bg_blue_100 : Css.Style
 bg_blue_100 =
-    Css.backgroundColor (Css.hex "#ebf8ff")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#ebf8ff")
+        , Css.property "background-color" "rgba(235, 248, 255, var(--bg-opacity))"
+        ]
 
 
 bg_blue_200 : Css.Style
 bg_blue_200 =
-    Css.backgroundColor (Css.hex "#bee3f8")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#bee3f8")
+        , Css.property "background-color" "rgba(190, 227, 248, var(--bg-opacity))"
+        ]
 
 
 bg_blue_300 : Css.Style
 bg_blue_300 =
-    Css.backgroundColor (Css.hex "#90cdf4")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#90cdf4")
+        , Css.property "background-color" "rgba(144, 205, 244, var(--bg-opacity))"
+        ]
 
 
 bg_blue_400 : Css.Style
 bg_blue_400 =
-    Css.backgroundColor (Css.hex "#63b3ed")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#63b3ed")
+        , Css.property "background-color" "rgba(99, 179, 237, var(--bg-opacity))"
+        ]
 
 
 bg_blue_500 : Css.Style
 bg_blue_500 =
-    Css.backgroundColor (Css.hex "#4299e1")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#4299e1")
+        , Css.property "background-color" "rgba(66, 153, 225, var(--bg-opacity))"
+        ]
 
 
 bg_blue_600 : Css.Style
 bg_blue_600 =
-    Css.backgroundColor (Css.hex "#3182ce")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#3182ce")
+        , Css.property "background-color" "rgba(49, 130, 206, var(--bg-opacity))"
+        ]
 
 
 bg_blue_700 : Css.Style
 bg_blue_700 =
-    Css.backgroundColor (Css.hex "#2b6cb0")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#2b6cb0")
+        , Css.property "background-color" "rgba(43, 108, 176, var(--bg-opacity))"
+        ]
 
 
 bg_blue_800 : Css.Style
 bg_blue_800 =
-    Css.backgroundColor (Css.hex "#2c5282")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#2c5282")
+        , Css.property "background-color" "rgba(44, 82, 130, var(--bg-opacity))"
+        ]
 
 
 bg_blue_900 : Css.Style
 bg_blue_900 =
-    Css.backgroundColor (Css.hex "#2a4365")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#2a4365")
+        , Css.property "background-color" "rgba(42, 67, 101, var(--bg-opacity))"
+        ]
 
 
 bg_indigo_100 : Css.Style
 bg_indigo_100 =
-    Css.backgroundColor (Css.hex "#ebf4ff")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#ebf4ff")
+        , Css.property "background-color" "rgba(235, 244, 255, var(--bg-opacity))"
+        ]
 
 
 bg_indigo_200 : Css.Style
 bg_indigo_200 =
-    Css.backgroundColor (Css.hex "#c3dafe")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#c3dafe")
+        , Css.property "background-color" "rgba(195, 218, 254, var(--bg-opacity))"
+        ]
 
 
 bg_indigo_300 : Css.Style
 bg_indigo_300 =
-    Css.backgroundColor (Css.hex "#a3bffa")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#a3bffa")
+        , Css.property "background-color" "rgba(163, 191, 250, var(--bg-opacity))"
+        ]
 
 
 bg_indigo_400 : Css.Style
 bg_indigo_400 =
-    Css.backgroundColor (Css.hex "#7f9cf5")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#7f9cf5")
+        , Css.property "background-color" "rgba(127, 156, 245, var(--bg-opacity))"
+        ]
 
 
 bg_indigo_500 : Css.Style
 bg_indigo_500 =
-    Css.backgroundColor (Css.hex "#667eea")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#667eea")
+        , Css.property "background-color" "rgba(102, 126, 234, var(--bg-opacity))"
+        ]
 
 
 bg_indigo_600 : Css.Style
 bg_indigo_600 =
-    Css.backgroundColor (Css.hex "#5a67d8")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#5a67d8")
+        , Css.property "background-color" "rgba(90, 103, 216, var(--bg-opacity))"
+        ]
 
 
 bg_indigo_700 : Css.Style
 bg_indigo_700 =
-    Css.backgroundColor (Css.hex "#4c51bf")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#4c51bf")
+        , Css.property "background-color" "rgba(76, 81, 191, var(--bg-opacity))"
+        ]
 
 
 bg_indigo_800 : Css.Style
 bg_indigo_800 =
-    Css.backgroundColor (Css.hex "#434190")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#434190")
+        , Css.property "background-color" "rgba(67, 65, 144, var(--bg-opacity))"
+        ]
 
 
 bg_indigo_900 : Css.Style
 bg_indigo_900 =
-    Css.backgroundColor (Css.hex "#3c366b")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#3c366b")
+        , Css.property "background-color" "rgba(60, 54, 107, var(--bg-opacity))"
+        ]
 
 
 bg_purple_100 : Css.Style
 bg_purple_100 =
-    Css.backgroundColor (Css.hex "#faf5ff")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#faf5ff")
+        , Css.property "background-color" "rgba(250, 245, 255, var(--bg-opacity))"
+        ]
 
 
 bg_purple_200 : Css.Style
 bg_purple_200 =
-    Css.backgroundColor (Css.hex "#e9d8fd")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#e9d8fd")
+        , Css.property "background-color" "rgba(233, 216, 253, var(--bg-opacity))"
+        ]
 
 
 bg_purple_300 : Css.Style
 bg_purple_300 =
-    Css.backgroundColor (Css.hex "#d6bcfa")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#d6bcfa")
+        , Css.property "background-color" "rgba(214, 188, 250, var(--bg-opacity))"
+        ]
 
 
 bg_purple_400 : Css.Style
 bg_purple_400 =
-    Css.backgroundColor (Css.hex "#b794f4")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#b794f4")
+        , Css.property "background-color" "rgba(183, 148, 244, var(--bg-opacity))"
+        ]
 
 
 bg_purple_500 : Css.Style
 bg_purple_500 =
-    Css.backgroundColor (Css.hex "#9f7aea")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#9f7aea")
+        , Css.property "background-color" "rgba(159, 122, 234, var(--bg-opacity))"
+        ]
 
 
 bg_purple_600 : Css.Style
 bg_purple_600 =
-    Css.backgroundColor (Css.hex "#805ad5")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#805ad5")
+        , Css.property "background-color" "rgba(128, 90, 213, var(--bg-opacity))"
+        ]
 
 
 bg_purple_700 : Css.Style
 bg_purple_700 =
-    Css.backgroundColor (Css.hex "#6b46c1")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#6b46c1")
+        , Css.property "background-color" "rgba(107, 70, 193, var(--bg-opacity))"
+        ]
 
 
 bg_purple_800 : Css.Style
 bg_purple_800 =
-    Css.backgroundColor (Css.hex "#553c9a")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#553c9a")
+        , Css.property "background-color" "rgba(85, 60, 154, var(--bg-opacity))"
+        ]
 
 
 bg_purple_900 : Css.Style
 bg_purple_900 =
-    Css.backgroundColor (Css.hex "#44337a")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#44337a")
+        , Css.property "background-color" "rgba(68, 51, 122, var(--bg-opacity))"
+        ]
 
 
 bg_pink_100 : Css.Style
 bg_pink_100 =
-    Css.backgroundColor (Css.hex "#fff5f7")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#fff5f7")
+        , Css.property "background-color" "rgba(255, 245, 247, var(--bg-opacity))"
+        ]
 
 
 bg_pink_200 : Css.Style
 bg_pink_200 =
-    Css.backgroundColor (Css.hex "#fed7e2")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#fed7e2")
+        , Css.property "background-color" "rgba(254, 215, 226, var(--bg-opacity))"
+        ]
 
 
 bg_pink_300 : Css.Style
 bg_pink_300 =
-    Css.backgroundColor (Css.hex "#fbb6ce")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#fbb6ce")
+        , Css.property "background-color" "rgba(251, 182, 206, var(--bg-opacity))"
+        ]
 
 
 bg_pink_400 : Css.Style
 bg_pink_400 =
-    Css.backgroundColor (Css.hex "#f687b3")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#f687b3")
+        , Css.property "background-color" "rgba(246, 135, 179, var(--bg-opacity))"
+        ]
 
 
 bg_pink_500 : Css.Style
 bg_pink_500 =
-    Css.backgroundColor (Css.hex "#ed64a6")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#ed64a6")
+        , Css.property "background-color" "rgba(237, 100, 166, var(--bg-opacity))"
+        ]
 
 
 bg_pink_600 : Css.Style
 bg_pink_600 =
-    Css.backgroundColor (Css.hex "#d53f8c")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#d53f8c")
+        , Css.property "background-color" "rgba(213, 63, 140, var(--bg-opacity))"
+        ]
 
 
 bg_pink_700 : Css.Style
 bg_pink_700 =
-    Css.backgroundColor (Css.hex "#b83280")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#b83280")
+        , Css.property "background-color" "rgba(184, 50, 128, var(--bg-opacity))"
+        ]
 
 
 bg_pink_800 : Css.Style
 bg_pink_800 =
-    Css.backgroundColor (Css.hex "#97266d")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#97266d")
+        , Css.property "background-color" "rgba(151, 38, 109, var(--bg-opacity))"
+        ]
 
 
 bg_pink_900 : Css.Style
 bg_pink_900 =
-    Css.backgroundColor (Css.hex "#702459")
-
-
-hover__bg_transparent : Css.Style
-hover__bg_transparent =
-    Css.hover
-        [ Css.backgroundColor Css.transparent
-        ]
-
-
-hover__bg_current : Css.Style
-hover__bg_current =
-    Css.hover
-        [ Css.backgroundColor Css.currentColor
-        ]
-
-
-hover__bg_black : Css.Style
-hover__bg_black =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#000")
-        ]
-
-
-hover__bg_white : Css.Style
-hover__bg_white =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#fff")
-        ]
-
-
-hover__bg_gray_100 : Css.Style
-hover__bg_gray_100 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#f7fafc")
-        ]
-
-
-hover__bg_gray_200 : Css.Style
-hover__bg_gray_200 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#edf2f7")
-        ]
-
-
-hover__bg_gray_300 : Css.Style
-hover__bg_gray_300 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#e2e8f0")
-        ]
-
-
-hover__bg_gray_400 : Css.Style
-hover__bg_gray_400 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#cbd5e0")
-        ]
-
-
-hover__bg_gray_500 : Css.Style
-hover__bg_gray_500 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#a0aec0")
-        ]
-
-
-hover__bg_gray_600 : Css.Style
-hover__bg_gray_600 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#718096")
-        ]
-
-
-hover__bg_gray_700 : Css.Style
-hover__bg_gray_700 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#4a5568")
-        ]
-
-
-hover__bg_gray_800 : Css.Style
-hover__bg_gray_800 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#2d3748")
-        ]
-
-
-hover__bg_gray_900 : Css.Style
-hover__bg_gray_900 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#1a202c")
-        ]
-
-
-hover__bg_red_100 : Css.Style
-hover__bg_red_100 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#fff5f5")
-        ]
-
-
-hover__bg_red_200 : Css.Style
-hover__bg_red_200 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#fed7d7")
-        ]
-
-
-hover__bg_red_300 : Css.Style
-hover__bg_red_300 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#feb2b2")
-        ]
-
-
-hover__bg_red_400 : Css.Style
-hover__bg_red_400 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#fc8181")
-        ]
-
-
-hover__bg_red_500 : Css.Style
-hover__bg_red_500 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#f56565")
-        ]
-
-
-hover__bg_red_600 : Css.Style
-hover__bg_red_600 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#e53e3e")
-        ]
-
-
-hover__bg_red_700 : Css.Style
-hover__bg_red_700 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#c53030")
-        ]
-
-
-hover__bg_red_800 : Css.Style
-hover__bg_red_800 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#9b2c2c")
-        ]
-
-
-hover__bg_red_900 : Css.Style
-hover__bg_red_900 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#742a2a")
-        ]
-
-
-hover__bg_orange_100 : Css.Style
-hover__bg_orange_100 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#fffaf0")
-        ]
-
-
-hover__bg_orange_200 : Css.Style
-hover__bg_orange_200 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#feebc8")
-        ]
-
-
-hover__bg_orange_300 : Css.Style
-hover__bg_orange_300 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#fbd38d")
-        ]
-
-
-hover__bg_orange_400 : Css.Style
-hover__bg_orange_400 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#f6ad55")
-        ]
-
-
-hover__bg_orange_500 : Css.Style
-hover__bg_orange_500 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#ed8936")
-        ]
-
-
-hover__bg_orange_600 : Css.Style
-hover__bg_orange_600 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#dd6b20")
-        ]
-
-
-hover__bg_orange_700 : Css.Style
-hover__bg_orange_700 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#c05621")
-        ]
-
-
-hover__bg_orange_800 : Css.Style
-hover__bg_orange_800 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#9c4221")
-        ]
-
-
-hover__bg_orange_900 : Css.Style
-hover__bg_orange_900 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#7b341e")
-        ]
-
-
-hover__bg_yellow_100 : Css.Style
-hover__bg_yellow_100 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#fffff0")
-        ]
-
-
-hover__bg_yellow_200 : Css.Style
-hover__bg_yellow_200 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#fefcbf")
-        ]
-
-
-hover__bg_yellow_300 : Css.Style
-hover__bg_yellow_300 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#faf089")
-        ]
-
-
-hover__bg_yellow_400 : Css.Style
-hover__bg_yellow_400 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#f6e05e")
-        ]
-
-
-hover__bg_yellow_500 : Css.Style
-hover__bg_yellow_500 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#ecc94b")
-        ]
-
-
-hover__bg_yellow_600 : Css.Style
-hover__bg_yellow_600 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#d69e2e")
-        ]
-
-
-hover__bg_yellow_700 : Css.Style
-hover__bg_yellow_700 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#b7791f")
-        ]
-
-
-hover__bg_yellow_800 : Css.Style
-hover__bg_yellow_800 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#975a16")
-        ]
-
-
-hover__bg_yellow_900 : Css.Style
-hover__bg_yellow_900 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#744210")
-        ]
-
-
-hover__bg_green_100 : Css.Style
-hover__bg_green_100 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#f0fff4")
-        ]
-
-
-hover__bg_green_200 : Css.Style
-hover__bg_green_200 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#c6f6d5")
-        ]
-
-
-hover__bg_green_300 : Css.Style
-hover__bg_green_300 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#9ae6b4")
-        ]
-
-
-hover__bg_green_400 : Css.Style
-hover__bg_green_400 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#68d391")
-        ]
-
-
-hover__bg_green_500 : Css.Style
-hover__bg_green_500 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#48bb78")
-        ]
-
-
-hover__bg_green_600 : Css.Style
-hover__bg_green_600 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#38a169")
-        ]
-
-
-hover__bg_green_700 : Css.Style
-hover__bg_green_700 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#2f855a")
-        ]
-
-
-hover__bg_green_800 : Css.Style
-hover__bg_green_800 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#276749")
-        ]
-
-
-hover__bg_green_900 : Css.Style
-hover__bg_green_900 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#22543d")
-        ]
-
-
-hover__bg_teal_100 : Css.Style
-hover__bg_teal_100 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#e6fffa")
-        ]
-
-
-hover__bg_teal_200 : Css.Style
-hover__bg_teal_200 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#b2f5ea")
-        ]
-
-
-hover__bg_teal_300 : Css.Style
-hover__bg_teal_300 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#81e6d9")
-        ]
-
-
-hover__bg_teal_400 : Css.Style
-hover__bg_teal_400 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#4fd1c5")
-        ]
-
-
-hover__bg_teal_500 : Css.Style
-hover__bg_teal_500 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#38b2ac")
-        ]
-
-
-hover__bg_teal_600 : Css.Style
-hover__bg_teal_600 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#319795")
-        ]
-
-
-hover__bg_teal_700 : Css.Style
-hover__bg_teal_700 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#2c7a7b")
-        ]
-
-
-hover__bg_teal_800 : Css.Style
-hover__bg_teal_800 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#285e61")
-        ]
-
-
-hover__bg_teal_900 : Css.Style
-hover__bg_teal_900 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#234e52")
-        ]
-
-
-hover__bg_blue_100 : Css.Style
-hover__bg_blue_100 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#ebf8ff")
-        ]
-
-
-hover__bg_blue_200 : Css.Style
-hover__bg_blue_200 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#bee3f8")
-        ]
-
-
-hover__bg_blue_300 : Css.Style
-hover__bg_blue_300 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#90cdf4")
-        ]
-
-
-hover__bg_blue_400 : Css.Style
-hover__bg_blue_400 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#63b3ed")
-        ]
-
-
-hover__bg_blue_500 : Css.Style
-hover__bg_blue_500 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#4299e1")
-        ]
-
-
-hover__bg_blue_600 : Css.Style
-hover__bg_blue_600 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#3182ce")
-        ]
-
-
-hover__bg_blue_700 : Css.Style
-hover__bg_blue_700 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#2b6cb0")
-        ]
-
-
-hover__bg_blue_800 : Css.Style
-hover__bg_blue_800 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#2c5282")
-        ]
-
-
-hover__bg_blue_900 : Css.Style
-hover__bg_blue_900 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#2a4365")
-        ]
-
-
-hover__bg_indigo_100 : Css.Style
-hover__bg_indigo_100 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#ebf4ff")
-        ]
-
-
-hover__bg_indigo_200 : Css.Style
-hover__bg_indigo_200 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#c3dafe")
-        ]
-
-
-hover__bg_indigo_300 : Css.Style
-hover__bg_indigo_300 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#a3bffa")
-        ]
-
-
-hover__bg_indigo_400 : Css.Style
-hover__bg_indigo_400 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#7f9cf5")
-        ]
-
-
-hover__bg_indigo_500 : Css.Style
-hover__bg_indigo_500 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#667eea")
-        ]
-
-
-hover__bg_indigo_600 : Css.Style
-hover__bg_indigo_600 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#5a67d8")
-        ]
-
-
-hover__bg_indigo_700 : Css.Style
-hover__bg_indigo_700 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#4c51bf")
-        ]
-
-
-hover__bg_indigo_800 : Css.Style
-hover__bg_indigo_800 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#434190")
-        ]
-
-
-hover__bg_indigo_900 : Css.Style
-hover__bg_indigo_900 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#3c366b")
-        ]
-
-
-hover__bg_purple_100 : Css.Style
-hover__bg_purple_100 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#faf5ff")
-        ]
-
-
-hover__bg_purple_200 : Css.Style
-hover__bg_purple_200 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#e9d8fd")
-        ]
-
-
-hover__bg_purple_300 : Css.Style
-hover__bg_purple_300 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#d6bcfa")
-        ]
-
-
-hover__bg_purple_400 : Css.Style
-hover__bg_purple_400 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#b794f4")
-        ]
-
-
-hover__bg_purple_500 : Css.Style
-hover__bg_purple_500 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#9f7aea")
-        ]
-
-
-hover__bg_purple_600 : Css.Style
-hover__bg_purple_600 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#805ad5")
-        ]
-
-
-hover__bg_purple_700 : Css.Style
-hover__bg_purple_700 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#6b46c1")
-        ]
-
-
-hover__bg_purple_800 : Css.Style
-hover__bg_purple_800 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#553c9a")
-        ]
-
-
-hover__bg_purple_900 : Css.Style
-hover__bg_purple_900 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#44337a")
-        ]
-
-
-hover__bg_pink_100 : Css.Style
-hover__bg_pink_100 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#fff5f7")
-        ]
-
-
-hover__bg_pink_200 : Css.Style
-hover__bg_pink_200 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#fed7e2")
-        ]
-
-
-hover__bg_pink_300 : Css.Style
-hover__bg_pink_300 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#fbb6ce")
-        ]
-
-
-hover__bg_pink_400 : Css.Style
-hover__bg_pink_400 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#f687b3")
-        ]
-
-
-hover__bg_pink_500 : Css.Style
-hover__bg_pink_500 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#ed64a6")
-        ]
-
-
-hover__bg_pink_600 : Css.Style
-hover__bg_pink_600 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#d53f8c")
-        ]
-
-
-hover__bg_pink_700 : Css.Style
-hover__bg_pink_700 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#b83280")
-        ]
-
-
-hover__bg_pink_800 : Css.Style
-hover__bg_pink_800 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#97266d")
-        ]
-
-
-hover__bg_pink_900 : Css.Style
-hover__bg_pink_900 =
-    Css.hover
-        [ Css.backgroundColor (Css.hex "#702459")
-        ]
-
-
-focus__bg_transparent : Css.Style
-focus__bg_transparent =
-    Css.focus
-        [ Css.backgroundColor Css.transparent
-        ]
-
-
-focus__bg_current : Css.Style
-focus__bg_current =
-    Css.focus
-        [ Css.backgroundColor Css.currentColor
-        ]
-
-
-focus__bg_black : Css.Style
-focus__bg_black =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#000")
-        ]
-
-
-focus__bg_white : Css.Style
-focus__bg_white =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#fff")
-        ]
-
-
-focus__bg_gray_100 : Css.Style
-focus__bg_gray_100 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#f7fafc")
+    Css.batch
+        [ Css.property "--bg-opacity" "1"
+        , Css.backgroundColor (Css.hex "#702459")
+        , Css.property "background-color" "rgba(112, 36, 89, var(--bg-opacity))"
         ]
 
 
-focus__bg_gray_200 : Css.Style
-focus__bg_gray_200 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#edf2f7")
-        ]
-
-
-focus__bg_gray_300 : Css.Style
-focus__bg_gray_300 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#e2e8f0")
-        ]
-
-
-focus__bg_gray_400 : Css.Style
-focus__bg_gray_400 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#cbd5e0")
-        ]
-
-
-focus__bg_gray_500 : Css.Style
-focus__bg_gray_500 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#a0aec0")
-        ]
-
-
-focus__bg_gray_600 : Css.Style
-focus__bg_gray_600 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#718096")
-        ]
-
-
-focus__bg_gray_700 : Css.Style
-focus__bg_gray_700 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#4a5568")
-        ]
-
-
-focus__bg_gray_800 : Css.Style
-focus__bg_gray_800 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#2d3748")
-        ]
-
-
-focus__bg_gray_900 : Css.Style
-focus__bg_gray_900 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#1a202c")
-        ]
-
-
-focus__bg_red_100 : Css.Style
-focus__bg_red_100 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#fff5f5")
-        ]
-
-
-focus__bg_red_200 : Css.Style
-focus__bg_red_200 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#fed7d7")
-        ]
-
-
-focus__bg_red_300 : Css.Style
-focus__bg_red_300 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#feb2b2")
-        ]
-
-
-focus__bg_red_400 : Css.Style
-focus__bg_red_400 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#fc8181")
-        ]
-
-
-focus__bg_red_500 : Css.Style
-focus__bg_red_500 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#f56565")
-        ]
-
-
-focus__bg_red_600 : Css.Style
-focus__bg_red_600 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#e53e3e")
-        ]
-
-
-focus__bg_red_700 : Css.Style
-focus__bg_red_700 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#c53030")
-        ]
-
-
-focus__bg_red_800 : Css.Style
-focus__bg_red_800 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#9b2c2c")
-        ]
-
-
-focus__bg_red_900 : Css.Style
-focus__bg_red_900 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#742a2a")
-        ]
-
-
-focus__bg_orange_100 : Css.Style
-focus__bg_orange_100 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#fffaf0")
-        ]
-
-
-focus__bg_orange_200 : Css.Style
-focus__bg_orange_200 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#feebc8")
-        ]
-
-
-focus__bg_orange_300 : Css.Style
-focus__bg_orange_300 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#fbd38d")
-        ]
-
-
-focus__bg_orange_400 : Css.Style
-focus__bg_orange_400 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#f6ad55")
-        ]
-
-
-focus__bg_orange_500 : Css.Style
-focus__bg_orange_500 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#ed8936")
-        ]
-
-
-focus__bg_orange_600 : Css.Style
-focus__bg_orange_600 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#dd6b20")
-        ]
-
-
-focus__bg_orange_700 : Css.Style
-focus__bg_orange_700 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#c05621")
-        ]
-
-
-focus__bg_orange_800 : Css.Style
-focus__bg_orange_800 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#9c4221")
-        ]
-
-
-focus__bg_orange_900 : Css.Style
-focus__bg_orange_900 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#7b341e")
-        ]
-
-
-focus__bg_yellow_100 : Css.Style
-focus__bg_yellow_100 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#fffff0")
-        ]
-
-
-focus__bg_yellow_200 : Css.Style
-focus__bg_yellow_200 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#fefcbf")
-        ]
-
-
-focus__bg_yellow_300 : Css.Style
-focus__bg_yellow_300 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#faf089")
-        ]
-
-
-focus__bg_yellow_400 : Css.Style
-focus__bg_yellow_400 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#f6e05e")
-        ]
-
-
-focus__bg_yellow_500 : Css.Style
-focus__bg_yellow_500 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#ecc94b")
-        ]
-
-
-focus__bg_yellow_600 : Css.Style
-focus__bg_yellow_600 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#d69e2e")
-        ]
-
-
-focus__bg_yellow_700 : Css.Style
-focus__bg_yellow_700 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#b7791f")
-        ]
-
-
-focus__bg_yellow_800 : Css.Style
-focus__bg_yellow_800 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#975a16")
-        ]
-
-
-focus__bg_yellow_900 : Css.Style
-focus__bg_yellow_900 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#744210")
-        ]
-
-
-focus__bg_green_100 : Css.Style
-focus__bg_green_100 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#f0fff4")
-        ]
-
-
-focus__bg_green_200 : Css.Style
-focus__bg_green_200 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#c6f6d5")
-        ]
-
-
-focus__bg_green_300 : Css.Style
-focus__bg_green_300 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#9ae6b4")
-        ]
-
-
-focus__bg_green_400 : Css.Style
-focus__bg_green_400 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#68d391")
-        ]
-
-
-focus__bg_green_500 : Css.Style
-focus__bg_green_500 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#48bb78")
-        ]
-
-
-focus__bg_green_600 : Css.Style
-focus__bg_green_600 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#38a169")
-        ]
-
-
-focus__bg_green_700 : Css.Style
-focus__bg_green_700 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#2f855a")
-        ]
-
-
-focus__bg_green_800 : Css.Style
-focus__bg_green_800 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#276749")
-        ]
-
+bg_opacity_0 : Css.Style
+bg_opacity_0 =
+    Css.property "--bg-opacity" "0"
 
-focus__bg_green_900 : Css.Style
-focus__bg_green_900 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#22543d")
-        ]
-
-
-focus__bg_teal_100 : Css.Style
-focus__bg_teal_100 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#e6fffa")
-        ]
-
-
-focus__bg_teal_200 : Css.Style
-focus__bg_teal_200 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#b2f5ea")
-        ]
-
-
-focus__bg_teal_300 : Css.Style
-focus__bg_teal_300 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#81e6d9")
-        ]
-
-
-focus__bg_teal_400 : Css.Style
-focus__bg_teal_400 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#4fd1c5")
-        ]
-
-
-focus__bg_teal_500 : Css.Style
-focus__bg_teal_500 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#38b2ac")
-        ]
-
-
-focus__bg_teal_600 : Css.Style
-focus__bg_teal_600 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#319795")
-        ]
-
-
-focus__bg_teal_700 : Css.Style
-focus__bg_teal_700 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#2c7a7b")
-        ]
-
-
-focus__bg_teal_800 : Css.Style
-focus__bg_teal_800 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#285e61")
-        ]
-
-
-focus__bg_teal_900 : Css.Style
-focus__bg_teal_900 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#234e52")
-        ]
-
-
-focus__bg_blue_100 : Css.Style
-focus__bg_blue_100 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#ebf8ff")
-        ]
-
-
-focus__bg_blue_200 : Css.Style
-focus__bg_blue_200 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#bee3f8")
-        ]
-
-
-focus__bg_blue_300 : Css.Style
-focus__bg_blue_300 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#90cdf4")
-        ]
-
-
-focus__bg_blue_400 : Css.Style
-focus__bg_blue_400 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#63b3ed")
-        ]
-
-
-focus__bg_blue_500 : Css.Style
-focus__bg_blue_500 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#4299e1")
-        ]
-
-
-focus__bg_blue_600 : Css.Style
-focus__bg_blue_600 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#3182ce")
-        ]
-
-
-focus__bg_blue_700 : Css.Style
-focus__bg_blue_700 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#2b6cb0")
-        ]
-
-
-focus__bg_blue_800 : Css.Style
-focus__bg_blue_800 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#2c5282")
-        ]
-
-
-focus__bg_blue_900 : Css.Style
-focus__bg_blue_900 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#2a4365")
-        ]
-
-
-focus__bg_indigo_100 : Css.Style
-focus__bg_indigo_100 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#ebf4ff")
-        ]
-
-
-focus__bg_indigo_200 : Css.Style
-focus__bg_indigo_200 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#c3dafe")
-        ]
-
-
-focus__bg_indigo_300 : Css.Style
-focus__bg_indigo_300 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#a3bffa")
-        ]
 
+bg_opacity_25 : Css.Style
+bg_opacity_25 =
+    Css.property "--bg-opacity" "0.25"
 
-focus__bg_indigo_400 : Css.Style
-focus__bg_indigo_400 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#7f9cf5")
-        ]
-
-
-focus__bg_indigo_500 : Css.Style
-focus__bg_indigo_500 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#667eea")
-        ]
-
-
-focus__bg_indigo_600 : Css.Style
-focus__bg_indigo_600 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#5a67d8")
-        ]
-
-
-focus__bg_indigo_700 : Css.Style
-focus__bg_indigo_700 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#4c51bf")
-        ]
-
-
-focus__bg_indigo_800 : Css.Style
-focus__bg_indigo_800 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#434190")
-        ]
-
-
-focus__bg_indigo_900 : Css.Style
-focus__bg_indigo_900 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#3c366b")
-        ]
-
-
-focus__bg_purple_100 : Css.Style
-focus__bg_purple_100 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#faf5ff")
-        ]
-
-
-focus__bg_purple_200 : Css.Style
-focus__bg_purple_200 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#e9d8fd")
-        ]
-
-
-focus__bg_purple_300 : Css.Style
-focus__bg_purple_300 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#d6bcfa")
-        ]
-
-
-focus__bg_purple_400 : Css.Style
-focus__bg_purple_400 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#b794f4")
-        ]
-
-
-focus__bg_purple_500 : Css.Style
-focus__bg_purple_500 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#9f7aea")
-        ]
-
 
-focus__bg_purple_600 : Css.Style
-focus__bg_purple_600 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#805ad5")
-        ]
-
-
-focus__bg_purple_700 : Css.Style
-focus__bg_purple_700 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#6b46c1")
-        ]
-
-
-focus__bg_purple_800 : Css.Style
-focus__bg_purple_800 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#553c9a")
-        ]
-
-
-focus__bg_purple_900 : Css.Style
-focus__bg_purple_900 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#44337a")
-        ]
-
-
-focus__bg_pink_100 : Css.Style
-focus__bg_pink_100 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#fff5f7")
-        ]
-
-
-focus__bg_pink_200 : Css.Style
-focus__bg_pink_200 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#fed7e2")
-        ]
+bg_opacity_50 : Css.Style
+bg_opacity_50 =
+    Css.property "--bg-opacity" "0.5"
 
 
-focus__bg_pink_300 : Css.Style
-focus__bg_pink_300 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#fbb6ce")
-        ]
-
-
-focus__bg_pink_400 : Css.Style
-focus__bg_pink_400 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#f687b3")
-        ]
-
-
-focus__bg_pink_500 : Css.Style
-focus__bg_pink_500 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#ed64a6")
-        ]
-
+bg_opacity_75 : Css.Style
+bg_opacity_75 =
+    Css.property "--bg-opacity" "0.75"
 
-focus__bg_pink_600 : Css.Style
-focus__bg_pink_600 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#d53f8c")
-        ]
-
-
-focus__bg_pink_700 : Css.Style
-focus__bg_pink_700 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#b83280")
-        ]
 
-
-focus__bg_pink_800 : Css.Style
-focus__bg_pink_800 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#97266d")
-        ]
-
-
-focus__bg_pink_900 : Css.Style
-focus__bg_pink_900 =
-    Css.focus
-        [ Css.backgroundColor (Css.hex "#702459")
-        ]
+bg_opacity_100 : Css.Style
+bg_opacity_100 =
+    Css.property "--bg-opacity" "1"
 
 
 bg_bottom : Css.Style
@@ -2458,1778 +3442,855 @@ border_current =
 
 border_black : Css.Style
 border_black =
-    Css.borderColor (Css.hex "#000")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#000")
+        , Css.property "border-color" "rgba(0, 0, 0, var(--border-opacity))"
+        ]
 
 
 border_white : Css.Style
 border_white =
-    Css.borderColor (Css.hex "#fff")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#fff")
+        , Css.property "border-color" "rgba(255, 255, 255, var(--border-opacity))"
+        ]
 
 
 border_gray_100 : Css.Style
 border_gray_100 =
-    Css.borderColor (Css.hex "#f7fafc")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#f7fafc")
+        , Css.property "border-color" "rgba(247, 250, 252, var(--border-opacity))"
+        ]
 
 
 border_gray_200 : Css.Style
 border_gray_200 =
-    Css.borderColor (Css.hex "#edf2f7")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#edf2f7")
+        , Css.property "border-color" "rgba(237, 242, 247, var(--border-opacity))"
+        ]
 
 
 border_gray_300 : Css.Style
 border_gray_300 =
-    Css.borderColor (Css.hex "#e2e8f0")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#e2e8f0")
+        , Css.property "border-color" "rgba(226, 232, 240, var(--border-opacity))"
+        ]
 
 
 border_gray_400 : Css.Style
 border_gray_400 =
-    Css.borderColor (Css.hex "#cbd5e0")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#cbd5e0")
+        , Css.property "border-color" "rgba(203, 213, 224, var(--border-opacity))"
+        ]
 
 
 border_gray_500 : Css.Style
 border_gray_500 =
-    Css.borderColor (Css.hex "#a0aec0")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#a0aec0")
+        , Css.property "border-color" "rgba(160, 174, 192, var(--border-opacity))"
+        ]
 
 
 border_gray_600 : Css.Style
 border_gray_600 =
-    Css.borderColor (Css.hex "#718096")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#718096")
+        , Css.property "border-color" "rgba(113, 128, 150, var(--border-opacity))"
+        ]
 
 
 border_gray_700 : Css.Style
 border_gray_700 =
-    Css.borderColor (Css.hex "#4a5568")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#4a5568")
+        , Css.property "border-color" "rgba(74, 85, 104, var(--border-opacity))"
+        ]
 
 
 border_gray_800 : Css.Style
 border_gray_800 =
-    Css.borderColor (Css.hex "#2d3748")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#2d3748")
+        , Css.property "border-color" "rgba(45, 55, 72, var(--border-opacity))"
+        ]
 
 
 border_gray_900 : Css.Style
 border_gray_900 =
-    Css.borderColor (Css.hex "#1a202c")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#1a202c")
+        , Css.property "border-color" "rgba(26, 32, 44, var(--border-opacity))"
+        ]
 
 
 border_red_100 : Css.Style
 border_red_100 =
-    Css.borderColor (Css.hex "#fff5f5")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#fff5f5")
+        , Css.property "border-color" "rgba(255, 245, 245, var(--border-opacity))"
+        ]
 
 
 border_red_200 : Css.Style
 border_red_200 =
-    Css.borderColor (Css.hex "#fed7d7")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#fed7d7")
+        , Css.property "border-color" "rgba(254, 215, 215, var(--border-opacity))"
+        ]
 
 
 border_red_300 : Css.Style
 border_red_300 =
-    Css.borderColor (Css.hex "#feb2b2")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#feb2b2")
+        , Css.property "border-color" "rgba(254, 178, 178, var(--border-opacity))"
+        ]
 
 
 border_red_400 : Css.Style
 border_red_400 =
-    Css.borderColor (Css.hex "#fc8181")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#fc8181")
+        , Css.property "border-color" "rgba(252, 129, 129, var(--border-opacity))"
+        ]
 
 
 border_red_500 : Css.Style
 border_red_500 =
-    Css.borderColor (Css.hex "#f56565")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#f56565")
+        , Css.property "border-color" "rgba(245, 101, 101, var(--border-opacity))"
+        ]
 
 
 border_red_600 : Css.Style
 border_red_600 =
-    Css.borderColor (Css.hex "#e53e3e")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#e53e3e")
+        , Css.property "border-color" "rgba(229, 62, 62, var(--border-opacity))"
+        ]
 
 
 border_red_700 : Css.Style
 border_red_700 =
-    Css.borderColor (Css.hex "#c53030")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#c53030")
+        , Css.property "border-color" "rgba(197, 48, 48, var(--border-opacity))"
+        ]
 
 
 border_red_800 : Css.Style
 border_red_800 =
-    Css.borderColor (Css.hex "#9b2c2c")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#9b2c2c")
+        , Css.property "border-color" "rgba(155, 44, 44, var(--border-opacity))"
+        ]
 
 
 border_red_900 : Css.Style
 border_red_900 =
-    Css.borderColor (Css.hex "#742a2a")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#742a2a")
+        , Css.property "border-color" "rgba(116, 42, 42, var(--border-opacity))"
+        ]
 
 
 border_orange_100 : Css.Style
 border_orange_100 =
-    Css.borderColor (Css.hex "#fffaf0")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#fffaf0")
+        , Css.property "border-color" "rgba(255, 250, 240, var(--border-opacity))"
+        ]
 
 
 border_orange_200 : Css.Style
 border_orange_200 =
-    Css.borderColor (Css.hex "#feebc8")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#feebc8")
+        , Css.property "border-color" "rgba(254, 235, 200, var(--border-opacity))"
+        ]
 
 
 border_orange_300 : Css.Style
 border_orange_300 =
-    Css.borderColor (Css.hex "#fbd38d")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#fbd38d")
+        , Css.property "border-color" "rgba(251, 211, 141, var(--border-opacity))"
+        ]
 
 
 border_orange_400 : Css.Style
 border_orange_400 =
-    Css.borderColor (Css.hex "#f6ad55")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#f6ad55")
+        , Css.property "border-color" "rgba(246, 173, 85, var(--border-opacity))"
+        ]
 
 
 border_orange_500 : Css.Style
 border_orange_500 =
-    Css.borderColor (Css.hex "#ed8936")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#ed8936")
+        , Css.property "border-color" "rgba(237, 137, 54, var(--border-opacity))"
+        ]
 
 
 border_orange_600 : Css.Style
 border_orange_600 =
-    Css.borderColor (Css.hex "#dd6b20")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#dd6b20")
+        , Css.property "border-color" "rgba(221, 107, 32, var(--border-opacity))"
+        ]
 
 
 border_orange_700 : Css.Style
 border_orange_700 =
-    Css.borderColor (Css.hex "#c05621")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#c05621")
+        , Css.property "border-color" "rgba(192, 86, 33, var(--border-opacity))"
+        ]
 
 
 border_orange_800 : Css.Style
 border_orange_800 =
-    Css.borderColor (Css.hex "#9c4221")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#9c4221")
+        , Css.property "border-color" "rgba(156, 66, 33, var(--border-opacity))"
+        ]
 
 
 border_orange_900 : Css.Style
 border_orange_900 =
-    Css.borderColor (Css.hex "#7b341e")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#7b341e")
+        , Css.property "border-color" "rgba(123, 52, 30, var(--border-opacity))"
+        ]
 
 
 border_yellow_100 : Css.Style
 border_yellow_100 =
-    Css.borderColor (Css.hex "#fffff0")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#fffff0")
+        , Css.property "border-color" "rgba(255, 255, 240, var(--border-opacity))"
+        ]
 
 
 border_yellow_200 : Css.Style
 border_yellow_200 =
-    Css.borderColor (Css.hex "#fefcbf")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#fefcbf")
+        , Css.property "border-color" "rgba(254, 252, 191, var(--border-opacity))"
+        ]
 
 
 border_yellow_300 : Css.Style
 border_yellow_300 =
-    Css.borderColor (Css.hex "#faf089")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#faf089")
+        , Css.property "border-color" "rgba(250, 240, 137, var(--border-opacity))"
+        ]
 
 
 border_yellow_400 : Css.Style
 border_yellow_400 =
-    Css.borderColor (Css.hex "#f6e05e")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#f6e05e")
+        , Css.property "border-color" "rgba(246, 224, 94, var(--border-opacity))"
+        ]
 
 
 border_yellow_500 : Css.Style
 border_yellow_500 =
-    Css.borderColor (Css.hex "#ecc94b")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#ecc94b")
+        , Css.property "border-color" "rgba(236, 201, 75, var(--border-opacity))"
+        ]
 
 
 border_yellow_600 : Css.Style
 border_yellow_600 =
-    Css.borderColor (Css.hex "#d69e2e")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#d69e2e")
+        , Css.property "border-color" "rgba(214, 158, 46, var(--border-opacity))"
+        ]
 
 
 border_yellow_700 : Css.Style
 border_yellow_700 =
-    Css.borderColor (Css.hex "#b7791f")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#b7791f")
+        , Css.property "border-color" "rgba(183, 121, 31, var(--border-opacity))"
+        ]
 
 
 border_yellow_800 : Css.Style
 border_yellow_800 =
-    Css.borderColor (Css.hex "#975a16")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#975a16")
+        , Css.property "border-color" "rgba(151, 90, 22, var(--border-opacity))"
+        ]
 
 
 border_yellow_900 : Css.Style
 border_yellow_900 =
-    Css.borderColor (Css.hex "#744210")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#744210")
+        , Css.property "border-color" "rgba(116, 66, 16, var(--border-opacity))"
+        ]
 
 
 border_green_100 : Css.Style
 border_green_100 =
-    Css.borderColor (Css.hex "#f0fff4")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#f0fff4")
+        , Css.property "border-color" "rgba(240, 255, 244, var(--border-opacity))"
+        ]
 
 
 border_green_200 : Css.Style
 border_green_200 =
-    Css.borderColor (Css.hex "#c6f6d5")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#c6f6d5")
+        , Css.property "border-color" "rgba(198, 246, 213, var(--border-opacity))"
+        ]
 
 
 border_green_300 : Css.Style
 border_green_300 =
-    Css.borderColor (Css.hex "#9ae6b4")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#9ae6b4")
+        , Css.property "border-color" "rgba(154, 230, 180, var(--border-opacity))"
+        ]
 
 
 border_green_400 : Css.Style
 border_green_400 =
-    Css.borderColor (Css.hex "#68d391")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#68d391")
+        , Css.property "border-color" "rgba(104, 211, 145, var(--border-opacity))"
+        ]
 
 
 border_green_500 : Css.Style
 border_green_500 =
-    Css.borderColor (Css.hex "#48bb78")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#48bb78")
+        , Css.property "border-color" "rgba(72, 187, 120, var(--border-opacity))"
+        ]
 
 
 border_green_600 : Css.Style
 border_green_600 =
-    Css.borderColor (Css.hex "#38a169")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#38a169")
+        , Css.property "border-color" "rgba(56, 161, 105, var(--border-opacity))"
+        ]
 
 
 border_green_700 : Css.Style
 border_green_700 =
-    Css.borderColor (Css.hex "#2f855a")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#2f855a")
+        , Css.property "border-color" "rgba(47, 133, 90, var(--border-opacity))"
+        ]
 
 
 border_green_800 : Css.Style
 border_green_800 =
-    Css.borderColor (Css.hex "#276749")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#276749")
+        , Css.property "border-color" "rgba(39, 103, 73, var(--border-opacity))"
+        ]
 
 
 border_green_900 : Css.Style
 border_green_900 =
-    Css.borderColor (Css.hex "#22543d")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#22543d")
+        , Css.property "border-color" "rgba(34, 84, 61, var(--border-opacity))"
+        ]
 
 
 border_teal_100 : Css.Style
 border_teal_100 =
-    Css.borderColor (Css.hex "#e6fffa")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#e6fffa")
+        , Css.property "border-color" "rgba(230, 255, 250, var(--border-opacity))"
+        ]
 
 
 border_teal_200 : Css.Style
 border_teal_200 =
-    Css.borderColor (Css.hex "#b2f5ea")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#b2f5ea")
+        , Css.property "border-color" "rgba(178, 245, 234, var(--border-opacity))"
+        ]
 
 
 border_teal_300 : Css.Style
 border_teal_300 =
-    Css.borderColor (Css.hex "#81e6d9")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#81e6d9")
+        , Css.property "border-color" "rgba(129, 230, 217, var(--border-opacity))"
+        ]
 
 
 border_teal_400 : Css.Style
 border_teal_400 =
-    Css.borderColor (Css.hex "#4fd1c5")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#4fd1c5")
+        , Css.property "border-color" "rgba(79, 209, 197, var(--border-opacity))"
+        ]
 
 
 border_teal_500 : Css.Style
 border_teal_500 =
-    Css.borderColor (Css.hex "#38b2ac")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#38b2ac")
+        , Css.property "border-color" "rgba(56, 178, 172, var(--border-opacity))"
+        ]
 
 
 border_teal_600 : Css.Style
 border_teal_600 =
-    Css.borderColor (Css.hex "#319795")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#319795")
+        , Css.property "border-color" "rgba(49, 151, 149, var(--border-opacity))"
+        ]
 
 
 border_teal_700 : Css.Style
 border_teal_700 =
-    Css.borderColor (Css.hex "#2c7a7b")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#2c7a7b")
+        , Css.property "border-color" "rgba(44, 122, 123, var(--border-opacity))"
+        ]
 
 
 border_teal_800 : Css.Style
 border_teal_800 =
-    Css.borderColor (Css.hex "#285e61")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#285e61")
+        , Css.property "border-color" "rgba(40, 94, 97, var(--border-opacity))"
+        ]
 
 
 border_teal_900 : Css.Style
 border_teal_900 =
-    Css.borderColor (Css.hex "#234e52")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#234e52")
+        , Css.property "border-color" "rgba(35, 78, 82, var(--border-opacity))"
+        ]
 
 
 border_blue_100 : Css.Style
 border_blue_100 =
-    Css.borderColor (Css.hex "#ebf8ff")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#ebf8ff")
+        , Css.property "border-color" "rgba(235, 248, 255, var(--border-opacity))"
+        ]
 
 
 border_blue_200 : Css.Style
 border_blue_200 =
-    Css.borderColor (Css.hex "#bee3f8")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#bee3f8")
+        , Css.property "border-color" "rgba(190, 227, 248, var(--border-opacity))"
+        ]
 
 
 border_blue_300 : Css.Style
 border_blue_300 =
-    Css.borderColor (Css.hex "#90cdf4")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#90cdf4")
+        , Css.property "border-color" "rgba(144, 205, 244, var(--border-opacity))"
+        ]
 
 
 border_blue_400 : Css.Style
 border_blue_400 =
-    Css.borderColor (Css.hex "#63b3ed")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#63b3ed")
+        , Css.property "border-color" "rgba(99, 179, 237, var(--border-opacity))"
+        ]
 
 
 border_blue_500 : Css.Style
 border_blue_500 =
-    Css.borderColor (Css.hex "#4299e1")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#4299e1")
+        , Css.property "border-color" "rgba(66, 153, 225, var(--border-opacity))"
+        ]
 
 
 border_blue_600 : Css.Style
 border_blue_600 =
-    Css.borderColor (Css.hex "#3182ce")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#3182ce")
+        , Css.property "border-color" "rgba(49, 130, 206, var(--border-opacity))"
+        ]
 
 
 border_blue_700 : Css.Style
 border_blue_700 =
-    Css.borderColor (Css.hex "#2b6cb0")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#2b6cb0")
+        , Css.property "border-color" "rgba(43, 108, 176, var(--border-opacity))"
+        ]
 
 
 border_blue_800 : Css.Style
 border_blue_800 =
-    Css.borderColor (Css.hex "#2c5282")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#2c5282")
+        , Css.property "border-color" "rgba(44, 82, 130, var(--border-opacity))"
+        ]
 
 
 border_blue_900 : Css.Style
 border_blue_900 =
-    Css.borderColor (Css.hex "#2a4365")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#2a4365")
+        , Css.property "border-color" "rgba(42, 67, 101, var(--border-opacity))"
+        ]
 
 
 border_indigo_100 : Css.Style
 border_indigo_100 =
-    Css.borderColor (Css.hex "#ebf4ff")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#ebf4ff")
+        , Css.property "border-color" "rgba(235, 244, 255, var(--border-opacity))"
+        ]
 
 
 border_indigo_200 : Css.Style
 border_indigo_200 =
-    Css.borderColor (Css.hex "#c3dafe")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#c3dafe")
+        , Css.property "border-color" "rgba(195, 218, 254, var(--border-opacity))"
+        ]
 
 
 border_indigo_300 : Css.Style
 border_indigo_300 =
-    Css.borderColor (Css.hex "#a3bffa")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#a3bffa")
+        , Css.property "border-color" "rgba(163, 191, 250, var(--border-opacity))"
+        ]
 
 
 border_indigo_400 : Css.Style
 border_indigo_400 =
-    Css.borderColor (Css.hex "#7f9cf5")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#7f9cf5")
+        , Css.property "border-color" "rgba(127, 156, 245, var(--border-opacity))"
+        ]
 
 
 border_indigo_500 : Css.Style
 border_indigo_500 =
-    Css.borderColor (Css.hex "#667eea")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#667eea")
+        , Css.property "border-color" "rgba(102, 126, 234, var(--border-opacity))"
+        ]
 
 
 border_indigo_600 : Css.Style
 border_indigo_600 =
-    Css.borderColor (Css.hex "#5a67d8")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#5a67d8")
+        , Css.property "border-color" "rgba(90, 103, 216, var(--border-opacity))"
+        ]
 
 
 border_indigo_700 : Css.Style
 border_indigo_700 =
-    Css.borderColor (Css.hex "#4c51bf")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#4c51bf")
+        , Css.property "border-color" "rgba(76, 81, 191, var(--border-opacity))"
+        ]
 
 
 border_indigo_800 : Css.Style
 border_indigo_800 =
-    Css.borderColor (Css.hex "#434190")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#434190")
+        , Css.property "border-color" "rgba(67, 65, 144, var(--border-opacity))"
+        ]
 
 
 border_indigo_900 : Css.Style
 border_indigo_900 =
-    Css.borderColor (Css.hex "#3c366b")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#3c366b")
+        , Css.property "border-color" "rgba(60, 54, 107, var(--border-opacity))"
+        ]
 
 
 border_purple_100 : Css.Style
 border_purple_100 =
-    Css.borderColor (Css.hex "#faf5ff")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#faf5ff")
+        , Css.property "border-color" "rgba(250, 245, 255, var(--border-opacity))"
+        ]
 
 
 border_purple_200 : Css.Style
 border_purple_200 =
-    Css.borderColor (Css.hex "#e9d8fd")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#e9d8fd")
+        , Css.property "border-color" "rgba(233, 216, 253, var(--border-opacity))"
+        ]
 
 
 border_purple_300 : Css.Style
 border_purple_300 =
-    Css.borderColor (Css.hex "#d6bcfa")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#d6bcfa")
+        , Css.property "border-color" "rgba(214, 188, 250, var(--border-opacity))"
+        ]
 
 
 border_purple_400 : Css.Style
 border_purple_400 =
-    Css.borderColor (Css.hex "#b794f4")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#b794f4")
+        , Css.property "border-color" "rgba(183, 148, 244, var(--border-opacity))"
+        ]
 
 
 border_purple_500 : Css.Style
 border_purple_500 =
-    Css.borderColor (Css.hex "#9f7aea")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#9f7aea")
+        , Css.property "border-color" "rgba(159, 122, 234, var(--border-opacity))"
+        ]
 
 
 border_purple_600 : Css.Style
 border_purple_600 =
-    Css.borderColor (Css.hex "#805ad5")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#805ad5")
+        , Css.property "border-color" "rgba(128, 90, 213, var(--border-opacity))"
+        ]
 
 
 border_purple_700 : Css.Style
 border_purple_700 =
-    Css.borderColor (Css.hex "#6b46c1")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#6b46c1")
+        , Css.property "border-color" "rgba(107, 70, 193, var(--border-opacity))"
+        ]
 
 
 border_purple_800 : Css.Style
 border_purple_800 =
-    Css.borderColor (Css.hex "#553c9a")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#553c9a")
+        , Css.property "border-color" "rgba(85, 60, 154, var(--border-opacity))"
+        ]
 
 
 border_purple_900 : Css.Style
 border_purple_900 =
-    Css.borderColor (Css.hex "#44337a")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#44337a")
+        , Css.property "border-color" "rgba(68, 51, 122, var(--border-opacity))"
+        ]
 
 
 border_pink_100 : Css.Style
 border_pink_100 =
-    Css.borderColor (Css.hex "#fff5f7")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#fff5f7")
+        , Css.property "border-color" "rgba(255, 245, 247, var(--border-opacity))"
+        ]
 
 
 border_pink_200 : Css.Style
 border_pink_200 =
-    Css.borderColor (Css.hex "#fed7e2")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#fed7e2")
+        , Css.property "border-color" "rgba(254, 215, 226, var(--border-opacity))"
+        ]
 
 
 border_pink_300 : Css.Style
 border_pink_300 =
-    Css.borderColor (Css.hex "#fbb6ce")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#fbb6ce")
+        , Css.property "border-color" "rgba(251, 182, 206, var(--border-opacity))"
+        ]
 
 
 border_pink_400 : Css.Style
 border_pink_400 =
-    Css.borderColor (Css.hex "#f687b3")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#f687b3")
+        , Css.property "border-color" "rgba(246, 135, 179, var(--border-opacity))"
+        ]
 
 
 border_pink_500 : Css.Style
 border_pink_500 =
-    Css.borderColor (Css.hex "#ed64a6")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#ed64a6")
+        , Css.property "border-color" "rgba(237, 100, 166, var(--border-opacity))"
+        ]
 
 
 border_pink_600 : Css.Style
 border_pink_600 =
-    Css.borderColor (Css.hex "#d53f8c")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#d53f8c")
+        , Css.property "border-color" "rgba(213, 63, 140, var(--border-opacity))"
+        ]
 
 
 border_pink_700 : Css.Style
 border_pink_700 =
-    Css.borderColor (Css.hex "#b83280")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#b83280")
+        , Css.property "border-color" "rgba(184, 50, 128, var(--border-opacity))"
+        ]
 
 
 border_pink_800 : Css.Style
 border_pink_800 =
-    Css.borderColor (Css.hex "#97266d")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#97266d")
+        , Css.property "border-color" "rgba(151, 38, 109, var(--border-opacity))"
+        ]
 
 
 border_pink_900 : Css.Style
 border_pink_900 =
-    Css.borderColor (Css.hex "#702459")
-
-
-hover__border_transparent : Css.Style
-hover__border_transparent =
-    Css.hover
-        [ Css.borderColor Css.transparent
-        ]
-
-
-hover__border_current : Css.Style
-hover__border_current =
-    Css.hover
-        [ Css.borderColor Css.currentColor
-        ]
-
-
-hover__border_black : Css.Style
-hover__border_black =
-    Css.hover
-        [ Css.borderColor (Css.hex "#000")
-        ]
-
-
-hover__border_white : Css.Style
-hover__border_white =
-    Css.hover
-        [ Css.borderColor (Css.hex "#fff")
-        ]
-
-
-hover__border_gray_100 : Css.Style
-hover__border_gray_100 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#f7fafc")
-        ]
-
-
-hover__border_gray_200 : Css.Style
-hover__border_gray_200 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#edf2f7")
-        ]
-
-
-hover__border_gray_300 : Css.Style
-hover__border_gray_300 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#e2e8f0")
-        ]
-
-
-hover__border_gray_400 : Css.Style
-hover__border_gray_400 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#cbd5e0")
-        ]
-
-
-hover__border_gray_500 : Css.Style
-hover__border_gray_500 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#a0aec0")
-        ]
-
-
-hover__border_gray_600 : Css.Style
-hover__border_gray_600 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#718096")
-        ]
-
-
-hover__border_gray_700 : Css.Style
-hover__border_gray_700 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#4a5568")
-        ]
-
-
-hover__border_gray_800 : Css.Style
-hover__border_gray_800 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#2d3748")
-        ]
-
-
-hover__border_gray_900 : Css.Style
-hover__border_gray_900 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#1a202c")
-        ]
-
-
-hover__border_red_100 : Css.Style
-hover__border_red_100 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#fff5f5")
-        ]
-
-
-hover__border_red_200 : Css.Style
-hover__border_red_200 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#fed7d7")
-        ]
-
-
-hover__border_red_300 : Css.Style
-hover__border_red_300 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#feb2b2")
-        ]
-
-
-hover__border_red_400 : Css.Style
-hover__border_red_400 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#fc8181")
-        ]
-
-
-hover__border_red_500 : Css.Style
-hover__border_red_500 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#f56565")
-        ]
-
-
-hover__border_red_600 : Css.Style
-hover__border_red_600 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#e53e3e")
-        ]
-
-
-hover__border_red_700 : Css.Style
-hover__border_red_700 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#c53030")
-        ]
-
-
-hover__border_red_800 : Css.Style
-hover__border_red_800 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#9b2c2c")
-        ]
-
-
-hover__border_red_900 : Css.Style
-hover__border_red_900 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#742a2a")
-        ]
-
-
-hover__border_orange_100 : Css.Style
-hover__border_orange_100 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#fffaf0")
-        ]
-
-
-hover__border_orange_200 : Css.Style
-hover__border_orange_200 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#feebc8")
-        ]
-
-
-hover__border_orange_300 : Css.Style
-hover__border_orange_300 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#fbd38d")
-        ]
-
-
-hover__border_orange_400 : Css.Style
-hover__border_orange_400 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#f6ad55")
-        ]
-
-
-hover__border_orange_500 : Css.Style
-hover__border_orange_500 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#ed8936")
-        ]
-
-
-hover__border_orange_600 : Css.Style
-hover__border_orange_600 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#dd6b20")
-        ]
-
-
-hover__border_orange_700 : Css.Style
-hover__border_orange_700 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#c05621")
-        ]
-
-
-hover__border_orange_800 : Css.Style
-hover__border_orange_800 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#9c4221")
-        ]
-
-
-hover__border_orange_900 : Css.Style
-hover__border_orange_900 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#7b341e")
-        ]
-
-
-hover__border_yellow_100 : Css.Style
-hover__border_yellow_100 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#fffff0")
-        ]
-
-
-hover__border_yellow_200 : Css.Style
-hover__border_yellow_200 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#fefcbf")
-        ]
-
-
-hover__border_yellow_300 : Css.Style
-hover__border_yellow_300 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#faf089")
-        ]
-
-
-hover__border_yellow_400 : Css.Style
-hover__border_yellow_400 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#f6e05e")
-        ]
-
-
-hover__border_yellow_500 : Css.Style
-hover__border_yellow_500 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#ecc94b")
-        ]
-
-
-hover__border_yellow_600 : Css.Style
-hover__border_yellow_600 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#d69e2e")
-        ]
-
-
-hover__border_yellow_700 : Css.Style
-hover__border_yellow_700 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#b7791f")
-        ]
-
-
-hover__border_yellow_800 : Css.Style
-hover__border_yellow_800 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#975a16")
-        ]
-
-
-hover__border_yellow_900 : Css.Style
-hover__border_yellow_900 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#744210")
-        ]
-
-
-hover__border_green_100 : Css.Style
-hover__border_green_100 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#f0fff4")
-        ]
-
-
-hover__border_green_200 : Css.Style
-hover__border_green_200 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#c6f6d5")
-        ]
-
-
-hover__border_green_300 : Css.Style
-hover__border_green_300 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#9ae6b4")
-        ]
-
-
-hover__border_green_400 : Css.Style
-hover__border_green_400 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#68d391")
-        ]
-
-
-hover__border_green_500 : Css.Style
-hover__border_green_500 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#48bb78")
-        ]
-
-
-hover__border_green_600 : Css.Style
-hover__border_green_600 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#38a169")
-        ]
-
-
-hover__border_green_700 : Css.Style
-hover__border_green_700 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#2f855a")
-        ]
-
-
-hover__border_green_800 : Css.Style
-hover__border_green_800 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#276749")
-        ]
-
-
-hover__border_green_900 : Css.Style
-hover__border_green_900 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#22543d")
-        ]
-
-
-hover__border_teal_100 : Css.Style
-hover__border_teal_100 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#e6fffa")
-        ]
-
-
-hover__border_teal_200 : Css.Style
-hover__border_teal_200 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#b2f5ea")
-        ]
-
-
-hover__border_teal_300 : Css.Style
-hover__border_teal_300 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#81e6d9")
-        ]
-
-
-hover__border_teal_400 : Css.Style
-hover__border_teal_400 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#4fd1c5")
-        ]
-
-
-hover__border_teal_500 : Css.Style
-hover__border_teal_500 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#38b2ac")
-        ]
-
-
-hover__border_teal_600 : Css.Style
-hover__border_teal_600 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#319795")
-        ]
-
-
-hover__border_teal_700 : Css.Style
-hover__border_teal_700 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#2c7a7b")
-        ]
-
-
-hover__border_teal_800 : Css.Style
-hover__border_teal_800 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#285e61")
-        ]
-
-
-hover__border_teal_900 : Css.Style
-hover__border_teal_900 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#234e52")
-        ]
-
-
-hover__border_blue_100 : Css.Style
-hover__border_blue_100 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#ebf8ff")
-        ]
-
-
-hover__border_blue_200 : Css.Style
-hover__border_blue_200 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#bee3f8")
-        ]
-
-
-hover__border_blue_300 : Css.Style
-hover__border_blue_300 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#90cdf4")
-        ]
-
-
-hover__border_blue_400 : Css.Style
-hover__border_blue_400 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#63b3ed")
-        ]
-
-
-hover__border_blue_500 : Css.Style
-hover__border_blue_500 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#4299e1")
-        ]
-
-
-hover__border_blue_600 : Css.Style
-hover__border_blue_600 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#3182ce")
-        ]
-
-
-hover__border_blue_700 : Css.Style
-hover__border_blue_700 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#2b6cb0")
-        ]
-
-
-hover__border_blue_800 : Css.Style
-hover__border_blue_800 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#2c5282")
-        ]
-
-
-hover__border_blue_900 : Css.Style
-hover__border_blue_900 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#2a4365")
-        ]
-
-
-hover__border_indigo_100 : Css.Style
-hover__border_indigo_100 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#ebf4ff")
-        ]
-
-
-hover__border_indigo_200 : Css.Style
-hover__border_indigo_200 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#c3dafe")
-        ]
-
-
-hover__border_indigo_300 : Css.Style
-hover__border_indigo_300 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#a3bffa")
-        ]
-
-
-hover__border_indigo_400 : Css.Style
-hover__border_indigo_400 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#7f9cf5")
-        ]
-
-
-hover__border_indigo_500 : Css.Style
-hover__border_indigo_500 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#667eea")
-        ]
-
-
-hover__border_indigo_600 : Css.Style
-hover__border_indigo_600 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#5a67d8")
-        ]
-
-
-hover__border_indigo_700 : Css.Style
-hover__border_indigo_700 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#4c51bf")
-        ]
-
-
-hover__border_indigo_800 : Css.Style
-hover__border_indigo_800 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#434190")
-        ]
-
-
-hover__border_indigo_900 : Css.Style
-hover__border_indigo_900 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#3c366b")
-        ]
-
-
-hover__border_purple_100 : Css.Style
-hover__border_purple_100 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#faf5ff")
-        ]
-
-
-hover__border_purple_200 : Css.Style
-hover__border_purple_200 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#e9d8fd")
-        ]
-
-
-hover__border_purple_300 : Css.Style
-hover__border_purple_300 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#d6bcfa")
-        ]
-
-
-hover__border_purple_400 : Css.Style
-hover__border_purple_400 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#b794f4")
-        ]
-
-
-hover__border_purple_500 : Css.Style
-hover__border_purple_500 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#9f7aea")
-        ]
-
-
-hover__border_purple_600 : Css.Style
-hover__border_purple_600 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#805ad5")
-        ]
-
-
-hover__border_purple_700 : Css.Style
-hover__border_purple_700 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#6b46c1")
-        ]
-
-
-hover__border_purple_800 : Css.Style
-hover__border_purple_800 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#553c9a")
-        ]
-
-
-hover__border_purple_900 : Css.Style
-hover__border_purple_900 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#44337a")
-        ]
-
-
-hover__border_pink_100 : Css.Style
-hover__border_pink_100 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#fff5f7")
-        ]
-
-
-hover__border_pink_200 : Css.Style
-hover__border_pink_200 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#fed7e2")
-        ]
-
-
-hover__border_pink_300 : Css.Style
-hover__border_pink_300 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#fbb6ce")
-        ]
-
-
-hover__border_pink_400 : Css.Style
-hover__border_pink_400 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#f687b3")
-        ]
-
-
-hover__border_pink_500 : Css.Style
-hover__border_pink_500 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#ed64a6")
-        ]
-
-
-hover__border_pink_600 : Css.Style
-hover__border_pink_600 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#d53f8c")
-        ]
-
-
-hover__border_pink_700 : Css.Style
-hover__border_pink_700 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#b83280")
-        ]
-
-
-hover__border_pink_800 : Css.Style
-hover__border_pink_800 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#97266d")
-        ]
-
-
-hover__border_pink_900 : Css.Style
-hover__border_pink_900 =
-    Css.hover
-        [ Css.borderColor (Css.hex "#702459")
-        ]
-
-
-focus__border_transparent : Css.Style
-focus__border_transparent =
-    Css.focus
-        [ Css.borderColor Css.transparent
-        ]
-
-
-focus__border_current : Css.Style
-focus__border_current =
-    Css.focus
-        [ Css.borderColor Css.currentColor
-        ]
-
-
-focus__border_black : Css.Style
-focus__border_black =
-    Css.focus
-        [ Css.borderColor (Css.hex "#000")
-        ]
-
-
-focus__border_white : Css.Style
-focus__border_white =
-    Css.focus
-        [ Css.borderColor (Css.hex "#fff")
-        ]
-
-
-focus__border_gray_100 : Css.Style
-focus__border_gray_100 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#f7fafc")
+    Css.batch
+        [ Css.property "--border-opacity" "1"
+        , Css.borderColor (Css.hex "#702459")
+        , Css.property "border-color" "rgba(112, 36, 89, var(--border-opacity))"
         ]
 
 
-focus__border_gray_200 : Css.Style
-focus__border_gray_200 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#edf2f7")
-        ]
-
-
-focus__border_gray_300 : Css.Style
-focus__border_gray_300 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#e2e8f0")
-        ]
-
-
-focus__border_gray_400 : Css.Style
-focus__border_gray_400 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#cbd5e0")
-        ]
-
-
-focus__border_gray_500 : Css.Style
-focus__border_gray_500 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#a0aec0")
-        ]
-
-
-focus__border_gray_600 : Css.Style
-focus__border_gray_600 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#718096")
-        ]
-
-
-focus__border_gray_700 : Css.Style
-focus__border_gray_700 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#4a5568")
-        ]
-
-
-focus__border_gray_800 : Css.Style
-focus__border_gray_800 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#2d3748")
-        ]
-
-
-focus__border_gray_900 : Css.Style
-focus__border_gray_900 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#1a202c")
-        ]
-
-
-focus__border_red_100 : Css.Style
-focus__border_red_100 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#fff5f5")
-        ]
-
-
-focus__border_red_200 : Css.Style
-focus__border_red_200 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#fed7d7")
-        ]
-
-
-focus__border_red_300 : Css.Style
-focus__border_red_300 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#feb2b2")
-        ]
-
-
-focus__border_red_400 : Css.Style
-focus__border_red_400 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#fc8181")
-        ]
-
-
-focus__border_red_500 : Css.Style
-focus__border_red_500 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#f56565")
-        ]
-
-
-focus__border_red_600 : Css.Style
-focus__border_red_600 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#e53e3e")
-        ]
-
-
-focus__border_red_700 : Css.Style
-focus__border_red_700 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#c53030")
-        ]
-
-
-focus__border_red_800 : Css.Style
-focus__border_red_800 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#9b2c2c")
-        ]
-
-
-focus__border_red_900 : Css.Style
-focus__border_red_900 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#742a2a")
-        ]
-
-
-focus__border_orange_100 : Css.Style
-focus__border_orange_100 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#fffaf0")
-        ]
-
-
-focus__border_orange_200 : Css.Style
-focus__border_orange_200 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#feebc8")
-        ]
-
-
-focus__border_orange_300 : Css.Style
-focus__border_orange_300 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#fbd38d")
-        ]
-
-
-focus__border_orange_400 : Css.Style
-focus__border_orange_400 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#f6ad55")
-        ]
-
-
-focus__border_orange_500 : Css.Style
-focus__border_orange_500 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#ed8936")
-        ]
-
-
-focus__border_orange_600 : Css.Style
-focus__border_orange_600 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#dd6b20")
-        ]
-
-
-focus__border_orange_700 : Css.Style
-focus__border_orange_700 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#c05621")
-        ]
-
-
-focus__border_orange_800 : Css.Style
-focus__border_orange_800 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#9c4221")
-        ]
-
-
-focus__border_orange_900 : Css.Style
-focus__border_orange_900 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#7b341e")
-        ]
-
-
-focus__border_yellow_100 : Css.Style
-focus__border_yellow_100 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#fffff0")
-        ]
-
-
-focus__border_yellow_200 : Css.Style
-focus__border_yellow_200 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#fefcbf")
-        ]
-
-
-focus__border_yellow_300 : Css.Style
-focus__border_yellow_300 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#faf089")
-        ]
-
-
-focus__border_yellow_400 : Css.Style
-focus__border_yellow_400 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#f6e05e")
-        ]
-
-
-focus__border_yellow_500 : Css.Style
-focus__border_yellow_500 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#ecc94b")
-        ]
-
-
-focus__border_yellow_600 : Css.Style
-focus__border_yellow_600 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#d69e2e")
-        ]
-
-
-focus__border_yellow_700 : Css.Style
-focus__border_yellow_700 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#b7791f")
-        ]
-
-
-focus__border_yellow_800 : Css.Style
-focus__border_yellow_800 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#975a16")
-        ]
-
-
-focus__border_yellow_900 : Css.Style
-focus__border_yellow_900 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#744210")
-        ]
-
-
-focus__border_green_100 : Css.Style
-focus__border_green_100 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#f0fff4")
-        ]
-
-
-focus__border_green_200 : Css.Style
-focus__border_green_200 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#c6f6d5")
-        ]
-
-
-focus__border_green_300 : Css.Style
-focus__border_green_300 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#9ae6b4")
-        ]
-
-
-focus__border_green_400 : Css.Style
-focus__border_green_400 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#68d391")
-        ]
-
-
-focus__border_green_500 : Css.Style
-focus__border_green_500 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#48bb78")
-        ]
-
-
-focus__border_green_600 : Css.Style
-focus__border_green_600 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#38a169")
-        ]
-
-
-focus__border_green_700 : Css.Style
-focus__border_green_700 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#2f855a")
-        ]
-
-
-focus__border_green_800 : Css.Style
-focus__border_green_800 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#276749")
-        ]
-
+border_opacity_0 : Css.Style
+border_opacity_0 =
+    Css.property "--border-opacity" "0"
 
-focus__border_green_900 : Css.Style
-focus__border_green_900 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#22543d")
-        ]
-
-
-focus__border_teal_100 : Css.Style
-focus__border_teal_100 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#e6fffa")
-        ]
-
-
-focus__border_teal_200 : Css.Style
-focus__border_teal_200 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#b2f5ea")
-        ]
-
-
-focus__border_teal_300 : Css.Style
-focus__border_teal_300 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#81e6d9")
-        ]
-
-
-focus__border_teal_400 : Css.Style
-focus__border_teal_400 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#4fd1c5")
-        ]
-
-
-focus__border_teal_500 : Css.Style
-focus__border_teal_500 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#38b2ac")
-        ]
-
-
-focus__border_teal_600 : Css.Style
-focus__border_teal_600 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#319795")
-        ]
-
-
-focus__border_teal_700 : Css.Style
-focus__border_teal_700 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#2c7a7b")
-        ]
-
-
-focus__border_teal_800 : Css.Style
-focus__border_teal_800 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#285e61")
-        ]
-
-
-focus__border_teal_900 : Css.Style
-focus__border_teal_900 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#234e52")
-        ]
-
-
-focus__border_blue_100 : Css.Style
-focus__border_blue_100 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#ebf8ff")
-        ]
-
-
-focus__border_blue_200 : Css.Style
-focus__border_blue_200 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#bee3f8")
-        ]
-
-
-focus__border_blue_300 : Css.Style
-focus__border_blue_300 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#90cdf4")
-        ]
-
-
-focus__border_blue_400 : Css.Style
-focus__border_blue_400 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#63b3ed")
-        ]
-
-
-focus__border_blue_500 : Css.Style
-focus__border_blue_500 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#4299e1")
-        ]
-
-
-focus__border_blue_600 : Css.Style
-focus__border_blue_600 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#3182ce")
-        ]
-
-
-focus__border_blue_700 : Css.Style
-focus__border_blue_700 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#2b6cb0")
-        ]
-
-
-focus__border_blue_800 : Css.Style
-focus__border_blue_800 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#2c5282")
-        ]
-
-
-focus__border_blue_900 : Css.Style
-focus__border_blue_900 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#2a4365")
-        ]
-
-
-focus__border_indigo_100 : Css.Style
-focus__border_indigo_100 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#ebf4ff")
-        ]
-
-
-focus__border_indigo_200 : Css.Style
-focus__border_indigo_200 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#c3dafe")
-        ]
-
-
-focus__border_indigo_300 : Css.Style
-focus__border_indigo_300 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#a3bffa")
-        ]
 
+border_opacity_25 : Css.Style
+border_opacity_25 =
+    Css.property "--border-opacity" "0.25"
 
-focus__border_indigo_400 : Css.Style
-focus__border_indigo_400 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#7f9cf5")
-        ]
-
-
-focus__border_indigo_500 : Css.Style
-focus__border_indigo_500 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#667eea")
-        ]
-
-
-focus__border_indigo_600 : Css.Style
-focus__border_indigo_600 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#5a67d8")
-        ]
-
-
-focus__border_indigo_700 : Css.Style
-focus__border_indigo_700 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#4c51bf")
-        ]
-
-
-focus__border_indigo_800 : Css.Style
-focus__border_indigo_800 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#434190")
-        ]
-
-
-focus__border_indigo_900 : Css.Style
-focus__border_indigo_900 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#3c366b")
-        ]
-
-
-focus__border_purple_100 : Css.Style
-focus__border_purple_100 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#faf5ff")
-        ]
-
-
-focus__border_purple_200 : Css.Style
-focus__border_purple_200 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#e9d8fd")
-        ]
-
-
-focus__border_purple_300 : Css.Style
-focus__border_purple_300 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#d6bcfa")
-        ]
-
-
-focus__border_purple_400 : Css.Style
-focus__border_purple_400 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#b794f4")
-        ]
-
-
-focus__border_purple_500 : Css.Style
-focus__border_purple_500 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#9f7aea")
-        ]
-
 
-focus__border_purple_600 : Css.Style
-focus__border_purple_600 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#805ad5")
-        ]
-
-
-focus__border_purple_700 : Css.Style
-focus__border_purple_700 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#6b46c1")
-        ]
-
-
-focus__border_purple_800 : Css.Style
-focus__border_purple_800 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#553c9a")
-        ]
-
-
-focus__border_purple_900 : Css.Style
-focus__border_purple_900 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#44337a")
-        ]
-
-
-focus__border_pink_100 : Css.Style
-focus__border_pink_100 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#fff5f7")
-        ]
-
-
-focus__border_pink_200 : Css.Style
-focus__border_pink_200 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#fed7e2")
-        ]
+border_opacity_50 : Css.Style
+border_opacity_50 =
+    Css.property "--border-opacity" "0.5"
 
 
-focus__border_pink_300 : Css.Style
-focus__border_pink_300 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#fbb6ce")
-        ]
-
-
-focus__border_pink_400 : Css.Style
-focus__border_pink_400 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#f687b3")
-        ]
-
-
-focus__border_pink_500 : Css.Style
-focus__border_pink_500 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#ed64a6")
-        ]
-
+border_opacity_75 : Css.Style
+border_opacity_75 =
+    Css.property "--border-opacity" "0.75"
 
-focus__border_pink_600 : Css.Style
-focus__border_pink_600 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#d53f8c")
-        ]
-
-
-focus__border_pink_700 : Css.Style
-focus__border_pink_700 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#b83280")
-        ]
 
-
-focus__border_pink_800 : Css.Style
-focus__border_pink_800 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#97266d")
-        ]
-
-
-focus__border_pink_900 : Css.Style
-focus__border_pink_900 =
-    Css.focus
-        [ Css.borderColor (Css.hex "#702459")
-        ]
+border_opacity_100 : Css.Style
+border_opacity_100 =
+    Css.property "--border-opacity" "1"
 
 
 rounded_none : Css.Style
@@ -5216,132 +5277,6 @@ font_extrabold =
 font_black : Css.Style
 font_black =
     Css.fontWeight (Css.int 900)
-
-
-hover__font_hairline : Css.Style
-hover__font_hairline =
-    Css.hover
-        [ Css.fontWeight (Css.int 100)
-        ]
-
-
-hover__font_thin : Css.Style
-hover__font_thin =
-    Css.hover
-        [ Css.fontWeight (Css.int 200)
-        ]
-
-
-hover__font_light : Css.Style
-hover__font_light =
-    Css.hover
-        [ Css.fontWeight (Css.int 300)
-        ]
-
-
-hover__font_normal : Css.Style
-hover__font_normal =
-    Css.hover
-        [ Css.fontWeight (Css.int 400)
-        ]
-
-
-hover__font_medium : Css.Style
-hover__font_medium =
-    Css.hover
-        [ Css.fontWeight (Css.int 500)
-        ]
-
-
-hover__font_semibold : Css.Style
-hover__font_semibold =
-    Css.hover
-        [ Css.fontWeight (Css.int 600)
-        ]
-
-
-hover__font_bold : Css.Style
-hover__font_bold =
-    Css.hover
-        [ Css.fontWeight (Css.int 700)
-        ]
-
-
-hover__font_extrabold : Css.Style
-hover__font_extrabold =
-    Css.hover
-        [ Css.fontWeight (Css.int 800)
-        ]
-
-
-hover__font_black : Css.Style
-hover__font_black =
-    Css.hover
-        [ Css.fontWeight (Css.int 900)
-        ]
-
-
-focus__font_hairline : Css.Style
-focus__font_hairline =
-    Css.focus
-        [ Css.fontWeight (Css.int 100)
-        ]
-
-
-focus__font_thin : Css.Style
-focus__font_thin =
-    Css.focus
-        [ Css.fontWeight (Css.int 200)
-        ]
-
-
-focus__font_light : Css.Style
-focus__font_light =
-    Css.focus
-        [ Css.fontWeight (Css.int 300)
-        ]
-
-
-focus__font_normal : Css.Style
-focus__font_normal =
-    Css.focus
-        [ Css.fontWeight (Css.int 400)
-        ]
-
-
-focus__font_medium : Css.Style
-focus__font_medium =
-    Css.focus
-        [ Css.fontWeight (Css.int 500)
-        ]
-
-
-focus__font_semibold : Css.Style
-focus__font_semibold =
-    Css.focus
-        [ Css.fontWeight (Css.int 600)
-        ]
-
-
-focus__font_bold : Css.Style
-focus__font_bold =
-    Css.focus
-        [ Css.fontWeight (Css.int 700)
-        ]
-
-
-focus__font_extrabold : Css.Style
-focus__font_extrabold =
-    Css.focus
-        [ Css.fontWeight (Css.int 800)
-        ]
-
-
-focus__font_black : Css.Style
-focus__font_black =
-    Css.focus
-        [ Css.fontWeight (Css.int 900)
-        ]
 
 
 h_0 : Css.Style
@@ -7367,86 +7302,9 @@ opacity_100 =
     Css.opacity (Css.int 1)
 
 
-hover__opacity_0 : Css.Style
-hover__opacity_0 =
-    Css.hover
-        [ Css.opacity (Css.int 0)
-        ]
-
-
-hover__opacity_25 : Css.Style
-hover__opacity_25 =
-    Css.hover
-        [ Css.opacity (Css.num 0.25)
-        ]
-
-
-hover__opacity_50 : Css.Style
-hover__opacity_50 =
-    Css.hover
-        [ Css.opacity (Css.num 0.5)
-        ]
-
-
-hover__opacity_75 : Css.Style
-hover__opacity_75 =
-    Css.hover
-        [ Css.opacity (Css.num 0.75)
-        ]
-
-
-hover__opacity_100 : Css.Style
-hover__opacity_100 =
-    Css.hover
-        [ Css.opacity (Css.int 1)
-        ]
-
-
-focus__opacity_0 : Css.Style
-focus__opacity_0 =
-    Css.focus
-        [ Css.opacity (Css.int 0)
-        ]
-
-
-focus__opacity_25 : Css.Style
-focus__opacity_25 =
-    Css.focus
-        [ Css.opacity (Css.num 0.25)
-        ]
-
-
-focus__opacity_50 : Css.Style
-focus__opacity_50 =
-    Css.focus
-        [ Css.opacity (Css.num 0.5)
-        ]
-
-
-focus__opacity_75 : Css.Style
-focus__opacity_75 =
-    Css.focus
-        [ Css.opacity (Css.num 0.75)
-        ]
-
-
-focus__opacity_100 : Css.Style
-focus__opacity_100 =
-    Css.focus
-        [ Css.opacity (Css.int 1)
-        ]
-
-
 outline_none : Css.Style
 outline_none =
     Css.property "outline" "0"
-
-
-focus__outline_none : Css.Style
-focus__outline_none =
-    Css.focus
-        [ Css.property "outline" "0"
-        ]
 
 
 overflow_auto : Css.Style
@@ -8310,1120 +8168,855 @@ placeholder_current =
 
 placeholder_black : Css.Style
 placeholder_black =
-    Css.color (Css.hex "#000")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#000")
+        , Css.property "color" "rgba(0, 0, 0, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_white : Css.Style
 placeholder_white =
-    Css.color (Css.hex "#fff")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#fff")
+        , Css.property "color" "rgba(255, 255, 255, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_gray_100 : Css.Style
 placeholder_gray_100 =
-    Css.color (Css.hex "#f7fafc")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#f7fafc")
+        , Css.property "color" "rgba(247, 250, 252, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_gray_200 : Css.Style
 placeholder_gray_200 =
-    Css.color (Css.hex "#edf2f7")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#edf2f7")
+        , Css.property "color" "rgba(237, 242, 247, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_gray_300 : Css.Style
 placeholder_gray_300 =
-    Css.color (Css.hex "#e2e8f0")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#e2e8f0")
+        , Css.property "color" "rgba(226, 232, 240, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_gray_400 : Css.Style
 placeholder_gray_400 =
-    Css.color (Css.hex "#cbd5e0")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#cbd5e0")
+        , Css.property "color" "rgba(203, 213, 224, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_gray_500 : Css.Style
 placeholder_gray_500 =
-    Css.color (Css.hex "#a0aec0")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#a0aec0")
+        , Css.property "color" "rgba(160, 174, 192, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_gray_600 : Css.Style
 placeholder_gray_600 =
-    Css.color (Css.hex "#718096")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#718096")
+        , Css.property "color" "rgba(113, 128, 150, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_gray_700 : Css.Style
 placeholder_gray_700 =
-    Css.color (Css.hex "#4a5568")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#4a5568")
+        , Css.property "color" "rgba(74, 85, 104, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_gray_800 : Css.Style
 placeholder_gray_800 =
-    Css.color (Css.hex "#2d3748")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#2d3748")
+        , Css.property "color" "rgba(45, 55, 72, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_gray_900 : Css.Style
 placeholder_gray_900 =
-    Css.color (Css.hex "#1a202c")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#1a202c")
+        , Css.property "color" "rgba(26, 32, 44, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_red_100 : Css.Style
 placeholder_red_100 =
-    Css.color (Css.hex "#fff5f5")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#fff5f5")
+        , Css.property "color" "rgba(255, 245, 245, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_red_200 : Css.Style
 placeholder_red_200 =
-    Css.color (Css.hex "#fed7d7")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#fed7d7")
+        , Css.property "color" "rgba(254, 215, 215, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_red_300 : Css.Style
 placeholder_red_300 =
-    Css.color (Css.hex "#feb2b2")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#feb2b2")
+        , Css.property "color" "rgba(254, 178, 178, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_red_400 : Css.Style
 placeholder_red_400 =
-    Css.color (Css.hex "#fc8181")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#fc8181")
+        , Css.property "color" "rgba(252, 129, 129, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_red_500 : Css.Style
 placeholder_red_500 =
-    Css.color (Css.hex "#f56565")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#f56565")
+        , Css.property "color" "rgba(245, 101, 101, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_red_600 : Css.Style
 placeholder_red_600 =
-    Css.color (Css.hex "#e53e3e")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#e53e3e")
+        , Css.property "color" "rgba(229, 62, 62, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_red_700 : Css.Style
 placeholder_red_700 =
-    Css.color (Css.hex "#c53030")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#c53030")
+        , Css.property "color" "rgba(197, 48, 48, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_red_800 : Css.Style
 placeholder_red_800 =
-    Css.color (Css.hex "#9b2c2c")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#9b2c2c")
+        , Css.property "color" "rgba(155, 44, 44, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_red_900 : Css.Style
 placeholder_red_900 =
-    Css.color (Css.hex "#742a2a")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#742a2a")
+        , Css.property "color" "rgba(116, 42, 42, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_orange_100 : Css.Style
 placeholder_orange_100 =
-    Css.color (Css.hex "#fffaf0")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#fffaf0")
+        , Css.property "color" "rgba(255, 250, 240, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_orange_200 : Css.Style
 placeholder_orange_200 =
-    Css.color (Css.hex "#feebc8")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#feebc8")
+        , Css.property "color" "rgba(254, 235, 200, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_orange_300 : Css.Style
 placeholder_orange_300 =
-    Css.color (Css.hex "#fbd38d")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#fbd38d")
+        , Css.property "color" "rgba(251, 211, 141, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_orange_400 : Css.Style
 placeholder_orange_400 =
-    Css.color (Css.hex "#f6ad55")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#f6ad55")
+        , Css.property "color" "rgba(246, 173, 85, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_orange_500 : Css.Style
 placeholder_orange_500 =
-    Css.color (Css.hex "#ed8936")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#ed8936")
+        , Css.property "color" "rgba(237, 137, 54, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_orange_600 : Css.Style
 placeholder_orange_600 =
-    Css.color (Css.hex "#dd6b20")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#dd6b20")
+        , Css.property "color" "rgba(221, 107, 32, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_orange_700 : Css.Style
 placeholder_orange_700 =
-    Css.color (Css.hex "#c05621")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#c05621")
+        , Css.property "color" "rgba(192, 86, 33, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_orange_800 : Css.Style
 placeholder_orange_800 =
-    Css.color (Css.hex "#9c4221")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#9c4221")
+        , Css.property "color" "rgba(156, 66, 33, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_orange_900 : Css.Style
 placeholder_orange_900 =
-    Css.color (Css.hex "#7b341e")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#7b341e")
+        , Css.property "color" "rgba(123, 52, 30, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_yellow_100 : Css.Style
 placeholder_yellow_100 =
-    Css.color (Css.hex "#fffff0")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#fffff0")
+        , Css.property "color" "rgba(255, 255, 240, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_yellow_200 : Css.Style
 placeholder_yellow_200 =
-    Css.color (Css.hex "#fefcbf")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#fefcbf")
+        , Css.property "color" "rgba(254, 252, 191, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_yellow_300 : Css.Style
 placeholder_yellow_300 =
-    Css.color (Css.hex "#faf089")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#faf089")
+        , Css.property "color" "rgba(250, 240, 137, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_yellow_400 : Css.Style
 placeholder_yellow_400 =
-    Css.color (Css.hex "#f6e05e")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#f6e05e")
+        , Css.property "color" "rgba(246, 224, 94, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_yellow_500 : Css.Style
 placeholder_yellow_500 =
-    Css.color (Css.hex "#ecc94b")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#ecc94b")
+        , Css.property "color" "rgba(236, 201, 75, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_yellow_600 : Css.Style
 placeholder_yellow_600 =
-    Css.color (Css.hex "#d69e2e")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#d69e2e")
+        , Css.property "color" "rgba(214, 158, 46, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_yellow_700 : Css.Style
 placeholder_yellow_700 =
-    Css.color (Css.hex "#b7791f")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#b7791f")
+        , Css.property "color" "rgba(183, 121, 31, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_yellow_800 : Css.Style
 placeholder_yellow_800 =
-    Css.color (Css.hex "#975a16")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#975a16")
+        , Css.property "color" "rgba(151, 90, 22, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_yellow_900 : Css.Style
 placeholder_yellow_900 =
-    Css.color (Css.hex "#744210")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#744210")
+        , Css.property "color" "rgba(116, 66, 16, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_green_100 : Css.Style
 placeholder_green_100 =
-    Css.color (Css.hex "#f0fff4")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#f0fff4")
+        , Css.property "color" "rgba(240, 255, 244, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_green_200 : Css.Style
 placeholder_green_200 =
-    Css.color (Css.hex "#c6f6d5")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#c6f6d5")
+        , Css.property "color" "rgba(198, 246, 213, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_green_300 : Css.Style
 placeholder_green_300 =
-    Css.color (Css.hex "#9ae6b4")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#9ae6b4")
+        , Css.property "color" "rgba(154, 230, 180, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_green_400 : Css.Style
 placeholder_green_400 =
-    Css.color (Css.hex "#68d391")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#68d391")
+        , Css.property "color" "rgba(104, 211, 145, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_green_500 : Css.Style
 placeholder_green_500 =
-    Css.color (Css.hex "#48bb78")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#48bb78")
+        , Css.property "color" "rgba(72, 187, 120, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_green_600 : Css.Style
 placeholder_green_600 =
-    Css.color (Css.hex "#38a169")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#38a169")
+        , Css.property "color" "rgba(56, 161, 105, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_green_700 : Css.Style
 placeholder_green_700 =
-    Css.color (Css.hex "#2f855a")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#2f855a")
+        , Css.property "color" "rgba(47, 133, 90, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_green_800 : Css.Style
 placeholder_green_800 =
-    Css.color (Css.hex "#276749")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#276749")
+        , Css.property "color" "rgba(39, 103, 73, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_green_900 : Css.Style
 placeholder_green_900 =
-    Css.color (Css.hex "#22543d")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#22543d")
+        , Css.property "color" "rgba(34, 84, 61, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_teal_100 : Css.Style
 placeholder_teal_100 =
-    Css.color (Css.hex "#e6fffa")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#e6fffa")
+        , Css.property "color" "rgba(230, 255, 250, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_teal_200 : Css.Style
 placeholder_teal_200 =
-    Css.color (Css.hex "#b2f5ea")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#b2f5ea")
+        , Css.property "color" "rgba(178, 245, 234, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_teal_300 : Css.Style
 placeholder_teal_300 =
-    Css.color (Css.hex "#81e6d9")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#81e6d9")
+        , Css.property "color" "rgba(129, 230, 217, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_teal_400 : Css.Style
 placeholder_teal_400 =
-    Css.color (Css.hex "#4fd1c5")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#4fd1c5")
+        , Css.property "color" "rgba(79, 209, 197, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_teal_500 : Css.Style
 placeholder_teal_500 =
-    Css.color (Css.hex "#38b2ac")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#38b2ac")
+        , Css.property "color" "rgba(56, 178, 172, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_teal_600 : Css.Style
 placeholder_teal_600 =
-    Css.color (Css.hex "#319795")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#319795")
+        , Css.property "color" "rgba(49, 151, 149, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_teal_700 : Css.Style
 placeholder_teal_700 =
-    Css.color (Css.hex "#2c7a7b")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#2c7a7b")
+        , Css.property "color" "rgba(44, 122, 123, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_teal_800 : Css.Style
 placeholder_teal_800 =
-    Css.color (Css.hex "#285e61")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#285e61")
+        , Css.property "color" "rgba(40, 94, 97, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_teal_900 : Css.Style
 placeholder_teal_900 =
-    Css.color (Css.hex "#234e52")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#234e52")
+        , Css.property "color" "rgba(35, 78, 82, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_blue_100 : Css.Style
 placeholder_blue_100 =
-    Css.color (Css.hex "#ebf8ff")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#ebf8ff")
+        , Css.property "color" "rgba(235, 248, 255, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_blue_200 : Css.Style
 placeholder_blue_200 =
-    Css.color (Css.hex "#bee3f8")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#bee3f8")
+        , Css.property "color" "rgba(190, 227, 248, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_blue_300 : Css.Style
 placeholder_blue_300 =
-    Css.color (Css.hex "#90cdf4")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#90cdf4")
+        , Css.property "color" "rgba(144, 205, 244, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_blue_400 : Css.Style
 placeholder_blue_400 =
-    Css.color (Css.hex "#63b3ed")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#63b3ed")
+        , Css.property "color" "rgba(99, 179, 237, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_blue_500 : Css.Style
 placeholder_blue_500 =
-    Css.color (Css.hex "#4299e1")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#4299e1")
+        , Css.property "color" "rgba(66, 153, 225, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_blue_600 : Css.Style
 placeholder_blue_600 =
-    Css.color (Css.hex "#3182ce")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#3182ce")
+        , Css.property "color" "rgba(49, 130, 206, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_blue_700 : Css.Style
 placeholder_blue_700 =
-    Css.color (Css.hex "#2b6cb0")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#2b6cb0")
+        , Css.property "color" "rgba(43, 108, 176, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_blue_800 : Css.Style
 placeholder_blue_800 =
-    Css.color (Css.hex "#2c5282")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#2c5282")
+        , Css.property "color" "rgba(44, 82, 130, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_blue_900 : Css.Style
 placeholder_blue_900 =
-    Css.color (Css.hex "#2a4365")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#2a4365")
+        , Css.property "color" "rgba(42, 67, 101, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_indigo_100 : Css.Style
 placeholder_indigo_100 =
-    Css.color (Css.hex "#ebf4ff")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#ebf4ff")
+        , Css.property "color" "rgba(235, 244, 255, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_indigo_200 : Css.Style
 placeholder_indigo_200 =
-    Css.color (Css.hex "#c3dafe")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#c3dafe")
+        , Css.property "color" "rgba(195, 218, 254, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_indigo_300 : Css.Style
 placeholder_indigo_300 =
-    Css.color (Css.hex "#a3bffa")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#a3bffa")
+        , Css.property "color" "rgba(163, 191, 250, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_indigo_400 : Css.Style
 placeholder_indigo_400 =
-    Css.color (Css.hex "#7f9cf5")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#7f9cf5")
+        , Css.property "color" "rgba(127, 156, 245, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_indigo_500 : Css.Style
 placeholder_indigo_500 =
-    Css.color (Css.hex "#667eea")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#667eea")
+        , Css.property "color" "rgba(102, 126, 234, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_indigo_600 : Css.Style
 placeholder_indigo_600 =
-    Css.color (Css.hex "#5a67d8")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#5a67d8")
+        , Css.property "color" "rgba(90, 103, 216, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_indigo_700 : Css.Style
 placeholder_indigo_700 =
-    Css.color (Css.hex "#4c51bf")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#4c51bf")
+        , Css.property "color" "rgba(76, 81, 191, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_indigo_800 : Css.Style
 placeholder_indigo_800 =
-    Css.color (Css.hex "#434190")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#434190")
+        , Css.property "color" "rgba(67, 65, 144, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_indigo_900 : Css.Style
 placeholder_indigo_900 =
-    Css.color (Css.hex "#3c366b")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#3c366b")
+        , Css.property "color" "rgba(60, 54, 107, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_purple_100 : Css.Style
 placeholder_purple_100 =
-    Css.color (Css.hex "#faf5ff")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#faf5ff")
+        , Css.property "color" "rgba(250, 245, 255, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_purple_200 : Css.Style
 placeholder_purple_200 =
-    Css.color (Css.hex "#e9d8fd")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#e9d8fd")
+        , Css.property "color" "rgba(233, 216, 253, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_purple_300 : Css.Style
 placeholder_purple_300 =
-    Css.color (Css.hex "#d6bcfa")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#d6bcfa")
+        , Css.property "color" "rgba(214, 188, 250, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_purple_400 : Css.Style
 placeholder_purple_400 =
-    Css.color (Css.hex "#b794f4")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#b794f4")
+        , Css.property "color" "rgba(183, 148, 244, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_purple_500 : Css.Style
 placeholder_purple_500 =
-    Css.color (Css.hex "#9f7aea")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#9f7aea")
+        , Css.property "color" "rgba(159, 122, 234, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_purple_600 : Css.Style
 placeholder_purple_600 =
-    Css.color (Css.hex "#805ad5")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#805ad5")
+        , Css.property "color" "rgba(128, 90, 213, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_purple_700 : Css.Style
 placeholder_purple_700 =
-    Css.color (Css.hex "#6b46c1")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#6b46c1")
+        , Css.property "color" "rgba(107, 70, 193, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_purple_800 : Css.Style
 placeholder_purple_800 =
-    Css.color (Css.hex "#553c9a")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#553c9a")
+        , Css.property "color" "rgba(85, 60, 154, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_purple_900 : Css.Style
 placeholder_purple_900 =
-    Css.color (Css.hex "#44337a")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#44337a")
+        , Css.property "color" "rgba(68, 51, 122, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_pink_100 : Css.Style
 placeholder_pink_100 =
-    Css.color (Css.hex "#fff5f7")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#fff5f7")
+        , Css.property "color" "rgba(255, 245, 247, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_pink_200 : Css.Style
 placeholder_pink_200 =
-    Css.color (Css.hex "#fed7e2")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#fed7e2")
+        , Css.property "color" "rgba(254, 215, 226, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_pink_300 : Css.Style
 placeholder_pink_300 =
-    Css.color (Css.hex "#fbb6ce")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#fbb6ce")
+        , Css.property "color" "rgba(251, 182, 206, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_pink_400 : Css.Style
 placeholder_pink_400 =
-    Css.color (Css.hex "#f687b3")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#f687b3")
+        , Css.property "color" "rgba(246, 135, 179, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_pink_500 : Css.Style
 placeholder_pink_500 =
-    Css.color (Css.hex "#ed64a6")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#ed64a6")
+        , Css.property "color" "rgba(237, 100, 166, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_pink_600 : Css.Style
 placeholder_pink_600 =
-    Css.color (Css.hex "#d53f8c")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#d53f8c")
+        , Css.property "color" "rgba(213, 63, 140, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_pink_700 : Css.Style
 placeholder_pink_700 =
-    Css.color (Css.hex "#b83280")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#b83280")
+        , Css.property "color" "rgba(184, 50, 128, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_pink_800 : Css.Style
 placeholder_pink_800 =
-    Css.color (Css.hex "#97266d")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#97266d")
+        , Css.property "color" "rgba(151, 38, 109, var(--placeholder-opacity))"
+        ]
 
 
 placeholder_pink_900 : Css.Style
 placeholder_pink_900 =
-    Css.color (Css.hex "#702459")
-
-
-focus__placeholder_transparent : Css.Style
-focus__placeholder_transparent =
-    Css.focus
-        [ Css.color Css.transparent
-        ]
-
-
-focus__placeholder_current : Css.Style
-focus__placeholder_current =
-    Css.focus
-        [ Css.color Css.currentColor
-        ]
-
-
-focus__placeholder_black : Css.Style
-focus__placeholder_black =
-    Css.focus
-        [ Css.color (Css.hex "#000")
-        ]
-
-
-focus__placeholder_white : Css.Style
-focus__placeholder_white =
-    Css.focus
-        [ Css.color (Css.hex "#fff")
-        ]
-
-
-focus__placeholder_gray_100 : Css.Style
-focus__placeholder_gray_100 =
-    Css.focus
-        [ Css.color (Css.hex "#f7fafc")
-        ]
-
-
-focus__placeholder_gray_200 : Css.Style
-focus__placeholder_gray_200 =
-    Css.focus
-        [ Css.color (Css.hex "#edf2f7")
-        ]
-
-
-focus__placeholder_gray_300 : Css.Style
-focus__placeholder_gray_300 =
-    Css.focus
-        [ Css.color (Css.hex "#e2e8f0")
-        ]
-
-
-focus__placeholder_gray_400 : Css.Style
-focus__placeholder_gray_400 =
-    Css.focus
-        [ Css.color (Css.hex "#cbd5e0")
-        ]
-
-
-focus__placeholder_gray_500 : Css.Style
-focus__placeholder_gray_500 =
-    Css.focus
-        [ Css.color (Css.hex "#a0aec0")
-        ]
-
-
-focus__placeholder_gray_600 : Css.Style
-focus__placeholder_gray_600 =
-    Css.focus
-        [ Css.color (Css.hex "#718096")
-        ]
-
-
-focus__placeholder_gray_700 : Css.Style
-focus__placeholder_gray_700 =
-    Css.focus
-        [ Css.color (Css.hex "#4a5568")
-        ]
-
-
-focus__placeholder_gray_800 : Css.Style
-focus__placeholder_gray_800 =
-    Css.focus
-        [ Css.color (Css.hex "#2d3748")
-        ]
-
-
-focus__placeholder_gray_900 : Css.Style
-focus__placeholder_gray_900 =
-    Css.focus
-        [ Css.color (Css.hex "#1a202c")
-        ]
-
-
-focus__placeholder_red_100 : Css.Style
-focus__placeholder_red_100 =
-    Css.focus
-        [ Css.color (Css.hex "#fff5f5")
-        ]
-
-
-focus__placeholder_red_200 : Css.Style
-focus__placeholder_red_200 =
-    Css.focus
-        [ Css.color (Css.hex "#fed7d7")
-        ]
-
-
-focus__placeholder_red_300 : Css.Style
-focus__placeholder_red_300 =
-    Css.focus
-        [ Css.color (Css.hex "#feb2b2")
-        ]
-
-
-focus__placeholder_red_400 : Css.Style
-focus__placeholder_red_400 =
-    Css.focus
-        [ Css.color (Css.hex "#fc8181")
-        ]
-
-
-focus__placeholder_red_500 : Css.Style
-focus__placeholder_red_500 =
-    Css.focus
-        [ Css.color (Css.hex "#f56565")
-        ]
-
-
-focus__placeholder_red_600 : Css.Style
-focus__placeholder_red_600 =
-    Css.focus
-        [ Css.color (Css.hex "#e53e3e")
-        ]
-
-
-focus__placeholder_red_700 : Css.Style
-focus__placeholder_red_700 =
-    Css.focus
-        [ Css.color (Css.hex "#c53030")
-        ]
-
-
-focus__placeholder_red_800 : Css.Style
-focus__placeholder_red_800 =
-    Css.focus
-        [ Css.color (Css.hex "#9b2c2c")
-        ]
-
-
-focus__placeholder_red_900 : Css.Style
-focus__placeholder_red_900 =
-    Css.focus
-        [ Css.color (Css.hex "#742a2a")
-        ]
-
-
-focus__placeholder_orange_100 : Css.Style
-focus__placeholder_orange_100 =
-    Css.focus
-        [ Css.color (Css.hex "#fffaf0")
-        ]
-
-
-focus__placeholder_orange_200 : Css.Style
-focus__placeholder_orange_200 =
-    Css.focus
-        [ Css.color (Css.hex "#feebc8")
-        ]
-
-
-focus__placeholder_orange_300 : Css.Style
-focus__placeholder_orange_300 =
-    Css.focus
-        [ Css.color (Css.hex "#fbd38d")
-        ]
-
-
-focus__placeholder_orange_400 : Css.Style
-focus__placeholder_orange_400 =
-    Css.focus
-        [ Css.color (Css.hex "#f6ad55")
-        ]
-
-
-focus__placeholder_orange_500 : Css.Style
-focus__placeholder_orange_500 =
-    Css.focus
-        [ Css.color (Css.hex "#ed8936")
-        ]
-
-
-focus__placeholder_orange_600 : Css.Style
-focus__placeholder_orange_600 =
-    Css.focus
-        [ Css.color (Css.hex "#dd6b20")
-        ]
-
-
-focus__placeholder_orange_700 : Css.Style
-focus__placeholder_orange_700 =
-    Css.focus
-        [ Css.color (Css.hex "#c05621")
-        ]
-
-
-focus__placeholder_orange_800 : Css.Style
-focus__placeholder_orange_800 =
-    Css.focus
-        [ Css.color (Css.hex "#9c4221")
-        ]
-
-
-focus__placeholder_orange_900 : Css.Style
-focus__placeholder_orange_900 =
-    Css.focus
-        [ Css.color (Css.hex "#7b341e")
-        ]
-
-
-focus__placeholder_yellow_100 : Css.Style
-focus__placeholder_yellow_100 =
-    Css.focus
-        [ Css.color (Css.hex "#fffff0")
-        ]
-
-
-focus__placeholder_yellow_200 : Css.Style
-focus__placeholder_yellow_200 =
-    Css.focus
-        [ Css.color (Css.hex "#fefcbf")
-        ]
-
-
-focus__placeholder_yellow_300 : Css.Style
-focus__placeholder_yellow_300 =
-    Css.focus
-        [ Css.color (Css.hex "#faf089")
-        ]
-
-
-focus__placeholder_yellow_400 : Css.Style
-focus__placeholder_yellow_400 =
-    Css.focus
-        [ Css.color (Css.hex "#f6e05e")
-        ]
-
-
-focus__placeholder_yellow_500 : Css.Style
-focus__placeholder_yellow_500 =
-    Css.focus
-        [ Css.color (Css.hex "#ecc94b")
-        ]
-
-
-focus__placeholder_yellow_600 : Css.Style
-focus__placeholder_yellow_600 =
-    Css.focus
-        [ Css.color (Css.hex "#d69e2e")
-        ]
-
-
-focus__placeholder_yellow_700 : Css.Style
-focus__placeholder_yellow_700 =
-    Css.focus
-        [ Css.color (Css.hex "#b7791f")
-        ]
-
-
-focus__placeholder_yellow_800 : Css.Style
-focus__placeholder_yellow_800 =
-    Css.focus
-        [ Css.color (Css.hex "#975a16")
-        ]
-
-
-focus__placeholder_yellow_900 : Css.Style
-focus__placeholder_yellow_900 =
-    Css.focus
-        [ Css.color (Css.hex "#744210")
-        ]
-
-
-focus__placeholder_green_100 : Css.Style
-focus__placeholder_green_100 =
-    Css.focus
-        [ Css.color (Css.hex "#f0fff4")
-        ]
-
-
-focus__placeholder_green_200 : Css.Style
-focus__placeholder_green_200 =
-    Css.focus
-        [ Css.color (Css.hex "#c6f6d5")
-        ]
-
-
-focus__placeholder_green_300 : Css.Style
-focus__placeholder_green_300 =
-    Css.focus
-        [ Css.color (Css.hex "#9ae6b4")
-        ]
-
-
-focus__placeholder_green_400 : Css.Style
-focus__placeholder_green_400 =
-    Css.focus
-        [ Css.color (Css.hex "#68d391")
-        ]
-
-
-focus__placeholder_green_500 : Css.Style
-focus__placeholder_green_500 =
-    Css.focus
-        [ Css.color (Css.hex "#48bb78")
-        ]
-
-
-focus__placeholder_green_600 : Css.Style
-focus__placeholder_green_600 =
-    Css.focus
-        [ Css.color (Css.hex "#38a169")
-        ]
-
-
-focus__placeholder_green_700 : Css.Style
-focus__placeholder_green_700 =
-    Css.focus
-        [ Css.color (Css.hex "#2f855a")
-        ]
-
-
-focus__placeholder_green_800 : Css.Style
-focus__placeholder_green_800 =
-    Css.focus
-        [ Css.color (Css.hex "#276749")
-        ]
-
-
-focus__placeholder_green_900 : Css.Style
-focus__placeholder_green_900 =
-    Css.focus
-        [ Css.color (Css.hex "#22543d")
-        ]
-
-
-focus__placeholder_teal_100 : Css.Style
-focus__placeholder_teal_100 =
-    Css.focus
-        [ Css.color (Css.hex "#e6fffa")
-        ]
-
-
-focus__placeholder_teal_200 : Css.Style
-focus__placeholder_teal_200 =
-    Css.focus
-        [ Css.color (Css.hex "#b2f5ea")
-        ]
-
-
-focus__placeholder_teal_300 : Css.Style
-focus__placeholder_teal_300 =
-    Css.focus
-        [ Css.color (Css.hex "#81e6d9")
-        ]
-
-
-focus__placeholder_teal_400 : Css.Style
-focus__placeholder_teal_400 =
-    Css.focus
-        [ Css.color (Css.hex "#4fd1c5")
-        ]
-
-
-focus__placeholder_teal_500 : Css.Style
-focus__placeholder_teal_500 =
-    Css.focus
-        [ Css.color (Css.hex "#38b2ac")
-        ]
-
-
-focus__placeholder_teal_600 : Css.Style
-focus__placeholder_teal_600 =
-    Css.focus
-        [ Css.color (Css.hex "#319795")
-        ]
-
-
-focus__placeholder_teal_700 : Css.Style
-focus__placeholder_teal_700 =
-    Css.focus
-        [ Css.color (Css.hex "#2c7a7b")
-        ]
-
-
-focus__placeholder_teal_800 : Css.Style
-focus__placeholder_teal_800 =
-    Css.focus
-        [ Css.color (Css.hex "#285e61")
-        ]
-
-
-focus__placeholder_teal_900 : Css.Style
-focus__placeholder_teal_900 =
-    Css.focus
-        [ Css.color (Css.hex "#234e52")
-        ]
-
-
-focus__placeholder_blue_100 : Css.Style
-focus__placeholder_blue_100 =
-    Css.focus
-        [ Css.color (Css.hex "#ebf8ff")
-        ]
-
-
-focus__placeholder_blue_200 : Css.Style
-focus__placeholder_blue_200 =
-    Css.focus
-        [ Css.color (Css.hex "#bee3f8")
-        ]
-
-
-focus__placeholder_blue_300 : Css.Style
-focus__placeholder_blue_300 =
-    Css.focus
-        [ Css.color (Css.hex "#90cdf4")
-        ]
-
-
-focus__placeholder_blue_400 : Css.Style
-focus__placeholder_blue_400 =
-    Css.focus
-        [ Css.color (Css.hex "#63b3ed")
-        ]
-
-
-focus__placeholder_blue_500 : Css.Style
-focus__placeholder_blue_500 =
-    Css.focus
-        [ Css.color (Css.hex "#4299e1")
-        ]
-
-
-focus__placeholder_blue_600 : Css.Style
-focus__placeholder_blue_600 =
-    Css.focus
-        [ Css.color (Css.hex "#3182ce")
-        ]
-
-
-focus__placeholder_blue_700 : Css.Style
-focus__placeholder_blue_700 =
-    Css.focus
-        [ Css.color (Css.hex "#2b6cb0")
-        ]
-
-
-focus__placeholder_blue_800 : Css.Style
-focus__placeholder_blue_800 =
-    Css.focus
-        [ Css.color (Css.hex "#2c5282")
-        ]
-
-
-focus__placeholder_blue_900 : Css.Style
-focus__placeholder_blue_900 =
-    Css.focus
-        [ Css.color (Css.hex "#2a4365")
-        ]
-
-
-focus__placeholder_indigo_100 : Css.Style
-focus__placeholder_indigo_100 =
-    Css.focus
-        [ Css.color (Css.hex "#ebf4ff")
+    Css.batch
+        [ Css.property "--placeholder-opacity" "1"
+        , Css.color (Css.hex "#702459")
+        , Css.property "color" "rgba(112, 36, 89, var(--placeholder-opacity))"
         ]
 
 
-focus__placeholder_indigo_200 : Css.Style
-focus__placeholder_indigo_200 =
-    Css.focus
-        [ Css.color (Css.hex "#c3dafe")
-        ]
-
-
-focus__placeholder_indigo_300 : Css.Style
-focus__placeholder_indigo_300 =
-    Css.focus
-        [ Css.color (Css.hex "#a3bffa")
-        ]
-
-
-focus__placeholder_indigo_400 : Css.Style
-focus__placeholder_indigo_400 =
-    Css.focus
-        [ Css.color (Css.hex "#7f9cf5")
-        ]
-
-
-focus__placeholder_indigo_500 : Css.Style
-focus__placeholder_indigo_500 =
-    Css.focus
-        [ Css.color (Css.hex "#667eea")
-        ]
-
-
-focus__placeholder_indigo_600 : Css.Style
-focus__placeholder_indigo_600 =
-    Css.focus
-        [ Css.color (Css.hex "#5a67d8")
-        ]
-
-
-focus__placeholder_indigo_700 : Css.Style
-focus__placeholder_indigo_700 =
-    Css.focus
-        [ Css.color (Css.hex "#4c51bf")
-        ]
-
-
-focus__placeholder_indigo_800 : Css.Style
-focus__placeholder_indigo_800 =
-    Css.focus
-        [ Css.color (Css.hex "#434190")
-        ]
-
-
-focus__placeholder_indigo_900 : Css.Style
-focus__placeholder_indigo_900 =
-    Css.focus
-        [ Css.color (Css.hex "#3c366b")
-        ]
-
-
-focus__placeholder_purple_100 : Css.Style
-focus__placeholder_purple_100 =
-    Css.focus
-        [ Css.color (Css.hex "#faf5ff")
-        ]
-
-
-focus__placeholder_purple_200 : Css.Style
-focus__placeholder_purple_200 =
-    Css.focus
-        [ Css.color (Css.hex "#e9d8fd")
-        ]
-
-
-focus__placeholder_purple_300 : Css.Style
-focus__placeholder_purple_300 =
-    Css.focus
-        [ Css.color (Css.hex "#d6bcfa")
-        ]
-
-
-focus__placeholder_purple_400 : Css.Style
-focus__placeholder_purple_400 =
-    Css.focus
-        [ Css.color (Css.hex "#b794f4")
-        ]
+placeholder_opacity_0 : Css.Style
+placeholder_opacity_0 =
+    Css.property "--placeholder-opacity" "0"
 
 
-focus__placeholder_purple_500 : Css.Style
-focus__placeholder_purple_500 =
-    Css.focus
-        [ Css.color (Css.hex "#9f7aea")
-        ]
-
-
-focus__placeholder_purple_600 : Css.Style
-focus__placeholder_purple_600 =
-    Css.focus
-        [ Css.color (Css.hex "#805ad5")
-        ]
-
-
-focus__placeholder_purple_700 : Css.Style
-focus__placeholder_purple_700 =
-    Css.focus
-        [ Css.color (Css.hex "#6b46c1")
-        ]
-
-
-focus__placeholder_purple_800 : Css.Style
-focus__placeholder_purple_800 =
-    Css.focus
-        [ Css.color (Css.hex "#553c9a")
-        ]
-
-
-focus__placeholder_purple_900 : Css.Style
-focus__placeholder_purple_900 =
-    Css.focus
-        [ Css.color (Css.hex "#44337a")
-        ]
-
-
-focus__placeholder_pink_100 : Css.Style
-focus__placeholder_pink_100 =
-    Css.focus
-        [ Css.color (Css.hex "#fff5f7")
-        ]
-
+placeholder_opacity_25 : Css.Style
+placeholder_opacity_25 =
+    Css.property "--placeholder-opacity" "0.25"
 
-focus__placeholder_pink_200 : Css.Style
-focus__placeholder_pink_200 =
-    Css.focus
-        [ Css.color (Css.hex "#fed7e2")
-        ]
-
-
-focus__placeholder_pink_300 : Css.Style
-focus__placeholder_pink_300 =
-    Css.focus
-        [ Css.color (Css.hex "#fbb6ce")
-        ]
-
-
-focus__placeholder_pink_400 : Css.Style
-focus__placeholder_pink_400 =
-    Css.focus
-        [ Css.color (Css.hex "#f687b3")
-        ]
-
 
-focus__placeholder_pink_500 : Css.Style
-focus__placeholder_pink_500 =
-    Css.focus
-        [ Css.color (Css.hex "#ed64a6")
-        ]
-
-
-focus__placeholder_pink_600 : Css.Style
-focus__placeholder_pink_600 =
-    Css.focus
-        [ Css.color (Css.hex "#d53f8c")
-        ]
+placeholder_opacity_50 : Css.Style
+placeholder_opacity_50 =
+    Css.property "--placeholder-opacity" "0.5"
 
 
-focus__placeholder_pink_700 : Css.Style
-focus__placeholder_pink_700 =
-    Css.focus
-        [ Css.color (Css.hex "#b83280")
-        ]
-
+placeholder_opacity_75 : Css.Style
+placeholder_opacity_75 =
+    Css.property "--placeholder-opacity" "0.75"
 
-focus__placeholder_pink_800 : Css.Style
-focus__placeholder_pink_800 =
-    Css.focus
-        [ Css.color (Css.hex "#97266d")
-        ]
 
-
-focus__placeholder_pink_900 : Css.Style
-focus__placeholder_pink_900 =
-    Css.focus
-        [ Css.color (Css.hex "#702459")
-        ]
+placeholder_opacity_100 : Css.Style
+placeholder_opacity_100 =
+    Css.property "--placeholder-opacity" "1"
 
 
 pointer_events_none : Css.Style
@@ -9623,146 +9216,6 @@ shadow_none =
     Css.property "box-shadow" "none"
 
 
-hover__shadow_xs : Css.Style
-hover__shadow_xs =
-    Css.hover
-        [ Css.property "box-shadow" "0 0 0 1px rgba(0, 0, 0, 0.05)"
-        ]
-
-
-hover__shadow_sm : Css.Style
-hover__shadow_sm =
-    Css.hover
-        [ Css.property "box-shadow" "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
-        ]
-
-
-hover__shadow : Css.Style
-hover__shadow =
-    Css.hover
-        [ Css.property "box-shadow" "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
-        ]
-
-
-hover__shadow_md : Css.Style
-hover__shadow_md =
-    Css.hover
-        [ Css.property "box-shadow" "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-        ]
-
-
-hover__shadow_lg : Css.Style
-hover__shadow_lg =
-    Css.hover
-        [ Css.property "box-shadow" "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
-        ]
-
-
-hover__shadow_xl : Css.Style
-hover__shadow_xl =
-    Css.hover
-        [ Css.property "box-shadow" "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-        ]
-
-
-hover__shadow_2xl : Css.Style
-hover__shadow_2xl =
-    Css.hover
-        [ Css.property "box-shadow" "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
-        ]
-
-
-hover__shadow_inner : Css.Style
-hover__shadow_inner =
-    Css.hover
-        [ Css.property "box-shadow" "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)"
-        ]
-
-
-hover__shadow_outline : Css.Style
-hover__shadow_outline =
-    Css.hover
-        [ Css.property "box-shadow" "0 0 0 3px rgba(66, 153, 225, 0.5)"
-        ]
-
-
-hover__shadow_none : Css.Style
-hover__shadow_none =
-    Css.hover
-        [ Css.property "box-shadow" "none"
-        ]
-
-
-focus__shadow_xs : Css.Style
-focus__shadow_xs =
-    Css.focus
-        [ Css.property "box-shadow" "0 0 0 1px rgba(0, 0, 0, 0.05)"
-        ]
-
-
-focus__shadow_sm : Css.Style
-focus__shadow_sm =
-    Css.focus
-        [ Css.property "box-shadow" "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
-        ]
-
-
-focus__shadow : Css.Style
-focus__shadow =
-    Css.focus
-        [ Css.property "box-shadow" "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
-        ]
-
-
-focus__shadow_md : Css.Style
-focus__shadow_md =
-    Css.focus
-        [ Css.property "box-shadow" "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-        ]
-
-
-focus__shadow_lg : Css.Style
-focus__shadow_lg =
-    Css.focus
-        [ Css.property "box-shadow" "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
-        ]
-
-
-focus__shadow_xl : Css.Style
-focus__shadow_xl =
-    Css.focus
-        [ Css.property "box-shadow" "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-        ]
-
-
-focus__shadow_2xl : Css.Style
-focus__shadow_2xl =
-    Css.focus
-        [ Css.property "box-shadow" "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
-        ]
-
-
-focus__shadow_inner : Css.Style
-focus__shadow_inner =
-    Css.focus
-        [ Css.property "box-shadow" "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)"
-        ]
-
-
-focus__shadow_outline : Css.Style
-focus__shadow_outline =
-    Css.focus
-        [ Css.property "box-shadow" "0 0 0 3px rgba(66, 153, 225, 0.5)"
-        ]
-
-
-focus__shadow_none : Css.Style
-focus__shadow_none =
-    Css.focus
-        [ Css.property "box-shadow" "none"
-        ]
-
-
 fill_current : Css.Style
 fill_current =
     Css.fill Css.currentColor
@@ -9830,1778 +9283,855 @@ text_current =
 
 text_black : Css.Style
 text_black =
-    Css.color (Css.hex "#000")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#000")
+        , Css.property "color" "rgba(0, 0, 0, var(--text-opacity))"
+        ]
 
 
 text_white : Css.Style
 text_white =
-    Css.color (Css.hex "#fff")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#fff")
+        , Css.property "color" "rgba(255, 255, 255, var(--text-opacity))"
+        ]
 
 
 text_gray_100 : Css.Style
 text_gray_100 =
-    Css.color (Css.hex "#f7fafc")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#f7fafc")
+        , Css.property "color" "rgba(247, 250, 252, var(--text-opacity))"
+        ]
 
 
 text_gray_200 : Css.Style
 text_gray_200 =
-    Css.color (Css.hex "#edf2f7")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#edf2f7")
+        , Css.property "color" "rgba(237, 242, 247, var(--text-opacity))"
+        ]
 
 
 text_gray_300 : Css.Style
 text_gray_300 =
-    Css.color (Css.hex "#e2e8f0")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#e2e8f0")
+        , Css.property "color" "rgba(226, 232, 240, var(--text-opacity))"
+        ]
 
 
 text_gray_400 : Css.Style
 text_gray_400 =
-    Css.color (Css.hex "#cbd5e0")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#cbd5e0")
+        , Css.property "color" "rgba(203, 213, 224, var(--text-opacity))"
+        ]
 
 
 text_gray_500 : Css.Style
 text_gray_500 =
-    Css.color (Css.hex "#a0aec0")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#a0aec0")
+        , Css.property "color" "rgba(160, 174, 192, var(--text-opacity))"
+        ]
 
 
 text_gray_600 : Css.Style
 text_gray_600 =
-    Css.color (Css.hex "#718096")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#718096")
+        , Css.property "color" "rgba(113, 128, 150, var(--text-opacity))"
+        ]
 
 
 text_gray_700 : Css.Style
 text_gray_700 =
-    Css.color (Css.hex "#4a5568")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#4a5568")
+        , Css.property "color" "rgba(74, 85, 104, var(--text-opacity))"
+        ]
 
 
 text_gray_800 : Css.Style
 text_gray_800 =
-    Css.color (Css.hex "#2d3748")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#2d3748")
+        , Css.property "color" "rgba(45, 55, 72, var(--text-opacity))"
+        ]
 
 
 text_gray_900 : Css.Style
 text_gray_900 =
-    Css.color (Css.hex "#1a202c")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#1a202c")
+        , Css.property "color" "rgba(26, 32, 44, var(--text-opacity))"
+        ]
 
 
 text_red_100 : Css.Style
 text_red_100 =
-    Css.color (Css.hex "#fff5f5")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#fff5f5")
+        , Css.property "color" "rgba(255, 245, 245, var(--text-opacity))"
+        ]
 
 
 text_red_200 : Css.Style
 text_red_200 =
-    Css.color (Css.hex "#fed7d7")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#fed7d7")
+        , Css.property "color" "rgba(254, 215, 215, var(--text-opacity))"
+        ]
 
 
 text_red_300 : Css.Style
 text_red_300 =
-    Css.color (Css.hex "#feb2b2")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#feb2b2")
+        , Css.property "color" "rgba(254, 178, 178, var(--text-opacity))"
+        ]
 
 
 text_red_400 : Css.Style
 text_red_400 =
-    Css.color (Css.hex "#fc8181")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#fc8181")
+        , Css.property "color" "rgba(252, 129, 129, var(--text-opacity))"
+        ]
 
 
 text_red_500 : Css.Style
 text_red_500 =
-    Css.color (Css.hex "#f56565")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#f56565")
+        , Css.property "color" "rgba(245, 101, 101, var(--text-opacity))"
+        ]
 
 
 text_red_600 : Css.Style
 text_red_600 =
-    Css.color (Css.hex "#e53e3e")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#e53e3e")
+        , Css.property "color" "rgba(229, 62, 62, var(--text-opacity))"
+        ]
 
 
 text_red_700 : Css.Style
 text_red_700 =
-    Css.color (Css.hex "#c53030")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#c53030")
+        , Css.property "color" "rgba(197, 48, 48, var(--text-opacity))"
+        ]
 
 
 text_red_800 : Css.Style
 text_red_800 =
-    Css.color (Css.hex "#9b2c2c")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#9b2c2c")
+        , Css.property "color" "rgba(155, 44, 44, var(--text-opacity))"
+        ]
 
 
 text_red_900 : Css.Style
 text_red_900 =
-    Css.color (Css.hex "#742a2a")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#742a2a")
+        , Css.property "color" "rgba(116, 42, 42, var(--text-opacity))"
+        ]
 
 
 text_orange_100 : Css.Style
 text_orange_100 =
-    Css.color (Css.hex "#fffaf0")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#fffaf0")
+        , Css.property "color" "rgba(255, 250, 240, var(--text-opacity))"
+        ]
 
 
 text_orange_200 : Css.Style
 text_orange_200 =
-    Css.color (Css.hex "#feebc8")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#feebc8")
+        , Css.property "color" "rgba(254, 235, 200, var(--text-opacity))"
+        ]
 
 
 text_orange_300 : Css.Style
 text_orange_300 =
-    Css.color (Css.hex "#fbd38d")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#fbd38d")
+        , Css.property "color" "rgba(251, 211, 141, var(--text-opacity))"
+        ]
 
 
 text_orange_400 : Css.Style
 text_orange_400 =
-    Css.color (Css.hex "#f6ad55")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#f6ad55")
+        , Css.property "color" "rgba(246, 173, 85, var(--text-opacity))"
+        ]
 
 
 text_orange_500 : Css.Style
 text_orange_500 =
-    Css.color (Css.hex "#ed8936")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#ed8936")
+        , Css.property "color" "rgba(237, 137, 54, var(--text-opacity))"
+        ]
 
 
 text_orange_600 : Css.Style
 text_orange_600 =
-    Css.color (Css.hex "#dd6b20")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#dd6b20")
+        , Css.property "color" "rgba(221, 107, 32, var(--text-opacity))"
+        ]
 
 
 text_orange_700 : Css.Style
 text_orange_700 =
-    Css.color (Css.hex "#c05621")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#c05621")
+        , Css.property "color" "rgba(192, 86, 33, var(--text-opacity))"
+        ]
 
 
 text_orange_800 : Css.Style
 text_orange_800 =
-    Css.color (Css.hex "#9c4221")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#9c4221")
+        , Css.property "color" "rgba(156, 66, 33, var(--text-opacity))"
+        ]
 
 
 text_orange_900 : Css.Style
 text_orange_900 =
-    Css.color (Css.hex "#7b341e")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#7b341e")
+        , Css.property "color" "rgba(123, 52, 30, var(--text-opacity))"
+        ]
 
 
 text_yellow_100 : Css.Style
 text_yellow_100 =
-    Css.color (Css.hex "#fffff0")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#fffff0")
+        , Css.property "color" "rgba(255, 255, 240, var(--text-opacity))"
+        ]
 
 
 text_yellow_200 : Css.Style
 text_yellow_200 =
-    Css.color (Css.hex "#fefcbf")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#fefcbf")
+        , Css.property "color" "rgba(254, 252, 191, var(--text-opacity))"
+        ]
 
 
 text_yellow_300 : Css.Style
 text_yellow_300 =
-    Css.color (Css.hex "#faf089")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#faf089")
+        , Css.property "color" "rgba(250, 240, 137, var(--text-opacity))"
+        ]
 
 
 text_yellow_400 : Css.Style
 text_yellow_400 =
-    Css.color (Css.hex "#f6e05e")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#f6e05e")
+        , Css.property "color" "rgba(246, 224, 94, var(--text-opacity))"
+        ]
 
 
 text_yellow_500 : Css.Style
 text_yellow_500 =
-    Css.color (Css.hex "#ecc94b")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#ecc94b")
+        , Css.property "color" "rgba(236, 201, 75, var(--text-opacity))"
+        ]
 
 
 text_yellow_600 : Css.Style
 text_yellow_600 =
-    Css.color (Css.hex "#d69e2e")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#d69e2e")
+        , Css.property "color" "rgba(214, 158, 46, var(--text-opacity))"
+        ]
 
 
 text_yellow_700 : Css.Style
 text_yellow_700 =
-    Css.color (Css.hex "#b7791f")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#b7791f")
+        , Css.property "color" "rgba(183, 121, 31, var(--text-opacity))"
+        ]
 
 
 text_yellow_800 : Css.Style
 text_yellow_800 =
-    Css.color (Css.hex "#975a16")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#975a16")
+        , Css.property "color" "rgba(151, 90, 22, var(--text-opacity))"
+        ]
 
 
 text_yellow_900 : Css.Style
 text_yellow_900 =
-    Css.color (Css.hex "#744210")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#744210")
+        , Css.property "color" "rgba(116, 66, 16, var(--text-opacity))"
+        ]
 
 
 text_green_100 : Css.Style
 text_green_100 =
-    Css.color (Css.hex "#f0fff4")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#f0fff4")
+        , Css.property "color" "rgba(240, 255, 244, var(--text-opacity))"
+        ]
 
 
 text_green_200 : Css.Style
 text_green_200 =
-    Css.color (Css.hex "#c6f6d5")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#c6f6d5")
+        , Css.property "color" "rgba(198, 246, 213, var(--text-opacity))"
+        ]
 
 
 text_green_300 : Css.Style
 text_green_300 =
-    Css.color (Css.hex "#9ae6b4")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#9ae6b4")
+        , Css.property "color" "rgba(154, 230, 180, var(--text-opacity))"
+        ]
 
 
 text_green_400 : Css.Style
 text_green_400 =
-    Css.color (Css.hex "#68d391")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#68d391")
+        , Css.property "color" "rgba(104, 211, 145, var(--text-opacity))"
+        ]
 
 
 text_green_500 : Css.Style
 text_green_500 =
-    Css.color (Css.hex "#48bb78")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#48bb78")
+        , Css.property "color" "rgba(72, 187, 120, var(--text-opacity))"
+        ]
 
 
 text_green_600 : Css.Style
 text_green_600 =
-    Css.color (Css.hex "#38a169")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#38a169")
+        , Css.property "color" "rgba(56, 161, 105, var(--text-opacity))"
+        ]
 
 
 text_green_700 : Css.Style
 text_green_700 =
-    Css.color (Css.hex "#2f855a")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#2f855a")
+        , Css.property "color" "rgba(47, 133, 90, var(--text-opacity))"
+        ]
 
 
 text_green_800 : Css.Style
 text_green_800 =
-    Css.color (Css.hex "#276749")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#276749")
+        , Css.property "color" "rgba(39, 103, 73, var(--text-opacity))"
+        ]
 
 
 text_green_900 : Css.Style
 text_green_900 =
-    Css.color (Css.hex "#22543d")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#22543d")
+        , Css.property "color" "rgba(34, 84, 61, var(--text-opacity))"
+        ]
 
 
 text_teal_100 : Css.Style
 text_teal_100 =
-    Css.color (Css.hex "#e6fffa")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#e6fffa")
+        , Css.property "color" "rgba(230, 255, 250, var(--text-opacity))"
+        ]
 
 
 text_teal_200 : Css.Style
 text_teal_200 =
-    Css.color (Css.hex "#b2f5ea")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#b2f5ea")
+        , Css.property "color" "rgba(178, 245, 234, var(--text-opacity))"
+        ]
 
 
 text_teal_300 : Css.Style
 text_teal_300 =
-    Css.color (Css.hex "#81e6d9")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#81e6d9")
+        , Css.property "color" "rgba(129, 230, 217, var(--text-opacity))"
+        ]
 
 
 text_teal_400 : Css.Style
 text_teal_400 =
-    Css.color (Css.hex "#4fd1c5")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#4fd1c5")
+        , Css.property "color" "rgba(79, 209, 197, var(--text-opacity))"
+        ]
 
 
 text_teal_500 : Css.Style
 text_teal_500 =
-    Css.color (Css.hex "#38b2ac")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#38b2ac")
+        , Css.property "color" "rgba(56, 178, 172, var(--text-opacity))"
+        ]
 
 
 text_teal_600 : Css.Style
 text_teal_600 =
-    Css.color (Css.hex "#319795")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#319795")
+        , Css.property "color" "rgba(49, 151, 149, var(--text-opacity))"
+        ]
 
 
 text_teal_700 : Css.Style
 text_teal_700 =
-    Css.color (Css.hex "#2c7a7b")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#2c7a7b")
+        , Css.property "color" "rgba(44, 122, 123, var(--text-opacity))"
+        ]
 
 
 text_teal_800 : Css.Style
 text_teal_800 =
-    Css.color (Css.hex "#285e61")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#285e61")
+        , Css.property "color" "rgba(40, 94, 97, var(--text-opacity))"
+        ]
 
 
 text_teal_900 : Css.Style
 text_teal_900 =
-    Css.color (Css.hex "#234e52")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#234e52")
+        , Css.property "color" "rgba(35, 78, 82, var(--text-opacity))"
+        ]
 
 
 text_blue_100 : Css.Style
 text_blue_100 =
-    Css.color (Css.hex "#ebf8ff")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#ebf8ff")
+        , Css.property "color" "rgba(235, 248, 255, var(--text-opacity))"
+        ]
 
 
 text_blue_200 : Css.Style
 text_blue_200 =
-    Css.color (Css.hex "#bee3f8")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#bee3f8")
+        , Css.property "color" "rgba(190, 227, 248, var(--text-opacity))"
+        ]
 
 
 text_blue_300 : Css.Style
 text_blue_300 =
-    Css.color (Css.hex "#90cdf4")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#90cdf4")
+        , Css.property "color" "rgba(144, 205, 244, var(--text-opacity))"
+        ]
 
 
 text_blue_400 : Css.Style
 text_blue_400 =
-    Css.color (Css.hex "#63b3ed")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#63b3ed")
+        , Css.property "color" "rgba(99, 179, 237, var(--text-opacity))"
+        ]
 
 
 text_blue_500 : Css.Style
 text_blue_500 =
-    Css.color (Css.hex "#4299e1")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#4299e1")
+        , Css.property "color" "rgba(66, 153, 225, var(--text-opacity))"
+        ]
 
 
 text_blue_600 : Css.Style
 text_blue_600 =
-    Css.color (Css.hex "#3182ce")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#3182ce")
+        , Css.property "color" "rgba(49, 130, 206, var(--text-opacity))"
+        ]
 
 
 text_blue_700 : Css.Style
 text_blue_700 =
-    Css.color (Css.hex "#2b6cb0")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#2b6cb0")
+        , Css.property "color" "rgba(43, 108, 176, var(--text-opacity))"
+        ]
 
 
 text_blue_800 : Css.Style
 text_blue_800 =
-    Css.color (Css.hex "#2c5282")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#2c5282")
+        , Css.property "color" "rgba(44, 82, 130, var(--text-opacity))"
+        ]
 
 
 text_blue_900 : Css.Style
 text_blue_900 =
-    Css.color (Css.hex "#2a4365")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#2a4365")
+        , Css.property "color" "rgba(42, 67, 101, var(--text-opacity))"
+        ]
 
 
 text_indigo_100 : Css.Style
 text_indigo_100 =
-    Css.color (Css.hex "#ebf4ff")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#ebf4ff")
+        , Css.property "color" "rgba(235, 244, 255, var(--text-opacity))"
+        ]
 
 
 text_indigo_200 : Css.Style
 text_indigo_200 =
-    Css.color (Css.hex "#c3dafe")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#c3dafe")
+        , Css.property "color" "rgba(195, 218, 254, var(--text-opacity))"
+        ]
 
 
 text_indigo_300 : Css.Style
 text_indigo_300 =
-    Css.color (Css.hex "#a3bffa")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#a3bffa")
+        , Css.property "color" "rgba(163, 191, 250, var(--text-opacity))"
+        ]
 
 
 text_indigo_400 : Css.Style
 text_indigo_400 =
-    Css.color (Css.hex "#7f9cf5")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#7f9cf5")
+        , Css.property "color" "rgba(127, 156, 245, var(--text-opacity))"
+        ]
 
 
 text_indigo_500 : Css.Style
 text_indigo_500 =
-    Css.color (Css.hex "#667eea")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#667eea")
+        , Css.property "color" "rgba(102, 126, 234, var(--text-opacity))"
+        ]
 
 
 text_indigo_600 : Css.Style
 text_indigo_600 =
-    Css.color (Css.hex "#5a67d8")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#5a67d8")
+        , Css.property "color" "rgba(90, 103, 216, var(--text-opacity))"
+        ]
 
 
 text_indigo_700 : Css.Style
 text_indigo_700 =
-    Css.color (Css.hex "#4c51bf")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#4c51bf")
+        , Css.property "color" "rgba(76, 81, 191, var(--text-opacity))"
+        ]
 
 
 text_indigo_800 : Css.Style
 text_indigo_800 =
-    Css.color (Css.hex "#434190")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#434190")
+        , Css.property "color" "rgba(67, 65, 144, var(--text-opacity))"
+        ]
 
 
 text_indigo_900 : Css.Style
 text_indigo_900 =
-    Css.color (Css.hex "#3c366b")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#3c366b")
+        , Css.property "color" "rgba(60, 54, 107, var(--text-opacity))"
+        ]
 
 
 text_purple_100 : Css.Style
 text_purple_100 =
-    Css.color (Css.hex "#faf5ff")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#faf5ff")
+        , Css.property "color" "rgba(250, 245, 255, var(--text-opacity))"
+        ]
 
 
 text_purple_200 : Css.Style
 text_purple_200 =
-    Css.color (Css.hex "#e9d8fd")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#e9d8fd")
+        , Css.property "color" "rgba(233, 216, 253, var(--text-opacity))"
+        ]
 
 
 text_purple_300 : Css.Style
 text_purple_300 =
-    Css.color (Css.hex "#d6bcfa")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#d6bcfa")
+        , Css.property "color" "rgba(214, 188, 250, var(--text-opacity))"
+        ]
 
 
 text_purple_400 : Css.Style
 text_purple_400 =
-    Css.color (Css.hex "#b794f4")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#b794f4")
+        , Css.property "color" "rgba(183, 148, 244, var(--text-opacity))"
+        ]
 
 
 text_purple_500 : Css.Style
 text_purple_500 =
-    Css.color (Css.hex "#9f7aea")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#9f7aea")
+        , Css.property "color" "rgba(159, 122, 234, var(--text-opacity))"
+        ]
 
 
 text_purple_600 : Css.Style
 text_purple_600 =
-    Css.color (Css.hex "#805ad5")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#805ad5")
+        , Css.property "color" "rgba(128, 90, 213, var(--text-opacity))"
+        ]
 
 
 text_purple_700 : Css.Style
 text_purple_700 =
-    Css.color (Css.hex "#6b46c1")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#6b46c1")
+        , Css.property "color" "rgba(107, 70, 193, var(--text-opacity))"
+        ]
 
 
 text_purple_800 : Css.Style
 text_purple_800 =
-    Css.color (Css.hex "#553c9a")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#553c9a")
+        , Css.property "color" "rgba(85, 60, 154, var(--text-opacity))"
+        ]
 
 
 text_purple_900 : Css.Style
 text_purple_900 =
-    Css.color (Css.hex "#44337a")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#44337a")
+        , Css.property "color" "rgba(68, 51, 122, var(--text-opacity))"
+        ]
 
 
 text_pink_100 : Css.Style
 text_pink_100 =
-    Css.color (Css.hex "#fff5f7")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#fff5f7")
+        , Css.property "color" "rgba(255, 245, 247, var(--text-opacity))"
+        ]
 
 
 text_pink_200 : Css.Style
 text_pink_200 =
-    Css.color (Css.hex "#fed7e2")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#fed7e2")
+        , Css.property "color" "rgba(254, 215, 226, var(--text-opacity))"
+        ]
 
 
 text_pink_300 : Css.Style
 text_pink_300 =
-    Css.color (Css.hex "#fbb6ce")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#fbb6ce")
+        , Css.property "color" "rgba(251, 182, 206, var(--text-opacity))"
+        ]
 
 
 text_pink_400 : Css.Style
 text_pink_400 =
-    Css.color (Css.hex "#f687b3")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#f687b3")
+        , Css.property "color" "rgba(246, 135, 179, var(--text-opacity))"
+        ]
 
 
 text_pink_500 : Css.Style
 text_pink_500 =
-    Css.color (Css.hex "#ed64a6")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#ed64a6")
+        , Css.property "color" "rgba(237, 100, 166, var(--text-opacity))"
+        ]
 
 
 text_pink_600 : Css.Style
 text_pink_600 =
-    Css.color (Css.hex "#d53f8c")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#d53f8c")
+        , Css.property "color" "rgba(213, 63, 140, var(--text-opacity))"
+        ]
 
 
 text_pink_700 : Css.Style
 text_pink_700 =
-    Css.color (Css.hex "#b83280")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#b83280")
+        , Css.property "color" "rgba(184, 50, 128, var(--text-opacity))"
+        ]
 
 
 text_pink_800 : Css.Style
 text_pink_800 =
-    Css.color (Css.hex "#97266d")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#97266d")
+        , Css.property "color" "rgba(151, 38, 109, var(--text-opacity))"
+        ]
 
 
 text_pink_900 : Css.Style
 text_pink_900 =
-    Css.color (Css.hex "#702459")
-
-
-hover__text_transparent : Css.Style
-hover__text_transparent =
-    Css.hover
-        [ Css.color Css.transparent
-        ]
-
-
-hover__text_current : Css.Style
-hover__text_current =
-    Css.hover
-        [ Css.color Css.currentColor
-        ]
-
-
-hover__text_black : Css.Style
-hover__text_black =
-    Css.hover
-        [ Css.color (Css.hex "#000")
-        ]
-
-
-hover__text_white : Css.Style
-hover__text_white =
-    Css.hover
-        [ Css.color (Css.hex "#fff")
-        ]
-
-
-hover__text_gray_100 : Css.Style
-hover__text_gray_100 =
-    Css.hover
-        [ Css.color (Css.hex "#f7fafc")
-        ]
-
-
-hover__text_gray_200 : Css.Style
-hover__text_gray_200 =
-    Css.hover
-        [ Css.color (Css.hex "#edf2f7")
-        ]
-
-
-hover__text_gray_300 : Css.Style
-hover__text_gray_300 =
-    Css.hover
-        [ Css.color (Css.hex "#e2e8f0")
-        ]
-
-
-hover__text_gray_400 : Css.Style
-hover__text_gray_400 =
-    Css.hover
-        [ Css.color (Css.hex "#cbd5e0")
-        ]
-
-
-hover__text_gray_500 : Css.Style
-hover__text_gray_500 =
-    Css.hover
-        [ Css.color (Css.hex "#a0aec0")
-        ]
-
-
-hover__text_gray_600 : Css.Style
-hover__text_gray_600 =
-    Css.hover
-        [ Css.color (Css.hex "#718096")
-        ]
-
-
-hover__text_gray_700 : Css.Style
-hover__text_gray_700 =
-    Css.hover
-        [ Css.color (Css.hex "#4a5568")
-        ]
-
-
-hover__text_gray_800 : Css.Style
-hover__text_gray_800 =
-    Css.hover
-        [ Css.color (Css.hex "#2d3748")
-        ]
-
-
-hover__text_gray_900 : Css.Style
-hover__text_gray_900 =
-    Css.hover
-        [ Css.color (Css.hex "#1a202c")
-        ]
-
-
-hover__text_red_100 : Css.Style
-hover__text_red_100 =
-    Css.hover
-        [ Css.color (Css.hex "#fff5f5")
-        ]
-
-
-hover__text_red_200 : Css.Style
-hover__text_red_200 =
-    Css.hover
-        [ Css.color (Css.hex "#fed7d7")
-        ]
-
-
-hover__text_red_300 : Css.Style
-hover__text_red_300 =
-    Css.hover
-        [ Css.color (Css.hex "#feb2b2")
-        ]
-
-
-hover__text_red_400 : Css.Style
-hover__text_red_400 =
-    Css.hover
-        [ Css.color (Css.hex "#fc8181")
-        ]
-
-
-hover__text_red_500 : Css.Style
-hover__text_red_500 =
-    Css.hover
-        [ Css.color (Css.hex "#f56565")
-        ]
-
-
-hover__text_red_600 : Css.Style
-hover__text_red_600 =
-    Css.hover
-        [ Css.color (Css.hex "#e53e3e")
-        ]
-
-
-hover__text_red_700 : Css.Style
-hover__text_red_700 =
-    Css.hover
-        [ Css.color (Css.hex "#c53030")
-        ]
-
-
-hover__text_red_800 : Css.Style
-hover__text_red_800 =
-    Css.hover
-        [ Css.color (Css.hex "#9b2c2c")
-        ]
-
-
-hover__text_red_900 : Css.Style
-hover__text_red_900 =
-    Css.hover
-        [ Css.color (Css.hex "#742a2a")
-        ]
-
-
-hover__text_orange_100 : Css.Style
-hover__text_orange_100 =
-    Css.hover
-        [ Css.color (Css.hex "#fffaf0")
-        ]
-
-
-hover__text_orange_200 : Css.Style
-hover__text_orange_200 =
-    Css.hover
-        [ Css.color (Css.hex "#feebc8")
-        ]
-
-
-hover__text_orange_300 : Css.Style
-hover__text_orange_300 =
-    Css.hover
-        [ Css.color (Css.hex "#fbd38d")
-        ]
-
-
-hover__text_orange_400 : Css.Style
-hover__text_orange_400 =
-    Css.hover
-        [ Css.color (Css.hex "#f6ad55")
-        ]
-
-
-hover__text_orange_500 : Css.Style
-hover__text_orange_500 =
-    Css.hover
-        [ Css.color (Css.hex "#ed8936")
-        ]
-
-
-hover__text_orange_600 : Css.Style
-hover__text_orange_600 =
-    Css.hover
-        [ Css.color (Css.hex "#dd6b20")
-        ]
-
-
-hover__text_orange_700 : Css.Style
-hover__text_orange_700 =
-    Css.hover
-        [ Css.color (Css.hex "#c05621")
-        ]
-
-
-hover__text_orange_800 : Css.Style
-hover__text_orange_800 =
-    Css.hover
-        [ Css.color (Css.hex "#9c4221")
-        ]
-
-
-hover__text_orange_900 : Css.Style
-hover__text_orange_900 =
-    Css.hover
-        [ Css.color (Css.hex "#7b341e")
-        ]
-
-
-hover__text_yellow_100 : Css.Style
-hover__text_yellow_100 =
-    Css.hover
-        [ Css.color (Css.hex "#fffff0")
-        ]
-
-
-hover__text_yellow_200 : Css.Style
-hover__text_yellow_200 =
-    Css.hover
-        [ Css.color (Css.hex "#fefcbf")
-        ]
-
-
-hover__text_yellow_300 : Css.Style
-hover__text_yellow_300 =
-    Css.hover
-        [ Css.color (Css.hex "#faf089")
-        ]
-
-
-hover__text_yellow_400 : Css.Style
-hover__text_yellow_400 =
-    Css.hover
-        [ Css.color (Css.hex "#f6e05e")
-        ]
-
-
-hover__text_yellow_500 : Css.Style
-hover__text_yellow_500 =
-    Css.hover
-        [ Css.color (Css.hex "#ecc94b")
-        ]
-
-
-hover__text_yellow_600 : Css.Style
-hover__text_yellow_600 =
-    Css.hover
-        [ Css.color (Css.hex "#d69e2e")
-        ]
-
-
-hover__text_yellow_700 : Css.Style
-hover__text_yellow_700 =
-    Css.hover
-        [ Css.color (Css.hex "#b7791f")
-        ]
-
-
-hover__text_yellow_800 : Css.Style
-hover__text_yellow_800 =
-    Css.hover
-        [ Css.color (Css.hex "#975a16")
-        ]
-
-
-hover__text_yellow_900 : Css.Style
-hover__text_yellow_900 =
-    Css.hover
-        [ Css.color (Css.hex "#744210")
-        ]
-
-
-hover__text_green_100 : Css.Style
-hover__text_green_100 =
-    Css.hover
-        [ Css.color (Css.hex "#f0fff4")
-        ]
-
-
-hover__text_green_200 : Css.Style
-hover__text_green_200 =
-    Css.hover
-        [ Css.color (Css.hex "#c6f6d5")
-        ]
-
-
-hover__text_green_300 : Css.Style
-hover__text_green_300 =
-    Css.hover
-        [ Css.color (Css.hex "#9ae6b4")
-        ]
-
-
-hover__text_green_400 : Css.Style
-hover__text_green_400 =
-    Css.hover
-        [ Css.color (Css.hex "#68d391")
-        ]
-
-
-hover__text_green_500 : Css.Style
-hover__text_green_500 =
-    Css.hover
-        [ Css.color (Css.hex "#48bb78")
-        ]
-
-
-hover__text_green_600 : Css.Style
-hover__text_green_600 =
-    Css.hover
-        [ Css.color (Css.hex "#38a169")
-        ]
-
-
-hover__text_green_700 : Css.Style
-hover__text_green_700 =
-    Css.hover
-        [ Css.color (Css.hex "#2f855a")
-        ]
-
-
-hover__text_green_800 : Css.Style
-hover__text_green_800 =
-    Css.hover
-        [ Css.color (Css.hex "#276749")
-        ]
-
-
-hover__text_green_900 : Css.Style
-hover__text_green_900 =
-    Css.hover
-        [ Css.color (Css.hex "#22543d")
-        ]
-
-
-hover__text_teal_100 : Css.Style
-hover__text_teal_100 =
-    Css.hover
-        [ Css.color (Css.hex "#e6fffa")
-        ]
-
-
-hover__text_teal_200 : Css.Style
-hover__text_teal_200 =
-    Css.hover
-        [ Css.color (Css.hex "#b2f5ea")
-        ]
-
-
-hover__text_teal_300 : Css.Style
-hover__text_teal_300 =
-    Css.hover
-        [ Css.color (Css.hex "#81e6d9")
-        ]
-
-
-hover__text_teal_400 : Css.Style
-hover__text_teal_400 =
-    Css.hover
-        [ Css.color (Css.hex "#4fd1c5")
-        ]
-
-
-hover__text_teal_500 : Css.Style
-hover__text_teal_500 =
-    Css.hover
-        [ Css.color (Css.hex "#38b2ac")
-        ]
-
-
-hover__text_teal_600 : Css.Style
-hover__text_teal_600 =
-    Css.hover
-        [ Css.color (Css.hex "#319795")
-        ]
-
-
-hover__text_teal_700 : Css.Style
-hover__text_teal_700 =
-    Css.hover
-        [ Css.color (Css.hex "#2c7a7b")
-        ]
-
-
-hover__text_teal_800 : Css.Style
-hover__text_teal_800 =
-    Css.hover
-        [ Css.color (Css.hex "#285e61")
-        ]
-
-
-hover__text_teal_900 : Css.Style
-hover__text_teal_900 =
-    Css.hover
-        [ Css.color (Css.hex "#234e52")
-        ]
-
-
-hover__text_blue_100 : Css.Style
-hover__text_blue_100 =
-    Css.hover
-        [ Css.color (Css.hex "#ebf8ff")
-        ]
-
-
-hover__text_blue_200 : Css.Style
-hover__text_blue_200 =
-    Css.hover
-        [ Css.color (Css.hex "#bee3f8")
-        ]
-
-
-hover__text_blue_300 : Css.Style
-hover__text_blue_300 =
-    Css.hover
-        [ Css.color (Css.hex "#90cdf4")
-        ]
-
-
-hover__text_blue_400 : Css.Style
-hover__text_blue_400 =
-    Css.hover
-        [ Css.color (Css.hex "#63b3ed")
-        ]
-
-
-hover__text_blue_500 : Css.Style
-hover__text_blue_500 =
-    Css.hover
-        [ Css.color (Css.hex "#4299e1")
-        ]
-
-
-hover__text_blue_600 : Css.Style
-hover__text_blue_600 =
-    Css.hover
-        [ Css.color (Css.hex "#3182ce")
-        ]
-
-
-hover__text_blue_700 : Css.Style
-hover__text_blue_700 =
-    Css.hover
-        [ Css.color (Css.hex "#2b6cb0")
-        ]
-
-
-hover__text_blue_800 : Css.Style
-hover__text_blue_800 =
-    Css.hover
-        [ Css.color (Css.hex "#2c5282")
-        ]
-
-
-hover__text_blue_900 : Css.Style
-hover__text_blue_900 =
-    Css.hover
-        [ Css.color (Css.hex "#2a4365")
-        ]
-
-
-hover__text_indigo_100 : Css.Style
-hover__text_indigo_100 =
-    Css.hover
-        [ Css.color (Css.hex "#ebf4ff")
-        ]
-
-
-hover__text_indigo_200 : Css.Style
-hover__text_indigo_200 =
-    Css.hover
-        [ Css.color (Css.hex "#c3dafe")
-        ]
-
-
-hover__text_indigo_300 : Css.Style
-hover__text_indigo_300 =
-    Css.hover
-        [ Css.color (Css.hex "#a3bffa")
-        ]
-
-
-hover__text_indigo_400 : Css.Style
-hover__text_indigo_400 =
-    Css.hover
-        [ Css.color (Css.hex "#7f9cf5")
-        ]
-
-
-hover__text_indigo_500 : Css.Style
-hover__text_indigo_500 =
-    Css.hover
-        [ Css.color (Css.hex "#667eea")
-        ]
-
-
-hover__text_indigo_600 : Css.Style
-hover__text_indigo_600 =
-    Css.hover
-        [ Css.color (Css.hex "#5a67d8")
-        ]
-
-
-hover__text_indigo_700 : Css.Style
-hover__text_indigo_700 =
-    Css.hover
-        [ Css.color (Css.hex "#4c51bf")
-        ]
-
-
-hover__text_indigo_800 : Css.Style
-hover__text_indigo_800 =
-    Css.hover
-        [ Css.color (Css.hex "#434190")
-        ]
-
-
-hover__text_indigo_900 : Css.Style
-hover__text_indigo_900 =
-    Css.hover
-        [ Css.color (Css.hex "#3c366b")
-        ]
-
-
-hover__text_purple_100 : Css.Style
-hover__text_purple_100 =
-    Css.hover
-        [ Css.color (Css.hex "#faf5ff")
-        ]
-
-
-hover__text_purple_200 : Css.Style
-hover__text_purple_200 =
-    Css.hover
-        [ Css.color (Css.hex "#e9d8fd")
-        ]
-
-
-hover__text_purple_300 : Css.Style
-hover__text_purple_300 =
-    Css.hover
-        [ Css.color (Css.hex "#d6bcfa")
-        ]
-
-
-hover__text_purple_400 : Css.Style
-hover__text_purple_400 =
-    Css.hover
-        [ Css.color (Css.hex "#b794f4")
-        ]
-
-
-hover__text_purple_500 : Css.Style
-hover__text_purple_500 =
-    Css.hover
-        [ Css.color (Css.hex "#9f7aea")
-        ]
-
-
-hover__text_purple_600 : Css.Style
-hover__text_purple_600 =
-    Css.hover
-        [ Css.color (Css.hex "#805ad5")
-        ]
-
-
-hover__text_purple_700 : Css.Style
-hover__text_purple_700 =
-    Css.hover
-        [ Css.color (Css.hex "#6b46c1")
-        ]
-
-
-hover__text_purple_800 : Css.Style
-hover__text_purple_800 =
-    Css.hover
-        [ Css.color (Css.hex "#553c9a")
-        ]
-
-
-hover__text_purple_900 : Css.Style
-hover__text_purple_900 =
-    Css.hover
-        [ Css.color (Css.hex "#44337a")
-        ]
-
-
-hover__text_pink_100 : Css.Style
-hover__text_pink_100 =
-    Css.hover
-        [ Css.color (Css.hex "#fff5f7")
-        ]
-
-
-hover__text_pink_200 : Css.Style
-hover__text_pink_200 =
-    Css.hover
-        [ Css.color (Css.hex "#fed7e2")
-        ]
-
-
-hover__text_pink_300 : Css.Style
-hover__text_pink_300 =
-    Css.hover
-        [ Css.color (Css.hex "#fbb6ce")
-        ]
-
-
-hover__text_pink_400 : Css.Style
-hover__text_pink_400 =
-    Css.hover
-        [ Css.color (Css.hex "#f687b3")
-        ]
-
-
-hover__text_pink_500 : Css.Style
-hover__text_pink_500 =
-    Css.hover
-        [ Css.color (Css.hex "#ed64a6")
-        ]
-
-
-hover__text_pink_600 : Css.Style
-hover__text_pink_600 =
-    Css.hover
-        [ Css.color (Css.hex "#d53f8c")
-        ]
-
-
-hover__text_pink_700 : Css.Style
-hover__text_pink_700 =
-    Css.hover
-        [ Css.color (Css.hex "#b83280")
-        ]
-
-
-hover__text_pink_800 : Css.Style
-hover__text_pink_800 =
-    Css.hover
-        [ Css.color (Css.hex "#97266d")
-        ]
-
-
-hover__text_pink_900 : Css.Style
-hover__text_pink_900 =
-    Css.hover
-        [ Css.color (Css.hex "#702459")
-        ]
-
-
-focus__text_transparent : Css.Style
-focus__text_transparent =
-    Css.focus
-        [ Css.color Css.transparent
-        ]
-
-
-focus__text_current : Css.Style
-focus__text_current =
-    Css.focus
-        [ Css.color Css.currentColor
-        ]
-
-
-focus__text_black : Css.Style
-focus__text_black =
-    Css.focus
-        [ Css.color (Css.hex "#000")
-        ]
-
-
-focus__text_white : Css.Style
-focus__text_white =
-    Css.focus
-        [ Css.color (Css.hex "#fff")
-        ]
-
-
-focus__text_gray_100 : Css.Style
-focus__text_gray_100 =
-    Css.focus
-        [ Css.color (Css.hex "#f7fafc")
+    Css.batch
+        [ Css.property "--text-opacity" "1"
+        , Css.color (Css.hex "#702459")
+        , Css.property "color" "rgba(112, 36, 89, var(--text-opacity))"
         ]
 
 
-focus__text_gray_200 : Css.Style
-focus__text_gray_200 =
-    Css.focus
-        [ Css.color (Css.hex "#edf2f7")
-        ]
-
-
-focus__text_gray_300 : Css.Style
-focus__text_gray_300 =
-    Css.focus
-        [ Css.color (Css.hex "#e2e8f0")
-        ]
-
-
-focus__text_gray_400 : Css.Style
-focus__text_gray_400 =
-    Css.focus
-        [ Css.color (Css.hex "#cbd5e0")
-        ]
-
-
-focus__text_gray_500 : Css.Style
-focus__text_gray_500 =
-    Css.focus
-        [ Css.color (Css.hex "#a0aec0")
-        ]
-
-
-focus__text_gray_600 : Css.Style
-focus__text_gray_600 =
-    Css.focus
-        [ Css.color (Css.hex "#718096")
-        ]
-
-
-focus__text_gray_700 : Css.Style
-focus__text_gray_700 =
-    Css.focus
-        [ Css.color (Css.hex "#4a5568")
-        ]
-
-
-focus__text_gray_800 : Css.Style
-focus__text_gray_800 =
-    Css.focus
-        [ Css.color (Css.hex "#2d3748")
-        ]
-
-
-focus__text_gray_900 : Css.Style
-focus__text_gray_900 =
-    Css.focus
-        [ Css.color (Css.hex "#1a202c")
-        ]
-
-
-focus__text_red_100 : Css.Style
-focus__text_red_100 =
-    Css.focus
-        [ Css.color (Css.hex "#fff5f5")
-        ]
-
-
-focus__text_red_200 : Css.Style
-focus__text_red_200 =
-    Css.focus
-        [ Css.color (Css.hex "#fed7d7")
-        ]
-
-
-focus__text_red_300 : Css.Style
-focus__text_red_300 =
-    Css.focus
-        [ Css.color (Css.hex "#feb2b2")
-        ]
-
-
-focus__text_red_400 : Css.Style
-focus__text_red_400 =
-    Css.focus
-        [ Css.color (Css.hex "#fc8181")
-        ]
-
-
-focus__text_red_500 : Css.Style
-focus__text_red_500 =
-    Css.focus
-        [ Css.color (Css.hex "#f56565")
-        ]
-
-
-focus__text_red_600 : Css.Style
-focus__text_red_600 =
-    Css.focus
-        [ Css.color (Css.hex "#e53e3e")
-        ]
-
-
-focus__text_red_700 : Css.Style
-focus__text_red_700 =
-    Css.focus
-        [ Css.color (Css.hex "#c53030")
-        ]
-
-
-focus__text_red_800 : Css.Style
-focus__text_red_800 =
-    Css.focus
-        [ Css.color (Css.hex "#9b2c2c")
-        ]
-
-
-focus__text_red_900 : Css.Style
-focus__text_red_900 =
-    Css.focus
-        [ Css.color (Css.hex "#742a2a")
-        ]
-
-
-focus__text_orange_100 : Css.Style
-focus__text_orange_100 =
-    Css.focus
-        [ Css.color (Css.hex "#fffaf0")
-        ]
-
-
-focus__text_orange_200 : Css.Style
-focus__text_orange_200 =
-    Css.focus
-        [ Css.color (Css.hex "#feebc8")
-        ]
-
-
-focus__text_orange_300 : Css.Style
-focus__text_orange_300 =
-    Css.focus
-        [ Css.color (Css.hex "#fbd38d")
-        ]
-
-
-focus__text_orange_400 : Css.Style
-focus__text_orange_400 =
-    Css.focus
-        [ Css.color (Css.hex "#f6ad55")
-        ]
-
-
-focus__text_orange_500 : Css.Style
-focus__text_orange_500 =
-    Css.focus
-        [ Css.color (Css.hex "#ed8936")
-        ]
-
-
-focus__text_orange_600 : Css.Style
-focus__text_orange_600 =
-    Css.focus
-        [ Css.color (Css.hex "#dd6b20")
-        ]
-
-
-focus__text_orange_700 : Css.Style
-focus__text_orange_700 =
-    Css.focus
-        [ Css.color (Css.hex "#c05621")
-        ]
-
-
-focus__text_orange_800 : Css.Style
-focus__text_orange_800 =
-    Css.focus
-        [ Css.color (Css.hex "#9c4221")
-        ]
-
-
-focus__text_orange_900 : Css.Style
-focus__text_orange_900 =
-    Css.focus
-        [ Css.color (Css.hex "#7b341e")
-        ]
-
-
-focus__text_yellow_100 : Css.Style
-focus__text_yellow_100 =
-    Css.focus
-        [ Css.color (Css.hex "#fffff0")
-        ]
-
-
-focus__text_yellow_200 : Css.Style
-focus__text_yellow_200 =
-    Css.focus
-        [ Css.color (Css.hex "#fefcbf")
-        ]
-
-
-focus__text_yellow_300 : Css.Style
-focus__text_yellow_300 =
-    Css.focus
-        [ Css.color (Css.hex "#faf089")
-        ]
-
-
-focus__text_yellow_400 : Css.Style
-focus__text_yellow_400 =
-    Css.focus
-        [ Css.color (Css.hex "#f6e05e")
-        ]
-
-
-focus__text_yellow_500 : Css.Style
-focus__text_yellow_500 =
-    Css.focus
-        [ Css.color (Css.hex "#ecc94b")
-        ]
-
-
-focus__text_yellow_600 : Css.Style
-focus__text_yellow_600 =
-    Css.focus
-        [ Css.color (Css.hex "#d69e2e")
-        ]
-
-
-focus__text_yellow_700 : Css.Style
-focus__text_yellow_700 =
-    Css.focus
-        [ Css.color (Css.hex "#b7791f")
-        ]
-
-
-focus__text_yellow_800 : Css.Style
-focus__text_yellow_800 =
-    Css.focus
-        [ Css.color (Css.hex "#975a16")
-        ]
-
-
-focus__text_yellow_900 : Css.Style
-focus__text_yellow_900 =
-    Css.focus
-        [ Css.color (Css.hex "#744210")
-        ]
-
-
-focus__text_green_100 : Css.Style
-focus__text_green_100 =
-    Css.focus
-        [ Css.color (Css.hex "#f0fff4")
-        ]
-
-
-focus__text_green_200 : Css.Style
-focus__text_green_200 =
-    Css.focus
-        [ Css.color (Css.hex "#c6f6d5")
-        ]
-
-
-focus__text_green_300 : Css.Style
-focus__text_green_300 =
-    Css.focus
-        [ Css.color (Css.hex "#9ae6b4")
-        ]
-
-
-focus__text_green_400 : Css.Style
-focus__text_green_400 =
-    Css.focus
-        [ Css.color (Css.hex "#68d391")
-        ]
-
-
-focus__text_green_500 : Css.Style
-focus__text_green_500 =
-    Css.focus
-        [ Css.color (Css.hex "#48bb78")
-        ]
-
-
-focus__text_green_600 : Css.Style
-focus__text_green_600 =
-    Css.focus
-        [ Css.color (Css.hex "#38a169")
-        ]
-
-
-focus__text_green_700 : Css.Style
-focus__text_green_700 =
-    Css.focus
-        [ Css.color (Css.hex "#2f855a")
-        ]
-
-
-focus__text_green_800 : Css.Style
-focus__text_green_800 =
-    Css.focus
-        [ Css.color (Css.hex "#276749")
-        ]
-
+text_opacity_0 : Css.Style
+text_opacity_0 =
+    Css.property "--text-opacity" "0"
 
-focus__text_green_900 : Css.Style
-focus__text_green_900 =
-    Css.focus
-        [ Css.color (Css.hex "#22543d")
-        ]
-
-
-focus__text_teal_100 : Css.Style
-focus__text_teal_100 =
-    Css.focus
-        [ Css.color (Css.hex "#e6fffa")
-        ]
-
-
-focus__text_teal_200 : Css.Style
-focus__text_teal_200 =
-    Css.focus
-        [ Css.color (Css.hex "#b2f5ea")
-        ]
-
-
-focus__text_teal_300 : Css.Style
-focus__text_teal_300 =
-    Css.focus
-        [ Css.color (Css.hex "#81e6d9")
-        ]
-
-
-focus__text_teal_400 : Css.Style
-focus__text_teal_400 =
-    Css.focus
-        [ Css.color (Css.hex "#4fd1c5")
-        ]
-
-
-focus__text_teal_500 : Css.Style
-focus__text_teal_500 =
-    Css.focus
-        [ Css.color (Css.hex "#38b2ac")
-        ]
-
-
-focus__text_teal_600 : Css.Style
-focus__text_teal_600 =
-    Css.focus
-        [ Css.color (Css.hex "#319795")
-        ]
-
-
-focus__text_teal_700 : Css.Style
-focus__text_teal_700 =
-    Css.focus
-        [ Css.color (Css.hex "#2c7a7b")
-        ]
-
-
-focus__text_teal_800 : Css.Style
-focus__text_teal_800 =
-    Css.focus
-        [ Css.color (Css.hex "#285e61")
-        ]
-
-
-focus__text_teal_900 : Css.Style
-focus__text_teal_900 =
-    Css.focus
-        [ Css.color (Css.hex "#234e52")
-        ]
-
-
-focus__text_blue_100 : Css.Style
-focus__text_blue_100 =
-    Css.focus
-        [ Css.color (Css.hex "#ebf8ff")
-        ]
-
-
-focus__text_blue_200 : Css.Style
-focus__text_blue_200 =
-    Css.focus
-        [ Css.color (Css.hex "#bee3f8")
-        ]
-
-
-focus__text_blue_300 : Css.Style
-focus__text_blue_300 =
-    Css.focus
-        [ Css.color (Css.hex "#90cdf4")
-        ]
-
-
-focus__text_blue_400 : Css.Style
-focus__text_blue_400 =
-    Css.focus
-        [ Css.color (Css.hex "#63b3ed")
-        ]
-
-
-focus__text_blue_500 : Css.Style
-focus__text_blue_500 =
-    Css.focus
-        [ Css.color (Css.hex "#4299e1")
-        ]
-
-
-focus__text_blue_600 : Css.Style
-focus__text_blue_600 =
-    Css.focus
-        [ Css.color (Css.hex "#3182ce")
-        ]
-
-
-focus__text_blue_700 : Css.Style
-focus__text_blue_700 =
-    Css.focus
-        [ Css.color (Css.hex "#2b6cb0")
-        ]
-
-
-focus__text_blue_800 : Css.Style
-focus__text_blue_800 =
-    Css.focus
-        [ Css.color (Css.hex "#2c5282")
-        ]
-
-
-focus__text_blue_900 : Css.Style
-focus__text_blue_900 =
-    Css.focus
-        [ Css.color (Css.hex "#2a4365")
-        ]
-
-
-focus__text_indigo_100 : Css.Style
-focus__text_indigo_100 =
-    Css.focus
-        [ Css.color (Css.hex "#ebf4ff")
-        ]
-
-
-focus__text_indigo_200 : Css.Style
-focus__text_indigo_200 =
-    Css.focus
-        [ Css.color (Css.hex "#c3dafe")
-        ]
-
-
-focus__text_indigo_300 : Css.Style
-focus__text_indigo_300 =
-    Css.focus
-        [ Css.color (Css.hex "#a3bffa")
-        ]
 
+text_opacity_25 : Css.Style
+text_opacity_25 =
+    Css.property "--text-opacity" "0.25"
 
-focus__text_indigo_400 : Css.Style
-focus__text_indigo_400 =
-    Css.focus
-        [ Css.color (Css.hex "#7f9cf5")
-        ]
-
-
-focus__text_indigo_500 : Css.Style
-focus__text_indigo_500 =
-    Css.focus
-        [ Css.color (Css.hex "#667eea")
-        ]
-
-
-focus__text_indigo_600 : Css.Style
-focus__text_indigo_600 =
-    Css.focus
-        [ Css.color (Css.hex "#5a67d8")
-        ]
-
-
-focus__text_indigo_700 : Css.Style
-focus__text_indigo_700 =
-    Css.focus
-        [ Css.color (Css.hex "#4c51bf")
-        ]
-
-
-focus__text_indigo_800 : Css.Style
-focus__text_indigo_800 =
-    Css.focus
-        [ Css.color (Css.hex "#434190")
-        ]
-
-
-focus__text_indigo_900 : Css.Style
-focus__text_indigo_900 =
-    Css.focus
-        [ Css.color (Css.hex "#3c366b")
-        ]
-
-
-focus__text_purple_100 : Css.Style
-focus__text_purple_100 =
-    Css.focus
-        [ Css.color (Css.hex "#faf5ff")
-        ]
-
-
-focus__text_purple_200 : Css.Style
-focus__text_purple_200 =
-    Css.focus
-        [ Css.color (Css.hex "#e9d8fd")
-        ]
-
-
-focus__text_purple_300 : Css.Style
-focus__text_purple_300 =
-    Css.focus
-        [ Css.color (Css.hex "#d6bcfa")
-        ]
-
-
-focus__text_purple_400 : Css.Style
-focus__text_purple_400 =
-    Css.focus
-        [ Css.color (Css.hex "#b794f4")
-        ]
-
-
-focus__text_purple_500 : Css.Style
-focus__text_purple_500 =
-    Css.focus
-        [ Css.color (Css.hex "#9f7aea")
-        ]
-
 
-focus__text_purple_600 : Css.Style
-focus__text_purple_600 =
-    Css.focus
-        [ Css.color (Css.hex "#805ad5")
-        ]
-
-
-focus__text_purple_700 : Css.Style
-focus__text_purple_700 =
-    Css.focus
-        [ Css.color (Css.hex "#6b46c1")
-        ]
-
-
-focus__text_purple_800 : Css.Style
-focus__text_purple_800 =
-    Css.focus
-        [ Css.color (Css.hex "#553c9a")
-        ]
-
-
-focus__text_purple_900 : Css.Style
-focus__text_purple_900 =
-    Css.focus
-        [ Css.color (Css.hex "#44337a")
-        ]
-
-
-focus__text_pink_100 : Css.Style
-focus__text_pink_100 =
-    Css.focus
-        [ Css.color (Css.hex "#fff5f7")
-        ]
-
-
-focus__text_pink_200 : Css.Style
-focus__text_pink_200 =
-    Css.focus
-        [ Css.color (Css.hex "#fed7e2")
-        ]
+text_opacity_50 : Css.Style
+text_opacity_50 =
+    Css.property "--text-opacity" "0.5"
 
 
-focus__text_pink_300 : Css.Style
-focus__text_pink_300 =
-    Css.focus
-        [ Css.color (Css.hex "#fbb6ce")
-        ]
-
-
-focus__text_pink_400 : Css.Style
-focus__text_pink_400 =
-    Css.focus
-        [ Css.color (Css.hex "#f687b3")
-        ]
-
-
-focus__text_pink_500 : Css.Style
-focus__text_pink_500 =
-    Css.focus
-        [ Css.color (Css.hex "#ed64a6")
-        ]
-
+text_opacity_75 : Css.Style
+text_opacity_75 =
+    Css.property "--text-opacity" "0.75"
 
-focus__text_pink_600 : Css.Style
-focus__text_pink_600 =
-    Css.focus
-        [ Css.color (Css.hex "#d53f8c")
-        ]
-
-
-focus__text_pink_700 : Css.Style
-focus__text_pink_700 =
-    Css.focus
-        [ Css.color (Css.hex "#b83280")
-        ]
 
-
-focus__text_pink_800 : Css.Style
-focus__text_pink_800 =
-    Css.focus
-        [ Css.color (Css.hex "#97266d")
-        ]
-
-
-focus__text_pink_900 : Css.Style
-focus__text_pink_900 =
-    Css.focus
-        [ Css.color (Css.hex "#702459")
-        ]
+text_opacity_100 : Css.Style
+text_opacity_100 =
+    Css.property "--text-opacity" "1"
 
 
 italic : Css.Style
@@ -11647,48 +10177,6 @@ line_through =
 no_underline : Css.Style
 no_underline =
     Css.textDecoration Css.none
-
-
-hover__underline : Css.Style
-hover__underline =
-    Css.hover
-        [ Css.textDecoration Css.underline
-        ]
-
-
-hover__line_through : Css.Style
-hover__line_through =
-    Css.hover
-        [ Css.textDecoration Css.lineThrough
-        ]
-
-
-hover__no_underline : Css.Style
-hover__no_underline =
-    Css.hover
-        [ Css.textDecoration Css.none
-        ]
-
-
-focus__underline : Css.Style
-focus__underline =
-    Css.focus
-        [ Css.textDecoration Css.underline
-        ]
-
-
-focus__line_through : Css.Style
-focus__line_through =
-    Css.focus
-        [ Css.textDecoration Css.lineThrough
-        ]
-
-
-focus__no_underline : Css.Style
-focus__no_underline =
-    Css.focus
-        [ Css.textDecoration Css.none
-        ]
 
 
 antialiased : Css.Style
@@ -12124,6 +10612,20 @@ z_auto =
     Css.zIndex Css.auto
 
 
+transform : Css.Style
+transform =
+    Css.batch
+        [ Css.property "--transform-translate-x" "0"
+        , Css.property "--transform-translate-y" "0"
+        , Css.property "--transform-rotate" "0"
+        , Css.property "--transform-skew-x" "0"
+        , Css.property "--transform-skew-y" "0"
+        , Css.property "--transform-scale-x" "1"
+        , Css.property "--transform-scale-y" "1"
+        , Css.property "transform" "translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))"
+        ]
+
+
 transform_none : Css.Style
 transform_none =
     Css.transform Css.none
@@ -12172,3 +10674,698 @@ origin_left =
 origin_top_left : Css.Style
 origin_top_left =
     Css.property "transform-origin" "top left"
+
+
+scale_0 : Css.Style
+scale_0 =
+    Css.batch
+        [ Css.property "--transform-scale-x" "0"
+        , Css.property "--transform-scale-y" "0"
+        ]
+
+
+scale_50 : Css.Style
+scale_50 =
+    Css.batch
+        [ Css.property "--transform-scale-x" ".5"
+        , Css.property "--transform-scale-y" ".5"
+        ]
+
+
+scale_75 : Css.Style
+scale_75 =
+    Css.batch
+        [ Css.property "--transform-scale-x" ".75"
+        , Css.property "--transform-scale-y" ".75"
+        ]
+
+
+scale_90 : Css.Style
+scale_90 =
+    Css.batch
+        [ Css.property "--transform-scale-x" ".9"
+        , Css.property "--transform-scale-y" ".9"
+        ]
+
+
+scale_95 : Css.Style
+scale_95 =
+    Css.batch
+        [ Css.property "--transform-scale-x" ".95"
+        , Css.property "--transform-scale-y" ".95"
+        ]
+
+
+scale_100 : Css.Style
+scale_100 =
+    Css.batch
+        [ Css.property "--transform-scale-x" "1"
+        , Css.property "--transform-scale-y" "1"
+        ]
+
+
+scale_105 : Css.Style
+scale_105 =
+    Css.batch
+        [ Css.property "--transform-scale-x" "1.05"
+        , Css.property "--transform-scale-y" "1.05"
+        ]
+
+
+scale_110 : Css.Style
+scale_110 =
+    Css.batch
+        [ Css.property "--transform-scale-x" "1.1"
+        , Css.property "--transform-scale-y" "1.1"
+        ]
+
+
+scale_125 : Css.Style
+scale_125 =
+    Css.batch
+        [ Css.property "--transform-scale-x" "1.25"
+        , Css.property "--transform-scale-y" "1.25"
+        ]
+
+
+scale_150 : Css.Style
+scale_150 =
+    Css.batch
+        [ Css.property "--transform-scale-x" "1.5"
+        , Css.property "--transform-scale-y" "1.5"
+        ]
+
+
+scale_x_0 : Css.Style
+scale_x_0 =
+    Css.property "--transform-scale-x" "0"
+
+
+scale_x_50 : Css.Style
+scale_x_50 =
+    Css.property "--transform-scale-x" ".5"
+
+
+scale_x_75 : Css.Style
+scale_x_75 =
+    Css.property "--transform-scale-x" ".75"
+
+
+scale_x_90 : Css.Style
+scale_x_90 =
+    Css.property "--transform-scale-x" ".9"
+
+
+scale_x_95 : Css.Style
+scale_x_95 =
+    Css.property "--transform-scale-x" ".95"
+
+
+scale_x_100 : Css.Style
+scale_x_100 =
+    Css.property "--transform-scale-x" "1"
+
+
+scale_x_105 : Css.Style
+scale_x_105 =
+    Css.property "--transform-scale-x" "1.05"
+
+
+scale_x_110 : Css.Style
+scale_x_110 =
+    Css.property "--transform-scale-x" "1.1"
+
+
+scale_x_125 : Css.Style
+scale_x_125 =
+    Css.property "--transform-scale-x" "1.25"
+
+
+scale_x_150 : Css.Style
+scale_x_150 =
+    Css.property "--transform-scale-x" "1.5"
+
+
+scale_y_0 : Css.Style
+scale_y_0 =
+    Css.property "--transform-scale-y" "0"
+
+
+scale_y_50 : Css.Style
+scale_y_50 =
+    Css.property "--transform-scale-y" ".5"
+
+
+scale_y_75 : Css.Style
+scale_y_75 =
+    Css.property "--transform-scale-y" ".75"
+
+
+scale_y_90 : Css.Style
+scale_y_90 =
+    Css.property "--transform-scale-y" ".9"
+
+
+scale_y_95 : Css.Style
+scale_y_95 =
+    Css.property "--transform-scale-y" ".95"
+
+
+scale_y_100 : Css.Style
+scale_y_100 =
+    Css.property "--transform-scale-y" "1"
+
+
+scale_y_105 : Css.Style
+scale_y_105 =
+    Css.property "--transform-scale-y" "1.05"
+
+
+scale_y_110 : Css.Style
+scale_y_110 =
+    Css.property "--transform-scale-y" "1.1"
+
+
+scale_y_125 : Css.Style
+scale_y_125 =
+    Css.property "--transform-scale-y" "1.25"
+
+
+scale_y_150 : Css.Style
+scale_y_150 =
+    Css.property "--transform-scale-y" "1.5"
+
+
+rotate_0 : Css.Style
+rotate_0 =
+    Css.property "--transform-rotate" "0"
+
+
+rotate_45 : Css.Style
+rotate_45 =
+    Css.property "--transform-rotate" "45deg"
+
+
+rotate_90 : Css.Style
+rotate_90 =
+    Css.property "--transform-rotate" "90deg"
+
+
+rotate_180 : Css.Style
+rotate_180 =
+    Css.property "--transform-rotate" "180deg"
+
+
+neg_rotate_180 : Css.Style
+neg_rotate_180 =
+    Css.property "--transform-rotate" "-180deg"
+
+
+neg_rotate_90 : Css.Style
+neg_rotate_90 =
+    Css.property "--transform-rotate" "-90deg"
+
+
+neg_rotate_45 : Css.Style
+neg_rotate_45 =
+    Css.property "--transform-rotate" "-45deg"
+
+
+translate_x_0 : Css.Style
+translate_x_0 =
+    Css.property "--transform-translate-x" "0"
+
+
+translate_x_1 : Css.Style
+translate_x_1 =
+    Css.property "--transform-translate-x" "0.25rem"
+
+
+translate_x_2 : Css.Style
+translate_x_2 =
+    Css.property "--transform-translate-x" "0.5rem"
+
+
+translate_x_3 : Css.Style
+translate_x_3 =
+    Css.property "--transform-translate-x" "0.75rem"
+
+
+translate_x_4 : Css.Style
+translate_x_4 =
+    Css.property "--transform-translate-x" "1rem"
+
+
+translate_x_5 : Css.Style
+translate_x_5 =
+    Css.property "--transform-translate-x" "1.25rem"
+
+
+translate_x_6 : Css.Style
+translate_x_6 =
+    Css.property "--transform-translate-x" "1.5rem"
+
+
+translate_x_8 : Css.Style
+translate_x_8 =
+    Css.property "--transform-translate-x" "2rem"
+
+
+translate_x_10 : Css.Style
+translate_x_10 =
+    Css.property "--transform-translate-x" "2.5rem"
+
+
+translate_x_12 : Css.Style
+translate_x_12 =
+    Css.property "--transform-translate-x" "3rem"
+
+
+translate_x_16 : Css.Style
+translate_x_16 =
+    Css.property "--transform-translate-x" "4rem"
+
+
+translate_x_20 : Css.Style
+translate_x_20 =
+    Css.property "--transform-translate-x" "5rem"
+
+
+translate_x_24 : Css.Style
+translate_x_24 =
+    Css.property "--transform-translate-x" "6rem"
+
+
+translate_x_32 : Css.Style
+translate_x_32 =
+    Css.property "--transform-translate-x" "8rem"
+
+
+translate_x_40 : Css.Style
+translate_x_40 =
+    Css.property "--transform-translate-x" "10rem"
+
+
+translate_x_48 : Css.Style
+translate_x_48 =
+    Css.property "--transform-translate-x" "12rem"
+
+
+translate_x_56 : Css.Style
+translate_x_56 =
+    Css.property "--transform-translate-x" "14rem"
+
+
+translate_x_64 : Css.Style
+translate_x_64 =
+    Css.property "--transform-translate-x" "16rem"
+
+
+translate_x_px : Css.Style
+translate_x_px =
+    Css.property "--transform-translate-x" "1px"
+
+
+neg_translate_x_1 : Css.Style
+neg_translate_x_1 =
+    Css.property "--transform-translate-x" "-0.25rem"
+
+
+neg_translate_x_2 : Css.Style
+neg_translate_x_2 =
+    Css.property "--transform-translate-x" "-0.5rem"
+
+
+neg_translate_x_3 : Css.Style
+neg_translate_x_3 =
+    Css.property "--transform-translate-x" "-0.75rem"
+
+
+neg_translate_x_4 : Css.Style
+neg_translate_x_4 =
+    Css.property "--transform-translate-x" "-1rem"
+
+
+neg_translate_x_5 : Css.Style
+neg_translate_x_5 =
+    Css.property "--transform-translate-x" "-1.25rem"
+
+
+neg_translate_x_6 : Css.Style
+neg_translate_x_6 =
+    Css.property "--transform-translate-x" "-1.5rem"
+
+
+neg_translate_x_8 : Css.Style
+neg_translate_x_8 =
+    Css.property "--transform-translate-x" "-2rem"
+
+
+neg_translate_x_10 : Css.Style
+neg_translate_x_10 =
+    Css.property "--transform-translate-x" "-2.5rem"
+
+
+neg_translate_x_12 : Css.Style
+neg_translate_x_12 =
+    Css.property "--transform-translate-x" "-3rem"
+
+
+neg_translate_x_16 : Css.Style
+neg_translate_x_16 =
+    Css.property "--transform-translate-x" "-4rem"
+
+
+neg_translate_x_20 : Css.Style
+neg_translate_x_20 =
+    Css.property "--transform-translate-x" "-5rem"
+
+
+neg_translate_x_24 : Css.Style
+neg_translate_x_24 =
+    Css.property "--transform-translate-x" "-6rem"
+
+
+neg_translate_x_32 : Css.Style
+neg_translate_x_32 =
+    Css.property "--transform-translate-x" "-8rem"
+
+
+neg_translate_x_40 : Css.Style
+neg_translate_x_40 =
+    Css.property "--transform-translate-x" "-10rem"
+
+
+neg_translate_x_48 : Css.Style
+neg_translate_x_48 =
+    Css.property "--transform-translate-x" "-12rem"
+
+
+neg_translate_x_56 : Css.Style
+neg_translate_x_56 =
+    Css.property "--transform-translate-x" "-14rem"
+
+
+neg_translate_x_64 : Css.Style
+neg_translate_x_64 =
+    Css.property "--transform-translate-x" "-16rem"
+
+
+neg_translate_x_px : Css.Style
+neg_translate_x_px =
+    Css.property "--transform-translate-x" "-1px"
+
+
+neg_translate_x_full : Css.Style
+neg_translate_x_full =
+    Css.property "--transform-translate-x" "-100%"
+
+
+neg_translate_x_1over2 : Css.Style
+neg_translate_x_1over2 =
+    Css.property "--transform-translate-x" "-50%"
+
+
+translate_x_1over2 : Css.Style
+translate_x_1over2 =
+    Css.property "--transform-translate-x" "50%"
+
+
+translate_x_full : Css.Style
+translate_x_full =
+    Css.property "--transform-translate-x" "100%"
+
+
+translate_y_0 : Css.Style
+translate_y_0 =
+    Css.property "--transform-translate-y" "0"
+
+
+translate_y_1 : Css.Style
+translate_y_1 =
+    Css.property "--transform-translate-y" "0.25rem"
+
+
+translate_y_2 : Css.Style
+translate_y_2 =
+    Css.property "--transform-translate-y" "0.5rem"
+
+
+translate_y_3 : Css.Style
+translate_y_3 =
+    Css.property "--transform-translate-y" "0.75rem"
+
+
+translate_y_4 : Css.Style
+translate_y_4 =
+    Css.property "--transform-translate-y" "1rem"
+
+
+translate_y_5 : Css.Style
+translate_y_5 =
+    Css.property "--transform-translate-y" "1.25rem"
+
+
+translate_y_6 : Css.Style
+translate_y_6 =
+    Css.property "--transform-translate-y" "1.5rem"
+
+
+translate_y_8 : Css.Style
+translate_y_8 =
+    Css.property "--transform-translate-y" "2rem"
+
+
+translate_y_10 : Css.Style
+translate_y_10 =
+    Css.property "--transform-translate-y" "2.5rem"
+
+
+translate_y_12 : Css.Style
+translate_y_12 =
+    Css.property "--transform-translate-y" "3rem"
+
+
+translate_y_16 : Css.Style
+translate_y_16 =
+    Css.property "--transform-translate-y" "4rem"
+
+
+translate_y_20 : Css.Style
+translate_y_20 =
+    Css.property "--transform-translate-y" "5rem"
+
+
+translate_y_24 : Css.Style
+translate_y_24 =
+    Css.property "--transform-translate-y" "6rem"
+
+
+translate_y_32 : Css.Style
+translate_y_32 =
+    Css.property "--transform-translate-y" "8rem"
+
+
+translate_y_40 : Css.Style
+translate_y_40 =
+    Css.property "--transform-translate-y" "10rem"
+
+
+translate_y_48 : Css.Style
+translate_y_48 =
+    Css.property "--transform-translate-y" "12rem"
+
+
+translate_y_56 : Css.Style
+translate_y_56 =
+    Css.property "--transform-translate-y" "14rem"
+
+
+translate_y_64 : Css.Style
+translate_y_64 =
+    Css.property "--transform-translate-y" "16rem"
+
+
+translate_y_px : Css.Style
+translate_y_px =
+    Css.property "--transform-translate-y" "1px"
+
+
+neg_translate_y_1 : Css.Style
+neg_translate_y_1 =
+    Css.property "--transform-translate-y" "-0.25rem"
+
+
+neg_translate_y_2 : Css.Style
+neg_translate_y_2 =
+    Css.property "--transform-translate-y" "-0.5rem"
+
+
+neg_translate_y_3 : Css.Style
+neg_translate_y_3 =
+    Css.property "--transform-translate-y" "-0.75rem"
+
+
+neg_translate_y_4 : Css.Style
+neg_translate_y_4 =
+    Css.property "--transform-translate-y" "-1rem"
+
+
+neg_translate_y_5 : Css.Style
+neg_translate_y_5 =
+    Css.property "--transform-translate-y" "-1.25rem"
+
+
+neg_translate_y_6 : Css.Style
+neg_translate_y_6 =
+    Css.property "--transform-translate-y" "-1.5rem"
+
+
+neg_translate_y_8 : Css.Style
+neg_translate_y_8 =
+    Css.property "--transform-translate-y" "-2rem"
+
+
+neg_translate_y_10 : Css.Style
+neg_translate_y_10 =
+    Css.property "--transform-translate-y" "-2.5rem"
+
+
+neg_translate_y_12 : Css.Style
+neg_translate_y_12 =
+    Css.property "--transform-translate-y" "-3rem"
+
+
+neg_translate_y_16 : Css.Style
+neg_translate_y_16 =
+    Css.property "--transform-translate-y" "-4rem"
+
+
+neg_translate_y_20 : Css.Style
+neg_translate_y_20 =
+    Css.property "--transform-translate-y" "-5rem"
+
+
+neg_translate_y_24 : Css.Style
+neg_translate_y_24 =
+    Css.property "--transform-translate-y" "-6rem"
+
+
+neg_translate_y_32 : Css.Style
+neg_translate_y_32 =
+    Css.property "--transform-translate-y" "-8rem"
+
+
+neg_translate_y_40 : Css.Style
+neg_translate_y_40 =
+    Css.property "--transform-translate-y" "-10rem"
+
+
+neg_translate_y_48 : Css.Style
+neg_translate_y_48 =
+    Css.property "--transform-translate-y" "-12rem"
+
+
+neg_translate_y_56 : Css.Style
+neg_translate_y_56 =
+    Css.property "--transform-translate-y" "-14rem"
+
+
+neg_translate_y_64 : Css.Style
+neg_translate_y_64 =
+    Css.property "--transform-translate-y" "-16rem"
+
+
+neg_translate_y_px : Css.Style
+neg_translate_y_px =
+    Css.property "--transform-translate-y" "-1px"
+
+
+neg_translate_y_full : Css.Style
+neg_translate_y_full =
+    Css.property "--transform-translate-y" "-100%"
+
+
+neg_translate_y_1over2 : Css.Style
+neg_translate_y_1over2 =
+    Css.property "--transform-translate-y" "-50%"
+
+
+translate_y_1over2 : Css.Style
+translate_y_1over2 =
+    Css.property "--transform-translate-y" "50%"
+
+
+translate_y_full : Css.Style
+translate_y_full =
+    Css.property "--transform-translate-y" "100%"
+
+
+skew_x_0 : Css.Style
+skew_x_0 =
+    Css.property "--transform-skew-x" "0"
+
+
+skew_x_3 : Css.Style
+skew_x_3 =
+    Css.property "--transform-skew-x" "3deg"
+
+
+skew_x_6 : Css.Style
+skew_x_6 =
+    Css.property "--transform-skew-x" "6deg"
+
+
+skew_x_12 : Css.Style
+skew_x_12 =
+    Css.property "--transform-skew-x" "12deg"
+
+
+neg_skew_x_12 : Css.Style
+neg_skew_x_12 =
+    Css.property "--transform-skew-x" "-12deg"
+
+
+neg_skew_x_6 : Css.Style
+neg_skew_x_6 =
+    Css.property "--transform-skew-x" "-6deg"
+
+
+neg_skew_x_3 : Css.Style
+neg_skew_x_3 =
+    Css.property "--transform-skew-x" "-3deg"
+
+
+skew_y_0 : Css.Style
+skew_y_0 =
+    Css.property "--transform-skew-y" "0"
+
+
+skew_y_3 : Css.Style
+skew_y_3 =
+    Css.property "--transform-skew-y" "3deg"
+
+
+skew_y_6 : Css.Style
+skew_y_6 =
+    Css.property "--transform-skew-y" "6deg"
+
+
+skew_y_12 : Css.Style
+skew_y_12 =
+    Css.property "--transform-skew-y" "12deg"
+
+
+neg_skew_y_12 : Css.Style
+neg_skew_y_12 =
+    Css.property "--transform-skew-y" "-12deg"
+
+
+neg_skew_y_6 : Css.Style
+neg_skew_y_6 =
+    Css.property "--transform-skew-y" "-6deg"
+
+
+neg_skew_y_3 : Css.Style
+neg_skew_y_3 =
+    Css.property "--transform-skew-y" "-3deg"

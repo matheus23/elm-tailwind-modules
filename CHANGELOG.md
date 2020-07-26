@@ -1,4 +1,33 @@
 # Changelog
+## v0.3.0
+Added in support for [Space Between](https://tailwindcss.com/docs/space/#app) utilities following the normal naming conversion (e.g. `space_x_4`, `space_y_32`).
+
+```elm
+ div [ css [ TW.space_y_32 ] ]
+    [ div [] [ text "div content goes here" ]
+    , div [] [ text "div content goes here" ]
+    , div [] [ text "div content goes here" ]
+    ]
+
+```
+
+Also removed the generation of pseudo selectors (e.g. hover, active) in favor of elm-css functions. The function named mapping really didn't add anything besides generated code lots of duplciate generated code. You end up with something that still composes very nicely:
+
+Example (this looks terrible, but it's proves the point)
+```elm
+    Css.batch
+        [ TW.block
+        , TW.bg_blue_500
+        , Css.hover [ TW.bg_blue_700 ]
+        , Css.active [ TW.bg_blue_900 ]
+        , TW.text_white
+        , TW.font_bold
+        , TW.py_2
+        , TW.px_4
+        , TW.rounded
+        , atBreakpoint [ ( lg, Css.hover [ TW.bg_yellow_100, TW.text_gray_900 ] ) ]
+        ]
+```
 ## v0.2.1 
 Reduced unnecessary code generation of `Css.batch` when only one CSS declaration, also removed the exposing list to be `(..)` to reduce the LOC. In total, 36% code generation reduction.
 
