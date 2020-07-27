@@ -136,6 +136,23 @@ These are all of your base Tailwind utility classes. Their naming convention is 
 * Negative margins are prefixed with `neg` (e.g. `neg_m_4`)
 * Focus and active variants, separated with '`:`'  in Tailwind, are now separated by a `__` (e.g. `focus__bg_green_200`)
 
+##### What about pseudo selctors like `:hover` or `:active`?
+
+Turns out we don't really need them in the same way you do in traditional Tailwind. It's true this is a bit of a departure, but I don't think it will feel all that bad, even if you are Tailwind purest. Elm CSS comes with function `Css.hover` or `Css.active` that play nice with your utility classes. These compose well and also reduce the amount of generated code, therefore helping your tooling like elm-format of elm-analyze out.
+
+Example: 
+```elm
+ div [ css [ Css.hover[TW.space_y_32] ] ]
+    [ div [] [ text "div content goes here" ]
+    , div [] [ text "div content goes here" ]
+    , div [] [ text "div content goes here" ]
+    ]
+
+```
+
+
+
+
 
 #### `TW/Breakpoints.elm`
 Media-query/breakpoint definitions are not generated as discrete funtions. Instead, a new module `TW/Breakpoints.elm` is generated with a new opaque `Breakpoint`type  and a contruction function  for each of your breakpoint names. (e.g. `sm`, `md`, `lg`, `xl`) along with the following utility function:
