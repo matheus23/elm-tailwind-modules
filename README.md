@@ -36,7 +36,7 @@ What if you want all your buttons to look the same? Do you have to copy all 7 CS
 ```elm
 buttonStyle: Css.Style
 buttonStyle = 
-    Css.batch[TW.bg_blue_500, TW.hover__bg_blue_700, TW.text_white, TW.font_bold, TW.py_2 ,TW.px_4], TW.rounded]
+     Css.batch [ TW.bg_blue_500, Css.hover [ TW.bg_blue_700 ], TW.text_white, TW.font_bold, TW.py_2, TW.px_4, TW.rounded ]
 ```
 
 This now becomes our reusable style that is comprised of all the base Tailwind utilities.
