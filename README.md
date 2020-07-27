@@ -168,7 +168,6 @@ Coming Soon!
 
 * CSS Transitions
 * CSS Grid
-* Space helpers (e.g. `space-x`)
 
 ## Future enhancements
 * Add auto prefixer support. Adding it now causes duplicate function definitions that I need to determine how to group. 
