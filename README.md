@@ -134,7 +134,6 @@ These are all of your base Tailwind utility classes. Their naming convention is 
 
 * The '`-`' is replaced with '`_`' (e.g. `mb_4`, `bg_blue_400`)
 * Negative margins are prefixed with `neg` (e.g. `neg_m_4`)
-* Focus and active variants, separated with '`:`'  in Tailwind, are now separated by a `__` (e.g. `focus__bg_green_200`)
 
 ##### What about pseudo selctors like `:hover` or `:active`?
 
