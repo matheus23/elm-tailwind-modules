@@ -1,11 +1,12 @@
 module Main exposing (..)
 
+-- import TW.Scratchpad
+
 import Browser
 import Css
 import Html.Styled exposing (Html, button, div, h1, img, text)
 import Html.Styled.Attributes exposing (css, src)
 import TW.Breakpoints exposing (atBreakpoint, lg, sm)
-import TW.Scratchpad
 import TW.Utilities as TW
 
 
@@ -62,15 +63,27 @@ view model =
             [ Css.hover [ TW.bg_purple_200 ]
             , atBreakpoint
                 [ ( sm, Css.hover [ TW.bg_red_800 ] )
-                , ( lg, TW.bg_green_200 )
+
+                -- , ( lg, TW.bg_green_200 )
                 , ( lg, Css.hover [ TW.bg_black ] )
                 ]
             ]
         ]
-        [ div [ css [ TW.space_y_32 ] ]
-            [ button [ css [ buttonStyle ] ] [ text "Button" ]
-            , button [ css [ buttonStyle ] ] [ text "Button" ]
-            , button [ css [ buttonStyle ] ] [ text "Button" ]
+        [ div
+            [ css
+                [ atBreakpoint
+                    [ ( lg, TW.bg_green_900 )
+                    , ( sm, TW.bg_green_100 )
+                    , ( lg, TW.container )
+                    , ( sm, TW.container )
+                    ]
+                ]
+            ]
+            [ div [ css [ TW.space_y_32 ] ]
+                [ button [ css [ buttonStyle ] ] [ text "Button" ]
+                , button [ css [ buttonStyle ] ] [ text "Button" ]
+                , button [ css [ buttonStyle ] ] [ text "Button" ]
+                ]
             ]
         ]
 
