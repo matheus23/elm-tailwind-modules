@@ -89,7 +89,9 @@ import Css.Global
 
 container : Css.Style
 container =
-    Css.width (Css.pct 100)
+    Css.batch
+        [ Css.width (Css.pct 100)
+        ]
 
 
 space_y_0 : Css.Style

@@ -74,7 +74,15 @@ function elmFunction(config, { cls, elm }) {
   let declarationBlock = `
         ${elm.declarations.map((d) => convertDeclaration(d)).join(", \n      ")}
   `;
-  if (elm.declarations.length > 1 || elm.advancedSelector) {
+
+  // HACK: force a Css.batch surrounding `.container` so that `w-full` and `container` don't
+  // equal each other in the `atBreakpoint` function (https://github.com/justinrassier/postcss-elm-css-tailwind/issues/10)
+  // any more hacks like this and we need to find a better way
+  if (
+    elm.declarations.length > 1 ||
+    elm.advancedSelector ||
+    elm.elmName === "container"
+  ) {
     declarationBlock = `
     Css.batch [
       ${advancedSelectorContainer(elm.advancedSelector, declarationBlock)}
