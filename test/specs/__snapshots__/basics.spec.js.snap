@@ -10695,6 +10695,902 @@ z_auto =
     Css.zIndex Css.auto
 
 
+gap_0 : Css.Style
+gap_0 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"0\\"
+        , Css.property \\"gap\\" \\"0\\"
+        ]
+
+
+gap_1 : Css.Style
+gap_1 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"0.25rem\\"
+        , Css.property \\"gap\\" \\"0.25rem\\"
+        ]
+
+
+gap_2 : Css.Style
+gap_2 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"0.5rem\\"
+        , Css.property \\"gap\\" \\"0.5rem\\"
+        ]
+
+
+gap_3 : Css.Style
+gap_3 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"0.75rem\\"
+        , Css.property \\"gap\\" \\"0.75rem\\"
+        ]
+
+
+gap_4 : Css.Style
+gap_4 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"1rem\\"
+        , Css.property \\"gap\\" \\"1rem\\"
+        ]
+
+
+gap_5 : Css.Style
+gap_5 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"1.25rem\\"
+        , Css.property \\"gap\\" \\"1.25rem\\"
+        ]
+
+
+gap_6 : Css.Style
+gap_6 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"1.5rem\\"
+        , Css.property \\"gap\\" \\"1.5rem\\"
+        ]
+
+
+gap_8 : Css.Style
+gap_8 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"2rem\\"
+        , Css.property \\"gap\\" \\"2rem\\"
+        ]
+
+
+gap_10 : Css.Style
+gap_10 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"2.5rem\\"
+        , Css.property \\"gap\\" \\"2.5rem\\"
+        ]
+
+
+gap_12 : Css.Style
+gap_12 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"3rem\\"
+        , Css.property \\"gap\\" \\"3rem\\"
+        ]
+
+
+gap_16 : Css.Style
+gap_16 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"4rem\\"
+        , Css.property \\"gap\\" \\"4rem\\"
+        ]
+
+
+gap_20 : Css.Style
+gap_20 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"5rem\\"
+        , Css.property \\"gap\\" \\"5rem\\"
+        ]
+
+
+gap_24 : Css.Style
+gap_24 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"6rem\\"
+        , Css.property \\"gap\\" \\"6rem\\"
+        ]
+
+
+gap_32 : Css.Style
+gap_32 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"8rem\\"
+        , Css.property \\"gap\\" \\"8rem\\"
+        ]
+
+
+gap_40 : Css.Style
+gap_40 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"10rem\\"
+        , Css.property \\"gap\\" \\"10rem\\"
+        ]
+
+
+gap_48 : Css.Style
+gap_48 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"12rem\\"
+        , Css.property \\"gap\\" \\"12rem\\"
+        ]
+
+
+gap_56 : Css.Style
+gap_56 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"14rem\\"
+        , Css.property \\"gap\\" \\"14rem\\"
+        ]
+
+
+gap_64 : Css.Style
+gap_64 =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"16rem\\"
+        , Css.property \\"gap\\" \\"16rem\\"
+        ]
+
+
+gap_px : Css.Style
+gap_px =
+    Css.batch
+        [ Css.property \\"grid-gap\\" \\"1px\\"
+        , Css.property \\"gap\\" \\"1px\\"
+        ]
+
+
+col_gap_0 : Css.Style
+col_gap_0 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"0\\"
+        , Css.property \\"column-gap\\" \\"0\\"
+        ]
+
+
+col_gap_1 : Css.Style
+col_gap_1 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"0.25rem\\"
+        , Css.property \\"column-gap\\" \\"0.25rem\\"
+        ]
+
+
+col_gap_2 : Css.Style
+col_gap_2 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"0.5rem\\"
+        , Css.property \\"column-gap\\" \\"0.5rem\\"
+        ]
+
+
+col_gap_3 : Css.Style
+col_gap_3 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"0.75rem\\"
+        , Css.property \\"column-gap\\" \\"0.75rem\\"
+        ]
+
+
+col_gap_4 : Css.Style
+col_gap_4 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"1rem\\"
+        , Css.property \\"column-gap\\" \\"1rem\\"
+        ]
+
+
+col_gap_5 : Css.Style
+col_gap_5 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"1.25rem\\"
+        , Css.property \\"column-gap\\" \\"1.25rem\\"
+        ]
+
+
+col_gap_6 : Css.Style
+col_gap_6 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"1.5rem\\"
+        , Css.property \\"column-gap\\" \\"1.5rem\\"
+        ]
+
+
+col_gap_8 : Css.Style
+col_gap_8 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"2rem\\"
+        , Css.property \\"column-gap\\" \\"2rem\\"
+        ]
+
+
+col_gap_10 : Css.Style
+col_gap_10 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"2.5rem\\"
+        , Css.property \\"column-gap\\" \\"2.5rem\\"
+        ]
+
+
+col_gap_12 : Css.Style
+col_gap_12 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"3rem\\"
+        , Css.property \\"column-gap\\" \\"3rem\\"
+        ]
+
+
+col_gap_16 : Css.Style
+col_gap_16 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"4rem\\"
+        , Css.property \\"column-gap\\" \\"4rem\\"
+        ]
+
+
+col_gap_20 : Css.Style
+col_gap_20 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"5rem\\"
+        , Css.property \\"column-gap\\" \\"5rem\\"
+        ]
+
+
+col_gap_24 : Css.Style
+col_gap_24 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"6rem\\"
+        , Css.property \\"column-gap\\" \\"6rem\\"
+        ]
+
+
+col_gap_32 : Css.Style
+col_gap_32 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"8rem\\"
+        , Css.property \\"column-gap\\" \\"8rem\\"
+        ]
+
+
+col_gap_40 : Css.Style
+col_gap_40 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"10rem\\"
+        , Css.property \\"column-gap\\" \\"10rem\\"
+        ]
+
+
+col_gap_48 : Css.Style
+col_gap_48 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"12rem\\"
+        , Css.property \\"column-gap\\" \\"12rem\\"
+        ]
+
+
+col_gap_56 : Css.Style
+col_gap_56 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"14rem\\"
+        , Css.property \\"column-gap\\" \\"14rem\\"
+        ]
+
+
+col_gap_64 : Css.Style
+col_gap_64 =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"16rem\\"
+        , Css.property \\"column-gap\\" \\"16rem\\"
+        ]
+
+
+col_gap_px : Css.Style
+col_gap_px =
+    Css.batch
+        [ Css.property \\"grid-column-gap\\" \\"1px\\"
+        , Css.property \\"column-gap\\" \\"1px\\"
+        ]
+
+
+row_gap_0 : Css.Style
+row_gap_0 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"0\\"
+        , Css.property \\"row-gap\\" \\"0\\"
+        ]
+
+
+row_gap_1 : Css.Style
+row_gap_1 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"0.25rem\\"
+        , Css.property \\"row-gap\\" \\"0.25rem\\"
+        ]
+
+
+row_gap_2 : Css.Style
+row_gap_2 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"0.5rem\\"
+        , Css.property \\"row-gap\\" \\"0.5rem\\"
+        ]
+
+
+row_gap_3 : Css.Style
+row_gap_3 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"0.75rem\\"
+        , Css.property \\"row-gap\\" \\"0.75rem\\"
+        ]
+
+
+row_gap_4 : Css.Style
+row_gap_4 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"1rem\\"
+        , Css.property \\"row-gap\\" \\"1rem\\"
+        ]
+
+
+row_gap_5 : Css.Style
+row_gap_5 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"1.25rem\\"
+        , Css.property \\"row-gap\\" \\"1.25rem\\"
+        ]
+
+
+row_gap_6 : Css.Style
+row_gap_6 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"1.5rem\\"
+        , Css.property \\"row-gap\\" \\"1.5rem\\"
+        ]
+
+
+row_gap_8 : Css.Style
+row_gap_8 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"2rem\\"
+        , Css.property \\"row-gap\\" \\"2rem\\"
+        ]
+
+
+row_gap_10 : Css.Style
+row_gap_10 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"2.5rem\\"
+        , Css.property \\"row-gap\\" \\"2.5rem\\"
+        ]
+
+
+row_gap_12 : Css.Style
+row_gap_12 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"3rem\\"
+        , Css.property \\"row-gap\\" \\"3rem\\"
+        ]
+
+
+row_gap_16 : Css.Style
+row_gap_16 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"4rem\\"
+        , Css.property \\"row-gap\\" \\"4rem\\"
+        ]
+
+
+row_gap_20 : Css.Style
+row_gap_20 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"5rem\\"
+        , Css.property \\"row-gap\\" \\"5rem\\"
+        ]
+
+
+row_gap_24 : Css.Style
+row_gap_24 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"6rem\\"
+        , Css.property \\"row-gap\\" \\"6rem\\"
+        ]
+
+
+row_gap_32 : Css.Style
+row_gap_32 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"8rem\\"
+        , Css.property \\"row-gap\\" \\"8rem\\"
+        ]
+
+
+row_gap_40 : Css.Style
+row_gap_40 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"10rem\\"
+        , Css.property \\"row-gap\\" \\"10rem\\"
+        ]
+
+
+row_gap_48 : Css.Style
+row_gap_48 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"12rem\\"
+        , Css.property \\"row-gap\\" \\"12rem\\"
+        ]
+
+
+row_gap_56 : Css.Style
+row_gap_56 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"14rem\\"
+        , Css.property \\"row-gap\\" \\"14rem\\"
+        ]
+
+
+row_gap_64 : Css.Style
+row_gap_64 =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"16rem\\"
+        , Css.property \\"row-gap\\" \\"16rem\\"
+        ]
+
+
+row_gap_px : Css.Style
+row_gap_px =
+    Css.batch
+        [ Css.property \\"grid-row-gap\\" \\"1px\\"
+        , Css.property \\"row-gap\\" \\"1px\\"
+        ]
+
+
+grid_flow_row : Css.Style
+grid_flow_row =
+    Css.property \\"grid-auto-flow\\" \\"row\\"
+
+
+grid_flow_col : Css.Style
+grid_flow_col =
+    Css.property \\"grid-auto-flow\\" \\"column\\"
+
+
+grid_flow_row_dense : Css.Style
+grid_flow_row_dense =
+    Css.property \\"grid-auto-flow\\" \\"row dense\\"
+
+
+grid_flow_col_dense : Css.Style
+grid_flow_col_dense =
+    Css.property \\"grid-auto-flow\\" \\"column dense\\"
+
+
+grid_cols_1 : Css.Style
+grid_cols_1 =
+    Css.property \\"grid-template-columns\\" \\"repeat(1, minmax(0, 1fr))\\"
+
+
+grid_cols_2 : Css.Style
+grid_cols_2 =
+    Css.property \\"grid-template-columns\\" \\"repeat(2, minmax(0, 1fr))\\"
+
+
+grid_cols_3 : Css.Style
+grid_cols_3 =
+    Css.property \\"grid-template-columns\\" \\"repeat(3, minmax(0, 1fr))\\"
+
+
+grid_cols_4 : Css.Style
+grid_cols_4 =
+    Css.property \\"grid-template-columns\\" \\"repeat(4, minmax(0, 1fr))\\"
+
+
+grid_cols_5 : Css.Style
+grid_cols_5 =
+    Css.property \\"grid-template-columns\\" \\"repeat(5, minmax(0, 1fr))\\"
+
+
+grid_cols_6 : Css.Style
+grid_cols_6 =
+    Css.property \\"grid-template-columns\\" \\"repeat(6, minmax(0, 1fr))\\"
+
+
+grid_cols_7 : Css.Style
+grid_cols_7 =
+    Css.property \\"grid-template-columns\\" \\"repeat(7, minmax(0, 1fr))\\"
+
+
+grid_cols_8 : Css.Style
+grid_cols_8 =
+    Css.property \\"grid-template-columns\\" \\"repeat(8, minmax(0, 1fr))\\"
+
+
+grid_cols_9 : Css.Style
+grid_cols_9 =
+    Css.property \\"grid-template-columns\\" \\"repeat(9, minmax(0, 1fr))\\"
+
+
+grid_cols_10 : Css.Style
+grid_cols_10 =
+    Css.property \\"grid-template-columns\\" \\"repeat(10, minmax(0, 1fr))\\"
+
+
+grid_cols_11 : Css.Style
+grid_cols_11 =
+    Css.property \\"grid-template-columns\\" \\"repeat(11, minmax(0, 1fr))\\"
+
+
+grid_cols_12 : Css.Style
+grid_cols_12 =
+    Css.property \\"grid-template-columns\\" \\"repeat(12, minmax(0, 1fr))\\"
+
+
+grid_cols_none : Css.Style
+grid_cols_none =
+    Css.property \\"grid-template-columns\\" \\"none\\"
+
+
+col_auto : Css.Style
+col_auto =
+    Css.property \\"grid-column\\" \\"auto\\"
+
+
+col_span_1 : Css.Style
+col_span_1 =
+    Css.property \\"grid-column\\" \\"span 1 / span 1\\"
+
+
+col_span_2 : Css.Style
+col_span_2 =
+    Css.property \\"grid-column\\" \\"span 2 / span 2\\"
+
+
+col_span_3 : Css.Style
+col_span_3 =
+    Css.property \\"grid-column\\" \\"span 3 / span 3\\"
+
+
+col_span_4 : Css.Style
+col_span_4 =
+    Css.property \\"grid-column\\" \\"span 4 / span 4\\"
+
+
+col_span_5 : Css.Style
+col_span_5 =
+    Css.property \\"grid-column\\" \\"span 5 / span 5\\"
+
+
+col_span_6 : Css.Style
+col_span_6 =
+    Css.property \\"grid-column\\" \\"span 6 / span 6\\"
+
+
+col_span_7 : Css.Style
+col_span_7 =
+    Css.property \\"grid-column\\" \\"span 7 / span 7\\"
+
+
+col_span_8 : Css.Style
+col_span_8 =
+    Css.property \\"grid-column\\" \\"span 8 / span 8\\"
+
+
+col_span_9 : Css.Style
+col_span_9 =
+    Css.property \\"grid-column\\" \\"span 9 / span 9\\"
+
+
+col_span_10 : Css.Style
+col_span_10 =
+    Css.property \\"grid-column\\" \\"span 10 / span 10\\"
+
+
+col_span_11 : Css.Style
+col_span_11 =
+    Css.property \\"grid-column\\" \\"span 11 / span 11\\"
+
+
+col_span_12 : Css.Style
+col_span_12 =
+    Css.property \\"grid-column\\" \\"span 12 / span 12\\"
+
+
+col_start_1 : Css.Style
+col_start_1 =
+    Css.property \\"grid-column-start\\" \\"1\\"
+
+
+col_start_2 : Css.Style
+col_start_2 =
+    Css.property \\"grid-column-start\\" \\"2\\"
+
+
+col_start_3 : Css.Style
+col_start_3 =
+    Css.property \\"grid-column-start\\" \\"3\\"
+
+
+col_start_4 : Css.Style
+col_start_4 =
+    Css.property \\"grid-column-start\\" \\"4\\"
+
+
+col_start_5 : Css.Style
+col_start_5 =
+    Css.property \\"grid-column-start\\" \\"5\\"
+
+
+col_start_6 : Css.Style
+col_start_6 =
+    Css.property \\"grid-column-start\\" \\"6\\"
+
+
+col_start_7 : Css.Style
+col_start_7 =
+    Css.property \\"grid-column-start\\" \\"7\\"
+
+
+col_start_8 : Css.Style
+col_start_8 =
+    Css.property \\"grid-column-start\\" \\"8\\"
+
+
+col_start_9 : Css.Style
+col_start_9 =
+    Css.property \\"grid-column-start\\" \\"9\\"
+
+
+col_start_10 : Css.Style
+col_start_10 =
+    Css.property \\"grid-column-start\\" \\"10\\"
+
+
+col_start_11 : Css.Style
+col_start_11 =
+    Css.property \\"grid-column-start\\" \\"11\\"
+
+
+col_start_12 : Css.Style
+col_start_12 =
+    Css.property \\"grid-column-start\\" \\"12\\"
+
+
+col_start_13 : Css.Style
+col_start_13 =
+    Css.property \\"grid-column-start\\" \\"13\\"
+
+
+col_start_auto : Css.Style
+col_start_auto =
+    Css.property \\"grid-column-start\\" \\"auto\\"
+
+
+col_end_1 : Css.Style
+col_end_1 =
+    Css.property \\"grid-column-end\\" \\"1\\"
+
+
+col_end_2 : Css.Style
+col_end_2 =
+    Css.property \\"grid-column-end\\" \\"2\\"
+
+
+col_end_3 : Css.Style
+col_end_3 =
+    Css.property \\"grid-column-end\\" \\"3\\"
+
+
+col_end_4 : Css.Style
+col_end_4 =
+    Css.property \\"grid-column-end\\" \\"4\\"
+
+
+col_end_5 : Css.Style
+col_end_5 =
+    Css.property \\"grid-column-end\\" \\"5\\"
+
+
+col_end_6 : Css.Style
+col_end_6 =
+    Css.property \\"grid-column-end\\" \\"6\\"
+
+
+col_end_7 : Css.Style
+col_end_7 =
+    Css.property \\"grid-column-end\\" \\"7\\"
+
+
+col_end_8 : Css.Style
+col_end_8 =
+    Css.property \\"grid-column-end\\" \\"8\\"
+
+
+col_end_9 : Css.Style
+col_end_9 =
+    Css.property \\"grid-column-end\\" \\"9\\"
+
+
+col_end_10 : Css.Style
+col_end_10 =
+    Css.property \\"grid-column-end\\" \\"10\\"
+
+
+col_end_11 : Css.Style
+col_end_11 =
+    Css.property \\"grid-column-end\\" \\"11\\"
+
+
+col_end_12 : Css.Style
+col_end_12 =
+    Css.property \\"grid-column-end\\" \\"12\\"
+
+
+col_end_13 : Css.Style
+col_end_13 =
+    Css.property \\"grid-column-end\\" \\"13\\"
+
+
+col_end_auto : Css.Style
+col_end_auto =
+    Css.property \\"grid-column-end\\" \\"auto\\"
+
+
+grid_rows_1 : Css.Style
+grid_rows_1 =
+    Css.property \\"grid-template-rows\\" \\"repeat(1, minmax(0, 1fr))\\"
+
+
+grid_rows_2 : Css.Style
+grid_rows_2 =
+    Css.property \\"grid-template-rows\\" \\"repeat(2, minmax(0, 1fr))\\"
+
+
+grid_rows_3 : Css.Style
+grid_rows_3 =
+    Css.property \\"grid-template-rows\\" \\"repeat(3, minmax(0, 1fr))\\"
+
+
+grid_rows_4 : Css.Style
+grid_rows_4 =
+    Css.property \\"grid-template-rows\\" \\"repeat(4, minmax(0, 1fr))\\"
+
+
+grid_rows_5 : Css.Style
+grid_rows_5 =
+    Css.property \\"grid-template-rows\\" \\"repeat(5, minmax(0, 1fr))\\"
+
+
+grid_rows_6 : Css.Style
+grid_rows_6 =
+    Css.property \\"grid-template-rows\\" \\"repeat(6, minmax(0, 1fr))\\"
+
+
+grid_rows_none : Css.Style
+grid_rows_none =
+    Css.property \\"grid-template-rows\\" \\"none\\"
+
+
+row_auto : Css.Style
+row_auto =
+    Css.property \\"grid-row\\" \\"auto\\"
+
+
+row_span_1 : Css.Style
+row_span_1 =
+    Css.property \\"grid-row\\" \\"span 1 / span 1\\"
+
+
+row_span_2 : Css.Style
+row_span_2 =
+    Css.property \\"grid-row\\" \\"span 2 / span 2\\"
+
+
+row_span_3 : Css.Style
+row_span_3 =
+    Css.property \\"grid-row\\" \\"span 3 / span 3\\"
+
+
+row_span_4 : Css.Style
+row_span_4 =
+    Css.property \\"grid-row\\" \\"span 4 / span 4\\"
+
+
+row_span_5 : Css.Style
+row_span_5 =
+    Css.property \\"grid-row\\" \\"span 5 / span 5\\"
+
+
+row_span_6 : Css.Style
+row_span_6 =
+    Css.property \\"grid-row\\" \\"span 6 / span 6\\"
+
+
+row_start_1 : Css.Style
+row_start_1 =
+    Css.property \\"grid-row-start\\" \\"1\\"
+
+
+row_start_2 : Css.Style
+row_start_2 =
+    Css.property \\"grid-row-start\\" \\"2\\"
+
+
+row_start_3 : Css.Style
+row_start_3 =
+    Css.property \\"grid-row-start\\" \\"3\\"
+
+
+row_start_4 : Css.Style
+row_start_4 =
+    Css.property \\"grid-row-start\\" \\"4\\"
+
+
+row_start_5 : Css.Style
+row_start_5 =
+    Css.property \\"grid-row-start\\" \\"5\\"
+
+
+row_start_6 : Css.Style
+row_start_6 =
+    Css.property \\"grid-row-start\\" \\"6\\"
+
+
+row_start_7 : Css.Style
+row_start_7 =
+    Css.property \\"grid-row-start\\" \\"7\\"
+
+
+row_start_auto : Css.Style
+row_start_auto =
+    Css.property \\"grid-row-start\\" \\"auto\\"
+
+
+row_end_1 : Css.Style
+row_end_1 =
+    Css.property \\"grid-row-end\\" \\"1\\"
+
+
+row_end_2 : Css.Style
+row_end_2 =
+    Css.property \\"grid-row-end\\" \\"2\\"
+
+
+row_end_3 : Css.Style
+row_end_3 =
+    Css.property \\"grid-row-end\\" \\"3\\"
+
+
+row_end_4 : Css.Style
+row_end_4 =
+    Css.property \\"grid-row-end\\" \\"4\\"
+
+
+row_end_5 : Css.Style
+row_end_5 =
+    Css.property \\"grid-row-end\\" \\"5\\"
+
+
+row_end_6 : Css.Style
+row_end_6 =
+    Css.property \\"grid-row-end\\" \\"6\\"
+
+
+row_end_7 : Css.Style
+row_end_7 =
+    Css.property \\"grid-row-end\\" \\"7\\"
+
+
+row_end_auto : Css.Style
+row_end_auto =
+    Css.property \\"grid-row-end\\" \\"auto\\"
+
+
 transform : Css.Style
 transform =
     Css.batch
