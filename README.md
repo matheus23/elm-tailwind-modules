@@ -68,7 +68,7 @@ elm install elm/regex
 ```
 
 ### Create a `tailwind.config.js` file and turn off unsupported options
-As of now, you won't end up with an Elm file that will compile unless you turn off CSS Grid and Transition support.
+As of now, you won't end up with an Elm file that will compile unless you turn off Transition support. 
 
 ```js
 module.exports = {
@@ -79,16 +79,6 @@ module.exports = {
     transitionTimingFunction: false,
     transitionDelay: false,
     transitionDuration: false,
-    gap: false,
-    gridAutoFlow: false,
-    gridRow: false,
-    gridRowStart: false,
-    gridRowEnd: false,
-    gridColumn: false,
-    gridColumnStart: false,
-    gridColumnEnd: false,
-    gridTemplateColumns: false,
-    gridTemplateRows: false,
   },
   plugins: [],
 };
@@ -183,7 +173,6 @@ Coming Soon!
 ## Not (yet) supported
 
 * CSS Transitions
-* CSS Grid
 
 ## Future enhancements
 * Add auto prefixer support. Adding it now causes duplicate function definitions that I need to determine how to group. 
