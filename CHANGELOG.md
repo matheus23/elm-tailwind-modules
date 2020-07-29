@@ -1,4 +1,45 @@
 # Changelog
+
+## v0.4.0
+
+### Support for CSS Grid utilities
+You can now update your `tailwind.config.js` file and turn support back on for all of the CSS Grid support!
+
+
+### Fixed `.container` utilities when used at defined breakpoints. 
+
+Usually `.container` will apply `width: 100%` and then the breakpoint based ones in Tailiwind like `sm:container`  apply both a media query with the breakpoint pixel size as well as a width set to that hard-coded pixel size:
+```css
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+```
+
+I have updated the `atBreakpoint` function so that it will not just wrap the `container` utility, but replace it with an equivalent elm-css version.
+
+```elm
+ div
+    [ css
+        [ atBreakpoint
+            [ ( lg, TW.bg_green_900 )
+            , ( sm, TW.bg_green_100 )
+            , ( lg, TW.container )
+            , ( sm, TW.container )
+            ]
+        ]
+    ]
+    [ div [ css [ TW.space_y_32 ] ]
+        [ div [] [ text "div content goes here" ]
+        , div [] [ text "div content goes here" ]
+        , div [] [ text "div content goes here" ]
+        ]
+    ]
+
+```
+
+
 ## v0.3.0
 Added in support for [Space Between](https://tailwindcss.com/docs/space/#app) utilities following the normal naming conversion (e.g. `space_x_4`, `space_y_32`).
 
