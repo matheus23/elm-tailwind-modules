@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.1
+
+Small fix where `.container` and `w-full` would conflict when using the `atBreakpoint` helper
+
 ## v0.4.0
 
 ### Support for CSS Grid utilities
