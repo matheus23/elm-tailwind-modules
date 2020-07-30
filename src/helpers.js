@@ -58,8 +58,6 @@ function toElmName(cls, opts) {
   return elm;
 }
 const defaultOpts = {
-  elmFile: "src/TW/Utilities.elm",
-  elmModuleName: "TW.Utilities",
   prefix: "",
   nameStyle: "snake",
 };

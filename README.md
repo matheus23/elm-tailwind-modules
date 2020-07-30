@@ -163,6 +163,48 @@ view model =
         ]
 ```
 
+## Configuration
+Don't like the defaults? There are some configuration options for you to leverage:
+
+```javascript
+    postcssElmCssTailwind({
+      //The name of your base Tailwind.css file (see below about working with bundlers) 
+      baseTailwindCSS: "./tailwind.css", 
+      // The root directory where the code will be generated
+      rootOutputDir: "./gen", // the generated output directory 
+      // The root module name for both the Utilities and Breakpoints module
+      rootModule: "Tailwind",
+    }),
+```
+
+
+This will generate:
+
+* `/gen/Tailwind/Utilities.elm`
+* `/gen/Tailwind/Breakpoints.elm`
+
+The goal is to keep configuration as simmple as possible. If more configuration is needed, reach out to me or put in a GitHub issue!
+
+
+### Working with bundlers 
+When you work with a bundler like Webpack or Parcel, you may end up sending CSS through PostCSS that is not your Tailwind utilities. To make sure invalid Elm is not generated when this happens, `postcss-elm-css-tailwind` needs to know what the name of the file that contains your Tailwind.css at-rules (e.g. `@tailwind base`)
+
+
+**Example of config with Parcel**
+```javascript
+    postcssElmCssTailwind({
+      baseTailwindCSS: "./tailwind.pcss", // Parcel file extension for PurgeCSS
+      rootOutputDir: "./gen",
+      rootModule: "Tailwind",
+    })
+```
+
+Any CSS file or PostCSS file that Parcel picks up will be ignored unless it matches the defined `baseTailwindCSS` configuration. 
+
+**Note:** The default configuration options work, but as soon as your bundler works with multiple CSS files, you will need to define the `baseTailwindCSS` configuration option to end up with valid Elm
+
+
+
 ## Developing
 Coming Soon!
 

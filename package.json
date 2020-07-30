@@ -9,8 +9,9 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "test": "npm run test:elm-compile && jest",
-    "test:elm-compile": "cd test && postcss -o dist/main.css tailwind.css && elm make src/TW/Utilities.elm && elm make src/TW/Breakpoints.elm",
+    "test": "npm run test:clean && npm run test:elm-compile && jest",
+    "test:clean": "rm -rf test/src && rm -rf test/gen",
+    "test:elm-compile": "cd test && postcss -o dist/main.css tailwind.css && elm make Main.elm",
     "test:node-only": "cd test && postcss -o dist/main.css tailwind.css"
   },
   "keywords": [

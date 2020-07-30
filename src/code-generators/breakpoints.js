@@ -1,8 +1,8 @@
-function elmFileGenerator(elmModuleName, breakpoints) {
-  return elmHeader(elmModuleName, breakpoints) + elmBody(breakpoints);
+function elmFileGenerator(opts, breakpoints) {
+  return elmHeader(opts, breakpoints) + elmBody(opts, breakpoints);
 }
 
-function elmHeader(elmModuleName, breakpoints) {
+function elmHeader({ rootModule, elmModuleName }, breakpoints) {
   l = elmHeaderExports(breakpoints);
 
   return `module ${elmModuleName} exposing
@@ -13,7 +13,7 @@ function elmHeader(elmModuleName, breakpoints) {
 import Css 
 import Css.Media
 import Regex
-import TW.Utilities
+import ${rootModule}.Utilities
 
 `;
 }
@@ -24,7 +24,7 @@ function elmHeaderExports(breakpoints) {
   return tmp.join("\n    , ");
 }
 
-function elmBody(breakpoints) {
+function elmBody({ rootModule }, breakpoints) {
   const staticDefinitions = `
 type Breakpoint =
   Breakpoint String
@@ -42,7 +42,7 @@ atBreakpoint styles =
         -- convert a container style which is width: 100% into the width: <breakpoint-px> 
         convertContainer : String -> Css.Style -> Css.Style
         convertContainer mq style =
-            if style == TW.Utilities.container then
+            if style == ${rootModule}.Utilities.container then
                 Regex.find numberRegex mq
                     |> List.head
                     |> Maybe.map .match
@@ -84,16 +84,15 @@ ${name} =
 }
 
 const defaultOpts = {
-  elmFile: "src/TW/Breakpoints.elm",
-  elmModuleName: "TW.Breakpoints",
-  prefix: "",
-  nameStyle: "snake",
+  elmFile: "Breakpoints.elm",
+  elmModuleName: "Breakpoints",
 };
 
 function cleanOpts(opts) {
   opts = { ...defaultOpts, ...opts };
-  opts.formats = { ...opts.formats };
 
+  opts.elmFile = `${opts.rootOutputDir}/${opts.rootModule}/${opts.elmFile}`;
+  opts.elmModuleName = `${opts.rootModule}.${opts.elmModuleName}`;
   return opts;
 }
 
@@ -101,11 +100,11 @@ function formats(opts) {
   return [cleanFormat(opts, elmFileGenerator)];
 }
 
-function cleanFormat({ elmFile, elmModuleName }, elmBodyFn) {
+function cleanFormat({ rootModule, elmFile, elmModuleName }, elmBodyFn) {
   if (!elmFile) return false;
   if (!elmModuleName) return false;
 
-  return { elmFile, elmModuleName, elmBodyFn };
+  return { rootModule, elmFile, elmModuleName, elmBodyFn };
 }
 
 exports.cleanOpts = cleanOpts;

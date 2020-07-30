@@ -46,7 +46,7 @@ const notSupported = {
   "-moz-osx-font-smoothing": "*",
 };
 
-function elmBodyCss(elmModuleName, classes) {
+function elmBodyCss({ elmModuleName }, classes) {
   return (
     elmHeaderCss(elmModuleName, classes) +
     elmBody({ type: "Css.Style" }, classes)
@@ -222,16 +222,15 @@ function camelize(s) {
 // options stuff
 
 const defaultOpts = {
-  elmFile: "src/TW/Utilities.elm",
-  elmModuleName: "TW.Utilities",
-  prefix: "",
-  nameStyle: "snake",
+  elmFile: "Utilities.elm",
+  elmModuleName: "Utilities",
 };
 
 function cleanOpts(opts) {
   opts = { ...defaultOpts, ...opts };
-  opts.formats = { ...opts.formats };
 
+  opts.elmFile = `${opts.rootOutputDir}/${opts.rootModule}/${opts.elmFile}`;
+  opts.elmModuleName = `${opts.rootModule}.${opts.elmModuleName}`;
   return opts;
 }
 
@@ -247,7 +246,6 @@ function cleanFormat({ elmFile, elmModuleName }, elmBodyFn) {
 }
 
 exports.cleanOpts = cleanOpts;
-exports.defaultOpts = defaultOpts;
 exports.elmFunction = elmFunction;
 exports.fixClass = fixClass;
 exports.formats = formats;
