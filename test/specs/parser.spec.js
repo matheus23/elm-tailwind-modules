@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const postcss = require("postcss");
 const tailwind = require("tailwindcss");
-const elmCssTailwind = require("../../index");
+const elmCssTailwind = require("../../src/index");
 
-const parser = require("../../parser");
+const parser = require("../../src/parser");
 
 let runner = function (css, testFn) {
   let run = postcss.plugin("test-postcss", testFn);

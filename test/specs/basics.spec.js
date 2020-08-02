@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const postcss = require("postcss");
 const tailwind = require("tailwindcss");
-const elmCssTailwind = require("../../index");
+const elmCssTailwind = require("../../src/index");
 
 //TODO: Run postcss as a setup so jest can be run independently without running the npm test script
 // beforeAll((done) => {

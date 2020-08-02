@@ -1,4 +1,4 @@
-const postcssElmCssTailwind = require("../index.js");
+const postcssElmCssTailwind = require("../src/index.js");
 
 module.exports = {
   plugins: [
