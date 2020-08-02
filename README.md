@@ -1,5 +1,7 @@
 
 # Elm CSS Tailwind
+![Build, Test and maybe Publish](https://github.com/justinrassier/postcss-elm-css-tailwind/workflows/Build,%20Test%20and%20maybe%20Publish/badge.svg?branch=master)
+
 ## Generate elm-css versions of your Tailwind utilities.
 [Tailwind CSS](https://tailwindcss.com) is an amazing utility-first approach to CSS which enables rapid development within predefined color, spacing, breakpoint systems. 
 
