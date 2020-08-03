@@ -1,4 +1,6 @@
 # Changelog
+## 0.5.0
+Added the ability to configure the output directory and module names of the generated Elm modules. Also added the configuration option that should allow better integration with bundlers. See the [README section about working with bundlers](https://github.com/justinrassier/postcss-elm-css-tailwind#working-with-bundlers) for more info.
 
 ## v0.4.1
 
