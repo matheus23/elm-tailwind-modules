@@ -44,6 +44,14 @@ const notSupported = {
   "-webkit-overflow-scrolling": "*",
   "-webkit-font-smoothing": "*",
   "-moz-osx-font-smoothing": "*",
+  "transition-property" : "*",
+  "transition-timing-function": "*",
+  "transition-duration" : "*",
+  "transition-delay": "*",
+  "animation": "*",
+  "overscroll-behavior": "*",
+  "overscroll-behavior-y": "*",
+  "overscroll-behavior-x": "*"
 };
 
 function elmBodyCss({ elmModuleName }, classes) {

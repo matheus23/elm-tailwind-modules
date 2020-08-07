@@ -7462,6 +7462,51 @@ scrolling_auto =
     Css.property \\"-webkit-overflow-scrolling\\" \\"auto\\"
 
 
+overscroll_auto : Css.Style
+overscroll_auto =
+    Css.property \\"overscroll-behavior\\" \\"auto\\"
+
+
+overscroll_contain : Css.Style
+overscroll_contain =
+    Css.property \\"overscroll-behavior\\" \\"contain\\"
+
+
+overscroll_none : Css.Style
+overscroll_none =
+    Css.property \\"overscroll-behavior\\" \\"none\\"
+
+
+overscroll_y_auto : Css.Style
+overscroll_y_auto =
+    Css.property \\"overscroll-behavior-y\\" \\"auto\\"
+
+
+overscroll_y_contain : Css.Style
+overscroll_y_contain =
+    Css.property \\"overscroll-behavior-y\\" \\"contain\\"
+
+
+overscroll_y_none : Css.Style
+overscroll_y_none =
+    Css.property \\"overscroll-behavior-y\\" \\"none\\"
+
+
+overscroll_x_auto : Css.Style
+overscroll_x_auto =
+    Css.property \\"overscroll-behavior-x\\" \\"auto\\"
+
+
+overscroll_x_contain : Css.Style
+overscroll_x_contain =
+    Css.property \\"overscroll-behavior-x\\" \\"contain\\"
+
+
+overscroll_x_none : Css.Style
+overscroll_x_none =
+    Css.property \\"overscroll-behavior-x\\" \\"none\\"
+
+
 p_0 : Css.Style
 p_0 =
     Css.padding (Css.px 0)
@@ -12350,5 +12395,165 @@ neg_skew_y_6 =
 neg_skew_y_3 : Css.Style
 neg_skew_y_3 =
     Css.property \\"--transform-skew-y\\" \\"-3deg\\"
+
+
+transition_none : Css.Style
+transition_none =
+    Css.property \\"transition-property\\" \\"none\\"
+
+
+transition_all : Css.Style
+transition_all =
+    Css.property \\"transition-property\\" \\"all\\"
+
+
+transition : Css.Style
+transition =
+    Css.property \\"transition-property\\" \\"background-color, border-color, color, fill, stroke, opacity, box-shadow, transform\\"
+
+
+transition_colors : Css.Style
+transition_colors =
+    Css.property \\"transition-property\\" \\"background-color, border-color, color, fill, stroke\\"
+
+
+transition_opacity : Css.Style
+transition_opacity =
+    Css.property \\"transition-property\\" \\"opacity\\"
+
+
+transition_shadow : Css.Style
+transition_shadow =
+    Css.property \\"transition-property\\" \\"box-shadow\\"
+
+
+transition_transform : Css.Style
+transition_transform =
+    Css.property \\"transition-property\\" \\"transform\\"
+
+
+ease_linear : Css.Style
+ease_linear =
+    Css.property \\"transition-timing-function\\" \\"linear\\"
+
+
+ease_in : Css.Style
+ease_in =
+    Css.property \\"transition-timing-function\\" \\"cubic-bezier(0.4, 0, 1, 1)\\"
+
+
+ease_out : Css.Style
+ease_out =
+    Css.property \\"transition-timing-function\\" \\"cubic-bezier(0, 0, 0.2, 1)\\"
+
+
+ease_in_out : Css.Style
+ease_in_out =
+    Css.property \\"transition-timing-function\\" \\"cubic-bezier(0.4, 0, 0.2, 1)\\"
+
+
+duration_75 : Css.Style
+duration_75 =
+    Css.property \\"transition-duration\\" \\"75ms\\"
+
+
+duration_100 : Css.Style
+duration_100 =
+    Css.property \\"transition-duration\\" \\"100ms\\"
+
+
+duration_150 : Css.Style
+duration_150 =
+    Css.property \\"transition-duration\\" \\"150ms\\"
+
+
+duration_200 : Css.Style
+duration_200 =
+    Css.property \\"transition-duration\\" \\"200ms\\"
+
+
+duration_300 : Css.Style
+duration_300 =
+    Css.property \\"transition-duration\\" \\"300ms\\"
+
+
+duration_500 : Css.Style
+duration_500 =
+    Css.property \\"transition-duration\\" \\"500ms\\"
+
+
+duration_700 : Css.Style
+duration_700 =
+    Css.property \\"transition-duration\\" \\"700ms\\"
+
+
+duration_1000 : Css.Style
+duration_1000 =
+    Css.property \\"transition-duration\\" \\"1000ms\\"
+
+
+delay_75 : Css.Style
+delay_75 =
+    Css.property \\"transition-delay\\" \\"75ms\\"
+
+
+delay_100 : Css.Style
+delay_100 =
+    Css.property \\"transition-delay\\" \\"100ms\\"
+
+
+delay_150 : Css.Style
+delay_150 =
+    Css.property \\"transition-delay\\" \\"150ms\\"
+
+
+delay_200 : Css.Style
+delay_200 =
+    Css.property \\"transition-delay\\" \\"200ms\\"
+
+
+delay_300 : Css.Style
+delay_300 =
+    Css.property \\"transition-delay\\" \\"300ms\\"
+
+
+delay_500 : Css.Style
+delay_500 =
+    Css.property \\"transition-delay\\" \\"500ms\\"
+
+
+delay_700 : Css.Style
+delay_700 =
+    Css.property \\"transition-delay\\" \\"700ms\\"
+
+
+delay_1000 : Css.Style
+delay_1000 =
+    Css.property \\"transition-delay\\" \\"1000ms\\"
+
+
+animate_none : Css.Style
+animate_none =
+    Css.property \\"animation\\" \\"none\\"
+
+
+animate_spin : Css.Style
+animate_spin =
+    Css.property \\"animation\\" \\"spin 1s linear infinite\\"
+
+
+animate_ping : Css.Style
+animate_ping =
+    Css.property \\"animation\\" \\"ping 1s cubic-bezier(0, 0, 0.2, 1) infinite\\"
+
+
+animate_pulse : Css.Style
+animate_pulse =
+    Css.property \\"animation\\" \\"pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite\\"
+
+
+animate_bounce : Css.Style
+animate_bounce =
+    Css.property \\"animation\\" \\"bounce 1s infinite\\"
 "
 `;

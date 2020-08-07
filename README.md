@@ -69,19 +69,13 @@ elm install elm/regex
 @tailwind utilities;
 ```
 
-### Create a `tailwind.config.js` file and turn off unsupported options
-As of now, you won't end up with an Elm file that will compile unless you turn off Transition support. 
+### Create a `tailwind.config.js` file (optional)
+All core plugins work out of the box, so you don't actually need a config file. If you like to have a basic one ready for customization, you can add the following to your `tailwind.config.js`
 
 ```js
 module.exports = {
   theme: {},
   variants: {},
-  corePlugins: {
-    transitionProperty: false,
-    transitionTimingFunction: false,
-    transitionDelay: false,
-    transitionDuration: false,
-  },
   plugins: [],
 };
 
@@ -212,11 +206,8 @@ Coming Soon!
 
 
 ## Supported
-* Almost everything compiles. I tried to get as much into raw elm-css to help guarantee a valid stylesheet. I sometimes had use the escape hatch and use [Css.property](https://package.elm-lang.org/packages/rtfeldman/elm-css/latest/Css#property) when either the support (or ambition) was lacking. 
+*  Everything compiles with a default config with Tailwind 1.6. I tried to get as much into raw elm-css to help guarantee a valid stylesheet. I sometimes had use the escape hatch and use [Css.property](https://package.elm-lang.org/packages/rtfeldman/elm-css/latest/Css#property) when either the support (or ambition) was lacking. This shouldn't cause any problem considering Tailwind is the source of truth for the properties, so they should be correct :)
 
-## Not (yet) supported
-
-* CSS Transitions
 
 ## Future enhancements
 * Add auto prefixer support. Adding it now causes duplicate function definitions that I need to determine how to group. 
