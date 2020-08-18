@@ -71,13 +71,13 @@ export default postcss.plugin(
                 );
 
             //execute the code generation and save the output
-            return tap(Promise.all([...formats, ...breakpointsFormats]), (p) =>
-                p.then((files) => {
-                    // run elm-format on the output file for good measure
-                    execSync(`elm-format --yes ${files.join(" ")}`);
-                    console.log("Saved", files);
-                })
-            );
+            const files = await Promise.all([...formats, ...breakpointsFormats]);
+
+            // run elm-format on the output file for good measure
+            execSync(`elm-format --yes ${files.join(" ")}`);
+            console.log("Saved", files);
+
+            return files;
         };
     }
 );
@@ -95,8 +95,3 @@ async function writeFile(fname, content) {
         })
     );
 }
-
-const tap = (v, fn) => {
-    fn(v);
-    return v;
-};
