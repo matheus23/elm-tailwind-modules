@@ -73,6 +73,7 @@ export default postcss.plugin(
             //execute the code generation and save the output
             const promises = Promise.all([...formats, ...breakpointsFormats]);
             const files = await promises;
+            execSync(`elm-format --yes ${files.join(" ")}`);
             console.log("Saved", files);
         };
     }
