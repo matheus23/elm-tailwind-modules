@@ -1,11 +1,11 @@
 function elmFileGenerator(opts, breakpoints) {
-  return elmHeader(opts, breakpoints) + elmBody(opts, breakpoints);
+    return elmHeader(opts, breakpoints) + elmBody(opts, breakpoints);
 }
 
 function elmHeader({ rootModule, elmModuleName }, breakpoints) {
-  l = elmHeaderExports(breakpoints);
+    l = elmHeaderExports(breakpoints);
 
-  return `module ${elmModuleName} exposing
+    return `module ${elmModuleName} exposing
     ( atBreakpoint
     , ${l}
     )
@@ -18,14 +18,14 @@ import ${rootModule}.Utilities
 `;
 }
 function elmHeaderExports(breakpoints) {
-  let tmp = Array.from(breakpoints.keys());
+    let tmp = Array.from(breakpoints.keys());
 
-  tmp.sort();
-  return tmp.join("\n    , ");
+    tmp.sort();
+    return tmp.join("\n    , ");
 }
 
 function elmBody({ rootModule }, breakpoints) {
-  const staticDefinitions = `
+    const staticDefinitions = `
 type Breakpoint =
   Breakpoint String
 
@@ -66,45 +66,45 @@ atBreakpoint styles =
         |> Css.batch
 
   `;
-  return staticDefinitions + breakpointConstructors(breakpoints);
+    return staticDefinitions + breakpointConstructors(breakpoints);
 }
 
 function breakpointConstructors(breakpoints) {
-  let body = "";
-  for (let [name, mediaQueryString] of breakpoints) {
-    body =
-      body +
-      `
+    let body = "";
+    for (let [name, mediaQueryString] of breakpoints) {
+        body =
+            body +
+            `
 ${name} : Breakpoint
 ${name} =
     Breakpoint "${mediaQueryString}"
     `;
-  }
-  return body;
+    }
+    return body;
 }
 
 const defaultOpts = {
-  elmFile: "Breakpoints.elm",
-  elmModuleName: "Breakpoints",
+    elmFile: "Breakpoints.elm",
+    elmModuleName: "Breakpoints",
 };
 
 function cleanOpts(opts) {
-  opts = { ...defaultOpts, ...opts };
+    opts = { ...defaultOpts, ...opts };
 
-  opts.elmFile = `${opts.rootOutputDir}/${opts.rootModule}/${opts.elmFile}`;
-  opts.elmModuleName = `${opts.rootModule}.${opts.elmModuleName}`;
-  return opts;
+    opts.elmFile = `${opts.rootOutputDir}/${opts.rootModule}/${opts.elmFile}`;
+    opts.elmModuleName = `${opts.rootModule}.${opts.elmModuleName}`;
+    return opts;
 }
 
 function formats(opts) {
-  return [cleanFormat(opts, elmFileGenerator)];
+    return [cleanFormat(opts, elmFileGenerator)];
 }
 
 function cleanFormat({ rootModule, elmFile, elmModuleName }, elmBodyFn) {
-  if (!elmFile) return false;
-  if (!elmModuleName) return false;
+    if (!elmFile) return false;
+    if (!elmModuleName) return false;
 
-  return { rootModule, elmFile, elmModuleName, elmBodyFn };
+    return { rootModule, elmFile, elmModuleName, elmBodyFn };
 }
 
 exports.cleanOpts = cleanOpts;
