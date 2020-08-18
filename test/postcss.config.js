@@ -1,15 +1,15 @@
-const postcssElmCssTailwind = require("../src/index.js");
+import elmTailwindOrigami from "../src/index.js";
+import tailwindConfig from "./tailwind.config.js";
+import tailwindcss from "tailwindcss";
 
-module.exports = {
-    plugins: [
-        require("tailwindcss")("./tailwind.config.js"),
-        // test running with no params
-        postcssElmCssTailwind(),
-        // test optional params
-        postcssElmCssTailwind({
-            baseTailwindCSS: "./tailwind.css",
-            rootOutputDir: "./gen",
-            rootModule: "Tailwind",
-        }),
-    ],
-};
+export const plugins = [
+    tailwindcss(tailwindConfig),
+    // test running with no params
+    elmTailwindOrigami,
+    // test optional params
+    // elmTailwindOrigami({
+    //     baseTailwindCSS: "./tailwind.css",
+    //     rootOutputDir: "./gen",
+    //     rootModule: "Tailwind",
+    // }),
+]

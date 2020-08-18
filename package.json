@@ -8,11 +8,12 @@
     "url": "https://github.com/matheus23/elm-tailwind-origami"
   },
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "test": "yarn test:clean && yarn test:elm-compile && jest",
     "test:clean": "rm -rf test/src && rm -rf test/gen && rm -rf test/dist",
-    "test:elm-compile": "cd test && postcss -o dist/main.css tailwind.css && elm make Main.elm",
-    "test:node-only": "cd test && postcss -o dist/main.css tailwind.css"
+    "test:elm-compile": "cd test && node run-postcss.js && elm make Main.elm",
+    "test:node-only": "cd test && node --trace-warnings --unhandled-rejections=strict run-postcss.js"
   },
   "keywords": [
     "postcss",

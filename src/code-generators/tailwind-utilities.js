@@ -1,4 +1,4 @@
-const { fixClass, toElmName } = require("../helpers");
+import { fixClass, toElmName } from "../helpers.js";
 // code gen stuff
 
 // this is a map of declarations and values that either aren't supported by elm-css,
@@ -54,31 +54,12 @@ const notSupported = {
     "overscroll-behavior-x": "*"
 };
 
-function elmBodyCss({ elmModuleName }, classes) {
-    return (
-        elmHeaderCss(elmModuleName, classes) +
-        elmBody({ type: "Css.Style" }, classes)
-    );
-}
 
-function elmHeaderCss(elmModuleName, classes) {
-    return `module ${elmModuleName} exposing (..)
 
-import Css 
-import Css.Global
+// PUBLIC INTERFACE
 
-`;
-}
 
-function elmBody(config, classes) {
-    let body = "";
-    for (let [cls, elm] of classes) {
-        body = body + elmFunction(config, { cls, elm });
-    }
-    return body;
-}
-
-function elmFunction(config, { cls, elm }) {
+export function elmFunction(config, { cls, elm }) {
     let declarationBlock = `
         ${elm.declarations.map((d) => convertDeclaration(d)).join(", \n      ")}
   `;
@@ -103,6 +84,52 @@ ${elm.elmName} : ${config.type}
 ${elm.elmName} =
   ${declarationBlock}
 `;
+}
+
+export function formats(opts) {
+    return [cleanFormat(opts, elmBodyCss)];
+}
+
+export const defaultOpts = {
+    elmFile: "Utilities.elm",
+    elmModuleName: "Utilities",
+};
+
+export function cleanOpts(opts) {
+    opts = { ...defaultOpts, ...opts };
+
+    opts.elmFile = `${opts.rootOutputDir}/${opts.rootModule}/${opts.elmFile}`;
+    opts.elmModuleName = `${opts.rootModule}.${opts.elmModuleName}`;
+    return opts;
+}
+
+
+
+// PRIVATE INTERFACE
+
+
+function elmBodyCss({ elmModuleName }, classes) {
+    return (
+        elmHeaderCss(elmModuleName, classes) +
+        elmBody({ type: "Css.Style" }, classes)
+    );
+}
+
+function elmHeaderCss(elmModuleName, classes) {
+    return `module ${elmModuleName} exposing (..)
+
+import Css 
+import Css.Global
+
+`;
+}
+
+function elmBody(config, classes) {
+    let body = "";
+    for (let [cls, elm] of classes) {
+        body = body + elmFunction(config, { cls, elm });
+    }
+    return body;
 }
 
 function advancedSelectorContainer(advancedSelector, declarationString) {
@@ -229,32 +256,9 @@ function camelize(s) {
 
 // options stuff
 
-const defaultOpts = {
-    elmFile: "Utilities.elm",
-    elmModuleName: "Utilities",
-};
-
-function cleanOpts(opts) {
-    opts = { ...defaultOpts, ...opts };
-
-    opts.elmFile = `${opts.rootOutputDir}/${opts.rootModule}/${opts.elmFile}`;
-    opts.elmModuleName = `${opts.rootModule}.${opts.elmModuleName}`;
-    return opts;
-}
-
-function formats(opts) {
-    return [cleanFormat(opts, elmBodyCss)];
-}
-
 function cleanFormat({ elmFile, elmModuleName }, elmBodyFn) {
     if (!elmFile) return false;
     if (!elmModuleName) return false;
 
     return { elmFile, elmModuleName, elmBodyFn };
 }
-
-exports.cleanOpts = cleanOpts;
-exports.elmFunction = elmFunction;
-exports.fixClass = fixClass;
-exports.formats = formats;
-exports.toElmName = toElmName;

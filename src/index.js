@@ -1,21 +1,20 @@
-const fs = require("fs");
-const path = require("path");
-const postcss = require("postcss");
-const { execSync } = require("child_process");
-const { promisify } = require("util");
-const mkdir = promisify(fs.mkdir);
-const breakpointGeneration = require("./code-generators/breakpoints");
-const tailwindUtilityGeneration = require("./code-generators/tailwind-utilities");
-const parser = require("./parser");
+import { promises as fs } from "fs";
+import path from "path";
+import postcss from "postcss";
+import { execSync } from "child_process";
+import * as breakpointGeneration from "./code-generators/breakpoints.js";
+import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities.js";
+import * as parser from "./parser.js";
 
-module.exports = postcss.plugin(
-    "postcss-elm-tailwind",
+
+export default postcss.plugin(
+    "elm-tailwind-origami",
     ({
         baseTailwindCSS = "./tailwind.css",
         rootOutputDir = "./src",
         rootModule = "TW",
     } = {}) => {
-        return (root, result) => {
+        return async (root, result) => {
             const absoluteBaseTailwindCssFile = path.resolve(baseTailwindCSS);
             if (absoluteBaseTailwindCssFile !== root.source.input.file) {
                 console.log(
@@ -68,14 +67,13 @@ module.exports = postcss.plugin(
                     writeFile(elmFile, elmBodyFn({ rootModule, elmModuleName }, classes))
                 );
 
-            //execute the code generation and save the output
-            return tap(Promise.all([...formats, ...breakpointsFormats]), (p) =>
-                p.then((files) => {
-                    // run elm-format on the output file for good measure
-                    execSync(`elm-format --yes ${files.join(" ")}`);
-                    console.log("Saved", files);
-                })
-            );
+            // execute the code generation and save the output
+            const files = await Promise.all([...formats, ...breakpointsFormats]);
+            // run elm-format on the output file for good measure
+            execSync(`elm-format --yes ${files.join(" ")}`);
+            console.log("Saved", files);
+
+            return files;
         };
     }
 );
@@ -84,18 +82,7 @@ module.exports = postcss.plugin(
  * Async helper to write defined file to disk
  */
 async function writeFile(fname, content) {
-    folder = path.dirname(fname);
-    await mkdir(folder, { recursive: true });
-
-    return new Promise((resolve, reject) =>
-        fs.writeFile(fname, content, (err) => {
-            if (err) return reject(err);
-            resolve(fname);
-        })
-    );
+    const folder = path.dirname(fname);
+    await fs.mkdir(folder, { recursive: true });
+    return await fs.writeFile(fname, content);
 }
-
-const tap = (v, fn) => {
-    fn(v);
-    return v;
-};

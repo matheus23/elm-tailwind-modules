@@ -1,4 +1,4 @@
-function fixClass(cls) {
+export function fixClass(cls) {
     // remove the dot
     cls = cls.replace(/^(\.)/, "");
     // make other dots safe
@@ -21,7 +21,7 @@ function fixClass(cls) {
     return cls;
 }
 
-function toElmName(cls, opts) {
+export function toElmName(cls, opts) {
     opts = opts || defaultOpts;
     var elm = cls;
     // handle negative with prefix
@@ -57,10 +57,8 @@ function toElmName(cls, opts) {
     }
     return elm;
 }
-const defaultOpts = {
+
+export const defaultOpts = {
     prefix: "",
     nameStyle: "snake",
 };
-exports.fixClass = fixClass;
-exports.toElmName = toElmName;
-exports.defaultOpts = defaultOpts;
