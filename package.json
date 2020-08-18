@@ -1,15 +1,15 @@
 {
-  "name": "postcss-elm-css-tailwind",
-  "version": "0.0.0-dev",
-  "author": "Justin Rassier",
-  "description": "Generate elm-css versions of your Tailwind utilities",
+  "name": "elm-tailwind-origami",
+  "version": "0.0.1",
+  "author": "Philipp Krüger",
+  "description": "Generate Elm code for Tailwind Utilities and Components that purges using Elm's --optimize!",
   "repository": {
     "type": "git",
-    "url": "https://github.com/justinrassier/postcss-elm-css-tailwind"
+    "url": "https://github.com/matheus23/elm-tailwind-origami"
   },
   "main": "src/index.js",
   "scripts": {
-    "test": "npm run test:clean && npm run test:elm-compile && jest",
+    "test": "yarn test:clean && yarn test:elm-compile && jest",
     "test:clean": "rm -rf test/src && rm -rf test/gen && rm -rf test/dist",
     "test:elm-compile": "cd test && postcss -o dist/main.css tailwind.css && elm make Main.elm",
     "test:node-only": "cd test && postcss -o dist/main.css tailwind.css"
