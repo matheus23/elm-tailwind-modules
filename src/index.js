@@ -51,29 +51,33 @@ export default postcss.plugin(
             // setup breakpoint code generation promise
             const breakpointsFormats = breakpointGeneration
                 .formats(breakpointGeneration.cleanOpts({ rootOutputDir, rootModule }))
-                .map(({ rootModule, elmFile, elmModuleName, elmBodyFn }) => {
-                    return writeFile(
+                .map(async ({ rootModule, elmFile, elmModuleName, elmBodyFn }) =>
+                    await writeFile(
                         elmFile,
                         elmBodyFn({ rootModule, elmModuleName }, mediaQueryDefinitions)
-                    );
-                });
+                    )
+                );
 
             // setup standard utility code generation promise
             const formats = tailwindUtilityGeneration
                 .formats(
                     tailwindUtilityGeneration.cleanOpts({ rootOutputDir, rootModule })
                 )
-                .map(({ rootModule, elmFile, elmModuleName, elmBodyFn }) =>
-                    writeFile(elmFile, elmBodyFn({ rootModule, elmModuleName }, classes))
+                .map(async ({ rootModule, elmFile, elmModuleName, elmBodyFn }) =>
+                    await writeFile(
+                        elmFile,
+                        elmBodyFn({ rootModule, elmModuleName }, classes)
+                    )
                 );
 
-            // execute the code generation and save the output
-            const files = await Promise.all([...formats, ...breakpointsFormats]);
-            // run elm-format on the output file for good measure
-            execSync(`elm-format --yes ${files.join(" ")}`);
-            console.log("Saved", files);
-
-            return files;
+            //execute the code generation and save the output
+            return tap(Promise.all([...formats, ...breakpointsFormats]), (p) =>
+                p.then((files) => {
+                    // run elm-format on the output file for good measure
+                    execSync(`elm-format --yes ${files.join(" ")}`);
+                    console.log("Saved", files);
+                })
+            );
         };
     }
 );
@@ -84,5 +88,15 @@ export default postcss.plugin(
 async function writeFile(fname, content) {
     const folder = path.dirname(fname);
     await fs.mkdir(folder, { recursive: true });
-    return await fs.writeFile(fname, content);
+    return new Promise((resolve, reject) =>
+        fs.writeFile(fname, content, (err) => {
+            if (err) return reject(err);
+            resolve(fname);
+        })
+    );
 }
+
+const tap = (v, fn) => {
+    fn(v);
+    return v;
+};
