@@ -13,6 +13,7 @@ async function run() {
     const from = path.join(dirname, "tailwind.css");
     const to = path.join(dirname, "dist/main.css");
     const result = await postcss(plugins).process(await fs.readFile(from), { from, to });
+    await fs.mkdir(path.dirname(to));
     await fs.writeFile(to, result.css);
 }
 

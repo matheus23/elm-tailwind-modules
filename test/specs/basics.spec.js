@@ -1,13 +1,17 @@
-const fs = require("fs");
-const path = require("path");
-const postcss = require("postcss");
-const tailwind = require("tailwindcss");
-const elmCssTailwind = require("../../src/index");
+import * as fs from "fs";
+import * as path from "path";
+import * as postcss from "postcss";
+import * as tailwind from "tailwindcss";
+import * as elmCssTailwind from "../../src/index";
+import { fileURLToPath } from 'url';
+
+// like common js __dirname
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // TODO: Run postcss as a setup so jest can be run independently without running the npm test script
 // beforeAll((done) => {
-//     const tailwindCssFile = path.resolve(__dirname, "..", "tailwind.css");
-//     const destinationCssFile = path.resolve(__dirname, "..", "dist", "main.css");
+//     const tailwindCssFile = path.resolve(dirname, "..", "tailwind.css");
+//     const destinationCssFile = path.resolve(dirname, "..", "dist", "main.css");
 
 //     fs.readFile(tailwindCssFile, (err, css) => {
 //         postcss([tailwind, elmCssTailwind])
@@ -23,14 +27,14 @@ const elmCssTailwind = require("../../src/index");
 // });
 test("snapshot output of Utility module", () => {
     const outputFile = fs.readFileSync(
-        path.resolve(__dirname, "..", "src", "TW", "Utilities.elm")
+        path.resolve(dirname, "..", "src", "TW", "Utilities.elm")
     );
 
     expect(outputFile.toString()).toMatchSnapshot();
 });
 test("snapshot output of Breakpoint Module", () => {
     const outputFile = fs.readFileSync(
-        path.resolve(__dirname, "..", "src", "TW", "Breakpoints.elm")
+        path.resolve(dirname, "..", "src", "TW", "Breakpoints.elm")
     );
 
     expect(outputFile.toString()).toMatchSnapshot();

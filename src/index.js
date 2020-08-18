@@ -71,13 +71,9 @@ export default postcss.plugin(
                 );
 
             //execute the code generation and save the output
-            const files = await Promise.all([...formats, ...breakpointsFormats]);
-
-            // run elm-format on the output file for good measure
-            execSync(`elm-format --yes ${files.join(" ")}`);
+            const promises = Promise.all([...formats, ...breakpointsFormats]);
+            const files = await promises;
             console.log("Saved", files);
-
-            return files;
         };
     }
 );
@@ -88,10 +84,6 @@ export default postcss.plugin(
 async function writeFile(fname, content) {
     const folder = path.dirname(fname);
     await fs.mkdir(folder, { recursive: true });
-    return new Promise((resolve, reject) =>
-        fs.writeFile(fname, content, (err) => {
-            if (err) return reject(err);
-            resolve(fname);
-        })
-    );
+    await fs.writeFile(fname, content);
+    return fname;
 }
