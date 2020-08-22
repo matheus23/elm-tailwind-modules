@@ -86,21 +86,8 @@ ${elm.elmName} =
 `;
 }
 
-export function formats(opts) {
-    return [cleanFormat(opts, elmBodyCss)];
-}
-
-export const defaultOpts = {
-    elmFile: "Utilities.elm",
-    elmModuleName: "Utilities",
-};
-
-export function cleanOpts(opts) {
-    opts = { ...defaultOpts, ...opts };
-
-    opts.elmFile = `${opts.rootOutputDir}/${opts.rootModule}/${opts.elmFile}`;
-    opts.elmModuleName = `${opts.rootModule}.${opts.elmModuleName}`;
-    return opts;
+export function formats({ elmFile, elmModuleName }) {
+    return [{ elmFile, elmModuleName, elmBodyFn: elmBodyCss }]
 }
 
 
@@ -252,13 +239,4 @@ function camelize(s) {
     let camelized = s.replace(/-./g, (x) => x.toUpperCase()[1]);
 
     return overrideList[s] || camelized;
-}
-
-// options stuff
-
-function cleanFormat({ elmFile, elmModuleName }, elmBodyFn) {
-    if (!elmFile) return false;
-    if (!elmModuleName) return false;
-
-    return { elmFile, elmModuleName, elmBodyFn };
 }
