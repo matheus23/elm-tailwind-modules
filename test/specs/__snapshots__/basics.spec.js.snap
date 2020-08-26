@@ -9,9 +9,7 @@ import Css.Global
 
 container : Css.Style
 container =
-    Css.batch
-        [ Css.property \\"width\\" \\"100%\\"
-        ]
+    Css.property \\"width\\" \\"100%\\"
 
 
 space_y_0 : Css.Style
