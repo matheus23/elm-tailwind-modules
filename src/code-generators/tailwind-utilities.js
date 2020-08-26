@@ -1,7 +1,7 @@
 // PUBLIC INTERFACE
 
 
-export function elmFunction(config, { cls, elm }) {
+export function elmFunction({ elm }) {
     let declarationBlock = `
         ${elm.declarations.map((d) => convertDeclaration(d)).join(", \n      ")}
   `;
@@ -18,7 +18,7 @@ export function elmFunction(config, { cls, elm }) {
     }
     return `
 
-${elm.elmName} : ${config.type}
+${elm.elmName} : Css.Style
 ${elm.elmName} =
   ${declarationBlock}
 `;
@@ -35,12 +35,12 @@ export function formats({ elmFile, elmModuleName }) {
 
 function elmBodyCss({ elmModuleName }, classes) {
     return (
-        elmHeaderCss(elmModuleName, classes) +
-        elmBody({ type: "Css.Style" }, classes)
+        elmHeaderCss(elmModuleName) +
+        elmBody(classes)
     );
 }
 
-function elmHeaderCss(elmModuleName, classes) {
+function elmHeaderCss(elmModuleName) {
     return `module ${elmModuleName} exposing (..)
 
 import Css 
@@ -49,10 +49,10 @@ import Css.Global
 `;
 }
 
-function elmBody(config, classes) {
+function elmBody(classes) {
     let body = "";
     for (let [cls, elm] of classes) {
-        body = body + elmFunction(config, { cls, elm });
+        body = body + elmFunction({ elm });
     }
     return body;
 }
