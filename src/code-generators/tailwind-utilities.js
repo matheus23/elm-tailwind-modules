@@ -1,6 +1,3 @@
-import { fixClass, toElmName } from "../helpers.js";
-// code gen stuff
-
 // this is a map of declarations and values that either aren't supported by elm-css,
 // or there is not a super straight-forward conversion, or I'm too lazy. Keep this list as small as possible
 const notSupported = {
@@ -138,105 +135,10 @@ function advancedSelectorContainer(advancedSelector, declarationString) {
     }
 }
 
+function elmString(content) {
+    return `"${content.replace(/"/g, '\\"')}"`;
+}
+
 function convertDeclaration(declaration) {
-    let elmCssFunctionName;
-    let elmCssFunctionUnit;
-    const containsCustomProperty =
-        declaration.prop.indexOf("--") > -1 || declaration.value.indexOf("--") > -1;
-
-    const valueSeparateUnits = declaration.value.split(" ");
-
-    // if the prop contains a custom property, we got to punt back to Css.property directly
-    if (containsCustomProperty) {
-        return `Css.property "${declaration.prop}" "${declaration.value}"`;
-    } else if (
-        notSupported[declaration.prop] &&
-        (notSupported[declaration.prop] === "*" ||
-            notSupported[declaration.prop].includes(declaration.value))
-    ) {
-        // if one or all of the declarations are not supported, drop back to Css.property
-        return `Css.property "${declaration.prop}" "${declaration.value.replace(
-            /"/g,
-            '\\"'
-        )}"`;
-    } else {
-        elmCssFunctionName = camelize(declaration.prop);
-
-        // display: flex so far is the only one that needs to do this. Any more and we will extract
-        if (declaration.prop === "display" && declaration.value === "flex") {
-            return "Css.displayFlex";
-        }
-
-        // if a declaration value had multi word, we need to convert it to a
-        // elm function with like backgroundPosition2
-        elmCssFunctionName +=
-            valueSeparateUnits.length > 1 ? valueSeparateUnits.length.toString() : "";
-
-        elmCssFunctionUnit = valueSeparateUnits
-            .map((w) => convertDeclarationValue(declaration.prop, w))
-            .join(" ");
-
-        return `Css.${elmCssFunctionName} ${elmCssFunctionUnit}`;
-    }
-}
-function convertDeclarationValue(declarationProp, declarationValue) {
-    let numericalVal;
-    let unit;
-    // 1rem, 1px
-    let numberPlusUnit = declarationValue.match(/(-?[\d\.]+)([a-z]*)/);
-
-    // percent
-    let percentValue = declarationValue.match(/([-]?[0-9]*\.?[0-9]+)\%/);
-
-    // font-weight: 100
-    let intValue = declarationValue.match(/([-]?[0-9]+)$/);
-
-    //opacity: 0.25
-    let numValue = declarationValue.match(/([-]?[0-9]*\.[0-9]+)$/);
-
-    // #123455
-    let hexValue = declarationValue.match(/#[a-z0-9]*/);
-
-    // careful mucking with the order. There is fall through logic like 0 is an int, but we need it as a px
-    if (hexValue) {
-        return `(Css.hex "${declarationValue}")`;
-    } else if (
-        declarationValue === "0" &&
-        ![
-            "opacity",
-            "flex-shrink",
-            "flex-grow",
-            "flex",
-            "order",
-            "outline",
-            "z-index",
-        ].includes(declarationProp)
-    ) {
-        // plain 0 needs a unit in Elm, so set it to px
-        return `(Css.px 0)`;
-    } else if (numValue) {
-        return `(Css.num ${numValue[1]})`;
-    } else if (intValue) {
-        return `(Css.int ${intValue[1]})`;
-    } else if (!numberPlusUnit) {
-        // if a single word value like 'auto' then just use that directly
-        return `Css.${camelize(declarationValue)}`;
-    } else if (percentValue) {
-        return `(Css.pct ${percentValue[1]})`;
-    } else {
-        numericalVal = numberPlusUnit[1];
-        unit = numberPlusUnit[2];
-
-        // quick dirty way to force decimal values to have leading 0
-        return `(Css.${unit} ${Number(numericalVal).toString()})`;
-    }
-}
-// parse, clean up stuff
-
-function camelize(s) {
-    // a value that has a direct replacement in elm-css. eg: flex-wrap: nowrap needs noWrap
-    const overrideList = { nowrap: "noWrap" };
-    let camelized = s.replace(/-./g, (x) => x.toUpperCase()[1]);
-
-    return overrideList[s] || camelized;
+    return `Css.property ${elmString(declaration.prop)} ${elmString(declaration.value)}`;
 }

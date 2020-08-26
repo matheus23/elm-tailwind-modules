@@ -67,7 +67,7 @@ export default async function run({
     const to = "output in-memory";
     return await postcss([
         tailwindcss(tailwindConfig),
-        // autoprefixer,
+        // autoprefixer, TODO Reinstall autoprefixer. At the moment this breaks elm codegen
         afterTailwindPlugin
     ]).process("@tailwind base;\n@tailwind components;\n@tailwind utilities;", { from, to });
 }
