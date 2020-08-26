@@ -1,3 +1,4 @@
+import { plugins } from "./postcss.config.js"
 import postcss from "postcss";
 import { promises as fs } from "fs";
 import path from "path";

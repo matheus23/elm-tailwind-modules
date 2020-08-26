@@ -5,7 +5,9 @@ import tailwindcss from "tailwindcss";
 export const plugins = [
     tailwindcss(tailwindConfig),
     // test running with no params
-    elmTailwindOrigami,
+    elmTailwindOrigami({
+        rootOutputDir: "./test/src"
+    }),
     // test optional params
     // elmTailwindOrigami({
     //     baseTailwindCSS: "./tailwind.css",

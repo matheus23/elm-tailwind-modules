@@ -10,19 +10,10 @@ import * as parser from "./parser.js";
 export default postcss.plugin(
     "elm-tailwind-origami",
     ({
-        baseTailwindCSS = "./tailwind.css",
         rootOutputDir = "./src",
         rootModule = "TW",
     } = {}) => {
         return async (root, result) => {
-            const absoluteBaseTailwindCssFile = path.resolve(baseTailwindCSS);
-            if (absoluteBaseTailwindCssFile !== root.source.input.file) {
-                console.log(
-                    "input file is not a Tailwind.css base file...skipping elm-css utility generation"
-                );
-                return;
-            }
-
             let rawDeclarations = [];
 
             // get all the raw declarations by walking the list. No nice way to map from what I can tell
@@ -73,7 +64,7 @@ export default postcss.plugin(
             // setup standard utility code generation promise
             const formats = tailwindUtilityGeneration
                 .formats(
-                    tailwindUtilityGeneration.cleanOpts({ rootOutputDir, rootModule })
+                    cleanOpts({ rootOutputDir, rootModule })
                 )
                 .map(async ({ rootModule, elmFile, elmModuleName, elmBodyFn }) =>
                     await writeFile(

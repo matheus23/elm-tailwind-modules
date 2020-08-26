@@ -1,33 +1,36 @@
-import * as fs from "fs-extra";
+import { promises as fs } from "fs";
 import * as path from "path";
 import { fileURLToPath } from 'url';
 import runPostcss from "../run-postcss";
 
 // like common js __dirname
 const dirname = path.dirname(fileURLToPath(import.meta.url));
-const testDir = path.join(dirname, "..");
+const testDir = path.resolve(dirname, "..");
 
 async function cleanTestDirs() {
     // rm -rf test/src && rm -rf test/gen && rm -rf test/dist
-    await fs.emptyDir(path.join(testDir, "src"));
-    await fs.emptyDir(path.join(testDir, "gen"));
-    await fs.emptyDir(path.join(testDir, "dist"));
+    await fs.rmdir(path.join(testDir, "src"), { recursive: true });
+    await fs.rmdir(path.join(testDir, "gen"), { recursive: true });
+    await fs.rmdir(path.join(testDir, "dist"), { recursive: true });
+
+    console.log("Cleared test files");
 }
 
-beforeAll(cleanTestDirs);
+beforeAll(async () => {
+    await cleanTestDirs();
+    await runPostcss();
+});
 
-beforeAll(runPostcss);
-
-test("snapshot output of Utility module", () => {
-    const outputFile = fs.readFileSync(
-        path.resolve(dirname, "..", "src", "TW", "Utilities.elm")
+test("snapshot output of Utility module", async () => {
+    const outputFile = await fs.readFile(
+        path.join(testDir, "src", "TW", "Utilities.elm")
     );
 
     expect(outputFile.toString()).toMatchSnapshot();
 });
-test("snapshot output of Breakpoint Module", () => {
-    const outputFile = fs.readFileSync(
-        path.resolve(dirname, "..", "src", "TW", "Breakpoints.elm")
+test("snapshot output of Breakpoint Module", async () => {
+    const outputFile = await fs.readFile(
+        path.join(testDir, "src", "TW", "Breakpoints.elm")
     );
 
     expect(outputFile.toString()).toMatchSnapshot();
