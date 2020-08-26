@@ -28,10 +28,3 @@ test("snapshot output of Utility module", async () => {
 
     expect(outputFile.toString()).toMatchSnapshot();
 });
-test("snapshot output of Breakpoint Module", async () => {
-    const outputFile = await fs.readFile(
-        path.join(testDir, "src", "TW", "Breakpoints.elm")
-    );
-
-    expect(outputFile.toString()).toMatchSnapshot();
-});

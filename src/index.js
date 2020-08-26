@@ -2,7 +2,6 @@ import { promises as fs } from "fs";
 import path from "path";
 import postcss from "postcss";
 import { execSync } from "child_process";
-import * as breakpointGeneration from "./code-generators/breakpoints.js";
 import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities.js";
 import * as parser from "./parser.js";
 
@@ -34,21 +33,6 @@ export default postcss.plugin(
                 )
             );
 
-            // get media query definitions to build Breakpoints module with
-            const mediaQueryDefinitions = parser.toMediaQueryDefinitionMap(
-                rawDeclarations
-            );
-
-            // setup breakpoint code generation promise
-            const breakpointsFormats = breakpointGeneration
-                .formats(breakpointGeneration.cleanOpts({ rootOutputDir, rootModule }))
-                .map(async ({ rootModule, elmFile, elmModuleName, elmBodyFn }) =>
-                    await writeFile(
-                        elmFile,
-                        elmBodyFn({ rootModule, elmModuleName }, mediaQueryDefinitions)
-                    )
-                );
-
             // setup standard utility code generation promise
             const formats = tailwindUtilityGeneration
                 .formats({
@@ -65,7 +49,7 @@ export default postcss.plugin(
                 );
 
             //execute the code generation and save the output
-            const promises = Promise.all([...formats, ...breakpointsFormats]);
+            const promises = Promise.all(formats);
             const files = await promises;
             execSync(`elm-format --yes ${files.join(" ")}`);
             console.log("Saved", files);
