@@ -1,29 +1,5 @@
 // PUBLIC INTERFACE
 
-
-function elmFunction({ elm }) {
-    let declarationBlock = `
-        ${elm.declarations.map((d) => convertDeclaration(d)).join(", \n      ")}
-  `;
-
-    if (
-        elm.declarations.length > 1 ||
-        elm.advancedSelector
-    ) {
-        declarationBlock = `
-    Css.batch [
-      ${advancedSelectorContainer(elm.advancedSelector, declarationBlock)}
-    ]
-    `;
-    }
-    return `
-
-${elm.elmName} : Css.Style
-${elm.elmName} =
-  ${declarationBlock}
-`;
-}
-
 export function formats({ elmFile, elmModuleName }) {
     return [{ elmFile, elmModuleName, elmBodyFn: elmBodyCss }]
 }
@@ -57,6 +33,33 @@ function elmBody(classes) {
     return body;
 }
 
+function elmFunction({ elm }) {
+    function convertDeclaration(declaration) {
+        return `Css.property ${elmString(declaration.prop)} ${elmString(declaration.value)}`;
+    }
+
+    let declarationBlock = `
+        ${elm.declarations.map(convertDeclaration).join(", \n      ")}
+  `;
+
+    if (
+        elm.declarations.length > 1 ||
+        elm.advancedSelector
+    ) {
+        declarationBlock = `
+    Css.batch [
+      ${advancedSelectorContainer(elm.advancedSelector, declarationBlock)}
+    ]
+    `;
+    }
+    return `
+
+${elm.elmName} : Css.Style
+${elm.elmName} =
+  ${declarationBlock}
+`;
+}
+
 function advancedSelectorContainer(advancedSelector, declarationString) {
     if (advancedSelector) {
         // super rudamentary just for first pass to get space utilities workin
@@ -76,10 +79,8 @@ function advancedSelectorContainer(advancedSelector, declarationString) {
     }
 }
 
+// ELM CODEGEN
+
 function elmString(content) {
     return `"${content.replace(/"/g, '\\"')}"`;
-}
-
-function convertDeclaration(declaration) {
-    return `Css.property ${elmString(declaration.prop)} ${elmString(declaration.value)}`;
 }
