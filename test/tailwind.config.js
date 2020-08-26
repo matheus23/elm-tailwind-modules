@@ -8,4 +8,7 @@ export default {
     //   transitionDuration: false,
     // },
     plugins: [],
+    future: {
+        removeDeprecatedGapUtilities: true,
+    },
 };

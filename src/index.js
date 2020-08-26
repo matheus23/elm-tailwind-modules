@@ -6,7 +6,6 @@ import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities
 import * as parser from "./parser.js";
 import autoprefixer from "autoprefixer";
 import tailwindcss from "tailwindcss";
-import merge from "lodash/merge.js";
 
 const defaultTailwindConfig = {
 };
@@ -67,16 +66,7 @@ export default async function run({
     const from = "generated in-memory";
     const to = "output in-memory";
     return await postcss([
-        tailwindcss(
-            merge(
-                tailwindConfig,
-                {
-                    future: {
-                        removeDeprecatedGapUtilities: true,
-                    },
-                },
-            )
-        ),
+        tailwindcss(tailwindConfig),
         // autoprefixer, TODO Reinstall autoprefixer. At the moment this breaks elm codegen
         afterTailwindPlugin
     ]).process("@tailwind base;\n@tailwind components;\n@tailwind utilities;", { from, to });
