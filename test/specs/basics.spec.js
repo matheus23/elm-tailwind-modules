@@ -1,7 +1,8 @@
 import { promises as fs } from "fs";
 import * as path from "path";
 import { fileURLToPath } from 'url';
-import runPostcss from "../run-postcss";
+import elmTailwindOrigami from "../../src/index.js";
+import tailwindConfig from "../tailwind.config.js";
 
 // like common js __dirname
 const dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -18,7 +19,11 @@ async function cleanTestDirs() {
 
 beforeAll(async () => {
     await cleanTestDirs();
-    await runPostcss();
+
+    await elmTailwindOrigami({
+        rootOutputDir: "./test/src",
+        tailwindConfig
+    });
 });
 
 test("snapshot output of Utility module", async () => {
