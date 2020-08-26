@@ -1,7 +1,7 @@
 // PUBLIC INTERFACE
 
 
-export function elmFunction({ elm }) {
+function elmFunction({ elm }) {
     let declarationBlock = `
         ${elm.declarations.map((d) => convertDeclaration(d)).join(", \n      ")}
   `;
