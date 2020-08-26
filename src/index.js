@@ -49,23 +49,14 @@ export default postcss.plugin(
                     )
                 );
 
-            function cleanOpts(opts) {
-                const defaultOpts = {
-                    elmFile: "Utilities.elm",
-                    elmModuleName: "Utilities",
-                };
-                opts = { ...defaultOpts, ...opts };
-
-                opts.elmFile = `${opts.rootOutputDir}/${opts.rootModule}/${opts.elmFile}`;
-                opts.elmModuleName = `${opts.rootModule}.${opts.elmModuleName}`;
-                return opts;
-            }
-
             // setup standard utility code generation promise
             const formats = tailwindUtilityGeneration
-                .formats(
-                    cleanOpts({ rootOutputDir, rootModule })
-                )
+                .formats({
+                    elmFile: "Utilities.elm",
+                    elmModuleName: "Utilities",
+                    elmFile: `${rootOutputDir}/${rootModule}/Utilities.elm`,
+                    elmModuleName: `${rootModule}.Utilities`,
+                })
                 .map(async ({ rootModule, elmFile, elmModuleName, elmBodyFn }) =>
                     await writeFile(
                         elmFile,
