@@ -33,8 +33,9 @@
     "elm-format": "^0.8.3",
     "fs-extra": "^9.0.1",
     "jest": "^26.4.0",
+    "lodash": "^4.17.20",
     "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.6.2"
+    "tailwindcss": "^1.7.5"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

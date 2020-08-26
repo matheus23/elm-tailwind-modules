@@ -2366,6 +2366,61 @@ divide_pink_900 =
         ]
 
 
+divide_solid : Css.Style
+divide_solid =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector \\":not(template) ~ :not(template)\\"
+                [ Css.property \\"border-style\\" \\"solid\\"
+                ]
+            ]
+        ]
+
+
+divide_dashed : Css.Style
+divide_dashed =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector \\":not(template) ~ :not(template)\\"
+                [ Css.property \\"border-style\\" \\"dashed\\"
+                ]
+            ]
+        ]
+
+
+divide_dotted : Css.Style
+divide_dotted =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector \\":not(template) ~ :not(template)\\"
+                [ Css.property \\"border-style\\" \\"dotted\\"
+                ]
+            ]
+        ]
+
+
+divide_double : Css.Style
+divide_double =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector \\":not(template) ~ :not(template)\\"
+                [ Css.property \\"border-style\\" \\"double\\"
+                ]
+            ]
+        ]
+
+
+divide_none : Css.Style
+divide_none =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector \\":not(template) ~ :not(template)\\"
+                [ Css.property \\"border-style\\" \\"none\\"
+                ]
+            ]
+        ]
+
+
 divide_opacity_0 : Css.Style
 divide_opacity_0 =
     Css.batch
@@ -2468,6 +2523,26 @@ bg_local =
 bg_scroll : Css.Style
 bg_scroll =
     Css.property \\"background-attachment\\" \\"scroll\\"
+
+
+bg_clip_border : Css.Style
+bg_clip_border =
+    Css.property \\"background-clip\\" \\"border-box\\"
+
+
+bg_clip_padding : Css.Style
+bg_clip_padding =
+    Css.property \\"background-clip\\" \\"padding-box\\"
+
+
+bg_clip_content : Css.Style
+bg_clip_content =
+    Css.property \\"background-clip\\" \\"content-box\\"
+
+
+bg_clip_text : Css.Style
+bg_clip_text =
+    Css.property \\"background-clip\\" \\"text\\"
 
 
 bg_transparent : Css.Style
@@ -3306,6 +3381,2025 @@ bg_pink_900 =
         , Css.property \\"background-color\\" \\"#702459\\"
         , Css.property \\"background-color\\" \\"rgba(112, 36, 89, var(--bg-opacity))\\"
         ]
+
+
+bg_none : Css.Style
+bg_none =
+    Css.property \\"background-image\\" \\"none\\"
+
+
+bg_gradient_to_t : Css.Style
+bg_gradient_to_t =
+    Css.property \\"background-image\\" \\"linear-gradient(to top, var(--gradient-color-stops))\\"
+
+
+bg_gradient_to_tr : Css.Style
+bg_gradient_to_tr =
+    Css.property \\"background-image\\" \\"linear-gradient(to top right, var(--gradient-color-stops))\\"
+
+
+bg_gradient_to_r : Css.Style
+bg_gradient_to_r =
+    Css.property \\"background-image\\" \\"linear-gradient(to right, var(--gradient-color-stops))\\"
+
+
+bg_gradient_to_br : Css.Style
+bg_gradient_to_br =
+    Css.property \\"background-image\\" \\"linear-gradient(to bottom right, var(--gradient-color-stops))\\"
+
+
+bg_gradient_to_b : Css.Style
+bg_gradient_to_b =
+    Css.property \\"background-image\\" \\"linear-gradient(to bottom, var(--gradient-color-stops))\\"
+
+
+bg_gradient_to_bl : Css.Style
+bg_gradient_to_bl =
+    Css.property \\"background-image\\" \\"linear-gradient(to bottom left, var(--gradient-color-stops))\\"
+
+
+bg_gradient_to_l : Css.Style
+bg_gradient_to_l =
+    Css.property \\"background-image\\" \\"linear-gradient(to left, var(--gradient-color-stops))\\"
+
+
+bg_gradient_to_tl : Css.Style
+bg_gradient_to_tl =
+    Css.property \\"background-image\\" \\"linear-gradient(to top left, var(--gradient-color-stops))\\"
+
+
+from_transparent : Css.Style
+from_transparent =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"transparent\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0))\\"
+        ]
+
+
+from_current : Css.Style
+from_current =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"currentColor\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0))\\"
+        ]
+
+
+from_black : Css.Style
+from_black =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#000\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0))\\"
+        ]
+
+
+from_white : Css.Style
+from_white =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#fff\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0))\\"
+        ]
+
+
+from_gray_100 : Css.Style
+from_gray_100 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#f7fafc\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(247, 250, 252, 0))\\"
+        ]
+
+
+from_gray_200 : Css.Style
+from_gray_200 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#edf2f7\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(237, 242, 247, 0))\\"
+        ]
+
+
+from_gray_300 : Css.Style
+from_gray_300 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#e2e8f0\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(226, 232, 240, 0))\\"
+        ]
+
+
+from_gray_400 : Css.Style
+from_gray_400 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#cbd5e0\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(203, 213, 224, 0))\\"
+        ]
+
+
+from_gray_500 : Css.Style
+from_gray_500 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#a0aec0\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(160, 174, 192, 0))\\"
+        ]
+
+
+from_gray_600 : Css.Style
+from_gray_600 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#718096\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(113, 128, 150, 0))\\"
+        ]
+
+
+from_gray_700 : Css.Style
+from_gray_700 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#4a5568\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(74, 85, 104, 0))\\"
+        ]
+
+
+from_gray_800 : Css.Style
+from_gray_800 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#2d3748\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(45, 55, 72, 0))\\"
+        ]
+
+
+from_gray_900 : Css.Style
+from_gray_900 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#1a202c\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(26, 32, 44, 0))\\"
+        ]
+
+
+from_red_100 : Css.Style
+from_red_100 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#fff5f5\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(255, 245, 245, 0))\\"
+        ]
+
+
+from_red_200 : Css.Style
+from_red_200 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#fed7d7\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(254, 215, 215, 0))\\"
+        ]
+
+
+from_red_300 : Css.Style
+from_red_300 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#feb2b2\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(254, 178, 178, 0))\\"
+        ]
+
+
+from_red_400 : Css.Style
+from_red_400 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#fc8181\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(252, 129, 129, 0))\\"
+        ]
+
+
+from_red_500 : Css.Style
+from_red_500 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#f56565\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(245, 101, 101, 0))\\"
+        ]
+
+
+from_red_600 : Css.Style
+from_red_600 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#e53e3e\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(229, 62, 62, 0))\\"
+        ]
+
+
+from_red_700 : Css.Style
+from_red_700 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#c53030\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(197, 48, 48, 0))\\"
+        ]
+
+
+from_red_800 : Css.Style
+from_red_800 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#9b2c2c\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(155, 44, 44, 0))\\"
+        ]
+
+
+from_red_900 : Css.Style
+from_red_900 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#742a2a\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(116, 42, 42, 0))\\"
+        ]
+
+
+from_orange_100 : Css.Style
+from_orange_100 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#fffaf0\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(255, 250, 240, 0))\\"
+        ]
+
+
+from_orange_200 : Css.Style
+from_orange_200 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#feebc8\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(254, 235, 200, 0))\\"
+        ]
+
+
+from_orange_300 : Css.Style
+from_orange_300 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#fbd38d\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(251, 211, 141, 0))\\"
+        ]
+
+
+from_orange_400 : Css.Style
+from_orange_400 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#f6ad55\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(246, 173, 85, 0))\\"
+        ]
+
+
+from_orange_500 : Css.Style
+from_orange_500 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#ed8936\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(237, 137, 54, 0))\\"
+        ]
+
+
+from_orange_600 : Css.Style
+from_orange_600 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#dd6b20\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(221, 107, 32, 0))\\"
+        ]
+
+
+from_orange_700 : Css.Style
+from_orange_700 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#c05621\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(192, 86, 33, 0))\\"
+        ]
+
+
+from_orange_800 : Css.Style
+from_orange_800 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#9c4221\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(156, 66, 33, 0))\\"
+        ]
+
+
+from_orange_900 : Css.Style
+from_orange_900 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#7b341e\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(123, 52, 30, 0))\\"
+        ]
+
+
+from_yellow_100 : Css.Style
+from_yellow_100 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#fffff0\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 240, 0))\\"
+        ]
+
+
+from_yellow_200 : Css.Style
+from_yellow_200 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#fefcbf\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(254, 252, 191, 0))\\"
+        ]
+
+
+from_yellow_300 : Css.Style
+from_yellow_300 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#faf089\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(250, 240, 137, 0))\\"
+        ]
+
+
+from_yellow_400 : Css.Style
+from_yellow_400 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#f6e05e\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(246, 224, 94, 0))\\"
+        ]
+
+
+from_yellow_500 : Css.Style
+from_yellow_500 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#ecc94b\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(236, 201, 75, 0))\\"
+        ]
+
+
+from_yellow_600 : Css.Style
+from_yellow_600 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#d69e2e\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(214, 158, 46, 0))\\"
+        ]
+
+
+from_yellow_700 : Css.Style
+from_yellow_700 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#b7791f\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(183, 121, 31, 0))\\"
+        ]
+
+
+from_yellow_800 : Css.Style
+from_yellow_800 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#975a16\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(151, 90, 22, 0))\\"
+        ]
+
+
+from_yellow_900 : Css.Style
+from_yellow_900 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#744210\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(116, 66, 16, 0))\\"
+        ]
+
+
+from_green_100 : Css.Style
+from_green_100 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#f0fff4\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(240, 255, 244, 0))\\"
+        ]
+
+
+from_green_200 : Css.Style
+from_green_200 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#c6f6d5\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(198, 246, 213, 0))\\"
+        ]
+
+
+from_green_300 : Css.Style
+from_green_300 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#9ae6b4\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(154, 230, 180, 0))\\"
+        ]
+
+
+from_green_400 : Css.Style
+from_green_400 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#68d391\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(104, 211, 145, 0))\\"
+        ]
+
+
+from_green_500 : Css.Style
+from_green_500 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#48bb78\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(72, 187, 120, 0))\\"
+        ]
+
+
+from_green_600 : Css.Style
+from_green_600 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#38a169\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(56, 161, 105, 0))\\"
+        ]
+
+
+from_green_700 : Css.Style
+from_green_700 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#2f855a\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(47, 133, 90, 0))\\"
+        ]
+
+
+from_green_800 : Css.Style
+from_green_800 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#276749\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(39, 103, 73, 0))\\"
+        ]
+
+
+from_green_900 : Css.Style
+from_green_900 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#22543d\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(34, 84, 61, 0))\\"
+        ]
+
+
+from_teal_100 : Css.Style
+from_teal_100 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#e6fffa\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(230, 255, 250, 0))\\"
+        ]
+
+
+from_teal_200 : Css.Style
+from_teal_200 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#b2f5ea\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(178, 245, 234, 0))\\"
+        ]
+
+
+from_teal_300 : Css.Style
+from_teal_300 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#81e6d9\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(129, 230, 217, 0))\\"
+        ]
+
+
+from_teal_400 : Css.Style
+from_teal_400 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#4fd1c5\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(79, 209, 197, 0))\\"
+        ]
+
+
+from_teal_500 : Css.Style
+from_teal_500 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#38b2ac\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(56, 178, 172, 0))\\"
+        ]
+
+
+from_teal_600 : Css.Style
+from_teal_600 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#319795\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(49, 151, 149, 0))\\"
+        ]
+
+
+from_teal_700 : Css.Style
+from_teal_700 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#2c7a7b\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(44, 122, 123, 0))\\"
+        ]
+
+
+from_teal_800 : Css.Style
+from_teal_800 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#285e61\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(40, 94, 97, 0))\\"
+        ]
+
+
+from_teal_900 : Css.Style
+from_teal_900 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#234e52\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(35, 78, 82, 0))\\"
+        ]
+
+
+from_blue_100 : Css.Style
+from_blue_100 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#ebf8ff\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(235, 248, 255, 0))\\"
+        ]
+
+
+from_blue_200 : Css.Style
+from_blue_200 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#bee3f8\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(190, 227, 248, 0))\\"
+        ]
+
+
+from_blue_300 : Css.Style
+from_blue_300 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#90cdf4\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(144, 205, 244, 0))\\"
+        ]
+
+
+from_blue_400 : Css.Style
+from_blue_400 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#63b3ed\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(99, 179, 237, 0))\\"
+        ]
+
+
+from_blue_500 : Css.Style
+from_blue_500 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#4299e1\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(66, 153, 225, 0))\\"
+        ]
+
+
+from_blue_600 : Css.Style
+from_blue_600 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#3182ce\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(49, 130, 206, 0))\\"
+        ]
+
+
+from_blue_700 : Css.Style
+from_blue_700 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#2b6cb0\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(43, 108, 176, 0))\\"
+        ]
+
+
+from_blue_800 : Css.Style
+from_blue_800 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#2c5282\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(44, 82, 130, 0))\\"
+        ]
+
+
+from_blue_900 : Css.Style
+from_blue_900 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#2a4365\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(42, 67, 101, 0))\\"
+        ]
+
+
+from_indigo_100 : Css.Style
+from_indigo_100 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#ebf4ff\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(235, 244, 255, 0))\\"
+        ]
+
+
+from_indigo_200 : Css.Style
+from_indigo_200 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#c3dafe\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(195, 218, 254, 0))\\"
+        ]
+
+
+from_indigo_300 : Css.Style
+from_indigo_300 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#a3bffa\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(163, 191, 250, 0))\\"
+        ]
+
+
+from_indigo_400 : Css.Style
+from_indigo_400 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#7f9cf5\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(127, 156, 245, 0))\\"
+        ]
+
+
+from_indigo_500 : Css.Style
+from_indigo_500 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#667eea\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(102, 126, 234, 0))\\"
+        ]
+
+
+from_indigo_600 : Css.Style
+from_indigo_600 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#5a67d8\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(90, 103, 216, 0))\\"
+        ]
+
+
+from_indigo_700 : Css.Style
+from_indigo_700 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#4c51bf\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(76, 81, 191, 0))\\"
+        ]
+
+
+from_indigo_800 : Css.Style
+from_indigo_800 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#434190\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(67, 65, 144, 0))\\"
+        ]
+
+
+from_indigo_900 : Css.Style
+from_indigo_900 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#3c366b\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(60, 54, 107, 0))\\"
+        ]
+
+
+from_purple_100 : Css.Style
+from_purple_100 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#faf5ff\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(250, 245, 255, 0))\\"
+        ]
+
+
+from_purple_200 : Css.Style
+from_purple_200 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#e9d8fd\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(233, 216, 253, 0))\\"
+        ]
+
+
+from_purple_300 : Css.Style
+from_purple_300 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#d6bcfa\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(214, 188, 250, 0))\\"
+        ]
+
+
+from_purple_400 : Css.Style
+from_purple_400 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#b794f4\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(183, 148, 244, 0))\\"
+        ]
+
+
+from_purple_500 : Css.Style
+from_purple_500 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#9f7aea\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(159, 122, 234, 0))\\"
+        ]
+
+
+from_purple_600 : Css.Style
+from_purple_600 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#805ad5\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(128, 90, 213, 0))\\"
+        ]
+
+
+from_purple_700 : Css.Style
+from_purple_700 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#6b46c1\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(107, 70, 193, 0))\\"
+        ]
+
+
+from_purple_800 : Css.Style
+from_purple_800 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#553c9a\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(85, 60, 154, 0))\\"
+        ]
+
+
+from_purple_900 : Css.Style
+from_purple_900 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#44337a\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(68, 51, 122, 0))\\"
+        ]
+
+
+from_pink_100 : Css.Style
+from_pink_100 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#fff5f7\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(255, 245, 247, 0))\\"
+        ]
+
+
+from_pink_200 : Css.Style
+from_pink_200 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#fed7e2\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(254, 215, 226, 0))\\"
+        ]
+
+
+from_pink_300 : Css.Style
+from_pink_300 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#fbb6ce\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(251, 182, 206, 0))\\"
+        ]
+
+
+from_pink_400 : Css.Style
+from_pink_400 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#f687b3\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(246, 135, 179, 0))\\"
+        ]
+
+
+from_pink_500 : Css.Style
+from_pink_500 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#ed64a6\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(237, 100, 166, 0))\\"
+        ]
+
+
+from_pink_600 : Css.Style
+from_pink_600 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#d53f8c\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(213, 63, 140, 0))\\"
+        ]
+
+
+from_pink_700 : Css.Style
+from_pink_700 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#b83280\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(184, 50, 128, 0))\\"
+        ]
+
+
+from_pink_800 : Css.Style
+from_pink_800 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#97266d\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(151, 38, 109, 0))\\"
+        ]
+
+
+from_pink_900 : Css.Style
+from_pink_900 =
+    Css.batch
+        [ Css.property \\"--gradient-from-color\\" \\"#702459\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-to-color, rgba(112, 36, 89, 0))\\"
+        ]
+
+
+via_transparent : Css.Style
+via_transparent =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"transparent\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0))\\"
+        ]
+
+
+via_current : Css.Style
+via_current =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"currentColor\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0))\\"
+        ]
+
+
+via_black : Css.Style
+via_black =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#000\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0))\\"
+        ]
+
+
+via_white : Css.Style
+via_white =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#fff\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0))\\"
+        ]
+
+
+via_gray_100 : Css.Style
+via_gray_100 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#f7fafc\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(247, 250, 252, 0))\\"
+        ]
+
+
+via_gray_200 : Css.Style
+via_gray_200 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#edf2f7\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(237, 242, 247, 0))\\"
+        ]
+
+
+via_gray_300 : Css.Style
+via_gray_300 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#e2e8f0\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(226, 232, 240, 0))\\"
+        ]
+
+
+via_gray_400 : Css.Style
+via_gray_400 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#cbd5e0\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(203, 213, 224, 0))\\"
+        ]
+
+
+via_gray_500 : Css.Style
+via_gray_500 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#a0aec0\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(160, 174, 192, 0))\\"
+        ]
+
+
+via_gray_600 : Css.Style
+via_gray_600 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#718096\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(113, 128, 150, 0))\\"
+        ]
+
+
+via_gray_700 : Css.Style
+via_gray_700 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#4a5568\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(74, 85, 104, 0))\\"
+        ]
+
+
+via_gray_800 : Css.Style
+via_gray_800 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#2d3748\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(45, 55, 72, 0))\\"
+        ]
+
+
+via_gray_900 : Css.Style
+via_gray_900 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#1a202c\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(26, 32, 44, 0))\\"
+        ]
+
+
+via_red_100 : Css.Style
+via_red_100 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#fff5f5\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 245, 245, 0))\\"
+        ]
+
+
+via_red_200 : Css.Style
+via_red_200 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#fed7d7\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(254, 215, 215, 0))\\"
+        ]
+
+
+via_red_300 : Css.Style
+via_red_300 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#feb2b2\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(254, 178, 178, 0))\\"
+        ]
+
+
+via_red_400 : Css.Style
+via_red_400 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#fc8181\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(252, 129, 129, 0))\\"
+        ]
+
+
+via_red_500 : Css.Style
+via_red_500 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#f56565\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(245, 101, 101, 0))\\"
+        ]
+
+
+via_red_600 : Css.Style
+via_red_600 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#e53e3e\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(229, 62, 62, 0))\\"
+        ]
+
+
+via_red_700 : Css.Style
+via_red_700 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#c53030\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(197, 48, 48, 0))\\"
+        ]
+
+
+via_red_800 : Css.Style
+via_red_800 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#9b2c2c\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(155, 44, 44, 0))\\"
+        ]
+
+
+via_red_900 : Css.Style
+via_red_900 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#742a2a\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 42, 42, 0))\\"
+        ]
+
+
+via_orange_100 : Css.Style
+via_orange_100 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#fffaf0\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 250, 240, 0))\\"
+        ]
+
+
+via_orange_200 : Css.Style
+via_orange_200 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#feebc8\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(254, 235, 200, 0))\\"
+        ]
+
+
+via_orange_300 : Css.Style
+via_orange_300 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#fbd38d\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(251, 211, 141, 0))\\"
+        ]
+
+
+via_orange_400 : Css.Style
+via_orange_400 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#f6ad55\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(246, 173, 85, 0))\\"
+        ]
+
+
+via_orange_500 : Css.Style
+via_orange_500 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#ed8936\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(237, 137, 54, 0))\\"
+        ]
+
+
+via_orange_600 : Css.Style
+via_orange_600 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#dd6b20\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(221, 107, 32, 0))\\"
+        ]
+
+
+via_orange_700 : Css.Style
+via_orange_700 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#c05621\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(192, 86, 33, 0))\\"
+        ]
+
+
+via_orange_800 : Css.Style
+via_orange_800 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#9c4221\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(156, 66, 33, 0))\\"
+        ]
+
+
+via_orange_900 : Css.Style
+via_orange_900 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#7b341e\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(123, 52, 30, 0))\\"
+        ]
+
+
+via_yellow_100 : Css.Style
+via_yellow_100 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#fffff0\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 240, 0))\\"
+        ]
+
+
+via_yellow_200 : Css.Style
+via_yellow_200 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#fefcbf\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(254, 252, 191, 0))\\"
+        ]
+
+
+via_yellow_300 : Css.Style
+via_yellow_300 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#faf089\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(250, 240, 137, 0))\\"
+        ]
+
+
+via_yellow_400 : Css.Style
+via_yellow_400 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#f6e05e\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(246, 224, 94, 0))\\"
+        ]
+
+
+via_yellow_500 : Css.Style
+via_yellow_500 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#ecc94b\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(236, 201, 75, 0))\\"
+        ]
+
+
+via_yellow_600 : Css.Style
+via_yellow_600 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#d69e2e\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(214, 158, 46, 0))\\"
+        ]
+
+
+via_yellow_700 : Css.Style
+via_yellow_700 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#b7791f\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(183, 121, 31, 0))\\"
+        ]
+
+
+via_yellow_800 : Css.Style
+via_yellow_800 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#975a16\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(151, 90, 22, 0))\\"
+        ]
+
+
+via_yellow_900 : Css.Style
+via_yellow_900 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#744210\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(116, 66, 16, 0))\\"
+        ]
+
+
+via_green_100 : Css.Style
+via_green_100 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#f0fff4\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 255, 244, 0))\\"
+        ]
+
+
+via_green_200 : Css.Style
+via_green_200 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#c6f6d5\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(198, 246, 213, 0))\\"
+        ]
+
+
+via_green_300 : Css.Style
+via_green_300 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#9ae6b4\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(154, 230, 180, 0))\\"
+        ]
+
+
+via_green_400 : Css.Style
+via_green_400 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#68d391\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(104, 211, 145, 0))\\"
+        ]
+
+
+via_green_500 : Css.Style
+via_green_500 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#48bb78\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(72, 187, 120, 0))\\"
+        ]
+
+
+via_green_600 : Css.Style
+via_green_600 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#38a169\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(56, 161, 105, 0))\\"
+        ]
+
+
+via_green_700 : Css.Style
+via_green_700 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#2f855a\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(47, 133, 90, 0))\\"
+        ]
+
+
+via_green_800 : Css.Style
+via_green_800 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#276749\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(39, 103, 73, 0))\\"
+        ]
+
+
+via_green_900 : Css.Style
+via_green_900 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#22543d\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(34, 84, 61, 0))\\"
+        ]
+
+
+via_teal_100 : Css.Style
+via_teal_100 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#e6fffa\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(230, 255, 250, 0))\\"
+        ]
+
+
+via_teal_200 : Css.Style
+via_teal_200 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#b2f5ea\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(178, 245, 234, 0))\\"
+        ]
+
+
+via_teal_300 : Css.Style
+via_teal_300 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#81e6d9\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(129, 230, 217, 0))\\"
+        ]
+
+
+via_teal_400 : Css.Style
+via_teal_400 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#4fd1c5\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(79, 209, 197, 0))\\"
+        ]
+
+
+via_teal_500 : Css.Style
+via_teal_500 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#38b2ac\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(56, 178, 172, 0))\\"
+        ]
+
+
+via_teal_600 : Css.Style
+via_teal_600 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#319795\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(49, 151, 149, 0))\\"
+        ]
+
+
+via_teal_700 : Css.Style
+via_teal_700 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#2c7a7b\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(44, 122, 123, 0))\\"
+        ]
+
+
+via_teal_800 : Css.Style
+via_teal_800 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#285e61\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(40, 94, 97, 0))\\"
+        ]
+
+
+via_teal_900 : Css.Style
+via_teal_900 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#234e52\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(35, 78, 82, 0))\\"
+        ]
+
+
+via_blue_100 : Css.Style
+via_blue_100 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#ebf8ff\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(235, 248, 255, 0))\\"
+        ]
+
+
+via_blue_200 : Css.Style
+via_blue_200 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#bee3f8\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(190, 227, 248, 0))\\"
+        ]
+
+
+via_blue_300 : Css.Style
+via_blue_300 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#90cdf4\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(144, 205, 244, 0))\\"
+        ]
+
+
+via_blue_400 : Css.Style
+via_blue_400 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#63b3ed\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(99, 179, 237, 0))\\"
+        ]
+
+
+via_blue_500 : Css.Style
+via_blue_500 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#4299e1\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(66, 153, 225, 0))\\"
+        ]
+
+
+via_blue_600 : Css.Style
+via_blue_600 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#3182ce\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(49, 130, 206, 0))\\"
+        ]
+
+
+via_blue_700 : Css.Style
+via_blue_700 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#2b6cb0\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(43, 108, 176, 0))\\"
+        ]
+
+
+via_blue_800 : Css.Style
+via_blue_800 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#2c5282\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(44, 82, 130, 0))\\"
+        ]
+
+
+via_blue_900 : Css.Style
+via_blue_900 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#2a4365\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(42, 67, 101, 0))\\"
+        ]
+
+
+via_indigo_100 : Css.Style
+via_indigo_100 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#ebf4ff\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(235, 244, 255, 0))\\"
+        ]
+
+
+via_indigo_200 : Css.Style
+via_indigo_200 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#c3dafe\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(195, 218, 254, 0))\\"
+        ]
+
+
+via_indigo_300 : Css.Style
+via_indigo_300 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#a3bffa\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(163, 191, 250, 0))\\"
+        ]
+
+
+via_indigo_400 : Css.Style
+via_indigo_400 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#7f9cf5\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(127, 156, 245, 0))\\"
+        ]
+
+
+via_indigo_500 : Css.Style
+via_indigo_500 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#667eea\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(102, 126, 234, 0))\\"
+        ]
+
+
+via_indigo_600 : Css.Style
+via_indigo_600 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#5a67d8\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(90, 103, 216, 0))\\"
+        ]
+
+
+via_indigo_700 : Css.Style
+via_indigo_700 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#4c51bf\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(76, 81, 191, 0))\\"
+        ]
+
+
+via_indigo_800 : Css.Style
+via_indigo_800 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#434190\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(67, 65, 144, 0))\\"
+        ]
+
+
+via_indigo_900 : Css.Style
+via_indigo_900 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#3c366b\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(60, 54, 107, 0))\\"
+        ]
+
+
+via_purple_100 : Css.Style
+via_purple_100 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#faf5ff\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(250, 245, 255, 0))\\"
+        ]
+
+
+via_purple_200 : Css.Style
+via_purple_200 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#e9d8fd\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(233, 216, 253, 0))\\"
+        ]
+
+
+via_purple_300 : Css.Style
+via_purple_300 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#d6bcfa\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(214, 188, 250, 0))\\"
+        ]
+
+
+via_purple_400 : Css.Style
+via_purple_400 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#b794f4\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(183, 148, 244, 0))\\"
+        ]
+
+
+via_purple_500 : Css.Style
+via_purple_500 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#9f7aea\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(159, 122, 234, 0))\\"
+        ]
+
+
+via_purple_600 : Css.Style
+via_purple_600 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#805ad5\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(128, 90, 213, 0))\\"
+        ]
+
+
+via_purple_700 : Css.Style
+via_purple_700 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#6b46c1\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(107, 70, 193, 0))\\"
+        ]
+
+
+via_purple_800 : Css.Style
+via_purple_800 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#553c9a\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(85, 60, 154, 0))\\"
+        ]
+
+
+via_purple_900 : Css.Style
+via_purple_900 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#44337a\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(68, 51, 122, 0))\\"
+        ]
+
+
+via_pink_100 : Css.Style
+via_pink_100 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#fff5f7\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 245, 247, 0))\\"
+        ]
+
+
+via_pink_200 : Css.Style
+via_pink_200 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#fed7e2\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(254, 215, 226, 0))\\"
+        ]
+
+
+via_pink_300 : Css.Style
+via_pink_300 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#fbb6ce\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(251, 182, 206, 0))\\"
+        ]
+
+
+via_pink_400 : Css.Style
+via_pink_400 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#f687b3\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(246, 135, 179, 0))\\"
+        ]
+
+
+via_pink_500 : Css.Style
+via_pink_500 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#ed64a6\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(237, 100, 166, 0))\\"
+        ]
+
+
+via_pink_600 : Css.Style
+via_pink_600 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#d53f8c\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(213, 63, 140, 0))\\"
+        ]
+
+
+via_pink_700 : Css.Style
+via_pink_700 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#b83280\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(184, 50, 128, 0))\\"
+        ]
+
+
+via_pink_800 : Css.Style
+via_pink_800 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#97266d\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(151, 38, 109, 0))\\"
+        ]
+
+
+via_pink_900 : Css.Style
+via_pink_900 =
+    Css.batch
+        [ Css.property \\"--gradient-via-color\\" \\"#702459\\"
+        , Css.property \\"--gradient-color-stops\\" \\"var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(112, 36, 89, 0))\\"
+        ]
+
+
+to_transparent : Css.Style
+to_transparent =
+    Css.property \\"--gradient-to-color\\" \\"transparent\\"
+
+
+to_current : Css.Style
+to_current =
+    Css.property \\"--gradient-to-color\\" \\"currentColor\\"
+
+
+to_black : Css.Style
+to_black =
+    Css.property \\"--gradient-to-color\\" \\"#000\\"
+
+
+to_white : Css.Style
+to_white =
+    Css.property \\"--gradient-to-color\\" \\"#fff\\"
+
+
+to_gray_100 : Css.Style
+to_gray_100 =
+    Css.property \\"--gradient-to-color\\" \\"#f7fafc\\"
+
+
+to_gray_200 : Css.Style
+to_gray_200 =
+    Css.property \\"--gradient-to-color\\" \\"#edf2f7\\"
+
+
+to_gray_300 : Css.Style
+to_gray_300 =
+    Css.property \\"--gradient-to-color\\" \\"#e2e8f0\\"
+
+
+to_gray_400 : Css.Style
+to_gray_400 =
+    Css.property \\"--gradient-to-color\\" \\"#cbd5e0\\"
+
+
+to_gray_500 : Css.Style
+to_gray_500 =
+    Css.property \\"--gradient-to-color\\" \\"#a0aec0\\"
+
+
+to_gray_600 : Css.Style
+to_gray_600 =
+    Css.property \\"--gradient-to-color\\" \\"#718096\\"
+
+
+to_gray_700 : Css.Style
+to_gray_700 =
+    Css.property \\"--gradient-to-color\\" \\"#4a5568\\"
+
+
+to_gray_800 : Css.Style
+to_gray_800 =
+    Css.property \\"--gradient-to-color\\" \\"#2d3748\\"
+
+
+to_gray_900 : Css.Style
+to_gray_900 =
+    Css.property \\"--gradient-to-color\\" \\"#1a202c\\"
+
+
+to_red_100 : Css.Style
+to_red_100 =
+    Css.property \\"--gradient-to-color\\" \\"#fff5f5\\"
+
+
+to_red_200 : Css.Style
+to_red_200 =
+    Css.property \\"--gradient-to-color\\" \\"#fed7d7\\"
+
+
+to_red_300 : Css.Style
+to_red_300 =
+    Css.property \\"--gradient-to-color\\" \\"#feb2b2\\"
+
+
+to_red_400 : Css.Style
+to_red_400 =
+    Css.property \\"--gradient-to-color\\" \\"#fc8181\\"
+
+
+to_red_500 : Css.Style
+to_red_500 =
+    Css.property \\"--gradient-to-color\\" \\"#f56565\\"
+
+
+to_red_600 : Css.Style
+to_red_600 =
+    Css.property \\"--gradient-to-color\\" \\"#e53e3e\\"
+
+
+to_red_700 : Css.Style
+to_red_700 =
+    Css.property \\"--gradient-to-color\\" \\"#c53030\\"
+
+
+to_red_800 : Css.Style
+to_red_800 =
+    Css.property \\"--gradient-to-color\\" \\"#9b2c2c\\"
+
+
+to_red_900 : Css.Style
+to_red_900 =
+    Css.property \\"--gradient-to-color\\" \\"#742a2a\\"
+
+
+to_orange_100 : Css.Style
+to_orange_100 =
+    Css.property \\"--gradient-to-color\\" \\"#fffaf0\\"
+
+
+to_orange_200 : Css.Style
+to_orange_200 =
+    Css.property \\"--gradient-to-color\\" \\"#feebc8\\"
+
+
+to_orange_300 : Css.Style
+to_orange_300 =
+    Css.property \\"--gradient-to-color\\" \\"#fbd38d\\"
+
+
+to_orange_400 : Css.Style
+to_orange_400 =
+    Css.property \\"--gradient-to-color\\" \\"#f6ad55\\"
+
+
+to_orange_500 : Css.Style
+to_orange_500 =
+    Css.property \\"--gradient-to-color\\" \\"#ed8936\\"
+
+
+to_orange_600 : Css.Style
+to_orange_600 =
+    Css.property \\"--gradient-to-color\\" \\"#dd6b20\\"
+
+
+to_orange_700 : Css.Style
+to_orange_700 =
+    Css.property \\"--gradient-to-color\\" \\"#c05621\\"
+
+
+to_orange_800 : Css.Style
+to_orange_800 =
+    Css.property \\"--gradient-to-color\\" \\"#9c4221\\"
+
+
+to_orange_900 : Css.Style
+to_orange_900 =
+    Css.property \\"--gradient-to-color\\" \\"#7b341e\\"
+
+
+to_yellow_100 : Css.Style
+to_yellow_100 =
+    Css.property \\"--gradient-to-color\\" \\"#fffff0\\"
+
+
+to_yellow_200 : Css.Style
+to_yellow_200 =
+    Css.property \\"--gradient-to-color\\" \\"#fefcbf\\"
+
+
+to_yellow_300 : Css.Style
+to_yellow_300 =
+    Css.property \\"--gradient-to-color\\" \\"#faf089\\"
+
+
+to_yellow_400 : Css.Style
+to_yellow_400 =
+    Css.property \\"--gradient-to-color\\" \\"#f6e05e\\"
+
+
+to_yellow_500 : Css.Style
+to_yellow_500 =
+    Css.property \\"--gradient-to-color\\" \\"#ecc94b\\"
+
+
+to_yellow_600 : Css.Style
+to_yellow_600 =
+    Css.property \\"--gradient-to-color\\" \\"#d69e2e\\"
+
+
+to_yellow_700 : Css.Style
+to_yellow_700 =
+    Css.property \\"--gradient-to-color\\" \\"#b7791f\\"
+
+
+to_yellow_800 : Css.Style
+to_yellow_800 =
+    Css.property \\"--gradient-to-color\\" \\"#975a16\\"
+
+
+to_yellow_900 : Css.Style
+to_yellow_900 =
+    Css.property \\"--gradient-to-color\\" \\"#744210\\"
+
+
+to_green_100 : Css.Style
+to_green_100 =
+    Css.property \\"--gradient-to-color\\" \\"#f0fff4\\"
+
+
+to_green_200 : Css.Style
+to_green_200 =
+    Css.property \\"--gradient-to-color\\" \\"#c6f6d5\\"
+
+
+to_green_300 : Css.Style
+to_green_300 =
+    Css.property \\"--gradient-to-color\\" \\"#9ae6b4\\"
+
+
+to_green_400 : Css.Style
+to_green_400 =
+    Css.property \\"--gradient-to-color\\" \\"#68d391\\"
+
+
+to_green_500 : Css.Style
+to_green_500 =
+    Css.property \\"--gradient-to-color\\" \\"#48bb78\\"
+
+
+to_green_600 : Css.Style
+to_green_600 =
+    Css.property \\"--gradient-to-color\\" \\"#38a169\\"
+
+
+to_green_700 : Css.Style
+to_green_700 =
+    Css.property \\"--gradient-to-color\\" \\"#2f855a\\"
+
+
+to_green_800 : Css.Style
+to_green_800 =
+    Css.property \\"--gradient-to-color\\" \\"#276749\\"
+
+
+to_green_900 : Css.Style
+to_green_900 =
+    Css.property \\"--gradient-to-color\\" \\"#22543d\\"
+
+
+to_teal_100 : Css.Style
+to_teal_100 =
+    Css.property \\"--gradient-to-color\\" \\"#e6fffa\\"
+
+
+to_teal_200 : Css.Style
+to_teal_200 =
+    Css.property \\"--gradient-to-color\\" \\"#b2f5ea\\"
+
+
+to_teal_300 : Css.Style
+to_teal_300 =
+    Css.property \\"--gradient-to-color\\" \\"#81e6d9\\"
+
+
+to_teal_400 : Css.Style
+to_teal_400 =
+    Css.property \\"--gradient-to-color\\" \\"#4fd1c5\\"
+
+
+to_teal_500 : Css.Style
+to_teal_500 =
+    Css.property \\"--gradient-to-color\\" \\"#38b2ac\\"
+
+
+to_teal_600 : Css.Style
+to_teal_600 =
+    Css.property \\"--gradient-to-color\\" \\"#319795\\"
+
+
+to_teal_700 : Css.Style
+to_teal_700 =
+    Css.property \\"--gradient-to-color\\" \\"#2c7a7b\\"
+
+
+to_teal_800 : Css.Style
+to_teal_800 =
+    Css.property \\"--gradient-to-color\\" \\"#285e61\\"
+
+
+to_teal_900 : Css.Style
+to_teal_900 =
+    Css.property \\"--gradient-to-color\\" \\"#234e52\\"
+
+
+to_blue_100 : Css.Style
+to_blue_100 =
+    Css.property \\"--gradient-to-color\\" \\"#ebf8ff\\"
+
+
+to_blue_200 : Css.Style
+to_blue_200 =
+    Css.property \\"--gradient-to-color\\" \\"#bee3f8\\"
+
+
+to_blue_300 : Css.Style
+to_blue_300 =
+    Css.property \\"--gradient-to-color\\" \\"#90cdf4\\"
+
+
+to_blue_400 : Css.Style
+to_blue_400 =
+    Css.property \\"--gradient-to-color\\" \\"#63b3ed\\"
+
+
+to_blue_500 : Css.Style
+to_blue_500 =
+    Css.property \\"--gradient-to-color\\" \\"#4299e1\\"
+
+
+to_blue_600 : Css.Style
+to_blue_600 =
+    Css.property \\"--gradient-to-color\\" \\"#3182ce\\"
+
+
+to_blue_700 : Css.Style
+to_blue_700 =
+    Css.property \\"--gradient-to-color\\" \\"#2b6cb0\\"
+
+
+to_blue_800 : Css.Style
+to_blue_800 =
+    Css.property \\"--gradient-to-color\\" \\"#2c5282\\"
+
+
+to_blue_900 : Css.Style
+to_blue_900 =
+    Css.property \\"--gradient-to-color\\" \\"#2a4365\\"
+
+
+to_indigo_100 : Css.Style
+to_indigo_100 =
+    Css.property \\"--gradient-to-color\\" \\"#ebf4ff\\"
+
+
+to_indigo_200 : Css.Style
+to_indigo_200 =
+    Css.property \\"--gradient-to-color\\" \\"#c3dafe\\"
+
+
+to_indigo_300 : Css.Style
+to_indigo_300 =
+    Css.property \\"--gradient-to-color\\" \\"#a3bffa\\"
+
+
+to_indigo_400 : Css.Style
+to_indigo_400 =
+    Css.property \\"--gradient-to-color\\" \\"#7f9cf5\\"
+
+
+to_indigo_500 : Css.Style
+to_indigo_500 =
+    Css.property \\"--gradient-to-color\\" \\"#667eea\\"
+
+
+to_indigo_600 : Css.Style
+to_indigo_600 =
+    Css.property \\"--gradient-to-color\\" \\"#5a67d8\\"
+
+
+to_indigo_700 : Css.Style
+to_indigo_700 =
+    Css.property \\"--gradient-to-color\\" \\"#4c51bf\\"
+
+
+to_indigo_800 : Css.Style
+to_indigo_800 =
+    Css.property \\"--gradient-to-color\\" \\"#434190\\"
+
+
+to_indigo_900 : Css.Style
+to_indigo_900 =
+    Css.property \\"--gradient-to-color\\" \\"#3c366b\\"
+
+
+to_purple_100 : Css.Style
+to_purple_100 =
+    Css.property \\"--gradient-to-color\\" \\"#faf5ff\\"
+
+
+to_purple_200 : Css.Style
+to_purple_200 =
+    Css.property \\"--gradient-to-color\\" \\"#e9d8fd\\"
+
+
+to_purple_300 : Css.Style
+to_purple_300 =
+    Css.property \\"--gradient-to-color\\" \\"#d6bcfa\\"
+
+
+to_purple_400 : Css.Style
+to_purple_400 =
+    Css.property \\"--gradient-to-color\\" \\"#b794f4\\"
+
+
+to_purple_500 : Css.Style
+to_purple_500 =
+    Css.property \\"--gradient-to-color\\" \\"#9f7aea\\"
+
+
+to_purple_600 : Css.Style
+to_purple_600 =
+    Css.property \\"--gradient-to-color\\" \\"#805ad5\\"
+
+
+to_purple_700 : Css.Style
+to_purple_700 =
+    Css.property \\"--gradient-to-color\\" \\"#6b46c1\\"
+
+
+to_purple_800 : Css.Style
+to_purple_800 =
+    Css.property \\"--gradient-to-color\\" \\"#553c9a\\"
+
+
+to_purple_900 : Css.Style
+to_purple_900 =
+    Css.property \\"--gradient-to-color\\" \\"#44337a\\"
+
+
+to_pink_100 : Css.Style
+to_pink_100 =
+    Css.property \\"--gradient-to-color\\" \\"#fff5f7\\"
+
+
+to_pink_200 : Css.Style
+to_pink_200 =
+    Css.property \\"--gradient-to-color\\" \\"#fed7e2\\"
+
+
+to_pink_300 : Css.Style
+to_pink_300 =
+    Css.property \\"--gradient-to-color\\" \\"#fbb6ce\\"
+
+
+to_pink_400 : Css.Style
+to_pink_400 =
+    Css.property \\"--gradient-to-color\\" \\"#f687b3\\"
+
+
+to_pink_500 : Css.Style
+to_pink_500 =
+    Css.property \\"--gradient-to-color\\" \\"#ed64a6\\"
+
+
+to_pink_600 : Css.Style
+to_pink_600 =
+    Css.property \\"--gradient-to-color\\" \\"#d53f8c\\"
+
+
+to_pink_700 : Css.Style
+to_pink_700 =
+    Css.property \\"--gradient-to-color\\" \\"#b83280\\"
+
+
+to_pink_800 : Css.Style
+to_pink_800 =
+    Css.property \\"--gradient-to-color\\" \\"#97266d\\"
+
+
+to_pink_900 : Css.Style
+to_pink_900 =
+    Css.property \\"--gradient-to-color\\" \\"#702459\\"
 
 
 bg_opacity_0 : Css.Style
@@ -4916,6 +7010,11 @@ grid =
 inline_grid : Css.Style
 inline_grid =
     Css.property \\"display\\" \\"inline-grid\\"
+
+
+contents : Css.Style
+contents =
+    Css.property \\"display\\" \\"contents\\"
 
 
 hidden : Css.Style
@@ -10812,304 +12911,304 @@ gap_px =
         ]
 
 
-col_gap_0 : Css.Style
-col_gap_0 =
+gap_x_0 : Css.Style
+gap_x_0 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"0\\"
         , Css.property \\"column-gap\\" \\"0\\"
         ]
 
 
-col_gap_1 : Css.Style
-col_gap_1 =
+gap_x_1 : Css.Style
+gap_x_1 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"0.25rem\\"
         , Css.property \\"column-gap\\" \\"0.25rem\\"
         ]
 
 
-col_gap_2 : Css.Style
-col_gap_2 =
+gap_x_2 : Css.Style
+gap_x_2 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"0.5rem\\"
         , Css.property \\"column-gap\\" \\"0.5rem\\"
         ]
 
 
-col_gap_3 : Css.Style
-col_gap_3 =
+gap_x_3 : Css.Style
+gap_x_3 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"0.75rem\\"
         , Css.property \\"column-gap\\" \\"0.75rem\\"
         ]
 
 
-col_gap_4 : Css.Style
-col_gap_4 =
+gap_x_4 : Css.Style
+gap_x_4 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"1rem\\"
         , Css.property \\"column-gap\\" \\"1rem\\"
         ]
 
 
-col_gap_5 : Css.Style
-col_gap_5 =
+gap_x_5 : Css.Style
+gap_x_5 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"1.25rem\\"
         , Css.property \\"column-gap\\" \\"1.25rem\\"
         ]
 
 
-col_gap_6 : Css.Style
-col_gap_6 =
+gap_x_6 : Css.Style
+gap_x_6 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"1.5rem\\"
         , Css.property \\"column-gap\\" \\"1.5rem\\"
         ]
 
 
-col_gap_8 : Css.Style
-col_gap_8 =
+gap_x_8 : Css.Style
+gap_x_8 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"2rem\\"
         , Css.property \\"column-gap\\" \\"2rem\\"
         ]
 
 
-col_gap_10 : Css.Style
-col_gap_10 =
+gap_x_10 : Css.Style
+gap_x_10 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"2.5rem\\"
         , Css.property \\"column-gap\\" \\"2.5rem\\"
         ]
 
 
-col_gap_12 : Css.Style
-col_gap_12 =
+gap_x_12 : Css.Style
+gap_x_12 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"3rem\\"
         , Css.property \\"column-gap\\" \\"3rem\\"
         ]
 
 
-col_gap_16 : Css.Style
-col_gap_16 =
+gap_x_16 : Css.Style
+gap_x_16 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"4rem\\"
         , Css.property \\"column-gap\\" \\"4rem\\"
         ]
 
 
-col_gap_20 : Css.Style
-col_gap_20 =
+gap_x_20 : Css.Style
+gap_x_20 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"5rem\\"
         , Css.property \\"column-gap\\" \\"5rem\\"
         ]
 
 
-col_gap_24 : Css.Style
-col_gap_24 =
+gap_x_24 : Css.Style
+gap_x_24 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"6rem\\"
         , Css.property \\"column-gap\\" \\"6rem\\"
         ]
 
 
-col_gap_32 : Css.Style
-col_gap_32 =
+gap_x_32 : Css.Style
+gap_x_32 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"8rem\\"
         , Css.property \\"column-gap\\" \\"8rem\\"
         ]
 
 
-col_gap_40 : Css.Style
-col_gap_40 =
+gap_x_40 : Css.Style
+gap_x_40 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"10rem\\"
         , Css.property \\"column-gap\\" \\"10rem\\"
         ]
 
 
-col_gap_48 : Css.Style
-col_gap_48 =
+gap_x_48 : Css.Style
+gap_x_48 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"12rem\\"
         , Css.property \\"column-gap\\" \\"12rem\\"
         ]
 
 
-col_gap_56 : Css.Style
-col_gap_56 =
+gap_x_56 : Css.Style
+gap_x_56 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"14rem\\"
         , Css.property \\"column-gap\\" \\"14rem\\"
         ]
 
 
-col_gap_64 : Css.Style
-col_gap_64 =
+gap_x_64 : Css.Style
+gap_x_64 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"16rem\\"
         , Css.property \\"column-gap\\" \\"16rem\\"
         ]
 
 
-col_gap_px : Css.Style
-col_gap_px =
+gap_x_px : Css.Style
+gap_x_px =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"1px\\"
         , Css.property \\"column-gap\\" \\"1px\\"
         ]
 
 
-row_gap_0 : Css.Style
-row_gap_0 =
+gap_y_0 : Css.Style
+gap_y_0 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"0\\"
         , Css.property \\"row-gap\\" \\"0\\"
         ]
 
 
-row_gap_1 : Css.Style
-row_gap_1 =
+gap_y_1 : Css.Style
+gap_y_1 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"0.25rem\\"
         , Css.property \\"row-gap\\" \\"0.25rem\\"
         ]
 
 
-row_gap_2 : Css.Style
-row_gap_2 =
+gap_y_2 : Css.Style
+gap_y_2 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"0.5rem\\"
         , Css.property \\"row-gap\\" \\"0.5rem\\"
         ]
 
 
-row_gap_3 : Css.Style
-row_gap_3 =
+gap_y_3 : Css.Style
+gap_y_3 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"0.75rem\\"
         , Css.property \\"row-gap\\" \\"0.75rem\\"
         ]
 
 
-row_gap_4 : Css.Style
-row_gap_4 =
+gap_y_4 : Css.Style
+gap_y_4 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"1rem\\"
         , Css.property \\"row-gap\\" \\"1rem\\"
         ]
 
 
-row_gap_5 : Css.Style
-row_gap_5 =
+gap_y_5 : Css.Style
+gap_y_5 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"1.25rem\\"
         , Css.property \\"row-gap\\" \\"1.25rem\\"
         ]
 
 
-row_gap_6 : Css.Style
-row_gap_6 =
+gap_y_6 : Css.Style
+gap_y_6 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"1.5rem\\"
         , Css.property \\"row-gap\\" \\"1.5rem\\"
         ]
 
 
-row_gap_8 : Css.Style
-row_gap_8 =
+gap_y_8 : Css.Style
+gap_y_8 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"2rem\\"
         , Css.property \\"row-gap\\" \\"2rem\\"
         ]
 
 
-row_gap_10 : Css.Style
-row_gap_10 =
+gap_y_10 : Css.Style
+gap_y_10 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"2.5rem\\"
         , Css.property \\"row-gap\\" \\"2.5rem\\"
         ]
 
 
-row_gap_12 : Css.Style
-row_gap_12 =
+gap_y_12 : Css.Style
+gap_y_12 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"3rem\\"
         , Css.property \\"row-gap\\" \\"3rem\\"
         ]
 
 
-row_gap_16 : Css.Style
-row_gap_16 =
+gap_y_16 : Css.Style
+gap_y_16 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"4rem\\"
         , Css.property \\"row-gap\\" \\"4rem\\"
         ]
 
 
-row_gap_20 : Css.Style
-row_gap_20 =
+gap_y_20 : Css.Style
+gap_y_20 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"5rem\\"
         , Css.property \\"row-gap\\" \\"5rem\\"
         ]
 
 
-row_gap_24 : Css.Style
-row_gap_24 =
+gap_y_24 : Css.Style
+gap_y_24 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"6rem\\"
         , Css.property \\"row-gap\\" \\"6rem\\"
         ]
 
 
-row_gap_32 : Css.Style
-row_gap_32 =
+gap_y_32 : Css.Style
+gap_y_32 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"8rem\\"
         , Css.property \\"row-gap\\" \\"8rem\\"
         ]
 
 
-row_gap_40 : Css.Style
-row_gap_40 =
+gap_y_40 : Css.Style
+gap_y_40 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"10rem\\"
         , Css.property \\"row-gap\\" \\"10rem\\"
         ]
 
 
-row_gap_48 : Css.Style
-row_gap_48 =
+gap_y_48 : Css.Style
+gap_y_48 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"12rem\\"
         , Css.property \\"row-gap\\" \\"12rem\\"
         ]
 
 
-row_gap_56 : Css.Style
-row_gap_56 =
+gap_y_56 : Css.Style
+gap_y_56 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"14rem\\"
         , Css.property \\"row-gap\\" \\"14rem\\"
         ]
 
 
-row_gap_64 : Css.Style
-row_gap_64 =
+gap_y_64 : Css.Style
+gap_y_64 =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"16rem\\"
         , Css.property \\"row-gap\\" \\"16rem\\"
         ]
 
 
-row_gap_px : Css.Style
-row_gap_px =
+gap_y_px : Css.Style
+gap_y_px =
     Css.batch
         [ Css.property \\"grid-row-gap\\" \\"1px\\"
         , Css.property \\"row-gap\\" \\"1px\\"
