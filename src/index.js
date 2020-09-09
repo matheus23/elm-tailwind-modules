@@ -20,7 +20,7 @@ export default async function run({
             return async (root, result) => {
                 const blocksByClass = parser.groupDeclarationBlocksByClass(root);
 
-                console.log(blocksByClass.unrecognized.length);
+                console.log("number of unrecognized rules:", blocksByClass.unrecognized.length);
 
                 // setup standard utility code generation promise
                 const formats = tailwindUtilityGeneration

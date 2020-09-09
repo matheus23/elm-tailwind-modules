@@ -25,8 +25,6 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
         try {
             selector = CssWhat.parse(rule.selector);
         } catch (e) {
-            // Couldn't parse this. TOOD: Remove try-catch?
-            console.log("Didn't recognize selector", rule.selector);
             unrecognized.push(rule);
             return;
         }
@@ -41,7 +39,6 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
 
         if (partClasses.some(className => className == null) || !allEqual(partClasses)) {
             unrecognized.push(rule);
-            console.log("Didn't recognize common class prefix", parts);
             return;
         }
 
@@ -65,7 +62,6 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
             }));
         } catch (e) {
             unrecognized.push(rule);
-            console.log("Didn't recognize subselectors", parts);
             return;
         }
 
@@ -118,13 +114,7 @@ function recognizeSelectorRest(selector) {
     }
 
     const type = selector[0].type;
-    let rest;
-    try {
-        // this is hacky, but gets the job done.
-        rest = CssWhat.stringify([selector.slice(1)]);
-    } catch (e) {
-        console.error("failed stringifying", selector.slice(1));
-    }
+    const rest = CssWhat.stringify([selector.slice(1)]);
     const supportedTypes = ["child", "decendant", "adjacent", "sibling"];
 
     if (supportedTypes.some(supported => supported === type)) {
