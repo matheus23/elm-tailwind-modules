@@ -14,6 +14,7 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
     const defaultRecognized = {
         properties: [],
         advancedSelector: undefined,
+        mediaQueries: [],
     };
 
     rules.forEach(rule => {
@@ -38,26 +39,47 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
         const className = parts[0].class;
         const elmDeclName = toElmName(fixClass(className));
 
-        const properties = [];
-        rule.walkDecls(declaration => {
-            properties.push({
-                prop: declaration.prop,
-                value: declaration.value,
-            });
-        });
+        const { properties, mediaQueries } = collectProperties(rule);
 
         const key = String(rule.selector);
         const advancedSelector = key.substring(key.indexOf(" ")).replace(key, "").trim() || undefined
 
+        // Modify entry, if exists
         const itemBefore = recognized.get(elmDeclName) || defaultRecognized;
-
         recognized.set(elmDeclName, {
             properties: itemBefore.properties.concat(properties),
             advancedSelector,
+            mediaQueries: itemBefore.mediaQueries.concat(mediaQueries),
         });
     });
 
     return { recognized, unrecognized };
+}
+
+function collectProperties(rule) {
+    let properties = [];
+    rule.walkDecls(declaration => {
+        properties.push({
+            prop: declaration.prop,
+            value: declaration.value,
+        });
+    });
+
+    if (rule.parent.type === "atrule") {
+        // we've got a media query
+        return {
+            properties: [],
+            mediaQueries: [{
+                query: rule.parent.params,
+                properties,
+            }],
+        };
+    }
+
+    return {
+        properties,
+        mediaQueries: [],
+    };
 }
 
 function stripClassSelector(selectorPart) {
