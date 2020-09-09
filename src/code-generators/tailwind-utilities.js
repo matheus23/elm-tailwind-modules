@@ -37,7 +37,7 @@ function elmFunction({ elm }) {
 
 ${elm.elmName} : Css.Style
 ${elm.elmName} =
-    ${convertDeclarationBlock(elm)}
+${convertDeclarationBlock(elm)}
 `;
 }
 
@@ -46,24 +46,28 @@ function convertDeclaration(declaration) {
 }
 
 function convertDeclarationBlock(elm) {
+    const properties = elm.declarations.map(convertDeclaration);
+
     if (elm.advancedSelector) {
         // super rudamentary just for first pass to get space utilities workin
         let initialGlobalSelector =
             elm.advancedSelector[0] === ">" ? "children" : undefined;
 
         const selector = elm.advancedSelector.substr(1).trim();
-        return `Css.batch
+        return `    Css.batch
         [ Css.Global.${initialGlobalSelector}
             [ Css.Global.selector "${selector}"
-${elmList(16, elm.declarations.map(convertDeclaration))}
+${elmList(4, properties)}
             ]
         ]`;
     }
+
+
     if (elm.declarations.length === 1) {
-        return convertDeclaration(elm.declarations[0]);
+        return `    ${properties[0]}`;
     } else {
-        return `Css.batch
-${elmList(8, elm.declarations.map(convertDeclaration))}`;
+        return `    Css.batch
+${elmList(2, properties)}`;
     }
 }
 
@@ -74,7 +78,7 @@ function elmString(content) {
 }
 
 function elmList(indentation, elements) {
-    const indent = " ".repeat(Math.max(0, indentation));
+    const indent = " ".repeat(Math.max(0, indentation * 4));
     let str = "";
     let idx = 0;
     elements.forEach(elem => {
