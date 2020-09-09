@@ -19,9 +19,8 @@ function elmBodyCss({ elmModuleName }, classes) {
 function elmHeaderCss(elmModuleName) {
     return `module ${elmModuleName} exposing (..)
 
-import Css 
+import Css
 import Css.Global
-
 `;
 }
 
@@ -34,48 +33,37 @@ function elmBody(classes) {
 }
 
 function elmFunction({ elm }) {
-    function convertDeclaration(declaration) {
-        return `Css.property ${elmString(declaration.prop)} ${elmString(declaration.value)}`;
-    }
-
-    let declarationBlock = `
-        ${elm.declarations.map(convertDeclaration).join(", \n      ")}
-  `;
-
-    if (
-        elm.declarations.length > 1 ||
-        elm.advancedSelector
-    ) {
-        declarationBlock = `
-    Css.batch [
-      ${advancedSelectorContainer(elm.advancedSelector, declarationBlock)}
-    ]
-    `;
-    }
     return `
 
 ${elm.elmName} : Css.Style
 ${elm.elmName} =
-  ${declarationBlock}
+    ${convertDeclarationBlock(elm)}
 `;
 }
 
-function advancedSelectorContainer(advancedSelector, declarationString) {
-    if (advancedSelector) {
+function convertDeclaration(declaration) {
+    return `Css.property ${elmString(declaration.prop)} ${elmString(declaration.value)}`;
+}
+
+function convertDeclarationBlock(elm) {
+    if (elm.advancedSelector) {
         // super rudamentary just for first pass to get space utilities workin
         let initialGlobalSelector =
-            advancedSelector[0] === ">" ? "children" : undefined;
-        advancedSelector = advancedSelector.substr(1).trim();
-        return `Css.Global.${initialGlobalSelector}
-     [Css.Global.selector "${advancedSelector}"
-      [
-        ${declarationString}
-      ]
-       
-     ]
-     `;
+            elm.advancedSelector[0] === ">" ? "children" : undefined;
+
+        const selector = elm.advancedSelector.substr(1).trim();
+        return `Css.batch
+        [ Css.Global.${initialGlobalSelector}
+            [ Css.Global.selector "${selector}"
+${elmList(16, elm.declarations.map(convertDeclaration))}
+            ]
+        ]`;
+    }
+    if (elm.declarations.length === 1) {
+        return convertDeclaration(elm.declarations[0]);
     } else {
-        return declarationString;
+        return `Css.batch
+${elmList(8, elm.declarations.map(convertDeclaration))}`;
     }
 }
 
@@ -83,4 +71,20 @@ function advancedSelectorContainer(advancedSelector, declarationString) {
 
 function elmString(content) {
     return `"${content.replace(/"/g, '\\"')}"`;
+}
+
+function elmList(indentation, elements) {
+    const indent = " ".repeat(Math.max(0, indentation));
+    let str = "";
+    let idx = 0;
+    elements.forEach(elem => {
+        str += indent;
+        str += idx === 0 ? "[ " : ", ";
+        str += elem;
+        str += "\n";
+        idx++;
+    });
+    str += indent;
+    str += "]";
+    return str;
 }

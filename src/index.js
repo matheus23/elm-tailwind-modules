@@ -57,7 +57,8 @@ export default async function run({
                 //execute the code generation and save the output
                 const promises = Promise.all(formats);
                 const files = await promises;
-                execSync(`elm-format --yes ${files.join(" ")}`);
+                // We already produce elm-formatted code.
+                // execSync(`elm-format --yes ${files.join(" ")}`);
                 console.log("Saved", files);
             };
         }

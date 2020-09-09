@@ -12,3 +12,11 @@
 * [ ] [Fuck](https://css-tricks.com/logic-in-media-queries/#overriding)
   - Think about how to do breakpoints differently.
   - Analyse how elm-css/elm-origami generates media queries. Maybe there's no problem if the order is correct?
+
+# Goals
+
+* Use elm-origami instead of elm-css
+  - because it's got `with*`
+  - because it's got `toHtmls`
+  - because it's got `noStyle`, `noAttribute`, `batchAttributes`
+* Generate less and better code for tailwind components like `prose` or `space_x*`
