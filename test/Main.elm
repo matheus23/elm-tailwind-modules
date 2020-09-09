@@ -14,10 +14,6 @@ main =
         [ Attr.css
             [ TW.container
             , TW.bg_gray_200
-            , Css.Media.withMediaQuery [ "(min-width: 900px)" ]
-                [ Css.property "max-width" "900px" ]
-            , Css.Media.withMediaQuery [ "(min-width: 640px)" ]
-                [ Css.property "max-width" "640px" ]
             ]
         ]
         [ Html.text "Container"
