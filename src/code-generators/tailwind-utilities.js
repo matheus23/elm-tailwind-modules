@@ -20,6 +20,7 @@ function elmHeaderCss(elmModuleName) {
     return `module ${elmModuleName} exposing (..)
 
 import Css
+import Css.Media
 import Css.Global
 `;
 }
@@ -46,28 +47,65 @@ function convertDeclaration(propertiesBlock) {
 }
 
 function convertDeclarationBlock(propertiesBlock) {
-    const properties = propertiesBlock.properties.map(convertDeclaration);
+    const plainProperties = findPlainProperties(propertiesBlock).map(convertDeclaration);
+    const subselectors = propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
+        subselectors.flatMap(subselector => {
+            if (subselector.mediaQuery != null) {
+                if (subselector.rest.type === "plain") {
+                    return [
+                        `Css.Media.withMediaQuery [ ${elmString(subselector.mediaQuery)} ]\n` +
+                        elmList(3, properties.map(convertDeclaration))
+                    ];
+                }
+                // TODO Never had the case, yet
+                console.log("mediaquery with non-plain rest", subselector);
+                return [];
+            } else {
+                if (subselector.rest.type === "plain") {
+                    // We've got these covered in "plainProperties"
+                    return [];
+                }
 
-    if (propertiesBlock.advancedSelector) {
-        // super rudamentary just for first pass to get space utilities workin
-        let initialGlobalSelector =
-            propertiesBlock.advancedSelector[0] === ">" ? "children" : undefined;
+                const subselectorFunction = subselectorFunctionFromType(subselector.rest.type);
 
-        const selector = propertiesBlock.advancedSelector.substr(1).trim();
-        return `    Css.batch
-        [ Css.Global.${initialGlobalSelector}
-            [ Css.Global.selector "${selector}"
-${elmList(4, properties)}
-            ]
-        ]`;
+                return [
+                    subselectorFunction + "\n" +
+                    elmList(3, [`Css.Global.selector ${elmString(subselector.rest.rest)}\n` +
+                        elmList(4, properties.map(convertDeclaration))
+                    ])
+                ];
+            }
+        })
+    );
+
+    if (plainProperties.length === 1 && subselectors.length === 0) {
+        return "    " + plainProperties[0];
     }
 
+    return (
+        `    Css.batch\n` +
+        elmList(2, plainProperties.concat(Array.from(subselectors).reverse()))
+    );
+}
 
-    if (propertiesBlock.properties.length === 1) {
-        return `    ${properties[0]}`;
-    } else {
-        return `    Css.batch
-${elmList(2, properties)}`;
+function findPlainProperties(propertiesBlock) {
+    return propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
+        subselectors.flatMap(subselector => {
+            if (subselector.rest.type === "plain" && subselector.mediaQuery == null) {
+                return properties;
+            }
+            return [];
+        })
+    );
+}
+
+function subselectorFunctionFromType(t) {
+    switch (t) {
+        case "child": return "Css.Global.children";
+        case "decendant": return "Css.Global.decendants";
+        case "adjacent": return "Css.Global.adjacentSiblings";
+        case "sibling": return "Css.Global.generalSiblings";
+        default: throw new Error("unrecognized subselector type " + t);
     }
 }
 

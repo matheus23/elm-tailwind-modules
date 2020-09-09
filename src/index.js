@@ -4,6 +4,7 @@ import postcss from "postcss";
 import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities.js";
 import * as parser from "./parser.js";
 import tailwindcss from "tailwindcss";
+import autoprefixer from "autoprefixer";
 
 const defaultTailwindConfig = {
 };
@@ -18,6 +19,8 @@ export default async function run({
         function withConfig(config) {
             return async (root, result) => {
                 const blocksByClass = parser.groupDeclarationBlocksByClass(root);
+
+                console.log(blocksByClass.unrecognized.length);
 
                 // setup standard utility code generation promise
                 const formats = tailwindUtilityGeneration
@@ -44,7 +47,7 @@ export default async function run({
     const to = "output in-memory";
     return await postcss([
         tailwindcss(tailwindConfig),
-        // autoprefixer, TODO Reinstall autoprefixer. At the moment this breaks elm codegen
+        // autoprefixer, // TODO Reinstall autoprefixer. At the moment this breaks elm codegen
         afterTailwindPlugin
     ]).process("@tailwind base;\n@tailwind components;\n@tailwind utilities;", { from, to });
 }
