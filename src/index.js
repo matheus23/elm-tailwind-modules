@@ -1,10 +1,8 @@
 import { promises as fs } from "fs";
 import path from "path";
 import postcss from "postcss";
-import { execSync } from "child_process";
 import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities.js";
 import * as parser from "./parser.js";
-import autoprefixer from "autoprefixer";
 import tailwindcss from "tailwindcss";
 
 const defaultTailwindConfig = {
@@ -19,25 +17,7 @@ export default async function run({
         "elm-tailwind-origami",
         function withConfig(config) {
             return async (root, result) => {
-                let rawDeclarations = [];
-
-                // get all the raw declarations by walking the list. No nice way to map from what I can tell
-                root.walkRules(/^\..*$/, (rule) => {
-                    rule.walkDecls((d) => {
-                        rawDeclarations.push(d);
-                    });
-                });
-
-                let standardizedDeclarationList = parser.toStandardDeclarationList(
-                    rawDeclarations
-                );
-
-                // remove the declarations with media queries and pseudo selectors since we won't generate classes for those
-                const classes = parser.fromDeclarationListToGroupedMap(
-                    standardizedDeclarationList.filter(
-                        (d) => !d.mediaQuery && !d.pseudoSelector
-                    )
-                );
+                const blocksByClass = parser.groupDeclarationBlocksByClass(root);
 
                 // setup standard utility code generation promise
                 const formats = tailwindUtilityGeneration
@@ -50,16 +30,12 @@ export default async function run({
                     .map(async ({ rootModule, elmFile, elmModuleName, elmBodyFn }) =>
                         await writeFile(
                             elmFile,
-                            elmBodyFn({ rootModule, elmModuleName }, classes)
+                            elmBodyFn({ rootModule, elmModuleName }, blocksByClass.recognized)
                         )
                     );
 
                 //execute the code generation and save the output
-                const promises = Promise.all(formats);
-                const files = await promises;
-                // We already produce elm-formatted code.
-                // execSync(`elm-format --yes ${files.join(" ")}`);
-                console.log("Saved", files);
+                console.log("Saved", await Promise.all(formats));
             };
         }
     );

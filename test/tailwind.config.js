@@ -1,6 +1,6 @@
 export default {
     theme: {},
-    variants: {},
+    variants: [], // We can do variants in elm code
     // corePlugins: {
     //   transitionProperty: false,
     //   transitionTimingFunction: false,

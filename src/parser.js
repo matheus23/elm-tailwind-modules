@@ -1,94 +1,79 @@
 import { toElmName, fixClass } from "./helpers.js";
+import CssWhat from "css-what";
 
-/**
- * Take a raw postCSS declaration list and convert to the standardized declaration list we need
- * @param {*} postCssDeclarationList
- */
-export function toStandardDeclarationList(postCssDeclarationList) {
-    return postCssDeclarationList.map((postCssDecl) => ({
-        selector: postCssDecl.parent.selector,
-        prop: postCssDecl.prop,
-        value: postCssDecl.value,
-        mediaQuery: postCssDecl.parent.parent.params,
-        pseudoSelector: getPseudoSelector(postCssDecl.parent.selector),
-    }));
-}
+export function groupDeclarationBlocksByClass(postCssRoot) {
+    let rules = [];
 
-/**
- * Take the standardized declaration list and return a map grouped by the selctor therefore
- * getting all declarations for a CSS selector
- */
-export function fromDeclarationListToGroupedMap(rawDeclarations) {
-    const classes = new Map();
-
-    let declarations = groupBy(rawDeclarations, "selector");
-
-    // put back into a real map for handling through the helper functions.
-    // this can be done way better
-    for (const [key, value] of Object.entries(declarations)) {
-        let className = fixClass(key);
-        let processedDeclarations = processDeclarations(value);
-        // anything "advanced" like the space '> :not(template) ~ :not(template)'
-        // sets to undefined otherwise (don't judge me)
-        let advancedSelector =
-            key.substring(key.indexOf(" ")).replace(key, "").trim() || undefined;
-        // only add if we didn't filter out all unsupported declarations
-        if (processedDeclarations.length > 0) {
-            classes.set(key, {
-                cleanedClassName: className,
-                elmName: toElmName(className),
-                declarations: processedDeclarations,
-                advancedSelector: advancedSelector,
-            });
-        }
-    }
-
-    return classes;
-}
-
-export function toMediaQueryDefinitionMap(postCssDeclarationList) {
-    // Get the media from the current declaration and also save off
-    // it's definition into the separate map
-    return postCssDeclarationList
-        .map((postCssDecl) => {
-            if (
-                postCssDecl.parent &&
-                postCssDecl.parent.parent &&
-                postCssDecl.parent.parent.name === "media"
-            ) {
-                const mediaQuery = postCssDecl.parent.parent.params;
-                const breakpointName = postCssDecl.parent.selector.match(
-                    /\.([a-zA-Z0-9]*)\\/
-                );
-                if (breakpointName) {
-                    return {
-                        breakpointName: breakpointName[1],
-                        params: postCssDecl.parent.parent.params,
-                    };
-                }
-            }
-        })
-        .filter((d) => !!d)
-        .reduce((map, obj) => map.set(obj.breakpointName, obj.params), new Map());
-}
-
-function processDeclarations(declaration) {
-    return declaration.map((d) => {
-        return { prop: d.prop, value: d.value, mediaQuery: d.mediaQuery };
+    postCssRoot.walkRules(rule => {
+        rules.push(rule);
     });
+
+    const recognized = new Map();
+    const unrecognized = [];
+
+    const defaultRecognized = {
+        properties: [],
+        advancedSelector: undefined,
+    };
+
+    rules.forEach(rule => {
+        let selector;
+        try {
+            selector = CssWhat.parse(rule.selector);
+        } catch (e) {
+            unrecognized.push(rule);
+            return;
+        }
+
+        const parts = selector.map(stripClassSelector);
+        const partClasses = parts.map(part => part.class);
+
+        const allEqual = arr => arr.every(v => v === arr[0])
+
+        if (partClasses.some(className => className == null) || !allEqual(partClasses)) {
+            unrecognized.push(rule);
+            return;
+        }
+
+        const className = parts[0].class;
+        const elmDeclName = toElmName(fixClass(className));
+
+        const properties = [];
+        rule.walkDecls(declaration => {
+            properties.push({
+                prop: declaration.prop,
+                value: declaration.value,
+            });
+        });
+
+        const key = String(rule.selector);
+        const advancedSelector = key.substring(key.indexOf(" ")).replace(key, "").trim() || undefined
+
+        const itemBefore = recognized.get(elmDeclName) || defaultRecognized;
+
+        recognized.set(elmDeclName, {
+            properties: itemBefore.properties.concat(properties),
+            advancedSelector,
+        });
+    });
+
+    return { recognized, unrecognized };
 }
 
-function getPseudoSelector(selector) {
-    if (selector.indexOf(":hover") > -1) {
-        return "hover";
-    } else if (selector.indexOf(":focus") > -1) {
-        return "focus";
+function stripClassSelector(selectorPart) {
+    if (selectorPart.length === 0) {
+        return { class: null, rest: [] };
     }
-}
 
-function groupBy(xs, key) {
-    return xs.reduce(function (rv, x) {
-        (rv[x[key]] = rv[x[key]] || []).push(x);
-        return rv;
-    }, {});
+    const first = selectorPart[0];
+    const rest = selectorPart.slice(1);
+
+    if (!(first.type === "attribute" && first.name === "class")) {
+        return { class: null, rest: selectorPart };
+    }
+
+    return {
+        class: first.value,
+        rest,
+    };
 }

@@ -9,10 +9,10 @@ export function formats({ elmFile, elmModuleName }) {
 // PRIVATE INTERFACE
 
 
-function elmBodyCss({ elmModuleName }, classes) {
+function elmBodyCss({ elmModuleName }, blocksByClass) {
     return (
         elmHeaderCss(elmModuleName) +
-        elmBody(classes)
+        elmBody(blocksByClass)
     );
 }
 
@@ -24,36 +24,36 @@ import Css.Global
 `;
 }
 
-function elmBody(classes) {
+function elmBody(blocksByClass) {
     let body = "";
-    for (let [cls, elm] of classes) {
-        body = body + elmFunction({ elm });
+    for (let [elmClassName, propertiesBlock] of blocksByClass) {
+        body = body + elmFunction(elmClassName, propertiesBlock);
     }
     return body;
 }
 
-function elmFunction({ elm }) {
+function elmFunction(elmClassName, propertiesBlock) {
     return `
 
-${elm.elmName} : Css.Style
-${elm.elmName} =
-${convertDeclarationBlock(elm)}
+${elmClassName} : Css.Style
+${elmClassName} =
+${convertDeclarationBlock(propertiesBlock)}
 `;
 }
 
-function convertDeclaration(declaration) {
-    return `Css.property ${elmString(declaration.prop)} ${elmString(declaration.value)}`;
+function convertDeclaration(propertiesBlock) {
+    return `Css.property ${elmString(propertiesBlock.prop)} ${elmString(propertiesBlock.value)}`;
 }
 
-function convertDeclarationBlock(elm) {
-    const properties = elm.declarations.map(convertDeclaration);
+function convertDeclarationBlock(propertiesBlock) {
+    const properties = propertiesBlock.properties.map(convertDeclaration);
 
-    if (elm.advancedSelector) {
+    if (propertiesBlock.advancedSelector) {
         // super rudamentary just for first pass to get space utilities workin
         let initialGlobalSelector =
-            elm.advancedSelector[0] === ">" ? "children" : undefined;
+            propertiesBlock.advancedSelector[0] === ">" ? "children" : undefined;
 
-        const selector = elm.advancedSelector.substr(1).trim();
+        const selector = propertiesBlock.advancedSelector.substr(1).trim();
         return `    Css.batch
         [ Css.Global.${initialGlobalSelector}
             [ Css.Global.selector "${selector}"
@@ -63,7 +63,7 @@ ${elmList(4, properties)}
     }
 
 
-    if (elm.declarations.length === 1) {
+    if (propertiesBlock.properties.length === 1) {
         return `    ${properties[0]}`;
     } else {
         return `    Css.batch
