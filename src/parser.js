@@ -115,7 +115,7 @@ function recognizeSelectorRest(selector) {
 
     const type = selector[0].type;
     const rest = CssWhat.stringify([selector.slice(1)]);
-    const supportedTypes = ["child", "decendant", "adjacent", "sibling"];
+    const supportedTypes = ["child", "descendant", "adjacent", "sibling"];
 
     if (supportedTypes.some(supported => supported === type)) {
         return { type, rest };

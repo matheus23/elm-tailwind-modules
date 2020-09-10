@@ -110,7 +110,7 @@ function findPlainProperties(propertiesBlock) {
 function subselectorFunctionFromType(t) {
     switch (t) {
         case "child": return "Css.Global.children";
-        case "decendant": return "Css.Global.decendants";
+        case "descendant": return "Css.Global.descendants";
         case "adjacent": return "Css.Global.adjacentSiblings";
         case "sibling": return "Css.Global.generalSiblings";
         default: throw new Error("unrecognized subselector type " + t);
@@ -120,7 +120,12 @@ function subselectorFunctionFromType(t) {
 // ELM CODEGEN
 
 function elmString(content) {
-    return `"${content.replace(/"/g, '\\"')}"`;
+    // my regex-foo is very limited, forgive me
+    const escapeEscapeSequences = seq => seq.replace(
+        /\\[\dABCDEFabcdef][\dABCDEFabcdef][\dABCDEFabcdef][\dABCDEFabcdef]/g,
+        match => `\\u{${match.substring(1)}}`
+    );
+    return `"${escapeEscapeSequences(content.replace(/"/g, '\\"'))}"`;
 }
 
 function elmList(indentation, elements) {
