@@ -150,6 +150,26 @@ prose =
         , Css.property \\"max-width\\" \\"65ch\\"
         , Css.property \\"font-size\\" \\"1rem\\"
         , Css.property \\"line-height\\" \\"1.75\\"
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                ]
+            ]
         , Css.Global.children
             [ Css.Global.selector \\":last-child\\"
                 [ Css.property \\"margin-bottom\\" \\"0\\"
@@ -158,6 +178,70 @@ prose =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.75em\\"
+                , Css.property \\"margin-bottom\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.75em\\"
+                , Css.property \\"margin-bottom\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.75em\\"
+                , Css.property \\"margin-bottom\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.75em\\"
+                , Css.property \\"margin-bottom\\" \\"0.75em\\"
                 ]
             ]
         , Css.Global.children
@@ -186,6 +270,306 @@ prose =
                 , Css.property \\"margin-bottom\\" \\"0.75em\\"
                 ]
             ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.5em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.25em\\"
+                , Css.property \\"margin-bottom\\" \\"1.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.875em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.25em\\"
+                , Css.property \\"margin-bottom\\" \\"1.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"vertical-align\\" \\"top\\"
+                , Css.property \\"padding-top\\" \\"0.5714286em\\"
+                , Css.property \\"padding-right\\" \\"0.5714286em\\"
+                , Css.property \\"padding-bottom\\" \\"0.5714286em\\"
+                , Css.property \\"padding-left\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody tr:last-child\\"
+                [ Css.property \\"border-bottom-width\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody tr\\"
+                [ Css.property \\"border-bottom-width\\" \\"1px\\"
+                , Css.property \\"border-bottom-color\\" \\"#e5e7eb\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"vertical-align\\" \\"bottom\\"
+                , Css.property \\"padding-right\\" \\"0.5714286em\\"
+                , Css.property \\"padding-bottom\\" \\"0.5714286em\\"
+                , Css.property \\"padding-left\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                , Css.property \\"border-bottom-width\\" \\"1px\\"
+                , Css.property \\"border-bottom-color\\" \\"#d2d6dc\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"width\\" \\"100%\\"
+                , Css.property \\"table-layout\\" \\"auto\\"
+                , Css.property \\"text-align\\" \\"left\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                , Css.property \\"font-size\\" \\"0.875em\\"
+                , Css.property \\"line-height\\" \\"1.7142857\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre code::after\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\\\\\\"\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre code::before\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\\\\\\"\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre code\\"
+                [ Css.property \\"background-color\\" \\"transparent\\"
+                , Css.property \\"border-width\\" \\"0\\"
+                , Css.property \\"border-radius\\" \\"0\\"
+                , Css.property \\"padding\\" \\"0\\"
+                , Css.property \\"font-weight\\" \\"400\\"
+                , Css.property \\"color\\" \\"inherit\\"
+                , Css.property \\"font-size\\" \\"inherit\\"
+                , Css.property \\"font-family\\" \\"inherit\\"
+                , Css.property \\"line-height\\" \\"inherit\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"color\\" \\"#e5e7eb\\"
+                , Css.property \\"background-color\\" \\"#252f3f\\"
+                , Css.property \\"overflow-x\\" \\"auto\\"
+                , Css.property \\"font-size\\" \\"0.875em\\"
+                , Css.property \\"line-height\\" \\"1.7142857\\"
+                , Css.property \\"margin-top\\" \\"1.7142857em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7142857em\\"
+                , Css.property \\"border-radius\\" \\"0.375rem\\"
+                , Css.property \\"padding-top\\" \\"0.8571429em\\"
+                , Css.property \\"padding-right\\" \\"1.1428571em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8571429em\\"
+                , Css.property \\"padding-left\\" \\"1.1428571em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code::after\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\`\\\\\\"\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code::before\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\`\\\\\\"\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                , Css.property \\"font-size\\" \\"0.875em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"color\\" \\"#6b7280\\"
+                , Css.property \\"font-size\\" \\"0.875em\\"
+                , Css.property \\"line-height\\" \\"1.4285714\\"
+                , Css.property \\"margin-top\\" \\"0.8571429em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"color\\" \\"#1a202c\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                , Css.property \\"margin-top\\" \\"1.5em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"color\\" \\"#1a202c\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                , Css.property \\"font-size\\" \\"1.25em\\"
+                , Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6em\\"
+                , Css.property \\"line-height\\" \\"1.6\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"color\\" \\"#1a202c\\"
+                , Css.property \\"font-weight\\" \\"700\\"
+                , Css.property \\"font-size\\" \\"1.5em\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"1em\\"
+                , Css.property \\"line-height\\" \\"1.3333333\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"color\\" \\"#1a202c\\"
+                , Css.property \\"font-weight\\" \\"800\\"
+                , Css.property \\"font-size\\" \\"2.25em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.1111111\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote p:last-of-type::after\\"
+                [ Css.property \\"content\\" \\"close-quote\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote p:first-of-type::before\\"
+                [ Css.property \\"content\\" \\"open-quote\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"font-weight\\" \\"500\\"
+                , Css.property \\"font-style\\" \\"italic\\"
+                , Css.property \\"color\\" \\"#161e2e\\"
+                , Css.property \\"border-left-width\\" \\"0.25rem\\"
+                , Css.property \\"border-left-color\\" \\"#e5e7eb\\"
+                , Css.property \\"quotes\\" \\"\\\\\\"\\\\u{201C}\\\\\\"\\\\\\"\\\\u{201D}\\\\\\"\\\\\\"\\\\u{2018}\\\\\\"\\\\\\"\\\\u{2019}\\\\\\"\\"
+                , Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"1.6em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"border-color\\" \\"#e5e7eb\\"
+                , Css.property \\"border-top-width\\" \\"1px\\"
+                , Css.property \\"margin-top\\" \\"3em\\"
+                , Css.property \\"margin-bottom\\" \\"3em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\\\\\\"\\"
+                , Css.property \\"position\\" \\"absolute\\"
+                , Css.property \\"background-color\\" \\"#d2d6dc\\"
+                , Css.property \\"border-radius\\" \\"50%\\"
+                , Css.property \\"width\\" \\"0.375em\\"
+                , Css.property \\"height\\" \\"0.375em\\"
+                , Css.property \\"top\\" \\"calc(0.875em - 0.1875em)\\"
+                , Css.property \\"left\\" \\"0.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"position\\" \\"relative\\"
+                , Css.property \\"padding-left\\" \\"1.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li::before\\"
+                [ Css.property \\"content\\" \\"counter(list-counter) \\\\\\".\\\\\\"\\"
+                , Css.property \\"position\\" \\"absolute\\"
+                , Css.property \\"font-weight\\" \\"400\\"
+                , Css.property \\"color\\" \\"#6b7280\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"position\\" \\"relative\\"
+                , Css.property \\"counter-increment\\" \\"list-counter\\"
+                , Css.property \\"padding-left\\" \\"1.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"counter-reset\\" \\"list-counter\\"
+                , Css.property \\"margin-top\\" \\"1.25em\\"
+                , Css.property \\"margin-bottom\\" \\"1.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"strong\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"a\\"
+                [ Css.property \\"color\\" \\"#5850ec\\"
+                , Css.property \\"text-decoration\\" \\"none\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"color\\" \\"#4b5563\\"
+                , Css.property \\"font-size\\" \\"1.25em\\"
+                , Css.property \\"line-height\\" \\"1.6\\"
+                , Css.property \\"margin-top\\" \\"1.2em\\"
+                , Css.property \\"margin-bottom\\" \\"1.2em\\"
+                ]
+            ]
         ]
 
 
@@ -202,6 +586,97 @@ prose_sm =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"padding-top\\" \\"0.6666667em\\"
+                , Css.property \\"padding-right\\" \\"1em\\"
+                , Css.property \\"padding-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"padding-right\\" \\"1em\\"
+                , Css.property \\"padding-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"font-size\\" \\"0.8571429em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"margin-top\\" \\"2.8571429em\\"
+                , Css.property \\"margin-bottom\\" \\"2.8571429em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.5714286em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.5714286em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.5714286em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.5714286em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
                 ]
             ]
         , Css.Global.children
@@ -230,6 +705,158 @@ prose_sm =
                 , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
                 ]
             ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"height\\" \\"0.3571429em\\"
+                , Css.property \\"width\\" \\"0.3571429em\\"
+                , Css.property \\"top\\" \\"calc(0.8571429em - 0.1785714em)\\"
+                , Css.property \\"left\\" \\"0.2142857em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"padding-left\\" \\"1.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"padding-left\\" \\"1.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.2857143em\\"
+                , Css.property \\"margin-bottom\\" \\"0.2857143em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.1428571em\\"
+                , Css.property \\"margin-bottom\\" \\"1.1428571em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"margin-top\\" \\"1.1428571em\\"
+                , Css.property \\"margin-bottom\\" \\"1.1428571em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"font-size\\" \\"0.8571429em\\"
+                , Css.property \\"line-height\\" \\"1.6666667\\"
+                , Css.property \\"margin-top\\" \\"1.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"1.6666667em\\"
+                , Css.property \\"border-radius\\" \\"0.25rem\\"
+                , Css.property \\"padding-top\\" \\"0.6666667em\\"
+                , Css.property \\"padding-right\\" \\"1em\\"
+                , Css.property \\"padding-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"font-size\\" \\"0.8571429em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"font-size\\" \\"0.8571429em\\"
+                , Css.property \\"line-height\\" \\"1.3333333\\"
+                , Css.property \\"margin-top\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"1.7142857em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7142857em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"1.7142857em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7142857em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"1.7142857em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7142857em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"margin-top\\" \\"1.4285714em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
+                , Css.property \\"line-height\\" \\"1.4285714\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"font-size\\" \\"1.2857143em\\"
+                , Css.property \\"margin-top\\" \\"1.5555556em\\"
+                , Css.property \\"margin-bottom\\" \\"0.4444444em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"font-size\\" \\"1.4285714em\\"
+                , Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                , Css.property \\"line-height\\" \\"1.4\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"font-size\\" \\"2.1428571em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                , Css.property \\"line-height\\" \\"1.2\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                , Css.property \\"padding-left\\" \\"1.1111111em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"font-size\\" \\"1.2857143em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                , Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.1428571em\\"
+                , Css.property \\"margin-bottom\\" \\"1.1428571em\\"
+                ]
+            ]
         ]
 
 
@@ -246,6 +873,97 @@ prose_lg =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"padding-top\\" \\"0.75em\\"
+                , Css.property \\"padding-right\\" \\"0.75em\\"
+                , Css.property \\"padding-bottom\\" \\"0.75em\\"
+                , Css.property \\"padding-left\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"padding-right\\" \\"0.75em\\"
+                , Css.property \\"padding-bottom\\" \\"0.75em\\"
+                , Css.property \\"padding-left\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"margin-top\\" \\"3.1111111em\\"
+                , Css.property \\"margin-bottom\\" \\"3.1111111em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
                 ]
             ]
         , Css.Global.children
@@ -274,6 +992,158 @@ prose_lg =
                 , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
                 ]
             ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"width\\" \\"0.3333333em\\"
+                , Css.property \\"height\\" \\"0.3333333em\\"
+                , Css.property \\"top\\" \\"calc(0.8888889em - 0.1666667em)\\"
+                , Css.property \\"left\\" \\"0.2222222em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"padding-left\\" \\"1.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"padding-left\\" \\"1.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.75\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                , Css.property \\"border-radius\\" \\"0.375rem\\"
+                , Css.property \\"padding-top\\" \\"1em\\"
+                , Css.property \\"padding-right\\" \\"1.5em\\"
+                , Css.property \\"padding-bottom\\" \\"1em\\"
+                , Css.property \\"padding-left\\" \\"1.5em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.875em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.8666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                , Css.property \\"margin-top\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7777778em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7777778em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7777778em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"0.4444444em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"font-size\\" \\"1.3333333em\\"
+                , Css.property \\"margin-top\\" \\"1.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"font-size\\" \\"1.6666667em\\"
+                , Css.property \\"margin-top\\" \\"1.8666667em\\"
+                , Css.property \\"margin-bottom\\" \\"1.0666667em\\"
+                , Css.property \\"line-height\\" \\"1.3333333\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"font-size\\" \\"2.6666667em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"margin-top\\" \\"1.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"1.6666667em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"font-size\\" \\"1.2222222em\\"
+                , Css.property \\"line-height\\" \\"1.4545455\\"
+                , Css.property \\"margin-top\\" \\"1.0909091em\\"
+                , Css.property \\"margin-bottom\\" \\"1.0909091em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
         ]
 
 
@@ -290,6 +1160,97 @@ prose_xl =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"padding-top\\" \\"0.8888889em\\"
+                , Css.property \\"padding-right\\" \\"0.6666667em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8888889em\\"
+                , Css.property \\"padding-left\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"padding-right\\" \\"0.6666667em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8888889em\\"
+                , Css.property \\"padding-left\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"margin-top\\" \\"2.8em\\"
+                , Css.property \\"margin-bottom\\" \\"2.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
                 ]
             ]
         , Css.Global.children
@@ -318,6 +1279,158 @@ prose_xl =
                 , Css.property \\"margin-bottom\\" \\"0.8em\\"
                 ]
             ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"width\\" \\"0.35em\\"
+                , Css.property \\"height\\" \\"0.35em\\"
+                , Css.property \\"top\\" \\"calc(0.9em - 0.175em)\\"
+                , Css.property \\"left\\" \\"0.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"padding-left\\" \\"1.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"padding-left\\" \\"1.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.6em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.2em\\"
+                , Css.property \\"margin-bottom\\" \\"1.2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"margin-top\\" \\"1.2em\\"
+                , Css.property \\"margin-bottom\\" \\"1.2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                , Css.property \\"line-height\\" \\"1.7777778\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                , Css.property \\"border-radius\\" \\"0.5rem\\"
+                , Css.property \\"padding-top\\" \\"1.1111111em\\"
+                , Css.property \\"padding-right\\" \\"1.3333333em\\"
+                , Css.property \\"padding-bottom\\" \\"1.1111111em\\"
+                , Css.property \\"padding-left\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.8611111em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                , Css.property \\"margin-top\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"margin-top\\" \\"1.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6em\\"
+                , Css.property \\"line-height\\" \\"1.6\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"font-size\\" \\"1.5em\\"
+                , Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"line-height\\" \\"1.3333333\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"font-size\\" \\"1.8em\\"
+                , Css.property \\"margin-top\\" \\"1.5555556em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.1111111\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"font-size\\" \\"2.8em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.8571429em\\"
+                , Css.property \\"line-height\\" \\"1\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"1.6em\\"
+                , Css.property \\"padding-left\\" \\"1.0666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"font-size\\" \\"1.2em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                , Css.property \\"margin-top\\" \\"1em\\"
+                , Css.property \\"margin-bottom\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.2em\\"
+                , Css.property \\"margin-bottom\\" \\"1.2em\\"
+                ]
+            ]
         ]
 
 
@@ -334,6 +1447,97 @@ prose_2xl =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"padding-top\\" \\"0.8em\\"
+                , Css.property \\"padding-right\\" \\"0.6em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8em\\"
+                , Css.property \\"padding-left\\" \\"0.6em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"padding-right\\" \\"0.6em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8em\\"
+                , Css.property \\"padding-left\\" \\"0.6em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"font-size\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1.4\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"margin-top\\" \\"3em\\"
+                , Css.property \\"margin-bottom\\" \\"3em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
                 ]
             ]
         , Css.Global.children
@@ -360,6 +1564,158 @@ prose_2xl =
             [ Css.Global.selector \\"ul > li p\\"
                 [ Css.property \\"margin-top\\" \\"0.8333333em\\"
                 , Css.property \\"margin-bottom\\" \\"0.8333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"width\\" \\"0.3333333em\\"
+                , Css.property \\"height\\" \\"0.3333333em\\"
+                , Css.property \\"top\\" \\"calc(0.8333333em - 0.1666667em)\\"
+                , Css.property \\"left\\" \\"0.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"padding-left\\" \\"1.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"padding-left\\" \\"1.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.5em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"font-size\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1.8\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                , Css.property \\"border-radius\\" \\"0.5rem\\"
+                , Css.property \\"padding-top\\" \\"1.2em\\"
+                , Css.property \\"padding-right\\" \\"1.6em\\"
+                , Css.property \\"padding-bottom\\" \\"1.2em\\"
+                , Css.property \\"padding-left\\" \\"1.6em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.875em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"font-size\\" \\"0.8333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"font-size\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1.6\\"
+                , Css.property \\"margin-top\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"margin-top\\" \\"1.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"font-size\\" \\"1.5em\\"
+                , Css.property \\"margin-top\\" \\"1.5555556em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"line-height\\" \\"1.2222222\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"font-size\\" \\"2em\\"
+                , Css.property \\"margin-top\\" \\"1.5em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1.0833333\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"font-size\\" \\"2.6666667em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.875em\\"
+                , Css.property \\"line-height\\" \\"1\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7777778em\\"
+                , Css.property \\"padding-left\\" \\"1.1111111em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"font-size\\" \\"1.25em\\"
+                , Css.property \\"line-height\\" \\"1.4666667\\"
+                , Css.property \\"margin-top\\" \\"1.0666667em\\"
+                , Css.property \\"margin-bottom\\" \\"1.0666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
                 ]
             ]
         ]
@@ -28838,6 +30194,26 @@ prose =
         , Css.property \\"max-width\\" \\"65ch\\"
         , Css.property \\"font-size\\" \\"1rem\\"
         , Css.property \\"line-height\\" \\"1.75\\"
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                ]
+            ]
         , Css.Global.children
             [ Css.Global.selector \\":last-child\\"
                 [ Css.property \\"margin-bottom\\" \\"0\\"
@@ -28846,6 +30222,70 @@ prose =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.75em\\"
+                , Css.property \\"margin-bottom\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.75em\\"
+                , Css.property \\"margin-bottom\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.75em\\"
+                , Css.property \\"margin-bottom\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.75em\\"
+                , Css.property \\"margin-bottom\\" \\"0.75em\\"
                 ]
             ]
         , Css.Global.children
@@ -28874,6 +30314,306 @@ prose =
                 , Css.property \\"margin-bottom\\" \\"0.75em\\"
                 ]
             ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.5em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.25em\\"
+                , Css.property \\"margin-bottom\\" \\"1.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.875em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.25em\\"
+                , Css.property \\"margin-bottom\\" \\"1.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"vertical-align\\" \\"top\\"
+                , Css.property \\"padding-top\\" \\"0.5714286em\\"
+                , Css.property \\"padding-right\\" \\"0.5714286em\\"
+                , Css.property \\"padding-bottom\\" \\"0.5714286em\\"
+                , Css.property \\"padding-left\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody tr:last-child\\"
+                [ Css.property \\"border-bottom-width\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody tr\\"
+                [ Css.property \\"border-bottom-width\\" \\"1px\\"
+                , Css.property \\"border-bottom-color\\" \\"#e5e7eb\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"vertical-align\\" \\"bottom\\"
+                , Css.property \\"padding-right\\" \\"0.5714286em\\"
+                , Css.property \\"padding-bottom\\" \\"0.5714286em\\"
+                , Css.property \\"padding-left\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                , Css.property \\"border-bottom-width\\" \\"1px\\"
+                , Css.property \\"border-bottom-color\\" \\"#d2d6dc\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"width\\" \\"100%\\"
+                , Css.property \\"table-layout\\" \\"auto\\"
+                , Css.property \\"text-align\\" \\"left\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                , Css.property \\"font-size\\" \\"0.875em\\"
+                , Css.property \\"line-height\\" \\"1.7142857\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre code::after\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\\\\\\"\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre code::before\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\\\\\\"\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre code\\"
+                [ Css.property \\"background-color\\" \\"transparent\\"
+                , Css.property \\"border-width\\" \\"0\\"
+                , Css.property \\"border-radius\\" \\"0\\"
+                , Css.property \\"padding\\" \\"0\\"
+                , Css.property \\"font-weight\\" \\"400\\"
+                , Css.property \\"color\\" \\"inherit\\"
+                , Css.property \\"font-size\\" \\"inherit\\"
+                , Css.property \\"font-family\\" \\"inherit\\"
+                , Css.property \\"line-height\\" \\"inherit\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"color\\" \\"#e5e7eb\\"
+                , Css.property \\"background-color\\" \\"#252f3f\\"
+                , Css.property \\"overflow-x\\" \\"auto\\"
+                , Css.property \\"font-size\\" \\"0.875em\\"
+                , Css.property \\"line-height\\" \\"1.7142857\\"
+                , Css.property \\"margin-top\\" \\"1.7142857em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7142857em\\"
+                , Css.property \\"border-radius\\" \\"0.375rem\\"
+                , Css.property \\"padding-top\\" \\"0.8571429em\\"
+                , Css.property \\"padding-right\\" \\"1.1428571em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8571429em\\"
+                , Css.property \\"padding-left\\" \\"1.1428571em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code::after\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\`\\\\\\"\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code::before\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\`\\\\\\"\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                , Css.property \\"font-size\\" \\"0.875em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"color\\" \\"#6b7280\\"
+                , Css.property \\"font-size\\" \\"0.875em\\"
+                , Css.property \\"line-height\\" \\"1.4285714\\"
+                , Css.property \\"margin-top\\" \\"0.8571429em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"color\\" \\"#1a202c\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                , Css.property \\"margin-top\\" \\"1.5em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"color\\" \\"#1a202c\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                , Css.property \\"font-size\\" \\"1.25em\\"
+                , Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6em\\"
+                , Css.property \\"line-height\\" \\"1.6\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"color\\" \\"#1a202c\\"
+                , Css.property \\"font-weight\\" \\"700\\"
+                , Css.property \\"font-size\\" \\"1.5em\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"1em\\"
+                , Css.property \\"line-height\\" \\"1.3333333\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"color\\" \\"#1a202c\\"
+                , Css.property \\"font-weight\\" \\"800\\"
+                , Css.property \\"font-size\\" \\"2.25em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.1111111\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote p:last-of-type::after\\"
+                [ Css.property \\"content\\" \\"close-quote\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote p:first-of-type::before\\"
+                [ Css.property \\"content\\" \\"open-quote\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"font-weight\\" \\"500\\"
+                , Css.property \\"font-style\\" \\"italic\\"
+                , Css.property \\"color\\" \\"#161e2e\\"
+                , Css.property \\"border-left-width\\" \\"0.25rem\\"
+                , Css.property \\"border-left-color\\" \\"#e5e7eb\\"
+                , Css.property \\"quotes\\" \\"\\\\\\"\\\\u{201C}\\\\\\"\\\\\\"\\\\u{201D}\\\\\\"\\\\\\"\\\\u{2018}\\\\\\"\\\\\\"\\\\u{2019}\\\\\\"\\"
+                , Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"1.6em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"border-color\\" \\"#e5e7eb\\"
+                , Css.property \\"border-top-width\\" \\"1px\\"
+                , Css.property \\"margin-top\\" \\"3em\\"
+                , Css.property \\"margin-bottom\\" \\"3em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\\\\\\"\\"
+                , Css.property \\"position\\" \\"absolute\\"
+                , Css.property \\"background-color\\" \\"#d2d6dc\\"
+                , Css.property \\"border-radius\\" \\"50%\\"
+                , Css.property \\"width\\" \\"0.375em\\"
+                , Css.property \\"height\\" \\"0.375em\\"
+                , Css.property \\"top\\" \\"calc(0.875em - 0.1875em)\\"
+                , Css.property \\"left\\" \\"0.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"position\\" \\"relative\\"
+                , Css.property \\"padding-left\\" \\"1.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li::before\\"
+                [ Css.property \\"content\\" \\"counter(list-counter) \\\\\\".\\\\\\"\\"
+                , Css.property \\"position\\" \\"absolute\\"
+                , Css.property \\"font-weight\\" \\"400\\"
+                , Css.property \\"color\\" \\"#6b7280\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"position\\" \\"relative\\"
+                , Css.property \\"counter-increment\\" \\"list-counter\\"
+                , Css.property \\"padding-left\\" \\"1.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"counter-reset\\" \\"list-counter\\"
+                , Css.property \\"margin-top\\" \\"1.25em\\"
+                , Css.property \\"margin-bottom\\" \\"1.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"strong\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"a\\"
+                [ Css.property \\"color\\" \\"#5850ec\\"
+                , Css.property \\"text-decoration\\" \\"none\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"color\\" \\"#4b5563\\"
+                , Css.property \\"font-size\\" \\"1.25em\\"
+                , Css.property \\"line-height\\" \\"1.6\\"
+                , Css.property \\"margin-top\\" \\"1.2em\\"
+                , Css.property \\"margin-bottom\\" \\"1.2em\\"
+                ]
+            ]
         ]
 
 
@@ -28890,6 +30630,97 @@ prose_sm =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"padding-top\\" \\"0.6666667em\\"
+                , Css.property \\"padding-right\\" \\"1em\\"
+                , Css.property \\"padding-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"padding-right\\" \\"1em\\"
+                , Css.property \\"padding-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"font-size\\" \\"0.8571429em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"margin-top\\" \\"2.8571429em\\"
+                , Css.property \\"margin-bottom\\" \\"2.8571429em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.5714286em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.5714286em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.5714286em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.5714286em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
                 ]
             ]
         , Css.Global.children
@@ -28918,6 +30749,158 @@ prose_sm =
                 , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
                 ]
             ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"height\\" \\"0.3571429em\\"
+                , Css.property \\"width\\" \\"0.3571429em\\"
+                , Css.property \\"top\\" \\"calc(0.8571429em - 0.1785714em)\\"
+                , Css.property \\"left\\" \\"0.2142857em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"padding-left\\" \\"1.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"padding-left\\" \\"1.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.2857143em\\"
+                , Css.property \\"margin-bottom\\" \\"0.2857143em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.1428571em\\"
+                , Css.property \\"margin-bottom\\" \\"1.1428571em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"margin-top\\" \\"1.1428571em\\"
+                , Css.property \\"margin-bottom\\" \\"1.1428571em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"font-size\\" \\"0.8571429em\\"
+                , Css.property \\"line-height\\" \\"1.6666667\\"
+                , Css.property \\"margin-top\\" \\"1.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"1.6666667em\\"
+                , Css.property \\"border-radius\\" \\"0.25rem\\"
+                , Css.property \\"padding-top\\" \\"0.6666667em\\"
+                , Css.property \\"padding-right\\" \\"1em\\"
+                , Css.property \\"padding-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"font-size\\" \\"0.8571429em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"font-size\\" \\"0.8571429em\\"
+                , Css.property \\"line-height\\" \\"1.3333333\\"
+                , Css.property \\"margin-top\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"1.7142857em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7142857em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"1.7142857em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7142857em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"1.7142857em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7142857em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"margin-top\\" \\"1.4285714em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
+                , Css.property \\"line-height\\" \\"1.4285714\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"font-size\\" \\"1.2857143em\\"
+                , Css.property \\"margin-top\\" \\"1.5555556em\\"
+                , Css.property \\"margin-bottom\\" \\"0.4444444em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"font-size\\" \\"1.4285714em\\"
+                , Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                , Css.property \\"line-height\\" \\"1.4\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"font-size\\" \\"2.1428571em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                , Css.property \\"line-height\\" \\"1.2\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                , Css.property \\"padding-left\\" \\"1.1111111em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"font-size\\" \\"1.2857143em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                , Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.1428571em\\"
+                , Css.property \\"margin-bottom\\" \\"1.1428571em\\"
+                ]
+            ]
         ]
 
 
@@ -28934,6 +30917,97 @@ prose_lg =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"padding-top\\" \\"0.75em\\"
+                , Css.property \\"padding-right\\" \\"0.75em\\"
+                , Css.property \\"padding-bottom\\" \\"0.75em\\"
+                , Css.property \\"padding-left\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"padding-right\\" \\"0.75em\\"
+                , Css.property \\"padding-bottom\\" \\"0.75em\\"
+                , Css.property \\"padding-left\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"margin-top\\" \\"3.1111111em\\"
+                , Css.property \\"margin-bottom\\" \\"3.1111111em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
                 ]
             ]
         , Css.Global.children
@@ -28962,6 +31036,158 @@ prose_lg =
                 , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
                 ]
             ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"width\\" \\"0.3333333em\\"
+                , Css.property \\"height\\" \\"0.3333333em\\"
+                , Css.property \\"top\\" \\"calc(0.8888889em - 0.1666667em)\\"
+                , Css.property \\"left\\" \\"0.2222222em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"padding-left\\" \\"1.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"padding-left\\" \\"1.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.75\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                , Css.property \\"border-radius\\" \\"0.375rem\\"
+                , Css.property \\"padding-top\\" \\"1em\\"
+                , Css.property \\"padding-right\\" \\"1.5em\\"
+                , Css.property \\"padding-bottom\\" \\"1em\\"
+                , Css.property \\"padding-left\\" \\"1.5em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.875em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.8666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                , Css.property \\"margin-top\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7777778em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7777778em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7777778em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"0.4444444em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"font-size\\" \\"1.3333333em\\"
+                , Css.property \\"margin-top\\" \\"1.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"font-size\\" \\"1.6666667em\\"
+                , Css.property \\"margin-top\\" \\"1.8666667em\\"
+                , Css.property \\"margin-bottom\\" \\"1.0666667em\\"
+                , Css.property \\"line-height\\" \\"1.3333333\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"font-size\\" \\"2.6666667em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"margin-top\\" \\"1.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"1.6666667em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"font-size\\" \\"1.2222222em\\"
+                , Css.property \\"line-height\\" \\"1.4545455\\"
+                , Css.property \\"margin-top\\" \\"1.0909091em\\"
+                , Css.property \\"margin-bottom\\" \\"1.0909091em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
         ]
 
 
@@ -28978,6 +31204,97 @@ prose_xl =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"padding-top\\" \\"0.8888889em\\"
+                , Css.property \\"padding-right\\" \\"0.6666667em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8888889em\\"
+                , Css.property \\"padding-left\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"padding-right\\" \\"0.6666667em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8888889em\\"
+                , Css.property \\"padding-left\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"margin-top\\" \\"2.8em\\"
+                , Css.property \\"margin-bottom\\" \\"2.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
                 ]
             ]
         , Css.Global.children
@@ -29006,6 +31323,158 @@ prose_xl =
                 , Css.property \\"margin-bottom\\" \\"0.8em\\"
                 ]
             ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"width\\" \\"0.35em\\"
+                , Css.property \\"height\\" \\"0.35em\\"
+                , Css.property \\"top\\" \\"calc(0.9em - 0.175em)\\"
+                , Css.property \\"left\\" \\"0.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"padding-left\\" \\"1.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"padding-left\\" \\"1.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.6em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.2em\\"
+                , Css.property \\"margin-bottom\\" \\"1.2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"margin-top\\" \\"1.2em\\"
+                , Css.property \\"margin-bottom\\" \\"1.2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                , Css.property \\"line-height\\" \\"1.7777778\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                , Css.property \\"border-radius\\" \\"0.5rem\\"
+                , Css.property \\"padding-top\\" \\"1.1111111em\\"
+                , Css.property \\"padding-right\\" \\"1.3333333em\\"
+                , Css.property \\"padding-bottom\\" \\"1.1111111em\\"
+                , Css.property \\"padding-left\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.8611111em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                , Css.property \\"margin-top\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"margin-top\\" \\"1.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6em\\"
+                , Css.property \\"line-height\\" \\"1.6\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"font-size\\" \\"1.5em\\"
+                , Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"line-height\\" \\"1.3333333\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"font-size\\" \\"1.8em\\"
+                , Css.property \\"margin-top\\" \\"1.5555556em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.1111111\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"font-size\\" \\"2.8em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.8571429em\\"
+                , Css.property \\"line-height\\" \\"1\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"1.6em\\"
+                , Css.property \\"padding-left\\" \\"1.0666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"font-size\\" \\"1.2em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                , Css.property \\"margin-top\\" \\"1em\\"
+                , Css.property \\"margin-bottom\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.2em\\"
+                , Css.property \\"margin-bottom\\" \\"1.2em\\"
+                ]
+            ]
         ]
 
 
@@ -29022,6 +31491,97 @@ prose_2xl =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"padding-top\\" \\"0.8em\\"
+                , Css.property \\"padding-right\\" \\"0.6em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8em\\"
+                , Css.property \\"padding-left\\" \\"0.6em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"padding-right\\" \\"0.6em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8em\\"
+                , Css.property \\"padding-left\\" \\"0.6em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"font-size\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1.4\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"margin-top\\" \\"3em\\"
+                , Css.property \\"margin-bottom\\" \\"3em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
                 ]
             ]
         , Css.Global.children
@@ -29048,6 +31608,158 @@ prose_2xl =
             [ Css.Global.selector \\"ul > li p\\"
                 [ Css.property \\"margin-top\\" \\"0.8333333em\\"
                 , Css.property \\"margin-bottom\\" \\"0.8333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"width\\" \\"0.3333333em\\"
+                , Css.property \\"height\\" \\"0.3333333em\\"
+                , Css.property \\"top\\" \\"calc(0.8333333em - 0.1666667em)\\"
+                , Css.property \\"left\\" \\"0.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"padding-left\\" \\"1.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"padding-left\\" \\"1.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.5em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"font-size\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1.8\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                , Css.property \\"border-radius\\" \\"0.5rem\\"
+                , Css.property \\"padding-top\\" \\"1.2em\\"
+                , Css.property \\"padding-right\\" \\"1.6em\\"
+                , Css.property \\"padding-bottom\\" \\"1.2em\\"
+                , Css.property \\"padding-left\\" \\"1.6em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.875em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"font-size\\" \\"0.8333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"font-size\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1.6\\"
+                , Css.property \\"margin-top\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"margin-top\\" \\"1.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"font-size\\" \\"1.5em\\"
+                , Css.property \\"margin-top\\" \\"1.5555556em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"line-height\\" \\"1.2222222\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"font-size\\" \\"2em\\"
+                , Css.property \\"margin-top\\" \\"1.5em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1.0833333\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"font-size\\" \\"2.6666667em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.875em\\"
+                , Css.property \\"line-height\\" \\"1\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7777778em\\"
+                , Css.property \\"padding-left\\" \\"1.1111111em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"font-size\\" \\"1.25em\\"
+                , Css.property \\"line-height\\" \\"1.4666667\\"
+                , Css.property \\"margin-top\\" \\"1.0666667em\\"
+                , Css.property \\"margin-bottom\\" \\"1.0666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
                 ]
             ]
         ]
@@ -57689,6 +60401,26 @@ prose =
         , Css.property \\"max-width\\" \\"65ch\\"
         , Css.property \\"font-size\\" \\"1rem\\"
         , Css.property \\"line-height\\" \\"1.75\\"
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                ]
+            ]
         , Css.Global.children
             [ Css.Global.selector \\":last-child\\"
                 [ Css.property \\"margin-bottom\\" \\"0\\"
@@ -57697,6 +60429,70 @@ prose =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.75em\\"
+                , Css.property \\"margin-bottom\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.75em\\"
+                , Css.property \\"margin-bottom\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.75em\\"
+                , Css.property \\"margin-bottom\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.75em\\"
+                , Css.property \\"margin-bottom\\" \\"0.75em\\"
                 ]
             ]
         , Css.Global.children
@@ -57725,6 +60521,306 @@ prose =
                 , Css.property \\"margin-bottom\\" \\"0.75em\\"
                 ]
             ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.5em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.25em\\"
+                , Css.property \\"margin-bottom\\" \\"1.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.875em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.25em\\"
+                , Css.property \\"margin-bottom\\" \\"1.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"vertical-align\\" \\"top\\"
+                , Css.property \\"padding-top\\" \\"0.5714286em\\"
+                , Css.property \\"padding-right\\" \\"0.5714286em\\"
+                , Css.property \\"padding-bottom\\" \\"0.5714286em\\"
+                , Css.property \\"padding-left\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody tr:last-child\\"
+                [ Css.property \\"border-bottom-width\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody tr\\"
+                [ Css.property \\"border-bottom-width\\" \\"1px\\"
+                , Css.property \\"border-bottom-color\\" \\"#e5e7eb\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"vertical-align\\" \\"bottom\\"
+                , Css.property \\"padding-right\\" \\"0.5714286em\\"
+                , Css.property \\"padding-bottom\\" \\"0.5714286em\\"
+                , Css.property \\"padding-left\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                , Css.property \\"border-bottom-width\\" \\"1px\\"
+                , Css.property \\"border-bottom-color\\" \\"#d2d6dc\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"width\\" \\"100%\\"
+                , Css.property \\"table-layout\\" \\"auto\\"
+                , Css.property \\"text-align\\" \\"left\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                , Css.property \\"font-size\\" \\"0.875em\\"
+                , Css.property \\"line-height\\" \\"1.7142857\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre code::after\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\\\\\\"\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre code::before\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\\\\\\"\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre code\\"
+                [ Css.property \\"background-color\\" \\"transparent\\"
+                , Css.property \\"border-width\\" \\"0\\"
+                , Css.property \\"border-radius\\" \\"0\\"
+                , Css.property \\"padding\\" \\"0\\"
+                , Css.property \\"font-weight\\" \\"400\\"
+                , Css.property \\"color\\" \\"inherit\\"
+                , Css.property \\"font-size\\" \\"inherit\\"
+                , Css.property \\"font-family\\" \\"inherit\\"
+                , Css.property \\"line-height\\" \\"inherit\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"color\\" \\"#e5e7eb\\"
+                , Css.property \\"background-color\\" \\"#252f3f\\"
+                , Css.property \\"overflow-x\\" \\"auto\\"
+                , Css.property \\"font-size\\" \\"0.875em\\"
+                , Css.property \\"line-height\\" \\"1.7142857\\"
+                , Css.property \\"margin-top\\" \\"1.7142857em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7142857em\\"
+                , Css.property \\"border-radius\\" \\"0.375rem\\"
+                , Css.property \\"padding-top\\" \\"0.8571429em\\"
+                , Css.property \\"padding-right\\" \\"1.1428571em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8571429em\\"
+                , Css.property \\"padding-left\\" \\"1.1428571em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code::after\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\`\\\\\\"\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code::before\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\`\\\\\\"\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                , Css.property \\"font-size\\" \\"0.875em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"color\\" \\"#6b7280\\"
+                , Css.property \\"font-size\\" \\"0.875em\\"
+                , Css.property \\"line-height\\" \\"1.4285714\\"
+                , Css.property \\"margin-top\\" \\"0.8571429em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"color\\" \\"#1a202c\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                , Css.property \\"margin-top\\" \\"1.5em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"color\\" \\"#1a202c\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                , Css.property \\"font-size\\" \\"1.25em\\"
+                , Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6em\\"
+                , Css.property \\"line-height\\" \\"1.6\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"color\\" \\"#1a202c\\"
+                , Css.property \\"font-weight\\" \\"700\\"
+                , Css.property \\"font-size\\" \\"1.5em\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"1em\\"
+                , Css.property \\"line-height\\" \\"1.3333333\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"color\\" \\"#1a202c\\"
+                , Css.property \\"font-weight\\" \\"800\\"
+                , Css.property \\"font-size\\" \\"2.25em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.1111111\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote p:last-of-type::after\\"
+                [ Css.property \\"content\\" \\"close-quote\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote p:first-of-type::before\\"
+                [ Css.property \\"content\\" \\"open-quote\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"font-weight\\" \\"500\\"
+                , Css.property \\"font-style\\" \\"italic\\"
+                , Css.property \\"color\\" \\"#161e2e\\"
+                , Css.property \\"border-left-width\\" \\"0.25rem\\"
+                , Css.property \\"border-left-color\\" \\"#e5e7eb\\"
+                , Css.property \\"quotes\\" \\"\\\\\\"\\\\u{201C}\\\\\\"\\\\\\"\\\\u{201D}\\\\\\"\\\\\\"\\\\u{2018}\\\\\\"\\\\\\"\\\\u{2019}\\\\\\"\\"
+                , Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"1.6em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"border-color\\" \\"#e5e7eb\\"
+                , Css.property \\"border-top-width\\" \\"1px\\"
+                , Css.property \\"margin-top\\" \\"3em\\"
+                , Css.property \\"margin-bottom\\" \\"3em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"content\\" \\"\\\\\\"\\\\\\"\\"
+                , Css.property \\"position\\" \\"absolute\\"
+                , Css.property \\"background-color\\" \\"#d2d6dc\\"
+                , Css.property \\"border-radius\\" \\"50%\\"
+                , Css.property \\"width\\" \\"0.375em\\"
+                , Css.property \\"height\\" \\"0.375em\\"
+                , Css.property \\"top\\" \\"calc(0.875em - 0.1875em)\\"
+                , Css.property \\"left\\" \\"0.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"position\\" \\"relative\\"
+                , Css.property \\"padding-left\\" \\"1.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li::before\\"
+                [ Css.property \\"content\\" \\"counter(list-counter) \\\\\\".\\\\\\"\\"
+                , Css.property \\"position\\" \\"absolute\\"
+                , Css.property \\"font-weight\\" \\"400\\"
+                , Css.property \\"color\\" \\"#6b7280\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"position\\" \\"relative\\"
+                , Css.property \\"counter-increment\\" \\"list-counter\\"
+                , Css.property \\"padding-left\\" \\"1.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"counter-reset\\" \\"list-counter\\"
+                , Css.property \\"margin-top\\" \\"1.25em\\"
+                , Css.property \\"margin-bottom\\" \\"1.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"strong\\"
+                [ Css.property \\"color\\" \\"#161e2e\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"a\\"
+                [ Css.property \\"color\\" \\"#5850ec\\"
+                , Css.property \\"text-decoration\\" \\"none\\"
+                , Css.property \\"font-weight\\" \\"600\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"color\\" \\"#4b5563\\"
+                , Css.property \\"font-size\\" \\"1.25em\\"
+                , Css.property \\"line-height\\" \\"1.6\\"
+                , Css.property \\"margin-top\\" \\"1.2em\\"
+                , Css.property \\"margin-bottom\\" \\"1.2em\\"
+                ]
+            ]
         ]
 
 
@@ -57741,6 +60837,97 @@ prose_sm =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"padding-top\\" \\"0.6666667em\\"
+                , Css.property \\"padding-right\\" \\"1em\\"
+                , Css.property \\"padding-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"padding-right\\" \\"1em\\"
+                , Css.property \\"padding-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"font-size\\" \\"0.8571429em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"margin-top\\" \\"2.8571429em\\"
+                , Css.property \\"margin-bottom\\" \\"2.8571429em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.5714286em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.5714286em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.5714286em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.5714286em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
                 ]
             ]
         , Css.Global.children
@@ -57769,6 +60956,158 @@ prose_sm =
                 , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
                 ]
             ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"height\\" \\"0.3571429em\\"
+                , Css.property \\"width\\" \\"0.3571429em\\"
+                , Css.property \\"top\\" \\"calc(0.8571429em - 0.1785714em)\\"
+                , Css.property \\"left\\" \\"0.2142857em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"padding-left\\" \\"1.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"padding-left\\" \\"1.5714286em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.2857143em\\"
+                , Css.property \\"margin-bottom\\" \\"0.2857143em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.1428571em\\"
+                , Css.property \\"margin-bottom\\" \\"1.1428571em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"margin-top\\" \\"1.1428571em\\"
+                , Css.property \\"margin-bottom\\" \\"1.1428571em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"font-size\\" \\"0.8571429em\\"
+                , Css.property \\"line-height\\" \\"1.6666667\\"
+                , Css.property \\"margin-top\\" \\"1.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"1.6666667em\\"
+                , Css.property \\"border-radius\\" \\"0.25rem\\"
+                , Css.property \\"padding-top\\" \\"0.6666667em\\"
+                , Css.property \\"padding-right\\" \\"1em\\"
+                , Css.property \\"padding-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"font-size\\" \\"0.8571429em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"font-size\\" \\"0.8571429em\\"
+                , Css.property \\"line-height\\" \\"1.3333333\\"
+                , Css.property \\"margin-top\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"1.7142857em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7142857em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"1.7142857em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7142857em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"1.7142857em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7142857em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"margin-top\\" \\"1.4285714em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5714286em\\"
+                , Css.property \\"line-height\\" \\"1.4285714\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"font-size\\" \\"1.2857143em\\"
+                , Css.property \\"margin-top\\" \\"1.5555556em\\"
+                , Css.property \\"margin-bottom\\" \\"0.4444444em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"font-size\\" \\"1.4285714em\\"
+                , Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                , Css.property \\"line-height\\" \\"1.4\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"font-size\\" \\"2.1428571em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                , Css.property \\"line-height\\" \\"1.2\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                , Css.property \\"padding-left\\" \\"1.1111111em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"font-size\\" \\"1.2857143em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                , Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.1428571em\\"
+                , Css.property \\"margin-bottom\\" \\"1.1428571em\\"
+                ]
+            ]
         ]
 
 
@@ -57785,6 +61124,97 @@ prose_lg =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"padding-top\\" \\"0.75em\\"
+                , Css.property \\"padding-right\\" \\"0.75em\\"
+                , Css.property \\"padding-bottom\\" \\"0.75em\\"
+                , Css.property \\"padding-left\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"padding-right\\" \\"0.75em\\"
+                , Css.property \\"padding-bottom\\" \\"0.75em\\"
+                , Css.property \\"padding-left\\" \\"0.75em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"margin-top\\" \\"3.1111111em\\"
+                , Css.property \\"margin-bottom\\" \\"3.1111111em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.8888889em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
                 ]
             ]
         , Css.Global.children
@@ -57813,6 +61243,158 @@ prose_lg =
                 , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
                 ]
             ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"width\\" \\"0.3333333em\\"
+                , Css.property \\"height\\" \\"0.3333333em\\"
+                , Css.property \\"top\\" \\"calc(0.8888889em - 0.1666667em)\\"
+                , Css.property \\"left\\" \\"0.2222222em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"padding-left\\" \\"1.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"padding-left\\" \\"1.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.75\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                , Css.property \\"border-radius\\" \\"0.375rem\\"
+                , Css.property \\"padding-top\\" \\"1em\\"
+                , Css.property \\"padding-right\\" \\"1.5em\\"
+                , Css.property \\"padding-bottom\\" \\"1em\\"
+                , Css.property \\"padding-left\\" \\"1.5em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.875em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.8666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                , Css.property \\"margin-top\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7777778em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7777778em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7777778em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"0.4444444em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"font-size\\" \\"1.3333333em\\"
+                , Css.property \\"margin-top\\" \\"1.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"font-size\\" \\"1.6666667em\\"
+                , Css.property \\"margin-top\\" \\"1.8666667em\\"
+                , Css.property \\"margin-bottom\\" \\"1.0666667em\\"
+                , Css.property \\"line-height\\" \\"1.3333333\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"font-size\\" \\"2.6666667em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"margin-top\\" \\"1.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"1.6666667em\\"
+                , Css.property \\"padding-left\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"font-size\\" \\"1.2222222em\\"
+                , Css.property \\"line-height\\" \\"1.4545455\\"
+                , Css.property \\"margin-top\\" \\"1.0909091em\\"
+                , Css.property \\"margin-bottom\\" \\"1.0909091em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
         ]
 
 
@@ -57829,6 +61411,97 @@ prose_xl =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"padding-top\\" \\"0.8888889em\\"
+                , Css.property \\"padding-right\\" \\"0.6666667em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8888889em\\"
+                , Css.property \\"padding-left\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"padding-right\\" \\"0.6666667em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8888889em\\"
+                , Css.property \\"padding-left\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"margin-top\\" \\"2.8em\\"
+                , Css.property \\"margin-bottom\\" \\"2.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8em\\"
                 ]
             ]
         , Css.Global.children
@@ -57857,6 +61530,158 @@ prose_xl =
                 , Css.property \\"margin-bottom\\" \\"0.8em\\"
                 ]
             ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"width\\" \\"0.35em\\"
+                , Css.property \\"height\\" \\"0.35em\\"
+                , Css.property \\"top\\" \\"calc(0.9em - 0.175em)\\"
+                , Css.property \\"left\\" \\"0.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"padding-left\\" \\"1.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"padding-left\\" \\"1.8em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.6em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.2em\\"
+                , Css.property \\"margin-bottom\\" \\"1.2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"margin-top\\" \\"1.2em\\"
+                , Css.property \\"margin-bottom\\" \\"1.2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                , Css.property \\"line-height\\" \\"1.7777778\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                , Css.property \\"border-radius\\" \\"0.5rem\\"
+                , Css.property \\"padding-top\\" \\"1.1111111em\\"
+                , Css.property \\"padding-right\\" \\"1.3333333em\\"
+                , Css.property \\"padding-bottom\\" \\"1.1111111em\\"
+                , Css.property \\"padding-left\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.8611111em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"font-size\\" \\"0.9em\\"
+                , Css.property \\"line-height\\" \\"1.5555556\\"
+                , Css.property \\"margin-top\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"margin-top\\" \\"1.8em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6em\\"
+                , Css.property \\"line-height\\" \\"1.6\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"font-size\\" \\"1.5em\\"
+                , Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"line-height\\" \\"1.3333333\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"font-size\\" \\"1.8em\\"
+                , Css.property \\"margin-top\\" \\"1.5555556em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8888889em\\"
+                , Css.property \\"line-height\\" \\"1.1111111\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"font-size\\" \\"2.8em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.8571429em\\"
+                , Css.property \\"line-height\\" \\"1\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"margin-top\\" \\"1.6em\\"
+                , Css.property \\"margin-bottom\\" \\"1.6em\\"
+                , Css.property \\"padding-left\\" \\"1.0666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"font-size\\" \\"1.2em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                , Css.property \\"margin-top\\" \\"1em\\"
+                , Css.property \\"margin-bottom\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.2em\\"
+                , Css.property \\"margin-bottom\\" \\"1.2em\\"
+                ]
+            ]
         ]
 
 
@@ -57873,6 +61698,97 @@ prose_2xl =
         , Css.Global.children
             [ Css.Global.selector \\":first-child\\"
                 [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"tbody td\\"
+                [ Css.property \\"padding-top\\" \\"0.8em\\"
+                , Css.property \\"padding-right\\" \\"0.6em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8em\\"
+                , Css.property \\"padding-left\\" \\"0.6em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:last-child\\"
+                [ Css.property \\"padding-right\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th:first-child\\"
+                [ Css.property \\"padding-left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"thead th\\"
+                [ Css.property \\"padding-right\\" \\"0.6em\\"
+                , Css.property \\"padding-bottom\\" \\"0.8em\\"
+                , Css.property \\"padding-left\\" \\"0.6em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"table\\"
+                [ Css.property \\"font-size\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1.4\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr + *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"hr\\"
+                [ Css.property \\"margin-top\\" \\"3em\\"
+                , Css.property \\"margin-bottom\\" \\"3em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ol\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol ul\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ol\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul ul\\"
+                [ Css.property \\"margin-top\\" \\"0.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
                 ]
             ]
         , Css.Global.children
@@ -57899,6 +61815,158 @@ prose_2xl =
             [ Css.Global.selector \\"ul > li p\\"
                 [ Css.property \\"margin-top\\" \\"0.8333333em\\"
                 , Css.property \\"margin-bottom\\" \\"0.8333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li::before\\"
+                [ Css.property \\"width\\" \\"0.3333333em\\"
+                , Css.property \\"height\\" \\"0.3333333em\\"
+                , Css.property \\"top\\" \\"calc(0.8333333em - 0.1666667em)\\"
+                , Css.property \\"left\\" \\"0.25em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul > li\\"
+                [ Css.property \\"padding-left\\" \\"1.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li:before\\"
+                [ Css.property \\"left\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol > li\\"
+                [ Css.property \\"padding-left\\" \\"1.6666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"li\\"
+                [ Css.property \\"margin-top\\" \\"0.5em\\"
+                , Css.property \\"margin-bottom\\" \\"0.5em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ul\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"ol\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"pre\\"
+                [ Css.property \\"font-size\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1.8\\"
+                , Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                , Css.property \\"border-radius\\" \\"0.5rem\\"
+                , Css.property \\"padding-top\\" \\"1.2em\\"
+                , Css.property \\"padding-right\\" \\"1.6em\\"
+                , Css.property \\"padding-bottom\\" \\"1.2em\\"
+                , Css.property \\"padding-left\\" \\"1.6em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3 code\\"
+                [ Css.property \\"font-size\\" \\"0.8888889em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2 code\\"
+                [ Css.property \\"font-size\\" \\"0.875em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"code\\"
+                [ Css.property \\"font-size\\" \\"0.8333333em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure figcaption\\"
+                [ Css.property \\"font-size\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1.6\\"
+                , Css.property \\"margin-top\\" \\"1em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure > *\\"
+                [ Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"figure\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"video\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"img\\"
+                [ Css.property \\"margin-top\\" \\"2em\\"
+                , Css.property \\"margin-bottom\\" \\"2em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h4\\"
+                [ Css.property \\"margin-top\\" \\"1.6666667em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"line-height\\" \\"1.5\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h3\\"
+                [ Css.property \\"font-size\\" \\"1.5em\\"
+                , Css.property \\"margin-top\\" \\"1.5555556em\\"
+                , Css.property \\"margin-bottom\\" \\"0.6666667em\\"
+                , Css.property \\"line-height\\" \\"1.2222222\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h2\\"
+                [ Css.property \\"font-size\\" \\"2em\\"
+                , Css.property \\"margin-top\\" \\"1.5em\\"
+                , Css.property \\"margin-bottom\\" \\"0.8333333em\\"
+                , Css.property \\"line-height\\" \\"1.0833333\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"h1\\"
+                [ Css.property \\"font-size\\" \\"2.6666667em\\"
+                , Css.property \\"margin-top\\" \\"0\\"
+                , Css.property \\"margin-bottom\\" \\"0.875em\\"
+                , Css.property \\"line-height\\" \\"1\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"blockquote\\"
+                [ Css.property \\"margin-top\\" \\"1.7777778em\\"
+                , Css.property \\"margin-bottom\\" \\"1.7777778em\\"
+                , Css.property \\"padding-left\\" \\"1.1111111em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\".lead\\"
+                [ Css.property \\"font-size\\" \\"1.25em\\"
+                , Css.property \\"line-height\\" \\"1.4666667\\"
+                , Css.property \\"margin-top\\" \\"1.0666667em\\"
+                , Css.property \\"margin-bottom\\" \\"1.0666667em\\"
+                ]
+            ]
+        , Css.Global.descendants
+            [ Css.Global.selector \\"p\\"
+                [ Css.property \\"margin-top\\" \\"1.3333333em\\"
+                , Css.property \\"margin-bottom\\" \\"1.3333333em\\"
                 ]
             ]
         ]
