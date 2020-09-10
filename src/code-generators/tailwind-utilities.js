@@ -39,7 +39,7 @@ function convertUnrecognizeds(unrecognizeds) {
             `Css.Global.global`,
             elmList(
                 unrecognizeds.flatMap(({ selector, properties, mediaQuery }) => {
-                    return convertMediaQueryWrap(mediaQuery, [
+                    return convertMediaQueryWrap(mediaQuery, `Css.Global.mediaQuery`, [
                         elmFunctionCall(
                             `Css.Global.selector ${elmString(selector)}`,
                             elmList(properties.map(convertDeclaration))
@@ -115,14 +115,14 @@ function convertPseudoProperties(selectorList, convertedProperties) {
     ];
 }
 
-function convertMediaQueryWrap(mediaQuery, propertiesExpressions) {
+function convertMediaQueryWrap(mediaQuery, functionName, propertiesExpressions) {
     if (mediaQuery == null) {
         return propertiesExpressions;
     }
 
     return [
         elmFunctionCall(
-            `Css.Media.withMediaQuery [ ${elmString(mediaQuery)} ]`,
+            `${functionName} [ ${elmString(mediaQuery)} ]`,
             elmList(propertiesExpressions)
         )
     ]
@@ -139,6 +139,7 @@ function convertDeclarationBlock(propertiesBlock) {
 
             return convertMediaQueryWrap(
                 subselector.mediaQuery,
+                `Css.Media.withMediaQuery`,
                 convertProperties(
                     subselector.rest,
                     properties.map(convertDeclaration)
