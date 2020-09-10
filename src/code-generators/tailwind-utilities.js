@@ -20,8 +20,8 @@ function elmHeaderCss(elmModuleName) {
     return `module ${elmModuleName} exposing (..)
 
 import Css
-import Css.Media
 import Css.Global
+import Css.Media
 `;
 }
 
@@ -57,9 +57,19 @@ function convertDeclarationBlock(propertiesBlock) {
                         elmList(3, properties.map(convertDeclaration))
                     ];
                 }
-                // TODO Never had the case, yet
-                console.log("mediaquery with non-plain rest", subselector);
-                return [];
+
+                const subselectorFunction = subselectorFunctionFromType(subselector.rest.type);
+
+                return [
+                    `Css.Media.withMediaQuery [ ${elmString(subselector.mediaQuery)} ]\n` +
+                    elmList(3, [
+                        subselectorFunction + "\n" +
+                        elmList(4, [
+                            `Css.Global.selector ${elmString(subselector.rest.rest)}\n` +
+                            elmList(5, properties.map(convertDeclaration))
+                        ])
+                    ])
+                ];
             } else {
                 if (subselector.rest.type === "plain") {
                     // We've got these covered in "plainProperties"
@@ -70,7 +80,8 @@ function convertDeclarationBlock(propertiesBlock) {
 
                 return [
                     subselectorFunction + "\n" +
-                    elmList(3, [`Css.Global.selector ${elmString(subselector.rest.rest)}\n` +
+                    elmList(3, [
+                        `Css.Global.selector ${elmString(subselector.rest.rest)}\n` +
                         elmList(4, properties.map(convertDeclaration))
                     ])
                 ];
@@ -117,6 +128,9 @@ function elmString(content) {
 
 function elmList(indentation, elements) {
     const indent = " ".repeat(Math.max(0, indentation * 4));
+    if (elements.length === 0) {
+        return indent + "[]";
+    }
     let str = "";
     let idx = 0;
     elements.forEach(elem => {

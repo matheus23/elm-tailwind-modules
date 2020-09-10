@@ -4,8 +4,8 @@ exports[`snapshot output of Utility module 1`] = `
 "module TW.Utilities exposing (..)
 
 import Css
-import Css.Media
 import Css.Global
+import Css.Media
 
 
 container : Css.Style
