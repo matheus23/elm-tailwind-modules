@@ -13,7 +13,7 @@
     "test": "yarn test:clean && yarn test:elm-compile && yarn jest",
     "jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config test/jest.config.json",
     "test:clean": "rm -rf test/src && rm -rf test/gen && rm -rf test/dist",
-    "test:elm-compile": "node --trace-warnings --unhandled-rejections=strict test/test-run.js && cd test && elm make Main.elm",
+    "test:elm-compile": "node --trace-warnings --unhandled-rejections=strict test/test-run.js && cd test && elm make Main.elm --output=/dev/null",
     "test:node-only": "node --trace-warnings --unhandled-rejections=strict test/test-run.js"
   },
   "keywords": [
