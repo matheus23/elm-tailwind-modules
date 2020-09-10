@@ -62,13 +62,3 @@ export const defaultOpts = {
     prefix: "",
     nameStyle: "snake",
 };
-
-export function splitOn(source, findSeparator) {
-    const index = source.findIndex(findSeparator);
-    if (index < 0) {
-        return [source];
-    }
-    const before = source.slice(0, index);
-    const after = source.slice(index + 1);
-    return [before].concat(splitOn(after, findSeparator));
-}

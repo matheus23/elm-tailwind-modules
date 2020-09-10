@@ -1,6 +1,6 @@
-import { toElmName, fixClass, splitOn } from "./helpers.js";
+import { toElmName, fixClass } from "./helpers.js";
+import CssWhat from "css-what";
 import deepEqual from "deep-equal";
-import * as parsel from "../parsel/parsel.js"
 
 export function groupDeclarationBlocksByClass(postCssRoot) {
     let rules = [];
@@ -21,9 +21,9 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
 
         // parse the selector
 
-        let selectorList;
+        let selector;
         try {
-            selectorList = splitOn(parsel.tokenize(rule.selector), token => token.type === "comma");
+            selector = CssWhat.parse(rule.selector);
         } catch (e) {
             unrecognized.push(rule);
             return;
@@ -32,9 +32,7 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
 
         // make sure all selector parts start with the same class
 
-        const parts = selectorList
-            .filter(selector => selector.length > 0)
-            .map(stripClassSelector);
+        const parts = selector.map(stripClassSelector);
         const partClasses = parts.map(part => part.class);
 
         const allEqual = arr => arr.every(v => v === arr[0])
@@ -60,7 +58,7 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
         try {
             subselectors = parts.map(part => ({
                 mediaQuery: recognizeMediaQuery(rule),
-                rest: recognizeSelectorRest(rule.selector, part.rest),
+                rest: recognizeSelectorRest(part.rest),
             }));
         } catch (e) {
             unrecognized.push(rule);
@@ -110,21 +108,17 @@ function recognizeMediaQuery(rule) {
     return null;
 }
 
-function recognizeSelectorRest(selectorSrc, selector) {
+function recognizeSelectorRest(selector) {
     if (selector.length === 0) {
         return { type: "plain" };
     }
 
-    if (selector[0].type !== "combinator") {
-        throw new Error(`Unsupported selector combination`, selector);
-    }
+    const type = selector[0].type;
+    const rest = CssWhat.stringify([selector.slice(1)]);
+    const supportedTypes = ["child", "decendant", "adjacent", "sibling"];
 
-    const rest = toSource(selectorSrc, selector.slice(1));
-    switch (selector[0].content) {
-        case " ": return { type: "decendant", rest };
-        case ">": return { type: "child", rest };
-        case "+": return { type: "adjacent", rest };
-        case "~": return { type: "sibling", rest };
+    if (supportedTypes.some(supported => supported === type)) {
+        return { type, rest };
     }
 
     throw new Error(`Unsupported type: ${type}`);
@@ -142,24 +136,19 @@ function collectProperties(rule) {
 }
 
 function stripClassSelector(selectorPart) {
+    if (selectorPart.length === 0) {
+        return { class: null, rest: [] };
+    }
+
     const first = selectorPart[0];
     const rest = selectorPart.slice(1);
 
-    if (first.type !== "class") {
+    if (!(first.type === "attribute" && first.name === "class")) {
         return { class: null, rest: selectorPart };
     }
 
     return {
-        class: first.name,
+        class: first.value,
         rest,
     };
-}
-
-function toSource(selectorSrc, selector) {
-    if (selector.length === 0) {
-        return "";
-    }
-    const first = selector[0];
-    const last = selector[selector.length - 1];
-    return selectorSrc.substring(first.pos[0], last.pos[1]);
 }
