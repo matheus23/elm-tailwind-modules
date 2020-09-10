@@ -120,12 +120,7 @@ function subselectorFunctionFromType(t) {
 // ELM CODEGEN
 
 function elmString(content) {
-    // my regex-foo is very limited, forgive me
-    const escapeEscapeSequences = seq => seq.replace(
-        /\\[\dABCDEFabcdef][\dABCDEFabcdef][\dABCDEFabcdef][\dABCDEFabcdef]/g,
-        match => `\\u{${match.substring(1)}}`
-    );
-    return `"${escapeEscapeSequences(content.replace(/"/g, '\\"'))}"`;
+    return `"${content.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
 }
 
 function elmList(indentation, elements) {
