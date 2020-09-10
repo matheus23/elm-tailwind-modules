@@ -4,14 +4,14 @@ import postcss from "postcss";
 import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities.js";
 import * as parser from "./parser.js";
 import tailwindcss from "tailwindcss";
-import autoprefixer from "autoprefixer";
 
 const defaultTailwindConfig = {
 };
 
 export default async function run({
-    rootOutputDir = "./src",
-    rootModule = "TW",
+    directory = "./src",
+    moduleName = "Tailwind",
+    postcssPlugins = [],
     tailwindConfig = defaultTailwindConfig,
 }) {
     const afterTailwindPlugin = postcss.plugin(
@@ -19,26 +19,13 @@ export default async function run({
         function withConfig(config) {
             return async (root, result) => {
                 const blocksByClass = parser.groupDeclarationBlocksByClass(root);
-
                 console.log("number of unrecognized rules:", blocksByClass.unrecognized.length);
+                const modulePath = moduleName.replace(".", "/");
 
                 // setup standard utility code generation promise
-                const formats = tailwindUtilityGeneration
-                    .formats({
-                        elmFile: "Utilities.elm",
-                        elmModuleName: "Utilities",
-                        elmFile: `${rootOutputDir}/${rootModule}/Utilities.elm`,
-                        elmModuleName: `${rootModule}.Utilities`,
-                    })
-                    .map(async ({ rootModule, elmFile, elmModuleName, elmBodyFn }) =>
-                        await writeFile(
-                            elmFile,
-                            elmBodyFn({ rootModule, elmModuleName }, blocksByClass.recognized)
-                        )
-                    );
-
-                //execute the code generation and save the output
-                console.log("Saved", await Promise.all(formats));
+                const elmModule = tailwindUtilityGeneration.generateElmModule(moduleName, blocksByClass.recognized);
+                const filename = await writeFile(`${directory}/${modulePath}.elm`, elmModule);
+                console.log("Saved", filename);
             };
         }
     );
@@ -47,7 +34,7 @@ export default async function run({
     const to = "output in-memory";
     return await postcss([
         tailwindcss(tailwindConfig),
-        autoprefixer, // TODO Reinstall autoprefixer. At the moment this breaks elm codegen
+        ...postcssPlugins,
         afterTailwindPlugin
     ]).process("@tailwind base;\n@tailwind components;\n@tailwind utilities;", { from, to });
 }

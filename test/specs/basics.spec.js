@@ -3,6 +3,7 @@ import * as path from "path";
 import { fileURLToPath } from 'url';
 import elmTailwindOrigami from "../../src/index.js";
 import tailwindConfig from "../tailwind.config.js";
+import autoprefixer from "autoprefixer";
 
 // like common js __dirname
 const dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -21,8 +22,10 @@ beforeAll(async () => {
     await cleanTestDirs();
 
     await elmTailwindOrigami({
-        rootOutputDir: "./test/src",
-        tailwindConfig
+        directory: "./test/src/",
+        moduleName: "TW.Utilities",
+        postcssPlugins: [autoprefixer],
+        tailwindConfig,
     });
 });
 

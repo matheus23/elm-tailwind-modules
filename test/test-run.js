@@ -1,7 +1,10 @@
 import elmTailwindOrigami from "../src/index.js";
 import tailwindConfig from "./tailwind.config.js";
+import autoprefixer from "autoprefixer";
 
 elmTailwindOrigami({
-    rootOutputDir: "./test/src",
-    tailwindConfig
+    directory: "./test/src",
+    moduleName: "TW.Utilities",
+    postcssPlugins: [autoprefixer],
+    tailwindConfig,
 });

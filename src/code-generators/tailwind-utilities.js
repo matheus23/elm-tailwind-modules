@@ -1,7 +1,11 @@
 // PUBLIC INTERFACE
 
-export function formats({ elmFile, elmModuleName }) {
-    return [{ elmFile, elmModuleName, elmBodyFn: elmBodyCss }]
+
+export function generateElmModule(moduleName, blocksByClass) {
+    return (
+        elmHeaderCss(moduleName) +
+        elmBody(blocksByClass)
+    );
 }
 
 
@@ -9,15 +13,8 @@ export function formats({ elmFile, elmModuleName }) {
 // PRIVATE INTERFACE
 
 
-function elmBodyCss({ elmModuleName }, blocksByClass) {
-    return (
-        elmHeaderCss(elmModuleName) +
-        elmBody(blocksByClass)
-    );
-}
-
-function elmHeaderCss(elmModuleName) {
-    return `module ${elmModuleName} exposing (..)
+function elmHeaderCss(moduleName) {
+    return `module ${moduleName} exposing (..)
 
 import Css
 import Css.Global
