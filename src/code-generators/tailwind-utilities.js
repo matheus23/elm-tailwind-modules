@@ -61,6 +61,19 @@ function convertProperties({ type, rest }, convertedProperties) {
     return [subselectorTransformed];
 }
 
+function convertMediaQueryWrap(mediaQuery, propertiesExpressions) {
+    if (mediaQuery == null) {
+        return propertiesExpressions;
+    }
+
+    return [
+        elmFunctionCall(
+            `Css.Media.withMediaQuery [ ${elmString(mediaQuery)} ]`,
+            elmList(propertiesExpressions)
+        )
+    ]
+}
+
 function convertDeclarationBlock(propertiesBlock) {
     const plainProperties = findPlainProperties(propertiesBlock).map(convertDeclaration);
     const subselectors = propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
@@ -70,18 +83,13 @@ function convertDeclarationBlock(propertiesBlock) {
                 return [];
             }
 
-            const subselectorProperties = convertProperties(subselector.rest, properties.map(convertDeclaration));
-
-            if (subselector.mediaQuery != null) {
-                return [
-                    elmFunctionCall(
-                        `Css.Media.withMediaQuery [ ${elmString(subselector.mediaQuery)} ]`,
-                        elmList(subselectorProperties)
-                    )
-                ];
-            } else {
-                return subselectorProperties;
-            }
+            return convertMediaQueryWrap(
+                subselector.mediaQuery,
+                convertProperties(
+                    subselector.rest,
+                    properties.map(convertDeclaration)
+                )
+            );
         })
     );
 
