@@ -13,7 +13,10 @@ export default async function run({
     moduleName = "Tailwind",
     postcssPlugins = [],
     tailwindConfig = defaultTailwindConfig,
+    skipSaving = false,
 }) {
+    let elmModule;
+
     const afterTailwindPlugin = postcss.plugin(
         "elm-tailwind-origami",
         function withConfig(config) {
@@ -23,20 +26,24 @@ export default async function run({
                 const modulePath = path.join.apply(null, moduleName.split("."));
 
                 // setup standard utility code generation promise
-                const elmModule = tailwindUtilityGeneration.generateElmModule(moduleName, blocksByClass.recognized);
-                const filename = await writeFile(path.resolve(directory, `${modulePath}.elm`), elmModule);
-                console.log("Saved", filename);
+                elmModule = tailwindUtilityGeneration.generateElmModule(moduleName, blocksByClass.recognized);
+                if (!skipSaving) {
+                    const filename = await writeFile(path.resolve(directory, `${modulePath}.elm`), elmModule);
+                    console.log("Saved", filename);
+                }
             };
         }
     );
 
     const from = "generated in-memory";
     const to = "output in-memory";
-    return await postcss([
+    await postcss([
         tailwindcss(tailwindConfig),
         ...postcssPlugins,
         afterTailwindPlugin
     ]).process("@tailwind base;\n@tailwind components;\n@tailwind utilities;", { from, to });
+
+    return elmModule;
 }
 
 /**
