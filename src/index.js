@@ -20,11 +20,11 @@ export default async function run({
             return async (root, result) => {
                 const blocksByClass = parser.groupDeclarationBlocksByClass(root);
                 console.log("number of unrecognized rules:", blocksByClass.unrecognized.length);
-                const modulePath = moduleName.replace(".", "/");
+                const modulePath = path.join.apply(null, moduleName.split("."));
 
                 // setup standard utility code generation promise
                 const elmModule = tailwindUtilityGeneration.generateElmModule(moduleName, blocksByClass.recognized);
-                const filename = await writeFile(`${directory}/${modulePath}.elm`, elmModule);
+                const filename = await writeFile(path.resolve(directory, `${modulePath}.elm`), elmModule);
                 console.log("Saved", filename);
             };
         }

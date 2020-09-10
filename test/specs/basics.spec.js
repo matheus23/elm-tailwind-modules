@@ -23,7 +23,7 @@ beforeAll(async () => {
 
     await elmTailwindOrigami({
         directory: "./test/src/",
-        moduleName: "TW.Utilities",
+        moduleName: "Tailwind",
         postcssPlugins: [autoprefixer],
         tailwindConfig,
     });
@@ -31,7 +31,7 @@ beforeAll(async () => {
 
 test("snapshot output of Utility module", async () => {
     const outputFile = await fs.readFile(
-        path.join(testDir, "src", "TW", "Utilities.elm")
+        path.join(testDir, "src", "Tailwind.elm")
     );
 
     expect(outputFile.toString()).toMatchSnapshot();

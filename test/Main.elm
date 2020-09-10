@@ -1,7 +1,7 @@
 
 module Main exposing (..)
 
-import TW.Utilities as TW
+import Tailwind
 import Css
 import Css.Media
 import Css.Global
@@ -12,8 +12,8 @@ import Html.Styled.Attributes as Attr
 main =
     Html.div
         [ Attr.css
-            [ TW.container
-            , TW.bg_gray_200
+            [ Tailwind.container
+            , Tailwind.bg_gray_200
             ]
         ]
         [ Html.text "Container"

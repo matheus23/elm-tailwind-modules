@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot output of Utility module 1`] = `
-"module TW.Utilities exposing (..)
+"module Tailwind exposing (..)
 
 import Css
 import Css.Global
