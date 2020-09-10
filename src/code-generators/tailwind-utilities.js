@@ -43,57 +43,44 @@ function convertDeclaration(propertiesBlock) {
     return indentation => `Css.property ${elmString(propertiesBlock.prop)} ${elmString(propertiesBlock.value)}`;
 }
 
+function convertProperties({ type, rest }, convertedProperties) {
+    if (type === "plain") {
+        return convertedProperties;
+    }
+
+    const subselectorFunction = subselectorFunctionFromType(type);
+    const subselectorTransformed = elmFunctionCall(
+        subselectorFunction,
+        elmList([
+            elmFunctionCall(
+                `Css.Global.selector ${elmString(rest)}`,
+                elmList(convertedProperties)
+            )
+        ])
+    );
+    return [subselectorTransformed];
+}
+
 function convertDeclarationBlock(propertiesBlock) {
     const plainProperties = findPlainProperties(propertiesBlock).map(convertDeclaration);
     const subselectors = propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
         subselectors.flatMap(subselector => {
+            if (subselector.rest.type === "plain" && subselector.mediaQuery == null) {
+                // We've got these covered in "plainProperties"
+                return [];
+            }
+
+            const subselectorProperties = convertProperties(subselector.rest, properties.map(convertDeclaration));
+
             if (subselector.mediaQuery != null) {
-                if (subselector.rest.type === "plain") {
-                    return [
-                        elmFunctionCall(
-                            `Css.Media.withMediaQuery [ ${elmString(subselector.mediaQuery)} ]`,
-                            elmList(properties.map(convertDeclaration))
-                        )
-                    ];
-                }
-
-                const subselectorFunction = subselectorFunctionFromType(subselector.rest.type);
-
                 return [
                     elmFunctionCall(
                         `Css.Media.withMediaQuery [ ${elmString(subselector.mediaQuery)} ]`,
-                        elmList([
-                            elmFunctionCall(
-                                subselectorFunction,
-                                elmList([
-                                    elmFunctionCall(
-                                        `Css.Global.selector ${elmString(subselector.rest.rest)}`,
-                                        elmList(properties.map(convertDeclaration))
-                                    )
-                                ])
-                            )
-                        ])
+                        elmList(subselectorProperties)
                     )
                 ];
             } else {
-                if (subselector.rest.type === "plain") {
-                    // We've got these covered in "plainProperties"
-                    return [];
-                }
-
-                const subselectorFunction = subselectorFunctionFromType(subselector.rest.type);
-
-                return [
-                    elmFunctionCall(
-                        subselectorFunction,
-                        elmList([
-                            elmFunctionCall(
-                                `Css.Global.selector ${elmString(subselector.rest.rest)}`,
-                                elmList(properties.map(convertDeclaration))
-                            )
-                        ])
-                    )
-                ];
+                return subselectorProperties;
             }
         })
     );
