@@ -1,0 +1,445 @@
+html
+body
+main
+h1
+hr
+pre
+a
+abbr[title]
+b,
+strong
+code,
+kbd,
+samp
+small
+sub,
+sup
+sub
+sup
+img
+button,
+input,
+optgroup,
+select,
+textarea
+button,
+input
+button,
+select
+button,
+[type="button"],
+[type="reset"],
+[type="submit"]
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring
+fieldset
+legend
+progress
+textarea
+[type="checkbox"],
+[type="radio"]
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button
+[type="search"]
+[type="search"]::-webkit-search-decoration
+::-webkit-file-upload-button
+details
+summary
+template
+[hidden]
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre
+button
+button:focus
+fieldset
+ol,
+ul
+html
+*,
+::before,
+::after
+hr
+img
+textarea
+input::placeholder,
+textarea::placeholder
+button,
+[role="button"]
+table
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+a
+button,
+input,
+optgroup,
+select,
+textarea
+pre,
+code,
+kbd,
+samp
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object
+img,
+video
+.form-input::placeholder
+.form-input:focus
+.form-textarea::placeholder
+.form-textarea:focus
+.form-multiselect:focus
+.form-select::-ms-expand
+.form-select::-ms-expand
+.form-select:focus
+.form-checkbox:checked
+.form-checkbox::-ms-check
+.form-checkbox:focus
+.form-checkbox:checked:focus
+.form-radio:checked
+.form-radio::-ms-check
+.form-radio:focus
+.form-radio:checked:focus
+.prose [class~="lead"]
+.prose a
+.prose strong
+.prose ol
+.prose ol > li
+.prose ol > li::before
+.prose ul > li
+.prose ul > li::before
+.prose hr
+.prose blockquote
+.prose blockquote p:first-of-type::before
+.prose blockquote p:last-of-type::after
+.prose h1
+.prose h2
+.prose h3
+.prose h4
+.prose figure figcaption
+.prose code
+.prose code::before
+.prose code::after
+.prose pre
+.prose pre code
+.prose pre code::before
+.prose pre code::after
+.prose table
+.prose thead
+.prose thead th
+.prose tbody tr
+.prose tbody tr:last-child
+.prose tbody td
+.prose p
+.prose img
+.prose video
+.prose figure
+.prose figure > *
+.prose h2 code
+.prose h3 code
+.prose ul
+.prose li
+.prose ol > li:before
+.prose ul ul, .prose ul ol, .prose ol ul, .prose ol ol
+.prose hr + *
+.prose h2 + *
+.prose h3 + *
+.prose h4 + *
+.prose thead th:first-child
+.prose thead th:last-child
+.prose tbody td:first-child
+.prose tbody td:last-child
+.prose h1, .prose h2, .prose h3, .prose h4
+.prose-sm p
+.prose-sm [class~="lead"]
+.prose-sm blockquote
+.prose-sm h1
+.prose-sm h2
+.prose-sm h3
+.prose-sm h4
+.prose-sm img
+.prose-sm video
+.prose-sm figure
+.prose-sm figure > *
+.prose-sm figure figcaption
+.prose-sm code
+.prose-sm h2 code
+.prose-sm h3 code
+.prose-sm pre
+.prose-sm ol
+.prose-sm ul
+.prose-sm li
+.prose-sm ol > li
+.prose-sm ol > li:before
+.prose-sm ul > li
+.prose-sm ul > li::before
+.prose-sm ul ul, .prose-sm ul ol, .prose-sm ol ul, .prose-sm ol ol
+.prose-sm hr
+.prose-sm hr + *
+.prose-sm h2 + *
+.prose-sm h3 + *
+.prose-sm h4 + *
+.prose-sm table
+.prose-sm thead th
+.prose-sm thead th:first-child
+.prose-sm thead th:last-child
+.prose-sm tbody td
+.prose-sm tbody td:first-child
+.prose-sm tbody td:last-child
+.prose-lg p
+.prose-lg [class~="lead"]
+.prose-lg blockquote
+.prose-lg h1
+.prose-lg h2
+.prose-lg h3
+.prose-lg h4
+.prose-lg img
+.prose-lg video
+.prose-lg figure
+.prose-lg figure > *
+.prose-lg figure figcaption
+.prose-lg code
+.prose-lg h2 code
+.prose-lg h3 code
+.prose-lg pre
+.prose-lg ol
+.prose-lg ul
+.prose-lg li
+.prose-lg ol > li
+.prose-lg ol > li:before
+.prose-lg ul > li
+.prose-lg ul > li::before
+.prose-lg ul ul, .prose-lg ul ol, .prose-lg ol ul, .prose-lg ol ol
+.prose-lg hr
+.prose-lg hr + *
+.prose-lg h2 + *
+.prose-lg h3 + *
+.prose-lg h4 + *
+.prose-lg table
+.prose-lg thead th
+.prose-lg thead th:first-child
+.prose-lg thead th:last-child
+.prose-lg tbody td
+.prose-lg tbody td:first-child
+.prose-lg tbody td:last-child
+.prose-xl p
+.prose-xl [class~="lead"]
+.prose-xl blockquote
+.prose-xl h1
+.prose-xl h2
+.prose-xl h3
+.prose-xl h4
+.prose-xl img
+.prose-xl video
+.prose-xl figure
+.prose-xl figure > *
+.prose-xl figure figcaption
+.prose-xl code
+.prose-xl h2 code
+.prose-xl h3 code
+.prose-xl pre
+.prose-xl ol
+.prose-xl ul
+.prose-xl li
+.prose-xl ol > li
+.prose-xl ol > li:before
+.prose-xl ul > li
+.prose-xl ul > li::before
+.prose-xl ul ul, .prose-xl ul ol, .prose-xl ol ul, .prose-xl ol ol
+.prose-xl hr
+.prose-xl hr + *
+.prose-xl h2 + *
+.prose-xl h3 + *
+.prose-xl h4 + *
+.prose-xl table
+.prose-xl thead th
+.prose-xl thead th:first-child
+.prose-xl thead th:last-child
+.prose-xl tbody td
+.prose-xl tbody td:first-child
+.prose-xl tbody td:last-child
+.prose-2xl p
+.prose-2xl [class~="lead"]
+.prose-2xl blockquote
+.prose-2xl h1
+.prose-2xl h2
+.prose-2xl h3
+.prose-2xl h4
+.prose-2xl img
+.prose-2xl video
+.prose-2xl figure
+.prose-2xl figure > *
+.prose-2xl figure figcaption
+.prose-2xl code
+.prose-2xl h2 code
+.prose-2xl h3 code
+.prose-2xl pre
+.prose-2xl ol
+.prose-2xl ul
+.prose-2xl li
+.prose-2xl ol > li
+.prose-2xl ol > li:before
+.prose-2xl ul > li
+.prose-2xl ul > li::before
+.prose-2xl ul ul, .prose-2xl ul ol, .prose-2xl ol ul, .prose-2xl ol ol
+.prose-2xl hr
+.prose-2xl hr + *
+.prose-2xl h2 + *
+.prose-2xl h3 + *
+.prose-2xl h4 + *
+.prose-2xl table
+.prose-2xl thead th
+.prose-2xl thead th:first-child
+.prose-2xl thead th:last-child
+.prose-2xl tbody td
+.prose-2xl tbody td:first-child
+.prose-2xl tbody td:last-child
+.clearfix:after
+.placeholder-transparent::placeholder
+.placeholder-white::placeholder
+.placeholder-black::placeholder
+.placeholder-gray-50::placeholder
+.placeholder-gray-100::placeholder
+.placeholder-gray-200::placeholder
+.placeholder-gray-300::placeholder
+.placeholder-gray-400::placeholder
+.placeholder-gray-500::placeholder
+.placeholder-gray-600::placeholder
+.placeholder-gray-700::placeholder
+.placeholder-gray-800::placeholder
+.placeholder-gray-900::placeholder
+.placeholder-cool-gray-50::placeholder
+.placeholder-cool-gray-100::placeholder
+.placeholder-cool-gray-200::placeholder
+.placeholder-cool-gray-300::placeholder
+.placeholder-cool-gray-400::placeholder
+.placeholder-cool-gray-500::placeholder
+.placeholder-cool-gray-600::placeholder
+.placeholder-cool-gray-700::placeholder
+.placeholder-cool-gray-800::placeholder
+.placeholder-cool-gray-900::placeholder
+.placeholder-red-50::placeholder
+.placeholder-red-100::placeholder
+.placeholder-red-200::placeholder
+.placeholder-red-300::placeholder
+.placeholder-red-400::placeholder
+.placeholder-red-500::placeholder
+.placeholder-red-600::placeholder
+.placeholder-red-700::placeholder
+.placeholder-red-800::placeholder
+.placeholder-red-900::placeholder
+.placeholder-orange-50::placeholder
+.placeholder-orange-100::placeholder
+.placeholder-orange-200::placeholder
+.placeholder-orange-300::placeholder
+.placeholder-orange-400::placeholder
+.placeholder-orange-500::placeholder
+.placeholder-orange-600::placeholder
+.placeholder-orange-700::placeholder
+.placeholder-orange-800::placeholder
+.placeholder-orange-900::placeholder
+.placeholder-yellow-50::placeholder
+.placeholder-yellow-100::placeholder
+.placeholder-yellow-200::placeholder
+.placeholder-yellow-300::placeholder
+.placeholder-yellow-400::placeholder
+.placeholder-yellow-500::placeholder
+.placeholder-yellow-600::placeholder
+.placeholder-yellow-700::placeholder
+.placeholder-yellow-800::placeholder
+.placeholder-yellow-900::placeholder
+.placeholder-green-50::placeholder
+.placeholder-green-100::placeholder
+.placeholder-green-200::placeholder
+.placeholder-green-300::placeholder
+.placeholder-green-400::placeholder
+.placeholder-green-500::placeholder
+.placeholder-green-600::placeholder
+.placeholder-green-700::placeholder
+.placeholder-green-800::placeholder
+.placeholder-green-900::placeholder
+.placeholder-teal-50::placeholder
+.placeholder-teal-100::placeholder
+.placeholder-teal-200::placeholder
+.placeholder-teal-300::placeholder
+.placeholder-teal-400::placeholder
+.placeholder-teal-500::placeholder
+.placeholder-teal-600::placeholder
+.placeholder-teal-700::placeholder
+.placeholder-teal-800::placeholder
+.placeholder-teal-900::placeholder
+.placeholder-blue-50::placeholder
+.placeholder-blue-100::placeholder
+.placeholder-blue-200::placeholder
+.placeholder-blue-300::placeholder
+.placeholder-blue-400::placeholder
+.placeholder-blue-500::placeholder
+.placeholder-blue-600::placeholder
+.placeholder-blue-700::placeholder
+.placeholder-blue-800::placeholder
+.placeholder-blue-900::placeholder
+.placeholder-indigo-50::placeholder
+.placeholder-indigo-100::placeholder
+.placeholder-indigo-200::placeholder
+.placeholder-indigo-300::placeholder
+.placeholder-indigo-400::placeholder
+.placeholder-indigo-500::placeholder
+.placeholder-indigo-600::placeholder
+.placeholder-indigo-700::placeholder
+.placeholder-indigo-800::placeholder
+.placeholder-indigo-900::placeholder
+.placeholder-purple-50::placeholder
+.placeholder-purple-100::placeholder
+.placeholder-purple-200::placeholder
+.placeholder-purple-300::placeholder
+.placeholder-purple-400::placeholder
+.placeholder-purple-500::placeholder
+.placeholder-purple-600::placeholder
+.placeholder-purple-700::placeholder
+.placeholder-purple-800::placeholder
+.placeholder-purple-900::placeholder
+.placeholder-pink-50::placeholder
+.placeholder-pink-100::placeholder
+.placeholder-pink-200::placeholder
+.placeholder-pink-300::placeholder
+.placeholder-pink-400::placeholder
+.placeholder-pink-500::placeholder
+.placeholder-pink-600::placeholder
+.placeholder-pink-700::placeholder
+.placeholder-pink-800::placeholder
+.placeholder-pink-900::placeholder
+.placeholder-opacity-0::placeholder
+.placeholder-opacity-25::placeholder
+.placeholder-opacity-50::placeholder
+.placeholder-opacity-75::placeholder
+.placeholder-opacity-100::placeholder
+to
+75%, 100%
+50%
+0%, 100%
+50%
