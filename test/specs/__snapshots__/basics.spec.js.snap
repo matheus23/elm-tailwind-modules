@@ -2522,7 +2522,11 @@ not_sr_only =
 
 appearance_none : Css.Style
 appearance_none =
-    Css.property \\"appearance\\" \\"none\\"
+    Css.batch
+        [ Css.property \\"-webkit-appearance\\" \\"none\\"
+        , Css.property \\"-moz-appearance\\" \\"none\\"
+        , Css.property \\"appearance\\" \\"none\\"
+        ]
 
 
 bg_fixed : Css.Style
@@ -2557,7 +2561,10 @@ bg_clip_content =
 
 bg_clip_text : Css.Style
 bg_clip_text =
-    Css.property \\"background-clip\\" \\"text\\"
+    Css.batch
+        [ Css.property \\"-webkit-background-clip\\" \\"text\\"
+        , Css.property \\"background-clip\\" \\"text\\"
+        ]
 
 
 bg_transparent : Css.Style
@@ -9317,72 +9324,114 @@ min_w_full =
 
 object_contain : Css.Style
 object_contain =
-    Css.property \\"object-fit\\" \\"contain\\"
+    Css.batch
+        [ Css.property \\"-o-object-fit\\" \\"contain\\"
+        , Css.property \\"object-fit\\" \\"contain\\"
+        ]
 
 
 object_cover : Css.Style
 object_cover =
-    Css.property \\"object-fit\\" \\"cover\\"
+    Css.batch
+        [ Css.property \\"-o-object-fit\\" \\"cover\\"
+        , Css.property \\"object-fit\\" \\"cover\\"
+        ]
 
 
 object_fill : Css.Style
 object_fill =
-    Css.property \\"object-fit\\" \\"fill\\"
+    Css.batch
+        [ Css.property \\"-o-object-fit\\" \\"fill\\"
+        , Css.property \\"object-fit\\" \\"fill\\"
+        ]
 
 
 object_none : Css.Style
 object_none =
-    Css.property \\"object-fit\\" \\"none\\"
+    Css.batch
+        [ Css.property \\"-o-object-fit\\" \\"none\\"
+        , Css.property \\"object-fit\\" \\"none\\"
+        ]
 
 
 object_scale_down : Css.Style
 object_scale_down =
-    Css.property \\"object-fit\\" \\"scale-down\\"
+    Css.batch
+        [ Css.property \\"-o-object-fit\\" \\"scale-down\\"
+        , Css.property \\"object-fit\\" \\"scale-down\\"
+        ]
 
 
 object_bottom : Css.Style
 object_bottom =
-    Css.property \\"object-position\\" \\"bottom\\"
+    Css.batch
+        [ Css.property \\"-o-object-position\\" \\"bottom\\"
+        , Css.property \\"object-position\\" \\"bottom\\"
+        ]
 
 
 object_center : Css.Style
 object_center =
-    Css.property \\"object-position\\" \\"center\\"
+    Css.batch
+        [ Css.property \\"-o-object-position\\" \\"center\\"
+        , Css.property \\"object-position\\" \\"center\\"
+        ]
 
 
 object_left : Css.Style
 object_left =
-    Css.property \\"object-position\\" \\"left\\"
+    Css.batch
+        [ Css.property \\"-o-object-position\\" \\"left\\"
+        , Css.property \\"object-position\\" \\"left\\"
+        ]
 
 
 object_left_bottom : Css.Style
 object_left_bottom =
-    Css.property \\"object-position\\" \\"left bottom\\"
+    Css.batch
+        [ Css.property \\"-o-object-position\\" \\"left bottom\\"
+        , Css.property \\"object-position\\" \\"left bottom\\"
+        ]
 
 
 object_left_top : Css.Style
 object_left_top =
-    Css.property \\"object-position\\" \\"left top\\"
+    Css.batch
+        [ Css.property \\"-o-object-position\\" \\"left top\\"
+        , Css.property \\"object-position\\" \\"left top\\"
+        ]
 
 
 object_right : Css.Style
 object_right =
-    Css.property \\"object-position\\" \\"right\\"
+    Css.batch
+        [ Css.property \\"-o-object-position\\" \\"right\\"
+        , Css.property \\"object-position\\" \\"right\\"
+        ]
 
 
 object_right_bottom : Css.Style
 object_right_bottom =
-    Css.property \\"object-position\\" \\"right bottom\\"
+    Css.batch
+        [ Css.property \\"-o-object-position\\" \\"right bottom\\"
+        , Css.property \\"object-position\\" \\"right bottom\\"
+        ]
 
 
 object_right_top : Css.Style
 object_right_top =
-    Css.property \\"object-position\\" \\"right top\\"
+    Css.batch
+        [ Css.property \\"-o-object-position\\" \\"right top\\"
+        , Css.property \\"object-position\\" \\"right top\\"
+        ]
 
 
 object_top : Css.Style
 object_top =
-    Css.property \\"object-position\\" \\"top\\"
+    Css.batch
+        [ Css.property \\"-o-object-position\\" \\"top\\"
+        , Css.property \\"object-position\\" \\"top\\"
+        ]
 
 
 opacity_0 : Css.Style
@@ -9487,17 +9536,26 @@ scrolling_auto =
 
 overscroll_auto : Css.Style
 overscroll_auto =
-    Css.property \\"overscroll-behavior\\" \\"auto\\"
+    Css.batch
+        [ Css.property \\"-ms-scroll-chaining\\" \\"chained\\"
+        , Css.property \\"overscroll-behavior\\" \\"auto\\"
+        ]
 
 
 overscroll_contain : Css.Style
 overscroll_contain =
-    Css.property \\"overscroll-behavior\\" \\"contain\\"
+    Css.batch
+        [ Css.property \\"-ms-scroll-chaining\\" \\"none\\"
+        , Css.property \\"overscroll-behavior\\" \\"contain\\"
+        ]
 
 
 overscroll_none : Css.Style
 overscroll_none =
-    Css.property \\"overscroll-behavior\\" \\"none\\"
+    Css.batch
+        [ Css.property \\"-ms-scroll-chaining\\" \\"none\\"
+        , Css.property \\"overscroll-behavior\\" \\"none\\"
+        ]
 
 
 overscroll_y_auto : Css.Style
@@ -10341,7 +10399,10 @@ relative =
 
 sticky : Css.Style
 sticky =
-    Css.property \\"position\\" \\"sticky\\"
+    Css.batch
+        [ Css.property \\"position\\" \\"-webkit-sticky\\"
+        , Css.property \\"position\\" \\"sticky\\"
+        ]
 
 
 inset_0 : Css.Style
@@ -11517,22 +11578,42 @@ tracking_widest =
 
 select_none : Css.Style
 select_none =
-    Css.property \\"user-select\\" \\"none\\"
+    Css.batch
+        [ Css.property \\"-webkit-user-select\\" \\"none\\"
+        , Css.property \\"-moz-user-select\\" \\"none\\"
+        , Css.property \\"-ms-user-select\\" \\"none\\"
+        , Css.property \\"user-select\\" \\"none\\"
+        ]
 
 
 select_text : Css.Style
 select_text =
-    Css.property \\"user-select\\" \\"text\\"
+    Css.batch
+        [ Css.property \\"-webkit-user-select\\" \\"text\\"
+        , Css.property \\"-moz-user-select\\" \\"text\\"
+        , Css.property \\"-ms-user-select\\" \\"text\\"
+        , Css.property \\"user-select\\" \\"text\\"
+        ]
 
 
 select_all : Css.Style
 select_all =
-    Css.property \\"user-select\\" \\"all\\"
+    Css.batch
+        [ Css.property \\"-webkit-user-select\\" \\"all\\"
+        , Css.property \\"-moz-user-select\\" \\"all\\"
+        , Css.property \\"-ms-user-select\\" \\"all\\"
+        , Css.property \\"user-select\\" \\"all\\"
+        ]
 
 
 select_auto : Css.Style
 select_auto =
-    Css.property \\"user-select\\" \\"auto\\"
+    Css.batch
+        [ Css.property \\"-webkit-user-select\\" \\"auto\\"
+        , Css.property \\"-moz-user-select\\" \\"auto\\"
+        , Css.property \\"-ms-user-select\\" \\"auto\\"
+        , Css.property \\"user-select\\" \\"auto\\"
+        ]
 
 
 align_baseline : Css.Style
@@ -12058,6 +12139,7 @@ gap_x_0 : Css.Style
 gap_x_0 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"0\\"
+        , Css.property \\"-moz-column-gap\\" \\"0\\"
         , Css.property \\"column-gap\\" \\"0\\"
         ]
 
@@ -12066,6 +12148,7 @@ gap_x_1 : Css.Style
 gap_x_1 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"0.25rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"0.25rem\\"
         , Css.property \\"column-gap\\" \\"0.25rem\\"
         ]
 
@@ -12074,6 +12157,7 @@ gap_x_2 : Css.Style
 gap_x_2 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"0.5rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"0.5rem\\"
         , Css.property \\"column-gap\\" \\"0.5rem\\"
         ]
 
@@ -12082,6 +12166,7 @@ gap_x_3 : Css.Style
 gap_x_3 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"0.75rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"0.75rem\\"
         , Css.property \\"column-gap\\" \\"0.75rem\\"
         ]
 
@@ -12090,6 +12175,7 @@ gap_x_4 : Css.Style
 gap_x_4 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"1rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"1rem\\"
         , Css.property \\"column-gap\\" \\"1rem\\"
         ]
 
@@ -12098,6 +12184,7 @@ gap_x_5 : Css.Style
 gap_x_5 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"1.25rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"1.25rem\\"
         , Css.property \\"column-gap\\" \\"1.25rem\\"
         ]
 
@@ -12106,6 +12193,7 @@ gap_x_6 : Css.Style
 gap_x_6 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"1.5rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"1.5rem\\"
         , Css.property \\"column-gap\\" \\"1.5rem\\"
         ]
 
@@ -12114,6 +12202,7 @@ gap_x_8 : Css.Style
 gap_x_8 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"2rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"2rem\\"
         , Css.property \\"column-gap\\" \\"2rem\\"
         ]
 
@@ -12122,6 +12211,7 @@ gap_x_10 : Css.Style
 gap_x_10 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"2.5rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"2.5rem\\"
         , Css.property \\"column-gap\\" \\"2.5rem\\"
         ]
 
@@ -12130,6 +12220,7 @@ gap_x_12 : Css.Style
 gap_x_12 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"3rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"3rem\\"
         , Css.property \\"column-gap\\" \\"3rem\\"
         ]
 
@@ -12138,6 +12229,7 @@ gap_x_16 : Css.Style
 gap_x_16 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"4rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"4rem\\"
         , Css.property \\"column-gap\\" \\"4rem\\"
         ]
 
@@ -12146,6 +12238,7 @@ gap_x_20 : Css.Style
 gap_x_20 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"5rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"5rem\\"
         , Css.property \\"column-gap\\" \\"5rem\\"
         ]
 
@@ -12154,6 +12247,7 @@ gap_x_24 : Css.Style
 gap_x_24 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"6rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"6rem\\"
         , Css.property \\"column-gap\\" \\"6rem\\"
         ]
 
@@ -12162,6 +12256,7 @@ gap_x_32 : Css.Style
 gap_x_32 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"8rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"8rem\\"
         , Css.property \\"column-gap\\" \\"8rem\\"
         ]
 
@@ -12170,6 +12265,7 @@ gap_x_40 : Css.Style
 gap_x_40 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"10rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"10rem\\"
         , Css.property \\"column-gap\\" \\"10rem\\"
         ]
 
@@ -12178,6 +12274,7 @@ gap_x_48 : Css.Style
 gap_x_48 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"12rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"12rem\\"
         , Css.property \\"column-gap\\" \\"12rem\\"
         ]
 
@@ -12186,6 +12283,7 @@ gap_x_56 : Css.Style
 gap_x_56 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"14rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"14rem\\"
         , Css.property \\"column-gap\\" \\"14rem\\"
         ]
 
@@ -12194,6 +12292,7 @@ gap_x_64 : Css.Style
 gap_x_64 =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"16rem\\"
+        , Css.property \\"-moz-column-gap\\" \\"16rem\\"
         , Css.property \\"column-gap\\" \\"16rem\\"
         ]
 
@@ -12202,6 +12301,7 @@ gap_x_px : Css.Style
 gap_x_px =
     Css.batch
         [ Css.property \\"grid-column-gap\\" \\"1px\\"
+        , Css.property \\"-moz-column-gap\\" \\"1px\\"
         , Css.property \\"column-gap\\" \\"1px\\"
         ]
 
@@ -13694,26 +13794,41 @@ delay_1000 =
 
 animate_none : Css.Style
 animate_none =
-    Css.property \\"animation\\" \\"none\\"
+    Css.batch
+        [ Css.property \\"-webkit-animation\\" \\"none\\"
+        , Css.property \\"animation\\" \\"none\\"
+        ]
 
 
 animate_spin : Css.Style
 animate_spin =
-    Css.property \\"animation\\" \\"spin 1s linear infinite\\"
+    Css.batch
+        [ Css.property \\"-webkit-animation\\" \\"spin 1s linear infinite\\"
+        , Css.property \\"animation\\" \\"spin 1s linear infinite\\"
+        ]
 
 
 animate_ping : Css.Style
 animate_ping =
-    Css.property \\"animation\\" \\"ping 1s cubic-bezier(0, 0, 0.2, 1) infinite\\"
+    Css.batch
+        [ Css.property \\"-webkit-animation\\" \\"ping 1s cubic-bezier(0, 0, 0.2, 1) infinite\\"
+        , Css.property \\"animation\\" \\"ping 1s cubic-bezier(0, 0, 0.2, 1) infinite\\"
+        ]
 
 
 animate_pulse : Css.Style
 animate_pulse =
-    Css.property \\"animation\\" \\"pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite\\"
+    Css.batch
+        [ Css.property \\"-webkit-animation\\" \\"pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite\\"
+        , Css.property \\"animation\\" \\"pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite\\"
+        ]
 
 
 animate_bounce : Css.Style
 animate_bounce =
-    Css.property \\"animation\\" \\"bounce 1s infinite\\"
+    Css.batch
+        [ Css.property \\"-webkit-animation\\" \\"bounce 1s infinite\\"
+        , Css.property \\"animation\\" \\"bounce 1s infinite\\"
+        ]
 "
 `;
