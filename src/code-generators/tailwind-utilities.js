@@ -50,22 +50,28 @@ function convertDeclarationBlock(propertiesBlock) {
             if (subselector.mediaQuery != null) {
                 if (subselector.rest.type === "plain") {
                     return [
-                        `Css.Media.withMediaQuery [ ${elmString(subselector.mediaQuery)} ]\n` +
-                        elmList(3, properties.map(convertDeclaration))
+                        elmFunctionCall(
+                            `Css.Media.withMediaQuery [ ${elmString(subselector.mediaQuery)} ]`,
+                            elmList(3, properties.map(convertDeclaration))
+                        )
                     ];
                 }
 
                 const subselectorFunction = subselectorFunctionFromType(subselector.rest.type);
 
                 return [
-                    `Css.Media.withMediaQuery [ ${elmString(subselector.mediaQuery)} ]\n` +
-                    elmList(3, [
-                        subselectorFunction + "\n" +
-                        elmList(4, [
-                            `Css.Global.selector ${elmString(subselector.rest.rest)}\n` +
-                            elmList(5, properties.map(convertDeclaration))
+                    elmFunctionCall(
+                        `Css.Media.withMediaQuery [ ${elmString(subselector.mediaQuery)} ]`,
+                        elmList(3, [
+                            elmFunctionCall(
+                                subselectorFunction,
+                                elmList(4, [
+                                    `Css.Global.selector ${elmString(subselector.rest.rest)}\n` +
+                                    elmList(5, properties.map(convertDeclaration))
+                                ])
+                            )
                         ])
-                    ])
+                    )
                 ];
             } else {
                 if (subselector.rest.type === "plain") {
@@ -76,11 +82,15 @@ function convertDeclarationBlock(propertiesBlock) {
                 const subselectorFunction = subselectorFunctionFromType(subselector.rest.type);
 
                 return [
-                    subselectorFunction + "\n" +
-                    elmList(3, [
-                        `Css.Global.selector ${elmString(subselector.rest.rest)}\n` +
-                        elmList(4, properties.map(convertDeclaration))
-                    ])
+                    elmFunctionCall(
+                        subselectorFunction,
+                        elmList(3, [
+                            elmFunctionCall(
+                                `Css.Global.selector ${elmString(subselector.rest.rest)}`,
+                                elmList(4, properties.map(convertDeclaration))
+                            )
+                        ])
+                    )
                 ];
             }
         })
@@ -121,6 +131,10 @@ function subselectorFunctionFromType(t) {
 
 function elmString(content) {
     return `"${content.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
+}
+
+function elmFunctionCall(firstLine, nextLine) {
+    return firstLine + "\n" + nextLine;
 }
 
 function elmList(indentation, elements) {
