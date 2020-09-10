@@ -1,3 +1,5 @@
+import tailwindui from "@tailwindcss/ui";
+
 export default {
     theme: {},
     variants: [], // We can do variants in elm code
@@ -7,7 +9,7 @@ export default {
     //   transitionDelay: false,
     //   transitionDuration: false,
     // },
-    plugins: [],
+    plugins: [tailwindui],
     future: {
         removeDeprecatedGapUtilities: true,
     },

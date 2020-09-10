@@ -1,0 +1,3 @@
+[submodule "parsel"]
+	path = parsel
+	url = https://github.com/LeaVerou/parsel
