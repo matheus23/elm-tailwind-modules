@@ -22,15 +22,10 @@ export default async function run({
         function withConfig(config) {
             return async (root, result) => {
                 const blocksByClass = parser.groupDeclarationBlocksByClass(root);
-                console.log("number of unrecognized rules:", blocksByClass.unrecognized.length);
-                const unrecognized = blocksByClass.unrecognized.map(unrecognized => {
-                    return unrecognized.selector
-                }).join("\n");
-                await fs.writeFile("unrecognized", unrecognized);
                 const modulePath = path.join.apply(null, moduleName.split("."));
 
                 // setup standard utility code generation promise
-                elmModule = tailwindUtilityGeneration.generateElmModule(moduleName, blocksByClass.recognized);
+                elmModule = tailwindUtilityGeneration.generateElmModule(moduleName, blocksByClass);
                 if (!skipSaving) {
                     const filename = await writeFile(path.resolve(directory, `${modulePath}.elm`), elmModule);
                     console.log("Saved", filename);

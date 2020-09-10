@@ -25,7 +25,7 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
         try {
             selector = CssWhat.parse(rule.selector);
         } catch (e) {
-            unrecognized.push(rule);
+            handleUnrecognized(unrecognized, rule);
             return;
         }
 
@@ -38,7 +38,7 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
         const allEqual = arr => arr.every(v => v === arr[0])
 
         if (partClasses.some(className => className == null) || !allEqual(partClasses)) {
-            unrecognized.push(rule);
+            handleUnrecognized(unrecognized, rule);
             return;
         }
 
@@ -61,7 +61,7 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
                 rest: recognizeSelectorRest(part.rest),
             }));
         } catch (e) {
-            unrecognized.push(rule);
+            handleUnrecognized(unrecognized, rule);
             return;
         }
 
@@ -102,7 +102,7 @@ function addToSelectorList(propertiesBySelector, subselectors, properties) {
 }
 
 function recognizeMediaQuery(rule) {
-    if (rule.parent.type === "atrule") {
+    if (rule.parent.type === "atrule" && rule.parent.name === "media") {
         return rule.parent.params;
     }
     return null;
@@ -164,4 +164,18 @@ function stripClassSelector(selectorPart) {
         class: first.value,
         rest,
     };
+}
+
+function handleUnrecognized(unrecognized, rule) {
+    if (rule.parent.type === "atrule" && rule.parent.name !== "media") {
+        console.log("Couldn't make sense of this rule");
+        console.log(rule.toString());
+        return;
+    }
+
+    unrecognized.push({
+        selector: rule.selector,
+        properties: collectProperties(rule),
+        mediaQuery: recognizeMediaQuery(rule),
+    });
 }

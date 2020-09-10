@@ -4,7 +4,8 @@
 export function generateElmModule(moduleName, blocksByClass) {
     return (
         elmHeaderCss(moduleName) +
-        elmBody(blocksByClass)
+        elmUnrecognizedToFunctions(blocksByClass.unrecognized) +
+        elmRecognizedToFunctions(blocksByClass.recognized)
     );
 }
 
@@ -19,18 +20,46 @@ function elmHeaderCss(moduleName) {
 import Css
 import Css.Global
 import Css.Media
+import Html.Styled
 `;
 }
 
-function elmBody(blocksByClass) {
+function elmUnrecognizedToFunctions(unrecognizedBlocks) {
+    return `
+
+globalStyles : Html.Styled.Html msg
+globalStyles =
+${convertUnrecognizeds(unrecognizedBlocks)(1)}
+`;
+}
+
+function convertUnrecognizeds(unrecognizeds) {
+    return indented(
+        elmFunctionCall(
+            `Css.Global.global`,
+            elmList(
+                unrecognizeds.flatMap(({ selector, properties, mediaQuery }) => {
+                    return convertMediaQueryWrap(mediaQuery, [
+                        elmFunctionCall(
+                            `Css.Global.selector ${elmString(selector)}`,
+                            elmList(properties.map(convertDeclaration))
+                        )
+                    ])
+                })
+            )
+        )
+    );
+}
+
+function elmRecognizedToFunctions(recognizedBlocksByClass) {
     let body = "";
-    for (let [elmClassName, propertiesBlock] of blocksByClass) {
-        body = body + elmFunction(elmClassName, propertiesBlock);
+    for (let [elmClassName, propertiesBlock] of recognizedBlocksByClass) {
+        body = body + elmRecognizedFunction(elmClassName, propertiesBlock);
     }
     return body;
 }
 
-function elmFunction(elmClassName, propertiesBlock) {
+function elmRecognizedFunction(elmClassName, propertiesBlock) {
     return `
 
 ${elmClassName} : Css.Style
@@ -162,7 +191,11 @@ function pseudoselectorFunction(t) {
 // ELM CODEGEN
 
 function elmString(content) {
-    return `"${content.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
+    return `"${content
+        .replace(/\\/g, "\\\\")
+        .replace(/"/g, '\\"')
+        .replace(/\n/g, "\\n")
+        }"`;
 }
 
 const elmFunctionCall = (firstLine, nextLine) => indentation => firstLine + "\n" + nextLine(indentation + 1)

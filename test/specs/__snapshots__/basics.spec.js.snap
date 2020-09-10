@@ -6,6 +6,210 @@ exports[`snapshot of generated module 1`] = `
 import Css
 import Css.Global
 import Css.Media
+import Html.Styled
+
+
+globalStyles : Html.Styled.Html msg
+globalStyles =
+    Css.Global.global
+        [ Css.Global.selector \\"html\\"
+            [ Css.property \\"line-height\\" \\"1.15\\"
+            , Css.property \\"-webkit-text-size-adjust\\" \\"100%\\"
+            ]
+        , Css.Global.selector \\"body\\"
+            [ Css.property \\"margin\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"main\\"
+            [ Css.property \\"display\\" \\"block\\"
+            ]
+        , Css.Global.selector \\"h1\\"
+            [ Css.property \\"font-size\\" \\"2em\\"
+            , Css.property \\"margin\\" \\"0.67em 0\\"
+            ]
+        , Css.Global.selector \\"hr\\"
+            [ Css.property \\"box-sizing\\" \\"content-box\\"
+            , Css.property \\"height\\" \\"0\\"
+            , Css.property \\"overflow\\" \\"visible\\"
+            ]
+        , Css.Global.selector \\"pre\\"
+            [ Css.property \\"font-family\\" \\"monospace, monospace\\"
+            , Css.property \\"font-size\\" \\"1em\\"
+            ]
+        , Css.Global.selector \\"a\\"
+            [ Css.property \\"background-color\\" \\"transparent\\"
+            ]
+        , Css.Global.selector \\"abbr[title]\\"
+            [ Css.property \\"border-bottom\\" \\"none\\"
+            , Css.property \\"text-decoration\\" \\"underline\\"
+            , Css.property \\"text-decoration\\" \\"underline dotted\\"
+            ]
+        , Css.Global.selector \\"b,\\\\nstrong\\"
+            [ Css.property \\"font-weight\\" \\"bolder\\"
+            ]
+        , Css.Global.selector \\"code,\\\\nkbd,\\\\nsamp\\"
+            [ Css.property \\"font-family\\" \\"monospace, monospace\\"
+            , Css.property \\"font-size\\" \\"1em\\"
+            ]
+        , Css.Global.selector \\"small\\"
+            [ Css.property \\"font-size\\" \\"80%\\"
+            ]
+        , Css.Global.selector \\"sub,\\\\nsup\\"
+            [ Css.property \\"font-size\\" \\"75%\\"
+            , Css.property \\"line-height\\" \\"0\\"
+            , Css.property \\"position\\" \\"relative\\"
+            , Css.property \\"vertical-align\\" \\"baseline\\"
+            ]
+        , Css.Global.selector \\"sub\\"
+            [ Css.property \\"bottom\\" \\"-0.25em\\"
+            ]
+        , Css.Global.selector \\"sup\\"
+            [ Css.property \\"top\\" \\"-0.5em\\"
+            ]
+        , Css.Global.selector \\"img\\"
+            [ Css.property \\"border-style\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"button,\\\\ninput,\\\\noptgroup,\\\\nselect,\\\\ntextarea\\"
+            [ Css.property \\"font-family\\" \\"inherit\\"
+            , Css.property \\"font-size\\" \\"100%\\"
+            , Css.property \\"line-height\\" \\"1.15\\"
+            , Css.property \\"margin\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"button,\\\\ninput\\"
+            [ Css.property \\"overflow\\" \\"visible\\"
+            ]
+        , Css.Global.selector \\"button,\\\\nselect\\"
+            [ Css.property \\"text-transform\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"button,\\\\n[type=\\\\\\"button\\\\\\"],\\\\n[type=\\\\\\"reset\\\\\\"],\\\\n[type=\\\\\\"submit\\\\\\"]\\"
+            [ Css.property \\"-webkit-appearance\\" \\"button\\"
+            ]
+        , Css.Global.selector \\"button::-moz-focus-inner,\\\\n[type=\\\\\\"button\\\\\\"]::-moz-focus-inner,\\\\n[type=\\\\\\"reset\\\\\\"]::-moz-focus-inner,\\\\n[type=\\\\\\"submit\\\\\\"]::-moz-focus-inner\\"
+            [ Css.property \\"border-style\\" \\"none\\"
+            , Css.property \\"padding\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"button:-moz-focusring,\\\\n[type=\\\\\\"button\\\\\\"]:-moz-focusring,\\\\n[type=\\\\\\"reset\\\\\\"]:-moz-focusring,\\\\n[type=\\\\\\"submit\\\\\\"]:-moz-focusring\\"
+            [ Css.property \\"outline\\" \\"1px dotted ButtonText\\"
+            ]
+        , Css.Global.selector \\"fieldset\\"
+            [ Css.property \\"padding\\" \\"0.35em 0.75em 0.625em\\"
+            ]
+        , Css.Global.selector \\"legend\\"
+            [ Css.property \\"box-sizing\\" \\"border-box\\"
+            , Css.property \\"color\\" \\"inherit\\"
+            , Css.property \\"display\\" \\"table\\"
+            , Css.property \\"max-width\\" \\"100%\\"
+            , Css.property \\"padding\\" \\"0\\"
+            , Css.property \\"white-space\\" \\"normal\\"
+            ]
+        , Css.Global.selector \\"progress\\"
+            [ Css.property \\"vertical-align\\" \\"baseline\\"
+            ]
+        , Css.Global.selector \\"textarea\\"
+            [ Css.property \\"overflow\\" \\"auto\\"
+            ]
+        , Css.Global.selector \\"[type=\\\\\\"checkbox\\\\\\"],\\\\n[type=\\\\\\"radio\\\\\\"]\\"
+            [ Css.property \\"box-sizing\\" \\"border-box\\"
+            , Css.property \\"padding\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"[type=\\\\\\"number\\\\\\"]::-webkit-inner-spin-button,\\\\n[type=\\\\\\"number\\\\\\"]::-webkit-outer-spin-button\\"
+            [ Css.property \\"height\\" \\"auto\\"
+            ]
+        , Css.Global.selector \\"[type=\\\\\\"search\\\\\\"]\\"
+            [ Css.property \\"-webkit-appearance\\" \\"textfield\\"
+            , Css.property \\"outline-offset\\" \\"-2px\\"
+            ]
+        , Css.Global.selector \\"[type=\\\\\\"search\\\\\\"]::-webkit-search-decoration\\"
+            [ Css.property \\"-webkit-appearance\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"::-webkit-file-upload-button\\"
+            [ Css.property \\"-webkit-appearance\\" \\"button\\"
+            , Css.property \\"font\\" \\"inherit\\"
+            ]
+        , Css.Global.selector \\"details\\"
+            [ Css.property \\"display\\" \\"block\\"
+            ]
+        , Css.Global.selector \\"summary\\"
+            [ Css.property \\"display\\" \\"list-item\\"
+            ]
+        , Css.Global.selector \\"template\\"
+            [ Css.property \\"display\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"[hidden]\\"
+            [ Css.property \\"display\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"blockquote,\\\\ndl,\\\\ndd,\\\\nh1,\\\\nh2,\\\\nh3,\\\\nh4,\\\\nh5,\\\\nh6,\\\\nhr,\\\\nfigure,\\\\np,\\\\npre\\"
+            [ Css.property \\"margin\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"button\\"
+            [ Css.property \\"background-color\\" \\"transparent\\"
+            , Css.property \\"background-image\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"button:focus\\"
+            [ Css.property \\"outline\\" \\"1px dotted\\"
+            , Css.property \\"outline\\" \\"5px auto -webkit-focus-ring-color\\"
+            ]
+        , Css.Global.selector \\"fieldset\\"
+            [ Css.property \\"margin\\" \\"0\\"
+            , Css.property \\"padding\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"ol,\\\\nul\\"
+            [ Css.property \\"list-style\\" \\"none\\"
+            , Css.property \\"margin\\" \\"0\\"
+            , Css.property \\"padding\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"html\\"
+            [ Css.property \\"font-family\\" \\"system-ui, -apple-system, BlinkMacSystemFont, \\\\\\"Segoe UI\\\\\\", Roboto, \\\\\\"Helvetica Neue\\\\\\", Arial, \\\\\\"Noto Sans\\\\\\", sans-serif, \\\\\\"Apple Color Emoji\\\\\\", \\\\\\"Segoe UI Emoji\\\\\\", \\\\\\"Segoe UI Symbol\\\\\\", \\\\\\"Noto Color Emoji\\\\\\"\\"
+            , Css.property \\"line-height\\" \\"1.5\\"
+            ]
+        , Css.Global.selector \\"*,\\\\n::before,\\\\n::after\\"
+            [ Css.property \\"box-sizing\\" \\"border-box\\"
+            , Css.property \\"border-width\\" \\"0\\"
+            , Css.property \\"border-style\\" \\"solid\\"
+            , Css.property \\"border-color\\" \\"#d2d6dc\\"
+            ]
+        , Css.Global.selector \\"hr\\"
+            [ Css.property \\"border-top-width\\" \\"1px\\"
+            ]
+        , Css.Global.selector \\"img\\"
+            [ Css.property \\"border-style\\" \\"solid\\"
+            ]
+        , Css.Global.selector \\"textarea\\"
+            [ Css.property \\"resize\\" \\"vertical\\"
+            ]
+        , Css.Global.selector \\"input::placeholder,\\\\ntextarea::placeholder\\"
+            [ Css.property \\"color\\" \\"#a0aec0\\"
+            ]
+        , Css.Global.selector \\"button,\\\\n[role=\\\\\\"button\\\\\\"]\\"
+            [ Css.property \\"cursor\\" \\"pointer\\"
+            ]
+        , Css.Global.selector \\"table\\"
+            [ Css.property \\"border-collapse\\" \\"collapse\\"
+            ]
+        , Css.Global.selector \\"h1,\\\\nh2,\\\\nh3,\\\\nh4,\\\\nh5,\\\\nh6\\"
+            [ Css.property \\"font-size\\" \\"inherit\\"
+            , Css.property \\"font-weight\\" \\"inherit\\"
+            ]
+        , Css.Global.selector \\"a\\"
+            [ Css.property \\"color\\" \\"inherit\\"
+            , Css.property \\"text-decoration\\" \\"inherit\\"
+            ]
+        , Css.Global.selector \\"button,\\\\ninput,\\\\noptgroup,\\\\nselect,\\\\ntextarea\\"
+            [ Css.property \\"padding\\" \\"0\\"
+            , Css.property \\"line-height\\" \\"inherit\\"
+            , Css.property \\"color\\" \\"inherit\\"
+            ]
+        , Css.Global.selector \\"pre,\\\\ncode,\\\\nkbd,\\\\nsamp\\"
+            [ Css.property \\"font-family\\" \\"Menlo, Monaco, Consolas, \\\\\\"Liberation Mono\\\\\\", \\\\\\"Courier New\\\\\\", monospace\\"
+            ]
+        , Css.Global.selector \\"img,\\\\nsvg,\\\\nvideo,\\\\ncanvas,\\\\naudio,\\\\niframe,\\\\nembed,\\\\nobject\\"
+            [ Css.property \\"display\\" \\"block\\"
+            , Css.property \\"vertical-align\\" \\"middle\\"
+            ]
+        , Css.Global.selector \\"img,\\\\nvideo\\"
+            [ Css.property \\"max-width\\" \\"100%\\"
+            , Css.property \\"height\\" \\"auto\\"
+            ]
+        ]
 
 
 container : Css.Style
@@ -31417,6 +31621,220 @@ exports[`snapshot of generated module with autoprefixer 1`] = `
 import Css
 import Css.Global
 import Css.Media
+import Html.Styled
+
+
+globalStyles : Html.Styled.Html msg
+globalStyles =
+    Css.Global.global
+        [ Css.Global.selector \\"html\\"
+            [ Css.property \\"line-height\\" \\"1.15\\"
+            , Css.property \\"-webkit-text-size-adjust\\" \\"100%\\"
+            ]
+        , Css.Global.selector \\"body\\"
+            [ Css.property \\"margin\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"main\\"
+            [ Css.property \\"display\\" \\"block\\"
+            ]
+        , Css.Global.selector \\"h1\\"
+            [ Css.property \\"font-size\\" \\"2em\\"
+            , Css.property \\"margin\\" \\"0.67em 0\\"
+            ]
+        , Css.Global.selector \\"hr\\"
+            [ Css.property \\"box-sizing\\" \\"content-box\\"
+            , Css.property \\"height\\" \\"0\\"
+            , Css.property \\"overflow\\" \\"visible\\"
+            ]
+        , Css.Global.selector \\"pre\\"
+            [ Css.property \\"font-family\\" \\"monospace, monospace\\"
+            , Css.property \\"font-size\\" \\"1em\\"
+            ]
+        , Css.Global.selector \\"a\\"
+            [ Css.property \\"background-color\\" \\"transparent\\"
+            ]
+        , Css.Global.selector \\"abbr[title]\\"
+            [ Css.property \\"border-bottom\\" \\"none\\"
+            , Css.property \\"text-decoration\\" \\"underline\\"
+            , Css.property \\"-webkit-text-decoration\\" \\"underline dotted\\"
+            , Css.property \\"text-decoration\\" \\"underline dotted\\"
+            ]
+        , Css.Global.selector \\"b,\\\\nstrong\\"
+            [ Css.property \\"font-weight\\" \\"bolder\\"
+            ]
+        , Css.Global.selector \\"code,\\\\nkbd,\\\\nsamp\\"
+            [ Css.property \\"font-family\\" \\"monospace, monospace\\"
+            , Css.property \\"font-size\\" \\"1em\\"
+            ]
+        , Css.Global.selector \\"small\\"
+            [ Css.property \\"font-size\\" \\"80%\\"
+            ]
+        , Css.Global.selector \\"sub,\\\\nsup\\"
+            [ Css.property \\"font-size\\" \\"75%\\"
+            , Css.property \\"line-height\\" \\"0\\"
+            , Css.property \\"position\\" \\"relative\\"
+            , Css.property \\"vertical-align\\" \\"baseline\\"
+            ]
+        , Css.Global.selector \\"sub\\"
+            [ Css.property \\"bottom\\" \\"-0.25em\\"
+            ]
+        , Css.Global.selector \\"sup\\"
+            [ Css.property \\"top\\" \\"-0.5em\\"
+            ]
+        , Css.Global.selector \\"img\\"
+            [ Css.property \\"border-style\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"button,\\\\ninput,\\\\noptgroup,\\\\nselect,\\\\ntextarea\\"
+            [ Css.property \\"font-family\\" \\"inherit\\"
+            , Css.property \\"font-size\\" \\"100%\\"
+            , Css.property \\"line-height\\" \\"1.15\\"
+            , Css.property \\"margin\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"button,\\\\ninput\\"
+            [ Css.property \\"overflow\\" \\"visible\\"
+            ]
+        , Css.Global.selector \\"button,\\\\nselect\\"
+            [ Css.property \\"text-transform\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"button,\\\\n[type=\\\\\\"button\\\\\\"],\\\\n[type=\\\\\\"reset\\\\\\"],\\\\n[type=\\\\\\"submit\\\\\\"]\\"
+            [ Css.property \\"-webkit-appearance\\" \\"button\\"
+            ]
+        , Css.Global.selector \\"button::-moz-focus-inner,\\\\n[type=\\\\\\"button\\\\\\"]::-moz-focus-inner,\\\\n[type=\\\\\\"reset\\\\\\"]::-moz-focus-inner,\\\\n[type=\\\\\\"submit\\\\\\"]::-moz-focus-inner\\"
+            [ Css.property \\"border-style\\" \\"none\\"
+            , Css.property \\"padding\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"button:-moz-focusring,\\\\n[type=\\\\\\"button\\\\\\"]:-moz-focusring,\\\\n[type=\\\\\\"reset\\\\\\"]:-moz-focusring,\\\\n[type=\\\\\\"submit\\\\\\"]:-moz-focusring\\"
+            [ Css.property \\"outline\\" \\"1px dotted ButtonText\\"
+            ]
+        , Css.Global.selector \\"fieldset\\"
+            [ Css.property \\"padding\\" \\"0.35em 0.75em 0.625em\\"
+            ]
+        , Css.Global.selector \\"legend\\"
+            [ Css.property \\"box-sizing\\" \\"border-box\\"
+            , Css.property \\"color\\" \\"inherit\\"
+            , Css.property \\"display\\" \\"table\\"
+            , Css.property \\"max-width\\" \\"100%\\"
+            , Css.property \\"padding\\" \\"0\\"
+            , Css.property \\"white-space\\" \\"normal\\"
+            ]
+        , Css.Global.selector \\"progress\\"
+            [ Css.property \\"vertical-align\\" \\"baseline\\"
+            ]
+        , Css.Global.selector \\"textarea\\"
+            [ Css.property \\"overflow\\" \\"auto\\"
+            ]
+        , Css.Global.selector \\"[type=\\\\\\"checkbox\\\\\\"],\\\\n[type=\\\\\\"radio\\\\\\"]\\"
+            [ Css.property \\"box-sizing\\" \\"border-box\\"
+            , Css.property \\"padding\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"[type=\\\\\\"number\\\\\\"]::-webkit-inner-spin-button,\\\\n[type=\\\\\\"number\\\\\\"]::-webkit-outer-spin-button\\"
+            [ Css.property \\"height\\" \\"auto\\"
+            ]
+        , Css.Global.selector \\"[type=\\\\\\"search\\\\\\"]\\"
+            [ Css.property \\"-webkit-appearance\\" \\"textfield\\"
+            , Css.property \\"outline-offset\\" \\"-2px\\"
+            ]
+        , Css.Global.selector \\"[type=\\\\\\"search\\\\\\"]::-webkit-search-decoration\\"
+            [ Css.property \\"-webkit-appearance\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"::-webkit-file-upload-button\\"
+            [ Css.property \\"-webkit-appearance\\" \\"button\\"
+            , Css.property \\"font\\" \\"inherit\\"
+            ]
+        , Css.Global.selector \\"details\\"
+            [ Css.property \\"display\\" \\"block\\"
+            ]
+        , Css.Global.selector \\"summary\\"
+            [ Css.property \\"display\\" \\"list-item\\"
+            ]
+        , Css.Global.selector \\"template\\"
+            [ Css.property \\"display\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"[hidden]\\"
+            [ Css.property \\"display\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"blockquote,\\\\ndl,\\\\ndd,\\\\nh1,\\\\nh2,\\\\nh3,\\\\nh4,\\\\nh5,\\\\nh6,\\\\nhr,\\\\nfigure,\\\\np,\\\\npre\\"
+            [ Css.property \\"margin\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"button\\"
+            [ Css.property \\"background-color\\" \\"transparent\\"
+            , Css.property \\"background-image\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"button:focus\\"
+            [ Css.property \\"outline\\" \\"1px dotted\\"
+            , Css.property \\"outline\\" \\"5px auto -webkit-focus-ring-color\\"
+            ]
+        , Css.Global.selector \\"fieldset\\"
+            [ Css.property \\"margin\\" \\"0\\"
+            , Css.property \\"padding\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"ol,\\\\nul\\"
+            [ Css.property \\"list-style\\" \\"none\\"
+            , Css.property \\"margin\\" \\"0\\"
+            , Css.property \\"padding\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"html\\"
+            [ Css.property \\"font-family\\" \\"system-ui, -apple-system, BlinkMacSystemFont, \\\\\\"Segoe UI\\\\\\", Roboto, \\\\\\"Helvetica Neue\\\\\\", Arial, \\\\\\"Noto Sans\\\\\\", sans-serif, \\\\\\"Apple Color Emoji\\\\\\", \\\\\\"Segoe UI Emoji\\\\\\", \\\\\\"Segoe UI Symbol\\\\\\", \\\\\\"Noto Color Emoji\\\\\\"\\"
+            , Css.property \\"line-height\\" \\"1.5\\"
+            ]
+        , Css.Global.selector \\"*,\\\\n::before,\\\\n::after\\"
+            [ Css.property \\"box-sizing\\" \\"border-box\\"
+            , Css.property \\"border-width\\" \\"0\\"
+            , Css.property \\"border-style\\" \\"solid\\"
+            , Css.property \\"border-color\\" \\"#d2d6dc\\"
+            ]
+        , Css.Global.selector \\"hr\\"
+            [ Css.property \\"border-top-width\\" \\"1px\\"
+            ]
+        , Css.Global.selector \\"img\\"
+            [ Css.property \\"border-style\\" \\"solid\\"
+            ]
+        , Css.Global.selector \\"textarea\\"
+            [ Css.property \\"resize\\" \\"vertical\\"
+            ]
+        , Css.Global.selector \\"input::-moz-placeholder, textarea::-moz-placeholder\\"
+            [ Css.property \\"color\\" \\"#a0aec0\\"
+            ]
+        , Css.Global.selector \\"input:-ms-input-placeholder, textarea:-ms-input-placeholder\\"
+            [ Css.property \\"color\\" \\"#a0aec0\\"
+            ]
+        , Css.Global.selector \\"input::-ms-input-placeholder, textarea::-ms-input-placeholder\\"
+            [ Css.property \\"color\\" \\"#a0aec0\\"
+            ]
+        , Css.Global.selector \\"input::placeholder,\\\\ntextarea::placeholder\\"
+            [ Css.property \\"color\\" \\"#a0aec0\\"
+            ]
+        , Css.Global.selector \\"button,\\\\n[role=\\\\\\"button\\\\\\"]\\"
+            [ Css.property \\"cursor\\" \\"pointer\\"
+            ]
+        , Css.Global.selector \\"table\\"
+            [ Css.property \\"border-collapse\\" \\"collapse\\"
+            ]
+        , Css.Global.selector \\"h1,\\\\nh2,\\\\nh3,\\\\nh4,\\\\nh5,\\\\nh6\\"
+            [ Css.property \\"font-size\\" \\"inherit\\"
+            , Css.property \\"font-weight\\" \\"inherit\\"
+            ]
+        , Css.Global.selector \\"a\\"
+            [ Css.property \\"color\\" \\"inherit\\"
+            , Css.property \\"text-decoration\\" \\"inherit\\"
+            ]
+        , Css.Global.selector \\"button,\\\\ninput,\\\\noptgroup,\\\\nselect,\\\\ntextarea\\"
+            [ Css.property \\"padding\\" \\"0\\"
+            , Css.property \\"line-height\\" \\"inherit\\"
+            , Css.property \\"color\\" \\"inherit\\"
+            ]
+        , Css.Global.selector \\"pre,\\\\ncode,\\\\nkbd,\\\\nsamp\\"
+            [ Css.property \\"font-family\\" \\"Menlo, Monaco, Consolas, \\\\\\"Liberation Mono\\\\\\", \\\\\\"Courier New\\\\\\", monospace\\"
+            ]
+        , Css.Global.selector \\"img,\\\\nsvg,\\\\nvideo,\\\\ncanvas,\\\\naudio,\\\\niframe,\\\\nembed,\\\\nobject\\"
+            [ Css.property \\"display\\" \\"block\\"
+            , Css.property \\"vertical-align\\" \\"middle\\"
+            ]
+        , Css.Global.selector \\"img,\\\\nvideo\\"
+            [ Css.property \\"max-width\\" \\"100%\\"
+            , Css.property \\"height\\" \\"auto\\"
+            ]
+        ]
 
 
 container : Css.Style
@@ -64791,6 +65209,210 @@ exports[`snapshot of generated module with tailwindui 1`] = `
 import Css
 import Css.Global
 import Css.Media
+import Html.Styled
+
+
+globalStyles : Html.Styled.Html msg
+globalStyles =
+    Css.Global.global
+        [ Css.Global.selector \\"html\\"
+            [ Css.property \\"line-height\\" \\"1.15\\"
+            , Css.property \\"-webkit-text-size-adjust\\" \\"100%\\"
+            ]
+        , Css.Global.selector \\"body\\"
+            [ Css.property \\"margin\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"main\\"
+            [ Css.property \\"display\\" \\"block\\"
+            ]
+        , Css.Global.selector \\"h1\\"
+            [ Css.property \\"font-size\\" \\"2em\\"
+            , Css.property \\"margin\\" \\"0.67em 0\\"
+            ]
+        , Css.Global.selector \\"hr\\"
+            [ Css.property \\"box-sizing\\" \\"content-box\\"
+            , Css.property \\"height\\" \\"0\\"
+            , Css.property \\"overflow\\" \\"visible\\"
+            ]
+        , Css.Global.selector \\"pre\\"
+            [ Css.property \\"font-family\\" \\"monospace, monospace\\"
+            , Css.property \\"font-size\\" \\"1em\\"
+            ]
+        , Css.Global.selector \\"a\\"
+            [ Css.property \\"background-color\\" \\"transparent\\"
+            ]
+        , Css.Global.selector \\"abbr[title]\\"
+            [ Css.property \\"border-bottom\\" \\"none\\"
+            , Css.property \\"text-decoration\\" \\"underline\\"
+            , Css.property \\"text-decoration\\" \\"underline dotted\\"
+            ]
+        , Css.Global.selector \\"b,\\\\nstrong\\"
+            [ Css.property \\"font-weight\\" \\"bolder\\"
+            ]
+        , Css.Global.selector \\"code,\\\\nkbd,\\\\nsamp\\"
+            [ Css.property \\"font-family\\" \\"monospace, monospace\\"
+            , Css.property \\"font-size\\" \\"1em\\"
+            ]
+        , Css.Global.selector \\"small\\"
+            [ Css.property \\"font-size\\" \\"80%\\"
+            ]
+        , Css.Global.selector \\"sub,\\\\nsup\\"
+            [ Css.property \\"font-size\\" \\"75%\\"
+            , Css.property \\"line-height\\" \\"0\\"
+            , Css.property \\"position\\" \\"relative\\"
+            , Css.property \\"vertical-align\\" \\"baseline\\"
+            ]
+        , Css.Global.selector \\"sub\\"
+            [ Css.property \\"bottom\\" \\"-0.25em\\"
+            ]
+        , Css.Global.selector \\"sup\\"
+            [ Css.property \\"top\\" \\"-0.5em\\"
+            ]
+        , Css.Global.selector \\"img\\"
+            [ Css.property \\"border-style\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"button,\\\\ninput,\\\\noptgroup,\\\\nselect,\\\\ntextarea\\"
+            [ Css.property \\"font-family\\" \\"inherit\\"
+            , Css.property \\"font-size\\" \\"100%\\"
+            , Css.property \\"line-height\\" \\"1.15\\"
+            , Css.property \\"margin\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"button,\\\\ninput\\"
+            [ Css.property \\"overflow\\" \\"visible\\"
+            ]
+        , Css.Global.selector \\"button,\\\\nselect\\"
+            [ Css.property \\"text-transform\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"button,\\\\n[type=\\\\\\"button\\\\\\"],\\\\n[type=\\\\\\"reset\\\\\\"],\\\\n[type=\\\\\\"submit\\\\\\"]\\"
+            [ Css.property \\"-webkit-appearance\\" \\"button\\"
+            ]
+        , Css.Global.selector \\"button::-moz-focus-inner,\\\\n[type=\\\\\\"button\\\\\\"]::-moz-focus-inner,\\\\n[type=\\\\\\"reset\\\\\\"]::-moz-focus-inner,\\\\n[type=\\\\\\"submit\\\\\\"]::-moz-focus-inner\\"
+            [ Css.property \\"border-style\\" \\"none\\"
+            , Css.property \\"padding\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"button:-moz-focusring,\\\\n[type=\\\\\\"button\\\\\\"]:-moz-focusring,\\\\n[type=\\\\\\"reset\\\\\\"]:-moz-focusring,\\\\n[type=\\\\\\"submit\\\\\\"]:-moz-focusring\\"
+            [ Css.property \\"outline\\" \\"1px dotted ButtonText\\"
+            ]
+        , Css.Global.selector \\"fieldset\\"
+            [ Css.property \\"padding\\" \\"0.35em 0.75em 0.625em\\"
+            ]
+        , Css.Global.selector \\"legend\\"
+            [ Css.property \\"box-sizing\\" \\"border-box\\"
+            , Css.property \\"color\\" \\"inherit\\"
+            , Css.property \\"display\\" \\"table\\"
+            , Css.property \\"max-width\\" \\"100%\\"
+            , Css.property \\"padding\\" \\"0\\"
+            , Css.property \\"white-space\\" \\"normal\\"
+            ]
+        , Css.Global.selector \\"progress\\"
+            [ Css.property \\"vertical-align\\" \\"baseline\\"
+            ]
+        , Css.Global.selector \\"textarea\\"
+            [ Css.property \\"overflow\\" \\"auto\\"
+            ]
+        , Css.Global.selector \\"[type=\\\\\\"checkbox\\\\\\"],\\\\n[type=\\\\\\"radio\\\\\\"]\\"
+            [ Css.property \\"box-sizing\\" \\"border-box\\"
+            , Css.property \\"padding\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"[type=\\\\\\"number\\\\\\"]::-webkit-inner-spin-button,\\\\n[type=\\\\\\"number\\\\\\"]::-webkit-outer-spin-button\\"
+            [ Css.property \\"height\\" \\"auto\\"
+            ]
+        , Css.Global.selector \\"[type=\\\\\\"search\\\\\\"]\\"
+            [ Css.property \\"-webkit-appearance\\" \\"textfield\\"
+            , Css.property \\"outline-offset\\" \\"-2px\\"
+            ]
+        , Css.Global.selector \\"[type=\\\\\\"search\\\\\\"]::-webkit-search-decoration\\"
+            [ Css.property \\"-webkit-appearance\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"::-webkit-file-upload-button\\"
+            [ Css.property \\"-webkit-appearance\\" \\"button\\"
+            , Css.property \\"font\\" \\"inherit\\"
+            ]
+        , Css.Global.selector \\"details\\"
+            [ Css.property \\"display\\" \\"block\\"
+            ]
+        , Css.Global.selector \\"summary\\"
+            [ Css.property \\"display\\" \\"list-item\\"
+            ]
+        , Css.Global.selector \\"template\\"
+            [ Css.property \\"display\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"[hidden]\\"
+            [ Css.property \\"display\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"blockquote,\\\\ndl,\\\\ndd,\\\\nh1,\\\\nh2,\\\\nh3,\\\\nh4,\\\\nh5,\\\\nh6,\\\\nhr,\\\\nfigure,\\\\np,\\\\npre\\"
+            [ Css.property \\"margin\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"button\\"
+            [ Css.property \\"background-color\\" \\"transparent\\"
+            , Css.property \\"background-image\\" \\"none\\"
+            ]
+        , Css.Global.selector \\"button:focus\\"
+            [ Css.property \\"outline\\" \\"1px dotted\\"
+            , Css.property \\"outline\\" \\"5px auto -webkit-focus-ring-color\\"
+            ]
+        , Css.Global.selector \\"fieldset\\"
+            [ Css.property \\"margin\\" \\"0\\"
+            , Css.property \\"padding\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"ol,\\\\nul\\"
+            [ Css.property \\"list-style\\" \\"none\\"
+            , Css.property \\"margin\\" \\"0\\"
+            , Css.property \\"padding\\" \\"0\\"
+            ]
+        , Css.Global.selector \\"html\\"
+            [ Css.property \\"font-family\\" \\"system-ui, -apple-system, BlinkMacSystemFont, \\\\\\"Segoe UI\\\\\\", Roboto, \\\\\\"Helvetica Neue\\\\\\", Arial, \\\\\\"Noto Sans\\\\\\", sans-serif, \\\\\\"Apple Color Emoji\\\\\\", \\\\\\"Segoe UI Emoji\\\\\\", \\\\\\"Segoe UI Symbol\\\\\\", \\\\\\"Noto Color Emoji\\\\\\"\\"
+            , Css.property \\"line-height\\" \\"1.5\\"
+            ]
+        , Css.Global.selector \\"*,\\\\n::before,\\\\n::after\\"
+            [ Css.property \\"box-sizing\\" \\"border-box\\"
+            , Css.property \\"border-width\\" \\"0\\"
+            , Css.property \\"border-style\\" \\"solid\\"
+            , Css.property \\"border-color\\" \\"#d2d6dc\\"
+            ]
+        , Css.Global.selector \\"hr\\"
+            [ Css.property \\"border-top-width\\" \\"1px\\"
+            ]
+        , Css.Global.selector \\"img\\"
+            [ Css.property \\"border-style\\" \\"solid\\"
+            ]
+        , Css.Global.selector \\"textarea\\"
+            [ Css.property \\"resize\\" \\"vertical\\"
+            ]
+        , Css.Global.selector \\"input::placeholder,\\\\ntextarea::placeholder\\"
+            [ Css.property \\"color\\" \\"#a0aec0\\"
+            ]
+        , Css.Global.selector \\"button,\\\\n[role=\\\\\\"button\\\\\\"]\\"
+            [ Css.property \\"cursor\\" \\"pointer\\"
+            ]
+        , Css.Global.selector \\"table\\"
+            [ Css.property \\"border-collapse\\" \\"collapse\\"
+            ]
+        , Css.Global.selector \\"h1,\\\\nh2,\\\\nh3,\\\\nh4,\\\\nh5,\\\\nh6\\"
+            [ Css.property \\"font-size\\" \\"inherit\\"
+            , Css.property \\"font-weight\\" \\"inherit\\"
+            ]
+        , Css.Global.selector \\"a\\"
+            [ Css.property \\"color\\" \\"inherit\\"
+            , Css.property \\"text-decoration\\" \\"inherit\\"
+            ]
+        , Css.Global.selector \\"button,\\\\ninput,\\\\noptgroup,\\\\nselect,\\\\ntextarea\\"
+            [ Css.property \\"padding\\" \\"0\\"
+            , Css.property \\"line-height\\" \\"inherit\\"
+            , Css.property \\"color\\" \\"inherit\\"
+            ]
+        , Css.Global.selector \\"pre,\\\\ncode,\\\\nkbd,\\\\nsamp\\"
+            [ Css.property \\"font-family\\" \\"Menlo, Monaco, Consolas, \\\\\\"Liberation Mono\\\\\\", \\\\\\"Courier New\\\\\\", monospace\\"
+            ]
+        , Css.Global.selector \\"img,\\\\nsvg,\\\\nvideo,\\\\ncanvas,\\\\naudio,\\\\niframe,\\\\nembed,\\\\nobject\\"
+            [ Css.property \\"display\\" \\"block\\"
+            , Css.property \\"vertical-align\\" \\"middle\\"
+            ]
+        , Css.Global.selector \\"img,\\\\nvideo\\"
+            [ Css.property \\"max-width\\" \\"100%\\"
+            , Css.property \\"height\\" \\"auto\\"
+            ]
+        ]
 
 
 container : Css.Style
