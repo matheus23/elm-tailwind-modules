@@ -121,11 +121,12 @@ function recognizeSelectorRest(selector) {
         return { type, rest };
     }
 
-    // const supportedPseudos = ["pseudo", "pseudo-element"];
+    const supportedPseudos = ["pseudo", "pseudo-element"];
+    const isPseudo = supportedPseudos.some(supported => supported === type);
 
-    // if (supportedPseudos.some(supported => supported === type) && supported.length === 1) {
-    //     return { type, rest: selector[0].name };
-    // }
+    if (isPseudo && selector.length === 1) {
+        return { type, rest: selector[0].name };
+    }
 
     throw new Error(`Unsupported type: ${type}`);
 }

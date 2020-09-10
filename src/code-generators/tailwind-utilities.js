@@ -48,6 +48,24 @@ function convertProperties({ type, rest }, convertedProperties) {
         return convertedProperties;
     }
 
+    if (type === "pseudo") {
+        return [
+            elmFunctionCall(
+                `Css.pseudoClass ${elmString(rest)}`,
+                elmList(convertedProperties)
+            )
+        ];
+    }
+
+    if (type === "pseudo-element") {
+        return [
+            elmFunctionCall(
+                `Css.pseudoElement ${elmString(rest)}`,
+                elmList(convertedProperties)
+            )
+        ];
+    }
+
     const subselectorFunction = subselectorFunctionFromType(type);
     const subselectorTransformed = elmFunctionCall(
         subselectorFunction,
