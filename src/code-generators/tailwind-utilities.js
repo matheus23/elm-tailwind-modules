@@ -35,12 +35,12 @@ function elmFunction(elmClassName, propertiesBlock) {
 
 ${elmClassName} : Css.Style
 ${elmClassName} =
-${convertDeclarationBlock(propertiesBlock)}
+${convertDeclarationBlock(propertiesBlock)(1)}
 `;
 }
 
 function convertDeclaration(propertiesBlock) {
-    return `Css.property ${elmString(propertiesBlock.prop)} ${elmString(propertiesBlock.value)}`;
+    return indentation => `Css.property ${elmString(propertiesBlock.prop)} ${elmString(propertiesBlock.value)}`;
 }
 
 function convertDeclarationBlock(propertiesBlock) {
@@ -52,7 +52,7 @@ function convertDeclarationBlock(propertiesBlock) {
                     return [
                         elmFunctionCall(
                             `Css.Media.withMediaQuery [ ${elmString(subselector.mediaQuery)} ]`,
-                            elmList(3, properties.map(convertDeclaration))
+                            elmList(properties.map(convertDeclaration))
                         )
                     ];
                 }
@@ -62,12 +62,12 @@ function convertDeclarationBlock(propertiesBlock) {
                 return [
                     elmFunctionCall(
                         `Css.Media.withMediaQuery [ ${elmString(subselector.mediaQuery)} ]`,
-                        elmList(3, [
+                        elmList([
                             elmFunctionCall(
                                 subselectorFunction,
-                                elmList(4, [
+                                elmList([
                                     `Css.Global.selector ${elmString(subselector.rest.rest)}\n` +
-                                    elmList(5, properties.map(convertDeclaration))
+                                    elmList(properties.map(convertDeclaration))
                                 ])
                             )
                         ])
@@ -84,10 +84,10 @@ function convertDeclarationBlock(propertiesBlock) {
                 return [
                     elmFunctionCall(
                         subselectorFunction,
-                        elmList(3, [
+                        elmList([
                             elmFunctionCall(
                                 `Css.Global.selector ${elmString(subselector.rest.rest)}`,
-                                elmList(4, properties.map(convertDeclaration))
+                                elmList(properties.map(convertDeclaration))
                             )
                         ])
                     )
@@ -97,12 +97,14 @@ function convertDeclarationBlock(propertiesBlock) {
     );
 
     if (plainProperties.length === 1 && subselectors.length === 0) {
-        return "    " + plainProperties[0];
+        return indented(plainProperties[0]);
     }
 
-    return (
-        `    Css.batch\n` +
-        elmList(2, plainProperties.concat(Array.from(subselectors).reverse()))
+    return indented(
+        elmFunctionCall(
+            `Css.batch`,
+            elmList(plainProperties.concat(Array.from(subselectors).reverse()))
+        )
     );
 }
 
@@ -133,11 +135,9 @@ function elmString(content) {
     return `"${content.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
 }
 
-function elmFunctionCall(firstLine, nextLine) {
-    return firstLine + "\n" + nextLine;
-}
+const elmFunctionCall = (firstLine, nextLine) => indentation => firstLine + "\n" + nextLine(indentation + 1)
 
-function elmList(indentation, elements) {
+const elmList = elements => indentation => {
     const indent = " ".repeat(Math.max(0, indentation * 4));
     if (elements.length === 0) {
         return indent + "[]";
@@ -147,7 +147,7 @@ function elmList(indentation, elements) {
     elements.forEach(elem => {
         str += indent;
         str += idx === 0 ? "[ " : ", ";
-        str += elem;
+        str += elem(indentation);
         str += "\n";
         idx++;
     });
@@ -155,3 +155,5 @@ function elmList(indentation, elements) {
     str += "]";
     return str;
 }
+
+const indented = str => indentation => " ".repeat(Math.max(0, indentation * 4)) + str(indentation);

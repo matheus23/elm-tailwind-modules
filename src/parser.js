@@ -115,11 +115,17 @@ function recognizeSelectorRest(selector) {
 
     const type = selector[0].type;
     const rest = CssWhat.stringify([selector.slice(1)]);
-    const supportedTypes = ["child", "descendant", "adjacent", "sibling"];
+    const supportedBasicTypes = ["child", "descendant", "adjacent", "sibling"];
 
-    if (supportedTypes.some(supported => supported === type)) {
+    if (supportedBasicTypes.some(supported => supported === type)) {
         return { type, rest };
     }
+
+    // const supportedPseudos = ["pseudo", "pseudo-element"];
+
+    // if (supportedPseudos.some(supported => supported === type) && supported.length === 1) {
+    //     return { type, rest: selector[0].name };
+    // }
 
     throw new Error(`Unsupported type: ${type}`);
 }
