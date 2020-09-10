@@ -66,8 +66,10 @@ function convertDeclarationBlock(propertiesBlock) {
                             elmFunctionCall(
                                 subselectorFunction,
                                 elmList([
-                                    `Css.Global.selector ${elmString(subselector.rest.rest)}\n` +
-                                    elmList(properties.map(convertDeclaration))
+                                    elmFunctionCall(
+                                        `Css.Global.selector ${elmString(subselector.rest.rest)}`,
+                                        elmList(properties.map(convertDeclaration))
+                                    )
                                 ])
                             )
                         ])
