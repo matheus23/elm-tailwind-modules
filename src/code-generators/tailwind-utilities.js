@@ -49,21 +49,7 @@ function convertProperties({ type, rest }, convertedProperties) {
     }
 
     if (type === "pseudo") {
-        return [
-            elmFunctionCall(
-                `Css.pseudoClass ${elmString(rest)}`,
-                elmList(convertedProperties)
-            )
-        ];
-    }
-
-    if (type === "pseudo-element") {
-        return [
-            elmFunctionCall(
-                `Css.pseudoElement ${elmString(rest)}`,
-                elmList(convertedProperties)
-            )
-        ];
+        return convertPseudoProperties(rest, convertedProperties);
     }
 
     const subselectorFunction = subselectorFunctionFromType(type);
@@ -77,6 +63,27 @@ function convertProperties({ type, rest }, convertedProperties) {
         ])
     );
     return [subselectorTransformed];
+}
+
+function convertPseudoProperties(selectorList, convertedProperties) {
+    if (selectorList.length === 0) {
+        return convertedProperties;
+    }
+
+    const selector = selectorList[0];
+    const functionName = pseudoselectorFunction(selector.type);
+
+    return [
+        elmFunctionCall(
+            `${functionName} ${elmString(selector.name)}`,
+            elmList(
+                convertPseudoProperties(
+                    selectorList.splice(1),
+                    convertedProperties
+                )
+            )
+        )
+    ];
 }
 
 function convertMediaQueryWrap(mediaQuery, propertiesExpressions) {
@@ -141,6 +148,14 @@ function subselectorFunctionFromType(t) {
         case "adjacent": return "Css.Global.adjacentSiblings";
         case "sibling": return "Css.Global.generalSiblings";
         default: throw new Error("unrecognized subselector type " + t);
+    }
+}
+
+function pseudoselectorFunction(t) {
+    switch (t) {
+        case "pseudo": return "Css.pseudoClass";
+        case "pseudo-element": return "Css.pseudoElement";
+        default: throw new Error("unrecognized pseudoselector type " + t);
     }
 }
 

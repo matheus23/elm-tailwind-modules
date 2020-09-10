@@ -122,10 +122,16 @@ function recognizeSelectorRest(selector) {
     }
 
     const supportedPseudos = ["pseudo", "pseudo-element"];
-    const isPseudo = supportedPseudos.some(supported => supported === type);
+    const isSupportedPseudo = typ => supportedPseudos.some(supported => supported === typ);
+    const everyPartIsSupportedPseudo = selector.every(part => isSupportedPseudo(part.type));
 
-    if (isPseudo && selector.length === 1) {
-        return { type, rest: selector[0].name };
+    if (everyPartIsSupportedPseudo) {
+        return {
+            type: "pseudo",
+            rest: selector.map(
+                part => ({ type: part.type, name: part.name })
+            )
+        };
     }
 
     throw new Error(`Unsupported type: ${type}`);

@@ -157,6 +157,11 @@ form_checkbox =
         , Css.property \\"border-color\\" \\"#d2d6dc\\"
         , Css.property \\"border-width\\" \\"1px\\"
         , Css.property \\"border-radius\\" \\"0.25rem\\"
+        , Css.pseudoClass \\"checked\\"
+            [ Css.pseudoClass \\"focus\\"
+                [ Css.property \\"border-color\\" \\"transparent\\"
+                ]
+            ]
         , Css.pseudoClass \\"focus\\"
             [ Css.property \\"outline\\" \\"none\\"
             , Css.property \\"box-shadow\\" \\"0 0 0 3px rgba(164, 202, 254, 0.45)\\"
@@ -199,6 +204,11 @@ form_radio =
         , Css.property \\"background-color\\" \\"#ffffff\\"
         , Css.property \\"border-color\\" \\"#d2d6dc\\"
         , Css.property \\"border-width\\" \\"1px\\"
+        , Css.pseudoClass \\"checked\\"
+            [ Css.pseudoClass \\"focus\\"
+                [ Css.property \\"border-color\\" \\"transparent\\"
+                ]
+            ]
         , Css.pseudoClass \\"focus\\"
             [ Css.property \\"outline\\" \\"none\\"
             , Css.property \\"box-shadow\\" \\"0 0 0 3px rgba(164, 202, 254, 0.45)\\"
@@ -31597,6 +31607,11 @@ form_checkbox =
         , Css.property \\"border-color\\" \\"#d2d6dc\\"
         , Css.property \\"border-width\\" \\"1px\\"
         , Css.property \\"border-radius\\" \\"0.25rem\\"
+        , Css.pseudoClass \\"checked\\"
+            [ Css.pseudoClass \\"focus\\"
+                [ Css.property \\"border-color\\" \\"transparent\\"
+                ]
+            ]
         , Css.pseudoClass \\"focus\\"
             [ Css.property \\"outline\\" \\"none\\"
             , Css.property \\"box-shadow\\" \\"0 0 0 3px rgba(164, 202, 254, 0.45)\\"
@@ -31645,6 +31660,11 @@ form_radio =
         , Css.property \\"background-color\\" \\"#ffffff\\"
         , Css.property \\"border-color\\" \\"#d2d6dc\\"
         , Css.property \\"border-width\\" \\"1px\\"
+        , Css.pseudoClass \\"checked\\"
+            [ Css.pseudoClass \\"focus\\"
+                [ Css.property \\"border-color\\" \\"transparent\\"
+                ]
+            ]
         , Css.pseudoClass \\"focus\\"
             [ Css.property \\"outline\\" \\"none\\"
             , Css.property \\"box-shadow\\" \\"0 0 0 3px rgba(164, 202, 254, 0.45)\\"
@@ -64922,6 +64942,11 @@ form_checkbox =
         , Css.property \\"border-color\\" \\"#d2d6dc\\"
         , Css.property \\"border-width\\" \\"1px\\"
         , Css.property \\"border-radius\\" \\"0.25rem\\"
+        , Css.pseudoClass \\"checked\\"
+            [ Css.pseudoClass \\"focus\\"
+                [ Css.property \\"border-color\\" \\"transparent\\"
+                ]
+            ]
         , Css.pseudoClass \\"focus\\"
             [ Css.property \\"outline\\" \\"none\\"
             , Css.property \\"box-shadow\\" \\"0 0 0 3px rgba(164, 202, 254, 0.45)\\"
@@ -64964,6 +64989,11 @@ form_radio =
         , Css.property \\"background-color\\" \\"#ffffff\\"
         , Css.property \\"border-color\\" \\"#d2d6dc\\"
         , Css.property \\"border-width\\" \\"1px\\"
+        , Css.pseudoClass \\"checked\\"
+            [ Css.pseudoClass \\"focus\\"
+                [ Css.property \\"border-color\\" \\"transparent\\"
+                ]
+            ]
         , Css.pseudoClass \\"focus\\"
             [ Css.property \\"outline\\" \\"none\\"
             , Css.property \\"box-shadow\\" \\"0 0 0 3px rgba(164, 202, 254, 0.45)\\"

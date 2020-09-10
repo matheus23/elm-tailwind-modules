@@ -109,8 +109,6 @@ embed,
 object
 img,
 video
-.form-checkbox:checked:focus
-.form-radio:checked:focus
 to
 75%, 100%
 50%
