@@ -20,34 +20,28 @@ function elmHeaderCss(moduleName) {
 import Css
 import Css.Global
 import Css.Media
-import Html.Styled
 `;
 }
 
 function elmUnrecognizedToFunctions(unrecognizedBlocks) {
     return `
 
-globalStyles : Html.Styled.Html msg
+globalStyles : List Css.Global.Snippet
 globalStyles =
 ${convertUnrecognizeds(unrecognizedBlocks)(1)}
 `;
 }
 
 function convertUnrecognizeds(unrecognizeds) {
-    return indented(
-        elmFunctionCall(
-            `Css.Global.global`,
-            elmList(
-                unrecognizeds.flatMap(({ selector, properties, mediaQuery }) => {
-                    return convertMediaQueryWrap(mediaQuery, `Css.Global.mediaQuery`, [
-                        elmFunctionCall(
-                            `Css.Global.selector ${elmString(selector)}`,
-                            elmList(properties.map(convertDeclaration))
-                        )
-                    ])
-                })
-            )
-        )
+    return elmList(
+        unrecognizeds.flatMap(({ selector, properties, mediaQuery }) => {
+            return convertMediaQueryWrap(mediaQuery, `Css.Global.mediaQuery`, [
+                elmFunctionCall(
+                    `Css.Global.selector ${elmString(selector)}`,
+                    elmList(properties.map(convertDeclaration))
+                )
+            ])
+        })
     );
 }
 
