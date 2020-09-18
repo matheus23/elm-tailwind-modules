@@ -9,10 +9,7 @@
   - Either: Find component css selectors (group by .prose, e.g.)
   - Or: Run differently for `@tailwind utilities` and `@tailwind components`
   - [X] E.g. Handle tailwindcss' typography plugin: do '.prose' correctly.
-* [X] [Fuck](https://css-tricks.com/logic-in-media-queries/#overriding)
-  - Think about how to do breakpoints differently.
-  - Analyse how elm-css/elm-origami generates media queries. Maybe there's no problem if the order is correct?
-  - There's no problem when the order is correct. elm-css is deterministically generating the order. We just have to reverse the list once.
+* [ ] Generate breakpoint utilities by analysing tailwind config
 
 # Goals
 
