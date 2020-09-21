@@ -2,6 +2,17 @@ import { toElmName, fixClass } from "./helpers.js";
 import CssWhat from "css-what";
 import deepEqual from "deep-equal";
 
+const cssWhatErrors = [
+    "Unmatched selector: ",
+    "Expected name, found ",
+    "Empty sub-selector",
+    "Malformed attribute selector: ",
+    "Unmatched quotes in :",
+    "Missing closing parenthesis in :",
+    "Parenthesis not matched",
+    "Empty sub-selector",
+]
+
 export function groupDeclarationBlocksByClass(postCssRoot) {
     let rules = [];
 
@@ -25,8 +36,11 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
         try {
             selector = CssWhat.parse(rule.selector);
         } catch (e) {
-            handleUnrecognized(unrecognized, rule);
-            return;
+            if (cssWhatErrors.some(msg => e.message.startsWith(msg))) {
+                handleUnrecognized(unrecognized, rule);
+                return;
+            }
+            throw e;
         }
 
 
@@ -61,8 +75,11 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
                 rest: recognizeSelectorRest(part.rest),
             }));
         } catch (e) {
-            handleUnrecognized(unrecognized, rule);
-            return;
+            if (e.message.startsWith("Unsupported type")) {
+                handleUnrecognized(unrecognized, rule);
+                return;
+            }
+            throw e;
         }
 
 
