@@ -24,10 +24,7 @@
     "tailwindcss"
   ],
   "license": "MIT",
-  "peerDependencies": {
-    "tailwindcss": "^1.6.2"
-  },
-  "devDependencies": {
+  "dependencies": {
     "@tailwindcss/ui": "^0.6.0",
     "autoprefixer": "^9.8.6",
     "css-what": "^3.3.0",
