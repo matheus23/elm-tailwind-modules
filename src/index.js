@@ -2,8 +2,10 @@ import { promises as fs } from "fs";
 import path from "path";
 import postcss from "postcss";
 import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities.js";
+import * as tailwindBreakpointsGeneration from "./code-generators/tailwind-breakpoints.js";
 import * as parser from "./parser.js";
 import tailwindcss from "tailwindcss";
+import resolveConfig from "tailwindcss/resolveConfig.js";
 
 const defaultTailwindConfig = {
 };
@@ -15,7 +17,10 @@ export default async function run({
     tailwindConfig = defaultTailwindConfig,
     skipSaving = false,
 }) {
-    let elmModule;
+    let utilitiesModule;
+    let breakpointsModule;
+
+    const resolvedConfig = resolveConfig(tailwindConfig);
 
     const afterTailwindPlugin = {
         postcssPlugin: "elm-tailwind-origami",
@@ -24,10 +29,13 @@ export default async function run({
             const modulePath = path.join.apply(null, moduleName.split("."));
 
             // setup standard utility code generation promise
-            elmModule = tailwindUtilityGeneration.generateElmModule(moduleName, blocksByClass);
+            utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass);
+            breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig);
+
             if (!skipSaving) {
-                const filename = await writeFile(path.resolve(directory, `${modulePath}.elm`), elmModule);
-                console.log("Saved", filename);
+                const filename = await writeFile(path.resolve(directory, `${modulePath}/Utilities.elm`), utilitiesModule);
+                const filename2 = await writeFile(path.resolve(directory, `${modulePath}/Breakpoints.elm`), breakpointsModule);
+                console.log("Saved", filename, filename2);
             }
         }
     };
@@ -40,7 +48,7 @@ export default async function run({
         afterTailwindPlugin
     ]).process("@tailwind base;\n@tailwind components;\n@tailwind utilities;", { from, to });
 
-    return elmModule;
+    return { utilitiesModule, breakpointsModule };
 }
 
 /**
