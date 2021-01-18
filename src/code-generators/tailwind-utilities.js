@@ -1,3 +1,5 @@
+import * as generate from "./generate.js";
+
 // PUBLIC INTERFACE
 
 
@@ -33,12 +35,12 @@ ${convertUnrecognizeds(unrecognizedBlocks)(1)}
 }
 
 function convertUnrecognizeds(unrecognizeds) {
-    return elmList(
+    return generate.elmList(
         unrecognizeds.flatMap(({ selector, properties, mediaQuery }) => {
             return convertMediaQueryWrap(mediaQuery, `Css.Global.mediaQuery`, [
-                elmFunctionCall(
-                    `Css.Global.selector ${elmString(selector)}`,
-                    elmList(properties.map(convertDeclaration))
+                generate.elmFunctionCall(
+                    `Css.Global.selector ${generate.elmString(selector)}`,
+                    generate.elmList(properties.map(convertDeclaration))
                 )
             ])
         })
@@ -63,7 +65,7 @@ ${convertDeclarationBlock(propertiesBlock)(1)}
 }
 
 function convertDeclaration(propertiesBlock) {
-    return indentation => `Css.property ${elmString(propertiesBlock.prop)} ${elmString(propertiesBlock.value)}`;
+    return indentation => `Css.property ${generate.elmString(propertiesBlock.prop)} ${generate.elmString(propertiesBlock.value)}`;
 }
 
 function convertProperties({ type, rest }, convertedProperties) {
@@ -76,12 +78,12 @@ function convertProperties({ type, rest }, convertedProperties) {
     }
 
     const subselectorFunction = subselectorFunctionFromType(type);
-    const subselectorTransformed = elmFunctionCall(
+    const subselectorTransformed = generate.elmFunctionCall(
         subselectorFunction,
-        elmList([
-            elmFunctionCall(
-                `Css.Global.selector ${elmString(rest)}`,
-                elmList(convertedProperties)
+        generate.elmList([
+            generate.elmFunctionCall(
+                `Css.Global.selector ${generate.elmString(rest)}`,
+                generate.elmList(convertedProperties)
             )
         ])
     );
@@ -97,9 +99,9 @@ function convertPseudoProperties(selectorList, convertedProperties) {
     const functionName = pseudoselectorFunction(selector.type);
 
     return [
-        elmFunctionCall(
-            `${functionName} ${elmString(selector.name)}`,
-            elmList(
+        generate.elmFunctionCall(
+            `${functionName} ${generate.elmString(selector.name)}`,
+            generate.elmList(
                 convertPseudoProperties(
                     selectorList.splice(1),
                     convertedProperties
@@ -115,9 +117,9 @@ function convertMediaQueryWrap(mediaQuery, functionName, propertiesExpressions) 
     }
 
     return [
-        elmFunctionCall(
-            `${functionName} [ ${elmString(mediaQuery)} ]`,
-            elmList(propertiesExpressions)
+        generate.elmFunctionCall(
+            `${functionName} [ ${generate.elmString(mediaQuery)} ]`,
+            generate.elmList(propertiesExpressions)
         )
     ]
 }
@@ -143,13 +145,13 @@ function convertDeclarationBlock(propertiesBlock) {
     );
 
     if (plainProperties.length === 1 && subselectors.length === 0) {
-        return indented(plainProperties[0]);
+        return generate.indented(plainProperties[0]);
     }
 
-    return indented(
-        elmFunctionCall(
+    return generate.indented(
+        generate.elmFunctionCall(
             `Css.batch`,
-            elmList(plainProperties.concat(Array.from(subselectors).reverse()))
+            generate.elmList(plainProperties.concat(Array.from(subselectors).reverse()))
         )
     );
 }
@@ -182,36 +184,3 @@ function pseudoselectorFunction(t) {
         default: throw new Error("unrecognized pseudoselector type " + t);
     }
 }
-
-// ELM CODEGEN
-
-function elmString(content) {
-    return `"${content
-        .replace(/\\/g, "\\\\")
-        .replace(/"/g, '\\"')
-        .replace(/\n/g, "\\n")
-        }"`;
-}
-
-const elmFunctionCall = (firstLine, nextLine) => indentation => firstLine + "\n" + nextLine(indentation + 1)
-
-const elmList = elements => indentation => {
-    const indent = " ".repeat(Math.max(0, indentation * 4));
-    if (elements.length === 0) {
-        return indent + "[]";
-    }
-    let str = "";
-    let idx = 0;
-    elements.forEach(elem => {
-        str += indent;
-        str += idx === 0 ? "[ " : ", ";
-        str += elem(indentation);
-        str += "\n";
-        idx++;
-    });
-    str += indent;
-    str += "]";
-    return str;
-}
-
-const indented = str => indentation => " ".repeat(Math.max(0, indentation * 4)) + str(indentation);
