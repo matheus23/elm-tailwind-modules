@@ -17,22 +17,20 @@ export default async function run({
 }) {
     let elmModule;
 
-    const afterTailwindPlugin = postcss.plugin(
-        "elm-tailwind-origami",
-        function withConfig(config) {
-            return async (root, result) => {
-                const blocksByClass = parser.groupDeclarationBlocksByClass(root);
-                const modulePath = path.join.apply(null, moduleName.split("."));
+    const afterTailwindPlugin = {
+        postcssPlugin: "elm-tailwind-origami",
+        async OnceExit(root) {
+            const blocksByClass = parser.groupDeclarationBlocksByClass(root);
+            const modulePath = path.join.apply(null, moduleName.split("."));
 
-                // setup standard utility code generation promise
-                elmModule = tailwindUtilityGeneration.generateElmModule(moduleName, blocksByClass);
-                if (!skipSaving) {
-                    const filename = await writeFile(path.resolve(directory, `${modulePath}.elm`), elmModule);
-                    console.log("Saved", filename);
-                }
-            };
+            // setup standard utility code generation promise
+            elmModule = tailwindUtilityGeneration.generateElmModule(moduleName, blocksByClass);
+            if (!skipSaving) {
+                const filename = await writeFile(path.resolve(directory, `${modulePath}.elm`), elmModule);
+                console.log("Saved", filename);
+            }
         }
-    );
+    };
 
     const from = "generated in-memory";
     const to = "output in-memory";
