@@ -17,7 +17,9 @@
     "test:node-only": "node --trace-warnings --unhandled-rejections=strict test-example/test-run.js"
   },
   "ava": {
-    "files": [ "test/**/*" ]
+    "files": [
+      "test/**/*"
+    ]
   },
   "keywords": [
     "postcss",
