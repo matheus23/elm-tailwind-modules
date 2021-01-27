@@ -1,5 +1,5 @@
-import elmTailwindOrigami from "../../src/index.js";
-import tailwindConfig from "../tailwind.config.js";
+import elmTailwindOrigami from "../src/index.js";
+import tailwindConfig from "../test-example/tailwind.config.js";
 import autoprefixer from "autoprefixer";
 import tailwindui from "@tailwindcss/ui";
 import test from "ava";

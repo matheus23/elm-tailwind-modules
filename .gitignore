@@ -1,8 +1,8 @@
 node_modules
 dist
 
-test/src
-test/gen
+test-example/src/Tailwind
+test-example/gen
 elm-stuff
 
 .vscode/
