@@ -1,7 +1,7 @@
 
 module Main exposing (..)
 
-import Tailwind
+import Tailwind.Utilities as Tailwind
 import Css
 import Css.Media
 import Css.Global

@@ -10,8 +10,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "yarn test:clean && yarn test:elm-compile && yarn jest",
-    "jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config test/jest.config.json",
+    "test": "yarn test:clean && yarn test:elm-compile && ava",
     "test:clean": "rm -rf test/src && rm -rf test/gen && rm -rf test/dist",
     "test:elm-compile": "node --trace-warnings --unhandled-rejections=strict test/test-run.js && cd test && elm make Main.elm --output=/dev/null",
     "test:node-only": "node --trace-warnings --unhandled-rejections=strict test/test-run.js"
@@ -37,6 +36,7 @@
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
+    "ava": "^3.15.0",
     "postcss": "^8.2.4"
   },
   "peerDependencies": {

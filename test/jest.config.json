@@ -1,4 +1,0 @@
-{
-    "testEnvironment": "jest-environment-node",
-    "transform": {}
-}

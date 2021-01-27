@@ -2,9 +2,10 @@ import elmTailwindOrigami from "../../src/index.js";
 import tailwindConfig from "../tailwind.config.js";
 import autoprefixer from "autoprefixer";
 import tailwindui from "@tailwindcss/ui";
+import test from "ava";
 
 
-test("snapshot of generated module", async () => {
+test("snapshot of generated module", async assert => {
     const generatedModule = await elmTailwindOrigami({
         directory: "./test/src/",
         moduleName: "Tailwind.Basic",
@@ -13,11 +14,11 @@ test("snapshot of generated module", async () => {
         skipSaving: true,
     });
 
-    expect(generatedModule).toMatchSnapshot();
+    assert.snapshot(generatedModule);
 });
 
 
-test("snapshot of generated module with autoprefixer", async () => {
+test("snapshot of generated module with autoprefixer", async assert => {
     const generatedModule = await elmTailwindOrigami({
         directory: "./test/src/",
         moduleName: "Tailwind.WithAutoprefixer",
@@ -26,11 +27,11 @@ test("snapshot of generated module with autoprefixer", async () => {
         skipSaving: true,
     });
 
-    expect(generatedModule).toMatchSnapshot();
+    assert.snapshot(generatedModule);
 });
 
 
-test("snapshot of generated module with tailwindui", async () => {
+test("snapshot of generated module with tailwindui", async assert => {
     const generatedModule = await elmTailwindOrigami({
         directory: "./test/src/",
         moduleName: "Tailwind.WithAutoprefixer",
@@ -39,6 +40,6 @@ test("snapshot of generated module with tailwindui", async () => {
         skipSaving: true,
     });
 
-    expect(generatedModule).toMatchSnapshot();
+    assert.snapshot(generatedModule);
 });
 
