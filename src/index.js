@@ -15,7 +15,7 @@ export default async function run({
     moduleName = "Tailwind",
     postcssPlugins = [],
     tailwindConfig = defaultTailwindConfig,
-    skipSaving = false,
+    debugFunction = console.log,
 }) {
     let utilitiesModule;
     let breakpointsModule;
@@ -25,14 +25,14 @@ export default async function run({
     const afterTailwindPlugin = {
         postcssPlugin: "elm-tailwind-origami",
         async OnceExit(root) {
-            const blocksByClass = parser.groupDeclarationBlocksByClass(root);
+            const blocksByClass = parser.groupDeclarationBlocksByClass(root, debugFunction);
             const modulePath = path.join.apply(null, moduleName.split("."));
 
             // setup standard utility code generation promise
             utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass);
             breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig);
 
-            if (!skipSaving) {
+            if (directory != null) {
                 const filename = await writeFile(path.resolve(directory, `${modulePath}/Utilities.elm`), utilitiesModule);
                 const filename2 = await writeFile(path.resolve(directory, `${modulePath}/Breakpoints.elm`), breakpointsModule);
                 console.log("Saved", filename, filename2);
@@ -52,7 +52,7 @@ export default async function run({
 }
 
 /**
- * Async helper to write defined file to disk
+ * Async helper to write given file to disk
  */
 async function writeFile(fname, content) {
     const folder = path.dirname(fname);

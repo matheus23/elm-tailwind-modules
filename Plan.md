@@ -17,4 +17,4 @@
 
 * [ ] Use typescript
 * [ ] Use rollup to compile to udm/commonjs/esm
-* [ ] Drop jest, use ava
+* [X] Drop jest, use ava

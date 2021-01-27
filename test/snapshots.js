@@ -7,12 +7,11 @@ import test from "ava";
 
 test("snapshot of generated module", async t => {
     const generatedModule = await elmTailwindOrigami({
-        directory: "./test/src/",
+        directory: null,
         moduleName: "Tailwind.Basic",
         postcssPlugins: [],
         tailwindConfig,
         debugFunction: () => { },
-        skipSaving: true,
     });
 
     t.snapshot(generatedModule.utilitiesModule, { id: t.title + ": Utilities Module" });
@@ -22,12 +21,11 @@ test("snapshot of generated module", async t => {
 
 test("snapshot of generated module with autoprefixer", async t => {
     const generatedModule = await elmTailwindOrigami({
-        directory: "./test/src/",
+        directory: "./test-example/src/",
         moduleName: "Tailwind.WithAutoprefixer",
         postcssPlugins: [autoprefixer],
         tailwindConfig,
         debugFunction: () => { },
-        skipSaving: true,
     });
 
     t.snapshot(generatedModule.utilitiesModule, { id: t.title + ": Utilities Module" });
@@ -37,12 +35,11 @@ test("snapshot of generated module with autoprefixer", async t => {
 
 test("snapshot of generated module with tailwindui", async t => {
     const generatedModule = await elmTailwindOrigami({
-        directory: "./test/src/",
+        directory: "./test-example/src/",
         moduleName: "Tailwind.WithAutoprefixer",
         postcssPlugins: [tailwindui],
         tailwindConfig,
         debugFunction: () => { },
-        skipSaving: true,
     });
 
     t.snapshot(generatedModule.utilitiesModule, { id: t.title + ": Utilities Module" });

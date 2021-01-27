@@ -13,7 +13,7 @@ const cssWhatErrors = [
     "Empty sub-selector",
 ]
 
-export function groupDeclarationBlocksByClass(postCssRoot) {
+export function groupDeclarationBlocksByClass(postCssRoot, debugFunction) {
     let rules = [];
 
     postCssRoot.walkRules(rule => {
@@ -37,7 +37,7 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
             selector = CssWhat.parse(rule.selector);
         } catch (e) {
             if (cssWhatErrors.some(msg => e.message.startsWith(msg))) {
-                handleUnrecognized(unrecognized, rule);
+                handleUnrecognized(unrecognized, rule, debugFunction);
                 return;
             }
             throw e;
@@ -52,7 +52,7 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
         const allEqual = arr => arr.every(v => v === arr[0])
 
         if (partClasses.some(className => className == null) || !allEqual(partClasses)) {
-            handleUnrecognized(unrecognized, rule);
+            handleUnrecognized(unrecognized, rule, debugFunction);
             return;
         }
 
@@ -76,7 +76,7 @@ export function groupDeclarationBlocksByClass(postCssRoot) {
             }));
         } catch (e) {
             if (e.message.startsWith("Unsupported type")) {
-                handleUnrecognized(unrecognized, rule);
+                handleUnrecognized(unrecognized, rule, debugFunction);
                 return;
             }
             throw e;
@@ -183,10 +183,10 @@ function stripClassSelector(selectorPart) {
     };
 }
 
-function handleUnrecognized(unrecognized, rule) {
+function handleUnrecognized(unrecognized, rule, debugFunction) {
     if (rule.parent.type === "atrule" && rule.parent.name !== "media") {
-        console.log("Couldn't make sense of this rule");
-        console.log(rule.toString());
+        debugFunction("Couldn't make sense of this rule");
+        debugFunction(rule.toString());
         return;
     }
 
