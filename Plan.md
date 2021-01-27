@@ -16,7 +16,7 @@
 ## Refactoring
 
 * [X] Use typescript
-* [ ] Use typescript for tests
+* [X] Use typescript for tests
 * [ ] Use rollup to compile to udm/commonjs/esm
 * [X] Drop jest, use ava
 

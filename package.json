@@ -18,7 +18,13 @@
   "ava": {
     "files": [
       "test/**/*"
-    ]
+    ],
+    "extensions": [
+			"ts"
+		],
+		"require": [
+			"ts-node/register"
+		]
   },
   "keywords": [
     "postcss",

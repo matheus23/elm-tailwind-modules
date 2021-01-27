@@ -1,4 +1,4 @@
-import elmTailwindOrigami from "../src/index.js";
+import elmTailwindOrigami from "../src/index";
 import tailwindConfig from "../test-example/tailwind.config.js";
 import autoprefixer from "autoprefixer";
 import tailwindui from "@tailwindcss/ui";
