@@ -1,4 +1,9 @@
-export function elmString(content) {
+export interface Indentable {
+    (indentation: number): string
+}
+
+
+export function elmString(content: string): string {
     return `"${content
         .replace(/\\/g, "\\\\")
         .replace(/"/g, '\\"')
@@ -6,9 +11,10 @@ export function elmString(content) {
         }"`;
 }
 
-export const elmFunctionCall = (firstLine, nextLine) => indentation => firstLine + "\n" + nextLine(indentation + 1)
+export const elmFunctionCall = (firstLine: string, nextLine: Indentable): Indentable => indentation =>
+        firstLine + "\n" + nextLine(indentation + 1)
 
-export const elmList = elements => indentation => {
+export const elmList = (elements: Array<Indentable>): Indentable => indentation => {
     const indent = " ".repeat(Math.max(0, indentation * 4));
     if (elements.length === 0) {
         return indent + "[]";

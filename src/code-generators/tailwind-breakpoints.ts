@@ -1,18 +1,34 @@
-import * as generate from "./generate.js";
-import { toElmName } from "../helpers.js";
+import * as generate from "./generate";
+import { toElmName } from "../helpers";
 
 
-export function generateElmModule(moduleName, resolvedConfig) {
+interface TailwindResolvedConfig {
+    theme: {
+        screens: { [_: string]: TailwindScreen },
+    },
+}
+
+type TailwindScreen = string
+
+interface Breakpoint {
+    name: string,
+    size: string,
+}
+
+
+export function generateElmModule(moduleName: string, resolvedConfig: TailwindResolvedConfig): string {
     return [
         elmHeader(moduleName),
         Object.entries(resolvedConfig.theme.screens)
-            .map(conf => elmBreakpointFunction(convertConfigToBreakpoint(conf)))
+            .map(([screen, size]: [TailwindScreen, string]) =>
+                elmBreakpointFunction(convertConfigToBreakpoint(screen, size))
+            )
             .join(""),
     ].join("");
 }
 
 
-function elmHeader(moduleName) {
+function elmHeader(moduleName: string): string {
     return `module ${moduleName} exposing (..)
 
 import Css
@@ -20,7 +36,7 @@ import Css.Media
 `;
 }
 
-function convertBreakpointName(screen) {
+function convertBreakpointName(screen: TailwindScreen): string {
     if (screen.endsWith("xl") || screen.endsWith("xs")) {
         const ending = screen.slice(screen.length - 2, screen.length);
         const start = screen.slice(0, screen.length - 2);
@@ -35,14 +51,14 @@ function convertBreakpointName(screen) {
 }
 
 // Full breakpointSize reference: https://tailwindcss.com/docs/breakpoints
-function convertConfigToBreakpoint([screen, size]) {
+function convertConfigToBreakpoint(screen: TailwindScreen, size: string): Breakpoint {
     return {
         name: convertBreakpointName(screen),
         size: size,
     };
 }
 
-function elmBreakpointFunction({ name, size }) {
+function elmBreakpointFunction({ name, size }: Breakpoint): string {
     return `
 
 ${name} : List Css.Style -> Css.Style

@@ -1,4 +1,4 @@
-import elmTailwindOrigami from "../src/index.js";
+import elmTailwindOrigami from "../src/index";
 import tailwindConfig from "./tailwind.config.js";
 
 elmTailwindOrigami({

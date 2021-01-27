@@ -1,9 +1,9 @@
 import { promises as fs } from "fs";
 import path from "path";
-import postcss from "postcss";
-import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities.js";
-import * as tailwindBreakpointsGeneration from "./code-generators/tailwind-breakpoints.js";
-import * as parser from "./parser.js";
+import * as postcss from "postcss";
+import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities";
+import * as tailwindBreakpointsGeneration from "./code-generators/tailwind-breakpoints";
+import * as parser from "./parser";
 import tailwindcss from "tailwindcss";
 import resolveConfig from "tailwindcss/resolveConfig.js";
 
@@ -17,14 +17,14 @@ export default async function run({
     tailwindConfig = defaultTailwindConfig,
     debugFunction = console.log,
 }) {
-    let utilitiesModule;
-    let breakpointsModule;
+    let utilitiesModule: undefined | string;
+    let breakpointsModule : undefined | string;
 
     const resolvedConfig = resolveConfig(tailwindConfig);
 
     const afterTailwindPlugin = {
         postcssPlugin: "elm-tailwind-origami",
-        async OnceExit(root) {
+        async OnceExit(root: postcss.Root) {
             const blocksByClass = parser.groupDeclarationBlocksByClass(root, debugFunction);
             const modulePath = path.join.apply(null, moduleName.split("."));
 
@@ -42,7 +42,7 @@ export default async function run({
 
     const from = "generated in-memory";
     const to = "output in-memory";
-    await postcss([
+    await postcss.default([
         tailwindcss(tailwindConfig),
         ...postcssPlugins,
         afterTailwindPlugin
@@ -54,7 +54,7 @@ export default async function run({
 /**
  * Async helper to write given file to disk
  */
-async function writeFile(fname, content) {
+async function writeFile(fname: string, content: string): Promise<typeof fname> {
     const folder = path.dirname(fname);
     await fs.mkdir(folder, { recursive: true });
     await fs.writeFile(fname, content);

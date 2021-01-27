@@ -1,6 +1,21 @@
-import { toElmName, fixClass } from "./helpers.js";
-import CssWhat from "css-what";
+import { toElmName, fixClass } from "./helpers";
+import * as CssWhat from "css-what";
 import deepEqual from "deep-equal";
+import * as postcss from "postcss";
+import {
+    CssProperty,
+    DebugFunction,
+    GroupedDeclarations,
+    isBasicSubselectorType,
+    isPseudoElementSelector,
+    isPseudoSelector,
+    PropertiesBySelector,
+    RecognizedDeclaration,
+    Subselector,
+    SubselectorRest,
+    UnrecognizedDeclaration
+} from "./types";
+
 
 const cssWhatErrors = [
     "Unmatched selector: ",
@@ -13,17 +28,17 @@ const cssWhatErrors = [
     "Empty sub-selector",
 ]
 
-export function groupDeclarationBlocksByClass(postCssRoot, debugFunction) {
-    let rules = [];
+export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFunction: DebugFunction): GroupedDeclarations {
+    let rules: postcss.Rule[] = [];
 
     postCssRoot.walkRules(rule => {
         rules.push(rule);
     });
 
     const recognized = new Map();
-    const unrecognized = [];
+    const unrecognized: UnrecognizedDeclaration[] = [];
 
-    const defaultRecognized = () => ({
+    const defaultRecognized = (): RecognizedDeclaration => ({
         propertiesBySelector: [],
     });
 
@@ -32,7 +47,7 @@ export function groupDeclarationBlocksByClass(postCssRoot, debugFunction) {
 
         // parse the selector
 
-        let selector;
+        let selector: CssWhat.Selector[][];
         try {
             selector = CssWhat.parse(rule.selector);
         } catch (e) {
@@ -49,7 +64,7 @@ export function groupDeclarationBlocksByClass(postCssRoot, debugFunction) {
         const parts = selector.map(stripClassSelector);
         const partClasses = parts.map(part => part.class);
 
-        const allEqual = arr => arr.every(v => v === arr[0])
+        const allEqual = <A>(arr: Array<A>): boolean => arr.every(v => v === arr[0])
 
         if (partClasses.some(className => className == null) || !allEqual(partClasses)) {
             handleUnrecognized(unrecognized, rule, debugFunction);
@@ -97,7 +112,11 @@ export function groupDeclarationBlocksByClass(postCssRoot, debugFunction) {
     return { recognized, unrecognized };
 }
 
-function addToSelectorList(propertiesBySelector, subselectors, properties) {
+function addToSelectorList(
+    propertiesBySelector: Array<PropertiesBySelector>,
+    subselectors: Array<Subselector>,
+    properties: Array<CssProperty>,
+): Array<PropertiesBySelector> {
     let result = Array.from(propertiesBySelector);
 
     const index = result.findIndex(elem => deepEqual(elem.subselectors, subselectors));
@@ -118,31 +137,34 @@ function addToSelectorList(propertiesBySelector, subselectors, properties) {
     return result;
 }
 
-function recognizeMediaQuery(rule) {
-    if (rule.parent.type === "atrule" && rule.parent.name === "media") {
-        return rule.parent.params;
+function recognizeMediaQuery(rule: postcss.Rule): string | null {
+    const parent = rule.parent;
+
+    if (isAtRule(parent) && parent.name === "media") {
+        return parent.params;
     }
     return null;
 }
 
-function recognizeSelectorRest(selector) {
+type SupportedPseudo = CssWhat.PseudoSelector | CssWhat.PseudoElement;
+
+function everyPartIsSupportedPseudo(selector: CssWhat.Selector[]): selector is SupportedPseudo[] {
+    return selector.every(part => isPseudoSelector(part) || isPseudoElementSelector(part));
+}
+
+function recognizeSelectorRest(selector: CssWhat.Selector[]): SubselectorRest {
     if (selector.length === 0) {
         return { type: "plain" };
     }
 
     const type = selector[0].type;
     const rest = CssWhat.stringify([selector.slice(1)]);
-    const supportedBasicTypes = ["child", "descendant", "adjacent", "sibling"];
 
-    if (supportedBasicTypes.some(supported => supported === type)) {
+    if (isBasicSubselectorType(type)) {
         return { type, rest };
     }
 
-    const supportedPseudos = ["pseudo", "pseudo-element"];
-    const isSupportedPseudo = typ => supportedPseudos.some(supported => supported === typ);
-    const everyPartIsSupportedPseudo = selector.every(part => isSupportedPseudo(part.type));
-
-    if (everyPartIsSupportedPseudo) {
+    if (everyPartIsSupportedPseudo(selector)) {
         return {
             type: "pseudo",
             rest: selector.map(
@@ -154,7 +176,7 @@ function recognizeSelectorRest(selector) {
     throw new Error(`Unsupported type: ${type}`);
 }
 
-function collectProperties(rule) {
+function collectProperties(rule: postcss.Rule): Array<CssProperty> {
     let properties = [];
     rule.walkDecls(declaration => {
         properties.push({
@@ -165,7 +187,12 @@ function collectProperties(rule) {
     return properties;
 }
 
-function stripClassSelector(selectorPart) {
+function stripClassSelector(
+    selectorPart: Array<CssWhat.Selector>
+): {
+    class: string;
+    rest: CssWhat.Selector[];
+} {
     if (selectorPart.length === 0) {
         return { class: null, rest: [] };
     }
@@ -183,8 +210,10 @@ function stripClassSelector(selectorPart) {
     };
 }
 
-function handleUnrecognized(unrecognized, rule, debugFunction) {
-    if (rule.parent.type === "atrule" && rule.parent.name !== "media") {
+function handleUnrecognized(unrecognized: Array<UnrecognizedDeclaration>, rule: postcss.Rule, debugFunction: DebugFunction): void {
+    const parent = rule.parent;
+
+    if (isAtRule(parent) && parent.name !== "media") {
         debugFunction("Couldn't make sense of this rule");
         debugFunction(rule.toString());
         return;
@@ -195,4 +224,8 @@ function handleUnrecognized(unrecognized, rule, debugFunction) {
         properties: collectProperties(rule),
         mediaQuery: recognizeMediaQuery(rule),
     });
+}
+
+function isAtRule(rule: postcss.Container | postcss.AtRule): rule is postcss.AtRule {
+    return rule.type === "atrule";
 }

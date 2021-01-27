@@ -15,6 +15,10 @@
 
 ## Refactoring
 
-* [ ] Use typescript
+* [X] Use typescript
+* [ ] Use typescript for tests
 * [ ] Use rollup to compile to udm/commonjs/esm
 * [X] Drop jest, use ava
+
+small things
+* [ ] Remove double-iteration over rules in parser

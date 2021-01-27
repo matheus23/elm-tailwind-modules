@@ -8,13 +8,12 @@
     "url": "https://github.com/matheus23/elm-tailwind-origami"
   },
   "main": "src/index.js",
-  "type": "module",
   "scripts": {
     "test": "ava",
     "test-all": "yarn test:clean && yarn test:elm-compile && yarn test",
     "test:clean": "rm -r test-example/src/Tailwind || true",
-    "test:elm-compile": "node --trace-warnings --unhandled-rejections=strict test-example/test-run.js && cd test-example && elm make src/Main.elm --output=/dev/null",
-    "test:node-only": "node --trace-warnings --unhandled-rejections=strict test-example/test-run.js"
+    "test:elm-compile": "ts-node test-example/test-run.ts && cd test-example && elm make src/Main.elm --output=/dev/null",
+    "test:node-only": "ts-node test-example/test-run.ts"
   },
   "ava": {
     "files": [
@@ -43,7 +42,9 @@
   },
   "devDependencies": {
     "ava": "^3.15.0",
-    "postcss": "^8.2.4"
+    "postcss": "^8.2.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
   },
   "peerDependencies": {
     "postcss": "^8.2.4"

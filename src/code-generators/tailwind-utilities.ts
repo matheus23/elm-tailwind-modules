@@ -1,14 +1,26 @@
-import * as generate from "./generate.js";
+import * as generate from "./generate";
+import * as postcss from "postcss";
+import {
+    CssProperty,
+    GroupedDeclarations,
+    isPseudoSubselectorRest,
+    RecognizedDeclaration,
+    SubselectorRest,
+    UnrecognizedDeclaration,
+    PseudoSubselectorRest
+} from "../types";
+
+
 
 // PUBLIC INTERFACE
 
 
-export function generateElmModule(moduleName, blocksByClass) {
-    return (
-        elmHeaderCss(moduleName) +
-        elmUnrecognizedToFunctions(blocksByClass.unrecognized) +
-        elmRecognizedToFunctions(blocksByClass.recognized)
-    );
+export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations): string {
+    return [
+        elmHeaderCss(moduleName),
+        elmUnrecognizedToFunctions(blocksByClass.unrecognized),
+        elmRecognizedToFunctions(blocksByClass.recognized),
+    ].join("");
 }
 
 
@@ -16,7 +28,7 @@ export function generateElmModule(moduleName, blocksByClass) {
 // PRIVATE INTERFACE
 
 
-function elmHeaderCss(moduleName) {
+function elmHeaderCss(moduleName: string): string {
     return `module ${moduleName} exposing (..)
 
 import Css
@@ -25,7 +37,7 @@ import Css.Media
 `;
 }
 
-function elmUnrecognizedToFunctions(unrecognizedBlocks) {
+function elmUnrecognizedToFunctions(unrecognizedBlocks: UnrecognizedDeclaration[]): string {
     return `
 
 globalStyles : List Css.Global.Snippet
@@ -34,7 +46,7 @@ ${convertUnrecognizeds(unrecognizedBlocks)(1)}
 `;
 }
 
-function convertUnrecognizeds(unrecognizeds) {
+function convertUnrecognizeds(unrecognizeds: UnrecognizedDeclaration[]): generate.Indentable {
     return generate.elmList(
         unrecognizeds.flatMap(({ selector, properties, mediaQuery }) => {
             return convertMediaQueryWrap(mediaQuery, `Css.Global.mediaQuery`, [
@@ -47,15 +59,15 @@ function convertUnrecognizeds(unrecognizeds) {
     );
 }
 
-function elmRecognizedToFunctions(recognizedBlocksByClass) {
+function elmRecognizedToFunctions(recognizedBlocksByClass: Map<string, RecognizedDeclaration>): string {
     let body = "";
-    for (let [elmClassName, propertiesBlock] of recognizedBlocksByClass) {
+    recognizedBlocksByClass.forEach((propertiesBlock, elmClassName) => {
         body = body + elmRecognizedFunction(elmClassName, propertiesBlock);
-    }
+    })
     return body;
 }
 
-function elmRecognizedFunction(elmClassName, propertiesBlock) {
+function elmRecognizedFunction(elmClassName: string, propertiesBlock: RecognizedDeclaration): string {
     return `
 
 ${elmClassName} : Css.Style
@@ -64,33 +76,34 @@ ${convertDeclarationBlock(propertiesBlock)(1)}
 `;
 }
 
-function convertDeclaration(propertiesBlock) {
+function convertDeclaration(propertiesBlock: CssProperty): generate.Indentable {
     return indentation => `Css.property ${generate.elmString(propertiesBlock.prop)} ${generate.elmString(propertiesBlock.value)}`;
 }
 
-function convertProperties({ type, rest }, convertedProperties) {
-    if (type === "plain") {
-        return convertedProperties;
+function convertProperties(subselector: SubselectorRest, convertedProperties: generate.Indentable[]) {
+    switch (subselector.type) {
+        case "plain": return convertedProperties;
+        case "pseudo": return convertPseudoProperties(subselector.rest, convertedProperties);
+        case "child":
+        case "descendant":
+        case "adjacent":
+        case "sibling":
+        default: // Heh, it's better with than without it. This way we'd generate an error in subselectorFunctionFromType if something goes wrong.
+            const subselectorFunction = subselectorFunctionFromType(subselector.type);
+            const subselectorTransformed = generate.elmFunctionCall(
+                subselectorFunction,
+                generate.elmList([
+                    generate.elmFunctionCall(
+                        `Css.Global.selector ${generate.elmString(subselector.rest)}`,
+                        generate.elmList(convertedProperties)
+                    )
+                ])
+            );
+            return [subselectorTransformed];
     }
-
-    if (type === "pseudo") {
-        return convertPseudoProperties(rest, convertedProperties);
-    }
-
-    const subselectorFunction = subselectorFunctionFromType(type);
-    const subselectorTransformed = generate.elmFunctionCall(
-        subselectorFunction,
-        generate.elmList([
-            generate.elmFunctionCall(
-                `Css.Global.selector ${generate.elmString(rest)}`,
-                generate.elmList(convertedProperties)
-            )
-        ])
-    );
-    return [subselectorTransformed];
 }
 
-function convertPseudoProperties(selectorList, convertedProperties) {
+function convertPseudoProperties(selectorList: PseudoSubselectorRest["rest"], convertedProperties: generate.Indentable[]): generate.Indentable[] {
     if (selectorList.length === 0) {
         return convertedProperties;
     }
@@ -111,7 +124,7 @@ function convertPseudoProperties(selectorList, convertedProperties) {
     ];
 }
 
-function convertMediaQueryWrap(mediaQuery, functionName, propertiesExpressions) {
+function convertMediaQueryWrap(mediaQuery: string, functionName: string, propertiesExpressions: generate.Indentable[]): generate.Indentable[] {
     if (mediaQuery == null) {
         return propertiesExpressions;
     }
@@ -124,7 +137,7 @@ function convertMediaQueryWrap(mediaQuery, functionName, propertiesExpressions) 
     ]
 }
 
-function convertDeclarationBlock(propertiesBlock) {
+function convertDeclarationBlock(propertiesBlock: RecognizedDeclaration): generate.Indentable {
     const plainProperties = findPlainProperties(propertiesBlock).map(convertDeclaration);
     const subselectors = propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
         subselectors.flatMap(subselector => {
@@ -156,7 +169,7 @@ function convertDeclarationBlock(propertiesBlock) {
     );
 }
 
-function findPlainProperties(propertiesBlock) {
+function findPlainProperties(propertiesBlock: RecognizedDeclaration): CssProperty[] {
     return propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
         subselectors.flatMap(subselector => {
             if (subselector.rest.type === "plain" && subselector.mediaQuery == null) {
@@ -167,7 +180,7 @@ function findPlainProperties(propertiesBlock) {
     );
 }
 
-function subselectorFunctionFromType(t) {
+function subselectorFunctionFromType(t: "child" | "descendant" | "adjacent" | "sibling"): string {
     switch (t) {
         case "child": return "Css.Global.children";
         case "descendant": return "Css.Global.descendants";
@@ -177,7 +190,7 @@ function subselectorFunctionFromType(t) {
     }
 }
 
-function pseudoselectorFunction(t) {
+function pseudoselectorFunction(t: "pseudo" | "pseudo-element"): string {
     switch (t) {
         case "pseudo": return "Css.pseudoClass";
         case "pseudo-element": return "Css.pseudoElement";
