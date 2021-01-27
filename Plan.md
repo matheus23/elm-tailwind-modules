@@ -12,3 +12,9 @@
   * [X] Simple breakpoint module generation
   * [ ] Fix tests
   * [ ] Parse all kinds of breakpoints. Test them.
+
+## Refactoring
+
+* [ ] Use typescript
+* [ ] Use rollup to compile to udm/commonjs/esm
+* [ ] Drop jest, use ava
