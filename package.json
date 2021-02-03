@@ -11,7 +11,8 @@
   "module": "dist/index.es.js",
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
   "types": "dist/index.d.ts",
   "scripts": {
