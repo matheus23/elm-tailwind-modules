@@ -14,6 +14,7 @@ main =
         [ Attr.css
             [ Tailwind.container
             , Tailwind.bg_gray_200
+            , Tailwind.animate_pulse
             ]
         ]
         [ Html.text "Container"

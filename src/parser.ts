@@ -59,7 +59,7 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
                     return;
                 }
 
-                if (child.name === "keyframe") {
+                if (child.name === "keyframes") {
                     const animationName = child.params;
                     let keyframeFrames: Keyframe[] = [];
                     
@@ -82,7 +82,7 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
                     return;
                 }
 
-                if (child.name.endsWith("keyframe")) {
+                if (child.name.endsWith("keyframes")) {
                     // We already cover cases like @-webkit-keyframes with the code above.
                     return;
                 }

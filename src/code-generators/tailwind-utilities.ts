@@ -5,7 +5,8 @@ import {
     RecognizedDeclaration,
     SubselectorRest,
     UnrecognizedDeclaration,
-    PseudoSubselectorRest
+    PseudoSubselectorRest,
+    Keyframe
 } from "../types";
 
 
@@ -17,7 +18,7 @@ export function generateElmModule(moduleName: string, blocksByClass: GroupedDecl
     return [
         elmHeaderCss(moduleName),
         elmUnrecognizedToFunctions(blocksByClass.unrecognized),
-        elmRecognizedToFunctions(blocksByClass.recognized),
+        elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.recognized),
     ].join("");
 }
 
@@ -32,6 +33,7 @@ function elmHeaderCss(moduleName: string): string {
 import Css
 import Css.Global
 import Css.Media
+import Css.Animations
 `;
 }
 
@@ -40,7 +42,10 @@ function elmUnrecognizedToFunctions(unrecognizedBlocks: UnrecognizedDeclaration[
 
 globalStyles : List Css.Global.Snippet
 globalStyles =
-${convertUnrecognizeds(unrecognizedBlocks)(1)}
+${convertUnrecognizeds(unrecognizedBlocks)({
+    indentation: 4,
+    preindent: true,
+})}
 `;
 }
 
@@ -50,32 +55,57 @@ function convertUnrecognizeds(unrecognizeds: UnrecognizedDeclaration[]): generat
             return convertMediaQueryWrap(mediaQuery, `Css.Global.mediaQuery`, [
                 generate.elmFunctionCall(
                     `Css.Global.selector ${generate.elmString(selector)}`,
-                    generate.elmList(properties.map(convertDeclaration))
+                    generate.elmList(properties.map(decl => convertBasicDeclaration("Css.property", decl.prop, decl.value)))
                 )
             ])
         })
     );
 }
 
-function elmRecognizedToFunctions(recognizedBlocksByClass: Map<string, RecognizedDeclaration>): string {
+function elmRecognizedToFunctions(keyframes: Map<string, Keyframe[]>, recognizedBlocksByClass: Map<string, RecognizedDeclaration>): string {
     let body = "";
     recognizedBlocksByClass.forEach((propertiesBlock, elmClassName) => {
-        body = body + elmRecognizedFunction(elmClassName, propertiesBlock);
+        body = body + elmRecognizedFunction(keyframes, elmClassName, propertiesBlock);
     })
     return body;
 }
 
-function elmRecognizedFunction(elmClassName: string, propertiesBlock: RecognizedDeclaration): string {
+function elmRecognizedFunction(keyframes: Map<string, Keyframe[]>, elmClassName: string, propertiesBlock: RecognizedDeclaration): string {
     return `
 
 ${elmClassName} : Css.Style
 ${elmClassName} =
-${convertDeclarationBlock(propertiesBlock)(1)}
+${convertDeclarationBlock(keyframes, propertiesBlock)({
+    indentation: 4,
+    preindent: true,
+})}
 `;
 }
 
-function convertDeclaration(propertiesBlock: CssProperty): generate.Indentable {
-    return indentation => `Css.property ${generate.elmString(propertiesBlock.prop)} ${generate.elmString(propertiesBlock.value)}`;
+function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty): generate.Indentable[] {
+    if (declaration.prop.endsWith("animation") || declaration.prop.endsWith("animation-name")) {
+        const animationName = Array.from(keyframes.keys()).find(name => declaration.value.indexOf(name) >= 0);
+        if (animationName == null) {
+            return [convertBasicDeclaration("Css.property", declaration.prop, declaration.value)];
+        }
+        const strippedValue = declaration.value.replace(animationName, "").trim();
+        const keyframesConverted = convertKeyframes(keyframes.get(animationName));
+
+        if (strippedValue === "") {
+            return [ keyframesConverted ];
+        }
+
+        return [
+            generate.singleLine(`Css.property ${generate.elmString(declaration.prop)} ${generate.elmString(strippedValue)}`),
+            keyframesConverted
+        ];
+    }
+
+    return [convertBasicDeclaration("Css.property", declaration.prop, declaration.value)];
+}
+
+function convertBasicDeclaration(functionName: string, property: string, value: string): generate.Indentable {
+    return generate.singleLine(`${functionName} ${generate.elmString(property)} ${generate.elmString(value)}`);
 }
 
 function convertProperties(subselector: SubselectorRest, convertedProperties: generate.Indentable[]) {
@@ -122,6 +152,27 @@ function convertPseudoProperties(selectorList: PseudoSubselectorRest["rest"], co
     ];
 }
 
+function convertKeyframes(keyframes: Keyframe[]): generate.Indentable {
+    return generate.elmFunctionCall("Css.animationName",
+        generate.elmParen(
+            generate.elmFunctionCall("Css.Animations.keyframes",
+                generate.elmList(keyframes.map(convertKeyframe))
+            )
+        )
+    );
+}
+
+function convertKeyframe(keyframe: Keyframe): generate.Indentable {
+    return generate.elmTuple(
+        generate.singleLine(keyframe.percentage.toFixed(0)),
+        generate.elmList(
+            keyframe.properties.map(prop =>
+                convertBasicDeclaration("Css.Animations.property", prop.prop, prop.value)
+            )
+        )
+    );
+}
+
 function convertMediaQueryWrap(mediaQuery: string, functionName: string, propertiesExpressions: generate.Indentable[]): generate.Indentable[] {
     if (mediaQuery == null) {
         return propertiesExpressions;
@@ -135,8 +186,8 @@ function convertMediaQueryWrap(mediaQuery: string, functionName: string, propert
     ]
 }
 
-function convertDeclarationBlock(propertiesBlock: RecognizedDeclaration): generate.Indentable {
-    const plainProperties = findPlainProperties(propertiesBlock).map(convertDeclaration);
+function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesBlock: RecognizedDeclaration): generate.Indentable {
+    const plainProperties = findPlainProperties(propertiesBlock).flatMap(d => convertDeclaration(keyframes, d));
     const subselectors = propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
         subselectors.flatMap(subselector => {
             if (subselector.rest.type === "plain" && subselector.mediaQuery == null) {
@@ -149,21 +200,19 @@ function convertDeclarationBlock(propertiesBlock: RecognizedDeclaration): genera
                 `Css.Media.withMediaQuery`,
                 convertProperties(
                     subselector.rest,
-                    properties.map(convertDeclaration)
+                    properties.flatMap(d => convertDeclaration(keyframes, d))
                 )
             );
         })
     );
 
     if (plainProperties.length === 1 && subselectors.length === 0) {
-        return generate.indented(plainProperties[0]);
+        return plainProperties[0];
     }
 
-    return generate.indented(
-        generate.elmFunctionCall(
-            `Css.batch`,
-            generate.elmList(plainProperties.concat(Array.from(subselectors).reverse()))
-        )
+    return generate.elmFunctionCall(
+        `Css.batch`,
+        generate.elmList(plainProperties.concat(Array.from(subselectors).reverse()))
     );
 }
 
