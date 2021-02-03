@@ -3,5 +3,15 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "lib": ["es2019"],
+
+    "declaration": true,
+    "declarationDir": "./dist",
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "target": "es5"
   },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": ["node_modules"],
 }

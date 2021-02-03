@@ -4,11 +4,22 @@ import * as postcss from "postcss";
 import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities";
 import * as tailwindBreakpointsGeneration from "./code-generators/tailwind-breakpoints";
 import * as parser from "./parser";
+// @ts-ignore
 import tailwindcss from "tailwindcss";
+// @ts-ignore
 import resolveConfig from "tailwindcss/resolveConfig.js";
+import { DebugFunction } from "./types";
 
 const defaultTailwindConfig = {
 };
+
+interface RunConfiguration {
+    directory: string,
+    moduleName: string,
+    postcssPlugins: postcss.AcceptedPlugin[],
+    tailwindConfig: any,
+    debugFunction: DebugFunction,
+}
 
 export default async function run({
     directory = "./src",
@@ -16,7 +27,10 @@ export default async function run({
     postcssPlugins = [],
     tailwindConfig = defaultTailwindConfig,
     debugFunction = console.log,
-}) {
+}: RunConfiguration): Promise<{
+    utilitiesModule: string,
+    breakpointsModule: string,
+}> {
     let utilitiesModule: undefined | string;
     let breakpointsModule : undefined | string;
 

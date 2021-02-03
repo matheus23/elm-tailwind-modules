@@ -33,4 +33,4 @@ export const elmList = (elements: Array<Indentable>): Indentable => indentation 
     return str;
 }
 
-export const indented = str => indentation => " ".repeat(Math.max(0, indentation * 4)) + str(indentation);
+export const indented = (str: Indentable) => (indentation: number) => " ".repeat(Math.max(0, indentation * 4)) + str(indentation);

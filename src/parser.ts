@@ -170,8 +170,8 @@ function recognizeSelectorRest(selector: CssWhat.Selector[]): SubselectorRest {
     throw new Error(`Unsupported type: ${type}`);
 }
 
-function collectProperties(rule: postcss.Rule): Array<CssProperty> {
-    let properties = [];
+function collectProperties(rule: postcss.Rule): CssProperty[] {
+    let properties: CssProperty[] = [];
     rule.walkDecls(declaration => {
         properties.push({
             prop: declaration.prop,
@@ -182,7 +182,7 @@ function collectProperties(rule: postcss.Rule): Array<CssProperty> {
 }
 
 function stripClassSelector(
-    selectorPart: Array<CssWhat.Selector>
+    selectorPart: CssWhat.Selector[]
 ): {
     class: string;
     rest: CssWhat.Selector[];
