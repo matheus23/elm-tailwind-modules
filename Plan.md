@@ -14,6 +14,7 @@
   * [ ] Parse all kinds of breakpoints. Test them.
 * [X] Rename the library
 * [ ] Recognize keyframe animation stuff
+* [X] Fix CI
 
 ## Refactoring
 
