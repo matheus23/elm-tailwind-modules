@@ -29,12 +29,6 @@ const cssWhatErrors = [
 ]
 
 export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFunction: DebugFunction): GroupedDeclarations {
-    let rules: postcss.Rule[] = [];
-
-    postCssRoot.walkRules(rule => {
-        rules.push(rule);
-    });
-
     const recognized = new Map();
     const unrecognized: UnrecognizedDeclaration[] = [];
 
@@ -42,7 +36,7 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
         propertiesBySelector: [],
     });
 
-    rules.forEach(rule => {
+    postCssRoot.walkRules(rule => {
 
 
         // parse the selector
@@ -83,7 +77,7 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
 
 
         // find out what subselector this affects
-        let subselectors;
+        let subselectors: Subselector[];
         try {
             subselectors = parts.map(part => ({
                 mediaQuery: recognizeMediaQuery(rule),
