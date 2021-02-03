@@ -9,6 +9,7 @@ import {
     isBasicSubselectorType,
     isPseudoElementSelector,
     isPseudoSelector,
+    Keyframe,
     PropertiesBySelector,
     RecognizedDeclaration,
     Subselector,
@@ -31,6 +32,7 @@ const cssWhatErrors = [
 export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFunction: DebugFunction): GroupedDeclarations {
     const recognized = new Map();
     const unrecognized: UnrecognizedDeclaration[] = [];
+    const keyframes = new Map();
 
     const defaultRecognized = (): RecognizedDeclaration => ({
         propertiesBySelector: [],
@@ -46,7 +48,7 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
 
 
             case "decl":
-                debugFunction("Encountered declaration immediately below the postcss root. This shouldn't happen.");
+                debugFunction("Encountered declaration immediately below the postcss root. This shouldn't happen. Ignoring " + child.toString());
                 return;
 
 
@@ -54,6 +56,34 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
                 if (child.name === "media") {
                     const mediaQuery = child.params;
                     child.walkRules(rule => handleRule(mediaQuery, rule));
+                    return;
+                }
+
+                if (child.name === "keyframe") {
+                    const animationName = child.params;
+                    let keyframeFrames: Keyframe[] = [];
+                    
+                    child.walkRules(rule => {
+                        try {
+                            keyframeFrames.push({
+                                percentage: parseKeyframePercentage(rule.selector),
+                                properties: collectProperties(rule),
+                            })
+                        } catch (e) {
+                            if (e.message.startsWith("Couldn't parse")) {
+                                debugFunction(e.message);
+                                return;
+                            }
+                            throw e;
+                        }
+                    });
+
+                    keyframes.set(animationName, keyframeFrames);
+                    return;
+                }
+
+                if (child.name.endsWith("keyframe")) {
+                    // We already cover cases like @-webkit-keyframes with the code above.
                     return;
                 }
 
@@ -114,7 +144,6 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
         try {
             subselectors = parts.map(part => ({
                 mediaQuery: mediaQuery,
-                keyframes: [],
                 rest: recognizeSelectorRest(part.rest),
             }));
         } catch (e) {
@@ -138,7 +167,7 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
         });
     }
 
-    return { recognized, unrecognized };
+    return { recognized, unrecognized, keyframes };
 }
 
 function addToSelectorList(
@@ -205,6 +234,25 @@ function collectProperties(rule: postcss.Rule): CssProperty[] {
         });
     });
     return properties;
+}
+
+function parseKeyframePercentage(selector: string): number {
+    const trimmed = selector.trim();
+    if (trimmed === "from") {
+        return 0;
+    }
+    if (trimmed === "to") {
+        return 100;
+    }
+    if (trimmed.endsWith("%")) {
+        const numberPart = trimmed.substring(0, trimmed.length - 1);
+        try {
+            return parseInt(numberPart);
+        } catch (e) {
+            throw "Couldn't parse keyframe percentage: " + numberPart;
+        }
+    }
+    throw "Couldn't parse keyframe percentage indicator: " + selector;
 }
 
 function stripClassSelector(

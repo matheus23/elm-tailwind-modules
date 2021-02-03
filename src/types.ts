@@ -7,6 +7,7 @@ export interface DebugFunction {
 export interface GroupedDeclarations {
     recognized: Map<string, RecognizedDeclaration>,
     unrecognized: UnrecognizedDeclaration[],
+    keyframes: Map<string, Keyframe[]>,
 }
 
 /*
@@ -155,7 +156,6 @@ export interface PropertiesBySelector {
 }
 
 export interface Subselector {
-    keyframes: Keyframe[],
     mediaQuery: null | string,
     rest: SubselectorRest,
 }

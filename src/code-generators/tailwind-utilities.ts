@@ -1,9 +1,7 @@
 import * as generate from "./generate";
-import * as postcss from "postcss";
 import {
     CssProperty,
     GroupedDeclarations,
-    isPseudoSubselectorRest,
     RecognizedDeclaration,
     SubselectorRest,
     UnrecognizedDeclaration,
