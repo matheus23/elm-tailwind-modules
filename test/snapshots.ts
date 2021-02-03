@@ -1,4 +1,4 @@
-import elmTailwindOrigami from "../src/index";
+import elmTailwindModules from "../src/index";
 import tailwindConfig from "../test-example/tailwind.config.js";
 import autoprefixer from "autoprefixer";
 import tailwindui from "@tailwindcss/ui";
@@ -6,7 +6,7 @@ import test from "ava";
 
 
 test("snapshot of generated module", async t => {
-    const generatedModule = await elmTailwindOrigami({
+    const generatedModule = await elmTailwindModules({
         directory: null,
         moduleName: "Tailwind.Basic",
         postcssPlugins: [],
@@ -20,7 +20,7 @@ test("snapshot of generated module", async t => {
 
 
 test("snapshot of generated module with autoprefixer", async t => {
-    const generatedModule = await elmTailwindOrigami({
+    const generatedModule = await elmTailwindModules({
         directory: "./test-example/src/",
         moduleName: "Tailwind.WithAutoprefixer",
         postcssPlugins: [autoprefixer],
@@ -34,7 +34,7 @@ test("snapshot of generated module with autoprefixer", async t => {
 
 
 test("snapshot of generated module with tailwindui", async t => {
-    const generatedModule = await elmTailwindOrigami({
+    const generatedModule = await elmTailwindModules({
         directory: "./test-example/src/",
         moduleName: "Tailwind.WithAutoprefixer",
         postcssPlugins: [tailwindui],

@@ -1,11 +1,11 @@
 {
-  "name": "elm-tailwind-origami",
-  "version": "0.0.1",
+  "name": "elm-tailwind-modules",
+  "version": "0.0.2",
   "author": "Philipp Krüger",
   "description": "Generate Elm code for Tailwind Utilities and Components that purges using Elm's --optimize!",
   "repository": {
     "type": "git",
-    "url": "https://github.com/matheus23/elm-tailwind-origami"
+    "url": "https://github.com/matheus23/elm-tailwind-modules"
   },
   "main": "dist/index.js",
   "module": "dist/index.es.js",

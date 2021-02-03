@@ -1,7 +1,7 @@
-import elmTailwindOrigami from "../src/index";
+import elmTailwindModules from "../src/index";
 import tailwindConfig from "./tailwind.config.js";
 
-elmTailwindOrigami({
+elmTailwindModules({
     directory: "./test-example/src",
     moduleName: "Tailwind",
     postcssPlugins: [],

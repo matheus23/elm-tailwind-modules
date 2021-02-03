@@ -14,11 +14,11 @@ const defaultTailwindConfig = {
 };
 
 interface RunConfiguration {
-    directory: string,
-    moduleName: string,
-    postcssPlugins: postcss.AcceptedPlugin[],
-    tailwindConfig: any,
-    debugFunction: DebugFunction,
+    directory?: string,
+    moduleName?: string,
+    postcssPlugins?: postcss.AcceptedPlugin[],
+    tailwindConfig?: any,
+    debugFunction?: DebugFunction,
 }
 
 export default async function run({
@@ -37,7 +37,7 @@ export default async function run({
     const resolvedConfig = resolveConfig(tailwindConfig);
 
     const afterTailwindPlugin = {
-        postcssPlugin: "elm-tailwind-origami",
+        postcssPlugin: "elm-tailwind-modules",
         async OnceExit(root: postcss.Root) {
             const blocksByClass = parser.groupDeclarationBlocksByClass(root, debugFunction);
             const modulePath = path.join.apply(null, moduleName.split("."));

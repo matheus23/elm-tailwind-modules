@@ -12,14 +12,16 @@
   * [X] Simple breakpoint module generation
   * [X] Fix tests
   * [ ] Parse all kinds of breakpoints. Test them.
+* [X] Rename the library
+* [ ] Recognize keyframe animation stuff
 
 ## Refactoring
 
 * [X] Use typescript
 * [X] Use typescript for tests
-* [ ] Use rollup to compile to udm/commonjs/esm
+* [X] Use rollup to compile to udm/commonjs/esm
 * [X] Drop jest, use ava
-* [ ] Enable more strict typescript
+* [X] Enable more strict typescript
 
 small things
 * [X] Remove double-iteration over rules in parser
