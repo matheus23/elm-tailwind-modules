@@ -1,6 +1,8 @@
 import elmTailwindModules from "../src/index";
+// @ts-ignore
 import tailwindConfig from "../test-example/tailwind.config.js";
 import autoprefixer from "autoprefixer";
+// @ts-ignore
 import tailwindui from "@tailwindcss/ui";
 import test from "ava";
 
