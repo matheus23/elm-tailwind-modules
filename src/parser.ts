@@ -58,7 +58,7 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
         const parts = selector.map(stripClassSelector);
         const partClasses = parts.map(part => part.class);
 
-        const allEqual = <A>(arr: Array<A>): boolean => arr.every(v => v === arr[0])
+        const allEqual = <A>(arr: A[]): boolean => arr.every(v => v === arr[0])
 
         if (partClasses.some(className => className == null) || !allEqual(partClasses)) {
             handleUnrecognized(unrecognized, rule, debugFunction);
@@ -107,10 +107,10 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
 }
 
 function addToSelectorList(
-    propertiesBySelector: Array<PropertiesBySelector>,
-    subselectors: Array<Subselector>,
-    properties: Array<CssProperty>,
-): Array<PropertiesBySelector> {
+    propertiesBySelector: PropertiesBySelector[],
+    subselectors: Subselector[],
+    properties: CssProperty[],
+): PropertiesBySelector[] {
     let result = Array.from(propertiesBySelector);
 
     const index = result.findIndex(elem => deepEqual(elem.subselectors, subselectors));
@@ -204,7 +204,7 @@ function stripClassSelector(
     };
 }
 
-function handleUnrecognized(unrecognized: Array<UnrecognizedDeclaration>, rule: postcss.Rule, debugFunction: DebugFunction): void {
+function handleUnrecognized(unrecognized: UnrecognizedDeclaration[], rule: postcss.Rule, debugFunction: DebugFunction): void {
     const parent = rule.parent;
 
     if (isAtRule(parent) && parent.name !== "media") {
