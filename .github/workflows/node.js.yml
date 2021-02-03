@@ -23,4 +23,4 @@ jobs:
         if: steps.cache-modules.outputs.cache-hit != 'true'
         run: yarn install
       - name: Test
-        run: yarn test
+        run: yarn test-all

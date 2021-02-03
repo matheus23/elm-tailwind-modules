@@ -1,4 +1,5 @@
 import elmTailwindModules from "../src/index";
+// @ts-ignore
 import tailwindConfig from "./tailwind.config.js";
 
 elmTailwindModules({
