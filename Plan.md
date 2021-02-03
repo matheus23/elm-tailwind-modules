@@ -20,6 +20,16 @@
         Replace any occuring keyframe animation name in those css properties with an empty string.
         Add the css animation via the elm-css animationName mechanism.
 * [X] Fix CI
+* [ ] Add a command line interface
+  * [ ] Add a cli.ts module
+  * [ ] Rollup code for that module
+  * [ ] Add an entry in package.json for "bin"
+* [ ] Write README/docs
+  * [ ] Add jsdoc for index.ts
+* [ ] Support parameterized css
+  * [ ] Detect when css uses properties like theme colors
+  * [ ] Detect when css uses spacings
+
 
 ## Refactoring
 
