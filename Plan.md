@@ -14,6 +14,11 @@
   * [ ] Parse all kinds of breakpoints. Test them.
 * [X] Rename the library
 * [ ] Recognize keyframe animation stuff
+  * [ ] Refactor how the postcss walk works. Don't `walkRules`, but `.each`, detect the kind of child (media query/keyframe/rule) and handle accordingly.
+  * [ ] Detect css properties that end in "animation" or "animation-name".
+        Have a list of defined keyframe animations ready.
+        Replace any occuring keyframe animation name in those css properties with an empty string.
+        Add the css animation via the elm-css animationName mechanism.
 * [X] Fix CI
 
 ## Refactoring

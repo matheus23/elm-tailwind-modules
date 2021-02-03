@@ -36,8 +36,39 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
         propertiesBySelector: [],
     });
 
-    postCssRoot.walkRules(rule => {
+    postCssRoot.each(child => {
 
+        switch (child.type) {
+
+            case "comment":
+                // We don't care about comments
+                return;
+
+
+            case "decl":
+                debugFunction("Encountered declaration immediately below the postcss root. This shouldn't happen.");
+                return;
+
+
+            case "atrule":
+                if (child.name === "media") {
+                    const mediaQuery = child.params;
+                    child.walkRules(rule => handleRule(mediaQuery, rule));
+                    return;
+                }
+
+                debugFunction("Encountered unknown @-rule: " + child.name);
+                return;
+
+
+            case "rule":
+                handleRule(null, child);
+                return;
+
+        }
+    });
+
+    function handleRule(mediaQuery: string, rule: postcss.Rule): void {
 
         // parse the selector
 
@@ -46,7 +77,8 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
             selector = CssWhat.parse(rule.selector);
         } catch (e) {
             if (cssWhatErrors.some(msg => e.message.startsWith(msg))) {
-                handleUnrecognized(unrecognized, rule, debugFunction);
+                const debug = (message: string) => debugFunction("Something went wrong with a selector that couldn't be parsed\n" + message);
+                handleUnrecognized(unrecognized, rule, mediaQuery, debug);
                 return;
             }
             throw e;
@@ -61,7 +93,8 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
         const allEqual = <A>(arr: A[]): boolean => arr.every(v => v === arr[0])
 
         if (partClasses.some(className => className == null) || !allEqual(partClasses)) {
-            handleUnrecognized(unrecognized, rule, debugFunction);
+            const debug = (message: string) => debugFunction("Something went wrong with a rule with unrelated selectors\n" + message);
+            handleUnrecognized(unrecognized, rule, mediaQuery, debug);
             return;
         }
 
@@ -80,12 +113,14 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
         let subselectors: Subselector[];
         try {
             subselectors = parts.map(part => ({
-                mediaQuery: recognizeMediaQuery(rule),
+                mediaQuery: mediaQuery,
+                keyframes: [],
                 rest: recognizeSelectorRest(part.rest),
             }));
         } catch (e) {
             if (e.message.startsWith("Unsupported type")) {
-                handleUnrecognized(unrecognized, rule, debugFunction);
+                const debug = (message: string) => debugFunction("Something went wrong with an unsupported subselector type\n" + message);
+                handleUnrecognized(unrecognized, rule, mediaQuery, debug);
                 return;
             }
             throw e;
@@ -101,7 +136,7 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
                 properties,
             ),
         });
-    });
+    }
 
     return { recognized, unrecognized };
 }
@@ -129,15 +164,6 @@ function addToSelectorList(
     });
 
     return result;
-}
-
-function recognizeMediaQuery(rule: postcss.Rule): string | null {
-    const parent = rule.parent;
-
-    if (isAtRule(parent) && parent.name === "media") {
-        return parent.params;
-    }
-    return null;
 }
 
 type SupportedPseudo = CssWhat.PseudoSelector | CssWhat.PseudoElement;
@@ -204,22 +230,15 @@ function stripClassSelector(
     };
 }
 
-function handleUnrecognized(unrecognized: UnrecognizedDeclaration[], rule: postcss.Rule, debugFunction: DebugFunction): void {
-    const parent = rule.parent;
-
-    if (isAtRule(parent) && parent.name !== "media") {
-        debugFunction("Couldn't make sense of this rule");
-        debugFunction(rule.toString());
-        return;
-    }
-
+function handleUnrecognized(
+    unrecognized: UnrecognizedDeclaration[],
+    rule: postcss.Rule,
+    mediaQuery: string | null,
+    debugFunction: DebugFunction
+): void {
     unrecognized.push({
         selector: rule.selector,
         properties: collectProperties(rule),
-        mediaQuery: recognizeMediaQuery(rule),
+        mediaQuery: mediaQuery,
     });
-}
-
-function isAtRule(rule: postcss.Container | postcss.AtRule): rule is postcss.AtRule {
-    return rule.type === "atrule";
 }

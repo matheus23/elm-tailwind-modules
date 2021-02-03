@@ -13,7 +13,7 @@ test("snapshot of generated module", async t => {
         moduleName: "Tailwind.Basic",
         postcssPlugins: [],
         tailwindConfig,
-        debugFunction: () => { },
+        debugFunction: t.log,
     });
 
     t.snapshot(generatedModule.utilitiesModule, { id: t.title + ": Utilities Module" });
@@ -27,7 +27,7 @@ test("snapshot of generated module with autoprefixer", async t => {
         moduleName: "Tailwind.WithAutoprefixer",
         postcssPlugins: [autoprefixer],
         tailwindConfig,
-        debugFunction: () => { },
+        debugFunction: t.log,
     });
 
     t.snapshot(generatedModule.utilitiesModule, { id: t.title + ": Utilities Module" });
@@ -41,7 +41,7 @@ test("snapshot of generated module with tailwindui", async t => {
         moduleName: "Tailwind.WithAutoprefixer",
         postcssPlugins: [tailwindui],
         tailwindConfig,
-        debugFunction: () => { },
+        debugFunction: t.log,
     });
 
     t.snapshot(generatedModule.utilitiesModule, { id: t.title + ": Utilities Module" });

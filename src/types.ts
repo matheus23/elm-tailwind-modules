@@ -155,8 +155,14 @@ export interface PropertiesBySelector {
 }
 
 export interface Subselector {
+    keyframes: Keyframe[],
     mediaQuery: null | string,
     rest: SubselectorRest,
+}
+
+export interface Keyframe {
+    percentage: number,
+    properties: CssProperty[],
 }
 
 export type SubselectorRest = PlainSubselectorRest | BasicSubselectorRest | PseudoSubselectorRest;
