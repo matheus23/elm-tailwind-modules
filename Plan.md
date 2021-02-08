@@ -20,6 +20,9 @@
         Replace any occuring keyframe animation name in those css properties with an empty string.
         Add the css animation via the elm-css animationName mechanism.
 * [X] Fix CI
+* [X] Fix "font-size: [object Object]"
+  * This is a bug of tailwind 2.0 with the tailwindui plugin. Luckly this plugin is obsolete
+  * [ ] Remove tailwindui
 * [ ] Add a command line interface
   * [ ] Add a cli.ts module
   * [ ] Rollup code for that module
@@ -29,6 +32,7 @@
 * [ ] Support parameterized css
   * [ ] Detect when css uses properties like theme colors
   * [ ] Detect when css uses spacings
+* [ ] Do end-to-end snapshot testing
 
 
 ## Refactoring
