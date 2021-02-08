@@ -8,6 +8,7 @@ export function elmString(content: string): string {
         .replace(/\\/g, "\\\\")
         .replace(/"/g, '\\"')
         .replace(/\n/g, "\\n")
+        .replace(/\t/g, "\\t")
         }"`;
 }
 
@@ -52,7 +53,7 @@ export const elmTuple = (first: Indentable, second: Indentable): Indentable => (
 export const elmParen = (around: Indentable): Indentable => ({ indentation, preindent }) => {
     const indent = spaces(indentation);
     return [
-        (preindent ? indent : "") + "( " + around({ indentation, preindent: false }),
+        (preindent ? indent : "") + "(" + around({ indentation, preindent: false }),
         indent + ")"
     ].join("\n");
 }

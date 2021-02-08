@@ -31,9 +31,9 @@ function elmHeaderCss(moduleName: string): string {
     return `module ${moduleName} exposing (..)
 
 import Css
+import Css.Animations
 import Css.Global
 import Css.Media
-import Css.Animations
 `;
 }
 
