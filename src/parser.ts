@@ -100,11 +100,11 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
 
     function handleRule(mediaQuery: string, rule: postcss.Rule): void {
 
-        // parse the selector
+        // parse the selectors
 
-        let selector: CssWhat.Selector[][];
+        let selectors: CssWhat.Selector[][];
         try {
-            selector = CssWhat.parse(rule.selector);
+            selectors = CssWhat.parse(rule.selector);
         } catch (e) {
             if (cssWhatErrors.some(msg => e.message.startsWith(msg))) {
                 const debug = (message: string) => debugFunction("Something went wrong with a selector that couldn't be parsed\n" + message);
@@ -114,56 +114,55 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
             throw e;
         }
 
+        // Ensure we understand all individual selectors
+        // If not, we'll try to put them into globalStyles
 
-        // make sure all selector parts start with the same class
-
-        const parts = selector.map(stripClassSelector);
-        const partClasses = parts.map(part => part.class);
-
-        const allEqual = <A>(arr: A[]): boolean => arr.every(v => v === arr[0])
-
-        if (partClasses.some(className => className == null) || !allEqual(partClasses)) {
-            const debug = (message: string) => debugFunction("Something went wrong with a rule with unrelated selectors\n" + message);
-            handleUnrecognized(unrecognized, rule, mediaQuery, debug);
-            return;
-        }
-
-        const className = parts[0].class;
-        // create a valid elm identifier from the classname
-        const elmDeclName = toElmName(fixClass(className));
-
-
-
-        // collect all properties defined in this rule
-
-        const properties = collectProperties(rule);
-
-
-        // find out what subselector this affects
-        let subselectors: Subselector[];
+        const parts = selectors.map(stripClassSelector);
         try {
-            subselectors = parts.map(part => ({
-                mediaQuery: mediaQuery,
-                rest: recognizeSelectorRest(part.rest),
-            }));
+            parts.forEach(part => {
+                if (part.class == null) {
+                    throw "Has unrecognized";
+                }
+            });
         } catch (e) {
-            if (e.message.startsWith("Unsupported type")) {
-                const debug = (message: string) => debugFunction("Something went wrong with an unsupported subselector type\n" + message);
+            if (e === "Has unrecognized") {
+                const debug = (message: string) => debugFunction("Something went wrong with a rule with unrelated selectors\n" + message);
                 handleUnrecognized(unrecognized, rule, mediaQuery, debug);
                 return;
             }
             throw e;
         }
 
+        parts.forEach(part => {
+            // create a valid elm identifier from the classname
+            const elmDeclName = toElmName(fixClass(part.class));
+    
 
-        // concat properties to possibly existing property lists
-        const item = recognized.get(elmDeclName) || defaultRecognized();
-        recognized.set(elmDeclName, {
-            propertiesBySelector: addToSelectorList(
-                item.propertiesBySelector,
-                subselectors,
-                properties,
-            ),
+            // find out what subselector this affects
+            let subselector: Subselector;
+            try {
+                subselector = {
+                    mediaQuery: mediaQuery,
+                    rest: recognizeSelectorRest(part.rest),
+                };
+            } catch (e) {
+                if (e.message.startsWith("Unsupported type")) {
+                    const debug = (message: string) => debugFunction("Something went wrong with an unsupported subselector type\n" + message);
+                    handleUnrecognized(unrecognized, rule, mediaQuery, debug);
+                    return;
+                }
+                throw e;
+            }
+    
+            // concat properties to possibly existing property lists
+            const item = recognized.get(elmDeclName) || defaultRecognized();
+            recognized.set(elmDeclName, {
+                propertiesBySelector: addToSelectorList(
+                    item.propertiesBySelector,
+                    [subselector],
+                    collectProperties(rule),
+                ),
+            });
         });
     }
 

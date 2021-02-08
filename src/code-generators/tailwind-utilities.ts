@@ -64,9 +64,9 @@ function convertUnrecognizeds(unrecognizeds: UnrecognizedDeclaration[]): generat
 
 function elmRecognizedToFunctions(keyframes: Map<string, Keyframe[]>, recognizedBlocksByClass: Map<string, RecognizedDeclaration>): string {
     let body = "";
-    recognizedBlocksByClass.forEach((propertiesBlock, elmClassName) => {
-        body = body + elmRecognizedFunction(keyframes, elmClassName, propertiesBlock);
-    })
+    Array.from(recognizedBlocksByClass.keys()).sort().forEach(elmClassName => {
+        body = body + elmRecognizedFunction(keyframes, elmClassName, recognizedBlocksByClass.get(elmClassName));
+    });
     return body;
 }
 

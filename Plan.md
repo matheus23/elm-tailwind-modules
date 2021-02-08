@@ -34,7 +34,7 @@
   * [ ] Detect when css uses properties like theme colors
   * [ ] Detect when css uses spacings
 * [ ] Do end-to-end snapshot testing
-* [ ] Fix selectors like `.aspect-w-1, .aspect-w-2` or `.ordinal, .slashed-zero`, etc. which are just shortcuts for setting this for all classes individually.
+* [X] Fix selectors like `.aspect-w-1, .aspect-w-2` or `.ordinal, .slashed-zero`, etc. which are just shortcuts for setting this for all classes individually.
 
 
 ## Refactoring
