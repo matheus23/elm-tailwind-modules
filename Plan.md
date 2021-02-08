@@ -22,12 +22,15 @@
 * [X] Fix CI
 * [X] Fix "font-size: [object Object]"
   * This is a bug of tailwind 2.0 with the tailwindui plugin. Luckly this plugin is obsolete
-  * [ ] Remove tailwindui
+  * [X] Remove tailwindui
 * [X] Add a test that ensures generated modules are formatted
 * [ ] Add a command line interface
   * [ ] Add a cli.ts module
   * [ ] Rollup code for that module
   * [ ] Add an entry in package.json for "bin"
+* [ ] Expand possible integration use cases
+  * [ ] Allow custom postcss
+  * [ ] Export as postcss plugin
 * [ ] Write README/docs
   * [ ] Add jsdoc for index.ts
 * [ ] Support parameterized css
