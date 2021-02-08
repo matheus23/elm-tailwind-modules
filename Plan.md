@@ -25,9 +25,9 @@
   * [X] Remove tailwindui
 * [X] Add a test that ensures generated modules are formatted
 * [ ] Add a command line interface
-  * [ ] Add a cli.ts module
-  * [ ] Rollup code for that module
-  * [ ] Add an entry in package.json for "bin"
+  * [X] Add a cli.ts module
+  * [X] Rollup code for that module
+  * [X] Add an entry in package.json for "bin"
 * [ ] Expand possible integration use cases
   * [ ] Allow custom postcss
   * [ ] Export as postcss plugin

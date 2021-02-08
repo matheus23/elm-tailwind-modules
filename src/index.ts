@@ -10,7 +10,8 @@ import tailwindcss from "tailwindcss";
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import { DebugFunction, NamingOptions } from "./types";
 
-const defaultTailwindConfig = {
+const defaultTailwindConfig: any = {
+    variants: [],
 };
 
 interface RunConfiguration {

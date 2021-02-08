@@ -1,4 +1,4 @@
-import typescript from "rollup-plugin-typescript2"
+import typescript from "@rollup/plugin-typescript"
 import commonjs from "@rollup/plugin-commonjs"
 import pkg from "./package.json"
 
@@ -21,11 +21,7 @@ export default {
     ],
 
     plugins: [
-        typescript({
-            useTsconfigDeclarationDir: true,
-            tsconfig: "./tsconfig.json",
-            typescript: require("typescript"),
-        }),
+        typescript(),
         commonjs(),
     ],
 }
