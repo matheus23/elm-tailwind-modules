@@ -2,22 +2,11 @@
   "name": "elm-tailwind-modules",
   "version": "0.0.2",
   "author": "Philipp Krüger",
-  "description": "Generate Elm code for Tailwind Utilities and Components that purges using Elm's --optimize!",
+  "description": "Turn your Tailwind CSS into Elm code using Elm-css, which purges using Elm's --optimize!",
   "repository": {
     "type": "git",
     "url": "https://github.com/matheus23/elm-tailwind-modules"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "bin": {
-    "elm-tailwind-modules": "dist/cli.js"
-  },
-  "files": [
-    "dist",
-    "README.md",
-    "CHANGELOG.md"
-  ],
-  "types": "dist/index.d.ts",
   "scripts": {
     "build": "yarn build:lib && yarn build:cli",
     "build:cli": "rollup -c cli.rollup.config.ts && chmod +x dist/cli.js",
@@ -28,24 +17,6 @@
     "test:elm-compile": "ts-node test-example/test-run.ts && cd test-example && elm make src/Main.elm --output=/dev/null",
     "test:node-only": "ts-node test-example/test-run.ts"
   },
-  "ava": {
-    "files": [
-      "test/**/*"
-    ],
-    "extensions": [
-      "ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ]
-  },
-  "keywords": [
-    "postcss",
-    "postcss-plugin",
-    "elm",
-    "tailwind",
-    "tailwindcss"
-  ],
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^10.2.1",
@@ -76,6 +47,35 @@
   "peerDependencies": {
     "postcss": "^8.2.4"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "bin": {
+    "elm-tailwind-modules": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "types": "dist/index.d.ts",
+  "ava": {
+    "files": [
+      "test/**/*"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "keywords": [
+    "postcss",
+    "postcss-plugin",
+    "elm",
+    "tailwind",
+    "tailwindcss"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   }
