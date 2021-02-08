@@ -10,7 +10,7 @@ import tailwindcss from "tailwindcss";
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import { DebugFunction, NamingOptions } from "./types";
 
-const defaultTailwindConfig: any = {
+export const defaultTailwindConfig: any = {
     variants: [],
 };
 
@@ -36,6 +36,11 @@ export default async function run({
     utilitiesModule: string,
     breakpointsModule: string,
 }> {
+    const validModuleName = /^[0-9A-Za-z]([A-Za-z0-9.]*[0-9a-zA-Z])?$/;
+    if (!moduleName.match(validModuleName)) {
+        throw `The module name prefix "${moduleName}" doesn't appear to be valid. It should be something like "Tailwind" or "Gen.Css"`;
+    }
+
     let utilitiesModule: undefined | string;
     let breakpointsModule : undefined | string;
 

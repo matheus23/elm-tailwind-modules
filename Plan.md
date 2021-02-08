@@ -24,7 +24,7 @@
   * This is a bug of tailwind 2.0 with the tailwindui plugin. Luckly this plugin is obsolete
   * [X] Remove tailwindui
 * [X] Add a test that ensures generated modules are formatted
-* [ ] Add a command line interface
+* [X] Add a command line interface
   * [X] Add a cli.ts module
   * [X] Rollup code for that module
   * [X] Add an entry in package.json for "bin"

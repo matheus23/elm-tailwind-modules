@@ -1,6 +1,9 @@
-import typescript from "@rollup/plugin-typescript"
-import commonjs from "@rollup/plugin-commonjs"
+import typescript from "@rollup/plugin-typescript";
+import commonjs from "@rollup/plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
+import json from "@rollup/plugin-json";
 import MagicString from "magic-string";
+import pkg from "./package.json"
 
 const destination = "dist/cli.js";
 const shebang = "#!/usr/bin/env node\n\n";
@@ -14,13 +17,15 @@ export default {
             exports: "named"
         },
     ],
-    external: [],
+    external: [
+        ...Object.keys(pkg.peerDependencies || {}),
+    ],
     plugins: [
         typescript(),
         commonjs(),
         {
             name: 'shebang',
-            renderChunk(code, chunk, { file, sourcemap }) {
+            renderChunk(code, _chunk, { file, sourcemap }) {
                 if (file !== destination) {
                     return null;
                 }
@@ -38,5 +43,7 @@ export default {
                 }
             },
         },
+        resolve(),
+        json(),
     ],
 }
