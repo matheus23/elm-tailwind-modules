@@ -221,3 +221,8 @@ export function isPseudoSelector(selector: CssWhat.Selector): selector is CssWha
 export function isPseudoElementSelector(selector: CssWhat.Selector): selector is CssWhat.PseudoElement {
     return selector.type === "pseudo-element";
 }
+
+export interface NamingOptions {
+  prefix?: string;
+  nameStyle: "camel" | "snake";
+}

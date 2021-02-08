@@ -8,7 +8,7 @@ import * as parser from "./parser";
 import tailwindcss from "tailwindcss";
 // @ts-ignore
 import resolveConfig from "tailwindcss/resolveConfig.js";
-import { DebugFunction } from "./types";
+import { DebugFunction, NamingOptions } from "./types";
 
 const defaultTailwindConfig = {
 };
@@ -19,6 +19,10 @@ interface RunConfiguration {
     postcssPlugins?: postcss.AcceptedPlugin[],
     tailwindConfig?: any,
     debugFunction?: DebugFunction,
+}
+
+const namingOptions: NamingOptions = {
+    nameStyle: "snake"
 }
 
 export default async function run({
@@ -39,17 +43,17 @@ export default async function run({
     const afterTailwindPlugin = {
         postcssPlugin: "elm-tailwind-modules",
         async OnceExit(root: postcss.Root) {
-            const blocksByClass = parser.groupDeclarationBlocksByClass(root, debugFunction);
+            const blocksByClass = parser.groupDeclarationBlocksByClass(root, debugFunction, namingOptions);
             const modulePath = path.join.apply(null, moduleName.split("."));
 
             // setup standard utility code generation promise
             utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass);
-            breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig);
+            breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions);
 
             if (directory != null) {
                 const filename = await writeFile(path.resolve(directory, `${modulePath}/Utilities.elm`), utilitiesModule);
                 const filename2 = await writeFile(path.resolve(directory, `${modulePath}/Breakpoints.elm`), breakpointsModule);
-                console.log("Saved", filename, filename2);
+                debugFunction("Saved " + filename + " " + filename2);
             }
         }
     };

@@ -10,6 +10,7 @@ import {
     isPseudoElementSelector,
     isPseudoSelector,
     Keyframe,
+    NamingOptions,
     PropertiesBySelector,
     RecognizedDeclaration,
     Subselector,
@@ -29,7 +30,11 @@ const cssWhatErrors = [
     "Empty sub-selector",
 ]
 
-export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFunction: DebugFunction): GroupedDeclarations {
+export function groupDeclarationBlocksByClass(
+    postCssRoot: postcss.Root,
+    debugFunction: DebugFunction,
+    namingOptions: NamingOptions,
+): GroupedDeclarations {
     const recognized = new Map();
     const unrecognized: UnrecognizedDeclaration[] = [];
     const keyframes = new Map();
@@ -62,7 +67,7 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
                 if (child.name === "keyframes") {
                     const animationName = child.params;
                     let keyframeFrames: Keyframe[] = [];
-                    
+
                     child.walkRules(rule => {
                         try {
                             keyframeFrames.push({
@@ -135,8 +140,8 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
 
         parts.forEach(part => {
             // create a valid elm identifier from the classname
-            const elmDeclName = toElmName(fixClass(part.class));
-    
+            const elmDeclName = toElmName(fixClass(part.class), namingOptions);
+
 
             // find out what subselector this affects
             let subselector: Subselector;
@@ -153,7 +158,7 @@ export function groupDeclarationBlocksByClass(postCssRoot: postcss.Root, debugFu
                 }
                 throw e;
             }
-    
+
             // concat properties to possibly existing property lists
             const item = recognized.get(elmDeclName) || defaultRecognized();
             recognized.set(elmDeclName, {

@@ -1,5 +1,6 @@
 import * as generate from "./generate";
 import { toElmName } from "../helpers";
+import { NamingOptions } from "../types";
 
 
 interface TailwindResolvedConfig {
@@ -16,12 +17,16 @@ interface Breakpoint {
 }
 
 
-export function generateElmModule(moduleName: string, resolvedConfig: TailwindResolvedConfig): string {
+export function generateElmModule(
+    moduleName: string,
+    resolvedConfig: TailwindResolvedConfig,
+    namingOptions: NamingOptions,
+): string {
     return [
         elmHeader(moduleName),
         Object.entries(resolvedConfig.theme.screens)
             .map(([screen, size]: [TailwindScreen, string]) =>
-                elmBreakpointFunction(convertConfigToBreakpoint(screen, size))
+                elmBreakpointFunction(convertConfigToBreakpoint(screen, size, namingOptions))
             )
             .join(""),
     ].join("");
@@ -36,7 +41,7 @@ import Css.Media
 `;
 }
 
-function convertBreakpointName(screen: TailwindScreen): string {
+function convertBreakpointName(screen: TailwindScreen, namingOptions: NamingOptions): string {
     if (screen.endsWith("xl") || screen.endsWith("xs")) {
         const ending = screen.slice(screen.length - 2, screen.length);
         const start = screen.slice(0, screen.length - 2);
@@ -44,16 +49,16 @@ function convertBreakpointName(screen: TailwindScreen): string {
             const number = parseInt(start);
             return "x".repeat(number - 1) + ending;
         } catch (e) {
-            return "_" + toElmName(screen);
+            return "_" + toElmName(screen, namingOptions);
         }
     }
-    return toElmName(screen);
+    return toElmName(screen, namingOptions);
 }
 
 // Full breakpointSize reference: https://tailwindcss.com/docs/breakpoints
-function convertConfigToBreakpoint(screen: TailwindScreen, size: string): Breakpoint {
+function convertConfigToBreakpoint(screen: TailwindScreen, size: string, namingOptions: NamingOptions): Breakpoint {
     return {
-        name: convertBreakpointName(screen),
+        name: convertBreakpointName(screen, namingOptions),
         size: size,
     };
 }
