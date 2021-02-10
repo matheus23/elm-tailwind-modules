@@ -1,6 +1,6 @@
 import test, { ExecutionContext } from "ava";
 
-import elmTailwindModules from "../src/index";
+import * as elmTailwindModules from "../src/index";
 // @ts-ignore
 import tailwindConfig from "../test-example/tailwind.config.js";
 import { execSync, spawnSync } from "child_process";
@@ -10,7 +10,7 @@ import path from "path";
 
 
 test("output is formatted according to elm-format", async t => {
-    const { utilitiesModule, breakpointsModule } = await elmTailwindModules({
+    const { utilitiesModule, breakpointsModule } = await elmTailwindModules.run({
         directory: null,
         moduleName: "Tailwind.Basic",
         postcssPlugins: [],

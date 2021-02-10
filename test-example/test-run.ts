@@ -1,8 +1,8 @@
-import elmTailwindModules from "../src/index";
+import * as elmTailwindModules from "../src/index";
 // @ts-ignore
 import tailwindConfig from "./tailwind.config.js";
 
-elmTailwindModules({
+elmTailwindModules.run({
     directory: "./test-example/src",
     moduleName: "Tailwind",
     postcssPlugins: [],

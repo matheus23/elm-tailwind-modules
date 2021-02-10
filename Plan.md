@@ -28,9 +28,9 @@
   * [X] Add a cli.ts module
   * [X] Rollup code for that module
   * [X] Add an entry in package.json for "bin"
-* [ ] Expand possible integration use cases
-  * [ ] Allow custom postcss
-  * [ ] Export as postcss plugin
+* [X] Expand possible integration use cases
+  * [X] Allow custom postcss
+  * [X] Export as postcss plugin
 * [ ] Write README/docs
   * [ ] Add jsdoc for index.ts
 * [ ] Support parameterized css

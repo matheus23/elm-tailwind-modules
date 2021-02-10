@@ -14,7 +14,7 @@ export default {
         {
             file: destination,
             format: "cjs",
-            exports: "named"
+            exports: "none"
         },
     ],
     external: [

@@ -1,4 +1,4 @@
-import elmTailwindModules, { defaultTailwindConfig } from "./index";
+import * as elmTailwindModules from "./index";
 import { program } from "commander";
 
 program.name("elm-tailwind-modules");
@@ -12,9 +12,9 @@ program.option("--tailwind-config <file>", `your tailwind config file`, null);
 
     const options = program.opts();
 
-    const tailwindConfig = options.tailwindConfig == null ? defaultTailwindConfig : await import(options.tailwindConfig);
+    const tailwindConfig = options.tailwindConfig == null ? elmTailwindModules.defaultTailwindConfig : await import(options.tailwindConfig);
 
-    elmTailwindModules({
+    elmTailwindModules.run({
         directory: options.dir,
         moduleName: options.moduleName,
         postcssPlugins: [],
