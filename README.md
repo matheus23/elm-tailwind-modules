@@ -9,7 +9,7 @@
 ## Getting Started
 
 ```sh
-$ npm i --dev elm-tailwind-modules tailwindcss postcss
+$ npm i --save-dev elm-tailwind-modules tailwindcss postcss
 $ npx elm-tailwind-modules --dir ./gen
 Saved
  - gen/Tailwind/Utilities.elm
