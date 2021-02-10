@@ -11,6 +11,7 @@
     "build": "yarn build:lib && yarn build:cli",
     "build:cli": "rollup -c cli.rollup.config.ts && chmod +x dist/cli.js",
     "build:lib": "rollup -c rollup.config.ts",
+    "docs": "typedoc src/index.ts --out docs",
     "test": "ava",
     "test-all": "yarn test:clean && yarn test:elm-compile && yarn test",
     "test:clean": "rm -r test-example/src/Tailwind || true",
