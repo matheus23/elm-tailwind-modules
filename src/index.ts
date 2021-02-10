@@ -126,10 +126,10 @@ async function resolvePostcssFile(postcssFile: null | string): Promise<{ file: s
             file: "@tailwind base;\n@tailwind components;\n@tailwind utilities;",
         };
     }
-    const content = await fs.readFile(postcssFile);
+    const content = await fs.readFile(postcssFile, { encoding: "utf-8" });
     return {
         from: postcssFile,
-        file: postcssFile
+        file: content
     };
 }
 
