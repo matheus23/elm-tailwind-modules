@@ -2,7 +2,7 @@ import * as elmTailwindModules from "./index";
 import { program } from "commander";
 
 program.name("elm-tailwind-modules");
-program.version("0.0.1");
+program.version("0.1.0");
 program.option("--dir <dir>", `destination folder for generated elm modules, e.g. "src/" or "gen/". Add this folder to your elm.json source-directories.`);
 program.option("--module-name <name>", `module name prefix for generated elm modules, e.g. "Tailwind" or "Css.Gen"`);
 program.option("--tailwind-config <file>", `your tailwind config file`, null);
