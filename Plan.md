@@ -31,14 +31,14 @@
 * [X] Expand possible integration use cases
   * [X] Allow custom postcss
   * [X] Export as postcss plugin
-* [ ] Write README/docs
-  * [ ] Add jsdoc for index.ts
+* [X] Write README/docs
+  * [X] Add jsdoc for index.ts
 * [ ] Support parameterized css
   * [ ] Detect when css uses properties like theme colors
   * [ ] Detect when css uses spacings
 * [ ] Do end-to-end snapshot testing
 * [X] Fix selectors like `.aspect-w-1, .aspect-w-2` or `.ordinal, .slashed-zero`, etc. which are just shortcuts for setting this for all classes individually.
-
+* [ ] Clear docs/ and dist/ before builds
 
 ## Refactoring
 

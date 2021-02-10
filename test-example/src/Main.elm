@@ -1,44 +1,50 @@
-
 module Main exposing (..)
 
-import Tailwind.Utilities as Tailwind
-import Css
-import Css.Media
+import Css exposing (hover)
 import Css.Global
-import Html.Styled as Html
-import Html.Styled.Attributes as Attr
+import Html.Styled exposing (..)
+import Html.Styled.Attributes exposing (css, href)
+import Tailwind.Breakpoints exposing (..)
+import Tailwind.Utilities exposing (..)
 
 
 main =
-    Html.div
-        [ Attr.css
-            [ Tailwind.container
-            , Tailwind.bg_gray_200
-            , Tailwind.animate_pulse
-            ]
-        ]
-        [ Html.text "Container"
-        ]
-        |> Html.toUnstyled
+    toUnstyled <|
+        div [ css [ bg_gray_50 ] ]
+            [ -- This will give us the standard tailwind style-reset as well as the fonts
+              Css.Global.global globalStyles
+            , div
+                [ css
+                    [ mt_8
+                    , flex
 
-cases =
-    Css.batch
-        [ Css.property "" ""
-        , Css.property "" ""
-        , Css.Media.withMediaQuery [ "(min-width: 900px)" ]
-            [ Css.property "" "" ]
-        , Css.Media.withMediaQuery [ "(min-width: 640px)" ]
-            [ Css.Global.children
-                [ Css.Global.selector ":not(template) ~ :not(template)"
-                    [ Css.property "" ""
-                    , Css.property "" ""
+                    -- We use breakpoints like this
+                    -- However, you need to order your breakpoints from hight to low :/
+                    , lg [ mt_0, flex_shrink_0 ]
+                    ]
+                ]
+                [ div [ css [ inline_flex, rounded_md, shadow ] ]
+                    [ a
+                        [ css
+                            [ inline_flex
+                            , items_center
+                            , justify_center
+                            , px_5
+                            , py_3
+                            , border
+                            , border_transparent
+                            , text_base
+                            , font_medium
+                            , rounded_md
+                            , text_white
+                            , bg_indigo_600
+
+                            -- We can use hover styles via elm-css :)
+                            , hover [ bg_indigo_700 ]
+                            ]
+                        , href "#"
+                        ]
+                        [ text "Get started" ]
                     ]
                 ]
             ]
-        , Css.Global.children
-            [ Css.Global.selector ":not(template) ~ :not(template)"
-                [ Css.property "" ""
-                , Css.property "" ""
-                ]
-            ]
-        ]

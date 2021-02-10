@@ -141,5 +141,5 @@ async function writeFile(fname: string, content: string): Promise<typeof fname> 
     const folder = path.dirname(fname);
     await fs.mkdir(folder, { recursive: true });
     await fs.writeFile(fname, content);
-    return fname;
+    return path.relative(".", fname);
 }

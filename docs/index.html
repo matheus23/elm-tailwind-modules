@@ -61,9 +61,145 @@
 				<a href="#elm-tailwind-modules" id="elm-tailwind-modules" style="color: inherit; text-decoration: none;">
 					<h1>Elm Tailwind Modules</h1>
 				</a>
-				<p>🚧 <strong>This is still WIP</strong> 🚧</p>
-				<p>This is a fork of <a href="https://github.com/justinrassier/postcss-elm-css-tailwind">postcss-elm-css-tailwind</a>.</p>
-				<p>There is no CLI, yet. So if you want to check out how to run this, take a look at <code>test-example/test-run.ts</code>.</p>
+				<blockquote>
+					<p>Generate Elm code for Tailwind Utilities and Components that purges using Elm&#39;s --optimize!</p>
+				</blockquote>
+				<blockquote>
+					<p>Use <a href="https://tailwindcss.com/">Tailwind</a> with <a href="https://github.com/rtfeldman/elm-css">Elm-Css</a>!</p>
+				</blockquote>
+				<hr>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting Started</h2>
+				</a>
+				<pre><code class="language-sh"><span style="color: #000000">$ npm i --dev elm-tailwind-modules tailwindcss postcss</span>
+<span style="color: #000000">$ npx elm-tailwind-modules --dir ./gen</span>
+<span style="color: #000000">Saved</span>
+<span style="color: #000000"> - gen/Tailwind/Utilities.elm</span>
+<span style="color: #000000"> - gen/Tailwind/Breakpoints.elm</span>
+<span style="color: #000000">$ elm install rtfeldman/elm-css</span>
+</code></pre>
+				<p>This will generate these files:</p>
+				<ul>
+					<li><a href="https://github.com/matheus23/elm-tailwind-modules/blob/master/docs/example/Tailwind/Utilities.elm"><code>gen/Tailwind/Utilities.elm</code></a></li>
+					<li><a href="https://github.com/matheus23/elm-tailwind-modules/blob/master/docs/example/Tailwind/Breakpoints.elm"><code>gen/Tailwind/Breakpoints.elm</code></a></li>
+				</ul>
+				<p>Now you simply import these modules and use them in your elm code:</p>
+				<pre><code class="language-elm"><span style="color: #AF00DB">import</span><span style="color: #000000"> Css </span><span style="color: #AF00DB">exposing</span><span style="color: #000000"> (</span><span style="color: #795E26">hover</span><span style="color: #000000">)</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> Css</span><span style="color: #0000FF">.</span><span style="color: #000000">Global</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> Html</span><span style="color: #0000FF">.</span><span style="color: #000000">Styled </span><span style="color: #AF00DB">exposing</span><span style="color: #000000"> (..)</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> Html</span><span style="color: #0000FF">.</span><span style="color: #000000">Styled</span><span style="color: #0000FF">.</span><span style="color: #000000">Attributes </span><span style="color: #AF00DB">exposing</span><span style="color: #000000"> (</span><span style="color: #795E26">css</span><span style="color: #000000">, </span><span style="color: #795E26">href</span><span style="color: #000000">)</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> Tailwind</span><span style="color: #0000FF">.</span><span style="color: #000000">Breakpoints </span><span style="color: #AF00DB">exposing</span><span style="color: #000000"> (..)</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> Tailwind</span><span style="color: #0000FF">.</span><span style="color: #000000">Utilities </span><span style="color: #AF00DB">exposing</span><span style="color: #000000"> (..)</span>
+
+
+<span style="color: #795E26">main</span><span style="color: #000000"> </span><span style="color: #0000FF">=</span>
+<span style="color: #000000">    toUnstyled &lt;|</span>
+<span style="color: #000000">        div [ css [ bg_gray_50 ] ]</span>
+<span style="color: #000000">            [ </span><span style="color: #008000">-- This will give us the standard tailwind style-reset as well as the fonts</span>
+<span style="color: #000000">              Css</span><span style="color: #0000FF">.</span><span style="color: #000000">Global</span><span style="color: #0000FF">.</span><span style="color: #000000">global globalStyles</span>
+<span style="color: #000000">            , div</span>
+<span style="color: #000000">                [ css</span>
+<span style="color: #000000">                    [ mt_8</span>
+<span style="color: #000000">                    , flex</span>
+
+<span style="color: #000000">                    </span><span style="color: #008000">-- We use breakpoints like this</span>
+<span style="color: #000000">                    </span><span style="color: #008000">-- However, you need to order your breakpoints from hight to low :/</span>
+<span style="color: #000000">                    , lg [ mt_0, flex_shrink_0 ]</span>
+<span style="color: #000000">                    ]</span>
+<span style="color: #000000">                ]</span>
+<span style="color: #000000">                [ div [ css [ inline_flex, rounded_md, shadow ] ]</span>
+<span style="color: #000000">                    [ a</span>
+<span style="color: #000000">                        [ css</span>
+<span style="color: #000000">                            [ inline_flex</span>
+<span style="color: #000000">                            , items_center</span>
+<span style="color: #000000">                            , justify_center</span>
+<span style="color: #000000">                            , px_5</span>
+<span style="color: #000000">                            , py_3</span>
+<span style="color: #000000">                            , border</span>
+<span style="color: #000000">                            , border_transparent</span>
+<span style="color: #000000">                            , text_base</span>
+<span style="color: #000000">                            , font_medium</span>
+<span style="color: #000000">                            , rounded_md</span>
+<span style="color: #000000">                            , text_white</span>
+<span style="color: #000000">                            , bg_indigo_600</span>
+
+<span style="color: #000000">                            </span><span style="color: #008000">-- We can use hover styles via elm-css :)</span>
+<span style="color: #000000">                            , hover [ bg_indigo_700 ]</span>
+<span style="color: #000000">                            ]</span>
+<span style="color: #000000">                        , href </span><span style="color: #A31515">&quot;#&quot;</span>
+<span style="color: #000000">                        ]</span>
+<span style="color: #000000">                        [ text </span><span style="color: #A31515">&quot;Get started&quot;</span><span style="color: #000000"> ]</span>
+<span style="color: #000000">                    ]</span>
+<span style="color: #000000">                ]</span>
+<span style="color: #000000">            ]</span>
+</code></pre>
+				<p>Which will result in this:
+				![<a href="https://raw.githubusercontent.com/matheus23/elm-tailwind-modules/master/test-example/result.png%5D">https://raw.githubusercontent.com/matheus23/elm-tailwind-modules/master/test-example/result.png]</a></p>
+				<p>(Also see <a href="https://github.com/matheus23/elm-tailwind-modules/blob/master/test-example/src/Main.elm">the example file</a>.)</p>
+				<a href="#cli" id="cli" style="color: inherit; text-decoration: none;">
+					<h2>CLI</h2>
+				</a>
+				<pre><code><span style="color: #001080">$</span><span style="color: #000000"> </span><span style="color: #001080">elm</span><span style="color: #000000">-</span><span style="color: #001080">tailwind</span><span style="color: #000000">-</span><span style="color: #001080">modules</span><span style="color: #000000"> --</span><span style="color: #001080">help</span>
+<span style="color: #000000">Usage: </span><span style="color: #001080">elm</span><span style="color: #000000">-</span><span style="color: #001080">tailwind</span><span style="color: #000000">-</span><span style="color: #001080">modules</span><span style="color: #000000"> [</span><span style="color: #001080">options</span><span style="color: #000000">]</span>
+
+<span style="color: #000000">Options:</span>
+<span style="color: #000000">  -</span><span style="color: #0070C1">V</span><span style="color: #000000">, --</span><span style="color: #001080">version</span><span style="color: #000000">             </span><span style="color: #001080">output</span><span style="color: #000000"> </span><span style="color: #001080">the</span><span style="color: #000000"> </span><span style="color: #001080">version</span><span style="color: #000000"> </span><span style="color: #001080">number</span>
+<span style="color: #000000">  --</span><span style="color: #001080">dir</span><span style="color: #000000"> &lt;</span><span style="color: #001080">dir</span><span style="color: #000000">&gt;               </span><span style="color: #001080">destination</span><span style="color: #000000"> </span><span style="color: #001080">folder</span><span style="color: #000000"> </span><span style="color: #001080">for</span><span style="color: #000000"> </span><span style="color: #001080">generated</span><span style="color: #000000"> </span><span style="color: #001080">elm</span><span style="color: #000000"> </span><span style="color: #001080">modules</span><span style="color: #000000">, </span><span style="color: #001080">e</span><span style="color: #000000">.</span><span style="color: #001080">g</span><span style="color: #000000">. </span><span style="color: #A31515">&quot;src/&quot;</span><span style="color: #000000"> </span><span style="color: #001080">or</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;gen/&quot;</span><span style="color: #000000">. </span><span style="color: #001080">Add</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000"> </span><span style="color: #001080">folder</span><span style="color: #000000"> </span><span style="color: #001080">to</span><span style="color: #000000"> </span><span style="color: #001080">your</span><span style="color: #000000"> </span><span style="color: #001080">elm</span><span style="color: #000000">.</span><span style="color: #001080">json</span>
+<span style="color: #000000">                            </span><span style="color: #001080">source</span><span style="color: #000000">-</span><span style="color: #001080">directories</span><span style="color: #000000">.</span>
+<span style="color: #000000">  --</span><span style="color: #267F99">module</span><span style="color: #000000">-</span><span style="color: #001080">name</span><span style="color: #000000"> &lt;</span><span style="color: #001080">name</span><span style="color: #000000">&gt;      </span><span style="color: #0000FF">module</span><span style="color: #000000"> </span><span style="color: #267F99">name</span><span style="color: #000000"> </span><span style="color: #267F99">prefix</span><span style="color: #000000"> </span><span style="color: #267F99">for</span><span style="color: #000000"> </span><span style="color: #267F99">generated</span><span style="color: #000000"> </span><span style="color: #267F99">elm</span><span style="color: #000000"> </span><span style="color: #267F99">modules</span><span style="color: #000000">, </span><span style="color: #267F99">e</span><span style="color: #000000">.</span><span style="color: #267F99">g</span><span style="color: #000000">. </span><span style="color: #A31515">&quot;Tailwind&quot;</span><span style="color: #000000"> </span><span style="color: #267F99">or</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;Css.Gen&quot;</span>
+<span style="color: #000000">  --</span><span style="color: #267F99">tailwind</span><span style="color: #000000">-</span><span style="color: #267F99">config</span><span style="color: #000000"> &lt;</span><span style="color: #267F99">file</span><span style="color: #000000">&gt;  </span><span style="color: #267F99">your</span><span style="color: #000000"> </span><span style="color: #267F99">tailwind</span><span style="color: #000000"> </span><span style="color: #267F99">config</span><span style="color: #000000"> </span><span style="color: #267F99">file</span><span style="color: #000000"> (</span><span style="color: #267F99">default</span><span style="color: #000000">: </span><span style="color: #267F99">null</span><span style="color: #000000">)</span>
+<span style="color: #000000">  -</span><span style="color: #267F99">h</span><span style="color: #000000">, --</span><span style="color: #267F99">help</span><span style="color: #000000">                </span><span style="color: #267F99">display</span><span style="color: #000000"> </span><span style="color: #267F99">help</span><span style="color: #000000"> </span><span style="color: #267F99">for</span><span style="color: #000000"> </span><span style="color: #267F99">command</span>
+</code></pre>
+				<a href="#nodejs-api" id="nodejs-api" style="color: inherit; text-decoration: none;">
+					<h2>Nodejs API</h2>
+				</a>
+				<p>This package is written in typescript, so you can use it from node via the same npm package, too.</p>
+				<p>The nodejs API allows you to do more stuff, for example, include additional postcss plugins like autoprefixer.</p>
+				<p>It boils down to this:</p>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">elmTailwindModules</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;elm-tailwind-modules&quot;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">tailwindConfig</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;my-tailwind.js&quot;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">autoprefixer</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;autoprefixer&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #001080">elmTailwindModules</span><span style="color: #000000">.</span><span style="color: #795E26">run</span><span style="color: #000000">({</span>
+<span style="color: #000000">    </span><span style="color: #001080">directory:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;./gen&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">moduleName:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;Tailwind&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">postcssPlugins:</span><span style="color: #000000"> [</span><span style="color: #001080">autoprefixer</span><span style="color: #000000">],</span>
+<span style="color: #000000">    </span><span style="color: #001080">tailwindConfig</span><span style="color: #000000">,</span>
+<span style="color: #000000">});</span>
+</code></pre>
+				<p>You can find the documentation at <a href="https://matheus23.github.io/elm-tailwind-modules/modules.html#run">matheus23.github.io/elm-tailwind-modules</a>.</p>
+				<a href="#comparisons" id="comparisons" style="color: inherit; text-decoration: none;">
+					<h2>Comparisons</h2>
+				</a>
+				<ul>
+					<li><a href="https://github.com/monty5811/postcss-elm-tailwind">monty5811/postcss-elm-tailwind</a>:<ul>
+							<li>You still need to include a <code>.css</code> file</li>
+							<li>You need to purge the <code>.css</code> file (which is a somewhat involved process, including having to run postcss twice)</li>
+							<li>The generated files contain a definition for all variants, which makes them much bigger (150+kLOC vs. 30+kLOC)</li>
+							<li>Has more configuration options</li>
+							<li>More mature and robust</li>
+						</ul>
+					</li>
+					<li>Using classes via tailwind directly:<ul>
+							<li>No type checking (typos might don&#39;t get noticed)</li>
+							<li>global namespaces for classes</li>
+						</ul>
+					</li>
+				</ul>
+				<p>So mainly, the cool things about this package are:</p>
+				<ul>
+					<li>You can use elm-css with tailwind. So:<ul>
+							<li>No writing css by hand</li>
+							<li>No global css class namespaces</li>
+							<li>All the features of tailwindcss, its plugins and ecosystem</li>
+							<li>Simply import some elm files after generating them, and they&#39;re all you need</li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#acknowledgements" id="acknowledgements" style="color: inherit; text-decoration: none;">
+					<h2>Acknowledgements</h2>
+				</a>
+				<p>The idea for this is not original. It&#39;s a fork from <a href="https://github.com/justinrassier/postcss-elm-css-tailwind">justinrassier/postcss-elm-css-tailwind</a>. Thanks!</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
