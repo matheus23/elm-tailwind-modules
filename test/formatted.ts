@@ -15,7 +15,7 @@ test("output is formatted according to elm-format", async t => {
         moduleName: "Tailwind.Basic",
         postcssPlugins: [],
         tailwindConfig,
-        debugFunction: t.log,
+        logFunction: t.log,
     });
 
     await assertFormatted(t, breakpointsModule);

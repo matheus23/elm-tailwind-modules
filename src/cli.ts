@@ -19,7 +19,7 @@ program.option("--tailwind-config <file>", `your tailwind config file`, null);
         moduleName: options.moduleName,
         postcssPlugins: [],
         tailwindConfig,
-        debugFunction: console.log,
+        logFunction: console.log,
     });
 
 }());

@@ -1,6 +1,6 @@
 import CssWhat from "css-what";
 
-export interface DebugFunction {
+export interface LogFunction {
     (message: string): void,
 }
 

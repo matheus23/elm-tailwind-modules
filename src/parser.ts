@@ -4,7 +4,7 @@ import deepEqual from "deep-equal";
 import * as postcss from "postcss";
 import {
     CssProperty,
-    DebugFunction,
+    LogFunction,
     GroupedDeclarations,
     isBasicSubselectorType,
     isPseudoElementSelector,
@@ -32,7 +32,7 @@ const cssWhatErrors = [
 
 export function groupDeclarationBlocksByClass(
     postCssRoot: postcss.Root,
-    debugFunction: DebugFunction,
+    logFunction: LogFunction,
     namingOptions: NamingOptions,
 ): GroupedDeclarations {
     const recognized = new Map();
@@ -53,7 +53,7 @@ export function groupDeclarationBlocksByClass(
 
 
             case "decl":
-                debugFunction("Encountered declaration immediately below the postcss root. This shouldn't happen. Ignoring " + child.toString());
+                logFunction("Encountered declaration immediately below the postcss root. This shouldn't happen. Ignoring " + child.toString());
                 return;
 
 
@@ -76,7 +76,7 @@ export function groupDeclarationBlocksByClass(
                             })
                         } catch (e) {
                             if (e.message.startsWith("Couldn't parse")) {
-                                debugFunction(e.message);
+                                logFunction(e.message);
                                 return;
                             }
                             throw e;
@@ -92,7 +92,7 @@ export function groupDeclarationBlocksByClass(
                     return;
                 }
 
-                debugFunction("Encountered unknown @-rule: " + child.name);
+                logFunction("Encountered unknown @-rule: " + child.name);
                 return;
 
 
@@ -112,8 +112,11 @@ export function groupDeclarationBlocksByClass(
             selectors = CssWhat.parse(rule.selector);
         } catch (e) {
             if (cssWhatErrors.some(msg => e.message.startsWith(msg))) {
-                const debug = (message: string) => debugFunction("Something went wrong with a selector that couldn't be parsed\n" + message);
-                handleUnrecognized(unrecognized, rule, mediaQuery, debug);
+                unrecognized.push({
+                    selector: rule.selector,
+                    properties: collectProperties(rule),
+                    mediaQuery: mediaQuery,
+                });
                 return;
             }
             throw e;
@@ -131,8 +134,11 @@ export function groupDeclarationBlocksByClass(
             });
         } catch (e) {
             if (e === "Has unrecognized") {
-                const debug = (message: string) => debugFunction("Something went wrong with a rule with unrelated selectors\n" + message);
-                handleUnrecognized(unrecognized, rule, mediaQuery, debug);
+                unrecognized.push({
+                    selector: rule.selector,
+                    properties: collectProperties(rule),
+                    mediaQuery: mediaQuery,
+                });
                 return;
             }
             throw e;
@@ -152,8 +158,11 @@ export function groupDeclarationBlocksByClass(
                 };
             } catch (e) {
                 if (e.message.startsWith("Unsupported type")) {
-                    const debug = (message: string) => debugFunction("Something went wrong with an unsupported subselector type\n" + message);
-                    handleUnrecognized(unrecognized, rule, mediaQuery, debug);
+                    unrecognized.push({
+                        selector: rule.selector,
+                        properties: collectProperties(rule),
+                        mediaQuery: mediaQuery,
+                    });
                     return;
                 }
                 throw e;
@@ -280,17 +289,4 @@ function stripClassSelector(
         class: first.value,
         rest,
     };
-}
-
-function handleUnrecognized(
-    unrecognized: UnrecognizedDeclaration[],
-    rule: postcss.Rule,
-    mediaQuery: string | null,
-    debugFunction: DebugFunction
-): void {
-    unrecognized.push({
-        selector: rule.selector,
-        properties: collectProperties(rule),
-        mediaQuery: mediaQuery,
-    });
 }

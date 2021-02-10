@@ -8,7 +8,7 @@ import * as parser from "./parser";
 import tailwindcss from "tailwindcss";
 // @ts-ignore
 import resolveConfig from "tailwindcss/resolveConfig.js";
-import { DebugFunction, NamingOptions } from "./types";
+import { LogFunction, NamingOptions } from "./types";
 import chalk from "chalk";
 import { isArray, isEmpty } from "lodash";
 
@@ -26,7 +26,7 @@ export interface RunConfiguration {
     postcssPlugins?: postcss.AcceptedPlugin[],
     tailwindConfig?: any,
     postcssFile?: string,
-    debugFunction?: DebugFunction,
+    logFunction?: LogFunction,
 }
 
 export async function run({
@@ -35,25 +35,25 @@ export async function run({
     postcssPlugins = [],
     tailwindConfig = defaultTailwindConfig,
     postcssFile = null,
-    debugFunction = console.log,
+    logFunction = console.log,
 }: RunConfiguration): Promise<{
     utilitiesModule: string,
     breakpointsModule: string,
 }> {
     validateModuleName(moduleName);
-    warningsTailwindConfig(tailwindConfig, debugFunction);
+    warningsTailwindConfig(tailwindConfig, logFunction);
 
     let utilitiesModule: undefined | string;
     let breakpointsModule: undefined | string;
 
-    const afterTailwindPlugin = asPostcssPlugin(moduleName, tailwindConfig, debugFunction, async generated => {
+    const afterTailwindPlugin = asPostcssPlugin(moduleName, tailwindConfig, logFunction, async generated => {
         const modulePath = path.join.apply(null, moduleName.split("."));
 
         utilitiesModule = generated.utilitiesModule;
         breakpointsModule = generated.breakpointsModule;
 
         if (directory != null) {
-            debugFunction([
+            logFunction([
                 "Saved",
                 " - " + chalk.blue(await writeFile(path.resolve(directory, `${modulePath}/Utilities.elm`), utilitiesModule)),
                 " - " + chalk.blue(await writeFile(path.resolve(directory, `${modulePath}/Breakpoints.elm`), breakpointsModule)),
@@ -80,14 +80,14 @@ export interface ModulesGeneratedHook {
 export function asPostcssPlugin(
     moduleName: string,
     tailwindConfig: any,
-    debugFunction: DebugFunction,
+    logFunction: LogFunction,
     modulesGeneratedHook: ModulesGeneratedHook
 ) {
     return {
         postcssPlugin: "elm-tailwind-modules",
         async OnceExit(root: postcss.Root) {
             const resolvedConfig = resolveConfig(tailwindConfig);
-            const blocksByClass = parser.groupDeclarationBlocksByClass(root, debugFunction, namingOptions);
+            const blocksByClass = parser.groupDeclarationBlocksByClass(root, logFunction, namingOptions);
             const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass);
             const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions);
             modulesGeneratedHook({ utilitiesModule, breakpointsModule });
@@ -109,9 +109,9 @@ function validateModuleName(moduleName: string) {
 }
 
 
-function warningsTailwindConfig(tailwindConfig: any, debugFunction: DebugFunction) {
+function warningsTailwindConfig(tailwindConfig: any, logFunction: LogFunction) {
     if (!(isEmpty(tailwindConfig.variants) && isArray(tailwindConfig.variants))) {
-        debugFunction(
+        logFunction(
             `${chalk.bold.yellow("Warning:")} It is recommended to ${chalk.bold(`set ${chalk.green("`variants: []`")} in the tailwindConfig`)}, otherwise the generated files are huge.
 Instead, you should use elm-css functions like ${chalk.blue("Css.focus")} and ${chalk.blue("Css.hover")}.
 If you still have a usecase that needs variants, please create an issue.`);
