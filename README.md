@@ -73,10 +73,11 @@ main =
                 ]
             ]
 ```
-Which will result in this:
-![https://raw.githubusercontent.com/matheus23/elm-tailwind-modules/master/test-example/result.png]
+The result looks like this:
 
-(Also see [the example file](https://github.com/matheus23/elm-tailwind-modules/blob/master/test-example/src/Main.elm).)
+![Screenshot](https://raw.githubusercontent.com/matheus23/elm-tailwind-modules/master/test-example/result.png)
+
+(For a bigger example, see [test-example/src/Main.elm](https://github.com/matheus23/elm-tailwind-modules/blob/master/test-example/src/Main.elm).)
 
 
 ## CLI
