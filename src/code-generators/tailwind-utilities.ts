@@ -163,14 +163,14 @@ function convertKeyframes(keyframes: Keyframe[]): generate.Indentable {
 }
 
 function convertKeyframe(keyframe: Keyframe): generate.Indentable {
-    return generate.elmTuple(
+    return generate.elmTuple([
         generate.singleLine(keyframe.percentage.toFixed(0)),
         generate.elmList(
             keyframe.properties.map(prop =>
                 convertBasicDeclaration("Css.Animations.property", prop.prop, prop.value)
             )
         )
-    );
+    ]);
 }
 
 function convertMediaQueryWrap(mediaQuery: string, functionName: string, propertiesExpressions: generate.Indentable[]): generate.Indentable[] {

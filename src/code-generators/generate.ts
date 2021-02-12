@@ -20,10 +20,22 @@ export const elmFunctionCall = (firstLine: string, nextLine: Indentable): Indent
     , nextLine({ indentation: align(indentation + 4, 4), preindent: true })
     ].join("\n")
 
-export const elmList = (elements: Array<Indentable>): Indentable => ({ indentation, preindent }) => {
+const defaultListOptions = {
+    open: "[",
+    separator: ",",
+    close: "]",
+};
+
+export interface ListOptions {
+    open: string;
+    separator: string;
+    close: string;
+}
+
+export const elmList = (elements: Indentable[], options: ListOptions = defaultListOptions): Indentable => ({ indentation, preindent }) => {
     const indent = spaces(indentation);
     if (elements.length === 0) {
-        return indent + "[]";
+        return indent + options.open + options.close;
     }
     let str = "";
     let idx = 0;
@@ -31,24 +43,24 @@ export const elmList = (elements: Array<Indentable>): Indentable => ({ indentati
         if (idx != 0 || preindent) {
             str += indent;
         }
-        str += idx === 0 ? "[ " : ", ";
+        str += idx === 0 ? options.open + " " : options.separator + " ";
         str += elem({ indentation: indentation + 2, preindent: false });
         str += "\n";
         idx++;
     });
     str += indent;
-    str += "]";
+    str += options.close;
     return str;
 }
 
-export const elmTuple = (first: Indentable, second: Indentable): Indentable => ({ indentation, preindent }) => {
-    const indent = spaces(indentation);
-    return [
-        (preindent ? indent : "") + "( " + first({ indentation: indentation + 2, preindent: false }),
-        indent + ", " + second({ indentation: indentation + 2, preindent: false }),
-        indent + ")"
-    ].join("\n");
+const tupleOptions = {
+    open: "(",
+    separator: ",",
+    close: ")",
 }
+
+export const elmTuple = (elements: Indentable[]): Indentable =>
+    elmList(elements, tupleOptions)
 
 export const elmParen = (around: Indentable): Indentable => ({ indentation, preindent }) => {
     const indent = spaces(indentation);
@@ -56,6 +68,32 @@ export const elmParen = (around: Indentable): Indentable => ({ indentation, prei
         (preindent ? indent : "") + "(" + around({ indentation, preindent: false }),
         indent + ")"
     ].join("\n");
+}
+
+
+export interface HeaderOptions {
+    moduleName: string;
+    exposing: string[] | null;
+    moduleDocs: string | null;
+    imports: Indentable[];
+}
+
+export const elmModuleHeader = (header: HeaderOptions): string => {
+    return `module ${header.moduleName}${elmExposing(header.exposing)({ indentation: 0, preindent: false })}
+${header.moduleDocs == null ? "" : header.moduleDocs}
+${header.imports.map(i => i({ indentation: 0, preindent: false })).join("\n")}
+`;
+}
+
+function elmExposing(exposing: string[] | null): Indentable {
+    if (exposing == null) {
+        return singleLine(" exposing (..)");
+    }
+
+    return elmFunctionCall(
+        " exposing",
+        elmTuple(exposing.map(singleLine))
+    );
 }
 
 const spaces = (n: number): string => " ".repeat(Math.max(0, n))
