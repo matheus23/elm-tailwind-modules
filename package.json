@@ -14,10 +14,10 @@
     "docs": "typedoc src/index.ts --out docs && node dist/cli.js --dir docs/example/",
     "test": "ava",
     "test-all": "yarn test:clean && yarn test:elm-compile && yarn test",
-    "test:clean": "rm -r test-example/src/Tailwind || true",
+    "test:clean": "rimraf test-example/src/Tailwind",
     "test:elm-compile": "ts-node test-example/test-run.ts && cd test-example && elm make src/Main.elm --output=/dev/null",
     "test:node-only": "ts-node test-example/test-run.ts",
-    "prepublish": "rm -r docs && rm -r dist && yarn build && yarn docs && yarn test-all"
+    "prepublishOnly": "rimraf dist && yarn build && yarn test-all && rimraf docs && yarn docs"
   },
   "license": "MIT",
   "dependencies": {
@@ -44,8 +44,10 @@
     "ava": "^3.15.0",
     "elm": "^0.19.1-5",
     "elm-format": "^0.8.5",
+    "execa": "^5.0.0",
     "magic-string": "^0.25.7",
     "postcss": "^8.2.4",
+    "rimraf": "^3.0.2",
     "tailwindcss": "^2.0.3",
     "ts-node": "^9.1.1",
     "typedoc": "^0.20.23",

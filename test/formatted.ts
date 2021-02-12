@@ -3,7 +3,8 @@ import test, { ExecutionContext } from "ava";
 import * as elmTailwindModules from "../src/index";
 // @ts-ignore
 import tailwindConfig from "../test-example/tailwind.config.js";
-import { execSync, spawnSync } from "child_process";
+import { spawnSync } from "child_process";
+import execa from "execa";
 import { promises as fs } from "fs";
 import { tmpdir } from "os";
 import path from "path";
@@ -39,19 +40,20 @@ test("output with documentation is formatted according to elm-format", async t =
 
 
 async function assertFormatted(t: ExecutionContext, file: string) {
-    const formatted = elmFormat(file);
+    const formatted = await elmFormat(file);
     if (file !== formatted) {
         t.fail("File is not formatted\n" + await diff(file, formatted));
     }
     t.pass();
 }
 
-function elmFormat(fileContents: string): string {
-    return execSync("./node_modules/.bin/elm-format --stdin", {
+async function elmFormat(fileContents: string): Promise<string> {
+    const output = await execa("./node_modules/.bin/elm-format", ["--stdin"], {
         input: fileContents,
-        encoding: "utf-8",
         timeout: 10000,
+        stripFinalNewline: false,
     });
+    return output.stdout;
 }
 
 async function diff(before: string, after: string): Promise<string> {

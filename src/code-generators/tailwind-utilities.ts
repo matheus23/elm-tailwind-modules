@@ -132,6 +132,7 @@ ${propertiesBlock.originalRules.map(rule => rule.toString()).join("\n\n")}
 \`\`\`
 
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
 -}`}
 ${elmClassName} : Css.Style
 ${elmClassName} =
