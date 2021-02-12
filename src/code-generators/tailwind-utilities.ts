@@ -14,9 +14,19 @@ import {
 // PUBLIC INTERFACE
 
 
-export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations): string {
+export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations, docs: boolean = true): string {
     return [
-        elmHeaderCss(moduleName),
+        generate.elmModuleHeader({
+            moduleName,
+            exposing: null,
+            imports: [
+                generate.singleLine("import Css"),
+                generate.singleLine("import Css.Animations"),
+                generate.singleLine("import Css.Global"),
+                generate.singleLine("import Css.Media"),
+            ],
+            moduleDocs: null,
+        }),
         elmUnrecognizedToFunctions(blocksByClass.unrecognized),
         elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.recognized),
     ].join("");
@@ -26,16 +36,6 @@ export function generateElmModule(moduleName: string, blocksByClass: GroupedDecl
 
 // PRIVATE INTERFACE
 
-
-function elmHeaderCss(moduleName: string): string {
-    return `module ${moduleName} exposing (..)
-
-import Css
-import Css.Animations
-import Css.Global
-import Css.Media
-`;
-}
 
 function elmUnrecognizedToFunctions(unrecognizedBlocks: UnrecognizedDeclaration[]): string {
     return `
