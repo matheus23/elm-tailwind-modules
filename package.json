@@ -16,7 +16,8 @@
     "test-all": "yarn test:clean && yarn test:elm-compile && yarn test",
     "test:clean": "rm -r test-example/src/Tailwind || true",
     "test:elm-compile": "ts-node test-example/test-run.ts && cd test-example && elm make src/Main.elm --output=/dev/null",
-    "test:node-only": "ts-node test-example/test-run.ts"
+    "test:node-only": "ts-node test-example/test-run.ts",
+    "prepublish": "rm -r docs && rm -r dist && yarn build && yarn docs && yarn test-all"
   },
   "license": "MIT",
   "dependencies": {
