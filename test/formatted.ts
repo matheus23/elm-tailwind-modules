@@ -22,6 +22,22 @@ test("output is formatted according to elm-format", async t => {
     await assertFormatted(t, utilitiesModule);
 });
 
+
+test("output with documentation is formatted according to elm-format", async t => {
+    const { utilitiesModule, breakpointsModule } = await elmTailwindModules.run({
+        directory: null,
+        moduleName: "Tailwind.Basic",
+        postcssPlugins: [],
+        tailwindConfig,
+        generateDocumentation: true,
+        logFunction: t.log,
+    });
+
+    await assertFormatted(t, breakpointsModule);
+    await assertFormatted(t, utilitiesModule);
+});
+
+
 async function assertFormatted(t: ExecutionContext, file: string) {
     const formatted = elmFormat(file);
     if (file !== formatted) {

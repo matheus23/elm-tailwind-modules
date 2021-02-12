@@ -19,6 +19,21 @@ test("snapshot of generated module", async t => {
 });
 
 
+test("snapshot of generated module with documentation", async t => {
+    const generatedModules = await elmTailwindModules.run({
+        directory: null,
+        moduleName: "Tailwind.Basic",
+        postcssPlugins: [],
+        tailwindConfig: { ...tailwindConfig, plugins: [] },
+        generateDocumentation: true,
+        logFunction: t.log,
+    });
+
+    t.snapshot(generatedModules.utilitiesModule, { id: t.title + ": Utilities Module" });
+    t.snapshot(generatedModules.breakpointsModule, { id: t.title + ": Breakpoints Module" });
+});
+
+
 test("snapshot of generated module with autoprefixer", async t => {
     const generatedModules = await elmTailwindModules.run({
         directory: "./test-example/src/",

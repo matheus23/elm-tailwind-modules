@@ -26,6 +26,7 @@ export interface RunConfiguration {
     postcssPlugins?: postcss.AcceptedPlugin[],
     tailwindConfig?: any,
     postcssFile?: string,
+    generateDocumentation?: boolean;
     logFunction?: LogFunction,
 }
 
@@ -35,6 +36,7 @@ export async function run({
     postcssPlugins = [],
     tailwindConfig = defaultTailwindConfig,
     postcssFile = null,
+    generateDocumentation = false,
     logFunction = console.log,
 }: RunConfiguration): Promise<{
     utilitiesModule: string,
@@ -46,7 +48,7 @@ export async function run({
     let utilitiesModule: undefined | string;
     let breakpointsModule: undefined | string;
 
-    const afterTailwindPlugin = asPostcssPlugin(moduleName, tailwindConfig, logFunction, async generated => {
+    const afterTailwindPlugin = asPostcssPlugin(moduleName, tailwindConfig, generateDocumentation, logFunction, async generated => {
         const modulePath = path.join.apply(null, moduleName.split("."));
 
         utilitiesModule = generated.utilitiesModule;
@@ -80,6 +82,7 @@ export interface ModulesGeneratedHook {
 export function asPostcssPlugin(
     moduleName: string,
     tailwindConfig: any,
+    generateDocumentation: boolean,
     logFunction: LogFunction,
     modulesGeneratedHook: ModulesGeneratedHook
 ) {
@@ -89,7 +92,7 @@ export function asPostcssPlugin(
             const resolvedConfig = resolveConfig(tailwindConfig);
             const blocksByClass = parser.groupDeclarationBlocksByClass(root, logFunction, namingOptions);
             const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass);
-            const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions);
+            const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions, generateDocumentation);
             modulesGeneratedHook({ utilitiesModule, breakpointsModule });
         }
     }

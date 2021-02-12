@@ -22,7 +22,7 @@ export function generateElmModule(
     moduleName: string,
     resolvedConfig: TailwindResolvedConfig,
     namingOptions: NamingOptions,
-    docs: boolean = false,
+    docs: boolean,
 ): string {
     const breakpoints =
         Object
@@ -140,11 +140,11 @@ ${name} =
 
 function elmBreakpointFunctionDocs({ name, size }: Breakpoint): string {
     return `
-{-|
-Media query breakpoint for minimum width ${size}
+{-| Media query breakpoint for minimum width ${size}
 
 CSS: \`@media (min-width: ${size}) { ... }\`
 
 Also see the [tailwind documentation](https://tailwindcss.com/docs/responsive-design)
+
 -}`
 }
