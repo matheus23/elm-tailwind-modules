@@ -22,7 +22,7 @@ test("snapshot of generated module", async t => {
 test("snapshot of generated module with documentation", async t => {
     const generatedModules = await elmTailwindModules.run({
         directory: null,
-        moduleName: "Tailwind.Basic",
+        moduleName: "Tailwind.WithDocs",
         postcssPlugins: [],
         tailwindConfig: { ...tailwindConfig, plugins: [] },
         generateDocumentation: true,

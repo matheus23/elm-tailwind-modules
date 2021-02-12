@@ -41,6 +41,7 @@ export function groupDeclarationBlocksByClass(
 
     const defaultRecognized = (): RecognizedDeclaration => ({
         propertiesBySelector: [],
+        originalRules: [],
     });
 
     postCssRoot.each(child => {
@@ -103,7 +104,7 @@ export function groupDeclarationBlocksByClass(
         }
     });
 
-    function handleRule(mediaQuery: string, rule: postcss.Rule): void {
+    function handleRule(mediaQuery: string | null, rule: postcss.Rule): void {
 
         // parse the selectors
 
@@ -176,6 +177,10 @@ export function groupDeclarationBlocksByClass(
                     [subselector],
                     collectProperties(rule),
                 ),
+                originalRules: [
+                    ...item.originalRules,
+                    mediaQuery == null ? rule : rule.parent,
+                ],
             });
         });
     }

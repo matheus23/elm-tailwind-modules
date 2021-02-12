@@ -71,7 +71,7 @@ The workflow with them should be like this:
 Read more about breakpoints in the [tailwind documentation].
 
 
-### A not about breakpoint usage oder
+### A note about breakpoint usage oder
 
 The above relies on style definitions having a certain order in css. The first style in css wins.
 

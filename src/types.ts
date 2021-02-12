@@ -1,4 +1,5 @@
 import CssWhat from "css-what";
+import * as postcss from "postcss";
 
 export interface LogFunction {
     (message: string): void,
@@ -148,6 +149,7 @@ Example values:
 */
 export interface RecognizedDeclaration {
     propertiesBySelector: PropertiesBySelector[],
+    originalRules: postcss.Rule[],
 }
 
 export interface PropertiesBySelector {

@@ -91,7 +91,7 @@ export function asPostcssPlugin(
         async OnceExit(root: postcss.Root) {
             const resolvedConfig = resolveConfig(tailwindConfig);
             const blocksByClass = parser.groupDeclarationBlocksByClass(root, logFunction, namingOptions);
-            const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass);
+            const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, generateDocumentation);
             const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions, generateDocumentation);
             modulesGeneratedHook({ utilitiesModule, breakpointsModule });
         }

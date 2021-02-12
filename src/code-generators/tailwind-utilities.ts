@@ -14,21 +14,23 @@ import {
 // PUBLIC INTERFACE
 
 
-export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations, docs: boolean = true): string {
+export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations, docs: boolean): string {
+    const sortedClasses = Array.from(blocksByClass.recognized.keys()).sort();
+
     return [
         generate.elmModuleHeader({
             moduleName,
-            exposing: null,
+            exposing: docs ? ["globalStyles", ...sortedClasses] : null,
             imports: [
                 generate.singleLine("import Css"),
                 generate.singleLine("import Css.Animations"),
                 generate.singleLine("import Css.Global"),
                 generate.singleLine("import Css.Media"),
             ],
-            moduleDocs: null,
+            moduleDocs: docs ? moduleDocs(sortedClasses) : null,
         }),
-        elmUnrecognizedToFunctions(blocksByClass.unrecognized),
-        elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.recognized),
+        elmUnrecognizedToFunctions(blocksByClass.unrecognized, docs),
+        elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.recognized, docs),
     ].join("");
 }
 
@@ -36,10 +38,56 @@ export function generateElmModule(moduleName: string, blocksByClass: GroupedDecl
 
 // PRIVATE INTERFACE
 
-
-function elmUnrecognizedToFunctions(unrecognizedBlocks: UnrecognizedDeclaration[]): string {
+function moduleDocs(sortedClasses: string[]): string {
     return `
+{-|
 
+
+## Tailwind Utilities
+
+This module contains
+
+1.  Tailwind's style reset in the \`globalStyles\` definition.
+    Make sure to include this in your HTML via elm-css' \`Css.Global.global\` function.
+2.  All default tailwind css utility classes. You can browse the documentation on
+    [tailwind's website](https://tailwindcss.com/docs)
+
+@docs globalStyles
+${sortedClasses.map(c => `@docs ${c}`).join("\n")}
+
+-}
+`;
+}
+
+
+function elmUnrecognizedToFunctions(unrecognizedBlocks: UnrecognizedDeclaration[], docs: boolean): string {
+    return `
+${!docs ? "" : `
+{-| This contains tailwind's style reset.
+
+This is something similar to normalize.css, if you're familiar with it.
+
+You **need to include this in your html** at any time you use this module,
+as some of the classes in here depend on css variables defined in the global styles.
+
+You include it like so:
+
+    import Css.Global
+    import Html.Styled as Html exposing (Html)
+    import Tailwind.Utilities exposing (globalStyles)
+
+    view : Html msg
+    view =
+        div []
+            [ -- Like this:
+              Css.Global.global globalStyles
+
+            -- Continue with any other Html
+            ]
+
+It only needs to be included once.
+
+-}`}
 globalStyles : List Css.Global.Snippet
 globalStyles =
 ${convertUnrecognizeds(unrecognizedBlocks)({
@@ -62,17 +110,29 @@ function convertUnrecognizeds(unrecognizeds: UnrecognizedDeclaration[]): generat
     );
 }
 
-function elmRecognizedToFunctions(keyframes: Map<string, Keyframe[]>, recognizedBlocksByClass: Map<string, RecognizedDeclaration>): string {
+function elmRecognizedToFunctions(keyframes: Map<string, Keyframe[]>, recognizedBlocksByClass: Map<string, RecognizedDeclaration>, docs: boolean): string {
     let body = "";
     Array.from(recognizedBlocksByClass.keys()).sort().forEach(elmClassName => {
-        body = body + elmRecognizedFunction(keyframes, elmClassName, recognizedBlocksByClass.get(elmClassName));
+        body = body + elmRecognizedFunction(keyframes, elmClassName, recognizedBlocksByClass.get(elmClassName), docs);
     });
     return body;
 }
 
-function elmRecognizedFunction(keyframes: Map<string, Keyframe[]>, elmClassName: string, propertiesBlock: RecognizedDeclaration): string {
+function elmRecognizedFunction(keyframes: Map<string, Keyframe[]>, elmClassName: string, propertiesBlock: RecognizedDeclaration, docs: boolean): string {
     return `
+${!docs ? "" : `
+{-| ${
+propertiesBlock.originalRules.length > 1
+    ? "This class combines the effects of following css declarations:"
+    : "This class has the effect of following css declaration:"
+}
 
+\`\`\`css
+${propertiesBlock.originalRules.map(rule => rule.toString()).join("\n\n")}
+\`\`\`
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+-}`}
 ${elmClassName} : Css.Style
 ${elmClassName} =
 ${convertDeclarationBlock(keyframes, propertiesBlock)({
