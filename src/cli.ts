@@ -3,9 +3,10 @@ import { program } from "commander";
 
 program.name("elm-tailwind-modules");
 program.version("0.1.1");
-program.option("--dir <dir>", `destination folder for generated elm modules, e.g. "src/" or "gen/". Add this folder to your elm.json source-directories.`);
-program.option("--module-name <name>", `module name prefix for generated elm modules, e.g. "Tailwind" or "Css.Gen"`);
-program.option("--tailwind-config <file>", `your tailwind config file`, null);
+program.option("--dir <dir>", `Destination folder for generated elm modules, e.g. "src/" or "gen/" (default: "src/"). Add this folder to your elm.json source-directories.`, "src/");
+program.option("--module-name <name>", `Module name prefix for generated elm modules, e.g. "TW" or "Css.Gen" (default: "Tailwind").`, "Tailwind");
+program.option("--tailwind-config <file>", `Your tailwind config file. When not provided, uses a default tailwind configuration.`, null);
+program.option("--with-docs", `Add documentation to the generated modules (default: false).`, false);
 
 (async function () {
     program.parse(process.argv);
@@ -19,6 +20,7 @@ program.option("--tailwind-config <file>", `your tailwind config file`, null);
         moduleName: options.moduleName,
         postcssPlugins: [],
         tailwindConfig,
+        generateDocumentation: options.withDocs,
         logFunction: console.log,
     });
 
