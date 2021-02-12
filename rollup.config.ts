@@ -6,7 +6,8 @@ export default {
     input: "src/index.ts",
     output: [
         {
-            file: pkg.main,
+            dir: "./",
+            entryFileNames: pkg.main,
             format: "cjs",
             exports: "named"
         },
@@ -21,7 +22,11 @@ export default {
     ],
 
     plugins: [
-        typescript(),
+        typescript({
+            declaration: true,
+            declarationDir: "dist/",
+            rootDir: "src/",
+        }),
         commonjs(),
     ],
 }
