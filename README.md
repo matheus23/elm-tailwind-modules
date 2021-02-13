@@ -1,14 +1,16 @@
 # Elm Tailwind Modules
 
-> Generate Elm code for Tailwind Utilities and Components that purges using Elm's --optimize!
-
+> Generate Elm code for Tailwind Utilities and Components which purges using Elm's --optimize!
+>
 > Use [Tailwind](https://tailwindcss.com/) with [Elm-Css](https://github.com/rtfeldman/elm-css)!
 
----
+## Quick Start
 
-## Getting Started
+If you want to try out how using elm-css with tailwind feels like **without using npm**, try out the package with prebuilt modules: [elm-default-tailwind-modules](https://package.elm-lang.org/packages/matheus23/elm-default-tailwind-modules/latest/)
 
-```sh
+## Install
+
+``` sh
 $ npm i --save-dev elm-tailwind-modules tailwindcss postcss
 $ npx elm-tailwind-modules --dir ./gen
 Saved
@@ -18,19 +20,21 @@ $ elm install rtfeldman/elm-css
 ```
 
 This will generate these files:
+
 * [`gen/Tailwind/Utilities.elm`](https://github.com/matheus23/elm-tailwind-modules/blob/master/docs/example/Tailwind/Utilities.elm)
 * [`gen/Tailwind/Breakpoints.elm`](https://github.com/matheus23/elm-tailwind-modules/blob/master/docs/example/Tailwind/Breakpoints.elm)
 
+## Use
+
 Now you simply import these modules and use them in your elm code:
 
-```elm
+``` elm
 import Css exposing (hover)
 import Css.Global
 import Html.Styled exposing (..)
 import Html.Styled.Attributes exposing (css, href)
 import Tailwind.Breakpoints exposing (..)
 import Tailwind.Utilities exposing (..)
-
 
 main =
     toUnstyled <|
@@ -73,16 +77,17 @@ main =
                 ]
             ]
 ```
+
 The result looks like this:
 
 ![Screenshot](https://raw.githubusercontent.com/matheus23/elm-tailwind-modules/master/test-example/result.png)
 
 (For a bigger example, see [test-example/src/Main.elm](https://github.com/matheus23/elm-tailwind-modules/blob/master/test-example/src/Main.elm).)
 
-
 ## CLI
 
-```
+``` 
+
 $ elm-tailwind-modules --help
 Usage: elm-tailwind-modules [options]
 
@@ -102,7 +107,8 @@ This package is written in typescript, so you can use it from node via the same 
 The nodejs API allows you to do more stuff, for example, include additional postcss plugins like autoprefixer.
 
 It boils down to this:
-```js
+
+``` js
 import elmTailwindModules from "elm-tailwind-modules";
 import tailwindConfig from "my-tailwind.js";
 import autoprefixer from "autoprefixer";
@@ -120,21 +126,22 @@ You can find the documentation at [matheus23.github.io/elm-tailwind-modules](htt
 ## Comparisons
 
 * [monty5811/postcss-elm-tailwind](https://github.com/monty5811/postcss-elm-tailwind):
-  - You still need to include a `.css` file
-  - You need to purge the `.css` file (which is a somewhat involved process, including having to run postcss twice)
-  - The generated files contain a definition for all variants, which makes them much bigger (150+kLOC vs. 30+kLOC)
-  - Has more configuration options
-  - More mature and robust
+  + You still need to include a `.css` file
+  + You need to purge the `.css` file (which is a somewhat involved process, including having to run postcss twice)
+  + The generated files contain a definition for all variants, which makes them much bigger (150+kLOC vs. 30+kLOC)
+  + Has more configuration options
+  + More mature and robust
 * Using classes via tailwind directly:
-  - No type checking (typos might don't get noticed)
-  - global namespaces for classes
+  + No type checking (typos might don't get noticed)
+  + global namespaces for classes
 
 So mainly, the cool things about this package are:
+
 * You can use elm-css with tailwind. So:
-  - No writing css by hand
-  - No global css class namespaces
-  - All the features of tailwindcss, its plugins and ecosystem
-  - Simply import some elm files after generating them, and they're all you need
+  + No writing css by hand
+  + No global css class namespaces
+  + All the features of tailwindcss, its plugins and ecosystem
+  + Simply import some elm files after generating them, and they're all you need
 
 ## Acknowledgements
 
