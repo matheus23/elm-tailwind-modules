@@ -62,14 +62,15 @@
 					<h1>Elm Tailwind Modules</h1>
 				</a>
 				<blockquote>
-					<p>Generate Elm code for Tailwind Utilities and Components that purges using Elm&#39;s --optimize!</p>
-				</blockquote>
-				<blockquote>
+					<p>Generate Elm code for Tailwind Utilities and Components which purges using Elm&#39;s --optimize!</p>
 					<p>Use <a href="https://tailwindcss.com/">Tailwind</a> with <a href="https://github.com/rtfeldman/elm-css">Elm-Css</a>!</p>
 				</blockquote>
-				<hr>
-				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
-					<h2>Getting Started</h2>
+				<a href="#quick-start" id="quick-start" style="color: inherit; text-decoration: none;">
+					<h2>Quick Start</h2>
+				</a>
+				<p>If you want to try out how using elm-css with tailwind feels like <strong>without using npm</strong>, try out the package with prebuilt modules: <a href="https://package.elm-lang.org/packages/matheus23/elm-default-tailwind-modules/latest/">elm-default-tailwind-modules</a></p>
+				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+					<h2>Install</h2>
 				</a>
 				<pre><code class="language-sh"><span style="color: #000000">$ npm i --save-dev elm-tailwind-modules tailwindcss postcss</span>
 <span style="color: #000000">$ npx elm-tailwind-modules --dir ./gen</span>
@@ -83,52 +84,55 @@
 					<li><a href="https://github.com/matheus23/elm-tailwind-modules/blob/master/docs/example/Tailwind/Utilities.elm"><code>gen/Tailwind/Utilities.elm</code></a></li>
 					<li><a href="https://github.com/matheus23/elm-tailwind-modules/blob/master/docs/example/Tailwind/Breakpoints.elm"><code>gen/Tailwind/Breakpoints.elm</code></a></li>
 				</ul>
+				<a href="#use" id="use" style="color: inherit; text-decoration: none;">
+					<h2>Use</h2>
+				</a>
 				<p>Now you simply import these modules and use them in your elm code:</p>
-				<pre><code class="language-elm"><span style="color: #AF00DB">import</span><span style="color: #000000"> Css </span><span style="color: #AF00DB">exposing</span><span style="color: #000000"> (</span><span style="color: #795E26">hover</span><span style="color: #000000">)</span>
+				<pre><code class="language-elm"><span style="color: #AF00DB">import</span><span style="color: #000000"> Css</span>
 <span style="color: #AF00DB">import</span><span style="color: #000000"> Css</span><span style="color: #0000FF">.</span><span style="color: #000000">Global</span>
-<span style="color: #AF00DB">import</span><span style="color: #000000"> Html</span><span style="color: #0000FF">.</span><span style="color: #000000">Styled </span><span style="color: #AF00DB">exposing</span><span style="color: #000000"> (..)</span>
-<span style="color: #AF00DB">import</span><span style="color: #000000"> Html</span><span style="color: #0000FF">.</span><span style="color: #000000">Styled</span><span style="color: #0000FF">.</span><span style="color: #000000">Attributes </span><span style="color: #AF00DB">exposing</span><span style="color: #000000"> (</span><span style="color: #795E26">css</span><span style="color: #000000">, </span><span style="color: #795E26">href</span><span style="color: #000000">)</span>
-<span style="color: #AF00DB">import</span><span style="color: #000000"> Tailwind</span><span style="color: #0000FF">.</span><span style="color: #000000">Breakpoints </span><span style="color: #AF00DB">exposing</span><span style="color: #000000"> (..)</span>
-<span style="color: #AF00DB">import</span><span style="color: #000000"> Tailwind</span><span style="color: #0000FF">.</span><span style="color: #000000">Utilities </span><span style="color: #AF00DB">exposing</span><span style="color: #000000"> (..)</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> Html</span><span style="color: #0000FF">.</span><span style="color: #000000">Styled </span><span style="color: #AF00DB">as</span><span style="color: #000000"> Html</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> Html</span><span style="color: #0000FF">.</span><span style="color: #000000">Styled</span><span style="color: #0000FF">.</span><span style="color: #000000">Attributes </span><span style="color: #AF00DB">as</span><span style="color: #000000"> Attr</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> Tailwind</span><span style="color: #0000FF">.</span><span style="color: #000000">Breakpoints </span><span style="color: #AF00DB">as</span><span style="color: #000000"> Breakpoints</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> Tailwind</span><span style="color: #0000FF">.</span><span style="color: #000000">Utilities </span><span style="color: #AF00DB">as</span><span style="color: #000000"> Tw</span>
 
 
 <span style="color: #795E26">main</span><span style="color: #000000"> </span><span style="color: #0000FF">=</span>
-<span style="color: #000000">    toUnstyled &lt;|</span>
-<span style="color: #000000">        div [ css [ bg_gray_50 ] ]</span>
+<span style="color: #000000">    Html</span><span style="color: #0000FF">.</span><span style="color: #000000">toUnstyled &lt;|</span>
+<span style="color: #000000">        Html</span><span style="color: #0000FF">.</span><span style="color: #000000">div [ Attr</span><span style="color: #0000FF">.</span><span style="color: #000000">css [ Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">bg_gray_50 ] ]</span>
 <span style="color: #000000">            [ </span><span style="color: #008000">-- This will give us the standard tailwind style-reset as well as the fonts</span>
-<span style="color: #000000">              Css</span><span style="color: #0000FF">.</span><span style="color: #000000">Global</span><span style="color: #0000FF">.</span><span style="color: #000000">global globalStyles</span>
-<span style="color: #000000">            , div</span>
-<span style="color: #000000">                [ css</span>
-<span style="color: #000000">                    [ mt_8</span>
-<span style="color: #000000">                    , flex</span>
+<span style="color: #000000">              Css</span><span style="color: #0000FF">.</span><span style="color: #000000">Global</span><span style="color: #0000FF">.</span><span style="color: #000000">global Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">globalStyles</span>
+<span style="color: #000000">            , Html</span><span style="color: #0000FF">.</span><span style="color: #000000">div</span>
+<span style="color: #000000">                [ Attr</span><span style="color: #0000FF">.</span><span style="color: #000000">css</span>
+<span style="color: #000000">                    [ Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">mt_8</span>
+<span style="color: #000000">                    , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">flex</span>
 
 <span style="color: #000000">                    </span><span style="color: #008000">-- We use breakpoints like this</span>
-<span style="color: #000000">                    </span><span style="color: #008000">-- However, you need to order your breakpoints from hight to low :/</span>
-<span style="color: #000000">                    , lg [ mt_0, flex_shrink_0 ]</span>
+<span style="color: #000000">                    </span><span style="color: #008000">-- However, you need to order your breakpoints from high to low :/</span>
+<span style="color: #000000">                    , Breakpoints</span><span style="color: #0000FF">.</span><span style="color: #000000">lg [ Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">mt_0, Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">flex_shrink_0 ]</span>
 <span style="color: #000000">                    ]</span>
 <span style="color: #000000">                ]</span>
-<span style="color: #000000">                [ div [ css [ inline_flex, rounded_md, shadow ] ]</span>
-<span style="color: #000000">                    [ a</span>
-<span style="color: #000000">                        [ css</span>
-<span style="color: #000000">                            [ inline_flex</span>
-<span style="color: #000000">                            , items_center</span>
-<span style="color: #000000">                            , justify_center</span>
-<span style="color: #000000">                            , px_5</span>
-<span style="color: #000000">                            , py_3</span>
-<span style="color: #000000">                            , border</span>
-<span style="color: #000000">                            , border_transparent</span>
-<span style="color: #000000">                            , text_base</span>
-<span style="color: #000000">                            , font_medium</span>
-<span style="color: #000000">                            , rounded_md</span>
-<span style="color: #000000">                            , text_white</span>
-<span style="color: #000000">                            , bg_indigo_600</span>
+<span style="color: #000000">                [ Html</span><span style="color: #0000FF">.</span><span style="color: #000000">div [ Attr</span><span style="color: #0000FF">.</span><span style="color: #000000">css [ Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">inline_flex, Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">rounded_md, Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">shadow ] ]</span>
+<span style="color: #000000">                    [ Html</span><span style="color: #0000FF">.</span><span style="color: #000000">a</span>
+<span style="color: #000000">                        [ Attr</span><span style="color: #0000FF">.</span><span style="color: #000000">css</span>
+<span style="color: #000000">                            [ Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">inline_flex</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">items_center</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">justify_center</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">px_5</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">py_3</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">border</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">border_transparent</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">text_base</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">font_medium</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">rounded_md</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">text_white</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">bg_indigo_600</span>
 
 <span style="color: #000000">                            </span><span style="color: #008000">-- We can use hover styles via elm-css :)</span>
-<span style="color: #000000">                            , hover [ bg_indigo_700 ]</span>
+<span style="color: #000000">                            , Css</span><span style="color: #0000FF">.</span><span style="color: #000000">hover [ Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">bg_indigo_700 ]</span>
 <span style="color: #000000">                            ]</span>
-<span style="color: #000000">                        , href </span><span style="color: #A31515">&quot;#&quot;</span>
+<span style="color: #000000">                        , Attr</span><span style="color: #0000FF">.</span><span style="color: #000000">href </span><span style="color: #A31515">&quot;#&quot;</span>
 <span style="color: #000000">                        ]</span>
-<span style="color: #000000">                        [ text </span><span style="color: #A31515">&quot;Get started&quot;</span><span style="color: #000000"> ]</span>
+<span style="color: #000000">                        [ Html</span><span style="color: #0000FF">.</span><span style="color: #000000">text </span><span style="color: #A31515">&quot;Get started&quot;</span><span style="color: #000000"> ]</span>
 <span style="color: #000000">                    ]</span>
 <span style="color: #000000">                ]</span>
 <span style="color: #000000">            ]</span>
@@ -139,7 +143,8 @@
 				<a href="#cli" id="cli" style="color: inherit; text-decoration: none;">
 					<h2>CLI</h2>
 				</a>
-				<pre><code><span style="color: #001080">$</span><span style="color: #000000"> </span><span style="color: #001080">elm</span><span style="color: #000000">-</span><span style="color: #001080">tailwind</span><span style="color: #000000">-</span><span style="color: #001080">modules</span><span style="color: #000000"> --</span><span style="color: #001080">help</span>
+				<pre><code>
+<span style="color: #001080">$</span><span style="color: #000000"> </span><span style="color: #001080">elm</span><span style="color: #000000">-</span><span style="color: #001080">tailwind</span><span style="color: #000000">-</span><span style="color: #001080">modules</span><span style="color: #000000"> --</span><span style="color: #001080">help</span>
 <span style="color: #000000">Usage: </span><span style="color: #001080">elm</span><span style="color: #000000">-</span><span style="color: #001080">tailwind</span><span style="color: #000000">-</span><span style="color: #001080">modules</span><span style="color: #000000"> [</span><span style="color: #001080">options</span><span style="color: #000000">]</span>
 
 <span style="color: #000000">Options:</span>
