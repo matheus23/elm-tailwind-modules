@@ -1,50 +1,50 @@
 module Main exposing (..)
 
-import Css exposing (hover)
+import Css
 import Css.Global
-import Html.Styled exposing (..)
-import Html.Styled.Attributes exposing (css, href)
-import Tailwind.Breakpoints exposing (..)
-import Tailwind.Utilities exposing (..)
+import Html.Styled as Html
+import Html.Styled.Attributes as Attr
+import Tailwind.Breakpoints as Breakpoints
+import Tailwind.Utilities as Tw
 
 
 main =
-    toUnstyled <|
-        div [ css [ bg_gray_50 ] ]
+    Html.toUnstyled <|
+        Html.div [ Attr.css [ Tw.bg_gray_50 ] ]
             [ -- This will give us the standard tailwind style-reset as well as the fonts
-              Css.Global.global globalStyles
-            , div
-                [ css
-                    [ mt_8
-                    , flex
+              Css.Global.global Tw.globalStyles
+            , Html.div
+                [ Attr.css
+                    [ Tw.mt_8
+                    , Tw.flex
 
                     -- We use breakpoints like this
-                    -- However, you need to order your breakpoints from hight to low :/
-                    , lg [ mt_0, flex_shrink_0 ]
+                    -- However, you need to order your breakpoints from high to low :/
+                    , Breakpoints.lg [ Tw.mt_0, Tw.flex_shrink_0 ]
                     ]
                 ]
-                [ div [ css [ inline_flex, rounded_md, shadow ] ]
-                    [ a
-                        [ css
-                            [ inline_flex
-                            , items_center
-                            , justify_center
-                            , px_5
-                            , py_3
-                            , border
-                            , border_transparent
-                            , text_base
-                            , font_medium
-                            , rounded_md
-                            , text_white
-                            , bg_indigo_600
+                [ Html.div [ Attr.css [ Tw.inline_flex, Tw.rounded_md, Tw.shadow ] ]
+                    [ Html.a
+                        [ Attr.css
+                            [ Tw.inline_flex
+                            , Tw.items_center
+                            , Tw.justify_center
+                            , Tw.px_5
+                            , Tw.py_3
+                            , Tw.border
+                            , Tw.border_transparent
+                            , Tw.text_base
+                            , Tw.font_medium
+                            , Tw.rounded_md
+                            , Tw.text_white
+                            , Tw.bg_indigo_600
 
                             -- We can use hover styles via elm-css :)
-                            , hover [ bg_indigo_700 ]
+                            , Css.hover [ Tw.bg_indigo_700 ]
                             ]
-                        , href "#"
+                        , Attr.href "#"
                         ]
-                        [ text "Get started" ]
+                        [ Html.text "Get started" ]
                     ]
                 ]
             ]
