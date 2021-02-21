@@ -133,7 +133,7 @@ You can find the documentation at [matheus23.github.io/elm-tailwind-modules](htt
   + Has more configuration options
   + More mature and robust
 * Using classes via tailwind directly:
-  + No type checking (typos might don't get noticed)
+  + No type checking (typos might not get noticed)
   + global namespaces for classes
 
 So mainly, the cool things about this package are:
