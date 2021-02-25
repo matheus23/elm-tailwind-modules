@@ -30,6 +30,21 @@ export interface RunConfiguration {
     logFunction?: LogFunction,
 }
 
+export interface RunResult {
+    utilitiesModule: string,
+    breakpointsModule: string,
+    postcssResult: postcss.Result,
+}
+
+/**
+ * Runs elm-tailwind-modules like the command line interface is run.
+ * 
+ * @param directory
+ * the directory path to save to. If null, this function won't save the generated files to disk.
+ * 
+ * @returns
+ * the generated modules as string.
+ */
 export async function run({
     directory = "./src",
     moduleName = "Tailwind",
@@ -38,10 +53,7 @@ export async function run({
     postcssFile = null,
     generateDocumentation = false,
     logFunction = console.log,
-}: RunConfiguration): Promise<{
-    utilitiesModule: string,
-    breakpointsModule: string,
-}> {
+}: RunConfiguration): Promise<RunResult> {
     validateModuleName(moduleName);
     warningsTailwindConfig(tailwindConfig, logFunction);
 
@@ -49,29 +61,23 @@ export async function run({
     let breakpointsModule: undefined | string;
 
     const afterTailwindPlugin = asPostcssPlugin(moduleName, tailwindConfig, generateDocumentation, logFunction, async generated => {
-        const modulePath = path.join.apply(null, moduleName.split("."));
-
         utilitiesModule = generated.utilitiesModule;
         breakpointsModule = generated.breakpointsModule;
 
         if (directory != null) {
-            logFunction([
-                "Saved",
-                " - " + chalk.blue(await writeFile(path.resolve(directory, `${modulePath}/Utilities.elm`), utilitiesModule)),
-                " - " + chalk.blue(await writeFile(path.resolve(directory, `${modulePath}/Breakpoints.elm`), breakpointsModule)),
-            ].join("\n"));
+            await writeGeneratedFiles(directory, moduleName, logFunction, generated);
         }
     });
 
     const { from, file: css } = await resolvePostcssFile(postcssFile);
     const to = "output in-memory";
-    await postcss.default([
+    const postcssResult = await postcss.default([
         tailwindcss(tailwindConfig),
         ...postcssPlugins,
         afterTailwindPlugin
     ]).process(css, { from, to });
 
-    return { utilitiesModule, breakpointsModule };
+    return { utilitiesModule, breakpointsModule, postcssResult };
 }
 
 
@@ -79,6 +85,12 @@ export interface ModulesGeneratedHook {
     (_: { utilitiesModule: string, breakpointsModule: string }): void;
 }
 
+/**
+ * This exposes the actual postcss plugin that's used in `run`.
+ * 
+ * @param modulesGeneratedHook
+ * a callback which is called once the modules have been generated.
+ */
 export function asPostcssPlugin(
     moduleName: string,
     tailwindConfig: any,
@@ -97,6 +109,24 @@ export function asPostcssPlugin(
         }
     }
 };
+
+/**
+ * This exposes the actual logic for writing files and writing some console output
+ * that is used in `run` (in the callback to `asPostcssPlugin`).
+ */
+export async function writeGeneratedFiles(
+    directory: string,
+    moduleName: string,
+    logFunction: LogFunction,
+    generated: { utilitiesModule: string, breakpointsModule: string }
+): Promise<void> {
+    const modulePath = path.join.apply(null, moduleName.split("."));
+    logFunction([
+        "Saved",
+        " - " + chalk.blue(await writeFile(path.resolve(directory, `${modulePath}/Utilities.elm`), generated.utilitiesModule)),
+        " - " + chalk.blue(await writeFile(path.resolve(directory, `${modulePath}/Breakpoints.elm`), generated.breakpointsModule)),
+    ].join("\n"));
+}
 
 
 /*
