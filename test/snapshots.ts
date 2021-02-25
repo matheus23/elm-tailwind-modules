@@ -16,6 +16,7 @@ test("snapshot of generated module", async t => {
 
     t.snapshot(generatedModules.utilitiesModule, { id: t.title + ": Utilities Module" });
     t.snapshot(generatedModules.breakpointsModule, { id: t.title + ": Breakpoints Module" });
+    t.snapshot(generatedModules.postcssResult.content, { id: t.title + ": Remaining Postcss CSS" });
 });
 
 
@@ -31,6 +32,7 @@ test("snapshot of generated module with documentation", async t => {
 
     t.snapshot(generatedModules.utilitiesModule, { id: t.title + ": Utilities Module" });
     t.snapshot(generatedModules.breakpointsModule, { id: t.title + ": Breakpoints Module" });
+    t.snapshot(generatedModules.postcssResult.content, { id: t.title + ": Remaining Postcss CSS" });
 });
 
 
@@ -45,6 +47,7 @@ test("snapshot of generated module with autoprefixer", async t => {
 
     t.snapshot(generatedModules.utilitiesModule, { id: t.title + ": Utilities Module" });
     t.snapshot(generatedModules.breakpointsModule, { id: t.title + ": Breakpoints Module" });
+    t.snapshot(generatedModules.postcssResult.content, { id: t.title + ": Remaining Postcss CSS" });
 });
 
 
@@ -59,5 +62,6 @@ test("snapshot of generated module with various plugins", async t => {
 
     t.snapshot(generatedModules.utilitiesModule, { id: t.title + ": Utilities Module" });
     t.snapshot(generatedModules.breakpointsModule, { id: t.title + ": Breakpoints Module" });
+    t.snapshot(generatedModules.postcssResult.content, { id: t.title + ": Remaining Postcss CSS" });
 });
 
