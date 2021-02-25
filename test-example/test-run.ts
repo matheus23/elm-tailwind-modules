@@ -5,6 +5,5 @@ import tailwindConfig from "./tailwind.config.js";
 elmTailwindModules.run({
     directory: "./test-example/src",
     moduleName: "Tailwind",
-    postcssPlugins: [],
     tailwindConfig,
 });

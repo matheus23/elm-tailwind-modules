@@ -36,7 +36,6 @@ import Html.Styled.Attributes as Attr
 import Tailwind.Breakpoints as Breakpoints
 import Tailwind.Utilities as Tw
 
-
 main =
     Html.toUnstyled <|
         Html.div [ Attr.css [ Tw.bg_gray_50 ] ]
@@ -110,9 +109,9 @@ The nodejs API allows you to do more stuff, for example, include additional post
 It boils down to this:
 
 ``` js
-import elmTailwindModules from "elm-tailwind-modules";
-import tailwindConfig from "my-tailwind.js";
-import autoprefixer from "autoprefixer";
+const elmTailwindModules = require("elm-tailwind-modules");
+const tailwindConfig = require("./my-tailwind.js");
+const autoprefixer = require("autoprefixer");
 
 elmTailwindModules.run({
     directory: "./gen",
@@ -121,6 +120,77 @@ elmTailwindModules.run({
     tailwindConfig,
 });
 ```
+
+### Full control
+
+If you need _even more_ control, you can integrate `elm-tailwind-modules` with your existing postcss pipeline by using it as a postcss plugin.
+
+Below is an example of using `elm-tailwind-modules`  `asPostcssPlugin` function to get following control:
+
+* Providing your own postcss file to consume
+* Adding the `postcss-import` plugin at the start of your postcss pipeline
+* Writing css that wasn't turned into elm definitions back as a css file
+
+  
+  (This can be useful, as the generated `globalStyles` definition has its limits, for example you can't use `@font-face` in elm-css.)
+
+``` js
+const elmTailwindModules = require("elm-tailwind-modules");
+const tailwindConfig = require("./my-tailwind.js");
+const autoprefixer = require("autoprefixer");
+const postcssImport = require("postcss-import");
+const postcss = require("postcss");
+const tailwindcss = require("tailwindcss");
+const fs = require("fs").promises;
+
+const logFunction = message => console.log(message);
+
+const moduleName = "Tailwind";
+
+const elmTailwindModulesPlugin = elmTailwindModules.asPostcssPlugin({
+    moduleName,
+    tailwindConfig,
+    generateDocumentation: true,
+    logFunction,
+    modulesGeneratedHook: async generated => elmTailwindModules.writeGeneratedFiles({
+        directory: "gen",
+        moduleName,
+        logFunction,
+        generated
+    })
+});
+
+// This file has the postcss superpowers. So it includes things like
+// * @tailwind base; @tailwind components; @tailwind utilities;
+// * postcss-import's @import
+// * tailwindcss' @apply
+const inputCssFile = "./my-postcss.css";
+
+// This file will contain basic css that every browser understands
+const outputCssFile = "./build/stylesheet.css";
+
+(async () => {
+    const inputCss = await fs.readFile(inputCssFile, {
+        encoding: "utf8"
+    });
+
+    const result = await postcss.default([
+        // We can specify our own order of postcss plugins.
+        postcssImport,
+        tailwindcss(tailwindConfig),
+        autoprefixer,
+        elmTailwindModulesPlugin
+    ]).process(inputCss, {
+        from: inputCssFile,
+        to: outputCssFile,
+    });
+
+    logFunction(`Saving remaining global css to ${outputCssFile}`);
+    await fs.writeFile(outputCssFile, result.content);
+})()
+```
+
+### Node API Documentation
 
 You can find the documentation at [matheus23.github.io/elm-tailwind-modules](https://matheus23.github.io/elm-tailwind-modules/modules.html#run).
 

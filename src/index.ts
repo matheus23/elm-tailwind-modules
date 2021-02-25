@@ -25,7 +25,6 @@ export interface RunConfiguration {
     moduleName?: string,
     postcssPlugins?: postcss.AcceptedPlugin[],
     tailwindConfig?: any,
-    postcssFile?: string,
     generateDocumentation?: boolean;
     logFunction?: LogFunction,
 }
@@ -50,26 +49,29 @@ export async function run({
     moduleName = "Tailwind",
     postcssPlugins = [],
     tailwindConfig = defaultTailwindConfig,
-    postcssFile = null,
     generateDocumentation = false,
     logFunction = console.log,
 }: RunConfiguration): Promise<RunResult> {
-    validateModuleName(moduleName);
-    warningsTailwindConfig(tailwindConfig, logFunction);
-
     let utilitiesModule: undefined | string;
     let breakpointsModule: undefined | string;
 
-    const afterTailwindPlugin = asPostcssPlugin(moduleName, tailwindConfig, generateDocumentation, logFunction, async generated => {
-        utilitiesModule = generated.utilitiesModule;
-        breakpointsModule = generated.breakpointsModule;
+    const afterTailwindPlugin = asPostcssPlugin({
+        moduleName,
+        tailwindConfig,
+        generateDocumentation,
+        logFunction,
+        modulesGeneratedHook: async generated => {
+            utilitiesModule = generated.utilitiesModule;
+            breakpointsModule = generated.breakpointsModule;
 
-        if (directory != null) {
-            await writeGeneratedFiles(directory, moduleName, logFunction, generated);
+            if (directory != null) {
+                await writeGeneratedFiles({ directory, moduleName, logFunction, generated });
+            }
         }
     });
 
-    const { from, file: css } = await resolvePostcssFile(postcssFile);
+    // TODO Remove resolvePostcssFile
+    const { from, file: css } = await resolvePostcssFile(null);
     const to = "output in-memory";
     const postcssResult = await postcss.default([
         tailwindcss(tailwindConfig),
@@ -91,13 +93,16 @@ export interface ModulesGeneratedHook {
  * @param modulesGeneratedHook
  * a callback which is called once the modules have been generated.
  */
-export function asPostcssPlugin(
+export function asPostcssPlugin({ moduleName, tailwindConfig, generateDocumentation, logFunction, modulesGeneratedHook }: {
     moduleName: string,
     tailwindConfig: any,
     generateDocumentation: boolean,
     logFunction: LogFunction,
-    modulesGeneratedHook: ModulesGeneratedHook
-) {
+    modulesGeneratedHook: ModulesGeneratedHook,
+}) {
+    validateModuleName(moduleName);
+    warningsTailwindConfig(tailwindConfig, logFunction);
+
     return {
         postcssPlugin: "elm-tailwind-modules",
         async OnceExit(root: postcss.Root) {
@@ -114,12 +119,12 @@ export function asPostcssPlugin(
  * This exposes the actual logic for writing files and writing some console output
  * that is used in `run` (in the callback to `asPostcssPlugin`).
  */
-export async function writeGeneratedFiles(
+export async function writeGeneratedFiles({ directory, moduleName, logFunction, generated }: {
     directory: string,
     moduleName: string,
     logFunction: LogFunction,
     generated: { utilitiesModule: string, breakpointsModule: string }
-): Promise<void> {
+}): Promise<void> {
     const modulePath = path.join.apply(null, moduleName.split("."));
     logFunction([
         "Saved",

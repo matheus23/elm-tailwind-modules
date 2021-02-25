@@ -3,7 +3,7 @@
 ## Auto-abstract css utilities
 
 * [ ] Detect when css uses properties like theme colors
-* [ ] Detect when css uses spacings
+* [ ] Detect when css uses the same spacing values over and over
 
 ## General
 
@@ -13,9 +13,12 @@
   + [X] Simple breakpoint module generation
   + [X] Fix tests
   + [ ] Parse all kinds of breakpoints. Test them.
+* [ ] Figure out good darkmode support when the darkmode is configured to classes (https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually)
 
 ## Done
 
+* [X] Remove cli option for looking up postcss
+  + [X] Write more extensive docs for using `asPostcssPlugin` in readme
 * [X] Simplify call structure in code-generation (get rid of options)
 * [X] Extract elm code generation elements
 * [X] Use 'property' instead of typed elm-css
