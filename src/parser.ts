@@ -145,29 +145,31 @@ export function groupDeclarationBlocksByClass(
             throw e;
         }
 
-        parts.forEach(part => {
+        // Ensure we support all the subselector types
+
+        let subselectors: Subselector[];
+        try {
+            subselectors = parts.map(part => ({
+                mediaQuery,
+                rest: recognizeSelectorRest(part.rest),
+            }))
+        } catch (e) {
+            if (e.message.startsWith("Unsupported type")) {
+                unrecognized.push({
+                    selector: rule.selector,
+                    properties: collectProperties(rule),
+                    mediaQuery: mediaQuery,
+                });
+                return;
+            }
+            throw e;
+        }
+
+        parts.forEach((part, index) => {
             // create a valid elm identifier from the classname
             const elmDeclName = toElmName(fixClass(part.class), namingOptions);
 
-
-            // find out what subselector this affects
-            let subselector: Subselector;
-            try {
-                subselector = {
-                    mediaQuery: mediaQuery,
-                    rest: recognizeSelectorRest(part.rest),
-                };
-            } catch (e) {
-                if (e.message.startsWith("Unsupported type")) {
-                    unrecognized.push({
-                        selector: rule.selector,
-                        properties: collectProperties(rule),
-                        mediaQuery: mediaQuery,
-                    });
-                    return;
-                }
-                throw e;
-            }
+            const subselector = subselectors[index];
 
             // concat properties to possibly existing property lists
             const item = recognized.get(elmDeclName) || defaultRecognized();
