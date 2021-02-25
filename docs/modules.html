@@ -94,7 +94,7 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Tailwind<wbr>Config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/matheus23/elm-tailwind-modules/blob/9abe721/src/index.ts#L15">index.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/matheus23/elm-tailwind-modules/blob/303abeb/src/index.ts#L15">index.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -105,13 +105,13 @@
 					<a name="aspostcssplugin" class="tsd-anchor"></a>
 					<h3>as<wbr>Postcss<wbr>Plugin</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">as<wbr>Postcss<wbr>Plugin<span class="tsd-signature-symbol">(</span>moduleName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tailwindConfig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, generateDocumentation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, logFunction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogFunction</span>, modulesGeneratedHook<span class="tsd-signature-symbol">: </span><a href="interfaces/modulesgeneratedhook.html" class="tsd-signature-type" data-tsd-kind="Interface">ModulesGeneratedHook</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>postcssPlugin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>OnceExit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></li>
+						<li class="tsd-signature tsd-kind-icon">as<wbr>Postcss<wbr>Plugin<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>generateDocumentation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>logFunction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogFunction</span><span class="tsd-signature-symbol">; </span>moduleName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>modulesGeneratedHook<span class="tsd-signature-symbol">: </span><a href="interfaces/modulesgeneratedhook.html" class="tsd-signature-type" data-tsd-kind="Interface">ModulesGeneratedHook</a><span class="tsd-signature-symbol">; </span>tailwindConfig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>postcssPlugin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>OnceExit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/matheus23/elm-tailwind-modules/blob/9abe721/src/index.ts#L94">index.ts:94</a></li>
+									<li>Defined in <a href="https://github.com/matheus23/elm-tailwind-modules/blob/303abeb/src/index.ts#L96">index.ts:96</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -122,22 +122,27 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>moduleName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>tailwindConfig: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>generateDocumentation: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>logFunction: <span class="tsd-signature-type">LogFunction</span></h5>
-								</li>
-								<li>
-									<h5>modulesGeneratedHook: <a href="interfaces/modulesgeneratedhook.html" class="tsd-signature-type" data-tsd-kind="Interface">ModulesGeneratedHook</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>a callback which is called once the modules have been generated.</p>
-									</div>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>generateDocumentation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>logFunction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogFunction</span><span class="tsd-signature-symbol">; </span>moduleName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>modulesGeneratedHook<span class="tsd-signature-symbol">: </span><a href="interfaces/modulesgeneratedhook.html" class="tsd-signature-type" data-tsd-kind="Interface">ModulesGeneratedHook</a><span class="tsd-signature-symbol">; </span>tailwindConfig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>generate<wbr>Documentation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>log<wbr>Function<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogFunction</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>module<wbr>Name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>modules<wbr>Generated<wbr>Hook<span class="tsd-signature-symbol">: </span><a href="interfaces/modulesgeneratedhook.html" class="tsd-signature-type" data-tsd-kind="Interface">ModulesGeneratedHook</a></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>a callback which is called once the modules have been generated.</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5>tailwind<wbr>Config<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>postcssPlugin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>OnceExit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h4>
@@ -154,7 +159,7 @@
 										<li class="tsd-description">
 											<aside class="tsd-sources">
 												<ul>
-													<li>Defined in <a href="https://github.com/matheus23/elm-tailwind-modules/blob/9abe721/src/index.ts#L103">index.ts:103</a></li>
+													<li>Defined in <a href="https://github.com/matheus23/elm-tailwind-modules/blob/303abeb/src/index.ts#L108">index.ts:108</a></li>
 												</ul>
 											</aside>
 											<h4 class="tsd-parameters-title">Parameters</h4>
@@ -181,7 +186,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/matheus23/elm-tailwind-modules/blob/9abe721/src/index.ts#L48">index.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/matheus23/elm-tailwind-modules/blob/303abeb/src/index.ts#L47">index.ts:47</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -204,13 +209,13 @@
 					<a name="writegeneratedfiles" class="tsd-anchor"></a>
 					<h3>write<wbr>Generated<wbr>Files</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Generated<wbr>Files<span class="tsd-signature-symbol">(</span>directory<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, moduleName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, logFunction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogFunction</span>, generated<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>breakpointsModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>utilitiesModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Generated<wbr>Files<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>directory<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>generated<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>breakpointsModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>utilitiesModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>logFunction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogFunction</span><span class="tsd-signature-symbol">; </span>moduleName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/matheus23/elm-tailwind-modules/blob/9abe721/src/index.ts#L117">index.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/matheus23/elm-tailwind-modules/blob/303abeb/src/index.ts#L122">index.ts:122</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -222,22 +227,27 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>directory: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>moduleName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>logFunction: <span class="tsd-signature-type">LogFunction</span></h5>
-								</li>
-								<li>
-									<h5>generated: <span class="tsd-signature-symbol">{ </span>breakpointsModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>utilitiesModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>directory<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>generated<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>breakpointsModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>utilitiesModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>logFunction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogFunction</span><span class="tsd-signature-symbol">; </span>moduleName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
-											<h5>breakpoints<wbr>Module<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											<h5>directory<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 										</li>
 										<li class="tsd-parameter">
-											<h5>utilities<wbr>Module<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											<h5>generated<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>breakpointsModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>utilitiesModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+											<ul class="tsd-parameters">
+												<li class="tsd-parameter">
+													<h5>breakpoints<wbr>Module<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+												</li>
+												<li class="tsd-parameter">
+													<h5>utilities<wbr>Module<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+												</li>
+											</ul>
+										</li>
+										<li class="tsd-parameter">
+											<h5>log<wbr>Function<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LogFunction</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>module<wbr>Name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 										</li>
 									</ul>
 								</li>

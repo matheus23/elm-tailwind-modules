@@ -95,7 +95,6 @@
 <span style="color: #AF00DB">import</span><span style="color: #000000"> Tailwind</span><span style="color: #0000FF">.</span><span style="color: #000000">Breakpoints </span><span style="color: #AF00DB">as</span><span style="color: #000000"> Breakpoints</span>
 <span style="color: #AF00DB">import</span><span style="color: #000000"> Tailwind</span><span style="color: #0000FF">.</span><span style="color: #000000">Utilities </span><span style="color: #AF00DB">as</span><span style="color: #000000"> Tw</span>
 
-
 <span style="color: #795E26">main</span><span style="color: #000000"> </span><span style="color: #0000FF">=</span>
 <span style="color: #000000">    Html</span><span style="color: #0000FF">.</span><span style="color: #000000">toUnstyled &lt;|</span>
 <span style="color: #000000">        Html</span><span style="color: #0000FF">.</span><span style="color: #000000">div [ Attr</span><span style="color: #0000FF">.</span><span style="color: #000000">css [ Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">bg_gray_50 ] ]</span>
@@ -161,9 +160,9 @@
 				<p>This package is written in typescript, so you can use it from node via the same npm package, too.</p>
 				<p>The nodejs API allows you to do more stuff, for example, include additional postcss plugins like autoprefixer.</p>
 				<p>It boils down to this:</p>
-				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">elmTailwindModules</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;elm-tailwind-modules&quot;</span><span style="color: #000000">;</span>
-<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">tailwindConfig</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;my-tailwind.js&quot;</span><span style="color: #000000">;</span>
-<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">autoprefixer</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;autoprefixer&quot;</span><span style="color: #000000">;</span>
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">elmTailwindModules</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;elm-tailwind-modules&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tailwindConfig</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;./my-tailwind.js&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">autoprefixer</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;autoprefixer&quot;</span><span style="color: #000000">);</span>
 
 <span style="color: #001080">elmTailwindModules</span><span style="color: #000000">.</span><span style="color: #795E26">run</span><span style="color: #000000">({</span>
 <span style="color: #000000">    </span><span style="color: #001080">directory:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;./gen&quot;</span><span style="color: #000000">,</span>
@@ -172,6 +171,77 @@
 <span style="color: #000000">    </span><span style="color: #001080">tailwindConfig</span><span style="color: #000000">,</span>
 <span style="color: #000000">});</span>
 </code></pre>
+				<a href="#full-control" id="full-control" style="color: inherit; text-decoration: none;">
+					<h3>Full control</h3>
+				</a>
+				<p>If you need <em>even more</em> control, you can integrate <code>elm-tailwind-modules</code> with your existing postcss pipeline by using it as a postcss plugin.</p>
+				<p>Below is an example of using <code>elm-tailwind-modules</code>  <code>asPostcssPlugin</code> function to get following control:</p>
+				<ul>
+					<li><p>Providing your own postcss file to consume</p>
+					</li>
+					<li><p>Adding the <code>postcss-import</code> plugin at the start of your postcss pipeline</p>
+					</li>
+					<li><p>Writing css that wasn&#39;t turned into elm definitions back as a css file</p>
+						<p>(This can be useful, as the generated <code>globalStyles</code> definition has its limits, for example you can&#39;t use <code>@font-face</code> in elm-css.)</p>
+					</li>
+				</ul>
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">elmTailwindModules</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;elm-tailwind-modules&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tailwindConfig</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;./my-tailwind.js&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">autoprefixer</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;autoprefixer&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">postcssImport</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;postcss-import&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">postcss</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;postcss&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tailwindcss</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;tailwindcss&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">fs</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;fs&quot;</span><span style="color: #000000">).</span><span style="color: #001080">promises</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">logFunction</span><span style="color: #000000"> = </span><span style="color: #001080">message</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">message</span><span style="color: #000000">);</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">moduleName</span><span style="color: #000000"> = </span><span style="color: #A31515">&quot;Tailwind&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">elmTailwindModulesPlugin</span><span style="color: #000000"> = </span><span style="color: #001080">elmTailwindModules</span><span style="color: #000000">.</span><span style="color: #795E26">asPostcssPlugin</span><span style="color: #000000">({</span>
+<span style="color: #000000">    </span><span style="color: #001080">moduleName</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">tailwindConfig</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">generateDocumentation:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">logFunction</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #795E26">modulesGeneratedHook</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #0000FF">async</span><span style="color: #000000"> </span><span style="color: #001080">generated</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">elmTailwindModules</span><span style="color: #000000">.</span><span style="color: #795E26">writeGeneratedFiles</span><span style="color: #000000">({</span>
+<span style="color: #000000">        </span><span style="color: #001080">directory:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;gen&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">moduleName</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">logFunction</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">generated</span>
+<span style="color: #000000">    })</span>
+<span style="color: #000000">});</span>
+
+<span style="color: #008000">// This file has the postcss superpowers. So it includes things like</span>
+<span style="color: #008000">// * @tailwind base; @tailwind components; @tailwind utilities;</span>
+<span style="color: #008000">// * postcss-import&#039;s @import</span>
+<span style="color: #008000">// * tailwindcss&#039; @apply</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">inputCssFile</span><span style="color: #000000"> = </span><span style="color: #A31515">&quot;./my-postcss.css&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #008000">// This file will contain basic css that every browser understands</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">outputCssFile</span><span style="color: #000000"> = </span><span style="color: #A31515">&quot;./build/stylesheet.css&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #000000">(</span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">inputCss</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">fs</span><span style="color: #000000">.</span><span style="color: #795E26">readFile</span><span style="color: #000000">(</span><span style="color: #001080">inputCssFile</span><span style="color: #000000">, {</span>
+<span style="color: #000000">        </span><span style="color: #001080">encoding:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;utf8&quot;</span>
+<span style="color: #000000">    });</span>
+
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">postcss</span><span style="color: #000000">.</span><span style="color: #795E26">default</span><span style="color: #000000">([</span>
+<span style="color: #000000">        </span><span style="color: #008000">// We can specify our own order of postcss plugins.</span>
+<span style="color: #000000">        </span><span style="color: #001080">postcssImport</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #795E26">tailwindcss</span><span style="color: #000000">(</span><span style="color: #001080">tailwindConfig</span><span style="color: #000000">),</span>
+<span style="color: #000000">        </span><span style="color: #001080">autoprefixer</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">elmTailwindModulesPlugin</span>
+<span style="color: #000000">    ]).</span><span style="color: #795E26">process</span><span style="color: #000000">(</span><span style="color: #001080">inputCss</span><span style="color: #000000">, {</span>
+<span style="color: #000000">        </span><span style="color: #001080">from:</span><span style="color: #000000"> </span><span style="color: #001080">inputCssFile</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">to:</span><span style="color: #000000"> </span><span style="color: #001080">outputCssFile</span><span style="color: #000000">,</span>
+<span style="color: #000000">    });</span>
+
+<span style="color: #000000">    </span><span style="color: #795E26">logFunction</span><span style="color: #000000">(</span><span style="color: #A31515">`Saving remaining global css to </span><span style="color: #0000FF">${</span><span style="color: #001080">outputCssFile</span><span style="color: #0000FF">}</span><span style="color: #A31515">`</span><span style="color: #000000">);</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">fs</span><span style="color: #000000">.</span><span style="color: #795E26">writeFile</span><span style="color: #000000">(</span><span style="color: #001080">outputCssFile</span><span style="color: #000000">, </span><span style="color: #001080">result</span><span style="color: #000000">.</span><span style="color: #001080">content</span><span style="color: #000000">);</span>
+<span style="color: #000000">})()</span>
+</code></pre>
+				<a href="#node-api-documentation" id="node-api-documentation" style="color: inherit; text-decoration: none;">
+					<h3>Node API Documentation</h3>
+				</a>
 				<p>You can find the documentation at <a href="https://matheus23.github.io/elm-tailwind-modules/modules.html#run">matheus23.github.io/elm-tailwind-modules</a>.</p>
 				<a href="#comparisons" id="comparisons" style="color: inherit; text-decoration: none;">
 					<h2>Comparisons</h2>
