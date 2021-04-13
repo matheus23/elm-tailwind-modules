@@ -1,5 +1,6 @@
 import * as elmTailwindModules from "./index";
 import { program } from "commander";
+import { join } from "path";
 
 program.name("elm-tailwind-modules");
 program.version("0.3.0");
@@ -13,7 +14,9 @@ program.option("--with-docs", `Add documentation to the generated modules (defau
 
     const options = program.opts();
 
-    const tailwindConfig = options.tailwindConfig == null ? elmTailwindModules.defaultTailwindConfig : await import(options.tailwindConfig);
+    const tailwindConfig = options.tailwindConfig == null
+        ? elmTailwindModules.defaultTailwindConfig
+        : await import(join(process.cwd(), options.tailwindConfig));
 
     elmTailwindModules.run({
         directory: options.dir,
