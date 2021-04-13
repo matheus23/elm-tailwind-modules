@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1
+
+* Fix the --tailwind-config CLI argument not being relative to the current working directory
+
 ## 0.3.0
 
 * Changed node API:
