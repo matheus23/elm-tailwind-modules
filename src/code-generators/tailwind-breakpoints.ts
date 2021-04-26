@@ -103,26 +103,10 @@ ${exposing.map(name => `@docs ${name}`).join("\n")}
 `;
 }
 
-
-function convertBreakpointName(screen: TailwindScreen, namingOptions: NamingOptions): string {
-    if (screen.endsWith("xl") || screen.endsWith("xs")) {
-        const ending = screen.slice(screen.length - 2, screen.length);
-        const start = screen.slice(0, screen.length - 2);
-        try {
-            const number = parseInt(start);
-            return "x".repeat(number - 1) + ending;
-        } catch (e) {
-            return "_" + toElmName(screen, namingOptions);
-        }
-    }
-    return toElmName(screen, namingOptions);
-}
-
-
 // Full breakpointSize reference: https://tailwindcss.com/docs/breakpoints
 function convertConfigToBreakpoint(screen: TailwindScreen, size: string, namingOptions: NamingOptions): Breakpoint {
     return {
-        name: convertBreakpointName(screen, namingOptions),
+        name: toElmName(screen, namingOptions),
         size: size,
     };
 }

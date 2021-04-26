@@ -29,6 +29,7 @@ export function toElmName(cls: string, options?: { prefix?: string, nameStyle: "
         let re_neg_with_prefix = new RegExp(`(${opts.prefix})-([a-z])`);
         elm = elm.replace(re_neg_with_prefix, "$1neg_$2");
     }
+    elm = replaceNxlNamingConvention(elm)
     // handle negative at start of string
     elm = elm.replace(/^-([a-z])/, "_neg_$1");
     // handle negative with variant
@@ -62,3 +63,22 @@ export const defaultOpts = {
     prefix: "",
     nameStyle: "snake",
 };
+
+function replaceNxlNamingConvention(name: string) {
+    // Match start: ^
+    // Match any integer and capture in the first group: (\d+)
+    // Second group:
+    // Match either xs or xl
+    // And match everything else to the end
+    const regex = /^(\d+)(x[ls].*$)/;
+    const matches = name.match(regex);
+    if (matches) {
+        const start = matches[0];
+        const ending = matches[1];
+        const number = parseInt(start);
+        const xes = "x".repeat(number - 1);
+        return `${xes}${ending}`;
+    } else {
+        return name;
+    }
+}
