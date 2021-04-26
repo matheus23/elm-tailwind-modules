@@ -14,6 +14,7 @@
   + [X] Fix tests
   + [ ] Parse all kinds of breakpoints. Test them.
 * [ ] Figure out good darkmode support when the darkmode is configured to classes (https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually)
+* [ ] Improve performance. Main cost centre seems to be in `src/helpers.ts#toElmName`.
 
 ## Done
 
