@@ -8,25 +8,25 @@ export interface DocumentationGenerator {
      * `null` indicates that `exposing (..)` should be generated. */
     utilitiesExposing: (definedNames: string[]) => string[] | null;
     /* Return a doc string for the utilities module, given all definitions that will be generated.
-     * The resulting string has to contain the `{-|` and `|-}` parts. 
+     * The resulting string has to contain the `{-|` and `-}` parts. 
      * `null` indicates no documentation should be generated. */
     utilitiesModuleDocs: (definedNames: string[]) => string | null;
     /* Called for documentation generation for the globalStyles definition.
-     * The output string can be empty or otherwise has to contain the `{-|` and `|-}` parts. */
+     * The output string can be empty or otherwise has to contain the `{-|` and `-}` parts. */
     utilitiesGlobalStyles: () => string;
     /* Called for every generated tailwind utility definition.
-     * The output string can be empty or otherwise has to contain the `{-|` and `|-}` parts. */
+     * The output string can be empty or otherwise has to contain the `{-|` and `-}` parts. */
     utilitiesDefinition: (name: string, declaration: RecognizedDeclaration) => string;
 
     /* Choose the order of definitions in the `exposing` clause for the breakpoints module.
      * `null` indicates that `exposing (..)` should be generated. */
     breakpointsExposing: (definedNames: string[]) => string[] | null;
     /* Return a doc string for the breakpoints module, given all definitions that will be generated.
-     * The resulting string has to contain the `{-|` and `|-}` parts. 
+     * The resulting string has to contain the `{-|` and `-}` parts. 
      * `null` indicates no documentation should be generated. */
     breakpointsModuleDocs: (definedNames: string[]) => string | null;
     /* Called for every generated tailwind breakpoints definition.
-     * The output string can be empty or otherwise has to contain the `{-|` and `|-}` parts. */
+     * The output string can be empty or otherwise has to contain the `{-|` and `-}` parts. */
     breakpointsDefinition: (breakpoint: Breakpoint) => string;
 }
 
