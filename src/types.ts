@@ -150,6 +150,7 @@ Example values:
 export interface RecognizedDeclaration {
     propertiesBySelector: PropertiesBySelector[],
     originalRules: postcss.Rule[],
+    originalClassName: string,
 }
 
 export interface PropertiesBySelector {

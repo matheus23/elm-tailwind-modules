@@ -39,9 +39,10 @@ export function groupDeclarationBlocksByClass(
     const unrecognized: UnrecognizedDeclaration[] = [];
     const keyframes = new Map();
 
-    const defaultRecognized = (): RecognizedDeclaration => ({
+    const defaultRecognized = (originalClassName: string): RecognizedDeclaration => ({
         propertiesBySelector: [],
         originalRules: [],
+        originalClassName,
     });
 
     postCssRoot.each(child => {
@@ -174,7 +175,7 @@ export function groupDeclarationBlocksByClass(
             const subselector = subselectors[index];
 
             // concat properties to possibly existing property lists
-            const item = recognized.get(elmDeclName) || defaultRecognized();
+            const item = recognized.get(elmDeclName) || defaultRecognized(part.class);
             recognized.set(elmDeclName, {
                 propertiesBySelector: addToSelectorList(
                     item.propertiesBySelector,
@@ -185,6 +186,7 @@ export function groupDeclarationBlocksByClass(
                     ...item.originalRules,
                     mediaQuery == null ? rule : rule.parent,
                 ],
+                originalClassName: part.class,
             });
         });
 
