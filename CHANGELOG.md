@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2
+
+* Added the `docs` submodule and made it possible to inject custom documentation generators via the `generateDocumentation` setting.
+
 ## 0.3.1
 
 * Fix the --tailwind-config CLI argument not being relative to the current working directory

@@ -354,6 +354,317 @@ auto_rows_min =
     Css.property "grid-auto-rows" "min-content"
 
 
+backdrop_blur : Css.Style
+backdrop_blur =
+    Css.property "--tw-backdrop-blur" "blur(8px)"
+
+
+backdrop_blur_0 : Css.Style
+backdrop_blur_0 =
+    Css.property "--tw-backdrop-blur" "blur(0)"
+
+
+backdrop_blur_2xl : Css.Style
+backdrop_blur_2xl =
+    Css.property "--tw-backdrop-blur" "blur(40px)"
+
+
+backdrop_blur_3xl : Css.Style
+backdrop_blur_3xl =
+    Css.property "--tw-backdrop-blur" "blur(64px)"
+
+
+backdrop_blur_lg : Css.Style
+backdrop_blur_lg =
+    Css.property "--tw-backdrop-blur" "blur(16px)"
+
+
+backdrop_blur_md : Css.Style
+backdrop_blur_md =
+    Css.property "--tw-backdrop-blur" "blur(12px)"
+
+
+backdrop_blur_sm : Css.Style
+backdrop_blur_sm =
+    Css.property "--tw-backdrop-blur" "blur(4px)"
+
+
+backdrop_blur_xl : Css.Style
+backdrop_blur_xl =
+    Css.property "--tw-backdrop-blur" "blur(24px)"
+
+
+backdrop_brightness_0 : Css.Style
+backdrop_brightness_0 =
+    Css.property "--tw-backdrop-brightness" "brightness(0)"
+
+
+backdrop_brightness_100 : Css.Style
+backdrop_brightness_100 =
+    Css.property "--tw-backdrop-brightness" "brightness(1)"
+
+
+backdrop_brightness_105 : Css.Style
+backdrop_brightness_105 =
+    Css.property "--tw-backdrop-brightness" "brightness(1.05)"
+
+
+backdrop_brightness_110 : Css.Style
+backdrop_brightness_110 =
+    Css.property "--tw-backdrop-brightness" "brightness(1.1)"
+
+
+backdrop_brightness_125 : Css.Style
+backdrop_brightness_125 =
+    Css.property "--tw-backdrop-brightness" "brightness(1.25)"
+
+
+backdrop_brightness_150 : Css.Style
+backdrop_brightness_150 =
+    Css.property "--tw-backdrop-brightness" "brightness(1.5)"
+
+
+backdrop_brightness_200 : Css.Style
+backdrop_brightness_200 =
+    Css.property "--tw-backdrop-brightness" "brightness(2)"
+
+
+backdrop_brightness_50 : Css.Style
+backdrop_brightness_50 =
+    Css.property "--tw-backdrop-brightness" "brightness(.5)"
+
+
+backdrop_brightness_75 : Css.Style
+backdrop_brightness_75 =
+    Css.property "--tw-backdrop-brightness" "brightness(.75)"
+
+
+backdrop_brightness_90 : Css.Style
+backdrop_brightness_90 =
+    Css.property "--tw-backdrop-brightness" "brightness(.9)"
+
+
+backdrop_brightness_95 : Css.Style
+backdrop_brightness_95 =
+    Css.property "--tw-backdrop-brightness" "brightness(.95)"
+
+
+backdrop_contrast_0 : Css.Style
+backdrop_contrast_0 =
+    Css.property "--tw-backdrop-contrast" "contrast(0)"
+
+
+backdrop_contrast_100 : Css.Style
+backdrop_contrast_100 =
+    Css.property "--tw-backdrop-contrast" "contrast(1)"
+
+
+backdrop_contrast_125 : Css.Style
+backdrop_contrast_125 =
+    Css.property "--tw-backdrop-contrast" "contrast(1.25)"
+
+
+backdrop_contrast_150 : Css.Style
+backdrop_contrast_150 =
+    Css.property "--tw-backdrop-contrast" "contrast(1.5)"
+
+
+backdrop_contrast_200 : Css.Style
+backdrop_contrast_200 =
+    Css.property "--tw-backdrop-contrast" "contrast(2)"
+
+
+backdrop_contrast_50 : Css.Style
+backdrop_contrast_50 =
+    Css.property "--tw-backdrop-contrast" "contrast(.5)"
+
+
+backdrop_contrast_75 : Css.Style
+backdrop_contrast_75 =
+    Css.property "--tw-backdrop-contrast" "contrast(.75)"
+
+
+backdrop_filter : Css.Style
+backdrop_filter =
+    Css.batch
+        [ Css.property "--tw-backdrop-blur" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-backdrop-brightness" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-backdrop-contrast" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-backdrop-grayscale" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-backdrop-hue-rotate" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-backdrop-invert" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-backdrop-opacity" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-backdrop-saturate" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-backdrop-sepia" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "backdrop-filter" "var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)"
+        ]
+
+
+backdrop_filter_none : Css.Style
+backdrop_filter_none =
+    Css.property "backdrop-filter" "none"
+
+
+backdrop_grayscale : Css.Style
+backdrop_grayscale =
+    Css.property "--tw-backdrop-grayscale" "grayscale(100%)"
+
+
+backdrop_grayscale_0 : Css.Style
+backdrop_grayscale_0 =
+    Css.property "--tw-backdrop-grayscale" "grayscale(0)"
+
+
+backdrop_hue_rotate_0 : Css.Style
+backdrop_hue_rotate_0 =
+    Css.property "--tw-backdrop-hue-rotate" "hue-rotate(0deg)"
+
+
+backdrop_hue_rotate_15 : Css.Style
+backdrop_hue_rotate_15 =
+    Css.property "--tw-backdrop-hue-rotate" "hue-rotate(15deg)"
+
+
+backdrop_hue_rotate_180 : Css.Style
+backdrop_hue_rotate_180 =
+    Css.property "--tw-backdrop-hue-rotate" "hue-rotate(180deg)"
+
+
+backdrop_hue_rotate_30 : Css.Style
+backdrop_hue_rotate_30 =
+    Css.property "--tw-backdrop-hue-rotate" "hue-rotate(30deg)"
+
+
+backdrop_hue_rotate_60 : Css.Style
+backdrop_hue_rotate_60 =
+    Css.property "--tw-backdrop-hue-rotate" "hue-rotate(60deg)"
+
+
+backdrop_hue_rotate_90 : Css.Style
+backdrop_hue_rotate_90 =
+    Css.property "--tw-backdrop-hue-rotate" "hue-rotate(90deg)"
+
+
+backdrop_invert : Css.Style
+backdrop_invert =
+    Css.property "--tw-backdrop-invert" "invert(100%)"
+
+
+backdrop_invert_0 : Css.Style
+backdrop_invert_0 =
+    Css.property "--tw-backdrop-invert" "invert(0)"
+
+
+backdrop_opacity_0 : Css.Style
+backdrop_opacity_0 =
+    Css.property "--tw-backdrop-opacity" "opacity(0)"
+
+
+backdrop_opacity_10 : Css.Style
+backdrop_opacity_10 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.1)"
+
+
+backdrop_opacity_100 : Css.Style
+backdrop_opacity_100 =
+    Css.property "--tw-backdrop-opacity" "opacity(1)"
+
+
+backdrop_opacity_20 : Css.Style
+backdrop_opacity_20 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.2)"
+
+
+backdrop_opacity_25 : Css.Style
+backdrop_opacity_25 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.25)"
+
+
+backdrop_opacity_30 : Css.Style
+backdrop_opacity_30 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.3)"
+
+
+backdrop_opacity_40 : Css.Style
+backdrop_opacity_40 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.4)"
+
+
+backdrop_opacity_5 : Css.Style
+backdrop_opacity_5 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.05)"
+
+
+backdrop_opacity_50 : Css.Style
+backdrop_opacity_50 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.5)"
+
+
+backdrop_opacity_60 : Css.Style
+backdrop_opacity_60 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.6)"
+
+
+backdrop_opacity_70 : Css.Style
+backdrop_opacity_70 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.7)"
+
+
+backdrop_opacity_75 : Css.Style
+backdrop_opacity_75 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.75)"
+
+
+backdrop_opacity_80 : Css.Style
+backdrop_opacity_80 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.8)"
+
+
+backdrop_opacity_90 : Css.Style
+backdrop_opacity_90 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.9)"
+
+
+backdrop_opacity_95 : Css.Style
+backdrop_opacity_95 =
+    Css.property "--tw-backdrop-opacity" "opacity(0.95)"
+
+
+backdrop_saturate_0 : Css.Style
+backdrop_saturate_0 =
+    Css.property "--tw-backdrop-saturate" "saturate(0)"
+
+
+backdrop_saturate_100 : Css.Style
+backdrop_saturate_100 =
+    Css.property "--tw-backdrop-saturate" "saturate(1)"
+
+
+backdrop_saturate_150 : Css.Style
+backdrop_saturate_150 =
+    Css.property "--tw-backdrop-saturate" "saturate(1.5)"
+
+
+backdrop_saturate_200 : Css.Style
+backdrop_saturate_200 =
+    Css.property "--tw-backdrop-saturate" "saturate(2)"
+
+
+backdrop_saturate_50 : Css.Style
+backdrop_saturate_50 =
+    Css.property "--tw-backdrop-saturate" "saturate(.5)"
+
+
+backdrop_sepia : Css.Style
+backdrop_sepia =
+    Css.property "--tw-backdrop-sepia" "sepia(100%)"
+
+
+backdrop_sepia_0 : Css.Style
+backdrop_sepia_0 =
+    Css.property "--tw-backdrop-sepia" "sepia(0)"
+
+
 bg_auto : Css.Style
 bg_auto =
     Css.property "background-size" "auto"
@@ -365,6 +676,86 @@ bg_black =
         [ Css.property "--tw-bg-opacity" "1"
         , Css.property "background-color" "rgba(0, 0, 0, var(--tw-bg-opacity))"
         ]
+
+
+bg_blend_color : Css.Style
+bg_blend_color =
+    Css.property "background-blend-mode" "color"
+
+
+bg_blend_color_burn : Css.Style
+bg_blend_color_burn =
+    Css.property "background-blend-mode" "color-burn"
+
+
+bg_blend_color_dodge : Css.Style
+bg_blend_color_dodge =
+    Css.property "background-blend-mode" "color-dodge"
+
+
+bg_blend_darken : Css.Style
+bg_blend_darken =
+    Css.property "background-blend-mode" "darken"
+
+
+bg_blend_difference : Css.Style
+bg_blend_difference =
+    Css.property "background-blend-mode" "difference"
+
+
+bg_blend_exclusion : Css.Style
+bg_blend_exclusion =
+    Css.property "background-blend-mode" "exclusion"
+
+
+bg_blend_hard_light : Css.Style
+bg_blend_hard_light =
+    Css.property "background-blend-mode" "hard-light"
+
+
+bg_blend_hue : Css.Style
+bg_blend_hue =
+    Css.property "background-blend-mode" "hue"
+
+
+bg_blend_lighten : Css.Style
+bg_blend_lighten =
+    Css.property "background-blend-mode" "lighten"
+
+
+bg_blend_luminosity : Css.Style
+bg_blend_luminosity =
+    Css.property "background-blend-mode" "luminosity"
+
+
+bg_blend_multiply : Css.Style
+bg_blend_multiply =
+    Css.property "background-blend-mode" "multiply"
+
+
+bg_blend_normal : Css.Style
+bg_blend_normal =
+    Css.property "background-blend-mode" "normal"
+
+
+bg_blend_overlay : Css.Style
+bg_blend_overlay =
+    Css.property "background-blend-mode" "overlay"
+
+
+bg_blend_saturation : Css.Style
+bg_blend_saturation =
+    Css.property "background-blend-mode" "saturation"
+
+
+bg_blend_screen : Css.Style
+bg_blend_screen =
+    Css.property "background-blend-mode" "screen"
+
+
+bg_blend_soft_light : Css.Style
+bg_blend_soft_light =
+    Css.property "background-blend-mode" "soft-light"
 
 
 bg_blue_100 : Css.Style
@@ -1268,6 +1659,46 @@ bg_yellow_900 =
 block : Css.Style
 block =
     Css.property "display" "block"
+
+
+blur : Css.Style
+blur =
+    Css.property "--tw-blur" "blur(8px)"
+
+
+blur_0 : Css.Style
+blur_0 =
+    Css.property "--tw-blur" "blur(0)"
+
+
+blur_2xl : Css.Style
+blur_2xl =
+    Css.property "--tw-blur" "blur(40px)"
+
+
+blur_3xl : Css.Style
+blur_3xl =
+    Css.property "--tw-blur" "blur(64px)"
+
+
+blur_lg : Css.Style
+blur_lg =
+    Css.property "--tw-blur" "blur(16px)"
+
+
+blur_md : Css.Style
+blur_md =
+    Css.property "--tw-blur" "blur(12px)"
+
+
+blur_sm : Css.Style
+blur_sm =
+    Css.property "--tw-blur" "blur(4px)"
+
+
+blur_xl : Css.Style
+blur_xl =
+    Css.property "--tw-blur" "blur(24px)"
 
 
 border : Css.Style
@@ -2414,6 +2845,61 @@ break_words =
     Css.property "overflow-wrap" "break-word"
 
 
+brightness_0 : Css.Style
+brightness_0 =
+    Css.property "--tw-brightness" "brightness(0)"
+
+
+brightness_100 : Css.Style
+brightness_100 =
+    Css.property "--tw-brightness" "brightness(1)"
+
+
+brightness_105 : Css.Style
+brightness_105 =
+    Css.property "--tw-brightness" "brightness(1.05)"
+
+
+brightness_110 : Css.Style
+brightness_110 =
+    Css.property "--tw-brightness" "brightness(1.1)"
+
+
+brightness_125 : Css.Style
+brightness_125 =
+    Css.property "--tw-brightness" "brightness(1.25)"
+
+
+brightness_150 : Css.Style
+brightness_150 =
+    Css.property "--tw-brightness" "brightness(1.5)"
+
+
+brightness_200 : Css.Style
+brightness_200 =
+    Css.property "--tw-brightness" "brightness(2)"
+
+
+brightness_50 : Css.Style
+brightness_50 =
+    Css.property "--tw-brightness" "brightness(.5)"
+
+
+brightness_75 : Css.Style
+brightness_75 =
+    Css.property "--tw-brightness" "brightness(.75)"
+
+
+brightness_90 : Css.Style
+brightness_90 =
+    Css.property "--tw-brightness" "brightness(.9)"
+
+
+brightness_95 : Css.Style
+brightness_95 =
+    Css.property "--tw-brightness" "brightness(.95)"
+
+
 capitalize : Css.Style
 capitalize =
     Css.property "text-transform" "capitalize"
@@ -2706,6 +3192,41 @@ contents =
     Css.property "display" "contents"
 
 
+contrast_0 : Css.Style
+contrast_0 =
+    Css.property "--tw-contrast" "contrast(0)"
+
+
+contrast_100 : Css.Style
+contrast_100 =
+    Css.property "--tw-contrast" "contrast(1)"
+
+
+contrast_125 : Css.Style
+contrast_125 =
+    Css.property "--tw-contrast" "contrast(1.25)"
+
+
+contrast_150 : Css.Style
+contrast_150 =
+    Css.property "--tw-contrast" "contrast(1.5)"
+
+
+contrast_200 : Css.Style
+contrast_200 =
+    Css.property "--tw-contrast" "contrast(2)"
+
+
+contrast_50 : Css.Style
+contrast_50 =
+    Css.property "--tw-contrast" "contrast(.5)"
+
+
+contrast_75 : Css.Style
+contrast_75 =
+    Css.property "--tw-contrast" "contrast(.75)"
+
+
 cursor_auto : Css.Style
 cursor_auto =
     Css.property "cursor" "auto"
@@ -2744,6 +3265,16 @@ cursor_text =
 cursor_wait : Css.Style
 cursor_wait =
     Css.property "cursor" "wait"
+
+
+decoration_clone : Css.Style
+decoration_clone =
+    Css.property "box-decoration-break" "clone"
+
+
+decoration_slice : Css.Style
+decoration_slice =
+    Css.property "box-decoration-break" "slice"
 
 
 delay_100 : Css.Style
@@ -4177,6 +4708,41 @@ divide_yellow_900 =
         ]
 
 
+drop_shadow : Css.Style
+drop_shadow =
+    Css.property "--tw-drop-shadow" "drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06))"
+
+
+drop_shadow_2xl : Css.Style
+drop_shadow_2xl =
+    Css.property "--tw-drop-shadow" "drop-shadow(0 25px 25px rgba(0, 0, 0, 0.15))"
+
+
+drop_shadow_lg : Css.Style
+drop_shadow_lg =
+    Css.property "--tw-drop-shadow" "drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1))"
+
+
+drop_shadow_md : Css.Style
+drop_shadow_md =
+    Css.property "--tw-drop-shadow" "drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06))"
+
+
+drop_shadow_none : Css.Style
+drop_shadow_none =
+    Css.property "--tw-drop-shadow" "drop-shadow(0 0 #0000)"
+
+
+drop_shadow_sm : Css.Style
+drop_shadow_sm =
+    Css.property "--tw-drop-shadow" "drop-shadow(0 1px 1px rgba(0,0,0,0.05))"
+
+
+drop_shadow_xl : Css.Style
+drop_shadow_xl =
+    Css.property "--tw-drop-shadow" "drop-shadow(0 20px 13px rgba(0, 0, 0, 0.03)) drop-shadow(0 8px 5px rgba(0, 0, 0, 0.08))"
+
+
 duration_100 : Css.Style
 duration_100 =
     Css.property "transition-duration" "100ms"
@@ -4240,6 +4806,27 @@ ease_out =
 fill_current : Css.Style
 fill_current =
     Css.property "fill" "currentColor"
+
+
+filter : Css.Style
+filter =
+    Css.batch
+        [ Css.property "--tw-blur" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-brightness" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-contrast" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-grayscale" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-hue-rotate" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-invert" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-saturate" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-sepia" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "--tw-drop-shadow" "var(--tw-empty,/*!*/ /*!*/)"
+        , Css.property "filter" "var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)"
+        ]
+
+
+filter_none : Css.Style
+filter_none =
+    Css.property "filter" "none"
 
 
 fixed : Css.Style
@@ -5604,6 +6191,16 @@ gap_y_px =
     Css.property "row-gap" "1px"
 
 
+grayscale : Css.Style
+grayscale =
+    Css.property "--tw-grayscale" "grayscale(100%)"
+
+
+grayscale_0 : Css.Style
+grayscale_0 =
+    Css.property "--tw-grayscale" "grayscale(0)"
+
+
 grid : Css.Style
 grid =
     Css.property "display" "grid"
@@ -5999,6 +6596,36 @@ hidden =
     Css.property "display" "none"
 
 
+hue_rotate_0 : Css.Style
+hue_rotate_0 =
+    Css.property "--tw-hue-rotate" "hue-rotate(0deg)"
+
+
+hue_rotate_15 : Css.Style
+hue_rotate_15 =
+    Css.property "--tw-hue-rotate" "hue-rotate(15deg)"
+
+
+hue_rotate_180 : Css.Style
+hue_rotate_180 =
+    Css.property "--tw-hue-rotate" "hue-rotate(180deg)"
+
+
+hue_rotate_30 : Css.Style
+hue_rotate_30 =
+    Css.property "--tw-hue-rotate" "hue-rotate(30deg)"
+
+
+hue_rotate_60 : Css.Style
+hue_rotate_60 =
+    Css.property "--tw-hue-rotate" "hue-rotate(60deg)"
+
+
+hue_rotate_90 : Css.Style
+hue_rotate_90 =
+    Css.property "--tw-hue-rotate" "hue-rotate(90deg)"
+
+
 inline : Css.Style
 inline =
     Css.property "display" "inline"
@@ -6017,6 +6644,11 @@ inline_flex =
 inline_grid : Css.Style
 inline_grid =
     Css.property "display" "inline-grid"
+
+
+inline_table : Css.Style
+inline_table =
+    Css.property "display" "inline-table"
 
 
 inset_0 : Css.Style
@@ -7137,9 +7769,29 @@ inset_y_px =
         ]
 
 
+invert : Css.Style
+invert =
+    Css.property "--tw-invert" "invert(100%)"
+
+
+invert_0 : Css.Style
+invert_0 =
+    Css.property "--tw-invert" "invert(0)"
+
+
 invisible : Css.Style
 invisible =
     Css.property "visibility" "hidden"
+
+
+isolate : Css.Style
+isolate =
+    Css.property "isolation" "isolate"
+
+
+isolation_auto : Css.Style
+isolation_auto =
+    Css.property "isolation" "auto"
 
 
 italic : Css.Style
@@ -7195,11 +7847,6 @@ justify_end =
 justify_evenly : Css.Style
 justify_evenly =
     Css.property "justify-content" "space-evenly"
-
-
-justify_items_auto : Css.Style
-justify_items_auto =
-    Css.property "justify-items" "auto"
 
 
 justify_items_center : Css.Style
@@ -7568,6 +8215,11 @@ list_disc =
 list_inside : Css.Style
 list_inside =
     Css.property "list-style-position" "inside"
+
+
+list_item : Css.Style
+list_item =
+    Css.property "display" "list-item"
 
 
 list_none : Css.Style
@@ -8273,6 +8925,86 @@ min_w_max =
 min_w_min : Css.Style
 min_w_min =
     Css.property "min-width" "min-content"
+
+
+mix_blend_color : Css.Style
+mix_blend_color =
+    Css.property "mix-blend-mode" "color"
+
+
+mix_blend_color_burn : Css.Style
+mix_blend_color_burn =
+    Css.property "mix-blend-mode" "color-burn"
+
+
+mix_blend_color_dodge : Css.Style
+mix_blend_color_dodge =
+    Css.property "mix-blend-mode" "color-dodge"
+
+
+mix_blend_darken : Css.Style
+mix_blend_darken =
+    Css.property "mix-blend-mode" "darken"
+
+
+mix_blend_difference : Css.Style
+mix_blend_difference =
+    Css.property "mix-blend-mode" "difference"
+
+
+mix_blend_exclusion : Css.Style
+mix_blend_exclusion =
+    Css.property "mix-blend-mode" "exclusion"
+
+
+mix_blend_hard_light : Css.Style
+mix_blend_hard_light =
+    Css.property "mix-blend-mode" "hard-light"
+
+
+mix_blend_hue : Css.Style
+mix_blend_hue =
+    Css.property "mix-blend-mode" "hue"
+
+
+mix_blend_lighten : Css.Style
+mix_blend_lighten =
+    Css.property "mix-blend-mode" "lighten"
+
+
+mix_blend_luminosity : Css.Style
+mix_blend_luminosity =
+    Css.property "mix-blend-mode" "luminosity"
+
+
+mix_blend_multiply : Css.Style
+mix_blend_multiply =
+    Css.property "mix-blend-mode" "multiply"
+
+
+mix_blend_normal : Css.Style
+mix_blend_normal =
+    Css.property "mix-blend-mode" "normal"
+
+
+mix_blend_overlay : Css.Style
+mix_blend_overlay =
+    Css.property "mix-blend-mode" "overlay"
+
+
+mix_blend_saturation : Css.Style
+mix_blend_saturation =
+    Css.property "mix-blend-mode" "saturation"
+
+
+mix_blend_screen : Css.Style
+mix_blend_screen =
+    Css.property "mix-blend-mode" "screen"
+
+
+mix_blend_soft_light : Css.Style
+mix_blend_soft_light =
+    Css.property "mix-blend-mode" "soft-light"
 
 
 ml_0 : Css.Style
@@ -9391,6 +10123,31 @@ my_px =
         ]
 
 
+neg_backdrop_hue_rotate_15 : Css.Style
+neg_backdrop_hue_rotate_15 =
+    Css.property "--tw-backdrop-hue-rotate" "hue-rotate(-15deg)"
+
+
+neg_backdrop_hue_rotate_180 : Css.Style
+neg_backdrop_hue_rotate_180 =
+    Css.property "--tw-backdrop-hue-rotate" "hue-rotate(-180deg)"
+
+
+neg_backdrop_hue_rotate_30 : Css.Style
+neg_backdrop_hue_rotate_30 =
+    Css.property "--tw-backdrop-hue-rotate" "hue-rotate(-30deg)"
+
+
+neg_backdrop_hue_rotate_60 : Css.Style
+neg_backdrop_hue_rotate_60 =
+    Css.property "--tw-backdrop-hue-rotate" "hue-rotate(-60deg)"
+
+
+neg_backdrop_hue_rotate_90 : Css.Style
+neg_backdrop_hue_rotate_90 =
+    Css.property "--tw-backdrop-hue-rotate" "hue-rotate(-90deg)"
+
+
 neg_bottom_0 : Css.Style
 neg_bottom_0 =
     Css.property "bottom" "0px"
@@ -9599,6 +10356,31 @@ neg_bottom_full =
 neg_bottom_px : Css.Style
 neg_bottom_px =
     Css.property "bottom" "-1px"
+
+
+neg_hue_rotate_15 : Css.Style
+neg_hue_rotate_15 =
+    Css.property "--tw-hue-rotate" "hue-rotate(-15deg)"
+
+
+neg_hue_rotate_180 : Css.Style
+neg_hue_rotate_180 =
+    Css.property "--tw-hue-rotate" "hue-rotate(-180deg)"
+
+
+neg_hue_rotate_30 : Css.Style
+neg_hue_rotate_30 =
+    Css.property "--tw-hue-rotate" "hue-rotate(-30deg)"
+
+
+neg_hue_rotate_60 : Css.Style
+neg_hue_rotate_60 =
+    Css.property "--tw-hue-rotate" "hue-rotate(-60deg)"
+
+
+neg_hue_rotate_90 : Css.Style
+neg_hue_rotate_90 =
+    Css.property "--tw-hue-rotate" "hue-rotate(-90deg)"
 
 
 neg_inset_0 : Css.Style
@@ -15202,11 +15984,6 @@ place_content_stretch =
     Css.property "place-content" "stretch"
 
 
-place_items_auto : Css.Style
-place_items_auto =
-    Css.property "place-items" "auto"
-
-
 place_items_center : Css.Style
 place_items_center =
     Css.property "place-items" "center"
@@ -19321,6 +20098,31 @@ row_start_auto =
     Css.property "grid-row-start" "auto"
 
 
+saturate_0 : Css.Style
+saturate_0 =
+    Css.property "--tw-saturate" "saturate(0)"
+
+
+saturate_100 : Css.Style
+saturate_100 =
+    Css.property "--tw-saturate" "saturate(1)"
+
+
+saturate_150 : Css.Style
+saturate_150 =
+    Css.property "--tw-saturate" "saturate(1.5)"
+
+
+saturate_200 : Css.Style
+saturate_200 =
+    Css.property "--tw-saturate" "saturate(2)"
+
+
+saturate_50 : Css.Style
+saturate_50 =
+    Css.property "--tw-saturate" "saturate(.5)"
+
+
 scale_0 : Css.Style
 scale_0 =
     Css.batch
@@ -19544,6 +20346,16 @@ self_start =
 self_stretch : Css.Style
 self_stretch =
     Css.property "align-self" "stretch"
+
+
+sepia : Css.Style
+sepia =
+    Css.property "--tw-sepia" "sepia(100%)"
+
+
+sepia_0 : Css.Style
+sepia_0 =
+    Css.property "--tw-sepia" "sepia(0)"
 
 
 shadow : Css.Style
@@ -22315,7 +23127,7 @@ transform_none =
 transition : Css.Style
 transition =
     Css.batch
-        [ Css.property "transition-property" "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform"
+        [ Css.property "transition-property" "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter"
         , Css.property "transition-timing-function" "cubic-bezier(0.4, 0, 0.2, 1)"
         , Css.property "transition-duration" "150ms"
         ]
