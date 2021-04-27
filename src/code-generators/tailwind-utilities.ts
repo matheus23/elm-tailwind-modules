@@ -6,28 +6,30 @@ import {
     SubselectorRest,
     UnrecognizedDeclaration,
     PseudoSubselectorRest,
-    Keyframe
+    Keyframe,
 } from "../types";
+import { DocumentationGenerator } from "../docs";
 
 
 
 // PUBLIC INTERFACE
 
 
-export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations, docs: boolean): string {
+export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations, docs: DocumentationGenerator): string {
     const sortedClasses = Array.from(blocksByClass.recognized.keys()).sort();
+    const definedNames = ["globalStyles", ...sortedClasses];
 
     return [
         generate.elmModuleHeader({
             moduleName,
-            exposing: docs ? ["globalStyles", ...sortedClasses] : null,
+            exposing: docs.utilitiesExposing(definedNames),
             imports: [
                 generate.singleLine("import Css"),
                 generate.singleLine("import Css.Animations"),
                 generate.singleLine("import Css.Global"),
                 generate.singleLine("import Css.Media"),
             ],
-            moduleDocs: docs ? moduleDocs(sortedClasses) : null,
+            moduleDocs: docs.utilitiesModuleDocs(definedNames),
         }),
         elmUnrecognizedToFunctions(blocksByClass.unrecognized, docs),
         elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.recognized, docs),
@@ -38,56 +40,9 @@ export function generateElmModule(moduleName: string, blocksByClass: GroupedDecl
 
 // PRIVATE INTERFACE
 
-function moduleDocs(sortedClasses: string[]): string {
+function elmUnrecognizedToFunctions(unrecognizedBlocks: UnrecognizedDeclaration[], docs: DocumentationGenerator): string {
     return `
-{-|
-
-
-## Tailwind Utilities
-
-This module contains
-
-1.  Tailwind's style reset in the \`globalStyles\` definition.
-    Make sure to include this in your HTML via elm-css' \`Css.Global.global\` function.
-2.  All default tailwind css utility classes. You can browse the documentation on
-    [tailwind's website](https://tailwindcss.com/docs)
-
-@docs globalStyles
-${sortedClasses.map(c => `@docs ${c}`).join("\n")}
-
--}
-`;
-}
-
-
-function elmUnrecognizedToFunctions(unrecognizedBlocks: UnrecognizedDeclaration[], docs: boolean): string {
-    return `
-${!docs ? "" : `
-{-| This contains tailwind's style reset.
-
-This is something similar to normalize.css, if you're familiar with it.
-
-You **need to include this in your html** at any time you use this module,
-as some of the classes in here depend on css variables defined in the global styles.
-
-You include it like so:
-
-    import Css.Global
-    import Html.Styled as Html exposing (Html)
-    import Tailwind.Utilities exposing (globalStyles)
-
-    view : Html msg
-    view =
-        div []
-            [ -- Like this:
-              Css.Global.global globalStyles
-
-            -- Continue with any other Html
-            ]
-
-It only needs to be included once.
-
--}`}
+${docs.utilitiesGlobalStyles()}
 globalStyles : List Css.Global.Snippet
 globalStyles =
 ${convertUnrecognizeds(unrecognizedBlocks)({
@@ -110,7 +65,7 @@ function convertUnrecognizeds(unrecognizeds: UnrecognizedDeclaration[]): generat
     );
 }
 
-function elmRecognizedToFunctions(keyframes: Map<string, Keyframe[]>, recognizedBlocksByClass: Map<string, RecognizedDeclaration>, docs: boolean): string {
+function elmRecognizedToFunctions(keyframes: Map<string, Keyframe[]>, recognizedBlocksByClass: Map<string, RecognizedDeclaration>, docs: DocumentationGenerator): string {
     let body = "";
     Array.from(recognizedBlocksByClass.keys()).sort().forEach(elmClassName => {
         body = body + elmRecognizedFunction(keyframes, elmClassName, recognizedBlocksByClass.get(elmClassName), docs);
@@ -118,22 +73,9 @@ function elmRecognizedToFunctions(keyframes: Map<string, Keyframe[]>, recognized
     return body;
 }
 
-function elmRecognizedFunction(keyframes: Map<string, Keyframe[]>, elmClassName: string, propertiesBlock: RecognizedDeclaration, docs: boolean): string {
+function elmRecognizedFunction(keyframes: Map<string, Keyframe[]>, elmClassName: string, propertiesBlock: RecognizedDeclaration, docs: DocumentationGenerator): string {
     return `
-${!docs ? "" : `
-{-| ${
-propertiesBlock.originalRules.length > 1
-    ? "This class combines the effects of following css declarations:"
-    : "This class has the effect of following css declaration:"
-}
-
-\`\`\`css
-${propertiesBlock.originalRules.map(rule => rule.toString()).join("\n\n")}
-\`\`\`
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}`}
+${docs.utilitiesDefinition(elmClassName, propertiesBlock)}
 ${elmClassName} : Css.Style
 ${elmClassName} =
 ${convertDeclarationBlock(keyframes, propertiesBlock)({

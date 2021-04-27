@@ -9,6 +9,7 @@ import tailwindcss from "tailwindcss";
 // @ts-ignore
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import { LogFunction, NamingOptions } from "./types";
+import { DocumentationGenerator, defaultDocumentationGenerator, noDocumentationGenerator } from "./docs";
 import chalk from "chalk";
 import { isArray, isEmpty } from "lodash";
 
@@ -25,7 +26,7 @@ export interface RunConfiguration {
     moduleName?: string,
     postcssPlugins?: postcss.AcceptedPlugin[],
     tailwindConfig?: any,
-    generateDocumentation?: boolean;
+    generateDocumentation?: boolean | DocumentationGenerator;
     logFunction?: LogFunction,
 }
 
@@ -96,7 +97,7 @@ export interface ModulesGeneratedHook {
 export function asPostcssPlugin({ moduleName, tailwindConfig, generateDocumentation, logFunction, modulesGeneratedHook }: {
     moduleName: string,
     tailwindConfig: any,
-    generateDocumentation: boolean,
+    generateDocumentation: boolean | DocumentationGenerator,
     logFunction: LogFunction,
     modulesGeneratedHook: ModulesGeneratedHook,
 }) {
@@ -106,10 +107,11 @@ export function asPostcssPlugin({ moduleName, tailwindConfig, generateDocumentat
     return {
         postcssPlugin: "elm-tailwind-modules",
         async OnceExit(root: postcss.Root) {
+            const docGen = resolveDocGen(generateDocumentation);
             const resolvedConfig = resolveConfig(tailwindConfig);
             const blocksByClass = parser.groupDeclarationBlocksByClass(root, logFunction, namingOptions);
-            const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, generateDocumentation);
-            const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions, generateDocumentation);
+            const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, docGen);
+            const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions, docGen);
             modulesGeneratedHook({ utilitiesModule, breakpointsModule });
         }
     }
@@ -171,6 +173,15 @@ async function resolvePostcssFile(postcssFile: null | string): Promise<{ file: s
     };
 }
 
+function resolveDocGen(docs: boolean | DocumentationGenerator): DocumentationGenerator {
+    if (docs === true) {
+        return defaultDocumentationGenerator;
+    }
+    if (docs === false) {
+        return noDocumentationGenerator;
+    }
+    return docs;
+}
 
 /**
  * Async helper to write given file to disk

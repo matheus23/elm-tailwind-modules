@@ -30,10 +30,10 @@ export function toElmName(cls: string, options?: { prefix?: string, nameStyle: "
         elm = elm.replace(re_neg_with_prefix, "$1neg_$2");
     }
     // This is faster than a general solution
-    elm = elm.replace(/^2(x[ls].*$)/, "x$1")
-    elm = elm.replace(/^3(x[ls].*$)/, "xx$1")
-    elm = elm.replace(/^4(x[ls].*$)/, "xxx$1")
-    elm = elm.replace(/^5(x[ls].*$)/, "xxxx$1")
+    elm = elm.replace(/^2(x[ls].*$)/, "x$1");
+    elm = elm.replace(/^3(x[ls].*$)/, "xx$1");
+    elm = elm.replace(/^4(x[ls].*$)/, "xxx$1");
+    elm = elm.replace(/^5(x[ls].*$)/, "xxxx$1");
     // handle negative at start of string
     elm = elm.replace(/^-([a-z])/, "_neg_$1");
     // handle negative with variant

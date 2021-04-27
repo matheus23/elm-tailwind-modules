@@ -200,6 +200,14 @@ export interface UnrecognizedDeclaration {
 
 //
 
+export interface Breakpoint {
+    name: string,
+    size: string,
+}
+
+
+//
+
 export function isPlainSubselectorRest(selector: SubselectorRest): selector is PlainSubselectorRest {
     return selector.type === "plain";
 }
