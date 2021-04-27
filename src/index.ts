@@ -9,7 +9,7 @@ import tailwindcss from "tailwindcss";
 // @ts-ignore
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import { LogFunction, NamingOptions } from "./types";
-import { DocumentationGenerator, defaultDocumentationGenerator, noDocumentationGenerator } from "./docs";
+import * as documentation from "./docs";
 import chalk from "chalk";
 import { isArray, isEmpty } from "lodash";
 
@@ -21,12 +21,14 @@ const namingOptions: NamingOptions = {
     nameStyle: "snake"
 }
 
+export const docs = documentation;
+
 export interface RunConfiguration {
     directory?: string,
     moduleName?: string,
     postcssPlugins?: postcss.AcceptedPlugin[],
     tailwindConfig?: any,
-    generateDocumentation?: boolean | DocumentationGenerator;
+    generateDocumentation?: boolean | documentation.DocumentationGenerator;
     logFunction?: LogFunction,
 }
 
@@ -97,7 +99,7 @@ export interface ModulesGeneratedHook {
 export function asPostcssPlugin({ moduleName, tailwindConfig, generateDocumentation, logFunction, modulesGeneratedHook }: {
     moduleName: string,
     tailwindConfig: any,
-    generateDocumentation: boolean | DocumentationGenerator,
+    generateDocumentation: boolean | documentation.DocumentationGenerator,
     logFunction: LogFunction,
     modulesGeneratedHook: ModulesGeneratedHook,
 }) {
@@ -173,12 +175,12 @@ async function resolvePostcssFile(postcssFile: null | string): Promise<{ file: s
     };
 }
 
-function resolveDocGen(docs: boolean | DocumentationGenerator): DocumentationGenerator {
+function resolveDocGen(docs: boolean | documentation.DocumentationGenerator): documentation.DocumentationGenerator {
     if (docs === true) {
-        return defaultDocumentationGenerator;
+        return documentation.defaultDocumentationGenerator;
     }
     if (docs === false) {
-        return noDocumentationGenerator;
+        return documentation.noDocumentationGenerator;
     }
     return docs;
 }
