@@ -1,6 +1,6 @@
 # Elm Tailwind Modules
 
-> Generate Elm code for Tailwind Utilities and Components which purges using Elm's --optimize!
+> Generate Elm code for Tailwind Utilities and Components which purges using Elm's dead code elimination!
 >
 > Use [Tailwind](https://tailwindcss.com/) with [Elm-Css](https://github.com/rtfeldman/elm-css)!
 
