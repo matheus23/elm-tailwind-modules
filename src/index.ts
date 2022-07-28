@@ -56,7 +56,12 @@ export async function run({
     generateDocumentation = false,
     logFunction = console.log,
 }: RunConfiguration): Promise<RunResult> {
-    const tailwindConfig_ = {...tailwindConfig, safelist: tailwindConfig.safelist || [{pattern: /.*/, variants: []}]};
+    const tailwindConfig_ = {
+        ...tailwindConfig, safelist: tailwindConfig.safelist || [
+            {pattern: /.*-(gray|red|yellow|green|blue|indigo|purple|pink|white|black)/, variants: []},
+            {pattern: /rounded|flex|p.?-|font|text|border|justify|items|shadow|m.?-/, variants: []},
+        ]
+    };
     let utilitiesModule: undefined | string;
     let breakpointsModule: undefined | string;
 

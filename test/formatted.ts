@@ -1,17 +1,17 @@
-import test, { ExecutionContext } from "ava";
+import test, {ExecutionContext} from "ava";
 
 import * as elmTailwindModules from "../src/index";
 // @ts-ignore
 import tailwindConfig from "../test-example/tailwind.config.js";
-import { spawnSync } from "child_process";
+import {spawnSync} from "child_process";
 import execa from "execa";
-import { promises as fs } from "fs";
-import { tmpdir } from "os";
+import {promises as fs} from "fs";
+import {tmpdir} from "os";
 import path from "path";
 
 
 test("output is formatted according to elm-format", async t => {
-    const { utilitiesModule, breakpointsModule } = await elmTailwindModules.run({
+    const {utilitiesModule, breakpointsModule} = await elmTailwindModules.run({
         directory: null,
         moduleName: "Tailwind.Basic",
         postcssPlugins: [],
@@ -25,7 +25,7 @@ test("output is formatted according to elm-format", async t => {
 
 
 test("output with documentation is formatted according to elm-format", async t => {
-    const { utilitiesModule, breakpointsModule } = await elmTailwindModules.run({
+    const {utilitiesModule, breakpointsModule} = await elmTailwindModules.run({
         directory: null,
         moduleName: "Tailwind.Basic",
         postcssPlugins: [],
@@ -50,7 +50,7 @@ async function assertFormatted(t: ExecutionContext, file: string) {
 async function elmFormat(fileContents: string): Promise<string> {
     const output = await execa("./node_modules/.bin/elm-format", ["--stdin"], {
         input: fileContents,
-        timeout: 10000,
+        timeout: 10_000_000,
         stripFinalNewline: false,
     });
     return output.stdout;
@@ -62,7 +62,7 @@ async function diff(before: string, after: string): Promise<string> {
     const formattedPath = path.join(dir, "Formatted.elm");
     await fs.writeFile(unformattedPath, before);
     await fs.writeFile(formattedPath, after);
-    const p = spawnSync("diff", ["-u", "--color=always", unformattedPath, formattedPath], { encoding: "utf-8" });
+    const p = spawnSync("diff", ["-u", "--color=always", unformattedPath, formattedPath], {encoding: "utf-8"});
     await fs.rm(unformattedPath);
     await fs.rm(formattedPath);
     return p.stdout;
