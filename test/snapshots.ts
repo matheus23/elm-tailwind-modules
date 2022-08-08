@@ -14,9 +14,9 @@ test("snapshot of generated module", async t => {
         logFunction: t.log,
     });
 
-    t.snapshot(generatedModules.utilitiesModule, { id: t.title + ": Utilities Module" });
-    t.snapshot(generatedModules.breakpointsModule, { id: t.title + ": Breakpoints Module" });
-    t.snapshot(generatedModules.postcssResult.content, { id: t.title + ": Remaining Postcss CSS" });
+    t.snapshot(generatedModules.utilitiesModule, t.title + ": Utilities Module");
+    t.snapshot(generatedModules.breakpointsModule, t.title + ": Breakpoints Module");
+    t.snapshot(generatedModules.postcssResult.content, t.title + ": Remaining Postcss CSS");
 });
 
 
@@ -30,9 +30,9 @@ test("snapshot of generated module with documentation", async t => {
         logFunction: t.log,
     });
 
-    t.snapshot(generatedModules.utilitiesModule, { id: t.title + ": Utilities Module" });
-    t.snapshot(generatedModules.breakpointsModule, { id: t.title + ": Breakpoints Module" });
-    t.snapshot(generatedModules.postcssResult.content, { id: t.title + ": Remaining Postcss CSS" });
+    t.snapshot(generatedModules.utilitiesModule, t.title + ": Utilities Module");
+    t.snapshot(generatedModules.breakpointsModule, t.title + ": Breakpoints Module");
+    t.snapshot(generatedModules.postcssResult.content, t.title + ": Remaining Postcss CSS");
 });
 
 
@@ -45,9 +45,9 @@ test("snapshot of generated module with autoprefixer", async t => {
         logFunction: t.log,
     });
 
-    t.snapshot(generatedModules.utilitiesModule, { id: t.title + ": Utilities Module" });
-    t.snapshot(generatedModules.breakpointsModule, { id: t.title + ": Breakpoints Module" });
-    t.snapshot(generatedModules.postcssResult.content, { id: t.title + ": Remaining Postcss CSS" });
+    t.snapshot(generatedModules.utilitiesModule, t.title + ": Utilities Module");
+    t.snapshot(generatedModules.breakpointsModule, t.title + ": Breakpoints Module");
+    t.snapshot(generatedModules.postcssResult.content, t.title + ": Remaining Postcss CSS");
 });
 
 
@@ -60,8 +60,8 @@ test("snapshot of generated module with various plugins", async t => {
         logFunction: t.log,
     });
 
-    t.snapshot(generatedModules.utilitiesModule, { id: t.title + ": Utilities Module" });
-    t.snapshot(generatedModules.breakpointsModule, { id: t.title + ": Breakpoints Module" });
-    t.snapshot(generatedModules.postcssResult.content, { id: t.title + ": Remaining Postcss CSS" });
+    t.snapshot(generatedModules.utilitiesModule, t.title + ": Utilities Module");
+    t.snapshot(generatedModules.breakpointsModule, t.title + ": Breakpoints Module");
+    t.snapshot(generatedModules.postcssResult.content, t.title + ": Remaining Postcss CSS");
 });
 
