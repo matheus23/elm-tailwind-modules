@@ -2,7 +2,7 @@ import test, {ExecutionContext} from "ava";
 
 import * as elmTailwindModules from "../src/index";
 // @ts-ignore
-import tailwindConfig from "../test-example/tailwind.config.js";
+import tailwindConfig from "./tailwind.config.js";
 import {spawnSync} from "child_process";
 import execa from "execa";
 import {promises as fs} from "fs";
