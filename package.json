@@ -13,7 +13,7 @@
     "build:lib": "rollup -c rollup.config.ts",
     "docs": "rimraf docs && typedoc src/index.ts --out docs && node dist/cli.js --dir docs/example/",
     "test": "ava",
-    "test-all": "yarn test:clean && yarn test:elm-compile && yarn test",
+    "test-all": "yarn test:clean && yarn test:elm-compile && yarn test --verbose --timeout=2m",
     "test:clean": "rimraf test-example/src/Tailwind",
     "test:elm-compile": "ts-node test-example/test-run.ts && cd test-example && elm make src/Main.elm --output=/dev/null",
     "test:node-only": "ts-node test-example/test-run.ts",
