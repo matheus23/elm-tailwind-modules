@@ -1,4 +1,4 @@
-import { promises as fs } from "fs";
+import {promises as fs} from "fs";
 import path from "path";
 import * as postcss from "postcss";
 import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities";
@@ -8,13 +8,14 @@ import * as parser from "./parser";
 import tailwindcss from "tailwindcss";
 // @ts-ignore
 import resolveConfig from "tailwindcss/resolveConfig.js";
-import { LogFunction, NamingOptions } from "./types";
+import {LogFunction, NamingOptions} from "./types";
 import * as documentation from "./docs";
 import chalk from "chalk";
-import { isArray, isEmpty } from "lodash";
+import {isArray, isEmpty} from "lodash";
 
 export const defaultTailwindConfig: any = {
     variants: [],
+    safelist: [{pattern: /.*/, variants: []}]
 };
 
 const namingOptions: NamingOptions = {
@@ -55,12 +56,17 @@ export async function run({
     generateDocumentation = false,
     logFunction = console.log,
 }: RunConfiguration): Promise<RunResult> {
+    const tailwindConfig_ = {
+        ...tailwindConfig, safelist: tailwindConfig.safelist || [
+            {pattern: /.*/, variants: []}
+        ]
+    };
     let utilitiesModule: undefined | string;
     let breakpointsModule: undefined | string;
 
     const afterTailwindPlugin = asPostcssPlugin({
         moduleName,
-        tailwindConfig,
+        tailwindConfig: tailwindConfig_,
         generateDocumentation,
         logFunction,
         modulesGeneratedHook: async generated => {
@@ -68,26 +74,26 @@ export async function run({
             breakpointsModule = generated.breakpointsModule;
 
             if (directory != null) {
-                await writeGeneratedFiles({ directory, moduleName, logFunction, generated });
+                await writeGeneratedFiles({directory, moduleName, logFunction, generated});
             }
         }
     });
 
     // TODO Remove resolvePostcssFile
-    const { from, file: css } = await resolvePostcssFile(null);
+    const {from, file: css} = await resolvePostcssFile(null);
     const to = "output in-memory";
     const postcssResult = await postcss.default([
-        tailwindcss(tailwindConfig),
+        tailwindcss(tailwindConfig_),
         ...postcssPlugins,
         afterTailwindPlugin
-    ]).process(css, { from, to });
+    ]).process(css, {from, to});
 
-    return { utilitiesModule, breakpointsModule, postcssResult };
+    return {utilitiesModule, breakpointsModule, postcssResult};
 }
 
 
 export interface ModulesGeneratedHook {
-    (_: { utilitiesModule: string, breakpointsModule: string }): void;
+    (_: {utilitiesModule: string, breakpointsModule: string}): void;
 }
 
 /**
@@ -96,7 +102,7 @@ export interface ModulesGeneratedHook {
  * @param modulesGeneratedHook
  * a callback which is called once the modules have been generated.
  */
-export function asPostcssPlugin({ moduleName, tailwindConfig, generateDocumentation, logFunction, modulesGeneratedHook }: {
+export function asPostcssPlugin({moduleName, tailwindConfig, generateDocumentation, logFunction, modulesGeneratedHook}: {
     moduleName: string,
     tailwindConfig: any,
     generateDocumentation: boolean | documentation.DocumentationGenerator,
@@ -114,7 +120,7 @@ export function asPostcssPlugin({ moduleName, tailwindConfig, generateDocumentat
             const blocksByClass = parser.groupDeclarationBlocksByClass(root, logFunction, namingOptions);
             const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, docGen);
             const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions, docGen);
-            modulesGeneratedHook({ utilitiesModule, breakpointsModule });
+            modulesGeneratedHook({utilitiesModule, breakpointsModule});
         }
     }
 };
@@ -123,11 +129,11 @@ export function asPostcssPlugin({ moduleName, tailwindConfig, generateDocumentat
  * This exposes the actual logic for writing files and writing some console output
  * that is used in `run` (in the callback to `asPostcssPlugin`).
  */
-export async function writeGeneratedFiles({ directory, moduleName, logFunction, generated }: {
+export async function writeGeneratedFiles({directory, moduleName, logFunction, generated}: {
     directory: string,
     moduleName: string,
     logFunction: LogFunction,
-    generated: { utilitiesModule: string, breakpointsModule: string }
+    generated: {utilitiesModule: string, breakpointsModule: string}
 }): Promise<void> {
     const modulePath = path.join.apply(null, moduleName.split("."));
     logFunction([
@@ -161,14 +167,14 @@ If you still have a usecase that needs variants, please create an issue.`);
 }
 
 
-async function resolvePostcssFile(postcssFile: null | string): Promise<{ file: string, from: string }> {
+async function resolvePostcssFile(postcssFile: null | string): Promise<{file: string, from: string}> {
     if (postcssFile == null) {
         return {
             from: "generated in-memory",
             file: "@tailwind base;\n@tailwind components;\n@tailwind utilities;",
         };
     }
-    const content = await fs.readFile(postcssFile, { encoding: "utf-8" });
+    const content = await fs.readFile(postcssFile, {encoding: "utf-8"});
     return {
         from: postcssFile,
         file: content
@@ -190,7 +196,7 @@ function resolveDocGen(docs: boolean | documentation.DocumentationGenerator): do
  */
 async function writeFile(fname: string, content: string): Promise<typeof fname> {
     const folder = path.dirname(fname);
-    await fs.mkdir(folder, { recursive: true });
+    await fs.mkdir(folder, {recursive: true});
     await fs.writeFile(fname, content);
     return path.relative(".", fname);
 }
