@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0
+
+* Support for tailwind v3 by turning off the JIT using tailwind's `safelist` option
+
 ## 0.3.2
 
 * Added the `docs` submodule and made it possible to inject custom documentation generators via the `generateDocumentation` setting.
