@@ -2,10 +2,11 @@ import {promises as fs} from "fs";
 import path from "path";
 import * as postcss from "postcss";
 import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities";
+import * as tailwindThemeGeneration from "./code-generators/tailwind-theme";
 import * as tailwindBreakpointsGeneration from "./code-generators/tailwind-breakpoints";
 import * as parser from "./parser";
 // @ts-ignore
-import tailwindcss from "tailwindcss";
+import tailwindcss, { Config } from "tailwindcss";
 // @ts-ignore
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import {LogFunction, NamingOptions} from "./types";
@@ -93,7 +94,7 @@ export async function run({
 
 
 export interface ModulesGeneratedHook {
-    (_: {utilitiesModule: string, breakpointsModule: string}): void;
+    (_: {utilitiesModule: string, themeModule: string, breakpointsModule: string}): void;
 }
 
 /**
@@ -118,9 +119,10 @@ export function asPostcssPlugin({moduleName, tailwindConfig, generateDocumentati
             const docGen = resolveDocGen(generateDocumentation);
             const resolvedConfig = resolveConfig(tailwindConfig);
             const blocksByClass = parser.groupDeclarationBlocksByClass(root, logFunction, namingOptions);
-            const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, docGen, resolvedConfig.theme.colors);
+            const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, docGen);
+            const themeModule = tailwindThemeGeneration.generateElmModule(moduleName + ".Theme", resolvedConfig.theme.colors);
             const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions, docGen);
-            modulesGeneratedHook({utilitiesModule, breakpointsModule});
+            modulesGeneratedHook({utilitiesModule, breakpointsModule, themeModule});
         }
     }
 };
@@ -133,12 +135,13 @@ export async function writeGeneratedFiles({directory, moduleName, logFunction, g
     directory: string,
     moduleName: string,
     logFunction: LogFunction,
-    generated: {utilitiesModule: string, breakpointsModule: string}
+    generated: {utilitiesModule: string, breakpointsModule: string, themeModule: string}
 }): Promise<void> {
     const modulePath = path.join.apply(null, moduleName.split("."));
     logFunction([
         "Saved",
         " - " + chalk.blue(await writeFile(path.resolve(directory, `${modulePath}/Utilities.elm`), generated.utilitiesModule)),
+        " - " + chalk.blue(await writeFile(path.resolve(directory, `${modulePath}/Theme.elm`), generated.themeModule)),
         " - " + chalk.blue(await writeFile(path.resolve(directory, `${modulePath}/Breakpoints.elm`), generated.breakpointsModule)),
     ].join("\n"));
 }

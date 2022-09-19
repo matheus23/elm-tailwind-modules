@@ -9,14 +9,13 @@ import {
     Keyframe,
 } from "../types";
 import { DocumentationGenerator } from "../docs";
-import { RecursiveKeyValuePair } from "tailwindcss/types/config";
 
 
 
 // PUBLIC INTERFACE
 
 
-export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations, docs: DocumentationGenerator, colors: RecursiveKeyValuePair): string {
+export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations, docs: DocumentationGenerator): string {
     const sortedClasses = Array.from(blocksByClass.recognized.keys()).sort();
     const definedNames = ["globalStyles", ...sortedClasses];
 
@@ -25,6 +24,7 @@ export function generateElmModule(moduleName: string, blocksByClass: GroupedDecl
             moduleName,
             exposing: docs.utilitiesExposing(definedNames),
             imports: [
+                generate.singleLine("import Tailwind.Theme exposing (Color)"),
                 generate.singleLine("import Css"),
                 generate.singleLine("import Css.Animations"),
                 generate.singleLine("import Css.Global"),
@@ -34,40 +34,7 @@ export function generateElmModule(moduleName: string, blocksByClass: GroupedDecl
         }),
         elmUnrecognizedToFunctions(blocksByClass.unrecognized, docs),
         elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.recognized, docs),
-        colorType(),
-        generateColors(colors)
     ].join("");
-}
-
-function colorType() {
-    return `type Color =
-    Color String
-
-type Opacity =
-    Opacity String
-`
-
-}
-
-function generateColors(colors: RecursiveKeyValuePair) {
-    const expandedColors = expandColors([], colors);
-
-    return expandedColors.map(([colorName, colorValue]) => {
-        return `${colorName} : Color
-${colorName} =
-    Color "${colorValue}"
-`;
-    }).join("\n\n");
-}
-
-function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair): [string, string][] {
-    return Object.entries(colors).flatMap(([key, value]) => {
-        if (typeof value === 'string') {
-            return [[[  ...keysSoFar, key ].join('_'), value]]
-        } else {
-            return expandColors([key, ...keysSoFar], value)
-        }
-    })
 }
 
 
@@ -158,7 +125,7 @@ function elmRecognizedFunction(keyframes: Map<string, Keyframe[]>, elmClassName:
         return `
 ${docs.utilitiesDefinition(elmClassName, propertiesBlock)}
 ${name} : Color -> Css.Style
-${name} (Color color) =
+${name} color =
 ${convertDeclarationBlock(keyframes, propertiesBlock, true)({
     indentation: 4,
     preindent: true,
@@ -215,7 +182,7 @@ function convertColorDeclaration(functionName: string, property: string, value: 
         console.log(value);
         return convertBasicDeclaration(functionName, property, value);
     }
-    return generate.singleLine(`${functionName} ${generate.elmString(property)} (${generate.elmString("rgb(" + prefix)} ++ color ++ ${generate.elmString(suffix)})`);
+    return generate.singleLine(`Tailwind.Theme.toProperty ${generate.elmString(property)} color`);
 }
 
 function convertProperties(subselector: SubselectorRest, convertedProperties: generate.Indentable[]) {
