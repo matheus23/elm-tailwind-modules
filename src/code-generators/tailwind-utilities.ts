@@ -9,13 +9,14 @@ import {
     Keyframe,
 } from "../types";
 import { DocumentationGenerator } from "../docs";
+import { RecursiveKeyValuePair } from "tailwindcss/types/config";
 
 
 
 // PUBLIC INTERFACE
 
 
-export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations, docs: DocumentationGenerator): string {
+export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations, docs: DocumentationGenerator, colors: RecursiveKeyValuePair): string {
     const sortedClasses = Array.from(blocksByClass.recognized.keys()).sort();
     const definedNames = ["globalStyles", ...sortedClasses];
 
@@ -33,9 +34,41 @@ export function generateElmModule(moduleName: string, blocksByClass: GroupedDecl
         }),
         elmUnrecognizedToFunctions(blocksByClass.unrecognized, docs),
         elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.recognized, docs),
+        colorType(),
+        generateColors(colors)
     ].join("");
 }
 
+function colorType() {
+    return `type Color =
+    Color String
+
+type Opacity =
+    Opacity String
+`
+
+}
+
+function generateColors(colors: RecursiveKeyValuePair) {
+    const expandedColors = expandColors([], colors);
+
+    return expandedColors.map(([colorName, colorValue]) => {
+        return `${colorName} : Color
+${colorName} =
+    Color "${colorValue}"
+`;
+    }).join("\n\n");
+}
+
+function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair): [string, string][] {
+    return Object.entries(colors).flatMap(([key, value]) => {
+        if (typeof value === 'string') {
+            return [[[  ...keysSoFar, key ].join('_'), value]]
+        } else {
+            return expandColors([key, ...keysSoFar], value)
+        }
+    })
+}
 
 
 // PRIVATE INTERFACE
@@ -124,8 +157,8 @@ function elmRecognizedFunction(keyframes: Map<string, Keyframe[]>, elmClassName:
         const name = elmClassName.replace("{color}", "");
         return `
 ${docs.utilitiesDefinition(elmClassName, propertiesBlock)}
-${name} : String -> Css.Style
-${name} color =
+${name} : Color -> Css.Style
+${name} (Color color) =
 ${convertDeclarationBlock(keyframes, propertiesBlock, true)({
     indentation: 4,
     preindent: true,

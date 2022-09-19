@@ -118,7 +118,7 @@ export function asPostcssPlugin({moduleName, tailwindConfig, generateDocumentati
             const docGen = resolveDocGen(generateDocumentation);
             const resolvedConfig = resolveConfig(tailwindConfig);
             const blocksByClass = parser.groupDeclarationBlocksByClass(root, logFunction, namingOptions);
-            const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, docGen);
+            const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, docGen, resolvedConfig.theme.colors);
             const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions, docGen);
             modulesGeneratedHook({utilitiesModule, breakpointsModule});
         }
