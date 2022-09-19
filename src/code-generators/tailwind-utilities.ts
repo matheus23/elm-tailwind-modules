@@ -65,15 +65,40 @@ function convertUnrecognizeds(unrecognizeds: UnrecognizedDeclaration[]): generat
     );
 }
 
-function isParameterizable(declarationName: string): null | string {
-    if (declarationName.startsWith("bg_")) {
-        return "bg{color}";
-    } 
-    if (declarationName.startsWith("text_")) {
-        return "text{color}";
-    }
-    return null;
+const recognizedColorPrefxies = [
+  "accent",
+  "bg",
+  "border_b",
+  "border",
+  "border_l",
+  "border_r",
+  "border_t",
+  "border_x",
+  "border_y",
+  "caret",
+  "decoration",
+  "divide",
+  "fill",
+  "from",
+  "outline",
+  "placeholder",
+  "ring",
+  "ring_offset",
+  "shadow",
+  "stroke",
+  "text",
+  "to",
+  "via",
+];
 
+function isParameterizable(declarationName: string): null | string {
+  const matchingPrefix = recognizedColorPrefxies.find((prefix) =>
+    declarationName.startsWith(`${prefix}_`)
+  );
+  if (matchingPrefix) {
+    return `${matchingPrefix}{color}`;
+  }
+  return null;
 }
 
 function elmRecognizedToFunctions(keyframes: Map<string, Keyframe[]>, recognizedBlocksByClass: Map<string, RecognizedDeclaration>, docs: DocumentationGenerator): string {
