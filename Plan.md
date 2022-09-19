@@ -2,7 +2,16 @@
 
 ## Auto-abstract css utilities
 
-* [ ] Detect when css uses properties like theme colors
+* [ ] Auto-abstract colors
+  * [X] Detect when css uses properties like theme colors
+  * [X] Match the abstracted color out of the css property
+  * [ ] Detect all color-parameterizable properties (maybe detect everything with color suffixes?)
+    * [ ] List all colors for a tailwind config
+  * [ ] Detect transparent colors (e.g. blue-500/95)
+  * [ ] Make opacity parameterized (maybe generate another set of functions. E.g. bg & bgWithOpacity, use "bg{color}{opacity}" as the identifier)
+  * [ ] Use a non-primitive elm type for colors (instead of String)
+  * [ ] Get numbers on the size difference
+  * [ ] Publish
 * [ ] Detect when css uses the same spacing values over and over
 
 ## General

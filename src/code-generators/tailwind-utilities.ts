@@ -65,27 +65,62 @@ function convertUnrecognizeds(unrecognizeds: UnrecognizedDeclaration[]): generat
     );
 }
 
+function isParameterizable(declarationName: string): null | string {
+    if (declarationName.startsWith("bg_")) {
+        return "bg{color}";
+    } 
+    if (declarationName.startsWith("text_")) {
+        return "text{color}";
+    }
+    return null;
+
+}
+
 function elmRecognizedToFunctions(keyframes: Map<string, Keyframe[]>, recognizedBlocksByClass: Map<string, RecognizedDeclaration>, docs: DocumentationGenerator): string {
-    let body = "";
+    const recognized2 = new Map();
     Array.from(recognizedBlocksByClass.keys()).sort().forEach(elmClassName => {
-        body = body + elmRecognizedFunction(keyframes, elmClassName, recognizedBlocksByClass.get(elmClassName), docs);
+        const value = recognizedBlocksByClass.get(elmClassName);
+        const parameterizedName = isParameterizable(elmClassName);
+        if (parameterizedName !== null) {
+            recognized2.set(parameterizedName, value);
+        } else {
+            recognized2.set(elmClassName, value);
+        }
+    });
+    let body = "";
+    Array.from(recognized2.keys()).sort().forEach(elmClassName => {
+        body = body + elmRecognizedFunction(keyframes, elmClassName, recognized2.get(elmClassName), docs);
     });
     return body;
 }
 
 function elmRecognizedFunction(keyframes: Map<string, Keyframe[]>, elmClassName: string, propertiesBlock: RecognizedDeclaration, docs: DocumentationGenerator): string {
-    return `
+    if (elmClassName.endsWith("{color}")) {
+        const name = elmClassName.replace("{color}", "");
+        return `
 ${docs.utilitiesDefinition(elmClassName, propertiesBlock)}
-${elmClassName} : Css.Style
-${elmClassName} =
-${convertDeclarationBlock(keyframes, propertiesBlock)({
+${name} : String -> Css.Style
+${name} color =
+${convertDeclarationBlock(keyframes, propertiesBlock, true)({
     indentation: 4,
     preindent: true,
 })}
 `;
+    } else {
+        return `
+${docs.utilitiesDefinition(elmClassName, propertiesBlock)}
+${elmClassName} : Css.Style
+${elmClassName} =
+${convertDeclarationBlock(keyframes, propertiesBlock, false)({
+    indentation: 4,
+    preindent: true,
+})}
+`;
+    }
+    
 }
 
-function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty): generate.Indentable[] {
+function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty, isParameterized: boolean): generate.Indentable[] {
     if (declaration.prop.endsWith("animation") || declaration.prop.endsWith("animation-name")) {
         const animationName = Array.from(keyframes.keys()).find(name => declaration.value.indexOf(name) >= 0);
         if (animationName == null) {
@@ -104,11 +139,25 @@ function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: Css
         ];
     }
 
+    if (isParameterized && declaration.prop.endsWith("color")) {
+        return [convertColorDeclaration("Css.property", declaration.prop, declaration.value)];
+    }
+
     return [convertBasicDeclaration("Css.property", declaration.prop, declaration.value)];
 }
 
 function convertBasicDeclaration(functionName: string, property: string, value: string): generate.Indentable {
     return generate.singleLine(`${functionName} ${generate.elmString(property)} ${generate.elmString(value)}`);
+}
+
+
+function convertColorDeclaration(functionName: string, property: string, value: string): generate.Indentable {
+    const [prefix, suffix] = value.split(/rgb\(\d+ \d+ \d+/);
+    if (prefix == null || suffix == null) {
+        console.log(value);
+        return convertBasicDeclaration(functionName, property, value);
+    }
+    return generate.singleLine(`${functionName} ${generate.elmString(property)} (${generate.elmString("rgb(" + prefix)} ++ color ++ ${generate.elmString(suffix)})`);
 }
 
 function convertProperties(subselector: SubselectorRest, convertedProperties: generate.Indentable[]) {
@@ -189,8 +238,8 @@ function convertMediaQueryWrap(mediaQuery: string, functionName: string, propert
     ]
 }
 
-function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesBlock: RecognizedDeclaration): generate.Indentable {
-    const plainProperties = findPlainProperties(propertiesBlock).flatMap(d => convertDeclaration(keyframes, d));
+function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesBlock: RecognizedDeclaration, isParameterized: boolean): generate.Indentable {
+    const plainProperties = findPlainProperties(propertiesBlock).flatMap(d => convertDeclaration(keyframes, d, isParameterized));
     const subselectors = propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
         subselectors.flatMap(subselector => {
             if (subselector.rest.type === "plain" && subselector.mediaQuery == null) {
@@ -203,7 +252,7 @@ function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesB
                 `Css.Media.withMediaQuery`,
                 convertProperties(
                     subselector.rest,
-                    properties.flatMap(d => convertDeclaration(keyframes, d))
+                    properties.flatMap(d => convertDeclaration(keyframes, d, isParameterized))
                 )
             );
         })
