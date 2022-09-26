@@ -124,8 +124,8 @@ function elmRecognizedFunction(keyframes: Map<string, Keyframe[]>, elmClassName:
         const name = elmClassName.replace("{color}", "");
         return `
 ${docs.utilitiesDefinition(elmClassName, propertiesBlock)}
-${name} : Color -> Css.Style
-${name} color =
+${name}WithColor : Color -> Css.Style
+${name}WithColor color =
 ${convertDeclarationBlock(keyframes, propertiesBlock, true)({
     indentation: 4,
     preindent: true,
