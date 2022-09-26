@@ -47,7 +47,7 @@ main =
                             , Tw.bgWithColor Theme.indigo_600
 
                             -- We can use hover styles via elm-css :)
-                            , Css.hover [ Tw.bg Theme.indigo_700 ]
+                            , Css.hover [ Tw.bgWithColor Theme.indigo_700 ]
                             ]
                         , Attr.href "#"
                         ]

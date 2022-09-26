@@ -16,7 +16,7 @@ import { DocumentationGenerator } from "../docs";
 
 
 export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations, docs: DocumentationGenerator): string {
-    const sortedClasses = Array.from(blocksByClass.recognized.keys()).sort();
+    const sortedClasses = Array.from([...blocksByClass.recognized.keys(), ...blocksByClass.colorParameterized.keys()]).sort();
     const definedNames = ["globalStyles", ...sortedClasses];
 
     return [
@@ -33,7 +33,8 @@ export function generateElmModule(moduleName: string, blocksByClass: GroupedDecl
             moduleDocs: docs.utilitiesModuleDocs(definedNames),
         }),
         elmUnrecognizedToFunctions(blocksByClass.unrecognized, docs),
-        elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.recognized, docs),
+        elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.recognized, docs, false),
+        elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.colorParameterized, docs, true),
     ].join("");
 }
 
@@ -101,48 +102,37 @@ function isParameterizable(declarationName: string): null | string {
   return null;
 }
 
-function elmRecognizedToFunctions(keyframes: Map<string, Keyframe[]>, recognizedBlocksByClass: Map<string, RecognizedDeclaration>, docs: DocumentationGenerator): string {
-    const recognized2 = new Map();
-    Array.from(recognizedBlocksByClass.keys()).sort().forEach(elmClassName => {
-        const value = recognizedBlocksByClass.get(elmClassName);
-        const parameterizedName = isParameterizable(elmClassName);
-        if (parameterizedName !== null) {
-            recognized2.set(parameterizedName, value);
-        } else {
-            recognized2.set(elmClassName, value);
-        }
-    });
+function elmRecognizedToFunctions(
+    keyframes: Map<string, Keyframe[]>,
+    recognizedBlocksByClass: Map<string, RecognizedDeclaration>,
+    docs: DocumentationGenerator,
+    parameterized: boolean,
+): string {
     let body = "";
-    Array.from(recognized2.keys()).sort().forEach(elmClassName => {
-        body = body + elmRecognizedFunction(keyframes, elmClassName, recognized2.get(elmClassName), docs);
+    Array.from(recognizedBlocksByClass.keys()).sort().forEach(elmClassName => {
+        body = body + elmRecognizedFunction(keyframes, elmClassName, recognizedBlocksByClass.get(elmClassName), docs, parameterized);
     });
     return body;
 }
 
-function elmRecognizedFunction(keyframes: Map<string, Keyframe[]>, elmClassName: string, propertiesBlock: RecognizedDeclaration, docs: DocumentationGenerator): string {
-    if (elmClassName.endsWith("{color}")) {
-        const name = elmClassName.replace("{color}", "");
-        return `
+function elmRecognizedFunction(
+    keyframes: Map<string, Keyframe[]>,
+    elmClassName: string,
+    propertiesBlock: RecognizedDeclaration,
+    docs: DocumentationGenerator,
+    parameterized: boolean,
+): string {
+    const signature = parameterized ? "Color -> Css.Style" : "Css.Style";
+    const args = parameterized ? "color " : "";
+    return `
 ${docs.utilitiesDefinition(elmClassName, propertiesBlock)}
-${name}WithColor : Color -> Css.Style
-${name}WithColor color =
-${convertDeclarationBlock(keyframes, propertiesBlock, true)({
+${elmClassName} : ${signature}
+${elmClassName} ${args}=
+${convertDeclarationBlock(keyframes, propertiesBlock, parameterized)({
     indentation: 4,
     preindent: true,
 })}
 `;
-    } else {
-        return `
-${docs.utilitiesDefinition(elmClassName, propertiesBlock)}
-${elmClassName} : Css.Style
-${elmClassName} =
-${convertDeclarationBlock(keyframes, propertiesBlock, false)({
-    indentation: 4,
-    preindent: true,
-})}
-`;
-    }
-    
 }
 
 function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty, isParameterized: boolean): generate.Indentable[] {

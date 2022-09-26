@@ -7,6 +7,7 @@ export interface LogFunction {
 
 export interface GroupedDeclarations {
     recognized: Map<string, RecognizedDeclaration>,
+    colorParameterized: Map<string, RecognizedDeclaration>,
     unrecognized: UnrecognizedDeclaration[],
     keyframes: Map<string, Keyframe[]>,
 }

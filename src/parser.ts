@@ -36,6 +36,7 @@ export function groupDeclarationBlocksByClass(
     namingOptions: NamingOptions,
 ): GroupedDeclarations {
     const recognized = new Map();
+    const colorParameterized = new Map();
     const unrecognized: UnrecognizedDeclaration[] = [];
     const keyframes = new Map();
 
@@ -197,7 +198,18 @@ export function groupDeclarationBlocksByClass(
         rule.remove();
     }
 
-    return { recognized, unrecognized, keyframes };
+    for (const [elmDeclName, declaration] of recognized) {
+        const parameterizedName = isParameterizable(elmDeclName);
+        
+        if (parameterizedName == null) {
+            continue;
+        }
+
+        recognized.delete(elmDeclName);
+        colorParameterized.set(parameterizedName, declaration);
+    }
+
+    return { recognized, colorParameterized, unrecognized, keyframes };
 }
 
 function addToSelectorList(
@@ -306,4 +318,40 @@ function stripClassSelector(
         class: first.value,
         rest,
     };
+}
+
+const recognizedColorPrefxies = [
+    "accent",
+    "bg",
+    "border_b",
+    "border",
+    "border_l",
+    "border_r",
+    "border_t",
+    "border_x",
+    "border_y",
+    "caret",
+    "decoration",
+    "divide",
+    "fill",
+    "from",
+    "outline",
+    "placeholder",
+    "ring",
+    "ring_offset",
+    "shadow",
+    "stroke",
+    "text",
+    "to",
+    "via",
+];
+  
+function isParameterizable(declarationName: string): null | string {
+    const matchingPrefix = recognizedColorPrefxies.find((prefix) =>
+        declarationName.startsWith(`${prefix}_`)
+    );
+    if (matchingPrefix) {
+        return `${matchingPrefix}WithColor`;
+    }
+    return null;
 }
