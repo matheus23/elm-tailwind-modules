@@ -40,7 +40,7 @@ main =
                             , Tw.py_3
                             , Tw.border
                             , Tw.borderWithColor Theme.transparent
-                            , Tw.textWithColor Theme.base
+                            , Tw.text_base
                             , Tw.font_medium
                             , Tw.rounded_md
                             , Tw.textWithColor Theme.white

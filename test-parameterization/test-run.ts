@@ -6,4 +6,5 @@ elmTailwindModules.run({
     directory: "./test-parameterization/src",
     moduleName: "Tailwind",
     tailwindConfig,
+    generateDocumentation: true,
 });

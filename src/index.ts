@@ -118,10 +118,13 @@ export function asPostcssPlugin({moduleName, tailwindConfig, generateDocumentati
         async OnceExit(root: postcss.Root) {
             const docGen = resolveDocGen(generateDocumentation);
             const resolvedConfig = resolveConfig(tailwindConfig);
-            const blocksByClass = parser.groupDeclarationBlocksByClass(root, logFunction, namingOptions);
+            const resolvedColors = tailwindThemeGeneration.expandColors([], resolvedConfig.theme.colors);
+            const blocksByClass = parser.groupDeclarationBlocksByClass(root, resolvedColors, logFunction, namingOptions);
+
             const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, docGen);
-            const themeModule = tailwindThemeGeneration.generateElmModule(moduleName + ".Theme", resolvedConfig.theme.colors);
+            const themeModule = tailwindThemeGeneration.generateElmModule(moduleName + ".Theme", resolvedColors);
             const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions, docGen);
+            
             modulesGeneratedHook({utilitiesModule, breakpointsModule, themeModule});
         }
     }

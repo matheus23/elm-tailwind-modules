@@ -1,8 +1,7 @@
 import * as generate from "./generate";
 import { RecursiveKeyValuePair } from "tailwindcss/types/config";
 
-export function generateElmModule(moduleName: string, colors: RecursiveKeyValuePair): string {
-    const expandedColors = expandColors([], colors);
+export function generateElmModule(moduleName: string, expandedColors: [string, string][]): string {
     return [
         generate.elmModuleHeader({
             moduleName,
@@ -40,7 +39,7 @@ ${colorName} =
     }).join("\n\n");
 }
 
-function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair): [string, string][] {
+export function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair): [string, string][] {
     return Object.entries(colors).flatMap(([key, value]) => {
         if (typeof value === 'string') {
             return [[[  ...keysSoFar, key ].join('_'), value]]

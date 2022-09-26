@@ -32,6 +32,7 @@ const cssWhatErrors = [
 
 export function groupDeclarationBlocksByClass(
     postCssRoot: postcss.Root,
+    resolvedColors: [string, string][],
     logFunction: LogFunction,
     namingOptions: NamingOptions,
 ): GroupedDeclarations {
@@ -199,7 +200,7 @@ export function groupDeclarationBlocksByClass(
     }
 
     for (const [elmDeclName, declaration] of recognized) {
-        const parameterizedName = isParameterizable(elmDeclName);
+        const parameterizedName = isParameterizable(elmDeclName, resolvedColors);
         
         if (parameterizedName == null) {
             continue;
@@ -320,38 +321,16 @@ function stripClassSelector(
     };
 }
 
-const recognizedColorPrefxies = [
-    "accent",
-    "bg",
-    "border_b",
-    "border",
-    "border_l",
-    "border_r",
-    "border_t",
-    "border_x",
-    "border_y",
-    "caret",
-    "decoration",
-    "divide",
-    "fill",
-    "from",
-    "outline",
-    "placeholder",
-    "ring",
-    "ring_offset",
-    "shadow",
-    "stroke",
-    "text",
-    "to",
-    "via",
-];
-  
-function isParameterizable(declarationName: string): null | string {
-    const matchingPrefix = recognizedColorPrefxies.find((prefix) =>
-        declarationName.startsWith(`${prefix}_`)
-    );
-    if (matchingPrefix) {
-        return `${matchingPrefix}WithColor`;
+function isParameterizable(declarationName: string, resolvedColors: [string, string][]): null | string {
+    const possibleColorNames = resolvedColors.map(( [name, _] ) => name)
+    // TODO check opacity variants at the end of regex
+    const regex = new RegExp(String.raw`(.*)_(?:${possibleColorNames.join('|')}).*$`)
+
+    const matches = declarationName.match(regex);
+
+    if (!matches) {
+        return null
     }
-    return null;
+
+    return `${matches[1]}WithColor`;
 }

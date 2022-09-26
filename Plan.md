@@ -5,19 +5,20 @@
 * [ ] Auto-abstract colors
   * [X] Detect when css uses properties like theme colors
   * [X] Match the abstracted color out of the css property
-  * [ ] Detect all color-parameterizable properties (maybe detect everything with color suffixes?)
+  * [X] Detect all color-parameterizable properties (maybe detect everything with color suffixes?)
     * [X] List all colors for a tailwind config
-    * [ ] Detect suffixes
-  * [ ] Fix exposes with new config
+    * [X] Detect suffixes
+  * [X] Fix exposes with new config
   * [ ] Detect transparent colors (e.g. blue-500/95) (use theme.backgroundOpacity)
   * [ ] `withOpacity : Theme.Opacity -> Theme.Color -> Theme.Color` helper
   * [ ] Make `opacity_50` etc. use `Theme.Opacity` instead
+  * [ ] Handle naming option in CLI for camel case in isParameterizable in parser code
   * [X] Use a non-primitive elm type for colors (instead of String)
   * [X] Get numbers on the size difference (88320 exposed values vs. 3812)
   * [ ] Figure out naming. (e.g. parameterized border vs. border property)
   * [ ] Think about custom documentation support
   * [ ] Publish
-  * [ ] (optionally: Look at refactoring? E.g. detect & deduplicate outside of `code-generators/` files)
+  * [X] (optionally: Look at refactoring? E.g. detect & deduplicate outside of `code-generators/` files)
   * [ ] Release new default-tailwind-modules with Tailwind v3
   * [ ] Support new API format in https://html-to-elm.com/
 * [ ] Detect when css uses the same spacing values over and over
