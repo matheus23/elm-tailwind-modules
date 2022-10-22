@@ -15,6 +15,7 @@ import chalk from "chalk";
 import {isArray, isEmpty} from "lodash";
 
 export const defaultTailwindConfig: any = {
+    content: ["intentionally.empty"],
     variants: [],
     safelist: [{pattern: /.*/, variants: []}]
 };
@@ -58,9 +59,11 @@ export async function run({
     logFunction = console.log,
 }: RunConfiguration): Promise<RunResult> {
     const tailwindConfig_ = {
-        ...tailwindConfig, safelist: tailwindConfig.safelist || [
+        ...tailwindConfig,
+        safelist: tailwindConfig.safelist || [
             {pattern: /.*/, variants: []}
-        ]
+        ],
+        content: tailwindConfig.content || ["intentionally.empty"],
     };
     let utilitiesModule: undefined | string;
     let breakpointsModule: undefined | string;
