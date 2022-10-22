@@ -1,7 +1,7 @@
 module Tailwind.Breakpoints exposing
-    ( sm
+    ( lg
     , md
-    , lg
+    , sm
     , xl
     , xxl
     )

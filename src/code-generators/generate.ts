@@ -92,7 +92,7 @@ function elmExposing(exposing: string[] | null): Indentable {
 
     return elmFunctionCall(
         " exposing",
-        elmTuple(exposing.map(singleLine))
+        elmTuple(exposing.sort().map(singleLine))
     );
 }
 

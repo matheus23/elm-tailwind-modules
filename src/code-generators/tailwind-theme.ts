@@ -5,7 +5,7 @@ export function generateElmModule(moduleName: string, expandedColors: [string, s
     return [
         generate.elmModuleHeader({
             moduleName,
-            exposing: ["Color", "toProperty", ...( expandedColors.map((( [color, value] ) => color)) )],
+            exposing: ["Color", "toProperty", ...( expandedColors.map((( [color, _] ) => color)) )],
             imports: [
                 generate.singleLine("import Css"),
             ],
@@ -13,19 +13,23 @@ export function generateElmModule(moduleName: string, expandedColors: [string, s
         }),
         colorType(),
         generateColors(expandedColors)
-    ].join("");
+    ].join("\n");
 }
 
 function colorType() {
-    return `type Color =
-    Color String
+    return `
+type Color
+    = Color String
 
-type Opacity =
-    Opacity String
+
+type Opacity
+    = Opacity String
+
 
 toProperty : String -> Color -> Css.Style
 toProperty propertyName (Color color) =
     Css.property propertyName ("rgb(" ++ color ++ ")")
+
 `
 
 }

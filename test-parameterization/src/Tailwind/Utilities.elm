@@ -1,6 +1,5 @@
 module Tailwind.Utilities exposing
-    ( globalStyles
-    , absolute
+    ( absolute
     , accentWithColor
     , accent_auto
     , align_baseline
@@ -879,6 +878,7 @@ module Tailwind.Utilities exposing
     , gap_y_9
     , gap_y_96
     , gap_y_px
+    , globalStyles
     , grayscale
     , grayscale_0
     , grid
