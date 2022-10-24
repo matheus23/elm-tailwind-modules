@@ -1,7 +1,29 @@
 module Tailwind.Utilities exposing
     ( absolute
     , accentWithColor
+    , accent_amber_500
     , accent_auto
+    , accent_blue_500
+    , accent_cyan_500
+    , accent_emerald_500
+    , accent_fuchsia_500
+    , accent_gray_500
+    , accent_green_500
+    , accent_indigo_500
+    , accent_lime_500
+    , accent_neutral_500
+    , accent_orange_500
+    , accent_pink_500
+    , accent_purple_500
+    , accent_red_500
+    , accent_rose_500
+    , accent_sky_500
+    , accent_slate_500
+    , accent_stone_500
+    , accent_teal_500
+    , accent_violet_500
+    , accent_yellow_500
+    , accent_zinc_500
     , align_baseline
     , align_bottom
     , align_middle
@@ -199,6 +221,7 @@ module Tailwind.Utilities exposing
     , basis_full
     , basis_px
     , bgWithColor
+    , bg_amber_500
     , bg_auto
     , bg_blend_color
     , bg_blend_color_burn
@@ -216,6 +239,7 @@ module Tailwind.Utilities exposing
     , bg_blend_saturation
     , bg_blend_screen
     , bg_blend_soft_light
+    , bg_blue_500
     , bg_bottom
     , bg_center
     , bg_clip_border
@@ -224,7 +248,10 @@ module Tailwind.Utilities exposing
     , bg_clip_text
     , bg_contain
     , bg_cover
+    , bg_cyan_500
+    , bg_emerald_500
     , bg_fixed
+    , bg_fuchsia_500
     , bg_gradient_to_b
     , bg_gradient_to_bl
     , bg_gradient_to_br
@@ -233,10 +260,15 @@ module Tailwind.Utilities exposing
     , bg_gradient_to_t
     , bg_gradient_to_tl
     , bg_gradient_to_tr
+    , bg_gray_500
+    , bg_green_500
+    , bg_indigo_500
     , bg_left
     , bg_left_bottom
     , bg_left_top
+    , bg_lime_500
     , bg_local
+    , bg_neutral_500
     , bg_no_repeat
     , bg_none
     , bg_opacity_0
@@ -254,9 +286,13 @@ module Tailwind.Utilities exposing
     , bg_opacity_80
     , bg_opacity_90
     , bg_opacity_95
+    , bg_orange_500
     , bg_origin_border
     , bg_origin_content
     , bg_origin_padding
+    , bg_pink_500
+    , bg_purple_500
+    , bg_red_500
     , bg_repeat
     , bg_repeat_round
     , bg_repeat_space
@@ -265,8 +301,16 @@ module Tailwind.Utilities exposing
     , bg_right
     , bg_right_bottom
     , bg_right_top
+    , bg_rose_500
     , bg_scroll
+    , bg_sky_500
+    , bg_slate_500
+    , bg_stone_500
+    , bg_teal_500
     , bg_top
+    , bg_violet_500
+    , bg_yellow_500
+    , bg_zinc_500
     , block
     , blur
     , blur_0
@@ -283,23 +327,77 @@ module Tailwind.Utilities exposing
     , border_2
     , border_4
     , border_8
+    , border_amber_500
     , border_b
     , border_bWithColor
     , border_b_0
     , border_b_2
     , border_b_4
     , border_b_8
+    , border_b_amber_500
+    , border_b_blue_500
+    , border_b_cyan_500
+    , border_b_emerald_500
+    , border_b_fuchsia_500
+    , border_b_gray_500
+    , border_b_green_500
+    , border_b_indigo_500
+    , border_b_lime_500
+    , border_b_neutral_500
+    , border_b_orange_500
+    , border_b_pink_500
+    , border_b_purple_500
+    , border_b_red_500
+    , border_b_rose_500
+    , border_b_sky_500
+    , border_b_slate_500
+    , border_b_stone_500
+    , border_b_teal_500
+    , border_b_violet_500
+    , border_b_yellow_500
+    , border_b_zinc_500
+    , border_blue_500
     , border_collapse
+    , border_cyan_500
     , border_dashed
     , border_dotted
     , border_double
+    , border_emerald_500
+    , border_fuchsia_500
+    , border_gray_500
+    , border_green_500
     , border_hidden
+    , border_indigo_500
     , border_l
     , border_lWithColor
     , border_l_0
     , border_l_2
     , border_l_4
     , border_l_8
+    , border_l_amber_500
+    , border_l_blue_500
+    , border_l_cyan_500
+    , border_l_emerald_500
+    , border_l_fuchsia_500
+    , border_l_gray_500
+    , border_l_green_500
+    , border_l_indigo_500
+    , border_l_lime_500
+    , border_l_neutral_500
+    , border_l_orange_500
+    , border_l_pink_500
+    , border_l_purple_500
+    , border_l_red_500
+    , border_l_rose_500
+    , border_l_sky_500
+    , border_l_slate_500
+    , border_l_stone_500
+    , border_l_teal_500
+    , border_l_violet_500
+    , border_l_yellow_500
+    , border_l_zinc_500
+    , border_lime_500
+    , border_neutral_500
     , border_none
     , border_opacity_0
     , border_opacity_10
@@ -316,13 +414,42 @@ module Tailwind.Utilities exposing
     , border_opacity_80
     , border_opacity_90
     , border_opacity_95
+    , border_orange_500
+    , border_pink_500
+    , border_purple_500
     , border_r
     , border_rWithColor
     , border_r_0
     , border_r_2
     , border_r_4
     , border_r_8
+    , border_r_amber_500
+    , border_r_blue_500
+    , border_r_cyan_500
+    , border_r_emerald_500
+    , border_r_fuchsia_500
+    , border_r_gray_500
+    , border_r_green_500
+    , border_r_indigo_500
+    , border_r_lime_500
+    , border_r_neutral_500
+    , border_r_orange_500
+    , border_r_pink_500
+    , border_r_purple_500
+    , border_r_red_500
+    , border_r_rose_500
+    , border_r_sky_500
+    , border_r_slate_500
+    , border_r_stone_500
+    , border_r_teal_500
+    , border_r_violet_500
+    , border_r_yellow_500
+    , border_r_zinc_500
+    , border_red_500
+    , border_rose_500
     , border_separate
+    , border_sky_500
+    , border_slate_500
     , border_solid
     , border_spacing_0
     , border_spacing_0_dot_5
@@ -429,24 +556,95 @@ module Tailwind.Utilities exposing
     , border_spacing_y_9
     , border_spacing_y_96
     , border_spacing_y_px
+    , border_stone_500
     , border_t
     , border_tWithColor
     , border_t_0
     , border_t_2
     , border_t_4
     , border_t_8
+    , border_t_amber_500
+    , border_t_blue_500
+    , border_t_cyan_500
+    , border_t_emerald_500
+    , border_t_fuchsia_500
+    , border_t_gray_500
+    , border_t_green_500
+    , border_t_indigo_500
+    , border_t_lime_500
+    , border_t_neutral_500
+    , border_t_orange_500
+    , border_t_pink_500
+    , border_t_purple_500
+    , border_t_red_500
+    , border_t_rose_500
+    , border_t_sky_500
+    , border_t_slate_500
+    , border_t_stone_500
+    , border_t_teal_500
+    , border_t_violet_500
+    , border_t_yellow_500
+    , border_t_zinc_500
+    , border_teal_500
+    , border_violet_500
     , border_x
     , border_xWithColor
     , border_x_0
     , border_x_2
     , border_x_4
     , border_x_8
+    , border_x_amber_500
+    , border_x_blue_500
+    , border_x_cyan_500
+    , border_x_emerald_500
+    , border_x_fuchsia_500
+    , border_x_gray_500
+    , border_x_green_500
+    , border_x_indigo_500
+    , border_x_lime_500
+    , border_x_neutral_500
+    , border_x_orange_500
+    , border_x_pink_500
+    , border_x_purple_500
+    , border_x_red_500
+    , border_x_rose_500
+    , border_x_sky_500
+    , border_x_slate_500
+    , border_x_stone_500
+    , border_x_teal_500
+    , border_x_violet_500
+    , border_x_yellow_500
+    , border_x_zinc_500
     , border_y
     , border_yWithColor
     , border_y_0
     , border_y_2
     , border_y_4
     , border_y_8
+    , border_y_amber_500
+    , border_y_blue_500
+    , border_y_cyan_500
+    , border_y_emerald_500
+    , border_y_fuchsia_500
+    , border_y_gray_500
+    , border_y_green_500
+    , border_y_indigo_500
+    , border_y_lime_500
+    , border_y_neutral_500
+    , border_y_orange_500
+    , border_y_pink_500
+    , border_y_purple_500
+    , border_y_red_500
+    , border_y_rose_500
+    , border_y_sky_500
+    , border_y_slate_500
+    , border_y_stone_500
+    , border_y_teal_500
+    , border_y_violet_500
+    , border_y_yellow_500
+    , border_y_zinc_500
+    , border_yellow_500
+    , border_zinc_500
     , bottom_0
     , bottom_0_dot_5
     , bottom_1
@@ -530,6 +728,28 @@ module Tailwind.Utilities exposing
     , brightness_95
     , capitalize
     , caretWithColor
+    , caret_amber_500
+    , caret_blue_500
+    , caret_cyan_500
+    , caret_emerald_500
+    , caret_fuchsia_500
+    , caret_gray_500
+    , caret_green_500
+    , caret_indigo_500
+    , caret_lime_500
+    , caret_neutral_500
+    , caret_orange_500
+    , caret_pink_500
+    , caret_purple_500
+    , caret_red_500
+    , caret_rose_500
+    , caret_sky_500
+    , caret_slate_500
+    , caret_stone_500
+    , caret_teal_500
+    , caret_violet_500
+    , caret_yellow_500
+    , caret_zinc_500
     , clear_both
     , clear_left
     , clear_none
@@ -660,15 +880,37 @@ module Tailwind.Utilities exposing
     , decoration_2
     , decoration_4
     , decoration_8
+    , decoration_amber_500
     , decoration_auto
+    , decoration_blue_500
     , decoration_clone
+    , decoration_cyan_500
     , decoration_dashed
     , decoration_dotted
     , decoration_double
+    , decoration_emerald_500
     , decoration_from_font
+    , decoration_fuchsia_500
+    , decoration_gray_500
+    , decoration_green_500
+    , decoration_indigo_500
+    , decoration_lime_500
+    , decoration_neutral_500
+    , decoration_orange_500
+    , decoration_pink_500
+    , decoration_purple_500
+    , decoration_red_500
+    , decoration_rose_500
+    , decoration_sky_500
+    , decoration_slate_500
     , decoration_slice
     , decoration_solid
+    , decoration_stone_500
+    , decoration_teal_500
+    , decoration_violet_500
     , decoration_wavy
+    , decoration_yellow_500
+    , decoration_zinc_500
     , delay_100
     , delay_1000
     , delay_150
@@ -679,9 +921,19 @@ module Tailwind.Utilities exposing
     , delay_75
     , diagonal_fractions
     , divideWithColor
+    , divide_amber_500
+    , divide_blue_500
+    , divide_cyan_500
     , divide_dashed
     , divide_dotted
     , divide_double
+    , divide_emerald_500
+    , divide_fuchsia_500
+    , divide_gray_500
+    , divide_green_500
+    , divide_indigo_500
+    , divide_lime_500
+    , divide_neutral_500
     , divide_none
     , divide_opacity_0
     , divide_opacity_10
@@ -698,7 +950,17 @@ module Tailwind.Utilities exposing
     , divide_opacity_80
     , divide_opacity_90
     , divide_opacity_95
+    , divide_orange_500
+    , divide_pink_500
+    , divide_purple_500
+    , divide_red_500
+    , divide_rose_500
+    , divide_sky_500
+    , divide_slate_500
     , divide_solid
+    , divide_stone_500
+    , divide_teal_500
+    , divide_violet_500
     , divide_x
     , divide_x_0
     , divide_x_2
@@ -711,6 +973,8 @@ module Tailwind.Utilities exposing
     , divide_y_4
     , divide_y_8
     , divide_y_reverse
+    , divide_yellow_500
+    , divide_zinc_500
     , drop_shadow
     , drop_shadow_2xl
     , drop_shadow_lg
@@ -731,6 +995,28 @@ module Tailwind.Utilities exposing
     , ease_linear
     , ease_out
     , fillWithColor
+    , fill_amber_500
+    , fill_blue_500
+    , fill_cyan_500
+    , fill_emerald_500
+    , fill_fuchsia_500
+    , fill_gray_500
+    , fill_green_500
+    , fill_indigo_500
+    , fill_lime_500
+    , fill_neutral_500
+    , fill_orange_500
+    , fill_pink_500
+    , fill_purple_500
+    , fill_red_500
+    , fill_rose_500
+    , fill_sky_500
+    , fill_slate_500
+    , fill_stone_500
+    , fill_teal_500
+    , fill_violet_500
+    , fill_yellow_500
+    , fill_zinc_500
     , filter
     , filter_none
     , fixed
@@ -754,7 +1040,7 @@ module Tailwind.Utilities exposing
     , float_none
     , float_right
     , flow_root
-    , fontWithColor
+    , font_black
     , font_bold
     , font_extrabold
     , font_extralight
@@ -773,6 +1059,28 @@ module Tailwind.Utilities exposing
     , form_select
     , form_textarea
     , fromWithColor
+    , from_amber_500
+    , from_blue_500
+    , from_cyan_500
+    , from_emerald_500
+    , from_fuchsia_500
+    , from_gray_500
+    , from_green_500
+    , from_indigo_500
+    , from_lime_500
+    , from_neutral_500
+    , from_orange_500
+    , from_pink_500
+    , from_purple_500
+    , from_red_500
+    , from_rose_500
+    , from_sky_500
+    , from_slate_500
+    , from_stone_500
+    , from_teal_500
+    , from_violet_500
+    , from_yellow_500
+    , from_zinc_500
     , gap_0
     , gap_0_dot_5
     , gap_1
@@ -2706,16 +3014,38 @@ module Tailwind.Utilities exposing
     , outline_2
     , outline_4
     , outline_8
+    , outline_amber_500
+    , outline_blue_500
+    , outline_cyan_500
     , outline_dashed
     , outline_dotted
     , outline_double
+    , outline_emerald_500
+    , outline_fuchsia_500
+    , outline_gray_500
+    , outline_green_500
     , outline_hidden
+    , outline_indigo_500
+    , outline_lime_500
+    , outline_neutral_500
     , outline_none
     , outline_offset_0
     , outline_offset_1
     , outline_offset_2
     , outline_offset_4
     , outline_offset_8
+    , outline_orange_500
+    , outline_pink_500
+    , outline_purple_500
+    , outline_red_500
+    , outline_rose_500
+    , outline_sky_500
+    , outline_slate_500
+    , outline_stone_500
+    , outline_teal_500
+    , outline_violet_500
+    , outline_yellow_500
+    , outline_zinc_500
     , overflow_auto
     , overflow_clip
     , overflow_ellipsis
@@ -2864,6 +3194,16 @@ module Tailwind.Utilities exposing
     , place_self_start
     , place_self_stretch
     , placeholderWithColor
+    , placeholder_amber_500
+    , placeholder_blue_500
+    , placeholder_cyan_500
+    , placeholder_emerald_500
+    , placeholder_fuchsia_500
+    , placeholder_gray_500
+    , placeholder_green_500
+    , placeholder_indigo_500
+    , placeholder_lime_500
+    , placeholder_neutral_500
     , placeholder_opacity_0
     , placeholder_opacity_10
     , placeholder_opacity_100
@@ -2879,6 +3219,18 @@ module Tailwind.Utilities exposing
     , placeholder_opacity_80
     , placeholder_opacity_90
     , placeholder_opacity_95
+    , placeholder_orange_500
+    , placeholder_pink_500
+    , placeholder_purple_500
+    , placeholder_red_500
+    , placeholder_rose_500
+    , placeholder_sky_500
+    , placeholder_slate_500
+    , placeholder_stone_500
+    , placeholder_teal_500
+    , placeholder_violet_500
+    , placeholder_yellow_500
+    , placeholder_zinc_500
     , pointer_events_auto
     , pointer_events_none
     , pr_0
@@ -3106,13 +3458,45 @@ module Tailwind.Utilities exposing
     , ring_2
     , ring_4
     , ring_8
+    , ring_amber_500
+    , ring_blue_500
+    , ring_cyan_500
+    , ring_emerald_500
+    , ring_fuchsia_500
+    , ring_gray_500
+    , ring_green_500
+    , ring_indigo_500
     , ring_inset
+    , ring_lime_500
+    , ring_neutral_500
     , ring_offsetWithColor
     , ring_offset_0
     , ring_offset_1
     , ring_offset_2
     , ring_offset_4
     , ring_offset_8
+    , ring_offset_amber_500
+    , ring_offset_blue_500
+    , ring_offset_cyan_500
+    , ring_offset_emerald_500
+    , ring_offset_fuchsia_500
+    , ring_offset_gray_500
+    , ring_offset_green_500
+    , ring_offset_indigo_500
+    , ring_offset_lime_500
+    , ring_offset_neutral_500
+    , ring_offset_orange_500
+    , ring_offset_pink_500
+    , ring_offset_purple_500
+    , ring_offset_red_500
+    , ring_offset_rose_500
+    , ring_offset_sky_500
+    , ring_offset_slate_500
+    , ring_offset_stone_500
+    , ring_offset_teal_500
+    , ring_offset_violet_500
+    , ring_offset_yellow_500
+    , ring_offset_zinc_500
     , ring_opacity_0
     , ring_opacity_10
     , ring_opacity_100
@@ -3128,6 +3512,18 @@ module Tailwind.Utilities exposing
     , ring_opacity_80
     , ring_opacity_90
     , ring_opacity_95
+    , ring_orange_500
+    , ring_pink_500
+    , ring_purple_500
+    , ring_red_500
+    , ring_rose_500
+    , ring_sky_500
+    , ring_slate_500
+    , ring_stone_500
+    , ring_teal_500
+    , ring_violet_500
+    , ring_yellow_500
+    , ring_zinc_500
     , rotate_0
     , rotate_1
     , rotate_12
@@ -3784,12 +4180,34 @@ module Tailwind.Utilities exposing
     , shadow
     , shadowWithColor
     , shadow_2xl
+    , shadow_amber_500
+    , shadow_blue_500
+    , shadow_cyan_500
+    , shadow_emerald_500
+    , shadow_fuchsia_500
+    , shadow_gray_500
+    , shadow_green_500
+    , shadow_indigo_500
     , shadow_inner
     , shadow_lg
+    , shadow_lime_500
     , shadow_md
+    , shadow_neutral_500
     , shadow_none
+    , shadow_orange_500
+    , shadow_pink_500
+    , shadow_purple_500
+    , shadow_red_500
+    , shadow_rose_500
+    , shadow_sky_500
+    , shadow_slate_500
     , shadow_sm
+    , shadow_stone_500
+    , shadow_teal_500
+    , shadow_violet_500
     , shadow_xl
+    , shadow_yellow_500
+    , shadow_zinc_500
     , shrink
     , shrink_0
     , skew_x_0
@@ -3897,6 +4315,28 @@ module Tailwind.Utilities exposing
     , stroke_0
     , stroke_1
     , stroke_2
+    , stroke_amber_500
+    , stroke_blue_500
+    , stroke_cyan_500
+    , stroke_emerald_500
+    , stroke_fuchsia_500
+    , stroke_gray_500
+    , stroke_green_500
+    , stroke_indigo_500
+    , stroke_lime_500
+    , stroke_neutral_500
+    , stroke_orange_500
+    , stroke_pink_500
+    , stroke_purple_500
+    , stroke_red_500
+    , stroke_rose_500
+    , stroke_sky_500
+    , stroke_slate_500
+    , stroke_stone_500
+    , stroke_teal_500
+    , stroke_violet_500
+    , stroke_yellow_500
+    , stroke_zinc_500
     , subpixel_antialiased
     , table
     , table_auto
@@ -3919,14 +4359,24 @@ module Tailwind.Utilities exposing
     , text_7xl
     , text_8xl
     , text_9xl
+    , text_amber_500
     , text_base
+    , text_blue_500
     , text_center
     , text_clip
+    , text_cyan_500
     , text_ellipsis
+    , text_emerald_500
     , text_end
+    , text_fuchsia_500
+    , text_gray_500
+    , text_green_500
+    , text_indigo_500
     , text_justify
     , text_left
     , text_lg
+    , text_lime_500
+    , text_neutral_500
     , text_opacity_0
     , text_opacity_10
     , text_opacity_100
@@ -3942,12 +4392,46 @@ module Tailwind.Utilities exposing
     , text_opacity_80
     , text_opacity_90
     , text_opacity_95
+    , text_orange_500
+    , text_pink_500
+    , text_purple_500
+    , text_red_500
     , text_right
+    , text_rose_500
+    , text_sky_500
+    , text_slate_500
     , text_sm
     , text_start
+    , text_stone_500
+    , text_teal_500
+    , text_violet_500
     , text_xl
     , text_xs
+    , text_yellow_500
+    , text_zinc_500
     , toWithColor
+    , to_amber_500
+    , to_blue_500
+    , to_cyan_500
+    , to_emerald_500
+    , to_fuchsia_500
+    , to_gray_500
+    , to_green_500
+    , to_indigo_500
+    , to_lime_500
+    , to_neutral_500
+    , to_orange_500
+    , to_pink_500
+    , to_purple_500
+    , to_red_500
+    , to_rose_500
+    , to_sky_500
+    , to_slate_500
+    , to_stone_500
+    , to_teal_500
+    , to_violet_500
+    , to_yellow_500
+    , to_zinc_500
     , top_0
     , top_0_dot_5
     , top_1
@@ -4112,6 +4596,28 @@ module Tailwind.Utilities exposing
     , underline_offset_auto
     , uppercase
     , viaWithColor
+    , via_amber_500
+    , via_blue_500
+    , via_cyan_500
+    , via_emerald_500
+    , via_fuchsia_500
+    , via_gray_500
+    , via_green_500
+    , via_indigo_500
+    , via_lime_500
+    , via_neutral_500
+    , via_orange_500
+    , via_pink_500
+    , via_purple_500
+    , via_red_500
+    , via_rose_500
+    , via_sky_500
+    , via_slate_500
+    , via_stone_500
+    , via_teal_500
+    , via_violet_500
+    , via_yellow_500
+    , via_zinc_500
     , visible
     , w_0
     , w_0_dot_5
@@ -4213,7 +4719,29 @@ This module contains
 @docs globalStyles
 @docs absolute
 @docs accentWithColor
+@docs accent_amber_500
 @docs accent_auto
+@docs accent_blue_500
+@docs accent_cyan_500
+@docs accent_emerald_500
+@docs accent_fuchsia_500
+@docs accent_gray_500
+@docs accent_green_500
+@docs accent_indigo_500
+@docs accent_lime_500
+@docs accent_neutral_500
+@docs accent_orange_500
+@docs accent_pink_500
+@docs accent_purple_500
+@docs accent_red_500
+@docs accent_rose_500
+@docs accent_sky_500
+@docs accent_slate_500
+@docs accent_stone_500
+@docs accent_teal_500
+@docs accent_violet_500
+@docs accent_yellow_500
+@docs accent_zinc_500
 @docs align_baseline
 @docs align_bottom
 @docs align_middle
@@ -4411,6 +4939,7 @@ This module contains
 @docs basis_full
 @docs basis_px
 @docs bgWithColor
+@docs bg_amber_500
 @docs bg_auto
 @docs bg_blend_color
 @docs bg_blend_color_burn
@@ -4428,6 +4957,7 @@ This module contains
 @docs bg_blend_saturation
 @docs bg_blend_screen
 @docs bg_blend_soft_light
+@docs bg_blue_500
 @docs bg_bottom
 @docs bg_center
 @docs bg_clip_border
@@ -4436,7 +4966,10 @@ This module contains
 @docs bg_clip_text
 @docs bg_contain
 @docs bg_cover
+@docs bg_cyan_500
+@docs bg_emerald_500
 @docs bg_fixed
+@docs bg_fuchsia_500
 @docs bg_gradient_to_b
 @docs bg_gradient_to_bl
 @docs bg_gradient_to_br
@@ -4445,10 +4978,15 @@ This module contains
 @docs bg_gradient_to_t
 @docs bg_gradient_to_tl
 @docs bg_gradient_to_tr
+@docs bg_gray_500
+@docs bg_green_500
+@docs bg_indigo_500
 @docs bg_left
 @docs bg_left_bottom
 @docs bg_left_top
+@docs bg_lime_500
 @docs bg_local
+@docs bg_neutral_500
 @docs bg_no_repeat
 @docs bg_none
 @docs bg_opacity_0
@@ -4466,9 +5004,13 @@ This module contains
 @docs bg_opacity_80
 @docs bg_opacity_90
 @docs bg_opacity_95
+@docs bg_orange_500
 @docs bg_origin_border
 @docs bg_origin_content
 @docs bg_origin_padding
+@docs bg_pink_500
+@docs bg_purple_500
+@docs bg_red_500
 @docs bg_repeat
 @docs bg_repeat_round
 @docs bg_repeat_space
@@ -4477,8 +5019,16 @@ This module contains
 @docs bg_right
 @docs bg_right_bottom
 @docs bg_right_top
+@docs bg_rose_500
 @docs bg_scroll
+@docs bg_sky_500
+@docs bg_slate_500
+@docs bg_stone_500
+@docs bg_teal_500
 @docs bg_top
+@docs bg_violet_500
+@docs bg_yellow_500
+@docs bg_zinc_500
 @docs block
 @docs blur
 @docs blur_0
@@ -4495,23 +5045,77 @@ This module contains
 @docs border_2
 @docs border_4
 @docs border_8
+@docs border_amber_500
 @docs border_b
 @docs border_bWithColor
 @docs border_b_0
 @docs border_b_2
 @docs border_b_4
 @docs border_b_8
+@docs border_b_amber_500
+@docs border_b_blue_500
+@docs border_b_cyan_500
+@docs border_b_emerald_500
+@docs border_b_fuchsia_500
+@docs border_b_gray_500
+@docs border_b_green_500
+@docs border_b_indigo_500
+@docs border_b_lime_500
+@docs border_b_neutral_500
+@docs border_b_orange_500
+@docs border_b_pink_500
+@docs border_b_purple_500
+@docs border_b_red_500
+@docs border_b_rose_500
+@docs border_b_sky_500
+@docs border_b_slate_500
+@docs border_b_stone_500
+@docs border_b_teal_500
+@docs border_b_violet_500
+@docs border_b_yellow_500
+@docs border_b_zinc_500
+@docs border_blue_500
 @docs border_collapse
+@docs border_cyan_500
 @docs border_dashed
 @docs border_dotted
 @docs border_double
+@docs border_emerald_500
+@docs border_fuchsia_500
+@docs border_gray_500
+@docs border_green_500
 @docs border_hidden
+@docs border_indigo_500
 @docs border_l
 @docs border_lWithColor
 @docs border_l_0
 @docs border_l_2
 @docs border_l_4
 @docs border_l_8
+@docs border_l_amber_500
+@docs border_l_blue_500
+@docs border_l_cyan_500
+@docs border_l_emerald_500
+@docs border_l_fuchsia_500
+@docs border_l_gray_500
+@docs border_l_green_500
+@docs border_l_indigo_500
+@docs border_l_lime_500
+@docs border_l_neutral_500
+@docs border_l_orange_500
+@docs border_l_pink_500
+@docs border_l_purple_500
+@docs border_l_red_500
+@docs border_l_rose_500
+@docs border_l_sky_500
+@docs border_l_slate_500
+@docs border_l_stone_500
+@docs border_l_teal_500
+@docs border_l_violet_500
+@docs border_l_yellow_500
+@docs border_l_zinc_500
+@docs border_lime_500
+@docs border_neutral_500
 @docs border_none
 @docs border_opacity_0
 @docs border_opacity_10
@@ -4528,13 +5132,42 @@ This module contains
 @docs border_opacity_80
 @docs border_opacity_90
 @docs border_opacity_95
+@docs border_orange_500
+@docs border_pink_500
+@docs border_purple_500
 @docs border_r
 @docs border_rWithColor
 @docs border_r_0
 @docs border_r_2
 @docs border_r_4
 @docs border_r_8
+@docs border_r_amber_500
+@docs border_r_blue_500
+@docs border_r_cyan_500
+@docs border_r_emerald_500
+@docs border_r_fuchsia_500
+@docs border_r_gray_500
+@docs border_r_green_500
+@docs border_r_indigo_500
+@docs border_r_lime_500
+@docs border_r_neutral_500
+@docs border_r_orange_500
+@docs border_r_pink_500
+@docs border_r_purple_500
+@docs border_r_red_500
+@docs border_r_rose_500
+@docs border_r_sky_500
+@docs border_r_slate_500
+@docs border_r_stone_500
+@docs border_r_teal_500
+@docs border_r_violet_500
+@docs border_r_yellow_500
+@docs border_r_zinc_500
+@docs border_red_500
+@docs border_rose_500
 @docs border_separate
+@docs border_sky_500
+@docs border_slate_500
 @docs border_solid
 @docs border_spacing_0
 @docs border_spacing_0_dot_5
@@ -4641,24 +5274,95 @@ This module contains
 @docs border_spacing_y_9
 @docs border_spacing_y_96
 @docs border_spacing_y_px
+@docs border_stone_500
 @docs border_t
 @docs border_tWithColor
 @docs border_t_0
 @docs border_t_2
 @docs border_t_4
 @docs border_t_8
+@docs border_t_amber_500
+@docs border_t_blue_500
+@docs border_t_cyan_500
+@docs border_t_emerald_500
+@docs border_t_fuchsia_500
+@docs border_t_gray_500
+@docs border_t_green_500
+@docs border_t_indigo_500
+@docs border_t_lime_500
+@docs border_t_neutral_500
+@docs border_t_orange_500
+@docs border_t_pink_500
+@docs border_t_purple_500
+@docs border_t_red_500
+@docs border_t_rose_500
+@docs border_t_sky_500
+@docs border_t_slate_500
+@docs border_t_stone_500
+@docs border_t_teal_500
+@docs border_t_violet_500
+@docs border_t_yellow_500
+@docs border_t_zinc_500
+@docs border_teal_500
+@docs border_violet_500
 @docs border_x
 @docs border_xWithColor
 @docs border_x_0
 @docs border_x_2
 @docs border_x_4
 @docs border_x_8
+@docs border_x_amber_500
+@docs border_x_blue_500
+@docs border_x_cyan_500
+@docs border_x_emerald_500
+@docs border_x_fuchsia_500
+@docs border_x_gray_500
+@docs border_x_green_500
+@docs border_x_indigo_500
+@docs border_x_lime_500
+@docs border_x_neutral_500
+@docs border_x_orange_500
+@docs border_x_pink_500
+@docs border_x_purple_500
+@docs border_x_red_500
+@docs border_x_rose_500
+@docs border_x_sky_500
+@docs border_x_slate_500
+@docs border_x_stone_500
+@docs border_x_teal_500
+@docs border_x_violet_500
+@docs border_x_yellow_500
+@docs border_x_zinc_500
 @docs border_y
 @docs border_yWithColor
 @docs border_y_0
 @docs border_y_2
 @docs border_y_4
 @docs border_y_8
+@docs border_y_amber_500
+@docs border_y_blue_500
+@docs border_y_cyan_500
+@docs border_y_emerald_500
+@docs border_y_fuchsia_500
+@docs border_y_gray_500
+@docs border_y_green_500
+@docs border_y_indigo_500
+@docs border_y_lime_500
+@docs border_y_neutral_500
+@docs border_y_orange_500
+@docs border_y_pink_500
+@docs border_y_purple_500
+@docs border_y_red_500
+@docs border_y_rose_500
+@docs border_y_sky_500
+@docs border_y_slate_500
+@docs border_y_stone_500
+@docs border_y_teal_500
+@docs border_y_violet_500
+@docs border_y_yellow_500
+@docs border_y_zinc_500
+@docs border_yellow_500
+@docs border_zinc_500
 @docs bottom_0
 @docs bottom_0_dot_5
 @docs bottom_1
@@ -4742,6 +5446,28 @@ This module contains
 @docs brightness_95
 @docs capitalize
 @docs caretWithColor
+@docs caret_amber_500
+@docs caret_blue_500
+@docs caret_cyan_500
+@docs caret_emerald_500
+@docs caret_fuchsia_500
+@docs caret_gray_500
+@docs caret_green_500
+@docs caret_indigo_500
+@docs caret_lime_500
+@docs caret_neutral_500
+@docs caret_orange_500
+@docs caret_pink_500
+@docs caret_purple_500
+@docs caret_red_500
+@docs caret_rose_500
+@docs caret_sky_500
+@docs caret_slate_500
+@docs caret_stone_500
+@docs caret_teal_500
+@docs caret_violet_500
+@docs caret_yellow_500
+@docs caret_zinc_500
 @docs clear_both
 @docs clear_left
 @docs clear_none
@@ -4872,15 +5598,37 @@ This module contains
 @docs decoration_2
 @docs decoration_4
 @docs decoration_8
+@docs decoration_amber_500
 @docs decoration_auto
+@docs decoration_blue_500
 @docs decoration_clone
+@docs decoration_cyan_500
 @docs decoration_dashed
 @docs decoration_dotted
 @docs decoration_double
+@docs decoration_emerald_500
 @docs decoration_from_font
+@docs decoration_fuchsia_500
+@docs decoration_gray_500
+@docs decoration_green_500
+@docs decoration_indigo_500
+@docs decoration_lime_500
+@docs decoration_neutral_500
+@docs decoration_orange_500
+@docs decoration_pink_500
+@docs decoration_purple_500
+@docs decoration_red_500
+@docs decoration_rose_500
+@docs decoration_sky_500
+@docs decoration_slate_500
 @docs decoration_slice
 @docs decoration_solid
+@docs decoration_stone_500
+@docs decoration_teal_500
+@docs decoration_violet_500
 @docs decoration_wavy
+@docs decoration_yellow_500
+@docs decoration_zinc_500
 @docs delay_100
 @docs delay_1000
 @docs delay_150
@@ -4891,9 +5639,19 @@ This module contains
 @docs delay_75
 @docs diagonal_fractions
 @docs divideWithColor
+@docs divide_amber_500
+@docs divide_blue_500
+@docs divide_cyan_500
 @docs divide_dashed
 @docs divide_dotted
 @docs divide_double
+@docs divide_emerald_500
+@docs divide_fuchsia_500
+@docs divide_gray_500
+@docs divide_green_500
+@docs divide_indigo_500
+@docs divide_lime_500
+@docs divide_neutral_500
 @docs divide_none
 @docs divide_opacity_0
 @docs divide_opacity_10
@@ -4910,7 +5668,17 @@ This module contains
 @docs divide_opacity_80
 @docs divide_opacity_90
 @docs divide_opacity_95
+@docs divide_orange_500
+@docs divide_pink_500
+@docs divide_purple_500
+@docs divide_red_500
+@docs divide_rose_500
+@docs divide_sky_500
+@docs divide_slate_500
 @docs divide_solid
+@docs divide_stone_500
+@docs divide_teal_500
+@docs divide_violet_500
 @docs divide_x
 @docs divide_x_0
 @docs divide_x_2
@@ -4923,6 +5691,8 @@ This module contains
 @docs divide_y_4
 @docs divide_y_8
 @docs divide_y_reverse
+@docs divide_yellow_500
+@docs divide_zinc_500
 @docs drop_shadow
 @docs drop_shadow_2xl
 @docs drop_shadow_lg
@@ -4943,6 +5713,28 @@ This module contains
 @docs ease_linear
 @docs ease_out
 @docs fillWithColor
+@docs fill_amber_500
+@docs fill_blue_500
+@docs fill_cyan_500
+@docs fill_emerald_500
+@docs fill_fuchsia_500
+@docs fill_gray_500
+@docs fill_green_500
+@docs fill_indigo_500
+@docs fill_lime_500
+@docs fill_neutral_500
+@docs fill_orange_500
+@docs fill_pink_500
+@docs fill_purple_500
+@docs fill_red_500
+@docs fill_rose_500
+@docs fill_sky_500
+@docs fill_slate_500
+@docs fill_stone_500
+@docs fill_teal_500
+@docs fill_violet_500
+@docs fill_yellow_500
+@docs fill_zinc_500
 @docs filter
 @docs filter_none
 @docs fixed
@@ -4966,7 +5758,7 @@ This module contains
 @docs float_none
 @docs float_right
 @docs flow_root
-@docs fontWithColor
+@docs font_black
 @docs font_bold
 @docs font_extrabold
 @docs font_extralight
@@ -4985,6 +5777,28 @@ This module contains
 @docs form_select
 @docs form_textarea
 @docs fromWithColor
+@docs from_amber_500
+@docs from_blue_500
+@docs from_cyan_500
+@docs from_emerald_500
+@docs from_fuchsia_500
+@docs from_gray_500
+@docs from_green_500
+@docs from_indigo_500
+@docs from_lime_500
+@docs from_neutral_500
+@docs from_orange_500
+@docs from_pink_500
+@docs from_purple_500
+@docs from_red_500
+@docs from_rose_500
+@docs from_sky_500
+@docs from_slate_500
+@docs from_stone_500
+@docs from_teal_500
+@docs from_violet_500
+@docs from_yellow_500
+@docs from_zinc_500
 @docs gap_0
 @docs gap_0_dot_5
 @docs gap_1
@@ -6917,16 +7731,38 @@ This module contains
 @docs outline_2
 @docs outline_4
 @docs outline_8
+@docs outline_amber_500
+@docs outline_blue_500
+@docs outline_cyan_500
 @docs outline_dashed
 @docs outline_dotted
 @docs outline_double
+@docs outline_emerald_500
+@docs outline_fuchsia_500
+@docs outline_gray_500
+@docs outline_green_500
 @docs outline_hidden
+@docs outline_indigo_500
+@docs outline_lime_500
+@docs outline_neutral_500
 @docs outline_none
 @docs outline_offset_0
 @docs outline_offset_1
 @docs outline_offset_2
 @docs outline_offset_4
 @docs outline_offset_8
+@docs outline_orange_500
+@docs outline_pink_500
+@docs outline_purple_500
+@docs outline_red_500
+@docs outline_rose_500
+@docs outline_sky_500
+@docs outline_slate_500
+@docs outline_stone_500
+@docs outline_teal_500
+@docs outline_violet_500
+@docs outline_yellow_500
+@docs outline_zinc_500
 @docs overflow_auto
 @docs overflow_clip
 @docs overflow_ellipsis
@@ -7075,6 +7911,16 @@ This module contains
 @docs place_self_start
 @docs place_self_stretch
 @docs placeholderWithColor
+@docs placeholder_amber_500
+@docs placeholder_blue_500
+@docs placeholder_cyan_500
+@docs placeholder_emerald_500
+@docs placeholder_fuchsia_500
+@docs placeholder_gray_500
+@docs placeholder_green_500
+@docs placeholder_indigo_500
+@docs placeholder_lime_500
+@docs placeholder_neutral_500
 @docs placeholder_opacity_0
 @docs placeholder_opacity_10
 @docs placeholder_opacity_100
@@ -7090,6 +7936,18 @@ This module contains
 @docs placeholder_opacity_80
 @docs placeholder_opacity_90
 @docs placeholder_opacity_95
+@docs placeholder_orange_500
+@docs placeholder_pink_500
+@docs placeholder_purple_500
+@docs placeholder_red_500
+@docs placeholder_rose_500
+@docs placeholder_sky_500
+@docs placeholder_slate_500
+@docs placeholder_stone_500
+@docs placeholder_teal_500
+@docs placeholder_violet_500
+@docs placeholder_yellow_500
+@docs placeholder_zinc_500
 @docs pointer_events_auto
 @docs pointer_events_none
 @docs pr_0
@@ -7317,13 +8175,45 @@ This module contains
 @docs ring_2
 @docs ring_4
 @docs ring_8
+@docs ring_amber_500
+@docs ring_blue_500
+@docs ring_cyan_500
+@docs ring_emerald_500
+@docs ring_fuchsia_500
+@docs ring_gray_500
+@docs ring_green_500
+@docs ring_indigo_500
 @docs ring_inset
+@docs ring_lime_500
+@docs ring_neutral_500
 @docs ring_offsetWithColor
 @docs ring_offset_0
 @docs ring_offset_1
 @docs ring_offset_2
 @docs ring_offset_4
 @docs ring_offset_8
+@docs ring_offset_amber_500
+@docs ring_offset_blue_500
+@docs ring_offset_cyan_500
+@docs ring_offset_emerald_500
+@docs ring_offset_fuchsia_500
+@docs ring_offset_gray_500
+@docs ring_offset_green_500
+@docs ring_offset_indigo_500
+@docs ring_offset_lime_500
+@docs ring_offset_neutral_500
+@docs ring_offset_orange_500
+@docs ring_offset_pink_500
+@docs ring_offset_purple_500
+@docs ring_offset_red_500
+@docs ring_offset_rose_500
+@docs ring_offset_sky_500
+@docs ring_offset_slate_500
+@docs ring_offset_stone_500
+@docs ring_offset_teal_500
+@docs ring_offset_violet_500
+@docs ring_offset_yellow_500
+@docs ring_offset_zinc_500
 @docs ring_opacity_0
 @docs ring_opacity_10
 @docs ring_opacity_100
@@ -7339,6 +8229,18 @@ This module contains
 @docs ring_opacity_80
 @docs ring_opacity_90
 @docs ring_opacity_95
+@docs ring_orange_500
+@docs ring_pink_500
+@docs ring_purple_500
+@docs ring_red_500
+@docs ring_rose_500
+@docs ring_sky_500
+@docs ring_slate_500
+@docs ring_stone_500
+@docs ring_teal_500
+@docs ring_violet_500
+@docs ring_yellow_500
+@docs ring_zinc_500
 @docs rotate_0
 @docs rotate_1
 @docs rotate_12
@@ -7995,12 +8897,34 @@ This module contains
 @docs shadow
 @docs shadowWithColor
 @docs shadow_2xl
+@docs shadow_amber_500
+@docs shadow_blue_500
+@docs shadow_cyan_500
+@docs shadow_emerald_500
+@docs shadow_fuchsia_500
+@docs shadow_gray_500
+@docs shadow_green_500
+@docs shadow_indigo_500
 @docs shadow_inner
 @docs shadow_lg
+@docs shadow_lime_500
 @docs shadow_md
+@docs shadow_neutral_500
 @docs shadow_none
+@docs shadow_orange_500
+@docs shadow_pink_500
+@docs shadow_purple_500
+@docs shadow_red_500
+@docs shadow_rose_500
+@docs shadow_sky_500
+@docs shadow_slate_500
 @docs shadow_sm
+@docs shadow_stone_500
+@docs shadow_teal_500
+@docs shadow_violet_500
 @docs shadow_xl
+@docs shadow_yellow_500
+@docs shadow_zinc_500
 @docs shrink
 @docs shrink_0
 @docs skew_x_0
@@ -8108,6 +9032,28 @@ This module contains
 @docs stroke_0
 @docs stroke_1
 @docs stroke_2
+@docs stroke_amber_500
+@docs stroke_blue_500
+@docs stroke_cyan_500
+@docs stroke_emerald_500
+@docs stroke_fuchsia_500
+@docs stroke_gray_500
+@docs stroke_green_500
+@docs stroke_indigo_500
+@docs stroke_lime_500
+@docs stroke_neutral_500
+@docs stroke_orange_500
+@docs stroke_pink_500
+@docs stroke_purple_500
+@docs stroke_red_500
+@docs stroke_rose_500
+@docs stroke_sky_500
+@docs stroke_slate_500
+@docs stroke_stone_500
+@docs stroke_teal_500
+@docs stroke_violet_500
+@docs stroke_yellow_500
+@docs stroke_zinc_500
 @docs subpixel_antialiased
 @docs table
 @docs table_auto
@@ -8130,14 +9076,24 @@ This module contains
 @docs text_7xl
 @docs text_8xl
 @docs text_9xl
+@docs text_amber_500
 @docs text_base
+@docs text_blue_500
 @docs text_center
 @docs text_clip
+@docs text_cyan_500
 @docs text_ellipsis
+@docs text_emerald_500
 @docs text_end
+@docs text_fuchsia_500
+@docs text_gray_500
+@docs text_green_500
+@docs text_indigo_500
 @docs text_justify
 @docs text_left
 @docs text_lg
+@docs text_lime_500
+@docs text_neutral_500
 @docs text_opacity_0
 @docs text_opacity_10
 @docs text_opacity_100
@@ -8153,12 +9109,46 @@ This module contains
 @docs text_opacity_80
 @docs text_opacity_90
 @docs text_opacity_95
+@docs text_orange_500
+@docs text_pink_500
+@docs text_purple_500
+@docs text_red_500
 @docs text_right
+@docs text_rose_500
+@docs text_sky_500
+@docs text_slate_500
 @docs text_sm
 @docs text_start
+@docs text_stone_500
+@docs text_teal_500
+@docs text_violet_500
 @docs text_xl
 @docs text_xs
+@docs text_yellow_500
+@docs text_zinc_500
 @docs toWithColor
+@docs to_amber_500
+@docs to_blue_500
+@docs to_cyan_500
+@docs to_emerald_500
+@docs to_fuchsia_500
+@docs to_gray_500
+@docs to_green_500
+@docs to_indigo_500
+@docs to_lime_500
+@docs to_neutral_500
+@docs to_orange_500
+@docs to_pink_500
+@docs to_purple_500
+@docs to_red_500
+@docs to_rose_500
+@docs to_sky_500
+@docs to_slate_500
+@docs to_stone_500
+@docs to_teal_500
+@docs to_violet_500
+@docs to_yellow_500
+@docs to_zinc_500
 @docs top_0
 @docs top_0_dot_5
 @docs top_1
@@ -8323,6 +9313,28 @@ This module contains
 @docs underline_offset_auto
 @docs uppercase
 @docs viaWithColor
+@docs via_amber_500
+@docs via_blue_500
+@docs via_cyan_500
+@docs via_emerald_500
+@docs via_fuchsia_500
+@docs via_gray_500
+@docs via_green_500
+@docs via_indigo_500
+@docs via_lime_500
+@docs via_neutral_500
+@docs via_orange_500
+@docs via_pink_500
+@docs via_purple_500
+@docs via_red_500
+@docs via_rose_500
+@docs via_sky_500
+@docs via_slate_500
+@docs via_stone_500
+@docs via_teal_500
+@docs via_violet_500
+@docs via_yellow_500
+@docs via_zinc_500
 @docs visible
 @docs w_0
 @docs w_0_dot_5
@@ -8832,6 +9844,22 @@ absolute =
 {-| This class has the effect of following css declaration:
 
 ```css
+.accent-amber-500 {
+    accent-color: #f59e0b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_amber_500 : Css.Style
+accent_amber_500 =
+    Css.property "accent-color" "#f59e0b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .accent-auto {
     accent-color: auto
 }
@@ -8843,6 +9871,342 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 accent_auto : Css.Style
 accent_auto =
     Css.property "accent-color" "auto"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-blue-500 {
+    accent-color: #3b82f6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_blue_500 : Css.Style
+accent_blue_500 =
+    Css.property "accent-color" "#3b82f6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-cyan-500 {
+    accent-color: #06b6d4
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_cyan_500 : Css.Style
+accent_cyan_500 =
+    Css.property "accent-color" "#06b6d4"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-emerald-500 {
+    accent-color: #10b981
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_emerald_500 : Css.Style
+accent_emerald_500 =
+    Css.property "accent-color" "#10b981"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-fuchsia-500 {
+    accent-color: #d946ef
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_fuchsia_500 : Css.Style
+accent_fuchsia_500 =
+    Css.property "accent-color" "#d946ef"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-gray-500 {
+    accent-color: #6b7280
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_gray_500 : Css.Style
+accent_gray_500 =
+    Css.property "accent-color" "#6b7280"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-green-500 {
+    accent-color: #22c55e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_green_500 : Css.Style
+accent_green_500 =
+    Css.property "accent-color" "#22c55e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-indigo-500 {
+    accent-color: #6366f1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_indigo_500 : Css.Style
+accent_indigo_500 =
+    Css.property "accent-color" "#6366f1"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-lime-500 {
+    accent-color: #84cc16
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_lime_500 : Css.Style
+accent_lime_500 =
+    Css.property "accent-color" "#84cc16"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-neutral-500 {
+    accent-color: #737373
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_neutral_500 : Css.Style
+accent_neutral_500 =
+    Css.property "accent-color" "#737373"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-orange-500 {
+    accent-color: #f97316
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_orange_500 : Css.Style
+accent_orange_500 =
+    Css.property "accent-color" "#f97316"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-pink-500 {
+    accent-color: #ec4899
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_pink_500 : Css.Style
+accent_pink_500 =
+    Css.property "accent-color" "#ec4899"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-purple-500 {
+    accent-color: #a855f7
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_purple_500 : Css.Style
+accent_purple_500 =
+    Css.property "accent-color" "#a855f7"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-red-500 {
+    accent-color: #ef4444
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_red_500 : Css.Style
+accent_red_500 =
+    Css.property "accent-color" "#ef4444"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-rose-500 {
+    accent-color: #f43f5e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_rose_500 : Css.Style
+accent_rose_500 =
+    Css.property "accent-color" "#f43f5e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-sky-500 {
+    accent-color: #0ea5e9
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_sky_500 : Css.Style
+accent_sky_500 =
+    Css.property "accent-color" "#0ea5e9"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-slate-500 {
+    accent-color: #64748b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_slate_500 : Css.Style
+accent_slate_500 =
+    Css.property "accent-color" "#64748b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-stone-500 {
+    accent-color: #78716c
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_stone_500 : Css.Style
+accent_stone_500 =
+    Css.property "accent-color" "#78716c"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-teal-500 {
+    accent-color: #14b8a6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_teal_500 : Css.Style
+accent_teal_500 =
+    Css.property "accent-color" "#14b8a6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-violet-500 {
+    accent-color: #8b5cf6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_violet_500 : Css.Style
+accent_violet_500 =
+    Css.property "accent-color" "#8b5cf6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-yellow-500 {
+    accent-color: #eab308
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_yellow_500 : Css.Style
+accent_yellow_500 =
+    Css.property "accent-color" "#eab308"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.accent-zinc-500 {
+    accent-color: #71717a
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_zinc_500 : Css.Style
+accent_zinc_500 =
+    Css.property "accent-color" "#71717a"
 
 
 {-| This class has the effect of following css declaration:
@@ -12728,6 +14092,26 @@ basis_px =
 {-| This class has the effect of following css declaration:
 
 ```css
+.bg-amber-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(245 158 11 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_amber_500 : Css.Style
+bg_amber_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(245 158 11 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .bg-auto {
     background-size: auto
 }
@@ -13000,6 +14384,26 @@ bg_blend_soft_light =
 {-| This class has the effect of following css declaration:
 
 ```css
+.bg-blue-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_blue_500 : Css.Style
+bg_blue_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(59 130 246 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .bg-bottom {
     background-position: bottom
 }
@@ -13128,6 +14532,46 @@ bg_cover =
 {-| This class has the effect of following css declaration:
 
 ```css
+.bg-cyan-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(6 182 212 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_cyan_500 : Css.Style
+bg_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(6 182 212 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-emerald-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(16 185 129 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_emerald_500 : Css.Style
+bg_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(16 185 129 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .bg-fixed {
     background-attachment: fixed
 }
@@ -13139,6 +14583,26 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 bg_fixed : Css.Style
 bg_fixed =
     Css.property "background-attachment" "fixed"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-fuchsia-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(217 70 239 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_fuchsia_500 : Css.Style
+bg_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(217 70 239 / var(--tw-bg-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -13272,6 +14736,66 @@ bg_gradient_to_tr =
 {-| This class has the effect of following css declaration:
 
 ```css
+.bg-gray-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(107 114 128 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_gray_500 : Css.Style
+bg_gray_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(107 114 128 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-green-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(34 197 94 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_green_500 : Css.Style
+bg_green_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(34 197 94 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-indigo-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(99 102 241 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_indigo_500 : Css.Style
+bg_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(99 102 241 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .bg-left {
     background-position: left
 }
@@ -13320,6 +14844,26 @@ bg_left_top =
 {-| This class has the effect of following css declaration:
 
 ```css
+.bg-lime-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(132 204 22 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_lime_500 : Css.Style
+bg_lime_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(132 204 22 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .bg-local {
     background-attachment: local
 }
@@ -13331,6 +14875,26 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 bg_local : Css.Style
 bg_local =
     Css.property "background-attachment" "local"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-neutral-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(115 115 115 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_neutral_500 : Css.Style
+bg_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(115 115 115 / var(--tw-bg-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -13608,6 +15172,26 @@ bg_opacity_95 =
 {-| This class has the effect of following css declaration:
 
 ```css
+.bg-orange-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 115 22 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_orange_500 : Css.Style
+bg_orange_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(249 115 22 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .bg-origin-border {
     background-origin: border-box
 }
@@ -13651,6 +15235,66 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 bg_origin_padding : Css.Style
 bg_origin_padding =
     Css.property "background-origin" "padding-box"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-pink-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(236 72 153 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_pink_500 : Css.Style
+bg_pink_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(236 72 153 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-purple-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(168 85 247 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_purple_500 : Css.Style
+bg_purple_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(168 85 247 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-red-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(239 68 68 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_red_500 : Css.Style
+bg_red_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(239 68 68 / var(--tw-bg-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -13784,6 +15428,26 @@ bg_right_top =
 {-| This class has the effect of following css declaration:
 
 ```css
+.bg-rose-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(244 63 94 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_rose_500 : Css.Style
+bg_rose_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(244 63 94 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .bg-scroll {
     background-attachment: scroll
 }
@@ -13800,6 +15464,86 @@ bg_scroll =
 {-| This class has the effect of following css declaration:
 
 ```css
+.bg-sky-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(14 165 233 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_sky_500 : Css.Style
+bg_sky_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(14 165 233 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-slate-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(100 116 139 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_slate_500 : Css.Style
+bg_slate_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(100 116 139 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-stone-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(120 113 108 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_stone_500 : Css.Style
+bg_stone_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(120 113 108 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-teal-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(20 184 166 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_teal_500 : Css.Style
+bg_teal_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(20 184 166 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .bg-top {
     background-position: top
 }
@@ -13811,6 +15555,66 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 bg_top : Css.Style
 bg_top =
     Css.property "background-position" "top"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-violet-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(139 92 246 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_violet_500 : Css.Style
+bg_violet_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(139 92 246 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-yellow-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(234 179 8 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_yellow_500 : Css.Style
+bg_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(234 179 8 / var(--tw-bg-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.bg-zinc-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(113 113 122 / var(--tw-bg-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_zinc_500 : Css.Style
+bg_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-bg-opacity" "1"
+        , Css.property "background-color" "rgb(113 113 122 / var(--tw-bg-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -14092,6 +15896,26 @@ border_8 =
 {-| This class has the effect of following css declaration:
 
 ```css
+.border-amber-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(245 158 11 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_amber_500 : Css.Style
+border_amber_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(245 158 11 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .border-b {
     border-bottom-width: 1px
 }
@@ -14172,6 +15996,466 @@ border_b_8 =
 {-| This class has the effect of following css declaration:
 
 ```css
+.border-b-amber-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(245 158 11 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_amber_500 : Css.Style
+border_b_amber_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(245 158 11 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-blue-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(59 130 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_blue_500 : Css.Style
+border_b_blue_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(59 130 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-cyan-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(6 182 212 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_cyan_500 : Css.Style
+border_b_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(6 182 212 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-emerald-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(16 185 129 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_emerald_500 : Css.Style
+border_b_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(16 185 129 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-fuchsia-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(217 70 239 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_fuchsia_500 : Css.Style
+border_b_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(217 70 239 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-gray-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(107 114 128 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_gray_500 : Css.Style
+border_b_gray_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(107 114 128 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-green-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(34 197 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_green_500 : Css.Style
+border_b_green_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(34 197 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-indigo-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(99 102 241 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_indigo_500 : Css.Style
+border_b_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(99 102 241 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-lime-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(132 204 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_lime_500 : Css.Style
+border_b_lime_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(132 204 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-neutral-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(115 115 115 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_neutral_500 : Css.Style
+border_b_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(115 115 115 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-orange-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(249 115 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_orange_500 : Css.Style
+border_b_orange_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(249 115 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-pink-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(236 72 153 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_pink_500 : Css.Style
+border_b_pink_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(236 72 153 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-purple-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(168 85 247 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_purple_500 : Css.Style
+border_b_purple_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(168 85 247 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-red-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(239 68 68 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_red_500 : Css.Style
+border_b_red_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(239 68 68 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-rose-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(244 63 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_rose_500 : Css.Style
+border_b_rose_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(244 63 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-sky-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(14 165 233 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_sky_500 : Css.Style
+border_b_sky_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(14 165 233 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-slate-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(100 116 139 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_slate_500 : Css.Style
+border_b_slate_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(100 116 139 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-stone-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(120 113 108 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_stone_500 : Css.Style
+border_b_stone_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(120 113 108 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-teal-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(20 184 166 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_teal_500 : Css.Style
+border_b_teal_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(20 184 166 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-violet-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(139 92 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_violet_500 : Css.Style
+border_b_violet_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(139 92 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-yellow-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(234 179 8 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_yellow_500 : Css.Style
+border_b_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(234 179 8 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-b-zinc-500 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(113 113 122 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_zinc_500 : Css.Style
+border_b_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-bottom-color" "rgb(113 113 122 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-blue-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(59 130 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_blue_500 : Css.Style
+border_blue_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(59 130 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .border-collapse {
     border-collapse: collapse
 }
@@ -14183,6 +16467,26 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 border_collapse : Css.Style
 border_collapse =
     Css.property "border-collapse" "collapse"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-cyan-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(6 182 212 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_cyan_500 : Css.Style
+border_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(6 182 212 / var(--tw-border-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -14236,6 +16540,86 @@ border_double =
 {-| This class has the effect of following css declaration:
 
 ```css
+.border-emerald-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(16 185 129 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_emerald_500 : Css.Style
+border_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(16 185 129 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-fuchsia-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(217 70 239 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_fuchsia_500 : Css.Style
+border_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(217 70 239 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-gray-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(107 114 128 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_gray_500 : Css.Style
+border_gray_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(107 114 128 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-green-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(34 197 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_green_500 : Css.Style
+border_green_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(34 197 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .border-hidden {
     border-style: hidden
 }
@@ -14247,6 +16631,26 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 border_hidden : Css.Style
 border_hidden =
     Css.property "border-style" "hidden"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-indigo-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(99 102 241 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_indigo_500 : Css.Style
+border_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(99 102 241 / var(--tw-border-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -14327,6 +16731,486 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 border_l_8 : Css.Style
 border_l_8 =
     Css.property "border-left-width" "8px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-amber-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(245 158 11 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_amber_500 : Css.Style
+border_l_amber_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(245 158 11 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-blue-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(59 130 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_blue_500 : Css.Style
+border_l_blue_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(59 130 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-cyan-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(6 182 212 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_cyan_500 : Css.Style
+border_l_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(6 182 212 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-emerald-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(16 185 129 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_emerald_500 : Css.Style
+border_l_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(16 185 129 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-fuchsia-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(217 70 239 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_fuchsia_500 : Css.Style
+border_l_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(217 70 239 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-gray-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(107 114 128 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_gray_500 : Css.Style
+border_l_gray_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(107 114 128 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-green-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(34 197 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_green_500 : Css.Style
+border_l_green_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(34 197 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-indigo-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(99 102 241 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_indigo_500 : Css.Style
+border_l_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(99 102 241 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-lime-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(132 204 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_lime_500 : Css.Style
+border_l_lime_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(132 204 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-neutral-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(115 115 115 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_neutral_500 : Css.Style
+border_l_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(115 115 115 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-orange-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(249 115 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_orange_500 : Css.Style
+border_l_orange_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(249 115 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-pink-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(236 72 153 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_pink_500 : Css.Style
+border_l_pink_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(236 72 153 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-purple-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(168 85 247 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_purple_500 : Css.Style
+border_l_purple_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(168 85 247 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-red-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(239 68 68 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_red_500 : Css.Style
+border_l_red_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(239 68 68 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-rose-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(244 63 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_rose_500 : Css.Style
+border_l_rose_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(244 63 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-sky-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(14 165 233 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_sky_500 : Css.Style
+border_l_sky_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(14 165 233 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-slate-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(100 116 139 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_slate_500 : Css.Style
+border_l_slate_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(100 116 139 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-stone-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(120 113 108 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_stone_500 : Css.Style
+border_l_stone_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(120 113 108 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-teal-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(20 184 166 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_teal_500 : Css.Style
+border_l_teal_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(20 184 166 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-violet-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(139 92 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_violet_500 : Css.Style
+border_l_violet_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(139 92 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-yellow-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(234 179 8 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_yellow_500 : Css.Style
+border_l_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(234 179 8 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-l-zinc-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(113 113 122 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_zinc_500 : Css.Style
+border_l_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(113 113 122 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-lime-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(132 204 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_lime_500 : Css.Style
+border_lime_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(132 204 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-neutral-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(115 115 115 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_neutral_500 : Css.Style
+border_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(115 115 115 / var(--tw-border-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -14588,6 +17472,66 @@ border_opacity_95 =
 {-| This class has the effect of following css declaration:
 
 ```css
+.border-orange-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(249 115 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_orange_500 : Css.Style
+border_orange_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(249 115 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-pink-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(236 72 153 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_pink_500 : Css.Style
+border_pink_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(236 72 153 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-purple-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(168 85 247 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_purple_500 : Css.Style
+border_purple_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(168 85 247 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .border-r {
     border-right-width: 1px
 }
@@ -14668,6 +17612,486 @@ border_r_8 =
 {-| This class has the effect of following css declaration:
 
 ```css
+.border-r-amber-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(245 158 11 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_amber_500 : Css.Style
+border_r_amber_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(245 158 11 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-blue-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(59 130 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_blue_500 : Css.Style
+border_r_blue_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(59 130 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-cyan-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(6 182 212 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_cyan_500 : Css.Style
+border_r_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(6 182 212 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-emerald-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(16 185 129 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_emerald_500 : Css.Style
+border_r_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(16 185 129 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-fuchsia-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(217 70 239 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_fuchsia_500 : Css.Style
+border_r_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(217 70 239 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-gray-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(107 114 128 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_gray_500 : Css.Style
+border_r_gray_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(107 114 128 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-green-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(34 197 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_green_500 : Css.Style
+border_r_green_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(34 197 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-indigo-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(99 102 241 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_indigo_500 : Css.Style
+border_r_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(99 102 241 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-lime-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(132 204 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_lime_500 : Css.Style
+border_r_lime_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(132 204 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-neutral-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(115 115 115 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_neutral_500 : Css.Style
+border_r_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(115 115 115 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-orange-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(249 115 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_orange_500 : Css.Style
+border_r_orange_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(249 115 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-pink-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(236 72 153 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_pink_500 : Css.Style
+border_r_pink_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(236 72 153 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-purple-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(168 85 247 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_purple_500 : Css.Style
+border_r_purple_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(168 85 247 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-red-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(239 68 68 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_red_500 : Css.Style
+border_r_red_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(239 68 68 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-rose-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(244 63 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_rose_500 : Css.Style
+border_r_rose_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(244 63 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-sky-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(14 165 233 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_sky_500 : Css.Style
+border_r_sky_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(14 165 233 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-slate-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(100 116 139 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_slate_500 : Css.Style
+border_r_slate_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(100 116 139 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-stone-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(120 113 108 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_stone_500 : Css.Style
+border_r_stone_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(120 113 108 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-teal-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(20 184 166 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_teal_500 : Css.Style
+border_r_teal_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(20 184 166 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-violet-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(139 92 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_violet_500 : Css.Style
+border_r_violet_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(139 92 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-yellow-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(234 179 8 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_yellow_500 : Css.Style
+border_r_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(234 179 8 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-r-zinc-500 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(113 113 122 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_zinc_500 : Css.Style
+border_r_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-right-color" "rgb(113 113 122 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-red-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(239 68 68 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_red_500 : Css.Style
+border_red_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(239 68 68 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-rose-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(244 63 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_rose_500 : Css.Style
+border_rose_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(244 63 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .border-separate {
     border-collapse: separate
 }
@@ -14679,6 +18103,46 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 border_separate : Css.Style
 border_separate =
     Css.property "border-collapse" "separate"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-sky-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(14 165 233 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_sky_500 : Css.Style
+border_sky_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(14 165 233 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-slate-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(100 116 139 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_slate_500 : Css.Style
+border_slate_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(100 116 139 / var(--tw-border-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -16870,6 +20334,26 @@ border_spacing_y_px =
 {-| This class has the effect of following css declaration:
 
 ```css
+.border-stone-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(120 113 108 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_stone_500 : Css.Style
+border_stone_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(120 113 108 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .border-t {
     border-top-width: 1px
 }
@@ -16945,6 +20429,486 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 border_t_8 : Css.Style
 border_t_8 =
     Css.property "border-top-width" "8px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-amber-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(245 158 11 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_amber_500 : Css.Style
+border_t_amber_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(245 158 11 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-blue-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(59 130 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_blue_500 : Css.Style
+border_t_blue_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(59 130 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-cyan-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(6 182 212 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_cyan_500 : Css.Style
+border_t_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(6 182 212 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-emerald-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(16 185 129 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_emerald_500 : Css.Style
+border_t_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(16 185 129 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-fuchsia-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(217 70 239 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_fuchsia_500 : Css.Style
+border_t_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(217 70 239 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-gray-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(107 114 128 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_gray_500 : Css.Style
+border_t_gray_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(107 114 128 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-green-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(34 197 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_green_500 : Css.Style
+border_t_green_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(34 197 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-indigo-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(99 102 241 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_indigo_500 : Css.Style
+border_t_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(99 102 241 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-lime-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(132 204 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_lime_500 : Css.Style
+border_t_lime_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(132 204 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-neutral-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(115 115 115 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_neutral_500 : Css.Style
+border_t_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(115 115 115 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-orange-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(249 115 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_orange_500 : Css.Style
+border_t_orange_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(249 115 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-pink-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(236 72 153 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_pink_500 : Css.Style
+border_t_pink_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(236 72 153 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-purple-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(168 85 247 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_purple_500 : Css.Style
+border_t_purple_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(168 85 247 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-red-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(239 68 68 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_red_500 : Css.Style
+border_t_red_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(239 68 68 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-rose-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(244 63 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_rose_500 : Css.Style
+border_t_rose_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(244 63 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-sky-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(14 165 233 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_sky_500 : Css.Style
+border_t_sky_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(14 165 233 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-slate-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(100 116 139 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_slate_500 : Css.Style
+border_t_slate_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(100 116 139 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-stone-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(120 113 108 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_stone_500 : Css.Style
+border_t_stone_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(120 113 108 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-teal-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(20 184 166 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_teal_500 : Css.Style
+border_t_teal_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(20 184 166 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-violet-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(139 92 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_violet_500 : Css.Style
+border_t_violet_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(139 92 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-yellow-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(234 179 8 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_yellow_500 : Css.Style
+border_t_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(234 179 8 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-t-zinc-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(113 113 122 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_zinc_500 : Css.Style
+border_t_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(113 113 122 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-teal-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(20 184 166 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_teal_500 : Css.Style
+border_teal_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(20 184 166 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-violet-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(139 92 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_violet_500 : Css.Style
+border_violet_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(139 92 246 / var(--tw-border-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -17050,6 +21014,490 @@ border_x_8 =
 {-| This class has the effect of following css declaration:
 
 ```css
+.border-x-amber-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(245 158 11 / var(--tw-border-opacity));
+    border-right-color: rgb(245 158 11 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_amber_500 : Css.Style
+border_x_amber_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(245 158 11 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(245 158 11 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-blue-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(59 130 246 / var(--tw-border-opacity));
+    border-right-color: rgb(59 130 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_blue_500 : Css.Style
+border_x_blue_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(59 130 246 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(59 130 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-cyan-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(6 182 212 / var(--tw-border-opacity));
+    border-right-color: rgb(6 182 212 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_cyan_500 : Css.Style
+border_x_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(6 182 212 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(6 182 212 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-emerald-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(16 185 129 / var(--tw-border-opacity));
+    border-right-color: rgb(16 185 129 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_emerald_500 : Css.Style
+border_x_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(16 185 129 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(16 185 129 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-fuchsia-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(217 70 239 / var(--tw-border-opacity));
+    border-right-color: rgb(217 70 239 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_fuchsia_500 : Css.Style
+border_x_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(217 70 239 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(217 70 239 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-gray-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(107 114 128 / var(--tw-border-opacity));
+    border-right-color: rgb(107 114 128 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_gray_500 : Css.Style
+border_x_gray_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(107 114 128 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(107 114 128 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-green-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(34 197 94 / var(--tw-border-opacity));
+    border-right-color: rgb(34 197 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_green_500 : Css.Style
+border_x_green_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(34 197 94 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(34 197 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-indigo-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(99 102 241 / var(--tw-border-opacity));
+    border-right-color: rgb(99 102 241 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_indigo_500 : Css.Style
+border_x_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(99 102 241 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(99 102 241 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-lime-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(132 204 22 / var(--tw-border-opacity));
+    border-right-color: rgb(132 204 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_lime_500 : Css.Style
+border_x_lime_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(132 204 22 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(132 204 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-neutral-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(115 115 115 / var(--tw-border-opacity));
+    border-right-color: rgb(115 115 115 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_neutral_500 : Css.Style
+border_x_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(115 115 115 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(115 115 115 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-orange-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(249 115 22 / var(--tw-border-opacity));
+    border-right-color: rgb(249 115 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_orange_500 : Css.Style
+border_x_orange_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(249 115 22 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(249 115 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-pink-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(236 72 153 / var(--tw-border-opacity));
+    border-right-color: rgb(236 72 153 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_pink_500 : Css.Style
+border_x_pink_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(236 72 153 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(236 72 153 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-purple-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(168 85 247 / var(--tw-border-opacity));
+    border-right-color: rgb(168 85 247 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_purple_500 : Css.Style
+border_x_purple_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(168 85 247 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(168 85 247 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-red-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(239 68 68 / var(--tw-border-opacity));
+    border-right-color: rgb(239 68 68 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_red_500 : Css.Style
+border_x_red_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(239 68 68 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(239 68 68 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-rose-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(244 63 94 / var(--tw-border-opacity));
+    border-right-color: rgb(244 63 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_rose_500 : Css.Style
+border_x_rose_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(244 63 94 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(244 63 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-sky-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(14 165 233 / var(--tw-border-opacity));
+    border-right-color: rgb(14 165 233 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_sky_500 : Css.Style
+border_x_sky_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(14 165 233 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(14 165 233 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-slate-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(100 116 139 / var(--tw-border-opacity));
+    border-right-color: rgb(100 116 139 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_slate_500 : Css.Style
+border_x_slate_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(100 116 139 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(100 116 139 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-stone-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(120 113 108 / var(--tw-border-opacity));
+    border-right-color: rgb(120 113 108 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_stone_500 : Css.Style
+border_x_stone_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(120 113 108 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(120 113 108 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-teal-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(20 184 166 / var(--tw-border-opacity));
+    border-right-color: rgb(20 184 166 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_teal_500 : Css.Style
+border_x_teal_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(20 184 166 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(20 184 166 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-violet-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(139 92 246 / var(--tw-border-opacity));
+    border-right-color: rgb(139 92 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_violet_500 : Css.Style
+border_x_violet_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(139 92 246 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(139 92 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-yellow-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(234 179 8 / var(--tw-border-opacity));
+    border-right-color: rgb(234 179 8 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_yellow_500 : Css.Style
+border_x_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(234 179 8 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(234 179 8 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-x-zinc-500 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(113 113 122 / var(--tw-border-opacity));
+    border-right-color: rgb(113 113 122 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_zinc_500 : Css.Style
+border_x_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-left-color" "rgb(113 113 122 / var(--tw-border-opacity))"
+        , Css.property "border-right-color" "rgb(113 113 122 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .border-y {
     border-top-width: 1px;
     border-bottom-width: 1px
@@ -17144,6 +21592,530 @@ border_y_8 =
     Css.batch
         [ Css.property "border-top-width" "8px"
         , Css.property "border-bottom-width" "8px"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-amber-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(245 158 11 / var(--tw-border-opacity));
+    border-bottom-color: rgb(245 158 11 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_amber_500 : Css.Style
+border_y_amber_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(245 158 11 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(245 158 11 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-blue-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(59 130 246 / var(--tw-border-opacity));
+    border-bottom-color: rgb(59 130 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_blue_500 : Css.Style
+border_y_blue_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(59 130 246 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(59 130 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-cyan-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(6 182 212 / var(--tw-border-opacity));
+    border-bottom-color: rgb(6 182 212 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_cyan_500 : Css.Style
+border_y_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(6 182 212 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(6 182 212 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-emerald-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(16 185 129 / var(--tw-border-opacity));
+    border-bottom-color: rgb(16 185 129 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_emerald_500 : Css.Style
+border_y_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(16 185 129 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(16 185 129 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-fuchsia-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(217 70 239 / var(--tw-border-opacity));
+    border-bottom-color: rgb(217 70 239 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_fuchsia_500 : Css.Style
+border_y_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(217 70 239 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(217 70 239 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-gray-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(107 114 128 / var(--tw-border-opacity));
+    border-bottom-color: rgb(107 114 128 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_gray_500 : Css.Style
+border_y_gray_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(107 114 128 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(107 114 128 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-green-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(34 197 94 / var(--tw-border-opacity));
+    border-bottom-color: rgb(34 197 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_green_500 : Css.Style
+border_y_green_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(34 197 94 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(34 197 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-indigo-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(99 102 241 / var(--tw-border-opacity));
+    border-bottom-color: rgb(99 102 241 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_indigo_500 : Css.Style
+border_y_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(99 102 241 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(99 102 241 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-lime-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(132 204 22 / var(--tw-border-opacity));
+    border-bottom-color: rgb(132 204 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_lime_500 : Css.Style
+border_y_lime_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(132 204 22 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(132 204 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-neutral-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(115 115 115 / var(--tw-border-opacity));
+    border-bottom-color: rgb(115 115 115 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_neutral_500 : Css.Style
+border_y_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(115 115 115 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(115 115 115 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-orange-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(249 115 22 / var(--tw-border-opacity));
+    border-bottom-color: rgb(249 115 22 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_orange_500 : Css.Style
+border_y_orange_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(249 115 22 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(249 115 22 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-pink-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(236 72 153 / var(--tw-border-opacity));
+    border-bottom-color: rgb(236 72 153 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_pink_500 : Css.Style
+border_y_pink_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(236 72 153 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(236 72 153 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-purple-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(168 85 247 / var(--tw-border-opacity));
+    border-bottom-color: rgb(168 85 247 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_purple_500 : Css.Style
+border_y_purple_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(168 85 247 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(168 85 247 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-red-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(239 68 68 / var(--tw-border-opacity));
+    border-bottom-color: rgb(239 68 68 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_red_500 : Css.Style
+border_y_red_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(239 68 68 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(239 68 68 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-rose-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(244 63 94 / var(--tw-border-opacity));
+    border-bottom-color: rgb(244 63 94 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_rose_500 : Css.Style
+border_y_rose_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(244 63 94 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(244 63 94 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-sky-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(14 165 233 / var(--tw-border-opacity));
+    border-bottom-color: rgb(14 165 233 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_sky_500 : Css.Style
+border_y_sky_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(14 165 233 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(14 165 233 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-slate-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(100 116 139 / var(--tw-border-opacity));
+    border-bottom-color: rgb(100 116 139 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_slate_500 : Css.Style
+border_y_slate_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(100 116 139 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(100 116 139 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-stone-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(120 113 108 / var(--tw-border-opacity));
+    border-bottom-color: rgb(120 113 108 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_stone_500 : Css.Style
+border_y_stone_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(120 113 108 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(120 113 108 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-teal-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(20 184 166 / var(--tw-border-opacity));
+    border-bottom-color: rgb(20 184 166 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_teal_500 : Css.Style
+border_y_teal_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(20 184 166 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(20 184 166 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-violet-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(139 92 246 / var(--tw-border-opacity));
+    border-bottom-color: rgb(139 92 246 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_violet_500 : Css.Style
+border_y_violet_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(139 92 246 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(139 92 246 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-yellow-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(234 179 8 / var(--tw-border-opacity));
+    border-bottom-color: rgb(234 179 8 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_yellow_500 : Css.Style
+border_y_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(234 179 8 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(234 179 8 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-y-zinc-500 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(113 113 122 / var(--tw-border-opacity));
+    border-bottom-color: rgb(113 113 122 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_zinc_500 : Css.Style
+border_y_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-top-color" "rgb(113 113 122 / var(--tw-border-opacity))"
+        , Css.property "border-bottom-color" "rgb(113 113 122 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-yellow-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(234 179 8 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_yellow_500 : Css.Style
+border_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(234 179 8 / var(--tw-border-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.border-zinc-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(113 113 122 / var(--tw-border-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_zinc_500 : Css.Style
+border_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-border-opacity" "1"
+        , Css.property "border-color" "rgb(113 113 122 / var(--tw-border-opacity))"
         ]
 
 
@@ -18505,6 +23477,358 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 capitalize : Css.Style
 capitalize =
     Css.property "text-transform" "capitalize"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-amber-500 {
+    caret-color: #f59e0b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_amber_500 : Css.Style
+caret_amber_500 =
+    Css.property "caret-color" "#f59e0b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-blue-500 {
+    caret-color: #3b82f6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_blue_500 : Css.Style
+caret_blue_500 =
+    Css.property "caret-color" "#3b82f6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-cyan-500 {
+    caret-color: #06b6d4
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_cyan_500 : Css.Style
+caret_cyan_500 =
+    Css.property "caret-color" "#06b6d4"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-emerald-500 {
+    caret-color: #10b981
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_emerald_500 : Css.Style
+caret_emerald_500 =
+    Css.property "caret-color" "#10b981"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-fuchsia-500 {
+    caret-color: #d946ef
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_fuchsia_500 : Css.Style
+caret_fuchsia_500 =
+    Css.property "caret-color" "#d946ef"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-gray-500 {
+    caret-color: #6b7280
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_gray_500 : Css.Style
+caret_gray_500 =
+    Css.property "caret-color" "#6b7280"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-green-500 {
+    caret-color: #22c55e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_green_500 : Css.Style
+caret_green_500 =
+    Css.property "caret-color" "#22c55e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-indigo-500 {
+    caret-color: #6366f1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_indigo_500 : Css.Style
+caret_indigo_500 =
+    Css.property "caret-color" "#6366f1"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-lime-500 {
+    caret-color: #84cc16
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_lime_500 : Css.Style
+caret_lime_500 =
+    Css.property "caret-color" "#84cc16"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-neutral-500 {
+    caret-color: #737373
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_neutral_500 : Css.Style
+caret_neutral_500 =
+    Css.property "caret-color" "#737373"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-orange-500 {
+    caret-color: #f97316
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_orange_500 : Css.Style
+caret_orange_500 =
+    Css.property "caret-color" "#f97316"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-pink-500 {
+    caret-color: #ec4899
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_pink_500 : Css.Style
+caret_pink_500 =
+    Css.property "caret-color" "#ec4899"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-purple-500 {
+    caret-color: #a855f7
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_purple_500 : Css.Style
+caret_purple_500 =
+    Css.property "caret-color" "#a855f7"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-red-500 {
+    caret-color: #ef4444
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_red_500 : Css.Style
+caret_red_500 =
+    Css.property "caret-color" "#ef4444"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-rose-500 {
+    caret-color: #f43f5e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_rose_500 : Css.Style
+caret_rose_500 =
+    Css.property "caret-color" "#f43f5e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-sky-500 {
+    caret-color: #0ea5e9
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_sky_500 : Css.Style
+caret_sky_500 =
+    Css.property "caret-color" "#0ea5e9"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-slate-500 {
+    caret-color: #64748b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_slate_500 : Css.Style
+caret_slate_500 =
+    Css.property "caret-color" "#64748b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-stone-500 {
+    caret-color: #78716c
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_stone_500 : Css.Style
+caret_stone_500 =
+    Css.property "caret-color" "#78716c"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-teal-500 {
+    caret-color: #14b8a6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_teal_500 : Css.Style
+caret_teal_500 =
+    Css.property "caret-color" "#14b8a6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-violet-500 {
+    caret-color: #8b5cf6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_violet_500 : Css.Style
+caret_violet_500 =
+    Css.property "caret-color" "#8b5cf6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-yellow-500 {
+    caret-color: #eab308
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_yellow_500 : Css.Style
+caret_yellow_500 =
+    Css.property "caret-color" "#eab308"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.caret-zinc-500 {
+    caret-color: #71717a
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_zinc_500 : Css.Style
+caret_zinc_500 =
+    Css.property "caret-color" "#71717a"
 
 
 {-| This class has the effect of following css declaration:
@@ -20633,6 +25957,22 @@ decoration_8 =
 {-| This class has the effect of following css declaration:
 
 ```css
+.decoration-amber-500 {
+    text-decoration-color: #f59e0b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_amber_500 : Css.Style
+decoration_amber_500 =
+    Css.property "text-decoration-color" "#f59e0b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .decoration-auto {
     text-decoration-thickness: auto
 }
@@ -20649,6 +25989,22 @@ decoration_auto =
 {-| This class has the effect of following css declaration:
 
 ```css
+.decoration-blue-500 {
+    text-decoration-color: #3b82f6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_blue_500 : Css.Style
+decoration_blue_500 =
+    Css.property "text-decoration-color" "#3b82f6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .decoration-clone {
     box-decoration-break: clone
 }
@@ -20660,6 +26016,22 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 decoration_clone : Css.Style
 decoration_clone =
     Css.property "box-decoration-break" "clone"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-cyan-500 {
+    text-decoration-color: #06b6d4
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_cyan_500 : Css.Style
+decoration_cyan_500 =
+    Css.property "text-decoration-color" "#06b6d4"
 
 
 {-| This class has the effect of following css declaration:
@@ -20713,6 +26085,22 @@ decoration_double =
 {-| This class has the effect of following css declaration:
 
 ```css
+.decoration-emerald-500 {
+    text-decoration-color: #10b981
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_emerald_500 : Css.Style
+decoration_emerald_500 =
+    Css.property "text-decoration-color" "#10b981"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .decoration-from-font {
     text-decoration-thickness: from-font
 }
@@ -20724,6 +26112,214 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 decoration_from_font : Css.Style
 decoration_from_font =
     Css.property "text-decoration-thickness" "from-font"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-fuchsia-500 {
+    text-decoration-color: #d946ef
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_fuchsia_500 : Css.Style
+decoration_fuchsia_500 =
+    Css.property "text-decoration-color" "#d946ef"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-gray-500 {
+    text-decoration-color: #6b7280
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_gray_500 : Css.Style
+decoration_gray_500 =
+    Css.property "text-decoration-color" "#6b7280"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-green-500 {
+    text-decoration-color: #22c55e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_green_500 : Css.Style
+decoration_green_500 =
+    Css.property "text-decoration-color" "#22c55e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-indigo-500 {
+    text-decoration-color: #6366f1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_indigo_500 : Css.Style
+decoration_indigo_500 =
+    Css.property "text-decoration-color" "#6366f1"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-lime-500 {
+    text-decoration-color: #84cc16
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_lime_500 : Css.Style
+decoration_lime_500 =
+    Css.property "text-decoration-color" "#84cc16"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-neutral-500 {
+    text-decoration-color: #737373
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_neutral_500 : Css.Style
+decoration_neutral_500 =
+    Css.property "text-decoration-color" "#737373"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-orange-500 {
+    text-decoration-color: #f97316
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_orange_500 : Css.Style
+decoration_orange_500 =
+    Css.property "text-decoration-color" "#f97316"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-pink-500 {
+    text-decoration-color: #ec4899
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_pink_500 : Css.Style
+decoration_pink_500 =
+    Css.property "text-decoration-color" "#ec4899"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-purple-500 {
+    text-decoration-color: #a855f7
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_purple_500 : Css.Style
+decoration_purple_500 =
+    Css.property "text-decoration-color" "#a855f7"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-red-500 {
+    text-decoration-color: #ef4444
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_red_500 : Css.Style
+decoration_red_500 =
+    Css.property "text-decoration-color" "#ef4444"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-rose-500 {
+    text-decoration-color: #f43f5e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_rose_500 : Css.Style
+decoration_rose_500 =
+    Css.property "text-decoration-color" "#f43f5e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-sky-500 {
+    text-decoration-color: #0ea5e9
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_sky_500 : Css.Style
+decoration_sky_500 =
+    Css.property "text-decoration-color" "#0ea5e9"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-slate-500 {
+    text-decoration-color: #64748b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_slate_500 : Css.Style
+decoration_slate_500 =
+    Css.property "text-decoration-color" "#64748b"
 
 
 {-| This class has the effect of following css declaration:
@@ -20761,6 +26357,54 @@ decoration_solid =
 {-| This class has the effect of following css declaration:
 
 ```css
+.decoration-stone-500 {
+    text-decoration-color: #78716c
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_stone_500 : Css.Style
+decoration_stone_500 =
+    Css.property "text-decoration-color" "#78716c"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-teal-500 {
+    text-decoration-color: #14b8a6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_teal_500 : Css.Style
+decoration_teal_500 =
+    Css.property "text-decoration-color" "#14b8a6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-violet-500 {
+    text-decoration-color: #8b5cf6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_violet_500 : Css.Style
+decoration_violet_500 =
+    Css.property "text-decoration-color" "#8b5cf6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .decoration-wavy {
     text-decoration-style: wavy
 }
@@ -20772,6 +26416,38 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 decoration_wavy : Css.Style
 decoration_wavy =
     Css.property "text-decoration-style" "wavy"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-yellow-500 {
+    text-decoration-color: #eab308
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_yellow_500 : Css.Style
+decoration_yellow_500 =
+    Css.property "text-decoration-color" "#eab308"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.decoration-zinc-500 {
+    text-decoration-color: #71717a
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_zinc_500 : Css.Style
+decoration_zinc_500 =
+    Css.property "text-decoration-color" "#71717a"
 
 
 {-| This class has the effect of following css declaration:
@@ -20925,6 +26601,78 @@ diagonal_fractions =
 {-| This class has the effect of following css declaration:
 
 ```css
+.divide-amber-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(245 158 11 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_amber_500 : Css.Style
+divide_amber_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(245 158 11 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-blue-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(59 130 246 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_blue_500 : Css.Style
+divide_blue_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(59 130 246 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-cyan-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(6 182 212 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_cyan_500 : Css.Style
+divide_cyan_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(6 182 212 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .divide-dashed > :not([hidden]) ~ :not([hidden]) {
     border-style: dashed
 }
@@ -20983,6 +26731,174 @@ divide_double =
         [ Css.Global.children
             [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
                 [ Css.property "border-style" "double"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-emerald-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(16 185 129 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_emerald_500 : Css.Style
+divide_emerald_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(16 185 129 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-fuchsia-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(217 70 239 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_fuchsia_500 : Css.Style
+divide_fuchsia_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(217 70 239 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-gray-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(107 114 128 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_gray_500 : Css.Style
+divide_gray_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(107 114 128 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-green-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(34 197 94 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_green_500 : Css.Style
+divide_green_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(34 197 94 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-indigo-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(99 102 241 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_indigo_500 : Css.Style
+divide_indigo_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(99 102 241 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-lime-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(132 204 22 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_lime_500 : Css.Style
+divide_lime_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(132 204 22 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-neutral-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(115 115 115 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_neutral_500 : Css.Style
+divide_neutral_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(115 115 115 / var(--tw-divide-opacity))"
                 ]
             ]
         ]
@@ -21343,6 +27259,174 @@ divide_opacity_95 =
 {-| This class has the effect of following css declaration:
 
 ```css
+.divide-orange-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(249 115 22 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_orange_500 : Css.Style
+divide_orange_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(249 115 22 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-pink-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(236 72 153 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_pink_500 : Css.Style
+divide_pink_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(236 72 153 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-purple-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(168 85 247 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_purple_500 : Css.Style
+divide_purple_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(168 85 247 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-red-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(239 68 68 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_red_500 : Css.Style
+divide_red_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(239 68 68 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-rose-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(244 63 94 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_rose_500 : Css.Style
+divide_rose_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(244 63 94 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-sky-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(14 165 233 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_sky_500 : Css.Style
+divide_sky_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(14 165 233 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-slate-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(100 116 139 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_slate_500 : Css.Style
+divide_slate_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(100 116 139 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .divide-solid > :not([hidden]) ~ :not([hidden]) {
     border-style: solid
 }
@@ -21357,6 +27441,78 @@ divide_solid =
         [ Css.Global.children
             [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
                 [ Css.property "border-style" "solid"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-stone-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(120 113 108 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_stone_500 : Css.Style
+divide_stone_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(120 113 108 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-teal-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(20 184 166 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_teal_500 : Css.Style
+divide_teal_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(20 184 166 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-violet-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(139 92 246 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_violet_500 : Css.Style
+divide_violet_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(139 92 246 / var(--tw-divide-opacity))"
                 ]
             ]
         ]
@@ -21661,6 +27817,54 @@ divide_y_reverse =
         [ Css.Global.children
             [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
                 [ Css.property "--tw-divide-y-reverse" "1"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-yellow-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(234 179 8 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_yellow_500 : Css.Style
+divide_yellow_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(234 179 8 / var(--tw-divide-opacity))"
+                ]
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.divide-zinc-500 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(113 113 122 / var(--tw-divide-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_zinc_500 : Css.Style
+divide_zinc_500 =
+    Css.batch
+        [ Css.Global.children
+            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+                [ Css.property "--tw-divide-opacity" "1"
+                , Css.property "border-color" "rgb(113 113 122 / var(--tw-divide-opacity))"
                 ]
             ]
         ]
@@ -21996,6 +28200,358 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 ease_out : Css.Style
 ease_out =
     Css.property "transition-timing-function" "cubic-bezier(0, 0, 0.2, 1)"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-amber-500 {
+    fill: #f59e0b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_amber_500 : Css.Style
+fill_amber_500 =
+    Css.property "fill" "#f59e0b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-blue-500 {
+    fill: #3b82f6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_blue_500 : Css.Style
+fill_blue_500 =
+    Css.property "fill" "#3b82f6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-cyan-500 {
+    fill: #06b6d4
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_cyan_500 : Css.Style
+fill_cyan_500 =
+    Css.property "fill" "#06b6d4"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-emerald-500 {
+    fill: #10b981
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_emerald_500 : Css.Style
+fill_emerald_500 =
+    Css.property "fill" "#10b981"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-fuchsia-500 {
+    fill: #d946ef
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_fuchsia_500 : Css.Style
+fill_fuchsia_500 =
+    Css.property "fill" "#d946ef"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-gray-500 {
+    fill: #6b7280
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_gray_500 : Css.Style
+fill_gray_500 =
+    Css.property "fill" "#6b7280"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-green-500 {
+    fill: #22c55e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_green_500 : Css.Style
+fill_green_500 =
+    Css.property "fill" "#22c55e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-indigo-500 {
+    fill: #6366f1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_indigo_500 : Css.Style
+fill_indigo_500 =
+    Css.property "fill" "#6366f1"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-lime-500 {
+    fill: #84cc16
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_lime_500 : Css.Style
+fill_lime_500 =
+    Css.property "fill" "#84cc16"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-neutral-500 {
+    fill: #737373
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_neutral_500 : Css.Style
+fill_neutral_500 =
+    Css.property "fill" "#737373"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-orange-500 {
+    fill: #f97316
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_orange_500 : Css.Style
+fill_orange_500 =
+    Css.property "fill" "#f97316"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-pink-500 {
+    fill: #ec4899
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_pink_500 : Css.Style
+fill_pink_500 =
+    Css.property "fill" "#ec4899"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-purple-500 {
+    fill: #a855f7
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_purple_500 : Css.Style
+fill_purple_500 =
+    Css.property "fill" "#a855f7"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-red-500 {
+    fill: #ef4444
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_red_500 : Css.Style
+fill_red_500 =
+    Css.property "fill" "#ef4444"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-rose-500 {
+    fill: #f43f5e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_rose_500 : Css.Style
+fill_rose_500 =
+    Css.property "fill" "#f43f5e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-sky-500 {
+    fill: #0ea5e9
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_sky_500 : Css.Style
+fill_sky_500 =
+    Css.property "fill" "#0ea5e9"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-slate-500 {
+    fill: #64748b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_slate_500 : Css.Style
+fill_slate_500 =
+    Css.property "fill" "#64748b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-stone-500 {
+    fill: #78716c
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_stone_500 : Css.Style
+fill_stone_500 =
+    Css.property "fill" "#78716c"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-teal-500 {
+    fill: #14b8a6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_teal_500 : Css.Style
+fill_teal_500 =
+    Css.property "fill" "#14b8a6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-violet-500 {
+    fill: #8b5cf6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_violet_500 : Css.Style
+fill_violet_500 =
+    Css.property "fill" "#8b5cf6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-yellow-500 {
+    fill: #eab308
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_yellow_500 : Css.Style
+fill_yellow_500 =
+    Css.property "fill" "#eab308"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.fill-zinc-500 {
+    fill: #71717a
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_zinc_500 : Css.Style
+fill_zinc_500 =
+    Css.property "fill" "#71717a"
 
 
 {-| This class has the effect of following css declaration:
@@ -22364,6 +28920,22 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 flow_root : Css.Style
 flow_root =
     Css.property "display" "flow-root"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.font-black {
+    font-weight: 900
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+font_black : Css.Style
+font_black =
+    Css.property "font-weight" "900"
 
 
 {-| This class has the effect of following css declaration:
@@ -23198,6 +29770,490 @@ form_textarea =
             , Css.property "box-shadow" "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)"
             , Css.property "border-color" "#2563eb"
             ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-amber-500 {
+    --tw-gradient-from: #f59e0b;
+    --tw-gradient-to: rgb(245 158 11 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_amber_500 : Css.Style
+from_amber_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#f59e0b"
+        , Css.property "--tw-gradient-to" "rgb(245 158 11 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-blue-500 {
+    --tw-gradient-from: #3b82f6;
+    --tw-gradient-to: rgb(59 130 246 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_blue_500 : Css.Style
+from_blue_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#3b82f6"
+        , Css.property "--tw-gradient-to" "rgb(59 130 246 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-cyan-500 {
+    --tw-gradient-from: #06b6d4;
+    --tw-gradient-to: rgb(6 182 212 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_cyan_500 : Css.Style
+from_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#06b6d4"
+        , Css.property "--tw-gradient-to" "rgb(6 182 212 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-emerald-500 {
+    --tw-gradient-from: #10b981;
+    --tw-gradient-to: rgb(16 185 129 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_emerald_500 : Css.Style
+from_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#10b981"
+        , Css.property "--tw-gradient-to" "rgb(16 185 129 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-fuchsia-500 {
+    --tw-gradient-from: #d946ef;
+    --tw-gradient-to: rgb(217 70 239 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_fuchsia_500 : Css.Style
+from_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#d946ef"
+        , Css.property "--tw-gradient-to" "rgb(217 70 239 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-gray-500 {
+    --tw-gradient-from: #6b7280;
+    --tw-gradient-to: rgb(107 114 128 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_gray_500 : Css.Style
+from_gray_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#6b7280"
+        , Css.property "--tw-gradient-to" "rgb(107 114 128 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-green-500 {
+    --tw-gradient-from: #22c55e;
+    --tw-gradient-to: rgb(34 197 94 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_green_500 : Css.Style
+from_green_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#22c55e"
+        , Css.property "--tw-gradient-to" "rgb(34 197 94 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-indigo-500 {
+    --tw-gradient-from: #6366f1;
+    --tw-gradient-to: rgb(99 102 241 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_indigo_500 : Css.Style
+from_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#6366f1"
+        , Css.property "--tw-gradient-to" "rgb(99 102 241 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-lime-500 {
+    --tw-gradient-from: #84cc16;
+    --tw-gradient-to: rgb(132 204 22 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_lime_500 : Css.Style
+from_lime_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#84cc16"
+        , Css.property "--tw-gradient-to" "rgb(132 204 22 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-neutral-500 {
+    --tw-gradient-from: #737373;
+    --tw-gradient-to: rgb(115 115 115 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_neutral_500 : Css.Style
+from_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#737373"
+        , Css.property "--tw-gradient-to" "rgb(115 115 115 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-orange-500 {
+    --tw-gradient-from: #f97316;
+    --tw-gradient-to: rgb(249 115 22 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_orange_500 : Css.Style
+from_orange_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#f97316"
+        , Css.property "--tw-gradient-to" "rgb(249 115 22 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-pink-500 {
+    --tw-gradient-from: #ec4899;
+    --tw-gradient-to: rgb(236 72 153 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_pink_500 : Css.Style
+from_pink_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#ec4899"
+        , Css.property "--tw-gradient-to" "rgb(236 72 153 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-purple-500 {
+    --tw-gradient-from: #a855f7;
+    --tw-gradient-to: rgb(168 85 247 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_purple_500 : Css.Style
+from_purple_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#a855f7"
+        , Css.property "--tw-gradient-to" "rgb(168 85 247 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-red-500 {
+    --tw-gradient-from: #ef4444;
+    --tw-gradient-to: rgb(239 68 68 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_red_500 : Css.Style
+from_red_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#ef4444"
+        , Css.property "--tw-gradient-to" "rgb(239 68 68 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-rose-500 {
+    --tw-gradient-from: #f43f5e;
+    --tw-gradient-to: rgb(244 63 94 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_rose_500 : Css.Style
+from_rose_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#f43f5e"
+        , Css.property "--tw-gradient-to" "rgb(244 63 94 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-sky-500 {
+    --tw-gradient-from: #0ea5e9;
+    --tw-gradient-to: rgb(14 165 233 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_sky_500 : Css.Style
+from_sky_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#0ea5e9"
+        , Css.property "--tw-gradient-to" "rgb(14 165 233 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-slate-500 {
+    --tw-gradient-from: #64748b;
+    --tw-gradient-to: rgb(100 116 139 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_slate_500 : Css.Style
+from_slate_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#64748b"
+        , Css.property "--tw-gradient-to" "rgb(100 116 139 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-stone-500 {
+    --tw-gradient-from: #78716c;
+    --tw-gradient-to: rgb(120 113 108 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_stone_500 : Css.Style
+from_stone_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#78716c"
+        , Css.property "--tw-gradient-to" "rgb(120 113 108 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-teal-500 {
+    --tw-gradient-from: #14b8a6;
+    --tw-gradient-to: rgb(20 184 166 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_teal_500 : Css.Style
+from_teal_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#14b8a6"
+        , Css.property "--tw-gradient-to" "rgb(20 184 166 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-violet-500 {
+    --tw-gradient-from: #8b5cf6;
+    --tw-gradient-to: rgb(139 92 246 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_violet_500 : Css.Style
+from_violet_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#8b5cf6"
+        , Css.property "--tw-gradient-to" "rgb(139 92 246 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-yellow-500 {
+    --tw-gradient-from: #eab308;
+    --tw-gradient-to: rgb(234 179 8 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_yellow_500 : Css.Style
+from_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#eab308"
+        , Css.property "--tw-gradient-to" "rgb(234 179 8 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.from-zinc-500 {
+    --tw-gradient-from: #71717a;
+    --tw-gradient-to: rgb(113 113 122 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_zinc_500 : Css.Style
+from_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#71717a"
+        , Css.property "--tw-gradient-to" "rgb(113 113 122 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
         ]
 
 
@@ -57684,6 +64740,54 @@ outline_8 =
 {-| This class has the effect of following css declaration:
 
 ```css
+.outline-amber-500 {
+    outline-color: #f59e0b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_amber_500 : Css.Style
+outline_amber_500 =
+    Css.property "outline-color" "#f59e0b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-blue-500 {
+    outline-color: #3b82f6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_blue_500 : Css.Style
+outline_blue_500 =
+    Css.property "outline-color" "#3b82f6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-cyan-500 {
+    outline-color: #06b6d4
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_cyan_500 : Css.Style
+outline_cyan_500 =
+    Css.property "outline-color" "#06b6d4"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .outline-dashed {
     outline-style: dashed
 }
@@ -57732,6 +64836,70 @@ outline_double =
 {-| This class has the effect of following css declaration:
 
 ```css
+.outline-emerald-500 {
+    outline-color: #10b981
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_emerald_500 : Css.Style
+outline_emerald_500 =
+    Css.property "outline-color" "#10b981"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-fuchsia-500 {
+    outline-color: #d946ef
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_fuchsia_500 : Css.Style
+outline_fuchsia_500 =
+    Css.property "outline-color" "#d946ef"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-gray-500 {
+    outline-color: #6b7280
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_gray_500 : Css.Style
+outline_gray_500 =
+    Css.property "outline-color" "#6b7280"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-green-500 {
+    outline-color: #22c55e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_green_500 : Css.Style
+outline_green_500 =
+    Css.property "outline-color" "#22c55e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .outline-hidden {
     outline-style: hidden
 }
@@ -57743,6 +64911,54 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 outline_hidden : Css.Style
 outline_hidden =
     Css.property "outline-style" "hidden"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-indigo-500 {
+    outline-color: #6366f1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_indigo_500 : Css.Style
+outline_indigo_500 =
+    Css.property "outline-color" "#6366f1"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-lime-500 {
+    outline-color: #84cc16
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_lime_500 : Css.Style
+outline_lime_500 =
+    Css.property "outline-color" "#84cc16"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-neutral-500 {
+    outline-color: #737373
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_neutral_500 : Css.Style
+outline_neutral_500 =
+    Css.property "outline-color" "#737373"
 
 
 {-| This class has the effect of following css declaration:
@@ -57843,6 +65059,198 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 outline_offset_8 : Css.Style
 outline_offset_8 =
     Css.property "outline-offset" "8px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-orange-500 {
+    outline-color: #f97316
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_orange_500 : Css.Style
+outline_orange_500 =
+    Css.property "outline-color" "#f97316"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-pink-500 {
+    outline-color: #ec4899
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_pink_500 : Css.Style
+outline_pink_500 =
+    Css.property "outline-color" "#ec4899"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-purple-500 {
+    outline-color: #a855f7
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_purple_500 : Css.Style
+outline_purple_500 =
+    Css.property "outline-color" "#a855f7"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-red-500 {
+    outline-color: #ef4444
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_red_500 : Css.Style
+outline_red_500 =
+    Css.property "outline-color" "#ef4444"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-rose-500 {
+    outline-color: #f43f5e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_rose_500 : Css.Style
+outline_rose_500 =
+    Css.property "outline-color" "#f43f5e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-sky-500 {
+    outline-color: #0ea5e9
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_sky_500 : Css.Style
+outline_sky_500 =
+    Css.property "outline-color" "#0ea5e9"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-slate-500 {
+    outline-color: #64748b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_slate_500 : Css.Style
+outline_slate_500 =
+    Css.property "outline-color" "#64748b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-stone-500 {
+    outline-color: #78716c
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_stone_500 : Css.Style
+outline_stone_500 =
+    Css.property "outline-color" "#78716c"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-teal-500 {
+    outline-color: #14b8a6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_teal_500 : Css.Style
+outline_teal_500 =
+    Css.property "outline-color" "#14b8a6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-violet-500 {
+    outline-color: #8b5cf6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_violet_500 : Css.Style
+outline_violet_500 =
+    Css.property "outline-color" "#8b5cf6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-yellow-500 {
+    outline-color: #eab308
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_yellow_500 : Css.Style
+outline_yellow_500 =
+    Css.property "outline-color" "#eab308"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.outline-zinc-500 {
+    outline-color: #71717a
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_zinc_500 : Css.Style
+outline_zinc_500 =
+    Css.property "outline-color" "#71717a"
 
 
 {-| This class has the effect of following css declaration:
@@ -60200,6 +67608,226 @@ place_self_stretch =
 {-| This class has the effect of following css declaration:
 
 ```css
+.placeholder-amber-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(245 158 11 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_amber_500 : Css.Style
+placeholder_amber_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(245 158 11 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-blue-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(59 130 246 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_blue_500 : Css.Style
+placeholder_blue_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(59 130 246 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-cyan-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(6 182 212 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_cyan_500 : Css.Style
+placeholder_cyan_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(6 182 212 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-emerald-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(16 185 129 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_emerald_500 : Css.Style
+placeholder_emerald_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(16 185 129 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-fuchsia-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(217 70 239 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_fuchsia_500 : Css.Style
+placeholder_fuchsia_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(217 70 239 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-gray-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_gray_500 : Css.Style
+placeholder_gray_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(107 114 128 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-green-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(34 197 94 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_green_500 : Css.Style
+placeholder_green_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(34 197 94 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-indigo-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(99 102 241 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_indigo_500 : Css.Style
+placeholder_indigo_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(99 102 241 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-lime-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(132 204 22 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_lime_500 : Css.Style
+placeholder_lime_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(132 204 22 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-neutral-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(115 115 115 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_neutral_500 : Css.Style
+placeholder_neutral_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(115 115 115 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .placeholder-opacity-0::placeholder {
     --tw-placeholder-opacity: 0
 }
@@ -60493,6 +68121,270 @@ placeholder_opacity_95 =
     Css.batch
         [ Css.pseudoElement "placeholder"
             [ Css.property "--tw-placeholder-opacity" "0.95"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-orange-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(249 115 22 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_orange_500 : Css.Style
+placeholder_orange_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(249 115 22 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-pink-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(236 72 153 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_pink_500 : Css.Style
+placeholder_pink_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(236 72 153 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-purple-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(168 85 247 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_purple_500 : Css.Style
+placeholder_purple_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(168 85 247 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-red-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(239 68 68 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_red_500 : Css.Style
+placeholder_red_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(239 68 68 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-rose-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(244 63 94 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_rose_500 : Css.Style
+placeholder_rose_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(244 63 94 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-sky-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(14 165 233 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_sky_500 : Css.Style
+placeholder_sky_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(14 165 233 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-slate-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(100 116 139 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_slate_500 : Css.Style
+placeholder_slate_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(100 116 139 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-stone-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(120 113 108 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_stone_500 : Css.Style
+placeholder_stone_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(120 113 108 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-teal-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(20 184 166 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_teal_500 : Css.Style
+placeholder_teal_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(20 184 166 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-violet-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(139 92 246 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_violet_500 : Css.Style
+placeholder_violet_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(139 92 246 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-yellow-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(234 179 8 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_yellow_500 : Css.Style
+placeholder_yellow_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(234 179 8 / var(--tw-placeholder-opacity))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.placeholder-zinc-500::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(113 113 122 / var(--tw-placeholder-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_zinc_500 : Css.Style
+placeholder_zinc_500 =
+    Css.batch
+        [ Css.pseudoElement "placeholder"
+            [ Css.property "--tw-placeholder-opacity" "1"
+            , Css.property "color" "rgb(113 113 122 / var(--tw-placeholder-opacity))"
             ]
         ]
 
@@ -68157,6 +76049,166 @@ ring_8 =
 {-| This class has the effect of following css declaration:
 
 ```css
+.ring-amber-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(245 158 11 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_amber_500 : Css.Style
+ring_amber_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(245 158 11 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-blue-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_blue_500 : Css.Style
+ring_blue_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(59 130 246 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-cyan-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(6 182 212 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_cyan_500 : Css.Style
+ring_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(6 182 212 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-emerald-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(16 185 129 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_emerald_500 : Css.Style
+ring_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(16 185 129 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-fuchsia-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(217 70 239 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_fuchsia_500 : Css.Style
+ring_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(217 70 239 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-gray-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(107 114 128 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_gray_500 : Css.Style
+ring_gray_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(107 114 128 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-green-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(34 197 94 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_green_500 : Css.Style
+ring_green_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(34 197 94 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-indigo-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_indigo_500 : Css.Style
+ring_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(99 102 241 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .ring-inset {
     --tw-ring-inset: inset
 }
@@ -68168,6 +76220,46 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 ring_inset : Css.Style
 ring_inset =
     Css.property "--tw-ring-inset" "inset"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-lime-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(132 204 22 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_lime_500 : Css.Style
+ring_lime_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(132 204 22 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-neutral-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(115 115 115 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_neutral_500 : Css.Style
+ring_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(115 115 115 / var(--tw-ring-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -68248,6 +76340,358 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 ring_offset_8 : Css.Style
 ring_offset_8 =
     Css.property "--tw-ring-offset-width" "8px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-amber-500 {
+    --tw-ring-offset-color: #f59e0b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_amber_500 : Css.Style
+ring_offset_amber_500 =
+    Css.property "--tw-ring-offset-color" "#f59e0b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-blue-500 {
+    --tw-ring-offset-color: #3b82f6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_blue_500 : Css.Style
+ring_offset_blue_500 =
+    Css.property "--tw-ring-offset-color" "#3b82f6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-cyan-500 {
+    --tw-ring-offset-color: #06b6d4
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_cyan_500 : Css.Style
+ring_offset_cyan_500 =
+    Css.property "--tw-ring-offset-color" "#06b6d4"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-emerald-500 {
+    --tw-ring-offset-color: #10b981
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_emerald_500 : Css.Style
+ring_offset_emerald_500 =
+    Css.property "--tw-ring-offset-color" "#10b981"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-fuchsia-500 {
+    --tw-ring-offset-color: #d946ef
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_fuchsia_500 : Css.Style
+ring_offset_fuchsia_500 =
+    Css.property "--tw-ring-offset-color" "#d946ef"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-gray-500 {
+    --tw-ring-offset-color: #6b7280
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_gray_500 : Css.Style
+ring_offset_gray_500 =
+    Css.property "--tw-ring-offset-color" "#6b7280"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-green-500 {
+    --tw-ring-offset-color: #22c55e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_green_500 : Css.Style
+ring_offset_green_500 =
+    Css.property "--tw-ring-offset-color" "#22c55e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-indigo-500 {
+    --tw-ring-offset-color: #6366f1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_indigo_500 : Css.Style
+ring_offset_indigo_500 =
+    Css.property "--tw-ring-offset-color" "#6366f1"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-lime-500 {
+    --tw-ring-offset-color: #84cc16
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_lime_500 : Css.Style
+ring_offset_lime_500 =
+    Css.property "--tw-ring-offset-color" "#84cc16"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-neutral-500 {
+    --tw-ring-offset-color: #737373
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_neutral_500 : Css.Style
+ring_offset_neutral_500 =
+    Css.property "--tw-ring-offset-color" "#737373"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-orange-500 {
+    --tw-ring-offset-color: #f97316
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_orange_500 : Css.Style
+ring_offset_orange_500 =
+    Css.property "--tw-ring-offset-color" "#f97316"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-pink-500 {
+    --tw-ring-offset-color: #ec4899
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_pink_500 : Css.Style
+ring_offset_pink_500 =
+    Css.property "--tw-ring-offset-color" "#ec4899"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-purple-500 {
+    --tw-ring-offset-color: #a855f7
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_purple_500 : Css.Style
+ring_offset_purple_500 =
+    Css.property "--tw-ring-offset-color" "#a855f7"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-red-500 {
+    --tw-ring-offset-color: #ef4444
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_red_500 : Css.Style
+ring_offset_red_500 =
+    Css.property "--tw-ring-offset-color" "#ef4444"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-rose-500 {
+    --tw-ring-offset-color: #f43f5e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_rose_500 : Css.Style
+ring_offset_rose_500 =
+    Css.property "--tw-ring-offset-color" "#f43f5e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-sky-500 {
+    --tw-ring-offset-color: #0ea5e9
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_sky_500 : Css.Style
+ring_offset_sky_500 =
+    Css.property "--tw-ring-offset-color" "#0ea5e9"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-slate-500 {
+    --tw-ring-offset-color: #64748b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_slate_500 : Css.Style
+ring_offset_slate_500 =
+    Css.property "--tw-ring-offset-color" "#64748b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-stone-500 {
+    --tw-ring-offset-color: #78716c
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_stone_500 : Css.Style
+ring_offset_stone_500 =
+    Css.property "--tw-ring-offset-color" "#78716c"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-teal-500 {
+    --tw-ring-offset-color: #14b8a6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_teal_500 : Css.Style
+ring_offset_teal_500 =
+    Css.property "--tw-ring-offset-color" "#14b8a6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-violet-500 {
+    --tw-ring-offset-color: #8b5cf6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_violet_500 : Css.Style
+ring_offset_violet_500 =
+    Css.property "--tw-ring-offset-color" "#8b5cf6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-yellow-500 {
+    --tw-ring-offset-color: #eab308
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_yellow_500 : Css.Style
+ring_offset_yellow_500 =
+    Css.property "--tw-ring-offset-color" "#eab308"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-offset-zinc-500 {
+    --tw-ring-offset-color: #71717a
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_zinc_500 : Css.Style
+ring_offset_zinc_500 =
+    Css.property "--tw-ring-offset-color" "#71717a"
 
 
 {-| This class has the effect of following css declaration:
@@ -68488,6 +76932,246 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 ring_opacity_95 : Css.Style
 ring_opacity_95 =
     Css.property "--tw-ring-opacity" "0.95"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-orange-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(249 115 22 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_orange_500 : Css.Style
+ring_orange_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(249 115 22 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-pink-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(236 72 153 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_pink_500 : Css.Style
+ring_pink_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(236 72 153 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-purple-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(168 85 247 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_purple_500 : Css.Style
+ring_purple_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(168 85 247 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-red-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(239 68 68 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_red_500 : Css.Style
+ring_red_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(239 68 68 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-rose-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(244 63 94 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_rose_500 : Css.Style
+ring_rose_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(244 63 94 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-sky-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(14 165 233 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_sky_500 : Css.Style
+ring_sky_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(14 165 233 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-slate-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(100 116 139 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_slate_500 : Css.Style
+ring_slate_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(100 116 139 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-stone-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(120 113 108 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_stone_500 : Css.Style
+ring_stone_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(120 113 108 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-teal-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(20 184 166 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_teal_500 : Css.Style
+ring_teal_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(20 184 166 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-violet-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(139 92 246 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_violet_500 : Css.Style
+ring_violet_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(139 92 246 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-yellow-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(234 179 8 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_yellow_500 : Css.Style
+ring_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(234 179 8 / var(--tw-ring-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.ring-zinc-500 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(113 113 122 / var(--tw-ring-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_zinc_500 : Css.Style
+ring_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-ring-opacity" "1"
+        , Css.property "--tw-ring-color" "rgb(113 113 122 / var(--tw-ring-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -79893,6 +88577,166 @@ shadow_2xl =
 {-| This class has the effect of following css declaration:
 
 ```css
+.shadow-amber-500 {
+    --tw-shadow-color: #f59e0b;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_amber_500 : Css.Style
+shadow_amber_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#f59e0b"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-blue-500 {
+    --tw-shadow-color: #3b82f6;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_blue_500 : Css.Style
+shadow_blue_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#3b82f6"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-cyan-500 {
+    --tw-shadow-color: #06b6d4;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_cyan_500 : Css.Style
+shadow_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#06b6d4"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-emerald-500 {
+    --tw-shadow-color: #10b981;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_emerald_500 : Css.Style
+shadow_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#10b981"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-fuchsia-500 {
+    --tw-shadow-color: #d946ef;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_fuchsia_500 : Css.Style
+shadow_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#d946ef"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-gray-500 {
+    --tw-shadow-color: #6b7280;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_gray_500 : Css.Style
+shadow_gray_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#6b7280"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-green-500 {
+    --tw-shadow-color: #22c55e;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_green_500 : Css.Style
+shadow_green_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#22c55e"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-indigo-500 {
+    --tw-shadow-color: #6366f1;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_indigo_500 : Css.Style
+shadow_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#6366f1"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .shadow-inner {
     --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
     --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
@@ -79937,6 +88781,26 @@ shadow_lg =
 {-| This class has the effect of following css declaration:
 
 ```css
+.shadow-lime-500 {
+    --tw-shadow-color: #84cc16;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_lime_500 : Css.Style
+shadow_lime_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#84cc16"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .shadow-md {
     --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -79953,6 +88817,26 @@ shadow_md =
         [ Css.property "--tw-shadow" "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)"
         , Css.property "--tw-shadow-colored" "0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color)"
         , Css.property "box-shadow" "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-neutral-500 {
+    --tw-shadow-color: #737373;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_neutral_500 : Css.Style
+shadow_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#737373"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
         ]
 
 
@@ -79981,6 +88865,146 @@ shadow_none =
 {-| This class has the effect of following css declaration:
 
 ```css
+.shadow-orange-500 {
+    --tw-shadow-color: #f97316;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_orange_500 : Css.Style
+shadow_orange_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#f97316"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-pink-500 {
+    --tw-shadow-color: #ec4899;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_pink_500 : Css.Style
+shadow_pink_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#ec4899"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-purple-500 {
+    --tw-shadow-color: #a855f7;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_purple_500 : Css.Style
+shadow_purple_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#a855f7"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-red-500 {
+    --tw-shadow-color: #ef4444;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_red_500 : Css.Style
+shadow_red_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#ef4444"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-rose-500 {
+    --tw-shadow-color: #f43f5e;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_rose_500 : Css.Style
+shadow_rose_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#f43f5e"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-sky-500 {
+    --tw-shadow-color: #0ea5e9;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_sky_500 : Css.Style
+shadow_sky_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#0ea5e9"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-slate-500 {
+    --tw-shadow-color: #64748b;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_slate_500 : Css.Style
+shadow_slate_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#64748b"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .shadow-sm {
     --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -80003,6 +89027,66 @@ shadow_sm =
 {-| This class has the effect of following css declaration:
 
 ```css
+.shadow-stone-500 {
+    --tw-shadow-color: #78716c;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_stone_500 : Css.Style
+shadow_stone_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#78716c"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-teal-500 {
+    --tw-shadow-color: #14b8a6;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_teal_500 : Css.Style
+shadow_teal_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#14b8a6"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-violet-500 {
+    --tw-shadow-color: #8b5cf6;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_violet_500 : Css.Style
+shadow_violet_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#8b5cf6"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .shadow-xl {
     --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -80019,6 +89103,46 @@ shadow_xl =
         [ Css.property "--tw-shadow" "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
         , Css.property "--tw-shadow-colored" "0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color)"
         , Css.property "box-shadow" "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-yellow-500 {
+    --tw-shadow-color: #eab308;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_yellow_500 : Css.Style
+shadow_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#eab308"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.shadow-zinc-500 {
+    --tw-shadow-color: #71717a;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_zinc_500 : Css.Style
+shadow_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-shadow-color" "#71717a"
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
         ]
 
 
@@ -82507,6 +91631,358 @@ stroke_2 =
 {-| This class has the effect of following css declaration:
 
 ```css
+.stroke-amber-500 {
+    stroke: #f59e0b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_amber_500 : Css.Style
+stroke_amber_500 =
+    Css.property "stroke" "#f59e0b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-blue-500 {
+    stroke: #3b82f6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_blue_500 : Css.Style
+stroke_blue_500 =
+    Css.property "stroke" "#3b82f6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-cyan-500 {
+    stroke: #06b6d4
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_cyan_500 : Css.Style
+stroke_cyan_500 =
+    Css.property "stroke" "#06b6d4"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-emerald-500 {
+    stroke: #10b981
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_emerald_500 : Css.Style
+stroke_emerald_500 =
+    Css.property "stroke" "#10b981"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-fuchsia-500 {
+    stroke: #d946ef
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_fuchsia_500 : Css.Style
+stroke_fuchsia_500 =
+    Css.property "stroke" "#d946ef"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-gray-500 {
+    stroke: #6b7280
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_gray_500 : Css.Style
+stroke_gray_500 =
+    Css.property "stroke" "#6b7280"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-green-500 {
+    stroke: #22c55e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_green_500 : Css.Style
+stroke_green_500 =
+    Css.property "stroke" "#22c55e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-indigo-500 {
+    stroke: #6366f1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_indigo_500 : Css.Style
+stroke_indigo_500 =
+    Css.property "stroke" "#6366f1"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-lime-500 {
+    stroke: #84cc16
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_lime_500 : Css.Style
+stroke_lime_500 =
+    Css.property "stroke" "#84cc16"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-neutral-500 {
+    stroke: #737373
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_neutral_500 : Css.Style
+stroke_neutral_500 =
+    Css.property "stroke" "#737373"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-orange-500 {
+    stroke: #f97316
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_orange_500 : Css.Style
+stroke_orange_500 =
+    Css.property "stroke" "#f97316"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-pink-500 {
+    stroke: #ec4899
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_pink_500 : Css.Style
+stroke_pink_500 =
+    Css.property "stroke" "#ec4899"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-purple-500 {
+    stroke: #a855f7
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_purple_500 : Css.Style
+stroke_purple_500 =
+    Css.property "stroke" "#a855f7"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-red-500 {
+    stroke: #ef4444
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_red_500 : Css.Style
+stroke_red_500 =
+    Css.property "stroke" "#ef4444"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-rose-500 {
+    stroke: #f43f5e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_rose_500 : Css.Style
+stroke_rose_500 =
+    Css.property "stroke" "#f43f5e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-sky-500 {
+    stroke: #0ea5e9
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_sky_500 : Css.Style
+stroke_sky_500 =
+    Css.property "stroke" "#0ea5e9"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-slate-500 {
+    stroke: #64748b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_slate_500 : Css.Style
+stroke_slate_500 =
+    Css.property "stroke" "#64748b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-stone-500 {
+    stroke: #78716c
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_stone_500 : Css.Style
+stroke_stone_500 =
+    Css.property "stroke" "#78716c"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-teal-500 {
+    stroke: #14b8a6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_teal_500 : Css.Style
+stroke_teal_500 =
+    Css.property "stroke" "#14b8a6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-violet-500 {
+    stroke: #8b5cf6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_violet_500 : Css.Style
+stroke_violet_500 =
+    Css.property "stroke" "#8b5cf6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-yellow-500 {
+    stroke: #eab308
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_yellow_500 : Css.Style
+stroke_yellow_500 =
+    Css.property "stroke" "#eab308"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-zinc-500 {
+    stroke: #71717a
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_zinc_500 : Css.Style
+stroke_zinc_500 =
+    Css.property "stroke" "#71717a"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .subpixel-antialiased {
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto
@@ -82883,6 +92359,26 @@ text_9xl =
 {-| This class has the effect of following css declaration:
 
 ```css
+.text-amber-500 {
+    --tw-text-opacity: 1;
+    color: rgb(245 158 11 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_amber_500 : Css.Style
+text_amber_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(245 158 11 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .text-base {
     font-size: 1rem;
     line-height: 1.5rem
@@ -82897,6 +92393,26 @@ text_base =
     Css.batch
         [ Css.property "font-size" "1rem"
         , Css.property "line-height" "1.5rem"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-blue-500 {
+    --tw-text-opacity: 1;
+    color: rgb(59 130 246 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_blue_500 : Css.Style
+text_blue_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(59 130 246 / var(--tw-text-opacity))"
         ]
 
 
@@ -82935,6 +92451,26 @@ text_clip =
 {-| This class has the effect of following css declaration:
 
 ```css
+.text-cyan-500 {
+    --tw-text-opacity: 1;
+    color: rgb(6 182 212 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_cyan_500 : Css.Style
+text_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(6 182 212 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .text-ellipsis {
     text-overflow: ellipsis
 }
@@ -82951,6 +92487,26 @@ text_ellipsis =
 {-| This class has the effect of following css declaration:
 
 ```css
+.text-emerald-500 {
+    --tw-text-opacity: 1;
+    color: rgb(16 185 129 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_emerald_500 : Css.Style
+text_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(16 185 129 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .text-end {
     text-align: end
 }
@@ -82962,6 +92518,86 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 text_end : Css.Style
 text_end =
     Css.property "text-align" "end"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-fuchsia-500 {
+    --tw-text-opacity: 1;
+    color: rgb(217 70 239 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_fuchsia_500 : Css.Style
+text_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(217 70 239 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_gray_500 : Css.Style
+text_gray_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(107 114 128 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-green-500 {
+    --tw-text-opacity: 1;
+    color: rgb(34 197 94 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_green_500 : Css.Style
+text_green_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(34 197 94 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-indigo-500 {
+    --tw-text-opacity: 1;
+    color: rgb(99 102 241 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_indigo_500 : Css.Style
+text_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(99 102 241 / var(--tw-text-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -83013,6 +92649,46 @@ text_lg =
     Css.batch
         [ Css.property "font-size" "1.125rem"
         , Css.property "line-height" "1.75rem"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-lime-500 {
+    --tw-text-opacity: 1;
+    color: rgb(132 204 22 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_lime_500 : Css.Style
+text_lime_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(132 204 22 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-neutral-500 {
+    --tw-text-opacity: 1;
+    color: rgb(115 115 115 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_neutral_500 : Css.Style
+text_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(115 115 115 / var(--tw-text-opacity))"
         ]
 
 
@@ -83259,6 +92935,86 @@ text_opacity_95 =
 {-| This class has the effect of following css declaration:
 
 ```css
+.text-orange-500 {
+    --tw-text-opacity: 1;
+    color: rgb(249 115 22 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_orange_500 : Css.Style
+text_orange_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(249 115 22 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-pink-500 {
+    --tw-text-opacity: 1;
+    color: rgb(236 72 153 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_pink_500 : Css.Style
+text_pink_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(236 72 153 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-purple-500 {
+    --tw-text-opacity: 1;
+    color: rgb(168 85 247 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_purple_500 : Css.Style
+text_purple_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(168 85 247 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgb(239 68 68 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_red_500 : Css.Style
+text_red_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(239 68 68 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .text-right {
     text-align: right
 }
@@ -83270,6 +93026,66 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 text_right : Css.Style
 text_right =
     Css.property "text-align" "right"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-rose-500 {
+    --tw-text-opacity: 1;
+    color: rgb(244 63 94 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_rose_500 : Css.Style
+text_rose_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(244 63 94 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-sky-500 {
+    --tw-text-opacity: 1;
+    color: rgb(14 165 233 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_sky_500 : Css.Style
+text_sky_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(14 165 233 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-slate-500 {
+    --tw-text-opacity: 1;
+    color: rgb(100 116 139 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_slate_500 : Css.Style
+text_slate_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(100 116 139 / var(--tw-text-opacity))"
+        ]
 
 
 {-| This class has the effect of following css declaration:
@@ -83311,6 +93127,66 @@ text_start =
 {-| This class has the effect of following css declaration:
 
 ```css
+.text-stone-500 {
+    --tw-text-opacity: 1;
+    color: rgb(120 113 108 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_stone_500 : Css.Style
+text_stone_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(120 113 108 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-teal-500 {
+    --tw-text-opacity: 1;
+    color: rgb(20 184 166 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_teal_500 : Css.Style
+text_teal_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(20 184 166 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-violet-500 {
+    --tw-text-opacity: 1;
+    color: rgb(139 92 246 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_violet_500 : Css.Style
+text_violet_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(139 92 246 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem
@@ -83346,6 +93222,398 @@ text_xs =
         [ Css.property "font-size" "0.75rem"
         , Css.property "line-height" "1rem"
         ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-yellow-500 {
+    --tw-text-opacity: 1;
+    color: rgb(234 179 8 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_yellow_500 : Css.Style
+text_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(234 179 8 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-zinc-500 {
+    --tw-text-opacity: 1;
+    color: rgb(113 113 122 / var(--tw-text-opacity))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_zinc_500 : Css.Style
+text_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-text-opacity" "1"
+        , Css.property "color" "rgb(113 113 122 / var(--tw-text-opacity))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-amber-500 {
+    --tw-gradient-to: #f59e0b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_amber_500 : Css.Style
+to_amber_500 =
+    Css.property "--tw-gradient-to" "#f59e0b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-blue-500 {
+    --tw-gradient-to: #3b82f6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_blue_500 : Css.Style
+to_blue_500 =
+    Css.property "--tw-gradient-to" "#3b82f6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-cyan-500 {
+    --tw-gradient-to: #06b6d4
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_cyan_500 : Css.Style
+to_cyan_500 =
+    Css.property "--tw-gradient-to" "#06b6d4"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-emerald-500 {
+    --tw-gradient-to: #10b981
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_emerald_500 : Css.Style
+to_emerald_500 =
+    Css.property "--tw-gradient-to" "#10b981"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-fuchsia-500 {
+    --tw-gradient-to: #d946ef
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_fuchsia_500 : Css.Style
+to_fuchsia_500 =
+    Css.property "--tw-gradient-to" "#d946ef"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-gray-500 {
+    --tw-gradient-to: #6b7280
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_gray_500 : Css.Style
+to_gray_500 =
+    Css.property "--tw-gradient-to" "#6b7280"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-green-500 {
+    --tw-gradient-to: #22c55e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_green_500 : Css.Style
+to_green_500 =
+    Css.property "--tw-gradient-to" "#22c55e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-indigo-500 {
+    --tw-gradient-to: #6366f1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_indigo_500 : Css.Style
+to_indigo_500 =
+    Css.property "--tw-gradient-to" "#6366f1"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-lime-500 {
+    --tw-gradient-to: #84cc16
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_lime_500 : Css.Style
+to_lime_500 =
+    Css.property "--tw-gradient-to" "#84cc16"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-neutral-500 {
+    --tw-gradient-to: #737373
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_neutral_500 : Css.Style
+to_neutral_500 =
+    Css.property "--tw-gradient-to" "#737373"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-orange-500 {
+    --tw-gradient-to: #f97316
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_orange_500 : Css.Style
+to_orange_500 =
+    Css.property "--tw-gradient-to" "#f97316"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-pink-500 {
+    --tw-gradient-to: #ec4899
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_pink_500 : Css.Style
+to_pink_500 =
+    Css.property "--tw-gradient-to" "#ec4899"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-purple-500 {
+    --tw-gradient-to: #a855f7
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_purple_500 : Css.Style
+to_purple_500 =
+    Css.property "--tw-gradient-to" "#a855f7"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-red-500 {
+    --tw-gradient-to: #ef4444
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_red_500 : Css.Style
+to_red_500 =
+    Css.property "--tw-gradient-to" "#ef4444"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-rose-500 {
+    --tw-gradient-to: #f43f5e
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_rose_500 : Css.Style
+to_rose_500 =
+    Css.property "--tw-gradient-to" "#f43f5e"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-sky-500 {
+    --tw-gradient-to: #0ea5e9
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_sky_500 : Css.Style
+to_sky_500 =
+    Css.property "--tw-gradient-to" "#0ea5e9"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-slate-500 {
+    --tw-gradient-to: #64748b
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_slate_500 : Css.Style
+to_slate_500 =
+    Css.property "--tw-gradient-to" "#64748b"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-stone-500 {
+    --tw-gradient-to: #78716c
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_stone_500 : Css.Style
+to_stone_500 =
+    Css.property "--tw-gradient-to" "#78716c"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-teal-500 {
+    --tw-gradient-to: #14b8a6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_teal_500 : Css.Style
+to_teal_500 =
+    Css.property "--tw-gradient-to" "#14b8a6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-violet-500 {
+    --tw-gradient-to: #8b5cf6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_violet_500 : Css.Style
+to_violet_500 =
+    Css.property "--tw-gradient-to" "#8b5cf6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-yellow-500 {
+    --tw-gradient-to: #eab308
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_yellow_500 : Css.Style
+to_yellow_500 =
+    Css.property "--tw-gradient-to" "#eab308"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.to-zinc-500 {
+    --tw-gradient-to: #71717a
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_zinc_500 : Css.Style
+to_zinc_500 =
+    Css.property "--tw-gradient-to" "#71717a"
 
 
 {-| This class has the effect of following css declaration:
@@ -86365,6 +96633,446 @@ uppercase =
 {-| This class has the effect of following css declaration:
 
 ```css
+.via-amber-500 {
+    --tw-gradient-to: rgb(245 158 11 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #f59e0b, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_amber_500 : Css.Style
+via_amber_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(245 158 11 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #f59e0b, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-blue-500 {
+    --tw-gradient-to: rgb(59 130 246 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #3b82f6, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_blue_500 : Css.Style
+via_blue_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(59 130 246 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #3b82f6, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-cyan-500 {
+    --tw-gradient-to: rgb(6 182 212 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #06b6d4, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_cyan_500 : Css.Style
+via_cyan_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(6 182 212 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #06b6d4, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-emerald-500 {
+    --tw-gradient-to: rgb(16 185 129 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #10b981, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_emerald_500 : Css.Style
+via_emerald_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(16 185 129 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #10b981, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-fuchsia-500 {
+    --tw-gradient-to: rgb(217 70 239 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #d946ef, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_fuchsia_500 : Css.Style
+via_fuchsia_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(217 70 239 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #d946ef, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-gray-500 {
+    --tw-gradient-to: rgb(107 114 128 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #6b7280, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_gray_500 : Css.Style
+via_gray_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(107 114 128 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #6b7280, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-green-500 {
+    --tw-gradient-to: rgb(34 197 94 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #22c55e, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_green_500 : Css.Style
+via_green_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(34 197 94 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #22c55e, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-indigo-500 {
+    --tw-gradient-to: rgb(99 102 241 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #6366f1, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_indigo_500 : Css.Style
+via_indigo_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(99 102 241 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #6366f1, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-lime-500 {
+    --tw-gradient-to: rgb(132 204 22 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #84cc16, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_lime_500 : Css.Style
+via_lime_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(132 204 22 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #84cc16, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-neutral-500 {
+    --tw-gradient-to: rgb(115 115 115 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #737373, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_neutral_500 : Css.Style
+via_neutral_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(115 115 115 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #737373, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-orange-500 {
+    --tw-gradient-to: rgb(249 115 22 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #f97316, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_orange_500 : Css.Style
+via_orange_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(249 115 22 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #f97316, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-pink-500 {
+    --tw-gradient-to: rgb(236 72 153 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #ec4899, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_pink_500 : Css.Style
+via_pink_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(236 72 153 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #ec4899, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-purple-500 {
+    --tw-gradient-to: rgb(168 85 247 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #a855f7, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_purple_500 : Css.Style
+via_purple_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(168 85 247 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #a855f7, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-red-500 {
+    --tw-gradient-to: rgb(239 68 68 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #ef4444, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_red_500 : Css.Style
+via_red_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(239 68 68 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #ef4444, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-rose-500 {
+    --tw-gradient-to: rgb(244 63 94 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #f43f5e, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_rose_500 : Css.Style
+via_rose_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(244 63 94 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #f43f5e, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-sky-500 {
+    --tw-gradient-to: rgb(14 165 233 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #0ea5e9, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_sky_500 : Css.Style
+via_sky_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(14 165 233 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #0ea5e9, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-slate-500 {
+    --tw-gradient-to: rgb(100 116 139 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #64748b, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_slate_500 : Css.Style
+via_slate_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(100 116 139 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #64748b, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-stone-500 {
+    --tw-gradient-to: rgb(120 113 108 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #78716c, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_stone_500 : Css.Style
+via_stone_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(120 113 108 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #78716c, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-teal-500 {
+    --tw-gradient-to: rgb(20 184 166 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #14b8a6, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_teal_500 : Css.Style
+via_teal_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(20 184 166 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #14b8a6, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-violet-500 {
+    --tw-gradient-to: rgb(139 92 246 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #8b5cf6, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_violet_500 : Css.Style
+via_violet_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(139 92 246 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #8b5cf6, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-yellow-500 {
+    --tw-gradient-to: rgb(234 179 8 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #eab308, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_yellow_500 : Css.Style
+via_yellow_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(234 179 8 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #eab308, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.via-zinc-500 {
+    --tw-gradient-to: rgb(113 113 122 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #71717a, var(--tw-gradient-to)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_zinc_500 : Css.Style
+via_zinc_500 =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(113 113 122 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #71717a, var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .visible {
     visibility: visible
 }
@@ -87935,22 +98643,6 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 fillWithColor : Color -> Css.Style
 fillWithColor color =
     Css.property "fill" "#881337"
-
-
-{-| This class has the effect of following css declaration:
-
-```css
-.font-black {
-    font-weight: 900
-}
-```
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-fontWithColor : Color -> Css.Style
-fontWithColor color =
-    Css.property "font-weight" "900"
 
 
 {-| This class has the effect of following css declaration:

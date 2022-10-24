@@ -17,6 +17,7 @@ import {
     SubselectorRest,
     UnrecognizedDeclaration
 } from "./types";
+import * as color from "./color";
 
 
 const cssWhatErrors = [
@@ -36,10 +37,10 @@ export function groupDeclarationBlocksByClass(
     logFunction: LogFunction,
     namingOptions: NamingOptions,
 ): GroupedDeclarations {
-    const recognized = new Map();
-    const colorParameterized = new Map();
+    const recognized: Map<string, RecognizedDeclaration> = new Map();
+    const colorParameterized: Map<string, RecognizedDeclaration> = new Map();
     const unrecognized: UnrecognizedDeclaration[] = [];
-    const keyframes = new Map();
+    const keyframes: Map<string, Keyframe[]> = new Map();
 
     const defaultRecognized = (originalClassName: string): RecognizedDeclaration => ({
         propertiesBySelector: [],
@@ -200,7 +201,7 @@ export function groupDeclarationBlocksByClass(
     }
 
     for (const [elmDeclName, declaration] of recognized) {
-        const parameterizedName = isParameterizable(elmDeclName, resolvedColors);
+        const parameterizedName = isParameterizable(elmDeclName, declaration, resolvedColors);
 
         if (parameterizedName === false) {
             continue;
@@ -326,9 +327,9 @@ function stripClassSelector(
     };
 }
 
-function isParameterizable(declarationName: string, resolvedColors: [string, string][]): false | null | string {
+function isParameterizable(declarationName: string, declaration: RecognizedDeclaration, resolvedColors: [string, string][]): false | null | string {
     const possibleColorNames = resolvedColors.map(( [name, _] ) => name)
-    const regex = new RegExp(String.raw`(.*)_(?:${possibleColorNames.join('|')}).*$`)
+    const regex = new RegExp(String.raw`(.*)_(${possibleColorNames.join('|')}).*$`)
 
     const matches = declarationName.match(regex);
 
@@ -337,9 +338,45 @@ function isParameterizable(declarationName: string, resolvedColors: [string, str
     }
 
     // We don't want to parameterize the opacity-variants of declarations
+    // TODO maybe detect this in a different way. (E.g. capture the regex part after the color name?)
     if (declarationName.includes("over")) {
         return null
     }
+
+    const colorByName: Record<string, string> = resolvedColors.reduce((acc, [name, color]) => Object.assign(acc, { [name]: color }), {});
+
+    const colorName = matches[2];
+    const resolvedColor = colorByName[colorName];
+
+    if (resolvedColor == null) {
+        console.warn("Couldn't find a color with this name", colorName);
+    }
+
+    const parsedColor = color.parseColor(resolvedColor);
+
+    const referencesColor = declaration
+        .propertiesBySelector
+        .flatMap(({ properties }) => properties)
+        .find(({ value }) =>
+            value.includes(resolvedColor)
+            || (parsedColor != null && value.match(color.colorDetectionRegex(parsedColor)))
+        ) != null;
+    
+    if (!referencesColor) {
+        return false
+    }
+
+    // resolvedColor = "#881337"
+    // parsedPrintedColor = "rgb(136 19 55)"
+
+    /*
+
+    .text-rose-900 {
+        --tw-text-opacity: 1;
+        color: rgb(136 19 55 / var(--tw-text-opacity))
+    }
+
+    */
 
     return `${matches[1]}WithColor`;
 }
