@@ -9,8 +9,11 @@
     * [X] List all colors for a tailwind config
     * [X] Detect suffixes
   * [X] Fix exposes with new config
-  * [ ] Detect transparent colors (e.g. blue-500/95) (use theme.opacity)
-  * [ ] `withOpacity : Theme.Opacity -> Theme.Color -> Theme.Color` helper
+  * [X] Detect transparent colors (e.g. blue-500/95) (use theme.opacity)
+  * [X] `withOpacity : Theme.Opacity -> Theme.Color -> Theme.Color` helper
+  * [ ] Look at counterexamples & fix them
+    * [ ] Detect color values in 'suspected to be parameterizable' definitions
+    * [ ] Handle colors without opacity variables correctly
   * [ ] Make `opacity_50` etc. use `Theme.Opacity` instead
   * [ ] Handle naming option in CLI for camel case in isParameterizable in parser code
   * [X] Use a non-primitive elm type for colors (instead of String)
@@ -83,3 +86,92 @@
 small things
 
 * [X] Remove double-iteration over rules in parser
+
+
+## Counterexamples
+
+- Need to detect color properties without "color" suffixes ("stroke", "fill", "--tw-gradient-from")
+- Need to detect parameterizable properties other than using color name suffixes
+
+
+```elm
+
+{-| This class has the effect of following css declaration:
+
+.stroke-rose-900 {
+    stroke: #881337
+}
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+strokeWithColor : Color -> Css.Style
+strokeWithColor color =
+    Css.property "stroke" "#881337"
+
+
+{-| This class has the effect of following css declaration:
+
+.fill-rose-900 {
+    fill: #881337
+}
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fillWithColor : Color -> Css.Style
+fillWithColor color =
+    Css.property "fill" "#881337"
+
+
+{-| This class has the effect of following css declaration:
+
+.font-black {
+    font-weight: 900
+}
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fontWithColor : Color -> Css.Style
+fontWithColor color =
+    Css.property "font-weight" "900"
+
+
+{-| This class has the effect of following css declaration:
+
+.from-rose-900 {
+    --tw-gradient-from: #881337;
+    --tw-gradient-to: rgb(136 19 55 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fromWithColor : Color -> Css.Style
+fromWithColor color =
+    Css.batch
+        [ Css.property "--tw-gradient-from" "#881337"
+        , Css.property "--tw-gradient-to" "rgb(136 19 55 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+```
+
+
+Colors without opacity variables:
+
+```elm
+{-| This class has the effect of following css declaration:
+
+.caret-rose-900 {
+    caret-color: #881337
+}
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caretWithColor : Color -> Css.Style
+caretWithColor color =
+    Tailwind.Theme.toProperty "caret-color" "" color
+```
