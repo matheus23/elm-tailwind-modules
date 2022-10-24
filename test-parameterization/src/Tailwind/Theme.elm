@@ -232,1138 +232,1163 @@ import Css
 
 
 type Color
-    = Color String
+    = Color String String String String Opacity
+    | Keyword String
 
 
 type Opacity
     = Opacity String
+    | ViaVariable
 
 
-toProperty : String -> Color -> Css.Style
-toProperty propertyName (Color color) =
-    Css.property propertyName ("rgb(" ++ color ++ ")")
+toProperty : String -> String -> Color -> Css.Style
+toProperty propertyName variableName color =
+    case color of
+        Color mode r g b opacity ->
+            case opacity of
+                Opacity op ->
+                    Css.property propertyName (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / " ++ op ++ ")")
+
+                ViaVariable ->
+                    Css.batch
+                        [ Css.property variableName "1"
+                        , Css.property propertyName (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ variableName ++ "))")
+                        ]
+
+        Keyword keyword ->
+            Css.property propertyName keyword
+
+
+withOpacity : Opacity -> Color -> Color
+withOpacity opacity color =
+    case color of
+        Keyword k ->
+            Keyword k
+
+        Color mode r g b _ ->
+            Color mode r g b opacity
 
 
 inherit : Color
 inherit =
-    Color "inherit"
+    Keyword "inherit"
 
 
 current : Color
 current =
-    Color "currentColor"
+    Keyword "currentColor"
 
 
 transparent : Color
 transparent =
-    Color "transparent"
+    Color "rgb" "0" "0" "0" (Opacity "0")
 
 
 black : Color
 black =
-    Color "#000"
+    Color "rgb" "0" "0" "0" ViaVariable
 
 
 white : Color
 white =
-    Color "#fff"
+    Color "rgb" "255" "255" "255" ViaVariable
 
 
 slate_50 : Color
 slate_50 =
-    Color "#f8fafc"
+    Color "rgb" "248" "250" "252" ViaVariable
 
 
 slate_100 : Color
 slate_100 =
-    Color "#f1f5f9"
+    Color "rgb" "241" "245" "249" ViaVariable
 
 
 slate_200 : Color
 slate_200 =
-    Color "#e2e8f0"
+    Color "rgb" "226" "232" "240" ViaVariable
 
 
 slate_300 : Color
 slate_300 =
-    Color "#cbd5e1"
+    Color "rgb" "203" "213" "225" ViaVariable
 
 
 slate_400 : Color
 slate_400 =
-    Color "#94a3b8"
+    Color "rgb" "148" "163" "184" ViaVariable
 
 
 slate_500 : Color
 slate_500 =
-    Color "#64748b"
+    Color "rgb" "100" "116" "139" ViaVariable
 
 
 slate_600 : Color
 slate_600 =
-    Color "#475569"
+    Color "rgb" "71" "85" "105" ViaVariable
 
 
 slate_700 : Color
 slate_700 =
-    Color "#334155"
+    Color "rgb" "51" "65" "85" ViaVariable
 
 
 slate_800 : Color
 slate_800 =
-    Color "#1e293b"
+    Color "rgb" "30" "41" "59" ViaVariable
 
 
 slate_900 : Color
 slate_900 =
-    Color "#0f172a"
+    Color "rgb" "15" "23" "42" ViaVariable
 
 
 gray_50 : Color
 gray_50 =
-    Color "#f9fafb"
+    Color "rgb" "249" "250" "251" ViaVariable
 
 
 gray_100 : Color
 gray_100 =
-    Color "#f3f4f6"
+    Color "rgb" "243" "244" "246" ViaVariable
 
 
 gray_200 : Color
 gray_200 =
-    Color "#e5e7eb"
+    Color "rgb" "229" "231" "235" ViaVariable
 
 
 gray_300 : Color
 gray_300 =
-    Color "#d1d5db"
+    Color "rgb" "209" "213" "219" ViaVariable
 
 
 gray_400 : Color
 gray_400 =
-    Color "#9ca3af"
+    Color "rgb" "156" "163" "175" ViaVariable
 
 
 gray_500 : Color
 gray_500 =
-    Color "#6b7280"
+    Color "rgb" "107" "114" "128" ViaVariable
 
 
 gray_600 : Color
 gray_600 =
-    Color "#4b5563"
+    Color "rgb" "75" "85" "99" ViaVariable
 
 
 gray_700 : Color
 gray_700 =
-    Color "#374151"
+    Color "rgb" "55" "65" "81" ViaVariable
 
 
 gray_800 : Color
 gray_800 =
-    Color "#1f2937"
+    Color "rgb" "31" "41" "55" ViaVariable
 
 
 gray_900 : Color
 gray_900 =
-    Color "#111827"
+    Color "rgb" "17" "24" "39" ViaVariable
 
 
 zinc_50 : Color
 zinc_50 =
-    Color "#fafafa"
+    Color "rgb" "250" "250" "250" ViaVariable
 
 
 zinc_100 : Color
 zinc_100 =
-    Color "#f4f4f5"
+    Color "rgb" "244" "244" "245" ViaVariable
 
 
 zinc_200 : Color
 zinc_200 =
-    Color "#e4e4e7"
+    Color "rgb" "228" "228" "231" ViaVariable
 
 
 zinc_300 : Color
 zinc_300 =
-    Color "#d4d4d8"
+    Color "rgb" "212" "212" "216" ViaVariable
 
 
 zinc_400 : Color
 zinc_400 =
-    Color "#a1a1aa"
+    Color "rgb" "161" "161" "170" ViaVariable
 
 
 zinc_500 : Color
 zinc_500 =
-    Color "#71717a"
+    Color "rgb" "113" "113" "122" ViaVariable
 
 
 zinc_600 : Color
 zinc_600 =
-    Color "#52525b"
+    Color "rgb" "82" "82" "91" ViaVariable
 
 
 zinc_700 : Color
 zinc_700 =
-    Color "#3f3f46"
+    Color "rgb" "63" "63" "70" ViaVariable
 
 
 zinc_800 : Color
 zinc_800 =
-    Color "#27272a"
+    Color "rgb" "39" "39" "42" ViaVariable
 
 
 zinc_900 : Color
 zinc_900 =
-    Color "#18181b"
+    Color "rgb" "24" "24" "27" ViaVariable
 
 
 neutral_50 : Color
 neutral_50 =
-    Color "#fafafa"
+    Color "rgb" "250" "250" "250" ViaVariable
 
 
 neutral_100 : Color
 neutral_100 =
-    Color "#f5f5f5"
+    Color "rgb" "245" "245" "245" ViaVariable
 
 
 neutral_200 : Color
 neutral_200 =
-    Color "#e5e5e5"
+    Color "rgb" "229" "229" "229" ViaVariable
 
 
 neutral_300 : Color
 neutral_300 =
-    Color "#d4d4d4"
+    Color "rgb" "212" "212" "212" ViaVariable
 
 
 neutral_400 : Color
 neutral_400 =
-    Color "#a3a3a3"
+    Color "rgb" "163" "163" "163" ViaVariable
 
 
 neutral_500 : Color
 neutral_500 =
-    Color "#737373"
+    Color "rgb" "115" "115" "115" ViaVariable
 
 
 neutral_600 : Color
 neutral_600 =
-    Color "#525252"
+    Color "rgb" "82" "82" "82" ViaVariable
 
 
 neutral_700 : Color
 neutral_700 =
-    Color "#404040"
+    Color "rgb" "64" "64" "64" ViaVariable
 
 
 neutral_800 : Color
 neutral_800 =
-    Color "#262626"
+    Color "rgb" "38" "38" "38" ViaVariable
 
 
 neutral_900 : Color
 neutral_900 =
-    Color "#171717"
+    Color "rgb" "23" "23" "23" ViaVariable
 
 
 stone_50 : Color
 stone_50 =
-    Color "#fafaf9"
+    Color "rgb" "250" "250" "249" ViaVariable
 
 
 stone_100 : Color
 stone_100 =
-    Color "#f5f5f4"
+    Color "rgb" "245" "245" "244" ViaVariable
 
 
 stone_200 : Color
 stone_200 =
-    Color "#e7e5e4"
+    Color "rgb" "231" "229" "228" ViaVariable
 
 
 stone_300 : Color
 stone_300 =
-    Color "#d6d3d1"
+    Color "rgb" "214" "211" "209" ViaVariable
 
 
 stone_400 : Color
 stone_400 =
-    Color "#a8a29e"
+    Color "rgb" "168" "162" "158" ViaVariable
 
 
 stone_500 : Color
 stone_500 =
-    Color "#78716c"
+    Color "rgb" "120" "113" "108" ViaVariable
 
 
 stone_600 : Color
 stone_600 =
-    Color "#57534e"
+    Color "rgb" "87" "83" "78" ViaVariable
 
 
 stone_700 : Color
 stone_700 =
-    Color "#44403c"
+    Color "rgb" "68" "64" "60" ViaVariable
 
 
 stone_800 : Color
 stone_800 =
-    Color "#292524"
+    Color "rgb" "41" "37" "36" ViaVariable
 
 
 stone_900 : Color
 stone_900 =
-    Color "#1c1917"
+    Color "rgb" "28" "25" "23" ViaVariable
 
 
 red_50 : Color
 red_50 =
-    Color "#fef2f2"
+    Color "rgb" "254" "242" "242" ViaVariable
 
 
 red_100 : Color
 red_100 =
-    Color "#fee2e2"
+    Color "rgb" "254" "226" "226" ViaVariable
 
 
 red_200 : Color
 red_200 =
-    Color "#fecaca"
+    Color "rgb" "254" "202" "202" ViaVariable
 
 
 red_300 : Color
 red_300 =
-    Color "#fca5a5"
+    Color "rgb" "252" "165" "165" ViaVariable
 
 
 red_400 : Color
 red_400 =
-    Color "#f87171"
+    Color "rgb" "248" "113" "113" ViaVariable
 
 
 red_500 : Color
 red_500 =
-    Color "#ef4444"
+    Color "rgb" "239" "68" "68" ViaVariable
 
 
 red_600 : Color
 red_600 =
-    Color "#dc2626"
+    Color "rgb" "220" "38" "38" ViaVariable
 
 
 red_700 : Color
 red_700 =
-    Color "#b91c1c"
+    Color "rgb" "185" "28" "28" ViaVariable
 
 
 red_800 : Color
 red_800 =
-    Color "#991b1b"
+    Color "rgb" "153" "27" "27" ViaVariable
 
 
 red_900 : Color
 red_900 =
-    Color "#7f1d1d"
+    Color "rgb" "127" "29" "29" ViaVariable
 
 
 orange_50 : Color
 orange_50 =
-    Color "#fff7ed"
+    Color "rgb" "255" "247" "237" ViaVariable
 
 
 orange_100 : Color
 orange_100 =
-    Color "#ffedd5"
+    Color "rgb" "255" "237" "213" ViaVariable
 
 
 orange_200 : Color
 orange_200 =
-    Color "#fed7aa"
+    Color "rgb" "254" "215" "170" ViaVariable
 
 
 orange_300 : Color
 orange_300 =
-    Color "#fdba74"
+    Color "rgb" "253" "186" "116" ViaVariable
 
 
 orange_400 : Color
 orange_400 =
-    Color "#fb923c"
+    Color "rgb" "251" "146" "60" ViaVariable
 
 
 orange_500 : Color
 orange_500 =
-    Color "#f97316"
+    Color "rgb" "249" "115" "22" ViaVariable
 
 
 orange_600 : Color
 orange_600 =
-    Color "#ea580c"
+    Color "rgb" "234" "88" "12" ViaVariable
 
 
 orange_700 : Color
 orange_700 =
-    Color "#c2410c"
+    Color "rgb" "194" "65" "12" ViaVariable
 
 
 orange_800 : Color
 orange_800 =
-    Color "#9a3412"
+    Color "rgb" "154" "52" "18" ViaVariable
 
 
 orange_900 : Color
 orange_900 =
-    Color "#7c2d12"
+    Color "rgb" "124" "45" "18" ViaVariable
 
 
 amber_50 : Color
 amber_50 =
-    Color "#fffbeb"
+    Color "rgb" "255" "251" "235" ViaVariable
 
 
 amber_100 : Color
 amber_100 =
-    Color "#fef3c7"
+    Color "rgb" "254" "243" "199" ViaVariable
 
 
 amber_200 : Color
 amber_200 =
-    Color "#fde68a"
+    Color "rgb" "253" "230" "138" ViaVariable
 
 
 amber_300 : Color
 amber_300 =
-    Color "#fcd34d"
+    Color "rgb" "252" "211" "77" ViaVariable
 
 
 amber_400 : Color
 amber_400 =
-    Color "#fbbf24"
+    Color "rgb" "251" "191" "36" ViaVariable
 
 
 amber_500 : Color
 amber_500 =
-    Color "#f59e0b"
+    Color "rgb" "245" "158" "11" ViaVariable
 
 
 amber_600 : Color
 amber_600 =
-    Color "#d97706"
+    Color "rgb" "217" "119" "6" ViaVariable
 
 
 amber_700 : Color
 amber_700 =
-    Color "#b45309"
+    Color "rgb" "180" "83" "9" ViaVariable
 
 
 amber_800 : Color
 amber_800 =
-    Color "#92400e"
+    Color "rgb" "146" "64" "14" ViaVariable
 
 
 amber_900 : Color
 amber_900 =
-    Color "#78350f"
+    Color "rgb" "120" "53" "15" ViaVariable
 
 
 yellow_50 : Color
 yellow_50 =
-    Color "#fefce8"
+    Color "rgb" "254" "252" "232" ViaVariable
 
 
 yellow_100 : Color
 yellow_100 =
-    Color "#fef9c3"
+    Color "rgb" "254" "249" "195" ViaVariable
 
 
 yellow_200 : Color
 yellow_200 =
-    Color "#fef08a"
+    Color "rgb" "254" "240" "138" ViaVariable
 
 
 yellow_300 : Color
 yellow_300 =
-    Color "#fde047"
+    Color "rgb" "253" "224" "71" ViaVariable
 
 
 yellow_400 : Color
 yellow_400 =
-    Color "#facc15"
+    Color "rgb" "250" "204" "21" ViaVariable
 
 
 yellow_500 : Color
 yellow_500 =
-    Color "#eab308"
+    Color "rgb" "234" "179" "8" ViaVariable
 
 
 yellow_600 : Color
 yellow_600 =
-    Color "#ca8a04"
+    Color "rgb" "202" "138" "4" ViaVariable
 
 
 yellow_700 : Color
 yellow_700 =
-    Color "#a16207"
+    Color "rgb" "161" "98" "7" ViaVariable
 
 
 yellow_800 : Color
 yellow_800 =
-    Color "#854d0e"
+    Color "rgb" "133" "77" "14" ViaVariable
 
 
 yellow_900 : Color
 yellow_900 =
-    Color "#713f12"
+    Color "rgb" "113" "63" "18" ViaVariable
 
 
 lime_50 : Color
 lime_50 =
-    Color "#f7fee7"
+    Color "rgb" "247" "254" "231" ViaVariable
 
 
 lime_100 : Color
 lime_100 =
-    Color "#ecfccb"
+    Color "rgb" "236" "252" "203" ViaVariable
 
 
 lime_200 : Color
 lime_200 =
-    Color "#d9f99d"
+    Color "rgb" "217" "249" "157" ViaVariable
 
 
 lime_300 : Color
 lime_300 =
-    Color "#bef264"
+    Color "rgb" "190" "242" "100" ViaVariable
 
 
 lime_400 : Color
 lime_400 =
-    Color "#a3e635"
+    Color "rgb" "163" "230" "53" ViaVariable
 
 
 lime_500 : Color
 lime_500 =
-    Color "#84cc16"
+    Color "rgb" "132" "204" "22" ViaVariable
 
 
 lime_600 : Color
 lime_600 =
-    Color "#65a30d"
+    Color "rgb" "101" "163" "13" ViaVariable
 
 
 lime_700 : Color
 lime_700 =
-    Color "#4d7c0f"
+    Color "rgb" "77" "124" "15" ViaVariable
 
 
 lime_800 : Color
 lime_800 =
-    Color "#3f6212"
+    Color "rgb" "63" "98" "18" ViaVariable
 
 
 lime_900 : Color
 lime_900 =
-    Color "#365314"
+    Color "rgb" "54" "83" "20" ViaVariable
 
 
 green_50 : Color
 green_50 =
-    Color "#f0fdf4"
+    Color "rgb" "240" "253" "244" ViaVariable
 
 
 green_100 : Color
 green_100 =
-    Color "#dcfce7"
+    Color "rgb" "220" "252" "231" ViaVariable
 
 
 green_200 : Color
 green_200 =
-    Color "#bbf7d0"
+    Color "rgb" "187" "247" "208" ViaVariable
 
 
 green_300 : Color
 green_300 =
-    Color "#86efac"
+    Color "rgb" "134" "239" "172" ViaVariable
 
 
 green_400 : Color
 green_400 =
-    Color "#4ade80"
+    Color "rgb" "74" "222" "128" ViaVariable
 
 
 green_500 : Color
 green_500 =
-    Color "#22c55e"
+    Color "rgb" "34" "197" "94" ViaVariable
 
 
 green_600 : Color
 green_600 =
-    Color "#16a34a"
+    Color "rgb" "22" "163" "74" ViaVariable
 
 
 green_700 : Color
 green_700 =
-    Color "#15803d"
+    Color "rgb" "21" "128" "61" ViaVariable
 
 
 green_800 : Color
 green_800 =
-    Color "#166534"
+    Color "rgb" "22" "101" "52" ViaVariable
 
 
 green_900 : Color
 green_900 =
-    Color "#14532d"
+    Color "rgb" "20" "83" "45" ViaVariable
 
 
 emerald_50 : Color
 emerald_50 =
-    Color "#ecfdf5"
+    Color "rgb" "236" "253" "245" ViaVariable
 
 
 emerald_100 : Color
 emerald_100 =
-    Color "#d1fae5"
+    Color "rgb" "209" "250" "229" ViaVariable
 
 
 emerald_200 : Color
 emerald_200 =
-    Color "#a7f3d0"
+    Color "rgb" "167" "243" "208" ViaVariable
 
 
 emerald_300 : Color
 emerald_300 =
-    Color "#6ee7b7"
+    Color "rgb" "110" "231" "183" ViaVariable
 
 
 emerald_400 : Color
 emerald_400 =
-    Color "#34d399"
+    Color "rgb" "52" "211" "153" ViaVariable
 
 
 emerald_500 : Color
 emerald_500 =
-    Color "#10b981"
+    Color "rgb" "16" "185" "129" ViaVariable
 
 
 emerald_600 : Color
 emerald_600 =
-    Color "#059669"
+    Color "rgb" "5" "150" "105" ViaVariable
 
 
 emerald_700 : Color
 emerald_700 =
-    Color "#047857"
+    Color "rgb" "4" "120" "87" ViaVariable
 
 
 emerald_800 : Color
 emerald_800 =
-    Color "#065f46"
+    Color "rgb" "6" "95" "70" ViaVariable
 
 
 emerald_900 : Color
 emerald_900 =
-    Color "#064e3b"
+    Color "rgb" "6" "78" "59" ViaVariable
 
 
 teal_50 : Color
 teal_50 =
-    Color "#f0fdfa"
+    Color "rgb" "240" "253" "250" ViaVariable
 
 
 teal_100 : Color
 teal_100 =
-    Color "#ccfbf1"
+    Color "rgb" "204" "251" "241" ViaVariable
 
 
 teal_200 : Color
 teal_200 =
-    Color "#99f6e4"
+    Color "rgb" "153" "246" "228" ViaVariable
 
 
 teal_300 : Color
 teal_300 =
-    Color "#5eead4"
+    Color "rgb" "94" "234" "212" ViaVariable
 
 
 teal_400 : Color
 teal_400 =
-    Color "#2dd4bf"
+    Color "rgb" "45" "212" "191" ViaVariable
 
 
 teal_500 : Color
 teal_500 =
-    Color "#14b8a6"
+    Color "rgb" "20" "184" "166" ViaVariable
 
 
 teal_600 : Color
 teal_600 =
-    Color "#0d9488"
+    Color "rgb" "13" "148" "136" ViaVariable
 
 
 teal_700 : Color
 teal_700 =
-    Color "#0f766e"
+    Color "rgb" "15" "118" "110" ViaVariable
 
 
 teal_800 : Color
 teal_800 =
-    Color "#115e59"
+    Color "rgb" "17" "94" "89" ViaVariable
 
 
 teal_900 : Color
 teal_900 =
-    Color "#134e4a"
+    Color "rgb" "19" "78" "74" ViaVariable
 
 
 cyan_50 : Color
 cyan_50 =
-    Color "#ecfeff"
+    Color "rgb" "236" "254" "255" ViaVariable
 
 
 cyan_100 : Color
 cyan_100 =
-    Color "#cffafe"
+    Color "rgb" "207" "250" "254" ViaVariable
 
 
 cyan_200 : Color
 cyan_200 =
-    Color "#a5f3fc"
+    Color "rgb" "165" "243" "252" ViaVariable
 
 
 cyan_300 : Color
 cyan_300 =
-    Color "#67e8f9"
+    Color "rgb" "103" "232" "249" ViaVariable
 
 
 cyan_400 : Color
 cyan_400 =
-    Color "#22d3ee"
+    Color "rgb" "34" "211" "238" ViaVariable
 
 
 cyan_500 : Color
 cyan_500 =
-    Color "#06b6d4"
+    Color "rgb" "6" "182" "212" ViaVariable
 
 
 cyan_600 : Color
 cyan_600 =
-    Color "#0891b2"
+    Color "rgb" "8" "145" "178" ViaVariable
 
 
 cyan_700 : Color
 cyan_700 =
-    Color "#0e7490"
+    Color "rgb" "14" "116" "144" ViaVariable
 
 
 cyan_800 : Color
 cyan_800 =
-    Color "#155e75"
+    Color "rgb" "21" "94" "117" ViaVariable
 
 
 cyan_900 : Color
 cyan_900 =
-    Color "#164e63"
+    Color "rgb" "22" "78" "99" ViaVariable
 
 
 sky_50 : Color
 sky_50 =
-    Color "#f0f9ff"
+    Color "rgb" "240" "249" "255" ViaVariable
 
 
 sky_100 : Color
 sky_100 =
-    Color "#e0f2fe"
+    Color "rgb" "224" "242" "254" ViaVariable
 
 
 sky_200 : Color
 sky_200 =
-    Color "#bae6fd"
+    Color "rgb" "186" "230" "253" ViaVariable
 
 
 sky_300 : Color
 sky_300 =
-    Color "#7dd3fc"
+    Color "rgb" "125" "211" "252" ViaVariable
 
 
 sky_400 : Color
 sky_400 =
-    Color "#38bdf8"
+    Color "rgb" "56" "189" "248" ViaVariable
 
 
 sky_500 : Color
 sky_500 =
-    Color "#0ea5e9"
+    Color "rgb" "14" "165" "233" ViaVariable
 
 
 sky_600 : Color
 sky_600 =
-    Color "#0284c7"
+    Color "rgb" "2" "132" "199" ViaVariable
 
 
 sky_700 : Color
 sky_700 =
-    Color "#0369a1"
+    Color "rgb" "3" "105" "161" ViaVariable
 
 
 sky_800 : Color
 sky_800 =
-    Color "#075985"
+    Color "rgb" "7" "89" "133" ViaVariable
 
 
 sky_900 : Color
 sky_900 =
-    Color "#0c4a6e"
+    Color "rgb" "12" "74" "110" ViaVariable
 
 
 blue_50 : Color
 blue_50 =
-    Color "#eff6ff"
+    Color "rgb" "239" "246" "255" ViaVariable
 
 
 blue_100 : Color
 blue_100 =
-    Color "#dbeafe"
+    Color "rgb" "219" "234" "254" ViaVariable
 
 
 blue_200 : Color
 blue_200 =
-    Color "#bfdbfe"
+    Color "rgb" "191" "219" "254" ViaVariable
 
 
 blue_300 : Color
 blue_300 =
-    Color "#93c5fd"
+    Color "rgb" "147" "197" "253" ViaVariable
 
 
 blue_400 : Color
 blue_400 =
-    Color "#60a5fa"
+    Color "rgb" "96" "165" "250" ViaVariable
 
 
 blue_500 : Color
 blue_500 =
-    Color "#3b82f6"
+    Color "rgb" "59" "130" "246" ViaVariable
 
 
 blue_600 : Color
 blue_600 =
-    Color "#2563eb"
+    Color "rgb" "37" "99" "235" ViaVariable
 
 
 blue_700 : Color
 blue_700 =
-    Color "#1d4ed8"
+    Color "rgb" "29" "78" "216" ViaVariable
 
 
 blue_800 : Color
 blue_800 =
-    Color "#1e40af"
+    Color "rgb" "30" "64" "175" ViaVariable
 
 
 blue_900 : Color
 blue_900 =
-    Color "#1e3a8a"
+    Color "rgb" "30" "58" "138" ViaVariable
 
 
 indigo_50 : Color
 indigo_50 =
-    Color "#eef2ff"
+    Color "rgb" "238" "242" "255" ViaVariable
 
 
 indigo_100 : Color
 indigo_100 =
-    Color "#e0e7ff"
+    Color "rgb" "224" "231" "255" ViaVariable
 
 
 indigo_200 : Color
 indigo_200 =
-    Color "#c7d2fe"
+    Color "rgb" "199" "210" "254" ViaVariable
 
 
 indigo_300 : Color
 indigo_300 =
-    Color "#a5b4fc"
+    Color "rgb" "165" "180" "252" ViaVariable
 
 
 indigo_400 : Color
 indigo_400 =
-    Color "#818cf8"
+    Color "rgb" "129" "140" "248" ViaVariable
 
 
 indigo_500 : Color
 indigo_500 =
-    Color "#6366f1"
+    Color "rgb" "99" "102" "241" ViaVariable
 
 
 indigo_600 : Color
 indigo_600 =
-    Color "#4f46e5"
+    Color "rgb" "79" "70" "229" ViaVariable
 
 
 indigo_700 : Color
 indigo_700 =
-    Color "#4338ca"
+    Color "rgb" "67" "56" "202" ViaVariable
 
 
 indigo_800 : Color
 indigo_800 =
-    Color "#3730a3"
+    Color "rgb" "55" "48" "163" ViaVariable
 
 
 indigo_900 : Color
 indigo_900 =
-    Color "#312e81"
+    Color "rgb" "49" "46" "129" ViaVariable
 
 
 violet_50 : Color
 violet_50 =
-    Color "#f5f3ff"
+    Color "rgb" "245" "243" "255" ViaVariable
 
 
 violet_100 : Color
 violet_100 =
-    Color "#ede9fe"
+    Color "rgb" "237" "233" "254" ViaVariable
 
 
 violet_200 : Color
 violet_200 =
-    Color "#ddd6fe"
+    Color "rgb" "221" "214" "254" ViaVariable
 
 
 violet_300 : Color
 violet_300 =
-    Color "#c4b5fd"
+    Color "rgb" "196" "181" "253" ViaVariable
 
 
 violet_400 : Color
 violet_400 =
-    Color "#a78bfa"
+    Color "rgb" "167" "139" "250" ViaVariable
 
 
 violet_500 : Color
 violet_500 =
-    Color "#8b5cf6"
+    Color "rgb" "139" "92" "246" ViaVariable
 
 
 violet_600 : Color
 violet_600 =
-    Color "#7c3aed"
+    Color "rgb" "124" "58" "237" ViaVariable
 
 
 violet_700 : Color
 violet_700 =
-    Color "#6d28d9"
+    Color "rgb" "109" "40" "217" ViaVariable
 
 
 violet_800 : Color
 violet_800 =
-    Color "#5b21b6"
+    Color "rgb" "91" "33" "182" ViaVariable
 
 
 violet_900 : Color
 violet_900 =
-    Color "#4c1d95"
+    Color "rgb" "76" "29" "149" ViaVariable
 
 
 purple_50 : Color
 purple_50 =
-    Color "#faf5ff"
+    Color "rgb" "250" "245" "255" ViaVariable
 
 
 purple_100 : Color
 purple_100 =
-    Color "#f3e8ff"
+    Color "rgb" "243" "232" "255" ViaVariable
 
 
 purple_200 : Color
 purple_200 =
-    Color "#e9d5ff"
+    Color "rgb" "233" "213" "255" ViaVariable
 
 
 purple_300 : Color
 purple_300 =
-    Color "#d8b4fe"
+    Color "rgb" "216" "180" "254" ViaVariable
 
 
 purple_400 : Color
 purple_400 =
-    Color "#c084fc"
+    Color "rgb" "192" "132" "252" ViaVariable
 
 
 purple_500 : Color
 purple_500 =
-    Color "#a855f7"
+    Color "rgb" "168" "85" "247" ViaVariable
 
 
 purple_600 : Color
 purple_600 =
-    Color "#9333ea"
+    Color "rgb" "147" "51" "234" ViaVariable
 
 
 purple_700 : Color
 purple_700 =
-    Color "#7e22ce"
+    Color "rgb" "126" "34" "206" ViaVariable
 
 
 purple_800 : Color
 purple_800 =
-    Color "#6b21a8"
+    Color "rgb" "107" "33" "168" ViaVariable
 
 
 purple_900 : Color
 purple_900 =
-    Color "#581c87"
+    Color "rgb" "88" "28" "135" ViaVariable
 
 
 fuchsia_50 : Color
 fuchsia_50 =
-    Color "#fdf4ff"
+    Color "rgb" "253" "244" "255" ViaVariable
 
 
 fuchsia_100 : Color
 fuchsia_100 =
-    Color "#fae8ff"
+    Color "rgb" "250" "232" "255" ViaVariable
 
 
 fuchsia_200 : Color
 fuchsia_200 =
-    Color "#f5d0fe"
+    Color "rgb" "245" "208" "254" ViaVariable
 
 
 fuchsia_300 : Color
 fuchsia_300 =
-    Color "#f0abfc"
+    Color "rgb" "240" "171" "252" ViaVariable
 
 
 fuchsia_400 : Color
 fuchsia_400 =
-    Color "#e879f9"
+    Color "rgb" "232" "121" "249" ViaVariable
 
 
 fuchsia_500 : Color
 fuchsia_500 =
-    Color "#d946ef"
+    Color "rgb" "217" "70" "239" ViaVariable
 
 
 fuchsia_600 : Color
 fuchsia_600 =
-    Color "#c026d3"
+    Color "rgb" "192" "38" "211" ViaVariable
 
 
 fuchsia_700 : Color
 fuchsia_700 =
-    Color "#a21caf"
+    Color "rgb" "162" "28" "175" ViaVariable
 
 
 fuchsia_800 : Color
 fuchsia_800 =
-    Color "#86198f"
+    Color "rgb" "134" "25" "143" ViaVariable
 
 
 fuchsia_900 : Color
 fuchsia_900 =
-    Color "#701a75"
+    Color "rgb" "112" "26" "117" ViaVariable
 
 
 pink_50 : Color
 pink_50 =
-    Color "#fdf2f8"
+    Color "rgb" "253" "242" "248" ViaVariable
 
 
 pink_100 : Color
 pink_100 =
-    Color "#fce7f3"
+    Color "rgb" "252" "231" "243" ViaVariable
 
 
 pink_200 : Color
 pink_200 =
-    Color "#fbcfe8"
+    Color "rgb" "251" "207" "232" ViaVariable
 
 
 pink_300 : Color
 pink_300 =
-    Color "#f9a8d4"
+    Color "rgb" "249" "168" "212" ViaVariable
 
 
 pink_400 : Color
 pink_400 =
-    Color "#f472b6"
+    Color "rgb" "244" "114" "182" ViaVariable
 
 
 pink_500 : Color
 pink_500 =
-    Color "#ec4899"
+    Color "rgb" "236" "72" "153" ViaVariable
 
 
 pink_600 : Color
 pink_600 =
-    Color "#db2777"
+    Color "rgb" "219" "39" "119" ViaVariable
 
 
 pink_700 : Color
 pink_700 =
-    Color "#be185d"
+    Color "rgb" "190" "24" "93" ViaVariable
 
 
 pink_800 : Color
 pink_800 =
-    Color "#9d174d"
+    Color "rgb" "157" "23" "77" ViaVariable
 
 
 pink_900 : Color
 pink_900 =
-    Color "#831843"
+    Color "rgb" "131" "24" "67" ViaVariable
 
 
 rose_50 : Color
 rose_50 =
-    Color "#fff1f2"
+    Color "rgb" "255" "241" "242" ViaVariable
 
 
 rose_100 : Color
 rose_100 =
-    Color "#ffe4e6"
+    Color "rgb" "255" "228" "230" ViaVariable
 
 
 rose_200 : Color
 rose_200 =
-    Color "#fecdd3"
+    Color "rgb" "254" "205" "211" ViaVariable
 
 
 rose_300 : Color
 rose_300 =
-    Color "#fda4af"
+    Color "rgb" "253" "164" "175" ViaVariable
 
 
 rose_400 : Color
 rose_400 =
-    Color "#fb7185"
+    Color "rgb" "251" "113" "133" ViaVariable
 
 
 rose_500 : Color
 rose_500 =
-    Color "#f43f5e"
+    Color "rgb" "244" "63" "94" ViaVariable
 
 
 rose_600 : Color
 rose_600 =
-    Color "#e11d48"
+    Color "rgb" "225" "29" "72" ViaVariable
 
 
 rose_700 : Color
 rose_700 =
-    Color "#be123c"
+    Color "rgb" "190" "18" "60" ViaVariable
 
 
 rose_800 : Color
 rose_800 =
-    Color "#9f1239"
+    Color "rgb" "159" "18" "57" ViaVariable
 
 
 rose_900 : Color
 rose_900 =
-    Color "#881337"
+    Color "rgb" "136" "19" "55" ViaVariable

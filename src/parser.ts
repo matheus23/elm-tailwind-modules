@@ -201,12 +201,17 @@ export function groupDeclarationBlocksByClass(
 
     for (const [elmDeclName, declaration] of recognized) {
         const parameterizedName = isParameterizable(elmDeclName, resolvedColors);
-        
-        if (parameterizedName == null) {
+
+        if (parameterizedName === false) {
             continue;
         }
 
         recognized.delete(elmDeclName);
+
+        if (parameterizedName === null) {
+            continue;
+        }
+
         colorParameterized.set(parameterizedName, declaration);
     }
 
@@ -321,14 +326,18 @@ function stripClassSelector(
     };
 }
 
-function isParameterizable(declarationName: string, resolvedColors: [string, string][]): null | string {
+function isParameterizable(declarationName: string, resolvedColors: [string, string][]): false | null | string {
     const possibleColorNames = resolvedColors.map(( [name, _] ) => name)
-    // TODO check opacity variants at the end of regex
     const regex = new RegExp(String.raw`(.*)_(?:${possibleColorNames.join('|')}).*$`)
 
     const matches = declarationName.match(regex);
 
     if (!matches) {
+        return false
+    }
+
+    // We don't want to parameterize the opacity-variants of declarations
+    if (declarationName.includes("over")) {
         return null
     }
 

@@ -9,7 +9,7 @@
     * [X] List all colors for a tailwind config
     * [X] Detect suffixes
   * [X] Fix exposes with new config
-  * [ ] Detect transparent colors (e.g. blue-500/95) (use theme.backgroundOpacity)
+  * [ ] Detect transparent colors (e.g. blue-500/95) (use theme.opacity)
   * [ ] `withOpacity : Theme.Opacity -> Theme.Color -> Theme.Color` helper
   * [ ] Make `opacity_50` etc. use `Theme.Opacity` instead
   * [ ] Handle naming option in CLI for camel case in isParameterizable in parser code

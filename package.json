@@ -23,6 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.1",
+    "color-name": "^1.1.4",
     "commander": "^7.2.0",
     "css-what": "^5.0.0",
     "deep-equal": "^2.0.3",
@@ -39,6 +40,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.4",
+    "@types/color-name": "^1.1.1",
     "@types/deep-equal": "^1.0.1",
     "@types/lodash": "^4.14.168",
     "autoprefixer": "^10.2.5",

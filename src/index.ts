@@ -122,6 +122,7 @@ export function asPostcssPlugin({moduleName, tailwindConfig, generateDocumentati
             const docGen = resolveDocGen(generateDocumentation);
             const resolvedConfig = resolveConfig(tailwindConfig);
             const resolvedColors = tailwindThemeGeneration.expandColors([], resolvedConfig.theme.colors);
+            console.log(resolvedConfig.theme.opacity);
             const blocksByClass = parser.groupDeclarationBlocksByClass(root, resolvedColors, logFunction, namingOptions);
 
             const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, docGen);

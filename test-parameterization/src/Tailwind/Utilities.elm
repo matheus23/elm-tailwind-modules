@@ -87709,8 +87709,8 @@ z_auto =
 {-| This class has the effect of following css declaration:
 
 ```css
-.accent-rose-900\/100 {
-    accent-color: rgb(136 19 55 / 1)
+.accent-rose-900 {
+    accent-color: #881337
 }
 ```
 
@@ -87719,14 +87719,15 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 accentWithColor : Color -> Css.Style
 accentWithColor color =
-    Tailwind.Theme.toProperty "accent-color" color
+    Tailwind.Theme.toProperty "accent-color" "" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.bg-rose-900\/100 {
-    background-color: rgb(136 19 55 / 1)
+.bg-rose-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(136 19 55 / var(--tw-bg-opacity))
 }
 ```
 
@@ -87735,14 +87736,15 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 bgWithColor : Color -> Css.Style
 bgWithColor color =
-    Tailwind.Theme.toProperty "background-color" color
+    Tailwind.Theme.toProperty "background-color" "--tw-bg-opacity" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.border-rose-900\/100 {
-    border-color: rgb(136 19 55 / 1)
+.border-rose-900 {
+    --tw-border-opacity: 1;
+    border-color: rgb(136 19 55 / var(--tw-border-opacity))
 }
 ```
 
@@ -87751,14 +87753,15 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 borderWithColor : Color -> Css.Style
 borderWithColor color =
-    Tailwind.Theme.toProperty "border-color" color
+    Tailwind.Theme.toProperty "border-color" "--tw-border-opacity" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.border-b-rose-900\/100 {
-    border-bottom-color: rgb(136 19 55 / 1)
+.border-b-rose-900 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(136 19 55 / var(--tw-border-opacity))
 }
 ```
 
@@ -87767,14 +87770,15 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 border_bWithColor : Color -> Css.Style
 border_bWithColor color =
-    Tailwind.Theme.toProperty "border-bottom-color" color
+    Tailwind.Theme.toProperty "border-bottom-color" "--tw-border-opacity" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.border-l-rose-900\/100 {
-    border-left-color: rgb(136 19 55 / 1)
+.border-l-rose-900 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(136 19 55 / var(--tw-border-opacity))
 }
 ```
 
@@ -87783,14 +87787,15 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 border_lWithColor : Color -> Css.Style
 border_lWithColor color =
-    Tailwind.Theme.toProperty "border-left-color" color
+    Tailwind.Theme.toProperty "border-left-color" "--tw-border-opacity" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.border-r-rose-900\/100 {
-    border-right-color: rgb(136 19 55 / 1)
+.border-r-rose-900 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(136 19 55 / var(--tw-border-opacity))
 }
 ```
 
@@ -87799,14 +87804,15 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 border_rWithColor : Color -> Css.Style
 border_rWithColor color =
-    Tailwind.Theme.toProperty "border-right-color" color
+    Tailwind.Theme.toProperty "border-right-color" "--tw-border-opacity" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.border-t-rose-900\/100 {
-    border-top-color: rgb(136 19 55 / 1)
+.border-t-rose-900 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(136 19 55 / var(--tw-border-opacity))
 }
 ```
 
@@ -87815,15 +87821,16 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 border_tWithColor : Color -> Css.Style
 border_tWithColor color =
-    Tailwind.Theme.toProperty "border-top-color" color
+    Tailwind.Theme.toProperty "border-top-color" "--tw-border-opacity" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.border-x-rose-900\/100 {
-    border-left-color: rgb(136 19 55 / 1);
-    border-right-color: rgb(136 19 55 / 1)
+.border-x-rose-900 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(136 19 55 / var(--tw-border-opacity));
+    border-right-color: rgb(136 19 55 / var(--tw-border-opacity))
 }
 ```
 
@@ -87833,17 +87840,18 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 border_xWithColor : Color -> Css.Style
 border_xWithColor color =
     Css.batch
-        [ Tailwind.Theme.toProperty "border-left-color" color
-        , Tailwind.Theme.toProperty "border-right-color" color
+        [ Tailwind.Theme.toProperty "border-left-color" "--tw-border-opacity" color
+        , Tailwind.Theme.toProperty "border-right-color" "--tw-border-opacity" color
         ]
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.border-y-rose-900\/100 {
-    border-top-color: rgb(136 19 55 / 1);
-    border-bottom-color: rgb(136 19 55 / 1)
+.border-y-rose-900 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(136 19 55 / var(--tw-border-opacity));
+    border-bottom-color: rgb(136 19 55 / var(--tw-border-opacity))
 }
 ```
 
@@ -87853,16 +87861,16 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 border_yWithColor : Color -> Css.Style
 border_yWithColor color =
     Css.batch
-        [ Tailwind.Theme.toProperty "border-top-color" color
-        , Tailwind.Theme.toProperty "border-bottom-color" color
+        [ Tailwind.Theme.toProperty "border-top-color" "--tw-border-opacity" color
+        , Tailwind.Theme.toProperty "border-bottom-color" "--tw-border-opacity" color
         ]
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.caret-rose-900\/100 {
-    caret-color: rgb(136 19 55 / 1)
+.caret-rose-900 {
+    caret-color: #881337
 }
 ```
 
@@ -87871,14 +87879,14 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 caretWithColor : Color -> Css.Style
 caretWithColor color =
-    Tailwind.Theme.toProperty "caret-color" color
+    Tailwind.Theme.toProperty "caret-color" "" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.decoration-rose-900\/100 {
-    text-decoration-color: rgb(136 19 55 / 1)
+.decoration-rose-900 {
+    text-decoration-color: #881337
 }
 ```
 
@@ -87887,14 +87895,15 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 decorationWithColor : Color -> Css.Style
 decorationWithColor color =
-    Tailwind.Theme.toProperty "text-decoration-color" color
+    Tailwind.Theme.toProperty "text-decoration-color" "" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.divide-rose-900\/100 > :not([hidden]) ~ :not([hidden]) {
-    border-color: rgb(136 19 55 / 1)
+.divide-rose-900 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(136 19 55 / var(--tw-divide-opacity))
 }
 ```
 
@@ -87906,7 +87915,7 @@ divideWithColor color =
     Css.batch
         [ Css.Global.children
             [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Tailwind.Theme.toProperty "border-color" color
+                [ Tailwind.Theme.toProperty "border-color" "--tw-divide-opacity" color
                 ]
             ]
         ]
@@ -87915,8 +87924,8 @@ divideWithColor color =
 {-| This class has the effect of following css declaration:
 
 ```css
-.fill-rose-900\/100 {
-    fill: rgb(136 19 55 / 1)
+.fill-rose-900 {
+    fill: #881337
 }
 ```
 
@@ -87925,7 +87934,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 fillWithColor : Color -> Css.Style
 fillWithColor color =
-    Css.property "fill" "rgb(136 19 55 / 1)"
+    Css.property "fill" "#881337"
 
 
 {-| This class has the effect of following css declaration:
@@ -87947,8 +87956,8 @@ fontWithColor color =
 {-| This class has the effect of following css declaration:
 
 ```css
-.from-rose-900\/100 {
-    --tw-gradient-from: rgb(136 19 55 / 1);
+.from-rose-900 {
+    --tw-gradient-from: #881337;
     --tw-gradient-to: rgb(136 19 55 / 0);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
 }
@@ -87960,7 +87969,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 fromWithColor : Color -> Css.Style
 fromWithColor color =
     Css.batch
-        [ Css.property "--tw-gradient-from" "rgb(136 19 55 / 1)"
+        [ Css.property "--tw-gradient-from" "#881337"
         , Css.property "--tw-gradient-to" "rgb(136 19 55 / 0)"
         , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
         ]
@@ -87969,8 +87978,8 @@ fromWithColor color =
 {-| This class has the effect of following css declaration:
 
 ```css
-.outline-rose-900\/100 {
-    outline-color: rgb(136 19 55 / 1)
+.outline-rose-900 {
+    outline-color: #881337
 }
 ```
 
@@ -87979,14 +87988,15 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 outlineWithColor : Color -> Css.Style
 outlineWithColor color =
-    Tailwind.Theme.toProperty "outline-color" color
+    Tailwind.Theme.toProperty "outline-color" "" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.placeholder-rose-900\/100::placeholder {
-    color: rgb(136 19 55 / 1)
+.placeholder-rose-900::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(136 19 55 / var(--tw-placeholder-opacity))
 }
 ```
 
@@ -87997,7 +88007,7 @@ placeholderWithColor : Color -> Css.Style
 placeholderWithColor color =
     Css.batch
         [ Css.pseudoElement "placeholder"
-            [ Tailwind.Theme.toProperty "color" color
+            [ Tailwind.Theme.toProperty "color" "--tw-placeholder-opacity" color
             ]
         ]
 
@@ -88005,8 +88015,9 @@ placeholderWithColor color =
 {-| This class has the effect of following css declaration:
 
 ```css
-.ring-rose-900\/100 {
-    --tw-ring-color: rgb(136 19 55 / 1)
+.ring-rose-900 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(136 19 55 / var(--tw-ring-opacity))
 }
 ```
 
@@ -88015,14 +88026,14 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 ringWithColor : Color -> Css.Style
 ringWithColor color =
-    Tailwind.Theme.toProperty "--tw-ring-color" color
+    Tailwind.Theme.toProperty "--tw-ring-color" "--tw-ring-opacity" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.ring-offset-rose-900\/100 {
-    --tw-ring-offset-color: rgb(136 19 55 / 1)
+.ring-offset-rose-900 {
+    --tw-ring-offset-color: #881337
 }
 ```
 
@@ -88031,14 +88042,14 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 ring_offsetWithColor : Color -> Css.Style
 ring_offsetWithColor color =
-    Tailwind.Theme.toProperty "--tw-ring-offset-color" color
+    Tailwind.Theme.toProperty "--tw-ring-offset-color" "" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.shadow-rose-900\/100 {
-    --tw-shadow-color: rgb(136 19 55 / 1);
+.shadow-rose-900 {
+    --tw-shadow-color: #881337;
     --tw-shadow: var(--tw-shadow-colored)
 }
 ```
@@ -88049,7 +88060,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 shadowWithColor : Color -> Css.Style
 shadowWithColor color =
     Css.batch
-        [ Tailwind.Theme.toProperty "--tw-shadow-color" color
+        [ Tailwind.Theme.toProperty "--tw-shadow-color" "" color
         , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
         ]
 
@@ -88057,8 +88068,8 @@ shadowWithColor color =
 {-| This class has the effect of following css declaration:
 
 ```css
-.stroke-rose-900\/100 {
-    stroke: rgb(136 19 55 / 1)
+.stroke-rose-900 {
+    stroke: #881337
 }
 ```
 
@@ -88067,14 +88078,15 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 strokeWithColor : Color -> Css.Style
 strokeWithColor color =
-    Css.property "stroke" "rgb(136 19 55 / 1)"
+    Css.property "stroke" "#881337"
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.text-rose-900\/100 {
-    color: rgb(136 19 55 / 1)
+.text-rose-900 {
+    --tw-text-opacity: 1;
+    color: rgb(136 19 55 / var(--tw-text-opacity))
 }
 ```
 
@@ -88083,14 +88095,14 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 textWithColor : Color -> Css.Style
 textWithColor color =
-    Tailwind.Theme.toProperty "color" color
+    Tailwind.Theme.toProperty "color" "--tw-text-opacity" color
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.to-rose-900\/100 {
-    --tw-gradient-to: rgb(136 19 55 / 1)
+.to-rose-900 {
+    --tw-gradient-to: #881337
 }
 ```
 
@@ -88099,15 +88111,15 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 toWithColor : Color -> Css.Style
 toWithColor color =
-    Css.property "--tw-gradient-to" "rgb(136 19 55 / 1)"
+    Css.property "--tw-gradient-to" "#881337"
 
 
 {-| This class has the effect of following css declaration:
 
 ```css
-.via-rose-900\/100 {
+.via-rose-900 {
     --tw-gradient-to: rgb(136 19 55 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), rgb(136 19 55 / 1), var(--tw-gradient-to)
+    --tw-gradient-stops: var(--tw-gradient-from), #881337, var(--tw-gradient-to)
 }
 ```
 
@@ -88118,5 +88130,5 @@ viaWithColor : Color -> Css.Style
 viaWithColor color =
     Css.batch
         [ Css.property "--tw-gradient-to" "rgb(136 19 55 / 0)"
-        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), rgb(136 19 55 / 1), var(--tw-gradient-to)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #881337, var(--tw-gradient-to)"
         ]

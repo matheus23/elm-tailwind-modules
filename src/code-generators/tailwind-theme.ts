@@ -1,4 +1,5 @@
 import * as generate from "./generate";
+import * as color from "../color";
 import { RecursiveKeyValuePair } from "tailwindcss/types/config";
 
 export function generateElmModule(moduleName: string, expandedColors: [string, string][]): string {
@@ -19,16 +20,41 @@ export function generateElmModule(moduleName: string, expandedColors: [string, s
 function colorType() {
     return `
 type Color
-    = Color String
+    = Color String String String String Opacity
+    | Keyword String
 
 
 type Opacity
     = Opacity String
+    | ViaVariable
 
 
-toProperty : String -> Color -> Css.Style
-toProperty propertyName (Color color) =
-    Css.property propertyName ("rgb(" ++ color ++ ")")
+toProperty : String -> String -> Color -> Css.Style
+toProperty propertyName variableName color =
+    case color of
+        Color mode r g b opacity ->
+            case opacity of
+                Opacity op ->
+                    Css.property propertyName (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / " ++ op ++ ")")
+
+                ViaVariable ->
+                    Css.batch
+                        [ Css.property variableName "1"
+                        , Css.property propertyName (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ variableName ++ "))")
+                        ]
+
+        Keyword keyword ->
+            Css.property propertyName keyword
+
+
+withOpacity : Opacity -> Color -> Color
+withOpacity opacity color =
+    case color of
+        Keyword k ->
+            Keyword k
+
+        Color mode r g b _ ->
+            Color mode r g b opacity
 
 `
 
@@ -36,9 +62,25 @@ toProperty propertyName (Color color) =
 
 function generateColors(expandedColors: [string, string][]) {
     return expandedColors.map(([colorName, colorValue]) => {
+        const parsedColor = color.parseColor(colorValue);
+
+        if (parsedColor == null) {
+            return `${colorName} : Color
+${colorName} =
+    Keyword "${colorValue}"
+`;
+        }
+
+        const [r, g, b] = parsedColor.color;
+
+        let opacity = "ViaVariable";
+        if (parsedColor.alpha != null) {
+            opacity = `(Opacity "${parsedColor.alpha}")`;
+        }
+
         return `${colorName} : Color
 ${colorName} =
-    Color "${colorValue}"
+    Color "${parsedColor.mode}" "${r}" "${g}" "${b}" ${opacity}
 `;
     }).join("\n\n");
 }
@@ -52,3 +94,5 @@ export function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair)
         }
     })
 }
+
+// export function expandOpacities()

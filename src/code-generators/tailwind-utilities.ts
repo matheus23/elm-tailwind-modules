@@ -66,42 +66,6 @@ function convertUnrecognizeds(unrecognizeds: UnrecognizedDeclaration[]): generat
     );
 }
 
-const recognizedColorPrefxies = [
-  "accent",
-  "bg",
-  "border_b",
-  "border",
-  "border_l",
-  "border_r",
-  "border_t",
-  "border_x",
-  "border_y",
-  "caret",
-  "decoration",
-  "divide",
-  "fill",
-  "from",
-  "outline",
-  "placeholder",
-  "ring",
-  "ring_offset",
-  "shadow",
-  "stroke",
-  "text",
-  "to",
-  "via",
-];
-
-function isParameterizable(declarationName: string): null | string {
-  const matchingPrefix = recognizedColorPrefxies.find((prefix) =>
-    declarationName.startsWith(`${prefix}_`)
-  );
-  if (matchingPrefix) {
-    return `${matchingPrefix}{color}`;
-  }
-  return null;
-}
-
 function elmRecognizedToFunctions(
     keyframes: Map<string, Keyframe[]>,
     recognizedBlocksByClass: Map<string, RecognizedDeclaration>,
@@ -154,8 +118,15 @@ function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: Css
         ];
     }
 
-    if (isParameterized && declaration.prop.endsWith("color")) {
-        return [convertColorDeclaration("Css.property", declaration.prop, declaration.value)];
+    if (isParameterized) {
+        if (declaration.prop.endsWith("color")) {
+            return [convertColorDeclaration("Css.property", declaration.prop, declaration.value)];
+        }
+        if (declaration.prop.startsWith("--") && declaration.prop.endsWith("-opacity")) {
+            // We intentionally drop e.g. "--tw-bg-opacity" properties.
+            // They'll get re-added in `Theme.toProperty`, if the color doesn't have an opacity set.
+            return [];
+        }
     }
 
     return [convertBasicDeclaration("Css.property", declaration.prop, declaration.value)];
@@ -166,13 +137,19 @@ function convertBasicDeclaration(functionName: string, property: string, value: 
 }
 
 
-function convertColorDeclaration(functionName: string, property: string, value: string): generate.Indentable {
-    const [prefix, suffix] = value.split(/rgb\(\d+ \d+ \d+/);
-    if (prefix == null || suffix == null) {
-        console.log(value);
-        return convertBasicDeclaration(functionName, property, value);
+function convertColorDeclaration(functionName: string, property: string, colorValue: string): generate.Indentable {
+    // normal color values like "#881337". For these we don't know what the opacity variable names should be.
+    if (colorValue.startsWith("#")) {
+        return generate.singleLine(`Tailwind.Theme.toProperty ${generate.elmString(property)} "" color`);
     }
-    return generate.singleLine(`Tailwind.Theme.toProperty ${generate.elmString(property)} color`);
+
+    const match = colorValue.match(/rgb\(\d+ \d+ \d+ \/ var\(([a-z-]+)\)\)/);
+    if (!match) {
+        console.log(functionName, property, colorValue);
+        return convertBasicDeclaration(functionName, property, colorValue);
+    }
+    const variableName = match[1];
+    return generate.singleLine(`Tailwind.Theme.toProperty ${generate.elmString(property)} ${generate.elmString(variableName)} color`);
 }
 
 function convertProperties(subselector: SubselectorRest, convertedProperties: generate.Indentable[]) {
