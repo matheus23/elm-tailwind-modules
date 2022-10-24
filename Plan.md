@@ -12,8 +12,11 @@
   * [X] Detect transparent colors (e.g. blue-500/95) (use theme.opacity)
   * [X] `withOpacity : Theme.Opacity -> Theme.Color -> Theme.Color` helper
   * [ ] Look at counterexamples & fix them
-    * [ ] Detect color values in 'suspected to be parameterizable' definitions
-    * [ ] Handle colors without opacity variables correctly
+    * [X] Detect color values in 'suspected to be parameterizable' definitions
+    * [ ] Detect better where/when to replace values with abstract `color` var
+      * [ ] Handle cases of computed opacity values (opactiy replaced with 0)
+      * [ ] Handle cases of color appearing mid-value (e.g. viaWithColor)
+    * [ ] Handle colors without opacity variables correctly (e.g. caretWithColor)
   * [ ] Make `opacity_50` etc. use `Theme.Opacity` instead
   * [ ] Handle naming option in CLI for camel case in isParameterizable in parser code
   * [X] Use a non-primitive elm type for colors (instead of String)
@@ -126,20 +129,6 @@ fillWithColor color =
 
 {-| This class has the effect of following css declaration:
 
-.font-black {
-    font-weight: 900
-}
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-fontWithColor : Color -> Css.Style
-fontWithColor color =
-    Css.property "font-weight" "900"
-
-
-{-| This class has the effect of following css declaration:
-
 .from-rose-900 {
     --tw-gradient-from: #881337;
     --tw-gradient-to: rgb(136 19 55 / 0);
@@ -156,6 +145,24 @@ fromWithColor color =
         , Css.property "--tw-gradient-to" "rgb(136 19 55 / 0)"
         , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
         ]
+
+{-| This class has the effect of following css declaration:
+
+.via-rose-900 {
+    --tw-gradient-to: rgb(136 19 55 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #881337, var(--tw-gradient-to)
+}
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+viaWithColor : Color -> Css.Style
+viaWithColor color =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(136 19 55 / 0)"
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #881337, var(--tw-gradient-to)"
+        ]
+
 ```
 
 
