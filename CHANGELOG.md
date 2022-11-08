@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1
+
+* Relaxed tailwindcss `peerDependency` version bounds to include `^3.1.6`.
+
 ## 0.4.0
 
 * Support for tailwind v3 by turning off the JIT using tailwind's `safelist` option
