@@ -14,9 +14,12 @@
   * [ ] Look at counterexamples & fix them
     * [X] Detect color values in 'suspected to be parameterizable' definitions
     * [ ] Detect better where/when to replace values with abstract `color` var
-      * [ ] Handle cases of computed opacity values (opactiy replaced with 0)
-      * [ ] Handle cases of color appearing mid-value (e.g. viaWithColor)
-    * [ ] Handle colors without opacity variables correctly (e.g. caretWithColor)
+      * [ ] Handle cases of computed opacity values (opacity replaced with 0)
+      * [X] Handle cases of color appearing mid-value (e.g. viaWithColor)
+    * [X] Handle colors without opacity variables correctly (e.g. caretWithColor)
+    * [ ] Use `declaration.opacityVariableName`
+    * [ ] Refactor: Remove `isParameterized` parameter
+    * [ ] Look through TODOs in the code
   * [ ] Make `opacity_50` etc. use `Theme.Opacity` instead
   * [ ] Handle naming option in CLI for camel case in isParameterizable in parser code
   * [X] Use a non-primitive elm type for colors (instead of String)

@@ -15,7 +15,8 @@ import {
     RecognizedDeclaration,
     Subselector,
     SubselectorRest,
-    UnrecognizedDeclaration
+    UnrecognizedDeclaration,
+    ParameterizedDeclaration
 } from "./types";
 import * as color from "./color";
 
@@ -38,7 +39,7 @@ export function groupDeclarationBlocksByClass(
     namingOptions: NamingOptions,
 ): GroupedDeclarations {
     const recognized: Map<string, RecognizedDeclaration> = new Map();
-    const colorParameterized: Map<string, RecognizedDeclaration> = new Map();
+    const colorParameterized: Map<string, ParameterizedDeclaration> = new Map();
     const unrecognized: UnrecognizedDeclaration[] = [];
     const keyframes: Map<string, Keyframe[]> = new Map();
 
@@ -201,19 +202,20 @@ export function groupDeclarationBlocksByClass(
     }
 
     for (const [elmDeclName, declaration] of recognized) {
-        const parameterizedName = isParameterizable(elmDeclName, declaration, resolvedColors);
+        const parameterizedDeclaration = isParameterizable(elmDeclName, declaration, resolvedColors);
 
-        if (parameterizedName === false) {
+        if (parameterizedDeclaration === false) {
             continue;
         }
 
         recognized.delete(elmDeclName);
 
-        if (parameterizedName === null) {
+        if (parameterizedDeclaration === null) {
             continue;
         }
 
-        colorParameterized.set(parameterizedName, declaration);
+        const [name, value] = parameterizedDeclaration;
+        colorParameterized.set(name, value);
     }
 
     return { recognized, colorParameterized, unrecognized, keyframes };
@@ -327,7 +329,7 @@ function stripClassSelector(
     };
 }
 
-function isParameterizable(declarationName: string, declaration: RecognizedDeclaration, resolvedColors: [string, string][]): false | null | string {
+function isParameterizable(declarationName: string, declaration: RecognizedDeclaration, resolvedColors: [string, string][]): false | null | [string, ParameterizedDeclaration] {
     // If we don't sort by descending color name length, we have this edge-case:
     // e.g. blue_50 & blue_500 both appear in the regex.
     // bg_blue_500 matches with blue_50, but we want to match blue_500,
@@ -358,14 +360,51 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
     }
 
     const parsedColor = color.parseColor(resolvedColor);
+    const parsedColorRegex = parsedColor != null ? color.colorDetectionRegex(parsedColor) : null;
 
-    const referencesColor = declaration
-        .propertiesBySelector
-        .flatMap(({ properties }) => properties)
-        .find(({ value }) =>
-            value.includes(resolvedColor)
-            || (parsedColor != null && value.match(color.colorDetectionRegex(parsedColor)))
-        ) != null;
+    let referencesColor = false;
+
+    const parameterizedDeclaration = {
+        ...declaration,
+        propertiesBySelector: declaration.propertiesBySelector.map(selector => ({
+            ...selector,
+            properties: selector.properties.map(property => {
+                referencesColor = true; // TODO: Actually match
+                // Look for resolvedColor
+                const matchResolved = property.value.match(resolvedColor)
+                if (matchResolved) {
+                    const matchStartIdx = matchResolved.index;
+                    const matchEndIdx = matchResolved.index + matchResolved[0].length;
+                    const valuePrefix = property.value.substring(0, matchStartIdx);
+                    const valueSuffix = property.value.substring(matchEndIdx);
+                    return {
+                        prop: property.prop,
+                        valuePrefix,
+                        valueSuffix,
+                    }
+                }
+
+                // Look for parsedColorRegex
+                if (parsedColorRegex != null) {
+                    const matchParsed = property.value.match(parsedColorRegex)
+                    // TODO perhaps match the opacity variable name too
+                    if (matchParsed) {
+                        const matchStartIdx = matchParsed.index;
+                        const matchEndIdx = matchParsed.index + matchParsed[0].length;
+                        const valuePrefix = property.value.substring(0, matchStartIdx);
+                        const valueSuffix = property.value.substring(matchEndIdx);
+                        return {
+                            prop: property.prop,
+                            valuePrefix,
+                            valueSuffix,
+                        }
+                    }
+                }
+
+                return property
+            })
+        }))
+    };
 
     if (!referencesColor) {
         return false
@@ -383,5 +422,5 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
 
     */
 
-    return `${matches[1]}WithColor`;
+    return [`${matches[1]}WithColor`, parameterizedDeclaration];
 }

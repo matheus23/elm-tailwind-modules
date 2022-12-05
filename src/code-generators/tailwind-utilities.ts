@@ -7,6 +7,8 @@ import {
     UnrecognizedDeclaration,
     PseudoSubselectorRest,
     Keyframe,
+    ParameterizedDeclaration,
+    ParameterizedProperty,
 } from "../types";
 import { DocumentationGenerator } from "../docs";
 
@@ -68,7 +70,7 @@ function convertUnrecognizeds(unrecognizeds: UnrecognizedDeclaration[]): generat
 
 function elmRecognizedToFunctions(
     keyframes: Map<string, Keyframe[]>,
-    recognizedBlocksByClass: Map<string, RecognizedDeclaration>,
+    recognizedBlocksByClass: Map<string, ParameterizedDeclaration>,
     docs: DocumentationGenerator,
     parameterized: boolean,
 ): string {
@@ -82,7 +84,7 @@ function elmRecognizedToFunctions(
 function elmRecognizedFunction(
     keyframes: Map<string, Keyframe[]>,
     elmClassName: string,
-    propertiesBlock: RecognizedDeclaration,
+    propertiesBlock: ParameterizedDeclaration,
     docs: DocumentationGenerator,
     parameterized: boolean,
 ): string {
@@ -99,7 +101,18 @@ ${convertDeclarationBlock(keyframes, propertiesBlock, parameterized)({
 `;
 }
 
-function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty, isParameterized: boolean): generate.Indentable[] {
+function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty | ParameterizedProperty, isParameterized: boolean): generate.Indentable[] {
+    if ("valuePrefix" in declaration) {
+        // TODO use declaration.opacityVariableName
+        if (declaration.prop.startsWith("--") && declaration.prop.endsWith("-opacity")) {
+            // We intentionally drop e.g. "--tw-bg-opacity" properties.
+            // They'll get re-added in `Theme.toProperty`, if the color doesn't have an opacity set.
+            return [];
+        }
+
+        return [convertColorDeclaration(declaration)];
+    }
+
     if (declaration.prop.endsWith("animation") || declaration.prop.endsWith("animation-name")) {
         const animationName = Array.from(keyframes.keys()).find(name => declaration.value.indexOf(name) >= 0);
         if (animationName == null) {
@@ -118,17 +131,6 @@ function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: Css
         ];
     }
 
-    if (isParameterized) {
-        if (declaration.prop.endsWith("color")) {
-            return [convertColorDeclaration("Css.property", declaration.prop, declaration.value)];
-        }
-        if (declaration.prop.startsWith("--") && declaration.prop.endsWith("-opacity")) {
-            // We intentionally drop e.g. "--tw-bg-opacity" properties.
-            // They'll get re-added in `Theme.toProperty`, if the color doesn't have an opacity set.
-            return [];
-        }
-    }
-
     return [convertBasicDeclaration("Css.property", declaration.prop, declaration.value)];
 }
 
@@ -137,19 +139,13 @@ function convertBasicDeclaration(functionName: string, property: string, value: 
 }
 
 
-function convertColorDeclaration(functionName: string, property: string, colorValue: string): generate.Indentable {
-    // normal color values like "#881337". For these we don't know what the opacity variable names should be.
-    if (colorValue.startsWith("#")) {
-        return generate.singleLine(`Tailwind.Theme.toProperty ${generate.elmString(property)} "" color`);
-    }
-
-    const match = colorValue.match(/rgb\(\d+ \d+ \d+ \/ var\(([a-z-]+)\)\)/);
-    if (!match) {
-        console.log(functionName, property, colorValue);
-        return convertBasicDeclaration(functionName, property, colorValue);
-    }
-    const variableName = match[1];
-    return generate.singleLine(`Tailwind.Theme.toProperty ${generate.elmString(property)} ${generate.elmString(variableName)} color`);
+function convertColorDeclaration(property: ParameterizedProperty): generate.Indentable {
+    // TODO make this a Maybe & use Nothing in some cases
+    const propertyName = generate.elmString(property.prop);
+    const valuePrefix = generate.elmString(property.valuePrefix);
+    const valueSuffix = generate.elmString(property.valueSuffix);
+    const variableName = generate.elmString(property.opacityVariableName != null ? property.opacityVariableName : "");
+    return generate.singleLine(`Tailwind.Theme.toProperty ${propertyName} (\\c -> ${valuePrefix} ++ c ++ ${valueSuffix}) ${variableName} c`)
 }
 
 function convertProperties(subselector: SubselectorRest, convertedProperties: generate.Indentable[]) {
@@ -230,8 +226,9 @@ function convertMediaQueryWrap(mediaQuery: string, functionName: string, propert
     ]
 }
 
-function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesBlock: RecognizedDeclaration, isParameterized: boolean): generate.Indentable {
-    const plainProperties = findPlainProperties(propertiesBlock).flatMap(d => convertDeclaration(keyframes, d, isParameterized));
+function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesBlock: ParameterizedDeclaration, isParameterized: boolean): generate.Indentable {
+    const plainProperties = findPlainProperties(propertiesBlock)
+        .flatMap(d => convertDeclaration(keyframes, d, isParameterized));
     const subselectors = propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
         subselectors.flatMap(subselector => {
             if (subselector.rest.type === "plain" && subselector.mediaQuery == null) {
@@ -260,7 +257,7 @@ function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesB
     );
 }
 
-function findPlainProperties(propertiesBlock: RecognizedDeclaration): CssProperty[] {
+function findPlainProperties(propertiesBlock: ParameterizedDeclaration): (CssProperty | ParameterizedProperty)[] {
     return propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
         subselectors.flatMap(subselector => {
             if (subselector.rest.type === "plain" && subselector.mediaQuery == null) {

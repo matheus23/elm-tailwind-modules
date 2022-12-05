@@ -1,4 +1,4 @@
-import { Breakpoint, RecognizedDeclaration } from "./types"
+import { Breakpoint, ParameterizedDeclaration } from "./types"
 
 /* This interface encapsulates documentation generation for
  * all generated functions.
@@ -16,7 +16,8 @@ export interface DocumentationGenerator {
     utilitiesGlobalStyles: () => string;
     /* Called for every generated tailwind utility definition.
      * The output string can be empty or otherwise has to contain the `{-|` and `-}` parts. */
-    utilitiesDefinition: (name: string, declaration: RecognizedDeclaration) => string;
+    utilitiesDefinition: (name: string, declaration: ParameterizedDeclaration) => string;
+    // TODO Add two cases, one for parameterized one for non-parameterized
 
     /* Choose the order of definitions in the `exposing` clause for the breakpoints module.
      * `null` indicates that `exposing (..)` should be generated. */
