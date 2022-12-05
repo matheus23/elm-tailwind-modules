@@ -94,7 +94,8 @@ small things
 ## Counterexamples
 
 - Need to detect color properties without "color" suffixes ("stroke", "fill", "--tw-gradient-from")
-- Need to detect parameterizable properties other than using color name suffixes
+- Need to detect parameterizable declarations other than using color name suffixes
+- Need to have a `toProperty` function for properties that don't have an opacity
 
 
 ```elm
@@ -181,4 +182,35 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 caretWithColor : Color -> Css.Style
 caretWithColor color =
     Tailwind.Theme.toProperty "caret-color" "" color
+```
+
+## Abstraction out color ideas
+
+```elm
+
+toProperty : String -> (String -> String) -> String -> Color -> Css.Style
+toProperty propertyName colorEmbeddedInValue variableName color =
+    case color of
+        Color mode r g b opacity ->
+            case opacity of
+                Opacity op ->
+                    Css.property propertyName (colorEmbeddedInValue (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / " ++ op ++ ")"))
+
+                ViaVariable ->
+                    Css.batch
+                        [ Css.property variableName "1"
+                        , Css.property propertyName (colorEmbeddedInValue (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ variableName ++ "))"))
+                        ]
+
+        Keyword keyword ->
+            Css.property propertyName keyword
+
+
+viaWithColor : Color -> Css.Style
+viaWithColor color =
+    Css.batch
+        [ Css.property "--tw-gradient-to" "rgb(136 19 55 / 0)"
+        , toProperty "--tw-gradient-stops" (\color -> "var(--tw-gradient-from), " ++ color ++ ", var(--tw-gradient-to)") "" color
+        ]
+
 ```

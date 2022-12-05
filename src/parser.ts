@@ -328,7 +328,12 @@ function stripClassSelector(
 }
 
 function isParameterizable(declarationName: string, declaration: RecognizedDeclaration, resolvedColors: [string, string][]): false | null | string {
-    const possibleColorNames = resolvedColors.map(( [name, _] ) => name)
+    // If we don't sort by descending color name length, we have this edge-case:
+    // e.g. blue_50 & blue_500 both appear in the regex.
+    // bg_blue_500 matches with blue_50, but we want to match blue_500,
+    // so we need the longest possible match
+    const possibleColorNames = resolvedColors.map(([name, _]) => name).sort((a, b) => b.length - a.length);
+    // TODO: Match different ways of capitalizing declaration names (see toElmName helper)
     const regex = new RegExp(String.raw`(.*)_(${possibleColorNames.join('|')}).*$`)
 
     const matches = declarationName.match(regex);
@@ -361,7 +366,7 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
             value.includes(resolvedColor)
             || (parsedColor != null && value.match(color.colorDetectionRegex(parsedColor)))
         ) != null;
-    
+
     if (!referencesColor) {
         return false
     }

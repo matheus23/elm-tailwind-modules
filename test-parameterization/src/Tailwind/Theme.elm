@@ -241,18 +241,18 @@ type Opacity
     | ViaVariable
 
 
-toProperty : String -> (String -> String) -> String -> Color -> Css.Style
-toProperty propertyName colorEmbeddedInValue variableName color =
+toProperty : String -> String -> Color -> Css.Style
+toProperty propertyName variableName color =
     case color of
         Color mode r g b opacity ->
             case opacity of
                 Opacity op ->
-                    Css.property propertyName (colorEmbeddedInValue (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / " ++ op ++ ")"))
+                    Css.property propertyName (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / " ++ op ++ ")")
 
                 ViaVariable ->
                     Css.batch
                         [ Css.property variableName "1"
-                        , Css.property propertyName (colorEmbeddedInValue (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ variableName ++ "))"))
+                        , Css.property propertyName (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ variableName ++ "))")
                         ]
 
         Keyword keyword ->
