@@ -20,7 +20,7 @@
     * [ ] Use `declaration.opacityVariableName`
     * [ ] Refactor: Remove `isParameterized` parameter
     * [ ] Look through TODOs in the code
-  * [ ] Make `opacity_50` etc. use `Theme.Opacity` instead
+  * [ ] Generate & use opacity variants: Make `opacity_50` etc. use `Theme.Opacity` instead
   * [ ] Handle naming option in CLI for camel case in isParameterizable in parser code
   * [X] Use a non-primitive elm type for colors (instead of String)
   * [X] Get numbers on the size difference (88320 exposed values vs. 3812)
