@@ -101,15 +101,14 @@ ${convertDeclarationBlock(keyframes, propertiesBlock, parameterized)({
 `;
 }
 
-function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty | ParameterizedProperty, isParameterized: boolean): generate.Indentable[] {
-    if ("valuePrefix" in declaration) {
-        // TODO use declaration.opacityVariableName
-        if (declaration.prop.startsWith("--") && declaration.prop.endsWith("-opacity")) {
-            // We intentionally drop e.g. "--tw-bg-opacity" properties.
-            // They'll get re-added in `Theme.toProperty`, if the color doesn't have an opacity set.
-            return [];
-        }
+function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty | ParameterizedProperty, cssVarNames: string[], isParameterized: boolean): generate.Indentable[] {
+    if (cssVarNames.includes(declaration.prop)) {
+        // We intentionally drop e.g. "--tw-bg-opacity" properties.
+        // They'll get re-added in `Theme.toProperty`, if the color doesn't have an opacity set.
+        return [];
+    }
 
+    if ("valuePrefix" in declaration) {
         return [convertColorDeclaration(declaration)];
     }
 
@@ -227,33 +226,41 @@ function convertMediaQueryWrap(mediaQuery: string, functionName: string, propert
 }
 
 function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesBlock: ParameterizedDeclaration, isParameterized: boolean): generate.Indentable {
-    const plainProperties = findPlainProperties(propertiesBlock)
-        .flatMap(d => convertDeclaration(keyframes, d, isParameterized));
-    const subselectors = propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
+    const plainProperties = findPlainProperties(propertiesBlock);
+    const cssVarNames = findColorCssVarNames(plainProperties);
+    const plainPropertiesCode = plainProperties.flatMap(d => convertDeclaration(keyframes, d, cssVarNames, isParameterized));
+
+    const mediaQueriedPropertiesCode = propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
         subselectors.flatMap(subselector => {
             if (subselector.rest.type === "plain" && subselector.mediaQuery == null) {
                 // We've got these covered in "plainProperties"
                 return [];
             }
 
+            const cssVarNames = findColorCssVarNames(properties);
+
             return convertMediaQueryWrap(
                 subselector.mediaQuery,
                 `Css.Media.withMediaQuery`,
                 convertProperties(
                     subselector.rest,
-                    properties.flatMap(d => convertDeclaration(keyframes, d, isParameterized))
+                    properties.flatMap(d => convertDeclaration(keyframes, d, cssVarNames, isParameterized))
                 )
             );
         })
     );
 
-    if (plainProperties.length === 1 && subselectors.length === 0) {
-        return plainProperties[0];
+    return batchIfNeeded(plainPropertiesCode.concat(Array.from(mediaQueriedPropertiesCode).reverse()));
+}
+
+function batchIfNeeded(expressions: generate.Indentable[]): generate.Indentable {
+    if (expressions.length === 1) {
+        return expressions[0];
     }
 
     return generate.elmFunctionCall(
         `Css.batch`,
-        generate.elmList(plainProperties.concat(Array.from(subselectors).reverse()))
+        generate.elmList(expressions)
     );
 }
 
@@ -265,6 +272,14 @@ function findPlainProperties(propertiesBlock: ParameterizedDeclaration): (CssPro
             }
             return [];
         })
+    );
+}
+
+function findColorCssVarNames(properties: (CssProperty | ParameterizedProperty)[]): string[] {
+    return properties.flatMap(property =>
+        "valuePrefix" in property && property.opacityVariableName != null
+            ? [property.opacityVariableName]
+            : []
     );
 }
 

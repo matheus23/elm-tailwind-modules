@@ -20935,11 +20935,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_dashed : Css.Style
 divide_dashed =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "border-style" "dashed"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "border-style" "dashed"
             ]
         ]
 
@@ -20957,11 +20955,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_dotted : Css.Style
 divide_dotted =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "border-style" "dotted"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "border-style" "dotted"
             ]
         ]
 
@@ -20979,11 +20975,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_double : Css.Style
 divide_double =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "border-style" "double"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "border-style" "double"
             ]
         ]
 
@@ -21001,11 +20995,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_none : Css.Style
 divide_none =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "border-style" "none"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "border-style" "none"
             ]
         ]
 
@@ -21023,11 +21015,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_0 : Css.Style
 divide_opacity_0 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0"
             ]
         ]
 
@@ -21045,11 +21035,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_10 : Css.Style
 divide_opacity_10 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.1"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.1"
             ]
         ]
 
@@ -21067,11 +21055,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_100 : Css.Style
 divide_opacity_100 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "1"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "1"
             ]
         ]
 
@@ -21089,11 +21075,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_20 : Css.Style
 divide_opacity_20 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.2"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.2"
             ]
         ]
 
@@ -21111,11 +21095,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_25 : Css.Style
 divide_opacity_25 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.25"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.25"
             ]
         ]
 
@@ -21133,11 +21115,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_30 : Css.Style
 divide_opacity_30 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.3"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.3"
             ]
         ]
 
@@ -21155,11 +21135,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_40 : Css.Style
 divide_opacity_40 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.4"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.4"
             ]
         ]
 
@@ -21177,11 +21155,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_5 : Css.Style
 divide_opacity_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.05"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.05"
             ]
         ]
 
@@ -21199,11 +21175,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_50 : Css.Style
 divide_opacity_50 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.5"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.5"
             ]
         ]
 
@@ -21221,11 +21195,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_60 : Css.Style
 divide_opacity_60 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.6"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.6"
             ]
         ]
 
@@ -21243,11 +21215,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_70 : Css.Style
 divide_opacity_70 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.7"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.7"
             ]
         ]
 
@@ -21265,11 +21235,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_75 : Css.Style
 divide_opacity_75 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.75"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.75"
             ]
         ]
 
@@ -21287,11 +21255,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_80 : Css.Style
 divide_opacity_80 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.8"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.8"
             ]
         ]
 
@@ -21309,11 +21275,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_90 : Css.Style
 divide_opacity_90 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.9"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.9"
             ]
         ]
 
@@ -21331,11 +21295,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_opacity_95 : Css.Style
 divide_opacity_95 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "0.95"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-opacity" "0.95"
             ]
         ]
 
@@ -21353,11 +21315,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_solid : Css.Style
 divide_solid =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "border-style" "solid"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "border-style" "solid"
             ]
         ]
 
@@ -21377,13 +21337,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_x : Css.Style
 divide_x =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-x-reverse" "0"
-                , Css.property "border-right-width" "calc(1px * var(--tw-divide-x-reverse))"
-                , Css.property "border-left-width" "calc(1px * calc(1 - var(--tw-divide-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-x-reverse" "0"
+            , Css.property "border-right-width" "calc(1px * var(--tw-divide-x-reverse))"
+            , Css.property "border-left-width" "calc(1px * calc(1 - var(--tw-divide-x-reverse)))"
             ]
         ]
 
@@ -21403,13 +21361,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_x_0 : Css.Style
 divide_x_0 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-x-reverse" "0"
-                , Css.property "border-right-width" "calc(0px * var(--tw-divide-x-reverse))"
-                , Css.property "border-left-width" "calc(0px * calc(1 - var(--tw-divide-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-x-reverse" "0"
+            , Css.property "border-right-width" "calc(0px * var(--tw-divide-x-reverse))"
+            , Css.property "border-left-width" "calc(0px * calc(1 - var(--tw-divide-x-reverse)))"
             ]
         ]
 
@@ -21429,13 +21385,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_x_2 : Css.Style
 divide_x_2 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-x-reverse" "0"
-                , Css.property "border-right-width" "calc(2px * var(--tw-divide-x-reverse))"
-                , Css.property "border-left-width" "calc(2px * calc(1 - var(--tw-divide-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-x-reverse" "0"
+            , Css.property "border-right-width" "calc(2px * var(--tw-divide-x-reverse))"
+            , Css.property "border-left-width" "calc(2px * calc(1 - var(--tw-divide-x-reverse)))"
             ]
         ]
 
@@ -21455,13 +21409,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_x_4 : Css.Style
 divide_x_4 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-x-reverse" "0"
-                , Css.property "border-right-width" "calc(4px * var(--tw-divide-x-reverse))"
-                , Css.property "border-left-width" "calc(4px * calc(1 - var(--tw-divide-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-x-reverse" "0"
+            , Css.property "border-right-width" "calc(4px * var(--tw-divide-x-reverse))"
+            , Css.property "border-left-width" "calc(4px * calc(1 - var(--tw-divide-x-reverse)))"
             ]
         ]
 
@@ -21481,13 +21433,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_x_8 : Css.Style
 divide_x_8 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-x-reverse" "0"
-                , Css.property "border-right-width" "calc(8px * var(--tw-divide-x-reverse))"
-                , Css.property "border-left-width" "calc(8px * calc(1 - var(--tw-divide-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-x-reverse" "0"
+            , Css.property "border-right-width" "calc(8px * var(--tw-divide-x-reverse))"
+            , Css.property "border-left-width" "calc(8px * calc(1 - var(--tw-divide-x-reverse)))"
             ]
         ]
 
@@ -21505,11 +21455,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_x_reverse : Css.Style
 divide_x_reverse =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-x-reverse" "1"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-x-reverse" "1"
             ]
         ]
 
@@ -21529,13 +21477,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_y : Css.Style
 divide_y =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-y-reverse" "0"
-                , Css.property "border-top-width" "calc(1px * calc(1 - var(--tw-divide-y-reverse)))"
-                , Css.property "border-bottom-width" "calc(1px * var(--tw-divide-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-y-reverse" "0"
+            , Css.property "border-top-width" "calc(1px * calc(1 - var(--tw-divide-y-reverse)))"
+            , Css.property "border-bottom-width" "calc(1px * var(--tw-divide-y-reverse))"
             ]
         ]
 
@@ -21555,13 +21501,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_y_0 : Css.Style
 divide_y_0 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-y-reverse" "0"
-                , Css.property "border-top-width" "calc(0px * calc(1 - var(--tw-divide-y-reverse)))"
-                , Css.property "border-bottom-width" "calc(0px * var(--tw-divide-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-y-reverse" "0"
+            , Css.property "border-top-width" "calc(0px * calc(1 - var(--tw-divide-y-reverse)))"
+            , Css.property "border-bottom-width" "calc(0px * var(--tw-divide-y-reverse))"
             ]
         ]
 
@@ -21581,13 +21525,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_y_2 : Css.Style
 divide_y_2 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-y-reverse" "0"
-                , Css.property "border-top-width" "calc(2px * calc(1 - var(--tw-divide-y-reverse)))"
-                , Css.property "border-bottom-width" "calc(2px * var(--tw-divide-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-y-reverse" "0"
+            , Css.property "border-top-width" "calc(2px * calc(1 - var(--tw-divide-y-reverse)))"
+            , Css.property "border-bottom-width" "calc(2px * var(--tw-divide-y-reverse))"
             ]
         ]
 
@@ -21607,13 +21549,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_y_4 : Css.Style
 divide_y_4 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-y-reverse" "0"
-                , Css.property "border-top-width" "calc(4px * calc(1 - var(--tw-divide-y-reverse)))"
-                , Css.property "border-bottom-width" "calc(4px * var(--tw-divide-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-y-reverse" "0"
+            , Css.property "border-top-width" "calc(4px * calc(1 - var(--tw-divide-y-reverse)))"
+            , Css.property "border-bottom-width" "calc(4px * var(--tw-divide-y-reverse))"
             ]
         ]
 
@@ -21633,13 +21573,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_y_8 : Css.Style
 divide_y_8 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-y-reverse" "0"
-                , Css.property "border-top-width" "calc(8px * calc(1 - var(--tw-divide-y-reverse)))"
-                , Css.property "border-bottom-width" "calc(8px * var(--tw-divide-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-y-reverse" "0"
+            , Css.property "border-top-width" "calc(8px * calc(1 - var(--tw-divide-y-reverse)))"
+            , Css.property "border-bottom-width" "calc(8px * var(--tw-divide-y-reverse))"
             ]
         ]
 
@@ -21657,11 +21595,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divide_y_reverse : Css.Style
 divide_y_reverse =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-y-reverse" "1"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-divide-y-reverse" "1"
             ]
         ]
 
@@ -52252,13 +52188,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_0 : Css.Style
 neg_space_x_0 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-0px * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-0px * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-0px * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-0px * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52278,13 +52212,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_0_dot_5 : Css.Style
 neg_space_x_0_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-0.125rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-0.125rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-0.125rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-0.125rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52304,13 +52236,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_1 : Css.Style
 neg_space_x_1 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-0.25rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-0.25rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-0.25rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-0.25rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52330,13 +52260,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_10 : Css.Style
 neg_space_x_10 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-2.5rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-2.5rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-2.5rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-2.5rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52356,13 +52284,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_11 : Css.Style
 neg_space_x_11 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-2.75rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-2.75rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-2.75rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-2.75rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52382,13 +52308,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_12 : Css.Style
 neg_space_x_12 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-3rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-3rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-3rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-3rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52408,13 +52332,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_14 : Css.Style
 neg_space_x_14 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-3.5rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-3.5rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-3.5rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-3.5rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52434,13 +52356,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_16 : Css.Style
 neg_space_x_16 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-4rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-4rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-4rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-4rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52460,13 +52380,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_1_dot_5 : Css.Style
 neg_space_x_1_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-0.375rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-0.375rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-0.375rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-0.375rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52486,13 +52404,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_2 : Css.Style
 neg_space_x_2 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-0.5rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-0.5rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-0.5rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-0.5rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52512,13 +52428,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_20 : Css.Style
 neg_space_x_20 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-5rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-5rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-5rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-5rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52538,13 +52452,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_24 : Css.Style
 neg_space_x_24 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-6rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-6rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-6rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-6rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52564,13 +52476,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_28 : Css.Style
 neg_space_x_28 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-7rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-7rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-7rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-7rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52590,13 +52500,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_2_dot_5 : Css.Style
 neg_space_x_2_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-0.625rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-0.625rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-0.625rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-0.625rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52616,13 +52524,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_3 : Css.Style
 neg_space_x_3 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-0.75rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-0.75rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-0.75rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-0.75rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52642,13 +52548,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_32 : Css.Style
 neg_space_x_32 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-8rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-8rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-8rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-8rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52668,13 +52572,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_36 : Css.Style
 neg_space_x_36 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-9rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-9rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-9rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-9rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52694,13 +52596,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_3_dot_5 : Css.Style
 neg_space_x_3_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-0.875rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-0.875rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-0.875rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-0.875rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52720,13 +52620,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_4 : Css.Style
 neg_space_x_4 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-1rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-1rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-1rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-1rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52746,13 +52644,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_40 : Css.Style
 neg_space_x_40 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-10rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-10rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-10rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-10rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52772,13 +52668,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_44 : Css.Style
 neg_space_x_44 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-11rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-11rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-11rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-11rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52798,13 +52692,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_48 : Css.Style
 neg_space_x_48 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-12rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-12rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-12rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-12rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52824,13 +52716,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_5 : Css.Style
 neg_space_x_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-1.25rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-1.25rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-1.25rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-1.25rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52850,13 +52740,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_52 : Css.Style
 neg_space_x_52 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-13rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-13rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-13rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-13rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52876,13 +52764,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_56 : Css.Style
 neg_space_x_56 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-14rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-14rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-14rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-14rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52902,13 +52788,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_6 : Css.Style
 neg_space_x_6 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-1.5rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-1.5rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-1.5rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-1.5rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52928,13 +52812,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_60 : Css.Style
 neg_space_x_60 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-15rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-15rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-15rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-15rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52954,13 +52836,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_64 : Css.Style
 neg_space_x_64 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-16rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-16rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-16rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-16rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -52980,13 +52860,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_7 : Css.Style
 neg_space_x_7 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-1.75rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-1.75rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-1.75rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-1.75rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -53006,13 +52884,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_72 : Css.Style
 neg_space_x_72 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-18rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-18rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-18rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-18rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -53032,13 +52908,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_8 : Css.Style
 neg_space_x_8 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-2rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-2rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-2rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-2rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -53058,13 +52932,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_80 : Css.Style
 neg_space_x_80 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-20rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-20rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-20rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-20rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -53084,13 +52956,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_9 : Css.Style
 neg_space_x_9 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-2.25rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-2.25rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-2.25rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-2.25rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -53110,13 +52980,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_96 : Css.Style
 neg_space_x_96 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-24rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-24rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-24rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-24rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -53136,13 +53004,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_x_px : Css.Style
 neg_space_x_px =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(-1px * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(-1px * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(-1px * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(-1px * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -53162,13 +53028,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_0 : Css.Style
 neg_space_y_0 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-0px * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-0px * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-0px * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-0px * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53188,13 +53052,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_0_dot_5 : Css.Style
 neg_space_y_0_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-0.125rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-0.125rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-0.125rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-0.125rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53214,13 +53076,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_1 : Css.Style
 neg_space_y_1 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-0.25rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-0.25rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-0.25rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-0.25rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53240,13 +53100,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_10 : Css.Style
 neg_space_y_10 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-2.5rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-2.5rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-2.5rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-2.5rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53266,13 +53124,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_11 : Css.Style
 neg_space_y_11 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-2.75rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-2.75rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-2.75rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-2.75rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53292,13 +53148,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_12 : Css.Style
 neg_space_y_12 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-3rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-3rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-3rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-3rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53318,13 +53172,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_14 : Css.Style
 neg_space_y_14 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-3.5rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-3.5rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-3.5rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-3.5rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53344,13 +53196,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_16 : Css.Style
 neg_space_y_16 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-4rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-4rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-4rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-4rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53370,13 +53220,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_1_dot_5 : Css.Style
 neg_space_y_1_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-0.375rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-0.375rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-0.375rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-0.375rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53396,13 +53244,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_2 : Css.Style
 neg_space_y_2 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-0.5rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-0.5rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-0.5rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-0.5rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53422,13 +53268,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_20 : Css.Style
 neg_space_y_20 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-5rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-5rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-5rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-5rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53448,13 +53292,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_24 : Css.Style
 neg_space_y_24 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-6rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-6rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-6rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-6rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53474,13 +53316,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_28 : Css.Style
 neg_space_y_28 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-7rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-7rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-7rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-7rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53500,13 +53340,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_2_dot_5 : Css.Style
 neg_space_y_2_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-0.625rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-0.625rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-0.625rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-0.625rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53526,13 +53364,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_3 : Css.Style
 neg_space_y_3 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-0.75rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-0.75rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-0.75rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-0.75rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53552,13 +53388,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_32 : Css.Style
 neg_space_y_32 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-8rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-8rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-8rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-8rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53578,13 +53412,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_36 : Css.Style
 neg_space_y_36 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-9rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-9rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-9rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-9rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53604,13 +53436,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_3_dot_5 : Css.Style
 neg_space_y_3_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-0.875rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-0.875rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-0.875rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-0.875rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53630,13 +53460,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_4 : Css.Style
 neg_space_y_4 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-1rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-1rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-1rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-1rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53656,13 +53484,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_40 : Css.Style
 neg_space_y_40 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-10rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-10rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-10rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-10rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53682,13 +53508,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_44 : Css.Style
 neg_space_y_44 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-11rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-11rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-11rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-11rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53708,13 +53532,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_48 : Css.Style
 neg_space_y_48 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-12rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-12rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-12rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-12rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53734,13 +53556,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_5 : Css.Style
 neg_space_y_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-1.25rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-1.25rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-1.25rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-1.25rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53760,13 +53580,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_52 : Css.Style
 neg_space_y_52 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-13rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-13rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-13rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-13rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53786,13 +53604,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_56 : Css.Style
 neg_space_y_56 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-14rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-14rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-14rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-14rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53812,13 +53628,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_6 : Css.Style
 neg_space_y_6 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-1.5rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-1.5rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-1.5rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-1.5rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53838,13 +53652,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_60 : Css.Style
 neg_space_y_60 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-15rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-15rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-15rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-15rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53864,13 +53676,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_64 : Css.Style
 neg_space_y_64 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-16rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-16rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-16rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-16rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53890,13 +53700,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_7 : Css.Style
 neg_space_y_7 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-1.75rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-1.75rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-1.75rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-1.75rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53916,13 +53724,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_72 : Css.Style
 neg_space_y_72 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-18rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-18rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-18rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-18rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53942,13 +53748,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_8 : Css.Style
 neg_space_y_8 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-2rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-2rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-2rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-2rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53968,13 +53772,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_80 : Css.Style
 neg_space_y_80 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-20rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-20rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-20rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-20rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -53994,13 +53796,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_9 : Css.Style
 neg_space_y_9 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-2.25rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-2.25rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-2.25rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-2.25rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -54020,13 +53820,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_96 : Css.Style
 neg_space_y_96 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-24rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-24rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-24rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-24rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -54046,13 +53844,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 neg_space_y_px : Css.Style
 neg_space_y_px =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(-1px * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(-1px * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(-1px * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(-1px * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -60210,10 +60006,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_0 : Css.Style
 placeholder_opacity_0 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0"
         ]
 
 
@@ -60230,10 +60024,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_10 : Css.Style
 placeholder_opacity_10 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.1"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.1"
         ]
 
 
@@ -60250,10 +60042,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_100 : Css.Style
 placeholder_opacity_100 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "1"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "1"
         ]
 
 
@@ -60270,10 +60060,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_20 : Css.Style
 placeholder_opacity_20 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.2"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.2"
         ]
 
 
@@ -60290,10 +60078,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_25 : Css.Style
 placeholder_opacity_25 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.25"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.25"
         ]
 
 
@@ -60310,10 +60096,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_30 : Css.Style
 placeholder_opacity_30 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.3"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.3"
         ]
 
 
@@ -60330,10 +60114,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_40 : Css.Style
 placeholder_opacity_40 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.4"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.4"
         ]
 
 
@@ -60350,10 +60132,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_5 : Css.Style
 placeholder_opacity_5 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.05"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.05"
         ]
 
 
@@ -60370,10 +60150,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_50 : Css.Style
 placeholder_opacity_50 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.5"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.5"
         ]
 
 
@@ -60390,10 +60168,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_60 : Css.Style
 placeholder_opacity_60 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.6"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.6"
         ]
 
 
@@ -60410,10 +60186,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_70 : Css.Style
 placeholder_opacity_70 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.7"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.7"
         ]
 
 
@@ -60430,10 +60204,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_75 : Css.Style
 placeholder_opacity_75 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.75"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.75"
         ]
 
 
@@ -60450,10 +60222,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_80 : Css.Style
 placeholder_opacity_80 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.8"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.8"
         ]
 
 
@@ -60470,10 +60240,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_90 : Css.Style
 placeholder_opacity_90 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.9"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.9"
         ]
 
 
@@ -60490,10 +60258,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholder_opacity_95 : Css.Style
 placeholder_opacity_95 =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "0.95"
-            ]
+    Css.pseudoElement "placeholder"
+        [ Css.property "--tw-placeholder-opacity" "0.95"
         ]
 
 
@@ -80521,13 +80287,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_0 : Css.Style
 space_x_0 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(0px * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(0px * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(0px * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(0px * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80547,13 +80311,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_0_dot_5 : Css.Style
 space_x_0_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(0.125rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(0.125rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(0.125rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(0.125rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80573,13 +80335,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_1 : Css.Style
 space_x_1 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(0.25rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(0.25rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80599,13 +80359,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_10 : Css.Style
 space_x_10 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(2.5rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(2.5rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(2.5rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(2.5rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80625,13 +80383,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_11 : Css.Style
 space_x_11 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(2.75rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(2.75rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(2.75rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(2.75rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80651,13 +80407,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_12 : Css.Style
 space_x_12 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(3rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(3rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(3rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(3rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80677,13 +80431,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_14 : Css.Style
 space_x_14 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(3.5rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(3.5rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(3.5rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(3.5rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80703,13 +80455,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_16 : Css.Style
 space_x_16 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(4rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(4rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(4rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(4rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80729,13 +80479,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_1_dot_5 : Css.Style
 space_x_1_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(0.375rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(0.375rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80755,13 +80503,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_2 : Css.Style
 space_x_2 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(0.5rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(0.5rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80781,13 +80527,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_20 : Css.Style
 space_x_20 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(5rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(5rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(5rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(5rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80807,13 +80551,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_24 : Css.Style
 space_x_24 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(6rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(6rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(6rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(6rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80833,13 +80575,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_28 : Css.Style
 space_x_28 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(7rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(7rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(7rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(7rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80859,13 +80599,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_2_dot_5 : Css.Style
 space_x_2_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(0.625rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(0.625rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(0.625rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(0.625rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80885,13 +80623,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_3 : Css.Style
 space_x_3 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(0.75rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(0.75rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80911,13 +80647,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_32 : Css.Style
 space_x_32 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(8rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(8rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(8rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(8rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80937,13 +80671,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_36 : Css.Style
 space_x_36 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(9rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(9rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(9rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(9rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80963,13 +80695,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_3_dot_5 : Css.Style
 space_x_3_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(0.875rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(0.875rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(0.875rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(0.875rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -80989,13 +80719,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_4 : Css.Style
 space_x_4 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(1rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(1rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(1rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(1rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81015,13 +80743,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_40 : Css.Style
 space_x_40 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(10rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(10rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(10rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(10rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81041,13 +80767,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_44 : Css.Style
 space_x_44 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(11rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(11rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(11rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(11rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81067,13 +80791,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_48 : Css.Style
 space_x_48 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(12rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(12rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(12rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(12rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81093,13 +80815,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_5 : Css.Style
 space_x_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(1.25rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(1.25rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(1.25rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(1.25rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81119,13 +80839,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_52 : Css.Style
 space_x_52 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(13rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(13rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(13rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(13rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81145,13 +80863,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_56 : Css.Style
 space_x_56 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(14rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(14rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(14rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(14rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81171,13 +80887,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_6 : Css.Style
 space_x_6 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(1.5rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(1.5rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81197,13 +80911,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_60 : Css.Style
 space_x_60 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(15rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(15rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(15rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(15rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81223,13 +80935,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_64 : Css.Style
 space_x_64 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(16rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(16rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(16rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(16rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81249,13 +80959,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_7 : Css.Style
 space_x_7 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(1.75rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(1.75rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(1.75rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(1.75rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81275,13 +80983,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_72 : Css.Style
 space_x_72 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(18rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(18rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(18rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(18rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81301,13 +81007,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_8 : Css.Style
 space_x_8 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(2rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(2rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(2rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(2rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81327,13 +81031,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_80 : Css.Style
 space_x_80 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(20rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(20rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(20rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(20rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81353,13 +81055,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_9 : Css.Style
 space_x_9 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(2.25rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(2.25rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(2.25rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(2.25rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81379,13 +81079,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_96 : Css.Style
 space_x_96 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(24rem * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(24rem * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(24rem * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(24rem * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81405,13 +81103,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_px : Css.Style
 space_x_px =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "0"
-                , Css.property "margin-right" "calc(1px * var(--tw-space-x-reverse))"
-                , Css.property "margin-left" "calc(1px * calc(1 - var(--tw-space-x-reverse)))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "0"
+            , Css.property "margin-right" "calc(1px * var(--tw-space-x-reverse))"
+            , Css.property "margin-left" "calc(1px * calc(1 - var(--tw-space-x-reverse)))"
             ]
         ]
 
@@ -81429,11 +81125,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_x_reverse : Css.Style
 space_x_reverse =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-x-reverse" "1"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-x-reverse" "1"
             ]
         ]
 
@@ -81453,13 +81147,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_0 : Css.Style
 space_y_0 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(0px * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(0px * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(0px * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(0px * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81479,13 +81171,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_0_dot_5 : Css.Style
 space_y_0_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(0.125rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(0.125rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(0.125rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(0.125rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81505,13 +81195,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_1 : Css.Style
 space_y_1 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(0.25rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(0.25rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(0.25rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(0.25rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81531,13 +81219,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_10 : Css.Style
 space_y_10 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(2.5rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(2.5rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(2.5rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(2.5rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81557,13 +81243,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_11 : Css.Style
 space_y_11 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(2.75rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(2.75rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(2.75rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(2.75rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81583,13 +81267,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_12 : Css.Style
 space_y_12 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(3rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(3rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(3rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(3rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81609,13 +81291,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_14 : Css.Style
 space_y_14 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(3.5rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(3.5rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(3.5rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(3.5rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81635,13 +81315,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_16 : Css.Style
 space_y_16 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(4rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(4rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(4rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(4rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81661,13 +81339,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_1_dot_5 : Css.Style
 space_y_1_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(0.375rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(0.375rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(0.375rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(0.375rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81687,13 +81363,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_2 : Css.Style
 space_y_2 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(0.5rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(0.5rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(0.5rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(0.5rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81713,13 +81387,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_20 : Css.Style
 space_y_20 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(5rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(5rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(5rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(5rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81739,13 +81411,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_24 : Css.Style
 space_y_24 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(6rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(6rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(6rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(6rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81765,13 +81435,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_28 : Css.Style
 space_y_28 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(7rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(7rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(7rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(7rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81791,13 +81459,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_2_dot_5 : Css.Style
 space_y_2_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(0.625rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(0.625rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(0.625rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(0.625rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81817,13 +81483,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_3 : Css.Style
 space_y_3 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(0.75rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(0.75rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(0.75rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(0.75rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81843,13 +81507,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_32 : Css.Style
 space_y_32 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(8rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(8rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(8rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(8rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81869,13 +81531,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_36 : Css.Style
 space_y_36 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(9rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(9rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(9rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(9rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81895,13 +81555,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_3_dot_5 : Css.Style
 space_y_3_dot_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(0.875rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(0.875rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(0.875rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(0.875rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81921,13 +81579,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_4 : Css.Style
 space_y_4 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(1rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(1rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(1rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(1rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81947,13 +81603,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_40 : Css.Style
 space_y_40 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(10rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(10rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(10rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(10rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81973,13 +81627,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_44 : Css.Style
 space_y_44 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(11rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(11rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(11rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(11rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -81999,13 +81651,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_48 : Css.Style
 space_y_48 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(12rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(12rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(12rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(12rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82025,13 +81675,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_5 : Css.Style
 space_y_5 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(1.25rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(1.25rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(1.25rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(1.25rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82051,13 +81699,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_52 : Css.Style
 space_y_52 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(13rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(13rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(13rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(13rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82077,13 +81723,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_56 : Css.Style
 space_y_56 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(14rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(14rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(14rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(14rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82103,13 +81747,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_6 : Css.Style
 space_y_6 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(1.5rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(1.5rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(1.5rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(1.5rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82129,13 +81771,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_60 : Css.Style
 space_y_60 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(15rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(15rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(15rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(15rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82155,13 +81795,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_64 : Css.Style
 space_y_64 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(16rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(16rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(16rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(16rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82181,13 +81819,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_7 : Css.Style
 space_y_7 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(1.75rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(1.75rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(1.75rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(1.75rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82207,13 +81843,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_72 : Css.Style
 space_y_72 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(18rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(18rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(18rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(18rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82233,13 +81867,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_8 : Css.Style
 space_y_8 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(2rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(2rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(2rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(2rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82259,13 +81891,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_80 : Css.Style
 space_y_80 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(20rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(20rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(20rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(20rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82285,13 +81915,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_9 : Css.Style
 space_y_9 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(2.25rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(2.25rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(2.25rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(2.25rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82311,13 +81939,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_96 : Css.Style
 space_y_96 =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(24rem * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(24rem * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(24rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(24rem * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82337,13 +81963,11 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_px : Css.Style
 space_y_px =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "0"
-                , Css.property "margin-top" "calc(1px * calc(1 - var(--tw-space-y-reverse)))"
-                , Css.property "margin-bottom" "calc(1px * var(--tw-space-y-reverse))"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(1px * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(1px * var(--tw-space-y-reverse))"
             ]
         ]
 
@@ -82361,11 +81985,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 space_y_reverse : Css.Style
 space_y_reverse =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-space-y-reverse" "1"
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "1"
             ]
         ]
 
@@ -87736,10 +87358,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 bgWithColor : Color -> Css.Style
 bgWithColor color =
-    Css.batch
-        [ Css.property "--tw-bg-opacity" "1"
-        , Tailwind.Theme.toProperty "background-color" (\c -> "" ++ c ++ "") "--tw-bg-opacity" color
-        ]
+    Tailwind.Theme.toProperty "background-color" (\c -> "" ++ c ++ "") "--tw-bg-opacity" color
 
 
 {-| This class has the effect of following css declaration:
@@ -87756,10 +87375,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 borderWithColor : Color -> Css.Style
 borderWithColor color =
-    Css.batch
-        [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
-        ]
+    Tailwind.Theme.toProperty "border-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
 
 
 {-| This class has the effect of following css declaration:
@@ -87776,10 +87392,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 border_bWithColor : Color -> Css.Style
 border_bWithColor color =
-    Css.batch
-        [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-bottom-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
-        ]
+    Tailwind.Theme.toProperty "border-bottom-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
 
 
 {-| This class has the effect of following css declaration:
@@ -87796,10 +87409,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 border_lWithColor : Color -> Css.Style
 border_lWithColor color =
-    Css.batch
-        [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-left-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
-        ]
+    Tailwind.Theme.toProperty "border-left-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
 
 
 {-| This class has the effect of following css declaration:
@@ -87816,10 +87426,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 border_rWithColor : Color -> Css.Style
 border_rWithColor color =
-    Css.batch
-        [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-right-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
-        ]
+    Tailwind.Theme.toProperty "border-right-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
 
 
 {-| This class has the effect of following css declaration:
@@ -87836,10 +87443,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 border_tWithColor : Color -> Css.Style
 border_tWithColor color =
-    Css.batch
-        [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-top-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
-        ]
+    Tailwind.Theme.toProperty "border-top-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
 
 
 {-| This class has the effect of following css declaration:
@@ -87858,8 +87462,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 border_xWithColor : Color -> Css.Style
 border_xWithColor color =
     Css.batch
-        [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-left-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
+        [ Tailwind.Theme.toProperty "border-left-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
         , Tailwind.Theme.toProperty "border-right-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
         ]
 
@@ -87880,8 +87483,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 border_yWithColor : Color -> Css.Style
 border_yWithColor color =
     Css.batch
-        [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-top-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
+        [ Tailwind.Theme.toProperty "border-top-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
         , Tailwind.Theme.toProperty "border-bottom-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
         ]
 
@@ -87932,12 +87534,9 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 divideWithColor : Color -> Css.Style
 divideWithColor color =
-    Css.batch
-        [ Css.Global.children
-            [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
-                [ Css.property "--tw-divide-opacity" "1"
-                , Tailwind.Theme.toProperty "border-color" (\c -> "" ++ c ++ "") "--tw-divide-opacity" color
-                ]
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Tailwind.Theme.toProperty "border-color" (\c -> "" ++ c ++ "") "--tw-divide-opacity" color
             ]
         ]
 
@@ -88026,11 +87625,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 placeholderWithColor : Color -> Css.Style
 placeholderWithColor color =
-    Css.batch
-        [ Css.pseudoElement "placeholder"
-            [ Css.property "--tw-placeholder-opacity" "1"
-            , Tailwind.Theme.toProperty "color" (\c -> "" ++ c ++ "") "--tw-placeholder-opacity" color
-            ]
+    Css.pseudoElement "placeholder"
+        [ Tailwind.Theme.toProperty "color" (\c -> "" ++ c ++ "") "--tw-placeholder-opacity" color
         ]
 
 
@@ -88048,10 +87644,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 ringWithColor : Color -> Css.Style
 ringWithColor color =
-    Css.batch
-        [ Css.property "--tw-ring-opacity" "1"
-        , Tailwind.Theme.toProperty "--tw-ring-color" (\c -> "" ++ c ++ "") "--tw-ring-opacity" color
-        ]
+    Tailwind.Theme.toProperty "--tw-ring-color" (\c -> "" ++ c ++ "") "--tw-ring-opacity" color
 
 
 {-| This class has the effect of following css declaration:
@@ -88120,10 +87713,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 textWithColor : Color -> Css.Style
 textWithColor color =
-    Css.batch
-        [ Css.property "--tw-text-opacity" "1"
-        , Tailwind.Theme.toProperty "color" (\c -> "" ++ c ++ "") "--tw-text-opacity" color
-        ]
+    Tailwind.Theme.toProperty "color" (\c -> "" ++ c ++ "") "--tw-text-opacity" color
 
 
 {-| This class has the effect of following css declaration:
