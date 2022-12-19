@@ -142,9 +142,20 @@ function convertColorDeclaration(property: ParameterizedProperty): generate.Inde
     const propertyName = generate.elmString(property.prop);
     const valuePrefix = generate.elmString(property.valuePrefix);
     const valueSuffix = generate.elmString(property.valueSuffix);
-    // TODO make this a Maybe & use Nothing in some cases
-    const variableName = generate.elmString(property.opacityVariableName != null ? property.opacityVariableName : "");
-    return generate.singleLine(`Tailwind.Theme.toProperty ${propertyName} (\\c -> ${valuePrefix} ++ c ++ ${valueSuffix}) ${variableName} color`)
+    
+    // TODO make this a Maybe & use Nothing in some cases (or perhaps break out toProperty into three variants)
+    if (property.opacity == null) {
+        return generate.singleLine(`Tailwind.Theme.toProperty ${propertyName} (\\c -> ${valuePrefix} ++ c ++ ${valueSuffix}) "" color`)
+    } else if ("variableName" in property.opacity) {
+        const variableName = generate.elmString(property.opacity.variableName);
+        return generate.singleLine(`Tailwind.Theme.toProperty ${propertyName} (\\c -> ${valuePrefix} ++ c ++ ${valueSuffix}) ${variableName} color`)
+    } else {
+        const literal = generate.elmString(property.opacity.literal);
+        return generate.elmFunctionCall(
+            `Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity ${literal}) color`,
+            generate.singleLine(`|> Tailwind.Theme.toProperty ${propertyName} (\\c -> ${valuePrefix} ++ c ++ ${valueSuffix}) ""`)
+        );
+    }
 }
 
 function convertProperties(subselector: SubselectorRest, convertedProperties: generate.Indentable[]) {
@@ -277,8 +288,8 @@ function findPlainProperties(propertiesBlock: ParameterizedDeclaration): (CssPro
 
 function findColorCssVarNames(properties: (CssProperty | ParameterizedProperty)[]): string[] {
     return properties.flatMap(property =>
-        "valuePrefix" in property && property.opacityVariableName != null
-            ? [property.opacityVariableName]
+        "valuePrefix" in property && property.opacity != null && "variableName" in property.opacity
+            ? [property.opacity.variableName]
             : []
     );
 }

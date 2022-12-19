@@ -1,5 +1,6 @@
 module Tailwind.Theme exposing
     ( Color
+    , Opacity(..)
     , amber_100
     , amber_200
     , amber_300
@@ -10,6 +11,9 @@ module Tailwind.Theme exposing
     , amber_700
     , amber_800
     , amber_900
+    , arbitraryOpacityPct
+    , arbitraryRgb
+    , arbitraryRgba
     , black
     , blue_100
     , blue_200
@@ -206,6 +210,7 @@ module Tailwind.Theme exposing
     , violet_800
     , violet_900
     , white
+    , withOpacity
     , yellow_100
     , yellow_200
     , yellow_300
@@ -267,6 +272,21 @@ withOpacity opacity color =
 
         Color mode r g b _ ->
             Color mode r g b opacity
+
+
+arbitraryRgb : Int -> Int -> Int -> Color
+arbitraryRgb r g b =
+    Color "rgb" (String.fromInt r) (String.fromInt g) (String.fromInt b) ViaVariable
+
+
+arbitraryRgba : Int -> Int -> Int -> Float -> Color
+arbitraryRgba r g b alpha =
+    Color "rgba" (String.fromInt r) (String.fromInt g) (String.fromInt b) (Opacity (String.fromFloat alpha))
+
+
+arbitraryOpacityPct : Int -> Opacity
+arbitraryOpacityPct pct =
+    Opacity (String.fromInt pct ++ "%")
 
 
 inherit : Color

@@ -2,11 +2,14 @@ import * as generate from "./generate";
 import * as color from "../color";
 import { RecursiveKeyValuePair } from "tailwindcss/types/config";
 
+// TODO do not expose Opacity(..)?
+const hardcodedNames = ["Color", "Opacity(..)", "toProperty", "withOpacity", "arbitraryRgb", "arbitraryRgba", "arbitraryOpacityPct"];
+
 export function generateElmModule(moduleName: string, expandedColors: [string, string][]): string {
     return [
         generate.elmModuleHeader({
             moduleName,
-            exposing: ["Color", "toProperty", ...( expandedColors.map((( [color, _] ) => color)) )],
+            exposing: [...hardcodedNames, ...( expandedColors.map((( [color, _] ) => color)) )],
             imports: [
                 generate.singleLine("import Css"),
             ],
@@ -55,6 +58,21 @@ withOpacity opacity color =
 
         Color mode r g b _ ->
             Color mode r g b opacity
+
+
+arbitraryRgb : Int -> Int -> Int -> Color
+arbitraryRgb r g b =
+    Color "rgb" (String.fromInt r) (String.fromInt g) (String.fromInt b) ViaVariable
+
+
+arbitraryRgba : Int -> Int -> Int -> Float -> Color
+arbitraryRgba r g b alpha =
+    Color "rgba" (String.fromInt r) (String.fromInt g) (String.fromInt b) (Opacity (String.fromFloat alpha))
+
+
+arbitraryOpacityPct : Int -> Opacity
+arbitraryOpacityPct pct =
+    Opacity (String.fromInt pct ++ "%")
 
 `
 

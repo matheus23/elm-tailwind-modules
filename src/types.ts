@@ -209,7 +209,15 @@ export interface ParameterizedProperty {
     prop: string,
     valuePrefix: string,
     valueSuffix: string,
-    opacityVariableName?: string // TODO unused right now
+    opacity?: OpacityVariableName | OpacityLiteral
+}
+
+export interface OpacityVariableName {
+  variableName: string
+}
+
+export interface OpacityLiteral {
+  literal: string
 }
 
 

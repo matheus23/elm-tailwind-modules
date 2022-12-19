@@ -13,8 +13,8 @@
   * [X] `withOpacity : Theme.Opacity -> Theme.Color -> Theme.Color` helper
   * [ ] Look at counterexamples & fix them
     * [X] Detect color values in 'suspected to be parameterizable' definitions
-    * [ ] Detect better where/when to replace values with abstract `color` var
-      * [ ] Handle cases of computed opacity values (opacity replaced with 0)
+    * [X] Detect better where/when to replace values with abstract `color` var
+      * [X] Handle cases of computed opacity values (opacity replaced with 0)
       * [X] Handle cases of color appearing mid-value (e.g. viaWithColor)
     * [X] Handle colors without opacity variables correctly (e.g. caretWithColor)
     * [X] Use `declaration.opacityVariableName`
@@ -24,8 +24,12 @@
   * [ ] Handle naming option in CLI for camel case in isParameterizable in parser code
   * [X] Use a non-primitive elm type for colors (instead of String)
   * [X] Get numbers on the size difference (88320 exposed values vs. 3812)
-  * [ ] Figure out naming. (e.g. parameterized border vs. border property)
+  * [X] Figure out naming. (e.g. parameterized border vs. border property). Have a `WithColor` suffix
   * [ ] Think about custom documentation support
+  * [ ] Think about whether we want something like `type Color opacity` and `Color ()` or `Color Never`.
+        The idea being that some functions like `viaWithColor` or `fromWithColor` will always overwrite the opacity,
+        thus it doesn't make sense to pass opacity in.
+  * [ ] Think about "Refactor Internal functions like `toProperty` in Theme" (see below)
   * [ ] Publish
   * [X] (optionally: Look at refactoring? E.g. detect & deduplicate outside of `code-generators/` files)
   * [ ] Release new default-tailwind-modules with Tailwind v3
@@ -215,5 +219,18 @@ viaWithColor color =
         [ Css.property "--tw-gradient-to" "rgb(136 19 55 / 0)"
         , toProperty "--tw-gradient-stops" (\color -> "var(--tw-gradient-from), " ++ color ++ ", var(--tw-gradient-to)") "" color
         ]
+
+```
+
+
+## Refactor Internal functions like `toProperty` in Theme
+
+Idea:
+```elm
+
+internal =
+    { toProperty = \... -> ...
+    , toPropertyWithVariable = \... ->
+    , toPropertyWithOpacity = \ .. .-> ...}
 
 ```

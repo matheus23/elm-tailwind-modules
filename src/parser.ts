@@ -392,11 +392,18 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
                         const matchEndIdx = matchParsed.index + matchParsed[0].length;
                         const valuePrefix = property.value.substring(0, matchStartIdx);
                         const valueSuffix = property.value.substring(matchEndIdx);
+                        
+                        const opacity = matchParsed?.groups?.varname != null
+                            ? { variableName: matchParsed.groups.varname }
+                            : matchParsed?.groups?.literal != null
+                                ? { literal: matchParsed.groups.literal }
+                                : undefined;
+
                         return {
                             prop: property.prop,
                             valuePrefix,
                             valueSuffix,
-                            opacityVariableName: matchParsed?.groups?.varname
+                            opacity,
                         }
                     }
                 }

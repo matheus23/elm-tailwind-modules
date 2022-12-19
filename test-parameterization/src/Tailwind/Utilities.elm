@@ -87590,7 +87590,8 @@ fromWithColor : Color -> Css.Style
 fromWithColor color =
     Css.batch
         [ Tailwind.Theme.toProperty "--tw-gradient-from" (\c -> "" ++ c ++ "") "" color
-        , Tailwind.Theme.toProperty "--tw-gradient-to" (\c -> "" ++ c ++ "") "" color
+        , Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity "0") color
+            |> Tailwind.Theme.toProperty "--tw-gradient-to" (\c -> "" ++ c ++ "") ""
         , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
         ]
 
@@ -87747,6 +87748,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 viaWithColor : Color -> Css.Style
 viaWithColor color =
     Css.batch
-        [ Tailwind.Theme.toProperty "--tw-gradient-to" (\c -> "" ++ c ++ "") "" color
+        [ Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity "0") color
+            |> Tailwind.Theme.toProperty "--tw-gradient-to" (\c -> "" ++ c ++ "") ""
         , Tailwind.Theme.toProperty "--tw-gradient-stops" (\c -> "var(--tw-gradient-from), " ++ c ++ ", var(--tw-gradient-to)") "" color
         ]
