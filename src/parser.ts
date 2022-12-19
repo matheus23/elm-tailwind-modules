@@ -369,7 +369,7 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
         propertiesBySelector: declaration.propertiesBySelector.map(selector => ({
             ...selector,
             properties: selector.properties.map(property => {
-                referencesColor = true; // TODO: Actually match
+                referencesColor = true;
                 // Look for resolvedColor
                 const matchResolved = property.value.match(resolvedColor)
                 if (matchResolved) {

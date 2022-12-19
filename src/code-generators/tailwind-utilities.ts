@@ -142,18 +142,22 @@ function convertColorDeclaration(property: ParameterizedProperty): generate.Inde
     const propertyName = generate.elmString(property.prop);
     const valuePrefix = generate.elmString(property.valuePrefix);
     const valueSuffix = generate.elmString(property.valueSuffix);
-    
+
+    const colorExpression = property.valuePrefix === "" && property.valueSuffix === ""
+        ? "c"
+        : `${valuePrefix} ++ c ++ ${valueSuffix}`;
+
     // TODO make this a Maybe & use Nothing in some cases (or perhaps break out toProperty into three variants)
     if (property.opacity == null) {
-        return generate.singleLine(`Tailwind.Theme.toProperty ${propertyName} (\\c -> ${valuePrefix} ++ c ++ ${valueSuffix}) "" color`)
+        return generate.singleLine(`Tailwind.Theme.toProperty ${propertyName} (\\c -> ${colorExpression}) "" color`)
     } else if ("variableName" in property.opacity) {
         const variableName = generate.elmString(property.opacity.variableName);
-        return generate.singleLine(`Tailwind.Theme.toProperty ${propertyName} (\\c -> ${valuePrefix} ++ c ++ ${valueSuffix}) ${variableName} color`)
+        return generate.singleLine(`Tailwind.Theme.toProperty ${propertyName} (\\c -> ${colorExpression}) ${variableName} color`)
     } else {
         const literal = generate.elmString(property.opacity.literal);
         return generate.elmFunctionCall(
             `Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity ${literal}) color`,
-            generate.singleLine(`|> Tailwind.Theme.toProperty ${propertyName} (\\c -> ${valuePrefix} ++ c ++ ${valueSuffix}) ""`)
+            generate.singleLine(`|> Tailwind.Theme.toProperty ${propertyName} (\\c -> ${colorExpression}) ""`)
         );
     }
 }

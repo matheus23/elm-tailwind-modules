@@ -26,9 +26,10 @@
   * [X] Get numbers on the size difference (88320 exposed values vs. 3812)
   * [X] Figure out naming. (e.g. parameterized border vs. border property). Have a `WithColor` suffix
   * [ ] Think about custom documentation support
-  * [ ] Think about whether we want something like `type Color opacity` and `Color ()` or `Color Never`.
+  * [X] ~~Think about whether we want something like `type Color opacity` and `Color ()` or `Color Never`.
         The idea being that some functions like `viaWithColor` or `fromWithColor` will always overwrite the opacity,
-        thus it doesn't make sense to pass opacity in.
+        thus it doesn't make sense to pass opacity in.~~
+        Not worth it! Only 2 places in Utilities that override `withOpacity`.
   * [ ] Think about "Refactor Internal functions like `toProperty` in Theme" (see below)
   * [ ] Publish
   * [X] (optionally: Look at refactoring? E.g. detect & deduplicate outside of `code-generators/` files)
