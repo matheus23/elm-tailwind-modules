@@ -335,12 +335,13 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
     // bg_blue_500 matches with blue_50, but we want to match blue_500,
     // so we need the longest possible match
     const possibleColorNames = resolvedColors.map(([name, _]) => name).sort((a, b) => b.length - a.length);
-    // TODO: Match different ways of capitalizing declaration names (see toElmName helper)
-    const regex = new RegExp(String.raw`(.*)_(${possibleColorNames.join('|')}).*$`)
+    const regex = new RegExp(String.raw`(:?.*)(?<colorName>${possibleColorNames.join('|')}).*$`)
 
     const matches = declarationName.match(regex);
 
-    if (!matches) {
+    const colorName = matches?.groups?.colorName;
+
+    if (colorName == null) {
         return false
     }
 
@@ -352,7 +353,6 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
 
     const colorByName: Record<string, string> = resolvedColors.reduce((acc, [name, color]) => Object.assign(acc, { [name]: color }), {});
 
-    const colorName = matches[2];
     const resolvedColor = colorByName[colorName];
 
     if (resolvedColor == null) {
@@ -392,7 +392,7 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
                         const matchEndIdx = matchParsed.index + matchParsed[0].length;
                         const valuePrefix = property.value.substring(0, matchStartIdx);
                         const valueSuffix = property.value.substring(matchEndIdx);
-                        
+
                         const opacity = matchParsed?.groups?.varname != null
                             ? { variableName: matchParsed.groups.varname }
                             : matchParsed?.groups?.literal != null

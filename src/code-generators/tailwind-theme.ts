@@ -1,6 +1,7 @@
 import * as generate from "./generate";
 import * as color from "../color";
 import { RecursiveKeyValuePair } from "tailwindcss/types/config";
+import { toElmName } from "../helpers";
 
 // TODO do not expose Opacity(..)?
 const hardcodedNames = ["Color", "Opacity(..)", "toProperty", "withOpacity", "arbitraryRgb", "arbitraryRgba", "arbitraryOpacityPct"];
@@ -103,14 +104,14 @@ ${colorName} =
     }).join("\n\n");
 }
 
-export function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair): [string, string][] {
+export function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair, nameStyle: "camel" | "snake"): [string, string][] {
     return Object.entries(colors).flatMap(([key, value]) => {
         if (typeof value === 'string') {
-            return [[[  ...keysSoFar, key ].join('_'), value]]
+            return [[toElmName([  ...keysSoFar, key ].join('_'), { nameStyle }), value]]
         } else {
-            return expandColors([key, ...keysSoFar], value)
+            return expandColors([key, ...keysSoFar], value, nameStyle)
         }
     })
 }
 
-// export function expandOpacities()
+// TODO export function expandOpacities()

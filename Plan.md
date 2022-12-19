@@ -21,7 +21,8 @@
     * [X] Refactor: Remove `isParameterized` parameter
     * [ ] Look through TODOs in the code
   * [ ] Generate & use opacity variants: Make `opacity_50` etc. use `Theme.Opacity` instead
-  * [ ] Handle naming option in CLI for camel case in isParameterizable in parser code
+  * [X] Handle naming option in CLI for camel case in isParameterizable in parser code
+    * [ ] Test it!
   * [X] Use a non-primitive elm type for colors (instead of String)
   * [X] Get numbers on the size difference (88320 exposed values vs. 3812)
   * [X] Figure out naming. (e.g. parameterized border vs. border property). Have a `WithColor` suffix
