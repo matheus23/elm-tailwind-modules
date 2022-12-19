@@ -94,14 +94,14 @@ function elmRecognizedFunction(
 ${docs.utilitiesDefinition(elmClassName, propertiesBlock)}
 ${elmClassName} : ${signature}
 ${elmClassName} ${args}=
-${convertDeclarationBlock(keyframes, propertiesBlock, parameterized)({
+${convertDeclarationBlock(keyframes, propertiesBlock)({
     indentation: 4,
     preindent: true,
 })}
 `;
 }
 
-function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty | ParameterizedProperty, cssVarNames: string[], isParameterized: boolean): generate.Indentable[] {
+function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty | ParameterizedProperty, cssVarNames: string[]): generate.Indentable[] {
     if (cssVarNames.includes(declaration.prop)) {
         // We intentionally drop e.g. "--tw-bg-opacity" properties.
         // They'll get re-added in `Theme.toProperty`, if the color doesn't have an opacity set.
@@ -225,10 +225,10 @@ function convertMediaQueryWrap(mediaQuery: string, functionName: string, propert
     ]
 }
 
-function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesBlock: ParameterizedDeclaration, isParameterized: boolean): generate.Indentable {
+function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesBlock: ParameterizedDeclaration): generate.Indentable {
     const plainProperties = findPlainProperties(propertiesBlock);
     const cssVarNames = findColorCssVarNames(plainProperties);
-    const plainPropertiesCode = plainProperties.flatMap(d => convertDeclaration(keyframes, d, cssVarNames, isParameterized));
+    const plainPropertiesCode = plainProperties.flatMap(d => convertDeclaration(keyframes, d, cssVarNames));
 
     const mediaQueriedPropertiesCode = propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
         subselectors.flatMap(subselector => {
@@ -244,7 +244,7 @@ function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesB
                 `Css.Media.withMediaQuery`,
                 convertProperties(
                     subselector.rest,
-                    properties.flatMap(d => convertDeclaration(keyframes, d, cssVarNames, isParameterized))
+                    properties.flatMap(d => convertDeclaration(keyframes, d, cssVarNames))
                 )
             );
         })

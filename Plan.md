@@ -18,7 +18,7 @@
       * [X] Handle cases of color appearing mid-value (e.g. viaWithColor)
     * [X] Handle colors without opacity variables correctly (e.g. caretWithColor)
     * [X] Use `declaration.opacityVariableName`
-    * [ ] Refactor: Remove `isParameterized` parameter
+    * [X] Refactor: Remove `isParameterized` parameter
     * [ ] Look through TODOs in the code
   * [ ] Generate & use opacity variants: Make `opacity_50` etc. use `Theme.Opacity` instead
   * [ ] Handle naming option in CLI for camel case in isParameterizable in parser code
