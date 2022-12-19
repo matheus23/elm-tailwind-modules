@@ -87719,7 +87719,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 accentWithColor : Color -> Css.Style
 accentWithColor color =
-    Tailwind.Theme.toProperty "accent-color" (\c -> "" ++ c ++ "") "" c
+    Tailwind.Theme.toProperty "accent-color" (\c -> "" ++ c ++ "") "" color
 
 
 {-| This class has the effect of following css declaration:
@@ -87738,7 +87738,7 @@ bgWithColor : Color -> Css.Style
 bgWithColor color =
     Css.batch
         [ Css.property "--tw-bg-opacity" "1"
-        , Tailwind.Theme.toProperty "background-color" (\c -> "" ++ c ++ "") "" c
+        , Tailwind.Theme.toProperty "background-color" (\c -> "" ++ c ++ "") "--tw-bg-opacity" color
         ]
 
 
@@ -87758,7 +87758,7 @@ borderWithColor : Color -> Css.Style
 borderWithColor color =
     Css.batch
         [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-color" (\c -> "" ++ c ++ "") "" c
+        , Tailwind.Theme.toProperty "border-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
         ]
 
 
@@ -87778,7 +87778,7 @@ border_bWithColor : Color -> Css.Style
 border_bWithColor color =
     Css.batch
         [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-bottom-color" (\c -> "" ++ c ++ "") "" c
+        , Tailwind.Theme.toProperty "border-bottom-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
         ]
 
 
@@ -87798,7 +87798,7 @@ border_lWithColor : Color -> Css.Style
 border_lWithColor color =
     Css.batch
         [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-left-color" (\c -> "" ++ c ++ "") "" c
+        , Tailwind.Theme.toProperty "border-left-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
         ]
 
 
@@ -87818,7 +87818,7 @@ border_rWithColor : Color -> Css.Style
 border_rWithColor color =
     Css.batch
         [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-right-color" (\c -> "" ++ c ++ "") "" c
+        , Tailwind.Theme.toProperty "border-right-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
         ]
 
 
@@ -87838,7 +87838,7 @@ border_tWithColor : Color -> Css.Style
 border_tWithColor color =
     Css.batch
         [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-top-color" (\c -> "" ++ c ++ "") "" c
+        , Tailwind.Theme.toProperty "border-top-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
         ]
 
 
@@ -87859,8 +87859,8 @@ border_xWithColor : Color -> Css.Style
 border_xWithColor color =
     Css.batch
         [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-left-color" (\c -> "" ++ c ++ "") "" c
-        , Tailwind.Theme.toProperty "border-right-color" (\c -> "" ++ c ++ "") "" c
+        , Tailwind.Theme.toProperty "border-left-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
+        , Tailwind.Theme.toProperty "border-right-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
         ]
 
 
@@ -87881,8 +87881,8 @@ border_yWithColor : Color -> Css.Style
 border_yWithColor color =
     Css.batch
         [ Css.property "--tw-border-opacity" "1"
-        , Tailwind.Theme.toProperty "border-top-color" (\c -> "" ++ c ++ "") "" c
-        , Tailwind.Theme.toProperty "border-bottom-color" (\c -> "" ++ c ++ "") "" c
+        , Tailwind.Theme.toProperty "border-top-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
+        , Tailwind.Theme.toProperty "border-bottom-color" (\c -> "" ++ c ++ "") "--tw-border-opacity" color
         ]
 
 
@@ -87899,7 +87899,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 caretWithColor : Color -> Css.Style
 caretWithColor color =
-    Tailwind.Theme.toProperty "caret-color" (\c -> "" ++ c ++ "") "" c
+    Tailwind.Theme.toProperty "caret-color" (\c -> "" ++ c ++ "") "" color
 
 
 {-| This class has the effect of following css declaration:
@@ -87915,7 +87915,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 decorationWithColor : Color -> Css.Style
 decorationWithColor color =
-    Tailwind.Theme.toProperty "text-decoration-color" (\c -> "" ++ c ++ "") "" c
+    Tailwind.Theme.toProperty "text-decoration-color" (\c -> "" ++ c ++ "") "" color
 
 
 {-| This class has the effect of following css declaration:
@@ -87936,7 +87936,7 @@ divideWithColor color =
         [ Css.Global.children
             [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
                 [ Css.property "--tw-divide-opacity" "1"
-                , Tailwind.Theme.toProperty "border-color" (\c -> "" ++ c ++ "") "" c
+                , Tailwind.Theme.toProperty "border-color" (\c -> "" ++ c ++ "") "--tw-divide-opacity" color
                 ]
             ]
         ]
@@ -87955,7 +87955,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 fillWithColor : Color -> Css.Style
 fillWithColor color =
-    Tailwind.Theme.toProperty "fill" (\c -> "" ++ c ++ "") "" c
+    Tailwind.Theme.toProperty "fill" (\c -> "" ++ c ++ "") "" color
 
 
 {-| This class has the effect of following css declaration:
@@ -87990,8 +87990,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 fromWithColor : Color -> Css.Style
 fromWithColor color =
     Css.batch
-        [ Tailwind.Theme.toProperty "--tw-gradient-from" (\c -> "" ++ c ++ "") "" c
-        , Tailwind.Theme.toProperty "--tw-gradient-to" (\c -> "" ++ c ++ "") "" c
+        [ Tailwind.Theme.toProperty "--tw-gradient-from" (\c -> "" ++ c ++ "") "" color
+        , Tailwind.Theme.toProperty "--tw-gradient-to" (\c -> "" ++ c ++ "") "" color
         , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
         ]
 
@@ -88009,7 +88009,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 outlineWithColor : Color -> Css.Style
 outlineWithColor color =
-    Tailwind.Theme.toProperty "outline-color" (\c -> "" ++ c ++ "") "" c
+    Tailwind.Theme.toProperty "outline-color" (\c -> "" ++ c ++ "") "" color
 
 
 {-| This class has the effect of following css declaration:
@@ -88029,7 +88029,7 @@ placeholderWithColor color =
     Css.batch
         [ Css.pseudoElement "placeholder"
             [ Css.property "--tw-placeholder-opacity" "1"
-            , Tailwind.Theme.toProperty "color" (\c -> "" ++ c ++ "") "" c
+            , Tailwind.Theme.toProperty "color" (\c -> "" ++ c ++ "") "--tw-placeholder-opacity" color
             ]
         ]
 
@@ -88050,7 +88050,7 @@ ringWithColor : Color -> Css.Style
 ringWithColor color =
     Css.batch
         [ Css.property "--tw-ring-opacity" "1"
-        , Tailwind.Theme.toProperty "--tw-ring-color" (\c -> "" ++ c ++ "") "" c
+        , Tailwind.Theme.toProperty "--tw-ring-color" (\c -> "" ++ c ++ "") "--tw-ring-opacity" color
         ]
 
 
@@ -88067,7 +88067,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 ring_offsetWithColor : Color -> Css.Style
 ring_offsetWithColor color =
-    Tailwind.Theme.toProperty "--tw-ring-offset-color" (\c -> "" ++ c ++ "") "" c
+    Tailwind.Theme.toProperty "--tw-ring-offset-color" (\c -> "" ++ c ++ "") "" color
 
 
 {-| This class has the effect of following css declaration:
@@ -88085,7 +88085,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 shadowWithColor : Color -> Css.Style
 shadowWithColor color =
     Css.batch
-        [ Tailwind.Theme.toProperty "--tw-shadow-color" (\c -> "" ++ c ++ "") "" c
+        [ Tailwind.Theme.toProperty "--tw-shadow-color" (\c -> "" ++ c ++ "") "" color
         , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
         ]
 
@@ -88103,7 +88103,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 strokeWithColor : Color -> Css.Style
 strokeWithColor color =
-    Tailwind.Theme.toProperty "stroke" (\c -> "" ++ c ++ "") "" c
+    Tailwind.Theme.toProperty "stroke" (\c -> "" ++ c ++ "") "" color
 
 
 {-| This class has the effect of following css declaration:
@@ -88122,7 +88122,7 @@ textWithColor : Color -> Css.Style
 textWithColor color =
     Css.batch
         [ Css.property "--tw-text-opacity" "1"
-        , Tailwind.Theme.toProperty "color" (\c -> "" ++ c ++ "") "" c
+        , Tailwind.Theme.toProperty "color" (\c -> "" ++ c ++ "") "--tw-text-opacity" color
         ]
 
 
@@ -88139,7 +88139,7 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 -}
 toWithColor : Color -> Css.Style
 toWithColor color =
-    Tailwind.Theme.toProperty "--tw-gradient-to" (\c -> "" ++ c ++ "") "" c
+    Tailwind.Theme.toProperty "--tw-gradient-to" (\c -> "" ++ c ++ "") "" color
 
 
 {-| This class has the effect of following css declaration:
@@ -88157,6 +88157,6 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 viaWithColor : Color -> Css.Style
 viaWithColor color =
     Css.batch
-        [ Tailwind.Theme.toProperty "--tw-gradient-to" (\c -> "" ++ c ++ "") "" c
-        , Tailwind.Theme.toProperty "--tw-gradient-stops" (\c -> "var(--tw-gradient-from), " ++ c ++ ", var(--tw-gradient-to)") "" c
+        [ Tailwind.Theme.toProperty "--tw-gradient-to" (\c -> "" ++ c ++ "") "" color
+        , Tailwind.Theme.toProperty "--tw-gradient-stops" (\c -> "var(--tw-gradient-from), " ++ c ++ ", var(--tw-gradient-to)") "" color
         ]

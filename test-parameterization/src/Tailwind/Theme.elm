@@ -257,7 +257,6 @@ toProperty propertyName colorEmbeddedInValue variableName color =
 
         Keyword keyword ->
             Css.property propertyName keyword
-    
 
 
 withOpacity : Opacity -> Color -> Color

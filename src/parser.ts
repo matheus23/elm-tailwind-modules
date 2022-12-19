@@ -387,7 +387,6 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
                 // Look for parsedColorRegex
                 if (parsedColorRegex != null) {
                     const matchParsed = property.value.match(parsedColorRegex)
-                    // TODO perhaps match the opacity variable name too
                     if (matchParsed) {
                         const matchStartIdx = matchParsed.index;
                         const matchEndIdx = matchParsed.index + matchParsed[0].length;
@@ -397,6 +396,7 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
                             prop: property.prop,
                             valuePrefix,
                             valueSuffix,
+                            opacityVariableName: matchParsed?.groups?.varname
                         }
                     }
                 }

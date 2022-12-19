@@ -140,12 +140,12 @@ function convertBasicDeclaration(functionName: string, property: string, value: 
 
 
 function convertColorDeclaration(property: ParameterizedProperty): generate.Indentable {
-    // TODO make this a Maybe & use Nothing in some cases
     const propertyName = generate.elmString(property.prop);
     const valuePrefix = generate.elmString(property.valuePrefix);
     const valueSuffix = generate.elmString(property.valueSuffix);
+    // TODO make this a Maybe & use Nothing in some cases
     const variableName = generate.elmString(property.opacityVariableName != null ? property.opacityVariableName : "");
-    return generate.singleLine(`Tailwind.Theme.toProperty ${propertyName} (\\c -> ${valuePrefix} ++ c ++ ${valueSuffix}) ${variableName} c`)
+    return generate.singleLine(`Tailwind.Theme.toProperty ${propertyName} (\\c -> ${valuePrefix} ++ c ++ ${valueSuffix}) ${variableName} color`)
 }
 
 function convertProperties(subselector: SubselectorRest, convertedProperties: generate.Indentable[]) {

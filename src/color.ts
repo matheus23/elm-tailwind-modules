@@ -93,7 +93,7 @@ export function colorDetectionRegex({ mode, color, alpha }: Color): RegExp {
         return new RegExp(String.raw`${mode}\(${color.join(' ')} / ${alpha}\)`)
     }
 
-    return new RegExp(String.raw`${mode}\(${color.join(' ')} / (?:var\([^)]+\)|[\d.]+)\)`)
+    return new RegExp(String.raw`${mode}\(${color.join(' ')} / (:?var\((?<varname>[^)]+)\)|[\d.]+)\)`)
 }
 
 function fromNumbered(rgb: [number, number, number]): RGB {

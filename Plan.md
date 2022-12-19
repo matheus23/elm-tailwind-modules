@@ -17,7 +17,7 @@
       * [ ] Handle cases of computed opacity values (opacity replaced with 0)
       * [X] Handle cases of color appearing mid-value (e.g. viaWithColor)
     * [X] Handle colors without opacity variables correctly (e.g. caretWithColor)
-    * [ ] Use `declaration.opacityVariableName`
+    * [X] Use `declaration.opacityVariableName`
     * [ ] Refactor: Remove `isParameterized` parameter
     * [ ] Look through TODOs in the code
   * [ ] Generate & use opacity variants: Make `opacity_50` etc. use `Theme.Opacity` instead
