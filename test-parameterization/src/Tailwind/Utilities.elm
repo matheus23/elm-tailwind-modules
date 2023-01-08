@@ -1,6 +1,5 @@
 module Tailwind.Utilities exposing
-    ( WithColor
-    , absolute
+    ( absolute
     , accent_WithColor
     , accent_auto
     , align_baseline
@@ -755,7 +754,7 @@ module Tailwind.Utilities exposing
     , float_none
     , float_right
     , flow_root
-    , font_WithColor
+    , font_black
     , font_bold
     , font_extrabold
     , font_extralight
@@ -4181,6 +4180,11 @@ module Tailwind.Utilities exposing
     , w_min
     , w_px
     , w_screen
+    , whitespace_normal
+    , whitespace_nowrap
+    , whitespace_pre
+    , whitespace_pre_line
+    , whitespace_pre_wrap
     , will_change_auto
     , will_change_contents
     , will_change_scroll
@@ -4207,7 +4211,6 @@ This module contains
     [tailwind's website](https://tailwindcss.com/docs)
 
 @docs globalStyles
-@docs WithColor
 @docs absolute
 @docs accent_WithColor
 @docs accent_auto
@@ -4963,7 +4966,7 @@ This module contains
 @docs float_none
 @docs float_right
 @docs flow_root
-@docs font_WithColor
+@docs font_black
 @docs font_bold
 @docs font_extrabold
 @docs font_extralight
@@ -8388,6 +8391,11 @@ This module contains
 @docs w_min
 @docs w_px
 @docs w_screen
+@docs whitespace_normal
+@docs whitespace_nowrap
+@docs whitespace_pre
+@docs whitespace_pre_line
+@docs whitespace_pre_wrap
 @docs will_change_auto
 @docs will_change_contents
 @docs will_change_scroll
@@ -22292,6 +22300,22 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 flow_root : Css.Style
 flow_root =
     Css.property "display" "flow-root"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.font-black {
+    font-weight: 900
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+font_black : Css.Style
+font_black =
+    Css.property "font-weight" "900"
 
 
 {-| This class has the effect of following css declaration:
@@ -87067,6 +87091,86 @@ w_screen =
 {-| This class has the effect of following css declaration:
 
 ```css
+.whitespace-normal {
+    white-space: normal
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+whitespace_normal : Css.Style
+whitespace_normal =
+    Css.property "white-space" "normal"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.whitespace-nowrap {
+    white-space: nowrap
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+whitespace_nowrap : Css.Style
+whitespace_nowrap =
+    Css.property "white-space" "nowrap"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.whitespace-pre {
+    white-space: pre
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+whitespace_pre : Css.Style
+whitespace_pre =
+    Css.property "white-space" "pre"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.whitespace-pre-line {
+    white-space: pre-line
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+whitespace_pre_line : Css.Style
+whitespace_pre_line =
+    Css.property "white-space" "pre-line"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.whitespace-pre-wrap {
+    white-space: pre-wrap
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+whitespace_pre_wrap : Css.Style
+whitespace_pre_wrap =
+    Css.property "white-space" "pre-wrap"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
 .will-change-auto {
     will-change: auto
 }
@@ -87238,24 +87342,6 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 z_auto : Css.Style
 z_auto =
     Css.property "z-index" "auto"
-
-
-{-| This class has effects of css declarations similar to the following:
-
-```css
-.whitespace-pre-wrap {
-    white-space: pre-wrap
-}
-```
-
-Except the color value inside can be replaced with any color value.
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-WithColor : Color -> Css.Style
-WithColor color =
-    Css.property "white-space" "pre-wrap"
 
 
 {-| This class has effects of css declarations similar to the following:
@@ -87511,24 +87597,6 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 fill_WithColor : Color -> Css.Style
 fill_WithColor color =
     Tailwind.Theme.toProperty "fill" (\c -> c) "" color
-
-
-{-| This class has effects of css declarations similar to the following:
-
-```css
-.font-black {
-    font-weight: 900
-}
-```
-
-Except the color value inside can be replaced with any color value.
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-font_WithColor : Color -> Css.Style
-font_WithColor color =
-    Css.property "font-weight" "900"
 
 
 {-| This class has effects of css declarations similar to the following:

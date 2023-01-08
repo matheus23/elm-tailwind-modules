@@ -368,7 +368,6 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
         propertiesBySelector: declaration.propertiesBySelector.map(selector => ({
             ...selector,
             properties: selector.properties.map(property => {
-                referencesColor = true;
                 // Look for resolvedColor
                 const matchResolved = property.value.match(resolvedColor)
                 if (matchResolved) {
@@ -376,6 +375,8 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
                     const matchEndIdx = matchResolved.index + matchResolved[0].length;
                     const valuePrefix = property.value.substring(0, matchStartIdx);
                     const valueSuffix = property.value.substring(matchEndIdx);
+
+                    referencesColor = true;
                     return {
                         prop: property.prop,
                         valuePrefix,
@@ -398,6 +399,7 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
                                 ? { literal: matchParsed.groups.literal }
                                 : undefined;
 
+                        referencesColor = true;
                         return {
                             prop: property.prop,
                             valuePrefix,
@@ -415,18 +417,6 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
     if (!referencesColor) {
         return false
     }
-
-    // resolvedColor = "#881337"
-    // parsedPrintedColor = "rgb(136 19 55)"
-
-    /*
-
-    .text-rose-900 {
-        --tw-text-opacity: 1;
-        color: rgb(136 19 55 / var(--tw-text-opacity))
-    }
-
-    */
 
     return [`${matches[1]}WithColor`, parameterizedDeclaration];
 }
