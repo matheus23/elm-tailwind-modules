@@ -17,14 +17,13 @@ type TailwindScreen = string
 export function generateElmModule(
     moduleName: string,
     resolvedConfig: TailwindResolvedConfig,
-    namingOptions: NamingOptions,
     docs: DocumentationGenerator,
 ): string {
     const breakpoints =
         Object
             .entries(resolvedConfig.theme.screens)
             .map(([screen, size]: [TailwindScreen, string]) =>
-                convertConfigToBreakpoint(screen, size, namingOptions)
+                convertConfigToBreakpoint(screen, size)
             );
 
     return [
@@ -47,9 +46,9 @@ function elmHeader(moduleName: string, definitions: string[], docs: Documentatio
 }
 
 // Full breakpointSize reference: https://tailwindcss.com/docs/breakpoints
-function convertConfigToBreakpoint(screen: TailwindScreen, size: string, namingOptions: NamingOptions): Breakpoint {
+function convertConfigToBreakpoint(screen: TailwindScreen, size: string): Breakpoint {
     return {
-        name: toElmName(screen, namingOptions),
+        name: toElmName(screen),
         size: size,
     };
 }

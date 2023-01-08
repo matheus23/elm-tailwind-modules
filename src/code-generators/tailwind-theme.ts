@@ -17,7 +17,7 @@ export function generateElmModule(moduleName: string, expandedColors: [string, s
             moduleDocs: ""
         }),
         colorType(),
-        generateColors(expandedColors)
+        generateColors(expandedColors),
     ].join("\n");
 }
 
@@ -104,12 +104,12 @@ ${colorName} =
     }).join("\n\n");
 }
 
-export function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair, nameStyle: "camel" | "snake"): [string, string][] {
+export function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair): [string, string][] {
     return Object.entries(colors).flatMap(([key, value]) => {
         if (typeof value === 'string') {
-            return [[toElmName([  ...keysSoFar, key ].join('_'), { nameStyle }), value]]
+            return [[toElmName([  ...keysSoFar, key ].join('_')), value]]
         } else {
-            return expandColors([key, ...keysSoFar], value, nameStyle)
+            return expandColors([key, ...keysSoFar], value)
         }
     })
 }

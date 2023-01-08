@@ -36,7 +36,6 @@ export function groupDeclarationBlocksByClass(
     postCssRoot: postcss.Root,
     resolvedColors: [string, string][],
     logFunction: LogFunction,
-    namingOptions: NamingOptions,
 ): GroupedDeclarations {
     const recognized: Map<string, RecognizedDeclaration> = new Map();
     const colorParameterized: Map<string, ParameterizedDeclaration> = new Map();
@@ -174,7 +173,7 @@ export function groupDeclarationBlocksByClass(
 
         parts.forEach((part, index) => {
             // create a valid elm identifier from the classname
-            const elmDeclName = toElmName(fixClass(part.class), namingOptions);
+            const elmDeclName = toElmName(fixClass(part.class));
 
             const subselector = subselectors[index];
 

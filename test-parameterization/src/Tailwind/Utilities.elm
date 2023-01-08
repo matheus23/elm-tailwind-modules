@@ -1,6 +1,7 @@
 module Tailwind.Utilities exposing
-    ( absolute
-    , accentWithColor
+    ( WithColor
+    , absolute
+    , accent_WithColor
     , accent_auto
     , align_baseline
     , align_bottom
@@ -198,7 +199,7 @@ module Tailwind.Utilities exposing
     , basis_auto
     , basis_full
     , basis_px
-    , bgWithColor
+    , bg_WithColor
     , bg_auto
     , bg_blend_color
     , bg_blend_color_burn
@@ -278,28 +279,28 @@ module Tailwind.Utilities exposing
     , blur_sm
     , blur_xl
     , border
-    , borderWithColor
     , border_0
     , border_2
     , border_4
     , border_8
+    , border_WithColor
     , border_b
-    , border_bWithColor
     , border_b_0
     , border_b_2
     , border_b_4
     , border_b_8
+    , border_b_WithColor
     , border_collapse
     , border_dashed
     , border_dotted
     , border_double
     , border_hidden
     , border_l
-    , border_lWithColor
     , border_l_0
     , border_l_2
     , border_l_4
     , border_l_8
+    , border_l_WithColor
     , border_none
     , border_opacity_0
     , border_opacity_10
@@ -317,11 +318,11 @@ module Tailwind.Utilities exposing
     , border_opacity_90
     , border_opacity_95
     , border_r
-    , border_rWithColor
     , border_r_0
     , border_r_2
     , border_r_4
     , border_r_8
+    , border_r_WithColor
     , border_separate
     , border_solid
     , border_spacing_0
@@ -430,23 +431,23 @@ module Tailwind.Utilities exposing
     , border_spacing_y_96
     , border_spacing_y_px
     , border_t
-    , border_tWithColor
     , border_t_0
     , border_t_2
     , border_t_4
     , border_t_8
+    , border_t_WithColor
     , border_x
-    , border_xWithColor
     , border_x_0
     , border_x_2
     , border_x_4
     , border_x_8
+    , border_x_WithColor
     , border_y
-    , border_yWithColor
     , border_y_0
     , border_y_2
     , border_y_4
     , border_y_8
+    , border_y_WithColor
     , bottom_0
     , bottom_0_dot_5
     , bottom_1
@@ -529,7 +530,7 @@ module Tailwind.Utilities exposing
     , brightness_90
     , brightness_95
     , capitalize
-    , caretWithColor
+    , caret_WithColor
     , clear_both
     , clear_left
     , clear_none
@@ -654,12 +655,12 @@ module Tailwind.Utilities exposing
     , cursor_wait
     , cursor_zoom_in
     , cursor_zoom_out
-    , decorationWithColor
     , decoration_0
     , decoration_1
     , decoration_2
     , decoration_4
     , decoration_8
+    , decoration_WithColor
     , decoration_auto
     , decoration_clone
     , decoration_dashed
@@ -678,7 +679,7 @@ module Tailwind.Utilities exposing
     , delay_700
     , delay_75
     , diagonal_fractions
-    , divideWithColor
+    , divide_WithColor
     , divide_dashed
     , divide_dotted
     , divide_double
@@ -730,7 +731,7 @@ module Tailwind.Utilities exposing
     , ease_in_out
     , ease_linear
     , ease_out
-    , fillWithColor
+    , fill_WithColor
     , filter
     , filter_none
     , fixed
@@ -754,7 +755,7 @@ module Tailwind.Utilities exposing
     , float_none
     , float_right
     , flow_root
-    , fontWithColor
+    , font_WithColor
     , font_bold
     , font_extrabold
     , font_extralight
@@ -772,7 +773,7 @@ module Tailwind.Utilities exposing
     , form_radio
     , form_select
     , form_textarea
-    , fromWithColor
+    , from_WithColor
     , gap_0
     , gap_0_dot_5
     , gap_1
@@ -2700,12 +2701,12 @@ module Tailwind.Utilities exposing
     , origin_top_left
     , origin_top_right
     , outline
-    , outlineWithColor
     , outline_0
     , outline_1
     , outline_2
     , outline_4
     , outline_8
+    , outline_WithColor
     , outline_dashed
     , outline_dotted
     , outline_double
@@ -2863,7 +2864,7 @@ module Tailwind.Utilities exposing
     , place_self_end
     , place_self_start
     , place_self_stretch
-    , placeholderWithColor
+    , placeholder_WithColor
     , placeholder_opacity_0
     , placeholder_opacity_10
     , placeholder_opacity_100
@@ -3100,19 +3101,19 @@ module Tailwind.Utilities exposing
     , right_full
     , right_px
     , ring
-    , ringWithColor
     , ring_0
     , ring_1
     , ring_2
     , ring_4
     , ring_8
+    , ring_WithColor
     , ring_inset
-    , ring_offsetWithColor
     , ring_offset_0
     , ring_offset_1
     , ring_offset_2
     , ring_offset_4
     , ring_offset_8
+    , ring_offset_WithColor
     , ring_opacity_0
     , ring_opacity_10
     , ring_opacity_100
@@ -3782,8 +3783,8 @@ module Tailwind.Utilities exposing
     , sepia
     , sepia_0
     , shadow
-    , shadowWithColor
     , shadow_2xl
+    , shadow_WithColor
     , shadow_inner
     , shadow_lg
     , shadow_md
@@ -3893,10 +3894,10 @@ module Tailwind.Utilities exposing
     , stacked_fractions
     , static
     , sticky
-    , strokeWithColor
     , stroke_0
     , stroke_1
     , stroke_2
+    , stroke_WithColor
     , subpixel_antialiased
     , table
     , table_auto
@@ -3910,7 +3911,6 @@ module Tailwind.Utilities exposing
     , table_row
     , table_row_group
     , tabular_nums
-    , textWithColor
     , text_2xl
     , text_3xl
     , text_4xl
@@ -3919,6 +3919,7 @@ module Tailwind.Utilities exposing
     , text_7xl
     , text_8xl
     , text_9xl
+    , text_WithColor
     , text_base
     , text_center
     , text_clip
@@ -3947,7 +3948,7 @@ module Tailwind.Utilities exposing
     , text_start
     , text_xl
     , text_xs
-    , toWithColor
+    , to_WithColor
     , top_0
     , top_0_dot_5
     , top_1
@@ -4111,7 +4112,7 @@ module Tailwind.Utilities exposing
     , underline_offset_8
     , underline_offset_auto
     , uppercase
-    , viaWithColor
+    , via_WithColor
     , visible
     , w_0
     , w_0_dot_5
@@ -4180,11 +4181,6 @@ module Tailwind.Utilities exposing
     , w_min
     , w_px
     , w_screen
-    , whitespace_normal
-    , whitespace_nowrap
-    , whitespace_pre
-    , whitespace_pre_line
-    , whitespace_pre_wrap
     , will_change_auto
     , will_change_contents
     , will_change_scroll
@@ -4211,8 +4207,9 @@ This module contains
     [tailwind's website](https://tailwindcss.com/docs)
 
 @docs globalStyles
+@docs WithColor
 @docs absolute
-@docs accentWithColor
+@docs accent_WithColor
 @docs accent_auto
 @docs align_baseline
 @docs align_bottom
@@ -4410,7 +4407,7 @@ This module contains
 @docs basis_auto
 @docs basis_full
 @docs basis_px
-@docs bgWithColor
+@docs bg_WithColor
 @docs bg_auto
 @docs bg_blend_color
 @docs bg_blend_color_burn
@@ -4490,28 +4487,28 @@ This module contains
 @docs blur_sm
 @docs blur_xl
 @docs border
-@docs borderWithColor
 @docs border_0
 @docs border_2
 @docs border_4
 @docs border_8
+@docs border_WithColor
 @docs border_b
-@docs border_bWithColor
 @docs border_b_0
 @docs border_b_2
 @docs border_b_4
 @docs border_b_8
+@docs border_b_WithColor
 @docs border_collapse
 @docs border_dashed
 @docs border_dotted
 @docs border_double
 @docs border_hidden
 @docs border_l
-@docs border_lWithColor
 @docs border_l_0
 @docs border_l_2
 @docs border_l_4
 @docs border_l_8
+@docs border_l_WithColor
 @docs border_none
 @docs border_opacity_0
 @docs border_opacity_10
@@ -4529,11 +4526,11 @@ This module contains
 @docs border_opacity_90
 @docs border_opacity_95
 @docs border_r
-@docs border_rWithColor
 @docs border_r_0
 @docs border_r_2
 @docs border_r_4
 @docs border_r_8
+@docs border_r_WithColor
 @docs border_separate
 @docs border_solid
 @docs border_spacing_0
@@ -4642,23 +4639,23 @@ This module contains
 @docs border_spacing_y_96
 @docs border_spacing_y_px
 @docs border_t
-@docs border_tWithColor
 @docs border_t_0
 @docs border_t_2
 @docs border_t_4
 @docs border_t_8
+@docs border_t_WithColor
 @docs border_x
-@docs border_xWithColor
 @docs border_x_0
 @docs border_x_2
 @docs border_x_4
 @docs border_x_8
+@docs border_x_WithColor
 @docs border_y
-@docs border_yWithColor
 @docs border_y_0
 @docs border_y_2
 @docs border_y_4
 @docs border_y_8
+@docs border_y_WithColor
 @docs bottom_0
 @docs bottom_0_dot_5
 @docs bottom_1
@@ -4741,7 +4738,7 @@ This module contains
 @docs brightness_90
 @docs brightness_95
 @docs capitalize
-@docs caretWithColor
+@docs caret_WithColor
 @docs clear_both
 @docs clear_left
 @docs clear_none
@@ -4866,12 +4863,12 @@ This module contains
 @docs cursor_wait
 @docs cursor_zoom_in
 @docs cursor_zoom_out
-@docs decorationWithColor
 @docs decoration_0
 @docs decoration_1
 @docs decoration_2
 @docs decoration_4
 @docs decoration_8
+@docs decoration_WithColor
 @docs decoration_auto
 @docs decoration_clone
 @docs decoration_dashed
@@ -4890,7 +4887,7 @@ This module contains
 @docs delay_700
 @docs delay_75
 @docs diagonal_fractions
-@docs divideWithColor
+@docs divide_WithColor
 @docs divide_dashed
 @docs divide_dotted
 @docs divide_double
@@ -4942,7 +4939,7 @@ This module contains
 @docs ease_in_out
 @docs ease_linear
 @docs ease_out
-@docs fillWithColor
+@docs fill_WithColor
 @docs filter
 @docs filter_none
 @docs fixed
@@ -4966,7 +4963,7 @@ This module contains
 @docs float_none
 @docs float_right
 @docs flow_root
-@docs fontWithColor
+@docs font_WithColor
 @docs font_bold
 @docs font_extrabold
 @docs font_extralight
@@ -4984,7 +4981,7 @@ This module contains
 @docs form_radio
 @docs form_select
 @docs form_textarea
-@docs fromWithColor
+@docs from_WithColor
 @docs gap_0
 @docs gap_0_dot_5
 @docs gap_1
@@ -6911,12 +6908,12 @@ This module contains
 @docs origin_top_left
 @docs origin_top_right
 @docs outline
-@docs outlineWithColor
 @docs outline_0
 @docs outline_1
 @docs outline_2
 @docs outline_4
 @docs outline_8
+@docs outline_WithColor
 @docs outline_dashed
 @docs outline_dotted
 @docs outline_double
@@ -7074,7 +7071,7 @@ This module contains
 @docs place_self_end
 @docs place_self_start
 @docs place_self_stretch
-@docs placeholderWithColor
+@docs placeholder_WithColor
 @docs placeholder_opacity_0
 @docs placeholder_opacity_10
 @docs placeholder_opacity_100
@@ -7311,19 +7308,19 @@ This module contains
 @docs right_full
 @docs right_px
 @docs ring
-@docs ringWithColor
 @docs ring_0
 @docs ring_1
 @docs ring_2
 @docs ring_4
 @docs ring_8
+@docs ring_WithColor
 @docs ring_inset
-@docs ring_offsetWithColor
 @docs ring_offset_0
 @docs ring_offset_1
 @docs ring_offset_2
 @docs ring_offset_4
 @docs ring_offset_8
+@docs ring_offset_WithColor
 @docs ring_opacity_0
 @docs ring_opacity_10
 @docs ring_opacity_100
@@ -7993,8 +7990,8 @@ This module contains
 @docs sepia
 @docs sepia_0
 @docs shadow
-@docs shadowWithColor
 @docs shadow_2xl
+@docs shadow_WithColor
 @docs shadow_inner
 @docs shadow_lg
 @docs shadow_md
@@ -8104,10 +8101,10 @@ This module contains
 @docs stacked_fractions
 @docs static
 @docs sticky
-@docs strokeWithColor
 @docs stroke_0
 @docs stroke_1
 @docs stroke_2
+@docs stroke_WithColor
 @docs subpixel_antialiased
 @docs table
 @docs table_auto
@@ -8121,7 +8118,6 @@ This module contains
 @docs table_row
 @docs table_row_group
 @docs tabular_nums
-@docs textWithColor
 @docs text_2xl
 @docs text_3xl
 @docs text_4xl
@@ -8130,6 +8126,7 @@ This module contains
 @docs text_7xl
 @docs text_8xl
 @docs text_9xl
+@docs text_WithColor
 @docs text_base
 @docs text_center
 @docs text_clip
@@ -8158,7 +8155,7 @@ This module contains
 @docs text_start
 @docs text_xl
 @docs text_xs
-@docs toWithColor
+@docs to_WithColor
 @docs top_0
 @docs top_0_dot_5
 @docs top_1
@@ -8322,7 +8319,7 @@ This module contains
 @docs underline_offset_8
 @docs underline_offset_auto
 @docs uppercase
-@docs viaWithColor
+@docs via_WithColor
 @docs visible
 @docs w_0
 @docs w_0_dot_5
@@ -8391,11 +8388,6 @@ This module contains
 @docs w_min
 @docs w_px
 @docs w_screen
-@docs whitespace_normal
-@docs whitespace_nowrap
-@docs whitespace_pre
-@docs whitespace_pre_line
-@docs whitespace_pre_wrap
 @docs will_change_auto
 @docs will_change_contents
 @docs will_change_scroll
@@ -87075,86 +87067,6 @@ w_screen =
 {-| This class has the effect of following css declaration:
 
 ```css
-.whitespace-normal {
-    white-space: normal
-}
-```
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-whitespace_normal : Css.Style
-whitespace_normal =
-    Css.property "white-space" "normal"
-
-
-{-| This class has the effect of following css declaration:
-
-```css
-.whitespace-nowrap {
-    white-space: nowrap
-}
-```
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-whitespace_nowrap : Css.Style
-whitespace_nowrap =
-    Css.property "white-space" "nowrap"
-
-
-{-| This class has the effect of following css declaration:
-
-```css
-.whitespace-pre {
-    white-space: pre
-}
-```
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-whitespace_pre : Css.Style
-whitespace_pre =
-    Css.property "white-space" "pre"
-
-
-{-| This class has the effect of following css declaration:
-
-```css
-.whitespace-pre-line {
-    white-space: pre-line
-}
-```
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-whitespace_pre_line : Css.Style
-whitespace_pre_line =
-    Css.property "white-space" "pre-line"
-
-
-{-| This class has the effect of following css declaration:
-
-```css
-.whitespace-pre-wrap {
-    white-space: pre-wrap
-}
-```
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-whitespace_pre_wrap : Css.Style
-whitespace_pre_wrap =
-    Css.property "white-space" "pre-wrap"
-
-
-{-| This class has the effect of following css declaration:
-
-```css
 .will-change-auto {
     will-change: auto
 }
@@ -87328,7 +87240,25 @@ z_auto =
     Css.property "z-index" "auto"
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.whitespace-pre-wrap {
+    white-space: pre-wrap
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+WithColor : Color -> Css.Style
+WithColor color =
+    Css.property "white-space" "pre-wrap"
+
+
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .accent-rose-900 {
@@ -87336,15 +87266,17 @@ z_auto =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-accentWithColor : Color -> Css.Style
-accentWithColor color =
+accent_WithColor : Color -> Css.Style
+accent_WithColor color =
     Tailwind.Theme.toProperty "accent-color" (\c -> c) "" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .bg-rose-900 {
@@ -87353,15 +87285,17 @@ accentWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-bgWithColor : Color -> Css.Style
-bgWithColor color =
+bg_WithColor : Color -> Css.Style
+bg_WithColor color =
     Tailwind.Theme.toProperty "background-color" (\c -> c) "--tw-bg-opacity" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .border-rose-900 {
@@ -87370,15 +87304,17 @@ bgWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-borderWithColor : Color -> Css.Style
-borderWithColor color =
+border_WithColor : Color -> Css.Style
+border_WithColor color =
     Tailwind.Theme.toProperty "border-color" (\c -> c) "--tw-border-opacity" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .border-b-rose-900 {
@@ -87387,15 +87323,17 @@ borderWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-border_bWithColor : Color -> Css.Style
-border_bWithColor color =
+border_b_WithColor : Color -> Css.Style
+border_b_WithColor color =
     Tailwind.Theme.toProperty "border-bottom-color" (\c -> c) "--tw-border-opacity" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .border-l-rose-900 {
@@ -87404,15 +87342,17 @@ border_bWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-border_lWithColor : Color -> Css.Style
-border_lWithColor color =
+border_l_WithColor : Color -> Css.Style
+border_l_WithColor color =
     Tailwind.Theme.toProperty "border-left-color" (\c -> c) "--tw-border-opacity" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .border-r-rose-900 {
@@ -87421,15 +87361,17 @@ border_lWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-border_rWithColor : Color -> Css.Style
-border_rWithColor color =
+border_r_WithColor : Color -> Css.Style
+border_r_WithColor color =
     Tailwind.Theme.toProperty "border-right-color" (\c -> c) "--tw-border-opacity" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .border-t-rose-900 {
@@ -87438,15 +87380,17 @@ border_rWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-border_tWithColor : Color -> Css.Style
-border_tWithColor color =
+border_t_WithColor : Color -> Css.Style
+border_t_WithColor color =
     Tailwind.Theme.toProperty "border-top-color" (\c -> c) "--tw-border-opacity" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .border-x-rose-900 {
@@ -87456,18 +87400,20 @@ border_tWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-border_xWithColor : Color -> Css.Style
-border_xWithColor color =
+border_x_WithColor : Color -> Css.Style
+border_x_WithColor color =
     Css.batch
         [ Tailwind.Theme.toProperty "border-left-color" (\c -> c) "--tw-border-opacity" color
         , Tailwind.Theme.toProperty "border-right-color" (\c -> c) "--tw-border-opacity" color
         ]
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .border-y-rose-900 {
@@ -87477,18 +87423,20 @@ border_xWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-border_yWithColor : Color -> Css.Style
-border_yWithColor color =
+border_y_WithColor : Color -> Css.Style
+border_y_WithColor color =
     Css.batch
         [ Tailwind.Theme.toProperty "border-top-color" (\c -> c) "--tw-border-opacity" color
         , Tailwind.Theme.toProperty "border-bottom-color" (\c -> c) "--tw-border-opacity" color
         ]
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .caret-rose-900 {
@@ -87496,15 +87444,17 @@ border_yWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-caretWithColor : Color -> Css.Style
-caretWithColor color =
+caret_WithColor : Color -> Css.Style
+caret_WithColor color =
     Tailwind.Theme.toProperty "caret-color" (\c -> c) "" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .decoration-rose-900 {
@@ -87512,15 +87462,17 @@ caretWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-decorationWithColor : Color -> Css.Style
-decorationWithColor color =
+decoration_WithColor : Color -> Css.Style
+decoration_WithColor color =
     Tailwind.Theme.toProperty "text-decoration-color" (\c -> c) "" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .divide-rose-900 > :not([hidden]) ~ :not([hidden]) {
@@ -87529,11 +87481,13 @@ decorationWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-divideWithColor : Color -> Css.Style
-divideWithColor color =
+divide_WithColor : Color -> Css.Style
+divide_WithColor color =
     Css.Global.children
         [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
             [ Tailwind.Theme.toProperty "border-color" (\c -> c) "--tw-divide-opacity" color
@@ -87541,7 +87495,7 @@ divideWithColor color =
         ]
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .fill-rose-900 {
@@ -87549,15 +87503,17 @@ divideWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-fillWithColor : Color -> Css.Style
-fillWithColor color =
+fill_WithColor : Color -> Css.Style
+fill_WithColor color =
     Tailwind.Theme.toProperty "fill" (\c -> c) "" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .font-black {
@@ -87565,15 +87521,17 @@ fillWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-fontWithColor : Color -> Css.Style
-fontWithColor color =
+font_WithColor : Color -> Css.Style
+font_WithColor color =
     Css.property "font-weight" "900"
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .from-rose-900 {
@@ -87583,11 +87541,13 @@ fontWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-fromWithColor : Color -> Css.Style
-fromWithColor color =
+from_WithColor : Color -> Css.Style
+from_WithColor color =
     Css.batch
         [ Tailwind.Theme.toProperty "--tw-gradient-from" (\c -> c) "" color
         , Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity "0") color
@@ -87596,7 +87556,7 @@ fromWithColor color =
         ]
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .outline-rose-900 {
@@ -87604,15 +87564,17 @@ fromWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-outlineWithColor : Color -> Css.Style
-outlineWithColor color =
+outline_WithColor : Color -> Css.Style
+outline_WithColor color =
     Tailwind.Theme.toProperty "outline-color" (\c -> c) "" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .placeholder-rose-900::placeholder {
@@ -87621,17 +87583,19 @@ outlineWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-placeholderWithColor : Color -> Css.Style
-placeholderWithColor color =
+placeholder_WithColor : Color -> Css.Style
+placeholder_WithColor color =
     Css.pseudoElement "placeholder"
         [ Tailwind.Theme.toProperty "color" (\c -> c) "--tw-placeholder-opacity" color
         ]
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .ring-rose-900 {
@@ -87640,15 +87604,17 @@ placeholderWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-ringWithColor : Color -> Css.Style
-ringWithColor color =
+ring_WithColor : Color -> Css.Style
+ring_WithColor color =
     Tailwind.Theme.toProperty "--tw-ring-color" (\c -> c) "--tw-ring-opacity" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .ring-offset-rose-900 {
@@ -87656,15 +87622,17 @@ ringWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-ring_offsetWithColor : Color -> Css.Style
-ring_offsetWithColor color =
+ring_offset_WithColor : Color -> Css.Style
+ring_offset_WithColor color =
     Tailwind.Theme.toProperty "--tw-ring-offset-color" (\c -> c) "" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .shadow-rose-900 {
@@ -87673,18 +87641,20 @@ ring_offsetWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-shadowWithColor : Color -> Css.Style
-shadowWithColor color =
+shadow_WithColor : Color -> Css.Style
+shadow_WithColor color =
     Css.batch
         [ Tailwind.Theme.toProperty "--tw-shadow-color" (\c -> c) "" color
         , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
         ]
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .stroke-rose-900 {
@@ -87692,15 +87662,17 @@ shadowWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-strokeWithColor : Color -> Css.Style
-strokeWithColor color =
+stroke_WithColor : Color -> Css.Style
+stroke_WithColor color =
     Tailwind.Theme.toProperty "stroke" (\c -> c) "" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .text-rose-900 {
@@ -87709,15 +87681,17 @@ strokeWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-textWithColor : Color -> Css.Style
-textWithColor color =
+text_WithColor : Color -> Css.Style
+text_WithColor color =
     Tailwind.Theme.toProperty "color" (\c -> c) "--tw-text-opacity" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .to-rose-900 {
@@ -87725,15 +87699,17 @@ textWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-toWithColor : Color -> Css.Style
-toWithColor color =
+to_WithColor : Color -> Css.Style
+to_WithColor color =
     Tailwind.Theme.toProperty "--tw-gradient-to" (\c -> c) "" color
 
 
-{-| This class has the effect of following css declaration:
+{-| This class has effects of css declarations similar to the following:
 
 ```css
 .via-rose-900 {
@@ -87742,11 +87718,13 @@ toWithColor color =
 }
 ```
 
+Except the color value inside can be replaced with any color value.
+
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
 -}
-viaWithColor : Color -> Css.Style
-viaWithColor color =
+via_WithColor : Color -> Css.Style
+via_WithColor color =
     Css.batch
         [ Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity "0") color
             |> Tailwind.Theme.toProperty "--tw-gradient-to" (\c -> c) ""

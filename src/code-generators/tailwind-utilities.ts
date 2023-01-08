@@ -35,8 +35,8 @@ export function generateElmModule(moduleName: string, blocksByClass: GroupedDecl
             moduleDocs: docs.utilitiesModuleDocs(definedNames),
         }),
         elmUnrecognizedToFunctions(blocksByClass.unrecognized, docs),
-        elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.recognized, docs, false),
-        elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.colorParameterized, docs, true),
+        elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.recognized, docs),
+        elmParameterizedToFunctions(blocksByClass.keyframes, blocksByClass.colorParameterized, docs),
     ].join("");
 }
 
@@ -70,13 +70,24 @@ function convertUnrecognizeds(unrecognizeds: UnrecognizedDeclaration[]): generat
 
 function elmRecognizedToFunctions(
     keyframes: Map<string, Keyframe[]>,
-    recognizedBlocksByClass: Map<string, ParameterizedDeclaration>,
+    recognizedBlocksByClass: Map<string, RecognizedDeclaration>,
     docs: DocumentationGenerator,
-    parameterized: boolean,
 ): string {
     let body = "";
     Array.from(recognizedBlocksByClass.keys()).sort().forEach(elmClassName => {
-        body = body + elmRecognizedFunction(keyframes, elmClassName, recognizedBlocksByClass.get(elmClassName), docs, parameterized);
+        body = body + elmRecognizedFunction(keyframes, elmClassName, recognizedBlocksByClass.get(elmClassName), docs);
+    });
+    return body;
+}
+
+function elmParameterizedToFunctions(
+    keyframes: Map<string, Keyframe[]>,
+    recognizedBlocksByClass: Map<string, ParameterizedDeclaration>,
+    docs: DocumentationGenerator,
+): string {
+    let body = "";
+    Array.from(recognizedBlocksByClass.keys()).sort().forEach(elmClassName => {
+        body = body + elmParameterizedFunction(keyframes, elmClassName, recognizedBlocksByClass.get(elmClassName), docs);
     });
     return body;
 }
@@ -84,16 +95,13 @@ function elmRecognizedToFunctions(
 function elmRecognizedFunction(
     keyframes: Map<string, Keyframe[]>,
     elmClassName: string,
-    propertiesBlock: ParameterizedDeclaration,
+    propertiesBlock: RecognizedDeclaration,
     docs: DocumentationGenerator,
-    parameterized: boolean,
 ): string {
-    const signature = parameterized ? "Color -> Css.Style" : "Css.Style";
-    const args = parameterized ? "color " : "";
     return `
 ${docs.utilitiesDefinition(elmClassName, propertiesBlock)}
-${elmClassName} : ${signature}
-${elmClassName} ${args}=
+${elmClassName} : Css.Style
+${elmClassName} =
 ${convertDeclarationBlock(keyframes, propertiesBlock)({
     indentation: 4,
     preindent: true,
@@ -101,6 +109,22 @@ ${convertDeclarationBlock(keyframes, propertiesBlock)({
 `;
 }
 
+function elmParameterizedFunction(
+    keyframes: Map<string, Keyframe[]>,
+    elmClassName: string,
+    propertiesBlock: ParameterizedDeclaration,
+    docs: DocumentationGenerator,
+): string {
+    return `
+${docs.utilitiesParameterizedDefinition(elmClassName, propertiesBlock)}
+${elmClassName} : Color -> Css.Style
+${elmClassName} color =
+${convertDeclarationBlock(keyframes, propertiesBlock)({
+    indentation: 4,
+    preindent: true,
+})}
+`;
+}
 function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty | ParameterizedProperty, cssVarNames: string[]): generate.Indentable[] {
     if (cssVarNames.includes(declaration.prop)) {
         // We intentionally drop e.g. "--tw-bg-opacity" properties.

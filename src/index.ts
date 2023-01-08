@@ -20,10 +20,6 @@ export const defaultTailwindConfig: any = {
     safelist: [{pattern: /.*/, variants: []}]
 };
 
-const namingOptions: NamingOptions = {
-    nameStyle: "snake"
-}
-
 export const docs = documentation;
 
 export interface RunConfiguration {
@@ -122,12 +118,11 @@ export function asPostcssPlugin({moduleName, tailwindConfig, generateDocumentati
             const docGen = resolveDocGen(generateDocumentation);
             const resolvedConfig = resolveConfig(tailwindConfig);
             const resolvedColors = tailwindThemeGeneration.expandColors([], resolvedConfig.theme.colors);
-            console.log(resolvedConfig.theme.opacity);
-            const blocksByClass = parser.groupDeclarationBlocksByClass(root, resolvedColors, logFunction, namingOptions);
+            const blocksByClass = parser.groupDeclarationBlocksByClass(root, resolvedColors, logFunction);
 
             const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, docGen);
             const themeModule = tailwindThemeGeneration.generateElmModule(moduleName + ".Theme", resolvedColors);
-            const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions, docGen);
+            const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, docGen);
             
             modulesGeneratedHook({utilitiesModule, breakpointsModule, themeModule});
         }
