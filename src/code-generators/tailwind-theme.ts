@@ -5,7 +5,7 @@ import { toElmName } from "../helpers";
 
 // TODO do not expose Opacity(..)?
 const hardcodedTypes = ["Color", "Opacity(..)"];
-const hardcodedNames = ["toProperty", "withOpacity", "arbitraryRgb", "arbitraryRgba", "arbitraryOpacityPct"];
+const hardcodedNames = ["internal", "withOpacity", "arbitraryRgb", "arbitraryRgba", "arbitraryOpacityPct"];
 
 export function generateElmModule(moduleName: string, expandedColors: [string, string][], expandedOpacities: Record<string, string>): string {
     const definedNames = [...hardcodedNames, ...( expandedColors.map((( [color, _] ) => color)) ), ...Object.keys(expandedOpacities)].sort();
@@ -37,22 +37,25 @@ type Opacity
     | ViaVariable
 
 
-toProperty : String -> (String -> String) -> String -> Color -> Css.Style
-toProperty propertyName colorEmbeddedInValue variableName color =
-    case color of
-        Color mode r g b opacity ->
-            case opacity of
-                Opacity op ->
-                    Css.property propertyName (colorEmbeddedInValue (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / " ++ op ++ ")"))
+internal =
+    { -- propertyWithColorEmbedded : String -> (String -> String) -> String -> Color -> Css.Style
+      propertyWithColorEmbedded =
+        \\property embedColor variableName color ->
+            case color of
+                Color mode r g b opacity ->
+                    case opacity of
+                        Opacity op ->
+                            Css.property property (embedColor (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / " ++ op ++ ")"))
 
-                ViaVariable ->
-                    Css.batch
-                        [ Css.property variableName "1"
-                        , Css.property propertyName (colorEmbeddedInValue (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ variableName ++ "))"))
-                        ]
+                        ViaVariable ->
+                            Css.batch
+                                [ Css.property variableName "1"
+                                , Css.property property (embedColor (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ variableName ++ "))"))
+                                ]
 
-        Keyword keyword ->
-            Css.property propertyName keyword
+                Keyword keyword ->
+                    Css.property property keyword
+    }
 
 
 withOpacity : Opacity -> Color -> Color

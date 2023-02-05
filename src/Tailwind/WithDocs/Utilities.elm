@@ -75230,4 +75230,6240 @@ space_y_36 =
 ```css
 .space-y-3\.5 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
-    margin-t
+    margin-top: calc(0.875rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.875rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_3_dot_5 : Css.Style
+space_y_3_dot_5 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(0.875rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(0.875rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_4 : Css.Style
+space_y_4 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(1rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(1rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-40 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(10rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(10rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_40 : Css.Style
+space_y_40 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(10rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(10rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-44 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(11rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(11rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_44 : Css.Style
+space_y_44 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(11rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(11rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-48 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(12rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(12rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_48 : Css.Style
+space_y_48 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(12rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(12rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.25rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_5 : Css.Style
+space_y_5 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(1.25rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(1.25rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-52 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(13rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(13rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_52 : Css.Style
+space_y_52 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(13rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(13rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-56 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(14rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(14rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_56 : Css.Style
+space_y_56 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(14rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(14rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_6 : Css.Style
+space_y_6 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(1.5rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(1.5rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-60 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(15rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(15rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_60 : Css.Style
+space_y_60 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(15rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(15rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-64 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(16rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(16rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_64 : Css.Style
+space_y_64 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(16rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(16rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-7 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.75rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_7 : Css.Style
+space_y_7 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(1.75rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(1.75rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-72 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(18rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(18rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_72 : Css.Style
+space_y_72 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(18rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(18rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_8 : Css.Style
+space_y_8 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(2rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(2rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-80 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(20rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(20rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_80 : Css.Style
+space_y_80 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(20rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(20rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-9 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2.25rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_9 : Css.Style
+space_y_9 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(2.25rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(2.25rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-96 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(24rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(24rem * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_96 : Css.Style
+space_y_96 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(24rem * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(24rem * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-px > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1px * var(--tw-space-y-reverse))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_px : Css.Style
+space_y_px =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-top" "calc(1px * calc(1 - var(--tw-space-y-reverse)))"
+            , Css.property "margin-bottom" "calc(1px * var(--tw-space-y-reverse))"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.space-y-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+space_y_reverse : Css.Style
+space_y_reverse =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "1"
+            ]
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+sr_only : Css.Style
+sr_only =
+    Css.batch
+        [ Css.property "position" "absolute"
+        , Css.property "width" "1px"
+        , Css.property "height" "1px"
+        , Css.property "padding" "0"
+        , Css.property "margin" "-1px"
+        , Css.property "overflow" "hidden"
+        , Css.property "clip" "rect(0, 0, 0, 0)"
+        , Css.property "white-space" "nowrap"
+        , Css.property "border-width" "0"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stacked-fractions {
+    --tw-numeric-fraction: stacked-fractions;
+    font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stacked_fractions : Css.Style
+stacked_fractions =
+    Css.batch
+        [ Css.property "--tw-numeric-fraction" "stacked-fractions"
+        , Css.property "font-variant-numeric" "var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.static {
+    position: static
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+static : Css.Style
+static =
+    Css.property "position" "static"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.sticky {
+    position: sticky
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+sticky : Css.Style
+sticky =
+    Css.property "position" "sticky"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-0 {
+    stroke-width: 0
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_0 : Css.Style
+stroke_0 =
+    Css.property "stroke-width" "0"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-1 {
+    stroke-width: 1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_1 : Css.Style
+stroke_1 =
+    Css.property "stroke-width" "1"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.stroke-2 {
+    stroke-width: 2
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_2 : Css.Style
+stroke_2 =
+    Css.property "stroke-width" "2"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.subpixel-antialiased {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+subpixel_antialiased : Css.Style
+subpixel_antialiased =
+    Css.batch
+        [ Css.property "-webkit-font-smoothing" "auto"
+        , Css.property "-moz-osx-font-smoothing" "auto"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.table {
+    display: table
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+table : Css.Style
+table =
+    Css.property "display" "table"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.table-auto {
+    table-layout: auto
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+table_auto : Css.Style
+table_auto =
+    Css.property "table-layout" "auto"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.table-caption {
+    display: table-caption
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+table_caption : Css.Style
+table_caption =
+    Css.property "display" "table-caption"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.table-cell {
+    display: table-cell
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+table_cell : Css.Style
+table_cell =
+    Css.property "display" "table-cell"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.table-column {
+    display: table-column
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+table_column : Css.Style
+table_column =
+    Css.property "display" "table-column"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.table-column-group {
+    display: table-column-group
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+table_column_group : Css.Style
+table_column_group =
+    Css.property "display" "table-column-group"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.table-fixed {
+    table-layout: fixed
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+table_fixed : Css.Style
+table_fixed =
+    Css.property "table-layout" "fixed"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.table-footer-group {
+    display: table-footer-group
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+table_footer_group : Css.Style
+table_footer_group =
+    Css.property "display" "table-footer-group"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.table-header-group {
+    display: table-header-group
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+table_header_group : Css.Style
+table_header_group =
+    Css.property "display" "table-header-group"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.table-row {
+    display: table-row
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+table_row : Css.Style
+table_row =
+    Css.property "display" "table-row"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.table-row-group {
+    display: table-row-group
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+table_row_group : Css.Style
+table_row_group =
+    Css.property "display" "table-row-group"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.tabular-nums {
+    --tw-numeric-spacing: tabular-nums;
+    font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+tabular_nums : Css.Style
+tabular_nums =
+    Css.batch
+        [ Css.property "--tw-numeric-spacing" "tabular-nums"
+        , Css.property "font-variant-numeric" "var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_2xl : Css.Style
+text_2xl =
+    Css.batch
+        [ Css.property "font-size" "1.5rem"
+        , Css.property "line-height" "2rem"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_3xl : Css.Style
+text_3xl =
+    Css.batch
+        [ Css.property "font-size" "1.875rem"
+        , Css.property "line-height" "2.25rem"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_4xl : Css.Style
+text_4xl =
+    Css.batch
+        [ Css.property "font-size" "2.25rem"
+        , Css.property "line-height" "2.5rem"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-5xl {
+    font-size: 3rem;
+    line-height: 1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_5xl : Css.Style
+text_5xl =
+    Css.batch
+        [ Css.property "font-size" "3rem"
+        , Css.property "line-height" "1"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-6xl {
+    font-size: 3.75rem;
+    line-height: 1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_6xl : Css.Style
+text_6xl =
+    Css.batch
+        [ Css.property "font-size" "3.75rem"
+        , Css.property "line-height" "1"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-7xl {
+    font-size: 4.5rem;
+    line-height: 1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_7xl : Css.Style
+text_7xl =
+    Css.batch
+        [ Css.property "font-size" "4.5rem"
+        , Css.property "line-height" "1"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-8xl {
+    font-size: 6rem;
+    line-height: 1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_8xl : Css.Style
+text_8xl =
+    Css.batch
+        [ Css.property "font-size" "6rem"
+        , Css.property "line-height" "1"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-9xl {
+    font-size: 8rem;
+    line-height: 1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_9xl : Css.Style
+text_9xl =
+    Css.batch
+        [ Css.property "font-size" "8rem"
+        , Css.property "line-height" "1"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-base {
+    font-size: 1rem;
+    line-height: 1.5rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_base : Css.Style
+text_base =
+    Css.batch
+        [ Css.property "font-size" "1rem"
+        , Css.property "line-height" "1.5rem"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-center {
+    text-align: center
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_center : Css.Style
+text_center =
+    Css.property "text-align" "center"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-clip {
+    text-overflow: clip
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_clip : Css.Style
+text_clip =
+    Css.property "text-overflow" "clip"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-ellipsis {
+    text-overflow: ellipsis
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_ellipsis : Css.Style
+text_ellipsis =
+    Css.property "text-overflow" "ellipsis"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-end {
+    text-align: end
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_end : Css.Style
+text_end =
+    Css.property "text-align" "end"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-justify {
+    text-align: justify
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_justify : Css.Style
+text_justify =
+    Css.property "text-align" "justify"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-left {
+    text-align: left
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_left : Css.Style
+text_left =
+    Css.property "text-align" "left"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_lg : Css.Style
+text_lg =
+    Css.batch
+        [ Css.property "font-size" "1.125rem"
+        , Css.property "line-height" "1.75rem"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-0 {
+    --tw-text-opacity: 0
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_0 : Css.Style
+text_opacity_0 =
+    Css.property "--tw-text-opacity" "0"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-10 {
+    --tw-text-opacity: 0.1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_10 : Css.Style
+text_opacity_10 =
+    Css.property "--tw-text-opacity" "0.1"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-100 {
+    --tw-text-opacity: 1
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_100 : Css.Style
+text_opacity_100 =
+    Css.property "--tw-text-opacity" "1"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-20 {
+    --tw-text-opacity: 0.2
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_20 : Css.Style
+text_opacity_20 =
+    Css.property "--tw-text-opacity" "0.2"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-25 {
+    --tw-text-opacity: 0.25
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_25 : Css.Style
+text_opacity_25 =
+    Css.property "--tw-text-opacity" "0.25"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-30 {
+    --tw-text-opacity: 0.3
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_30 : Css.Style
+text_opacity_30 =
+    Css.property "--tw-text-opacity" "0.3"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-40 {
+    --tw-text-opacity: 0.4
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_40 : Css.Style
+text_opacity_40 =
+    Css.property "--tw-text-opacity" "0.4"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-5 {
+    --tw-text-opacity: 0.05
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_5 : Css.Style
+text_opacity_5 =
+    Css.property "--tw-text-opacity" "0.05"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-50 {
+    --tw-text-opacity: 0.5
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_50 : Css.Style
+text_opacity_50 =
+    Css.property "--tw-text-opacity" "0.5"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-60 {
+    --tw-text-opacity: 0.6
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_60 : Css.Style
+text_opacity_60 =
+    Css.property "--tw-text-opacity" "0.6"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-70 {
+    --tw-text-opacity: 0.7
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_70 : Css.Style
+text_opacity_70 =
+    Css.property "--tw-text-opacity" "0.7"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-75 {
+    --tw-text-opacity: 0.75
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_75 : Css.Style
+text_opacity_75 =
+    Css.property "--tw-text-opacity" "0.75"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-80 {
+    --tw-text-opacity: 0.8
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_80 : Css.Style
+text_opacity_80 =
+    Css.property "--tw-text-opacity" "0.8"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-90 {
+    --tw-text-opacity: 0.9
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_90 : Css.Style
+text_opacity_90 =
+    Css.property "--tw-text-opacity" "0.9"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-opacity-95 {
+    --tw-text-opacity: 0.95
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_opacity_95 : Css.Style
+text_opacity_95 =
+    Css.property "--tw-text-opacity" "0.95"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-right {
+    text-align: right
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_right : Css.Style
+text_right =
+    Css.property "text-align" "right"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_sm : Css.Style
+text_sm =
+    Css.batch
+        [ Css.property "font-size" "0.875rem"
+        , Css.property "line-height" "1.25rem"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-start {
+    text-align: start
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_start : Css.Style
+text_start =
+    Css.property "text-align" "start"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_xl : Css.Style
+text_xl =
+    Css.batch
+        [ Css.property "font-size" "1.25rem"
+        , Css.property "line-height" "1.75rem"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_xs : Css.Style
+text_xs =
+    Css.batch
+        [ Css.property "font-size" "0.75rem"
+        , Css.property "line-height" "1rem"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-0 {
+    top: 0px
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_0 : Css.Style
+top_0 =
+    Css.property "top" "0px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-0\.5 {
+    top: 0.125rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_0_dot_5 : Css.Style
+top_0_dot_5 =
+    Css.property "top" "0.125rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-1 {
+    top: 0.25rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_1 : Css.Style
+top_1 =
+    Css.property "top" "0.25rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-10 {
+    top: 2.5rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_10 : Css.Style
+top_10 =
+    Css.property "top" "2.5rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-11 {
+    top: 2.75rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_11 : Css.Style
+top_11 =
+    Css.property "top" "2.75rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-12 {
+    top: 3rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_12 : Css.Style
+top_12 =
+    Css.property "top" "3rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-14 {
+    top: 3.5rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_14 : Css.Style
+top_14 =
+    Css.property "top" "3.5rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-16 {
+    top: 4rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_16 : Css.Style
+top_16 =
+    Css.property "top" "4rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-1\.5 {
+    top: 0.375rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_1_dot_5 : Css.Style
+top_1_dot_5 =
+    Css.property "top" "0.375rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-1\/2 {
+    top: 50%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_1over2 : Css.Style
+top_1over2 =
+    Css.property "top" "50%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-1\/3 {
+    top: 33.333333%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_1over3 : Css.Style
+top_1over3 =
+    Css.property "top" "33.333333%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-1\/4 {
+    top: 25%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_1over4 : Css.Style
+top_1over4 =
+    Css.property "top" "25%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-2 {
+    top: 0.5rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_2 : Css.Style
+top_2 =
+    Css.property "top" "0.5rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-20 {
+    top: 5rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_20 : Css.Style
+top_20 =
+    Css.property "top" "5rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-24 {
+    top: 6rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_24 : Css.Style
+top_24 =
+    Css.property "top" "6rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-28 {
+    top: 7rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_28 : Css.Style
+top_28 =
+    Css.property "top" "7rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-2\.5 {
+    top: 0.625rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_2_dot_5 : Css.Style
+top_2_dot_5 =
+    Css.property "top" "0.625rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-2\/3 {
+    top: 66.666667%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_2over3 : Css.Style
+top_2over3 =
+    Css.property "top" "66.666667%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-2\/4 {
+    top: 50%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_2over4 : Css.Style
+top_2over4 =
+    Css.property "top" "50%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-3 {
+    top: 0.75rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_3 : Css.Style
+top_3 =
+    Css.property "top" "0.75rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-32 {
+    top: 8rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_32 : Css.Style
+top_32 =
+    Css.property "top" "8rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-36 {
+    top: 9rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_36 : Css.Style
+top_36 =
+    Css.property "top" "9rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-3\.5 {
+    top: 0.875rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_3_dot_5 : Css.Style
+top_3_dot_5 =
+    Css.property "top" "0.875rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-3\/4 {
+    top: 75%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_3over4 : Css.Style
+top_3over4 =
+    Css.property "top" "75%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-4 {
+    top: 1rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_4 : Css.Style
+top_4 =
+    Css.property "top" "1rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-40 {
+    top: 10rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_40 : Css.Style
+top_40 =
+    Css.property "top" "10rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-44 {
+    top: 11rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_44 : Css.Style
+top_44 =
+    Css.property "top" "11rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-48 {
+    top: 12rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_48 : Css.Style
+top_48 =
+    Css.property "top" "12rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-5 {
+    top: 1.25rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_5 : Css.Style
+top_5 =
+    Css.property "top" "1.25rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-52 {
+    top: 13rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_52 : Css.Style
+top_52 =
+    Css.property "top" "13rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-56 {
+    top: 14rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_56 : Css.Style
+top_56 =
+    Css.property "top" "14rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-6 {
+    top: 1.5rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_6 : Css.Style
+top_6 =
+    Css.property "top" "1.5rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-60 {
+    top: 15rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_60 : Css.Style
+top_60 =
+    Css.property "top" "15rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-64 {
+    top: 16rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_64 : Css.Style
+top_64 =
+    Css.property "top" "16rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-7 {
+    top: 1.75rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_7 : Css.Style
+top_7 =
+    Css.property "top" "1.75rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-72 {
+    top: 18rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_72 : Css.Style
+top_72 =
+    Css.property "top" "18rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-8 {
+    top: 2rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_8 : Css.Style
+top_8 =
+    Css.property "top" "2rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-80 {
+    top: 20rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_80 : Css.Style
+top_80 =
+    Css.property "top" "20rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-9 {
+    top: 2.25rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_9 : Css.Style
+top_9 =
+    Css.property "top" "2.25rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-96 {
+    top: 24rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_96 : Css.Style
+top_96 =
+    Css.property "top" "24rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-auto {
+    top: auto
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_auto : Css.Style
+top_auto =
+    Css.property "top" "auto"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-full {
+    top: 100%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_full : Css.Style
+top_full =
+    Css.property "top" "100%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.top-px {
+    top: 1px
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+top_px : Css.Style
+top_px =
+    Css.property "top" "1px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.touch-auto {
+    touch-action: auto
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+touch_auto : Css.Style
+touch_auto =
+    Css.property "touch-action" "auto"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.touch-manipulation {
+    touch-action: manipulation
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+touch_manipulation : Css.Style
+touch_manipulation =
+    Css.property "touch-action" "manipulation"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.touch-none {
+    touch-action: none
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+touch_none : Css.Style
+touch_none =
+    Css.property "touch-action" "none"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.touch-pan-down {
+    --tw-pan-y: pan-down;
+    touch-action: var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+touch_pan_down : Css.Style
+touch_pan_down =
+    Css.batch
+        [ Css.property "--tw-pan-y" "pan-down"
+        , Css.property "touch-action" "var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.touch-pan-left {
+    --tw-pan-x: pan-left;
+    touch-action: var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+touch_pan_left : Css.Style
+touch_pan_left =
+    Css.batch
+        [ Css.property "--tw-pan-x" "pan-left"
+        , Css.property "touch-action" "var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.touch-pan-right {
+    --tw-pan-x: pan-right;
+    touch-action: var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+touch_pan_right : Css.Style
+touch_pan_right =
+    Css.batch
+        [ Css.property "--tw-pan-x" "pan-right"
+        , Css.property "touch-action" "var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.touch-pan-up {
+    --tw-pan-y: pan-up;
+    touch-action: var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+touch_pan_up : Css.Style
+touch_pan_up =
+    Css.batch
+        [ Css.property "--tw-pan-y" "pan-up"
+        , Css.property "touch-action" "var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.touch-pan-x {
+    --tw-pan-x: pan-x;
+    touch-action: var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+touch_pan_x : Css.Style
+touch_pan_x =
+    Css.batch
+        [ Css.property "--tw-pan-x" "pan-x"
+        , Css.property "touch-action" "var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.touch-pan-y {
+    --tw-pan-y: pan-y;
+    touch-action: var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+touch_pan_y : Css.Style
+touch_pan_y =
+    Css.batch
+        [ Css.property "--tw-pan-y" "pan-y"
+        , Css.property "touch-action" "var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.touch-pinch-zoom {
+    --tw-pinch-zoom: pinch-zoom;
+    touch-action: var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+touch_pinch_zoom : Css.Style
+touch_pinch_zoom =
+    Css.batch
+        [ Css.property "--tw-pinch-zoom" "pinch-zoom"
+        , Css.property "touch-action" "var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom)"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.tracking-normal {
+    letter-spacing: 0em
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+tracking_normal : Css.Style
+tracking_normal =
+    Css.property "letter-spacing" "0em"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.tracking-tight {
+    letter-spacing: -0.025em
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+tracking_tight : Css.Style
+tracking_tight =
+    Css.property "letter-spacing" "-0.025em"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.tracking-tighter {
+    letter-spacing: -0.05em
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+tracking_tighter : Css.Style
+tracking_tighter =
+    Css.property "letter-spacing" "-0.05em"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.tracking-wide {
+    letter-spacing: 0.025em
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+tracking_wide : Css.Style
+tracking_wide =
+    Css.property "letter-spacing" "0.025em"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.tracking-wider {
+    letter-spacing: 0.05em
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+tracking_wider : Css.Style
+tracking_wider =
+    Css.property "letter-spacing" "0.05em"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.tracking-widest {
+    letter-spacing: 0.1em
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+tracking_widest : Css.Style
+tracking_widest =
+    Css.property "letter-spacing" "0.1em"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.transform {
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+transform : Css.Style
+transform =
+    Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.transform-cpu {
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+transform_cpu : Css.Style
+transform_cpu =
+    Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.transform-gpu {
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+transform_gpu : Css.Style
+transform_gpu =
+    Css.property "transform" "translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.transform-none {
+    transform: none
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+transform_none : Css.Style
+transform_none =
+    Css.property "transform" "none"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.transition {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+transition : Css.Style
+transition =
+    Css.batch
+        [ Css.property "transition-property" "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter"
+        , Css.property "transition-timing-function" "cubic-bezier(0.4, 0, 0.2, 1)"
+        , Css.property "transition-duration" "150ms"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+transition_all : Css.Style
+transition_all =
+    Css.batch
+        [ Css.property "transition-property" "all"
+        , Css.property "transition-timing-function" "cubic-bezier(0.4, 0, 0.2, 1)"
+        , Css.property "transition-duration" "150ms"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.transition-colors {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+transition_colors : Css.Style
+transition_colors =
+    Css.batch
+        [ Css.property "transition-property" "color, background-color, border-color, text-decoration-color, fill, stroke"
+        , Css.property "transition-timing-function" "cubic-bezier(0.4, 0, 0.2, 1)"
+        , Css.property "transition-duration" "150ms"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.transition-none {
+    transition-property: none
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+transition_none : Css.Style
+transition_none =
+    Css.property "transition-property" "none"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+transition_opacity : Css.Style
+transition_opacity =
+    Css.batch
+        [ Css.property "transition-property" "opacity"
+        , Css.property "transition-timing-function" "cubic-bezier(0.4, 0, 0.2, 1)"
+        , Css.property "transition-duration" "150ms"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.transition-shadow {
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+transition_shadow : Css.Style
+transition_shadow =
+    Css.batch
+        [ Css.property "transition-property" "box-shadow"
+        , Css.property "transition-timing-function" "cubic-bezier(0.4, 0, 0.2, 1)"
+        , Css.property "transition-duration" "150ms"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.transition-transform {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+transition_transform : Css.Style
+transition_transform =
+    Css.batch
+        [ Css.property "transition-property" "transform"
+        , Css.property "transition-timing-function" "cubic-bezier(0.4, 0, 0.2, 1)"
+        , Css.property "transition-duration" "150ms"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-0 {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_0 : Css.Style
+translate_x_0 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "0px"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-0\.5 {
+    --tw-translate-x: 0.125rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_0_dot_5 : Css.Style
+translate_x_0_dot_5 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "0.125rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-1 {
+    --tw-translate-x: 0.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_1 : Css.Style
+translate_x_1 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "0.25rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-10 {
+    --tw-translate-x: 2.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_10 : Css.Style
+translate_x_10 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "2.5rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-11 {
+    --tw-translate-x: 2.75rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_11 : Css.Style
+translate_x_11 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "2.75rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-12 {
+    --tw-translate-x: 3rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_12 : Css.Style
+translate_x_12 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "3rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-14 {
+    --tw-translate-x: 3.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_14 : Css.Style
+translate_x_14 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "3.5rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-16 {
+    --tw-translate-x: 4rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_16 : Css.Style
+translate_x_16 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "4rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-1\.5 {
+    --tw-translate-x: 0.375rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_1_dot_5 : Css.Style
+translate_x_1_dot_5 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "0.375rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-1\/2 {
+    --tw-translate-x: 50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_1over2 : Css.Style
+translate_x_1over2 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "50%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-1\/3 {
+    --tw-translate-x: 33.333333%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_1over3 : Css.Style
+translate_x_1over3 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "33.333333%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-1\/4 {
+    --tw-translate-x: 25%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_1over4 : Css.Style
+translate_x_1over4 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "25%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-2 {
+    --tw-translate-x: 0.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_2 : Css.Style
+translate_x_2 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "0.5rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-20 {
+    --tw-translate-x: 5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_20 : Css.Style
+translate_x_20 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "5rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-24 {
+    --tw-translate-x: 6rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_24 : Css.Style
+translate_x_24 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "6rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-28 {
+    --tw-translate-x: 7rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_28 : Css.Style
+translate_x_28 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "7rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-2\.5 {
+    --tw-translate-x: 0.625rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_2_dot_5 : Css.Style
+translate_x_2_dot_5 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "0.625rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-2\/3 {
+    --tw-translate-x: 66.666667%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_2over3 : Css.Style
+translate_x_2over3 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "66.666667%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-2\/4 {
+    --tw-translate-x: 50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_2over4 : Css.Style
+translate_x_2over4 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "50%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-3 {
+    --tw-translate-x: 0.75rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_3 : Css.Style
+translate_x_3 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "0.75rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-32 {
+    --tw-translate-x: 8rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_32 : Css.Style
+translate_x_32 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "8rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-36 {
+    --tw-translate-x: 9rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_36 : Css.Style
+translate_x_36 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "9rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-3\.5 {
+    --tw-translate-x: 0.875rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_3_dot_5 : Css.Style
+translate_x_3_dot_5 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "0.875rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-3\/4 {
+    --tw-translate-x: 75%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_3over4 : Css.Style
+translate_x_3over4 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "75%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-4 {
+    --tw-translate-x: 1rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_4 : Css.Style
+translate_x_4 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "1rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-40 {
+    --tw-translate-x: 10rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_40 : Css.Style
+translate_x_40 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "10rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-44 {
+    --tw-translate-x: 11rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_44 : Css.Style
+translate_x_44 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "11rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-48 {
+    --tw-translate-x: 12rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_48 : Css.Style
+translate_x_48 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "12rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-5 {
+    --tw-translate-x: 1.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_5 : Css.Style
+translate_x_5 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "1.25rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-52 {
+    --tw-translate-x: 13rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_52 : Css.Style
+translate_x_52 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "13rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-56 {
+    --tw-translate-x: 14rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_56 : Css.Style
+translate_x_56 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "14rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-6 {
+    --tw-translate-x: 1.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_6 : Css.Style
+translate_x_6 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "1.5rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-60 {
+    --tw-translate-x: 15rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_60 : Css.Style
+translate_x_60 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "15rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-64 {
+    --tw-translate-x: 16rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_64 : Css.Style
+translate_x_64 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "16rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-7 {
+    --tw-translate-x: 1.75rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_7 : Css.Style
+translate_x_7 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "1.75rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-72 {
+    --tw-translate-x: 18rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_72 : Css.Style
+translate_x_72 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "18rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-8 {
+    --tw-translate-x: 2rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_8 : Css.Style
+translate_x_8 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "2rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-80 {
+    --tw-translate-x: 20rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_80 : Css.Style
+translate_x_80 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "20rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-9 {
+    --tw-translate-x: 2.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_9 : Css.Style
+translate_x_9 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "2.25rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-96 {
+    --tw-translate-x: 24rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_96 : Css.Style
+translate_x_96 =
+    Css.batch
+        [ Css.property "--tw-translate-x" "24rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-full {
+    --tw-translate-x: 100%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_full : Css.Style
+translate_x_full =
+    Css.batch
+        [ Css.property "--tw-translate-x" "100%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-x-px {
+    --tw-translate-x: 1px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_x_px : Css.Style
+translate_x_px =
+    Css.batch
+        [ Css.property "--tw-translate-x" "1px"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-0 {
+    --tw-translate-y: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_0 : Css.Style
+translate_y_0 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "0px"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-0\.5 {
+    --tw-translate-y: 0.125rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_0_dot_5 : Css.Style
+translate_y_0_dot_5 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "0.125rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-1 {
+    --tw-translate-y: 0.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_1 : Css.Style
+translate_y_1 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "0.25rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-10 {
+    --tw-translate-y: 2.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_10 : Css.Style
+translate_y_10 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "2.5rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-11 {
+    --tw-translate-y: 2.75rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_11 : Css.Style
+translate_y_11 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "2.75rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-12 {
+    --tw-translate-y: 3rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_12 : Css.Style
+translate_y_12 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "3rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-14 {
+    --tw-translate-y: 3.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_14 : Css.Style
+translate_y_14 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "3.5rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-16 {
+    --tw-translate-y: 4rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_16 : Css.Style
+translate_y_16 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "4rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-1\.5 {
+    --tw-translate-y: 0.375rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_1_dot_5 : Css.Style
+translate_y_1_dot_5 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "0.375rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-1\/2 {
+    --tw-translate-y: 50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_1over2 : Css.Style
+translate_y_1over2 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "50%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-1\/3 {
+    --tw-translate-y: 33.333333%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_1over3 : Css.Style
+translate_y_1over3 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "33.333333%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-1\/4 {
+    --tw-translate-y: 25%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_1over4 : Css.Style
+translate_y_1over4 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "25%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-2 {
+    --tw-translate-y: 0.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_2 : Css.Style
+translate_y_2 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "0.5rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-20 {
+    --tw-translate-y: 5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_20 : Css.Style
+translate_y_20 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "5rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-24 {
+    --tw-translate-y: 6rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_24 : Css.Style
+translate_y_24 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "6rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-28 {
+    --tw-translate-y: 7rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_28 : Css.Style
+translate_y_28 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "7rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-2\.5 {
+    --tw-translate-y: 0.625rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_2_dot_5 : Css.Style
+translate_y_2_dot_5 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "0.625rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-2\/3 {
+    --tw-translate-y: 66.666667%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_2over3 : Css.Style
+translate_y_2over3 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "66.666667%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-2\/4 {
+    --tw-translate-y: 50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_2over4 : Css.Style
+translate_y_2over4 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "50%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-3 {
+    --tw-translate-y: 0.75rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_3 : Css.Style
+translate_y_3 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "0.75rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-32 {
+    --tw-translate-y: 8rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_32 : Css.Style
+translate_y_32 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "8rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-36 {
+    --tw-translate-y: 9rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_36 : Css.Style
+translate_y_36 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "9rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-3\.5 {
+    --tw-translate-y: 0.875rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_3_dot_5 : Css.Style
+translate_y_3_dot_5 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "0.875rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-3\/4 {
+    --tw-translate-y: 75%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_3over4 : Css.Style
+translate_y_3over4 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "75%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-4 {
+    --tw-translate-y: 1rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_4 : Css.Style
+translate_y_4 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "1rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-40 {
+    --tw-translate-y: 10rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_40 : Css.Style
+translate_y_40 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "10rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-44 {
+    --tw-translate-y: 11rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_44 : Css.Style
+translate_y_44 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "11rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-48 {
+    --tw-translate-y: 12rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_48 : Css.Style
+translate_y_48 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "12rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-5 {
+    --tw-translate-y: 1.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_5 : Css.Style
+translate_y_5 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "1.25rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-52 {
+    --tw-translate-y: 13rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_52 : Css.Style
+translate_y_52 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "13rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-56 {
+    --tw-translate-y: 14rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_56 : Css.Style
+translate_y_56 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "14rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-6 {
+    --tw-translate-y: 1.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_6 : Css.Style
+translate_y_6 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "1.5rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-60 {
+    --tw-translate-y: 15rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_60 : Css.Style
+translate_y_60 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "15rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-64 {
+    --tw-translate-y: 16rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_64 : Css.Style
+translate_y_64 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "16rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-7 {
+    --tw-translate-y: 1.75rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_7 : Css.Style
+translate_y_7 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "1.75rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-72 {
+    --tw-translate-y: 18rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_72 : Css.Style
+translate_y_72 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "18rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-8 {
+    --tw-translate-y: 2rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_8 : Css.Style
+translate_y_8 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "2rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-80 {
+    --tw-translate-y: 20rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_80 : Css.Style
+translate_y_80 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "20rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-9 {
+    --tw-translate-y: 2.25rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_9 : Css.Style
+translate_y_9 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "2.25rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-96 {
+    --tw-translate-y: 24rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_96 : Css.Style
+translate_y_96 =
+    Css.batch
+        [ Css.property "--tw-translate-y" "24rem"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-full {
+    --tw-translate-y: 100%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_full : Css.Style
+translate_y_full =
+    Css.batch
+        [ Css.property "--tw-translate-y" "100%"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.translate-y-px {
+    --tw-translate-y: 1px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+translate_y_px : Css.Style
+translate_y_px =
+    Css.batch
+        [ Css.property "--tw-translate-y" "1px"
+        , Css.property "transform" "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+truncate : Css.Style
+truncate =
+    Css.batch
+        [ Css.property "overflow" "hidden"
+        , Css.property "text-overflow" "ellipsis"
+        , Css.property "white-space" "nowrap"
+        ]
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.underline {
+    text-decoration-line: underline
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+underline : Css.Style
+underline =
+    Css.property "text-decoration-line" "underline"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.underline-offset-0 {
+    text-underline-offset: 0px
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+underline_offset_0 : Css.Style
+underline_offset_0 =
+    Css.property "text-underline-offset" "0px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.underline-offset-1 {
+    text-underline-offset: 1px
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+underline_offset_1 : Css.Style
+underline_offset_1 =
+    Css.property "text-underline-offset" "1px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.underline-offset-2 {
+    text-underline-offset: 2px
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+underline_offset_2 : Css.Style
+underline_offset_2 =
+    Css.property "text-underline-offset" "2px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.underline-offset-4 {
+    text-underline-offset: 4px
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+underline_offset_4 : Css.Style
+underline_offset_4 =
+    Css.property "text-underline-offset" "4px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.underline-offset-8 {
+    text-underline-offset: 8px
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+underline_offset_8 : Css.Style
+underline_offset_8 =
+    Css.property "text-underline-offset" "8px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.underline-offset-auto {
+    text-underline-offset: auto
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+underline_offset_auto : Css.Style
+underline_offset_auto =
+    Css.property "text-underline-offset" "auto"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.uppercase {
+    text-transform: uppercase
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+uppercase : Css.Style
+uppercase =
+    Css.property "text-transform" "uppercase"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.visible {
+    visibility: visible
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+visible : Css.Style
+visible =
+    Css.property "visibility" "visible"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-0 {
+    width: 0px
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_0 : Css.Style
+w_0 =
+    Css.property "width" "0px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-0\.5 {
+    width: 0.125rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_0_dot_5 : Css.Style
+w_0_dot_5 =
+    Css.property "width" "0.125rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-1 {
+    width: 0.25rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_1 : Css.Style
+w_1 =
+    Css.property "width" "0.25rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-10 {
+    width: 2.5rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_10 : Css.Style
+w_10 =
+    Css.property "width" "2.5rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-10\/12 {
+    width: 83.333333%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_10over12 : Css.Style
+w_10over12 =
+    Css.property "width" "83.333333%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-11 {
+    width: 2.75rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_11 : Css.Style
+w_11 =
+    Css.property "width" "2.75rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-11\/12 {
+    width: 91.666667%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_11over12 : Css.Style
+w_11over12 =
+    Css.property "width" "91.666667%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-12 {
+    width: 3rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_12 : Css.Style
+w_12 =
+    Css.property "width" "3rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-14 {
+    width: 3.5rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_14 : Css.Style
+w_14 =
+    Css.property "width" "3.5rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-16 {
+    width: 4rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_16 : Css.Style
+w_16 =
+    Css.property "width" "4rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-1\.5 {
+    width: 0.375rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_1_dot_5 : Css.Style
+w_1_dot_5 =
+    Css.property "width" "0.375rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-1\/12 {
+    width: 8.333333%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_1over12 : Css.Style
+w_1over12 =
+    Css.property "width" "8.333333%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-1\/2 {
+    width: 50%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_1over2 : Css.Style
+w_1over2 =
+    Css.property "width" "50%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-1\/3 {
+    width: 33.333333%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_1over3 : Css.Style
+w_1over3 =
+    Css.property "width" "33.333333%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-1\/4 {
+    width: 25%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_1over4 : Css.Style
+w_1over4 =
+    Css.property "width" "25%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-1\/5 {
+    width: 20%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_1over5 : Css.Style
+w_1over5 =
+    Css.property "width" "20%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-1\/6 {
+    width: 16.666667%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_1over6 : Css.Style
+w_1over6 =
+    Css.property "width" "16.666667%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-2 {
+    width: 0.5rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_2 : Css.Style
+w_2 =
+    Css.property "width" "0.5rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-20 {
+    width: 5rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_20 : Css.Style
+w_20 =
+    Css.property "width" "5rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-24 {
+    width: 6rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_24 : Css.Style
+w_24 =
+    Css.property "width" "6rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-28 {
+    width: 7rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_28 : Css.Style
+w_28 =
+    Css.property "width" "7rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-2\.5 {
+    width: 0.625rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_2_dot_5 : Css.Style
+w_2_dot_5 =
+    Css.property "width" "0.625rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-2\/12 {
+    width: 16.666667%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_2over12 : Css.Style
+w_2over12 =
+    Css.property "width" "16.666667%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-2\/3 {
+    width: 66.666667%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_2over3 : Css.Style
+w_2over3 =
+    Css.property "width" "66.666667%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-2\/4 {
+    width: 50%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_2over4 : Css.Style
+w_2over4 =
+    Css.property "width" "50%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-2\/5 {
+    width: 40%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_2over5 : Css.Style
+w_2over5 =
+    Css.property "width" "40%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-2\/6 {
+    width: 33.333333%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_2over6 : Css.Style
+w_2over6 =
+    Css.property "width" "33.333333%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-3 {
+    width: 0.75rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_3 : Css.Style
+w_3 =
+    Css.property "width" "0.75rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-32 {
+    width: 8rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_32 : Css.Style
+w_32 =
+    Css.property "width" "8rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-36 {
+    width: 9rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_36 : Css.Style
+w_36 =
+    Css.property "width" "9rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-3\.5 {
+    width: 0.875rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_3_dot_5 : Css.Style
+w_3_dot_5 =
+    Css.property "width" "0.875rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-3\/12 {
+    width: 25%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_3over12 : Css.Style
+w_3over12 =
+    Css.property "width" "25%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-3\/4 {
+    width: 75%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_3over4 : Css.Style
+w_3over4 =
+    Css.property "width" "75%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-3\/5 {
+    width: 60%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_3over5 : Css.Style
+w_3over5 =
+    Css.property "width" "60%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-3\/6 {
+    width: 50%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_3over6 : Css.Style
+w_3over6 =
+    Css.property "width" "50%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-4 {
+    width: 1rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_4 : Css.Style
+w_4 =
+    Css.property "width" "1rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-40 {
+    width: 10rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_40 : Css.Style
+w_40 =
+    Css.property "width" "10rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-44 {
+    width: 11rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_44 : Css.Style
+w_44 =
+    Css.property "width" "11rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-48 {
+    width: 12rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_48 : Css.Style
+w_48 =
+    Css.property "width" "12rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-4\/12 {
+    width: 33.333333%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_4over12 : Css.Style
+w_4over12 =
+    Css.property "width" "33.333333%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-4\/5 {
+    width: 80%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_4over5 : Css.Style
+w_4over5 =
+    Css.property "width" "80%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-4\/6 {
+    width: 66.666667%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_4over6 : Css.Style
+w_4over6 =
+    Css.property "width" "66.666667%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-5 {
+    width: 1.25rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_5 : Css.Style
+w_5 =
+    Css.property "width" "1.25rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-52 {
+    width: 13rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_52 : Css.Style
+w_52 =
+    Css.property "width" "13rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-56 {
+    width: 14rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_56 : Css.Style
+w_56 =
+    Css.property "width" "14rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-5\/12 {
+    width: 41.666667%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_5over12 : Css.Style
+w_5over12 =
+    Css.property "width" "41.666667%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-5\/6 {
+    width: 83.333333%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_5over6 : Css.Style
+w_5over6 =
+    Css.property "width" "83.333333%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-6 {
+    width: 1.5rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_6 : Css.Style
+w_6 =
+    Css.property "width" "1.5rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-60 {
+    width: 15rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_60 : Css.Style
+w_60 =
+    Css.property "width" "15rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-64 {
+    width: 16rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_64 : Css.Style
+w_64 =
+    Css.property "width" "16rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-6\/12 {
+    width: 50%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_6over12 : Css.Style
+w_6over12 =
+    Css.property "width" "50%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-7 {
+    width: 1.75rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_7 : Css.Style
+w_7 =
+    Css.property "width" "1.75rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-72 {
+    width: 18rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_72 : Css.Style
+w_72 =
+    Css.property "width" "18rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-7\/12 {
+    width: 58.333333%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_7over12 : Css.Style
+w_7over12 =
+    Css.property "width" "58.333333%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-8 {
+    width: 2rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_8 : Css.Style
+w_8 =
+    Css.property "width" "2rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-80 {
+    width: 20rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_80 : Css.Style
+w_80 =
+    Css.property "width" "20rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-8\/12 {
+    width: 66.666667%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_8over12 : Css.Style
+w_8over12 =
+    Css.property "width" "66.666667%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-9 {
+    width: 2.25rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_9 : Css.Style
+w_9 =
+    Css.property "width" "2.25rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-96 {
+    width: 24rem
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_96 : Css.Style
+w_96 =
+    Css.property "width" "24rem"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-9\/12 {
+    width: 75%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_9over12 : Css.Style
+w_9over12 =
+    Css.property "width" "75%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-auto {
+    width: auto
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_auto : Css.Style
+w_auto =
+    Css.property "width" "auto"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-fit {
+    width: fit-content
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_fit : Css.Style
+w_fit =
+    Css.property "width" "fit-content"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-full {
+    width: 100%
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_full : Css.Style
+w_full =
+    Css.property "width" "100%"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-max {
+    width: max-content
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_max : Css.Style
+w_max =
+    Css.property "width" "max-content"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-min {
+    width: min-content
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_min : Css.Style
+w_min =
+    Css.property "width" "min-content"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-px {
+    width: 1px
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_px : Css.Style
+w_px =
+    Css.property "width" "1px"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.w-screen {
+    width: 100vw
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+w_screen : Css.Style
+w_screen =
+    Css.property "width" "100vw"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.whitespace-normal {
+    white-space: normal
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+whitespace_normal : Css.Style
+whitespace_normal =
+    Css.property "white-space" "normal"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.whitespace-nowrap {
+    white-space: nowrap
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+whitespace_nowrap : Css.Style
+whitespace_nowrap =
+    Css.property "white-space" "nowrap"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.whitespace-pre {
+    white-space: pre
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+whitespace_pre : Css.Style
+whitespace_pre =
+    Css.property "white-space" "pre"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.whitespace-pre-line {
+    white-space: pre-line
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+whitespace_pre_line : Css.Style
+whitespace_pre_line =
+    Css.property "white-space" "pre-line"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.whitespace-pre-wrap {
+    white-space: pre-wrap
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+whitespace_pre_wrap : Css.Style
+whitespace_pre_wrap =
+    Css.property "white-space" "pre-wrap"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.will-change-auto {
+    will-change: auto
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+will_change_auto : Css.Style
+will_change_auto =
+    Css.property "will-change" "auto"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.will-change-contents {
+    will-change: contents
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+will_change_contents : Css.Style
+will_change_contents =
+    Css.property "will-change" "contents"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.will-change-scroll {
+    will-change: scroll-position
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+will_change_scroll : Css.Style
+will_change_scroll =
+    Css.property "will-change" "scroll-position"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.will-change-transform {
+    will-change: transform
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+will_change_transform : Css.Style
+will_change_transform =
+    Css.property "will-change" "transform"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.z-0 {
+    z-index: 0
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+z_0 : Css.Style
+z_0 =
+    Css.property "z-index" "0"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.z-10 {
+    z-index: 10
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+z_10 : Css.Style
+z_10 =
+    Css.property "z-index" "10"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.z-20 {
+    z-index: 20
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+z_20 : Css.Style
+z_20 =
+    Css.property "z-index" "20"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.z-30 {
+    z-index: 30
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+z_30 : Css.Style
+z_30 =
+    Css.property "z-index" "30"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.z-40 {
+    z-index: 40
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+z_40 : Css.Style
+z_40 =
+    Css.property "z-index" "40"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.z-50 {
+    z-index: 50
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+z_50 : Css.Style
+z_50 =
+    Css.property "z-index" "50"
+
+
+{-| This class has the effect of following css declaration:
+
+```css
+.z-auto {
+    z-index: auto
+}
+```
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+z_auto : Css.Style
+z_auto =
+    Css.property "z-index" "auto"
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.accent-rose-900 {
+    accent-color: #881337
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+accent_WithColor : Color -> Css.Style
+accent_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "accent-color" (\c -> c) "" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.bg-rose-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(136 19 55 / var(--tw-bg-opacity))
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+bg_WithColor : Color -> Css.Style
+bg_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "background-color" (\c -> c) "--tw-bg-opacity" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.border-rose-900 {
+    --tw-border-opacity: 1;
+    border-color: rgb(136 19 55 / var(--tw-border-opacity))
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_WithColor : Color -> Css.Style
+border_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "border-color" (\c -> c) "--tw-border-opacity" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.border-b-rose-900 {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(136 19 55 / var(--tw-border-opacity))
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_b_WithColor : Color -> Css.Style
+border_b_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "border-bottom-color" (\c -> c) "--tw-border-opacity" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.border-l-rose-900 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(136 19 55 / var(--tw-border-opacity))
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_l_WithColor : Color -> Css.Style
+border_l_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "border-left-color" (\c -> c) "--tw-border-opacity" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.border-r-rose-900 {
+    --tw-border-opacity: 1;
+    border-right-color: rgb(136 19 55 / var(--tw-border-opacity))
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_r_WithColor : Color -> Css.Style
+border_r_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "border-right-color" (\c -> c) "--tw-border-opacity" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.border-t-rose-900 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(136 19 55 / var(--tw-border-opacity))
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_t_WithColor : Color -> Css.Style
+border_t_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "border-top-color" (\c -> c) "--tw-border-opacity" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.border-x-rose-900 {
+    --tw-border-opacity: 1;
+    border-left-color: rgb(136 19 55 / var(--tw-border-opacity));
+    border-right-color: rgb(136 19 55 / var(--tw-border-opacity))
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_x_WithColor : Color -> Css.Style
+border_x_WithColor color =
+    Css.batch
+        [ Tailwind.Theme.internal.propertyWithColorEmbedded "border-left-color" (\c -> c) "--tw-border-opacity" color
+        , Tailwind.Theme.internal.propertyWithColorEmbedded "border-right-color" (\c -> c) "--tw-border-opacity" color
+        ]
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.border-y-rose-900 {
+    --tw-border-opacity: 1;
+    border-top-color: rgb(136 19 55 / var(--tw-border-opacity));
+    border-bottom-color: rgb(136 19 55 / var(--tw-border-opacity))
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+border_y_WithColor : Color -> Css.Style
+border_y_WithColor color =
+    Css.batch
+        [ Tailwind.Theme.internal.propertyWithColorEmbedded "border-top-color" (\c -> c) "--tw-border-opacity" color
+        , Tailwind.Theme.internal.propertyWithColorEmbedded "border-bottom-color" (\c -> c) "--tw-border-opacity" color
+        ]
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.caret-rose-900 {
+    caret-color: #881337
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+caret_WithColor : Color -> Css.Style
+caret_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "caret-color" (\c -> c) "" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.decoration-rose-900 {
+    text-decoration-color: #881337
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+decoration_WithColor : Color -> Css.Style
+decoration_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "text-decoration-color" (\c -> c) "" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.divide-rose-900 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(136 19 55 / var(--tw-divide-opacity))
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+divide_WithColor : Color -> Css.Style
+divide_WithColor color =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Tailwind.Theme.internal.propertyWithColorEmbedded "border-color" (\c -> c) "--tw-divide-opacity" color
+            ]
+        ]
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.fill-rose-900 {
+    fill: #881337
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+fill_WithColor : Color -> Css.Style
+fill_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "fill" (\c -> c) "" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.from-rose-900 {
+    --tw-gradient-from: #881337;
+    --tw-gradient-to: rgb(136 19 55 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+from_WithColor : Color -> Css.Style
+from_WithColor color =
+    Css.batch
+        [ Tailwind.Theme.internal.propertyWithColorEmbedded "--tw-gradient-from" (\c -> c) "" color
+        , Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity "0") color
+            |> Tailwind.Theme.internal.propertyWithColorEmbedded "--tw-gradient-to" (\c -> c) ""
+        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
+        ]
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.outline-rose-900 {
+    outline-color: #881337
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+outline_WithColor : Color -> Css.Style
+outline_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "outline-color" (\c -> c) "" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.placeholder-rose-900::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(136 19 55 / var(--tw-placeholder-opacity))
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+placeholder_WithColor : Color -> Css.Style
+placeholder_WithColor color =
+    Css.pseudoElement "placeholder"
+        [ Tailwind.Theme.internal.propertyWithColorEmbedded "color" (\c -> c) "--tw-placeholder-opacity" color
+        ]
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.ring-rose-900 {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(136 19 55 / var(--tw-ring-opacity))
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_WithColor : Color -> Css.Style
+ring_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "--tw-ring-color" (\c -> c) "--tw-ring-opacity" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.ring-offset-rose-900 {
+    --tw-ring-offset-color: #881337
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+ring_offset_WithColor : Color -> Css.Style
+ring_offset_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "--tw-ring-offset-color" (\c -> c) "" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.shadow-rose-900 {
+    --tw-shadow-color: #881337;
+    --tw-shadow: var(--tw-shadow-colored)
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+shadow_WithColor : Color -> Css.Style
+shadow_WithColor color =
+    Css.batch
+        [ Tailwind.Theme.internal.propertyWithColorEmbedded "--tw-shadow-color" (\c -> c) "" color
+        , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
+        ]
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.stroke-rose-900 {
+    stroke: #881337
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+stroke_WithColor : Color -> Css.Style
+stroke_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "stroke" (\c -> c) "" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.text-rose-900 {
+    --tw-text-opacity: 1;
+    color: rgb(136 19 55 / var(--tw-text-opacity))
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+text_WithColor : Color -> Css.Style
+text_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "color" (\c -> c) "--tw-text-opacity" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.to-rose-900 {
+    --tw-gradient-to: #881337
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+to_WithColor : Color -> Css.Style
+to_WithColor color =
+    Tailwind.Theme.internal.propertyWithColorEmbedded "--tw-gradient-to" (\c -> c) "" color
+
+
+{-| This class has effects of css declarations similar to the following:
+
+```css
+.via-rose-900 {
+    --tw-gradient-to: rgb(136 19 55 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #881337, var(--tw-gradient-to)
+}
+```
+
+Except the color value inside can be replaced with any color value.
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}
+via_WithColor : Color -> Css.Style
+via_WithColor color =
+    Css.batch
+        [ Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity "0") color
+            |> Tailwind.Theme.internal.propertyWithColorEmbedded "--tw-gradient-to" (\c -> c) ""
+        , Tailwind.Theme.internal.propertyWithColorEmbedded "--tw-gradient-stops" (\c -> "var(--tw-gradient-from), " ++ c ++ ", var(--tw-gradient-to)") "" color
+        ]

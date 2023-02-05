@@ -87,6 +87,7 @@ module Tailwind.WithDocs.Theme exposing
     , indigo_800
     , indigo_900
     , inherit
+    , internal
     , lime_100
     , lime_200
     , lime_300
@@ -212,7 +213,6 @@ module Tailwind.WithDocs.Theme exposing
     , teal_700
     , teal_800
     , teal_900
-    , toProperty
     , transparent
     , violet_100
     , violet_200
@@ -261,22 +261,25 @@ type Opacity
     | ViaVariable
 
 
-toProperty : String -> (String -> String) -> String -> Color -> Css.Style
-toProperty propertyName colorEmbeddedInValue variableName color =
-    case color of
-        Color mode r g b opacity ->
-            case opacity of
-                Opacity op ->
-                    Css.property propertyName (colorEmbeddedInValue (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / " ++ op ++ ")"))
+internal =
+    { -- propertyWithColorEmbedded : String -> (String -> String) -> String -> Color -> Css.Style
+      propertyWithColorEmbedded =
+        \property embedColor variableName color ->
+            case color of
+                Color mode r g b opacity ->
+                    case opacity of
+                        Opacity op ->
+                            Css.property property (embedColor (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / " ++ op ++ ")"))
 
-                ViaVariable ->
-                    Css.batch
-                        [ Css.property variableName "1"
-                        , Css.property propertyName (colorEmbeddedInValue (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ variableName ++ "))"))
-                        ]
+                        ViaVariable ->
+                            Css.batch
+                                [ Css.property variableName "1"
+                                , Css.property property (embedColor (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ variableName ++ "))"))
+                                ]
 
-        Keyword keyword ->
-            Css.property propertyName keyword
+                Keyword keyword ->
+                    Css.property property keyword
+    }
 
 
 withOpacity : Opacity -> Color -> Color

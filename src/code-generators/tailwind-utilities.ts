@@ -128,7 +128,7 @@ ${convertDeclarationBlock(keyframes, propertiesBlock)({
 function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty | ParameterizedProperty, cssVarNames: string[]): generate.Indentable[] {
     if (cssVarNames.includes(declaration.prop)) {
         // We intentionally drop e.g. "--tw-bg-opacity" properties.
-        // They'll get re-added in `Theme.toProperty`, if the color doesn't have an opacity set.
+        // They'll get re-added in `Theme.internal.propertyWithColorEmbedded`, if the color doesn't have an opacity set.
         return [];
     }
 
@@ -173,15 +173,15 @@ function convertColorDeclaration(property: ParameterizedProperty): generate.Inde
 
     // TODO make this a Maybe & use Nothing in some cases (or perhaps break out toProperty into three variants)
     if (property.opacity == null) {
-        return generate.singleLine(`Tailwind.Theme.toProperty ${propertyName} (\\c -> ${colorExpression}) "" color`)
+        return generate.singleLine(`Tailwind.Theme.internal.propertyWithColorEmbedded ${propertyName} (\\c -> ${colorExpression}) "" color`)
     } else if ("variableName" in property.opacity) {
         const variableName = generate.elmString(property.opacity.variableName);
-        return generate.singleLine(`Tailwind.Theme.toProperty ${propertyName} (\\c -> ${colorExpression}) ${variableName} color`)
+        return generate.singleLine(`Tailwind.Theme.internal.propertyWithColorEmbedded ${propertyName} (\\c -> ${colorExpression}) ${variableName} color`)
     } else {
         const literal = generate.elmString(property.opacity.literal);
         return generate.elmFunctionCall(
             `Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity ${literal}) color`,
-            generate.singleLine(`|> Tailwind.Theme.toProperty ${propertyName} (\\c -> ${colorExpression}) ""`)
+            generate.singleLine(`|> Tailwind.Theme.internal.propertyWithColorEmbedded ${propertyName} (\\c -> ${colorExpression}) ""`)
         );
     }
 }
