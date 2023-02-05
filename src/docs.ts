@@ -1,4 +1,4 @@
-import { Breakpoint, RecognizedDeclaration } from "./types"
+import { Breakpoint, ParameterizedDeclaration, RecognizedDeclaration } from "./types"
 
 /* This interface encapsulates documentation generation for
  * all generated functions.
@@ -17,6 +17,9 @@ export interface DocumentationGenerator {
     /* Called for every generated tailwind utility definition.
      * The output string can be empty or otherwise has to contain the `{-|` and `-}` parts. */
     utilitiesDefinition: (name: string, declaration: RecognizedDeclaration) => string;
+    /* Called for groups of abstracted tailwind utility definitions.
+     * The output string can be empty or otherwise has to contian the `{-|` and `-}` parts. */
+    utilitiesParameterizedDefinition: (name: string, declaration: ParameterizedDeclaration) => string;
 
     /* Choose the order of definitions in the `exposing` clause for the breakpoints module.
      * `null` indicates that `exposing (..)` should be generated. */
@@ -35,6 +38,7 @@ export const noDocumentationGenerator: DocumentationGenerator = {
     utilitiesModuleDocs: _definedNames => null,
     utilitiesGlobalStyles: () => "",
     utilitiesDefinition: (_name, _declaration) => "",
+    utilitiesParameterizedDefinition: (_name, _declaration) => "",
 
     breakpointsExposing: _definedNames => null,
     breakpointsModuleDocs: _definedNames => null,
@@ -90,7 +94,7 @@ It only needs to be included once.
 
 -}`,
 
-    utilitiesDefinition: (name, declaration) => `
+    utilitiesDefinition: (_name, declaration) => `
 {-| ${declaration.originalRules.length > 1
             ? "This class combines the effects of following css declarations:"
             : "This class has the effect of following css declaration:"
@@ -99,6 +103,19 @@ It only needs to be included once.
 \`\`\`css
 ${declaration.originalRules.map(rule => rule.toString()).join("\n\n")}
 \`\`\`
+
+Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
+
+-}`,
+
+    utilitiesParameterizedDefinition: (_name, declaration) => `
+{-| This class has effects of css declarations similar to the following:
+
+\`\`\`css
+${replaceOriginalColorsWithPlaceholder(declaration.originalRules.map(rule => rule.toString()).join("\n\n"), declaration.originalColorsReplaced)}
+\`\`\`
+
+The \`<color>\` can be chosen with the first parameter.
 
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
@@ -165,4 +182,12 @@ CSS: \`@media (min-width: ${size}) { ... }\`
 Also see the [tailwind documentation](https://tailwindcss.com/docs/responsive-design)
 
 -}`,
+}
+
+
+function replaceOriginalColorsWithPlaceholder(rule: string, originalColorsReplaced: string[]) {
+    for (const replacedColor of originalColorsReplaced) {
+        rule = rule.replace(replacedColor, "<color>");
+    }
+    return rule;
 }

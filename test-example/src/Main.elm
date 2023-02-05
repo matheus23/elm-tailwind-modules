@@ -6,11 +6,12 @@ import Html.Styled as Html
 import Html.Styled.Attributes as Attr
 import Tailwind.Breakpoints as Breakpoints
 import Tailwind.Utilities as Tw
+import Tailwind.Theme as Tw
 
 
 main =
     Html.toUnstyled <|
-        Html.div [ Attr.css [ Tw.bg_gray_50 ] ]
+        Html.div [ Attr.css [ Tw.bg_color Tw.gray_50 ] ]
             [ -- This will give us the standard tailwind style-reset as well as the fonts
               Css.Global.global Tw.globalStyles
             , Html.div
@@ -32,15 +33,15 @@ main =
                             , Tw.px_5
                             , Tw.py_3
                             , Tw.border
-                            , Tw.border_transparent
+                            , Tw.border_color Tw.transparent
                             , Tw.text_base
                             , Tw.font_medium
                             , Tw.rounded_md
-                            , Tw.text_white
-                            , Tw.bg_indigo_600
+                            , Tw.text_color Tw.white
+                            , Tw.bg_color Tw.indigo_600
 
                             -- We can use hover styles via elm-css :)
-                            , Css.hover [ Tw.bg_indigo_700 ]
+                            , Css.hover [ Tw.bg_color Tw.indigo_700 ]
                             ]
                         , Attr.href "#"
                         ]

@@ -2,7 +2,40 @@
 
 ## Auto-abstract css utilities
 
-* [ ] Detect when css uses properties like theme colors
+* [ ] Auto-abstract colors
+  * [X] Detect when css uses properties like theme colors
+  * [X] Match the abstracted color out of the css property
+  * [X] Detect all color-parameterizable properties (maybe detect everything with color suffixes?)
+    * [X] List all colors for a tailwind config
+    * [X] Detect suffixes
+  * [X] Fix exposes with new config
+  * [X] Detect transparent colors (e.g. blue-500/95) (use theme.opacity)
+  * [X] `withOpacity : Theme.Opacity -> Theme.Color -> Theme.Color` helper
+  * [ ] Look at counterexamples & fix them
+    * [X] Detect color values in 'suspected to be parameterizable' definitions
+    * [X] Detect better where/when to replace values with abstract `color` var
+      * [X] Handle cases of computed opacity values (opacity replaced with 0)
+      * [X] Handle cases of color appearing mid-value (e.g. viaWithColor)
+    * [X] Handle colors without opacity variables correctly (e.g. caretWithColor)
+    * [X] Use `declaration.opacityVariableName`
+    * [X] Refactor: Remove `isParameterized` parameter
+    * [ ] Look through TODOs in the code
+  * [X] Generate & use opacity variants: Make `opacity_50` etc. use `Theme.Opacity` instead
+  * [X] ~~Handle naming option in CLI for camel case in isParameterizable in parser code~~ Turns out that has always been disabled. Removed the dead code path
+  * [X] Use a non-primitive elm type for colors (instead of String)
+  * [X] Get numbers on the size difference (88320 exposed values vs. 3812)
+  * [X] Figure out naming. (e.g. parameterized border vs. border property). Have a `WithColor` suffix
+  * [X] Think about custom documentation support.
+    * Just ended up adding a separate function
+  * [X] ~~Think about whether we want something like `type Color opacity` and `Color ()` or `Color Never`.
+        The idea being that some functions like `viaWithColor` or `fromWithColor` will always overwrite the opacity,
+        thus it doesn't make sense to pass opacity in.~~
+        Not worth it! Only 2 places in Utilities that override `withOpacity`.
+  * [X] Think about "Refactor Internal functions like `toProperty` in Theme" (see below)
+  * [ ] Publish
+  * [X] (optionally: Look at refactoring? E.g. detect & deduplicate outside of `code-generators/` files)
+  * [ ] Release new default-tailwind-modules with Tailwind v3
+  * [ ] Support new API format in https://html-to-elm.com/
 * [ ] Detect when css uses the same spacing values over and over
 
 ## General
@@ -65,3 +98,4 @@
 small things
 
 * [X] Remove double-iteration over rules in parser
+

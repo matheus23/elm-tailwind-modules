@@ -2,25 +2,23 @@ import {promises as fs} from "fs";
 import path from "path";
 import * as postcss from "postcss";
 import * as tailwindUtilityGeneration from "./code-generators/tailwind-utilities";
+import * as tailwindThemeGeneration from "./code-generators/tailwind-theme";
 import * as tailwindBreakpointsGeneration from "./code-generators/tailwind-breakpoints";
 import * as parser from "./parser";
 // @ts-ignore
 import tailwindcss from "tailwindcss";
 // @ts-ignore
 import resolveConfig from "tailwindcss/resolveConfig.js";
-import {LogFunction, NamingOptions} from "./types";
+import {LogFunction} from "./types";
 import * as documentation from "./docs";
 import chalk from "chalk";
 import {isArray, isEmpty} from "lodash";
 
 export const defaultTailwindConfig: any = {
+    content: ["intentionally.empty"],
     variants: [],
     safelist: [{pattern: /.*/, variants: []}]
 };
-
-const namingOptions: NamingOptions = {
-    nameStyle: "snake"
-}
 
 export const docs = documentation;
 
@@ -34,6 +32,7 @@ export interface RunConfiguration {
 }
 
 export interface RunResult {
+    themeModule: string,
     utilitiesModule: string,
     breakpointsModule: string,
     postcssResult: postcss.Result,
@@ -57,10 +56,13 @@ export async function run({
     logFunction = console.log,
 }: RunConfiguration): Promise<RunResult> {
     const tailwindConfig_ = {
-        ...tailwindConfig, safelist: tailwindConfig.safelist || [
+        ...tailwindConfig,
+        safelist: tailwindConfig.safelist || [
             {pattern: /.*/, variants: []}
-        ]
+        ],
+        content: tailwindConfig.content || ["intentionally.empty"],
     };
+    let themeModule: undefined | string;
     let utilitiesModule: undefined | string;
     let breakpointsModule: undefined | string;
 
@@ -70,6 +72,7 @@ export async function run({
         generateDocumentation,
         logFunction,
         modulesGeneratedHook: async generated => {
+            themeModule = generated.themeModule;
             utilitiesModule = generated.utilitiesModule;
             breakpointsModule = generated.breakpointsModule;
 
@@ -88,12 +91,12 @@ export async function run({
         afterTailwindPlugin
     ]).process(css, {from, to});
 
-    return {utilitiesModule, breakpointsModule, postcssResult};
+    return {themeModule, utilitiesModule, breakpointsModule, postcssResult};
 }
 
 
 export interface ModulesGeneratedHook {
-    (_: {utilitiesModule: string, breakpointsModule: string}): void;
+    (_: {utilitiesModule: string, themeModule: string, breakpointsModule: string}): void;
 }
 
 /**
@@ -117,10 +120,15 @@ export function asPostcssPlugin({moduleName, tailwindConfig, generateDocumentati
         async OnceExit(root: postcss.Root) {
             const docGen = resolveDocGen(generateDocumentation);
             const resolvedConfig = resolveConfig(tailwindConfig);
-            const blocksByClass = parser.groupDeclarationBlocksByClass(root, logFunction, namingOptions);
+            const resolvedColors = tailwindThemeGeneration.expandColors([], resolvedConfig.theme.colors);
+            const resolvedOpacities = tailwindThemeGeneration.expandOpacities(resolvedConfig.theme.opacity);
+            const blocksByClass = parser.groupDeclarationBlocksByClass(root, resolvedColors, logFunction);
+
             const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, docGen);
-            const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, namingOptions, docGen);
-            modulesGeneratedHook({utilitiesModule, breakpointsModule});
+            const themeModule = tailwindThemeGeneration.generateElmModule(moduleName + ".Theme", resolvedColors, resolvedOpacities);
+            const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, docGen);
+            
+            modulesGeneratedHook({utilitiesModule, breakpointsModule, themeModule});
         }
     }
 };
@@ -133,12 +141,13 @@ export async function writeGeneratedFiles({directory, moduleName, logFunction, g
     directory: string,
     moduleName: string,
     logFunction: LogFunction,
-    generated: {utilitiesModule: string, breakpointsModule: string}
+    generated: {utilitiesModule: string, breakpointsModule: string, themeModule: string}
 }): Promise<void> {
     const modulePath = path.join.apply(null, moduleName.split("."));
     logFunction([
         "Saved",
         " - " + chalk.blue(await writeFile(path.resolve(directory, `${modulePath}/Utilities.elm`), generated.utilitiesModule)),
+        " - " + chalk.blue(await writeFile(path.resolve(directory, `${modulePath}/Theme.elm`), generated.themeModule)),
         " - " + chalk.blue(await writeFile(path.resolve(directory, `${modulePath}/Breakpoints.elm`), generated.breakpointsModule)),
     ].join("\n"));
 }

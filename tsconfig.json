@@ -9,7 +9,7 @@
     "declarationDir": "./dist",
     "noImplicitAny": true,
     "outDir": "./dist",
-    "target": "es5"
+    "target": "esnext"
   },
   "include": [
     "src/**/*"

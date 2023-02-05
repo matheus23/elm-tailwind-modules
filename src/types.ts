@@ -7,6 +7,7 @@ export interface LogFunction {
 
 export interface GroupedDeclarations {
     recognized: Map<string, RecognizedDeclaration>,
+    colorParameterized: Map<string, ParameterizedDeclaration>,
     unrecognized: UnrecognizedDeclaration[],
     keyframes: Map<string, Keyframe[]>,
 }
@@ -149,7 +150,7 @@ Example values:
 */
 export interface RecognizedDeclaration {
     propertiesBySelector: PropertiesBySelector[],
-    originalRules: postcss.Rule[],
+    originalRules: (postcss.Rule | postcss.Container<postcss.ChildNode>)[],
     originalClassName: string,
 }
 
@@ -157,6 +158,19 @@ export interface PropertiesBySelector {
     subselectors: Subselector[],
     properties: CssProperty[],
 }
+
+export interface ParameterizedDeclaration {
+    propertiesBySelector: ParameterizedPropertiesBySelector[],
+    originalRules: (postcss.Rule | postcss.Container<postcss.ChildNode>)[],
+    originalColorsReplaced: string[],
+    originalClassName: string,
+}
+
+export interface ParameterizedPropertiesBySelector {
+    subselectors: Subselector[],
+    properties: (CssProperty | ParameterizedProperty)[],
+}
+
 
 export interface Subselector {
     mediaQuery: null | string,
@@ -190,6 +204,21 @@ export interface PseudoSubselectorRest {
 export interface CssProperty {
     prop: string,
     value: string,
+}
+
+export interface ParameterizedProperty {
+    prop: string,
+    valuePrefix: string,
+    valueSuffix: string,
+    opacity?: OpacityVariableName | OpacityLiteral
+}
+
+export interface OpacityVariableName {
+  variableName: string
+}
+
+export interface OpacityLiteral {
+  literal: string
 }
 
 

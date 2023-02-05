@@ -21,14 +21,8 @@ export function fixClass(cls: string): string {
     return cls;
 }
 
-export function toElmName(cls: string, options?: { prefix?: string, nameStyle: "camel" | "snake" }): string {
-    const opts = options || defaultOpts;
+export function toElmName(cls: string): string {
     var elm = cls;
-    // handle negative with prefix
-    if (opts.prefix) {
-        let re_neg_with_prefix = new RegExp(`(${opts.prefix})-([a-z])`);
-        elm = elm.replace(re_neg_with_prefix, "$1neg_$2");
-    }
     // This is faster than a general solution
     elm = elm.replace(/^2(x[ls].*$)/, "x$1");
     elm = elm.replace(/^3(x[ls].*$)/, "xx$1");
@@ -51,19 +45,6 @@ export function toElmName(cls: string, options?: { prefix?: string, nameStyle: "
     elm = elm.replace(/_nth_child\(.+\)/, "");
     elm = elm.replace(/_(last|first)_child/, "");
     // replace any other dots
-    if (opts.nameStyle === "camel") {
-        elm = elm.replace(/\./g, "Dot");
-    } else {
-        elm = elm.replace(/\./g, "_dot_");
-    }
-    // convert to camel case
-    if (opts.nameStyle === "camel") {
-        elm = elm.replace(/(_+\w)/g, (g) => g.replace(/_/g, "").toUpperCase());
-    }
+    elm = elm.replace(/\./g, "_dot_");
     return elm;
 }
-
-export const defaultOpts = {
-    prefix: "",
-    nameStyle: "snake",
-};

@@ -15,8 +15,10 @@ import {
     RecognizedDeclaration,
     Subselector,
     SubselectorRest,
-    UnrecognizedDeclaration
+    UnrecognizedDeclaration,
+    ParameterizedDeclaration
 } from "./types";
+import * as color from "./color";
 
 
 const cssWhatErrors = [
@@ -32,12 +34,13 @@ const cssWhatErrors = [
 
 export function groupDeclarationBlocksByClass(
     postCssRoot: postcss.Root,
+    resolvedColors: [string, string][],
     logFunction: LogFunction,
-    namingOptions: NamingOptions,
 ): GroupedDeclarations {
-    const recognized = new Map();
+    const recognized: Map<string, RecognizedDeclaration> = new Map();
+    const colorParameterized: Map<string, ParameterizedDeclaration> = new Map();
     const unrecognized: UnrecognizedDeclaration[] = [];
-    const keyframes = new Map();
+    const keyframes: Map<string, Keyframe[]> = new Map();
 
     const defaultRecognized = (originalClassName: string): RecognizedDeclaration => ({
         propertiesBySelector: [],
@@ -170,7 +173,7 @@ export function groupDeclarationBlocksByClass(
 
         parts.forEach((part, index) => {
             // create a valid elm identifier from the classname
-            const elmDeclName = toElmName(fixClass(part.class), namingOptions);
+            const elmDeclName = toElmName(fixClass(part.class));
 
             const subselector = subselectors[index];
 
@@ -197,7 +200,24 @@ export function groupDeclarationBlocksByClass(
         rule.remove();
     }
 
-    return { recognized, unrecognized, keyframes };
+    for (const [elmDeclName, declaration] of recognized) {
+        const parameterizedDeclaration = isParameterizable(elmDeclName, declaration, resolvedColors);
+
+        if (parameterizedDeclaration === false) {
+            continue;
+        }
+
+        recognized.delete(elmDeclName);
+
+        if (parameterizedDeclaration === null) {
+            continue;
+        }
+
+        const [name, value] = parameterizedDeclaration;
+        colorParameterized.set(name, value);
+    }
+
+    return { recognized, colorParameterized, unrecognized, keyframes };
 }
 
 function addToSelectorList(
@@ -306,4 +326,97 @@ function stripClassSelector(
         class: first.value,
         rest,
     };
+}
+
+function isParameterizable(declarationName: string, declaration: RecognizedDeclaration, resolvedColors: [string, string][]): false | null | [string, ParameterizedDeclaration] {
+    // If we don't sort by descending color name length, we have this edge-case:
+    // e.g. blue_50 & blue_500 both appear in the regex.
+    // bg_blue_500 matches with blue_50, but we want to match blue_500,
+    // so we need the longest possible match
+    const possibleColorNames = resolvedColors.map(([name, _]) => name).sort((a, b) => b.length - a.length);
+    const regex = new RegExp(String.raw`(:?.*)(?<colorName>${possibleColorNames.join('|')}).*$`)
+
+    const matches = declarationName.match(regex);
+
+    const colorName = matches?.groups?.colorName;
+
+    if (colorName == null) {
+        return false
+    }
+
+    // We don't want to parameterize the opacity-variants of declarations
+    // TODO maybe detect this in a different way. (E.g. capture the regex part after the color name?)
+    if (declarationName.includes("over")) {
+        return null
+    }
+
+    const colorByName: Record<string, string> = resolvedColors.reduce((acc, [name, color]) => Object.assign(acc, { [name]: color }), {});
+
+    const resolvedColor = colorByName[colorName];
+
+    if (resolvedColor == null) {
+        console.warn("Couldn't find a color with this name", colorName);
+    }
+
+    const parsedColor = color.parseColor(resolvedColor);
+    const parsedColorRegex = parsedColor != null ? color.colorDetectionRegex(parsedColor) : null;
+
+    const originalColorsReplaced: string[] = [];
+
+    const parameterizedDeclaration = {
+        ...declaration,
+        propertiesBySelector: declaration.propertiesBySelector.map(selector => ({
+            ...selector,
+            properties: selector.properties.map(property => {
+                // Look for resolvedColor
+                const matchResolved = property.value.match(resolvedColor)
+                if (matchResolved) {
+                    const matchStartIdx = matchResolved.index;
+                    const matchEndIdx = matchResolved.index + matchResolved[0].length;
+                    const valuePrefix = property.value.substring(0, matchStartIdx);
+                    const valueSuffix = property.value.substring(matchEndIdx);
+
+                    originalColorsReplaced.push(matchResolved[0]);
+                    return {
+                        prop: property.prop,
+                        valuePrefix,
+                        valueSuffix,
+                    }
+                }
+
+                // Look for parsedColorRegex
+                if (parsedColorRegex != null) {
+                    const matchParsed = property.value.match(parsedColorRegex)
+                    if (matchParsed) {
+                        const matchStartIdx = matchParsed.index;
+                        const matchEndIdx = matchParsed.index + matchParsed[0].length;
+                        const valuePrefix = property.value.substring(0, matchStartIdx);
+                        const valueSuffix = property.value.substring(matchEndIdx);
+
+                        const opacity = matchParsed?.groups?.varname != null
+                            ? { variableName: matchParsed.groups.varname }
+                            : matchParsed?.groups?.literal != null
+                                ? { literal: matchParsed.groups.literal }
+                                : undefined;
+
+                        originalColorsReplaced.push(matchParsed[0]);
+                        return {
+                            prop: property.prop,
+                            valuePrefix,
+                            valueSuffix,
+                            opacity,
+                        }
+                    }
+                }
+
+                return property
+            })
+        }))
+    };
+
+    if (originalColorsReplaced.length === 0) {
+        return false
+    }
+
+    return [`${matches[1]}color`, {...parameterizedDeclaration, originalColorsReplaced }];
 }

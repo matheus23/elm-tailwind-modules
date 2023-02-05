@@ -7,6 +7,8 @@ import {
     UnrecognizedDeclaration,
     PseudoSubselectorRest,
     Keyframe,
+    ParameterizedDeclaration,
+    ParameterizedProperty,
 } from "../types";
 import { DocumentationGenerator } from "../docs";
 
@@ -16,7 +18,7 @@ import { DocumentationGenerator } from "../docs";
 
 
 export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations, docs: DocumentationGenerator): string {
-    const sortedClasses = Array.from(blocksByClass.recognized.keys()).sort();
+    const sortedClasses = Array.from([...blocksByClass.recognized.keys(), ...blocksByClass.colorParameterized.keys()]).sort();
     const definedNames = ["globalStyles", ...sortedClasses];
 
     return [
@@ -24,6 +26,7 @@ export function generateElmModule(moduleName: string, blocksByClass: GroupedDecl
             moduleName,
             exposing: docs.utilitiesExposing(definedNames),
             imports: [
+                generate.singleLine("import Tailwind.Theme exposing (Color)"),
                 generate.singleLine("import Css"),
                 generate.singleLine("import Css.Animations"),
                 generate.singleLine("import Css.Global"),
@@ -33,9 +36,9 @@ export function generateElmModule(moduleName: string, blocksByClass: GroupedDecl
         }),
         elmUnrecognizedToFunctions(blocksByClass.unrecognized, docs),
         elmRecognizedToFunctions(blocksByClass.keyframes, blocksByClass.recognized, docs),
+        elmParameterizedToFunctions(blocksByClass.keyframes, blocksByClass.colorParameterized, docs),
     ].join("");
 }
-
 
 
 // PRIVATE INTERFACE
@@ -65,7 +68,11 @@ function convertUnrecognizeds(unrecognizeds: UnrecognizedDeclaration[]): generat
     );
 }
 
-function elmRecognizedToFunctions(keyframes: Map<string, Keyframe[]>, recognizedBlocksByClass: Map<string, RecognizedDeclaration>, docs: DocumentationGenerator): string {
+function elmRecognizedToFunctions(
+    keyframes: Map<string, Keyframe[]>,
+    recognizedBlocksByClass: Map<string, RecognizedDeclaration>,
+    docs: DocumentationGenerator,
+): string {
     let body = "";
     Array.from(recognizedBlocksByClass.keys()).sort().forEach(elmClassName => {
         body = body + elmRecognizedFunction(keyframes, elmClassName, recognizedBlocksByClass.get(elmClassName), docs);
@@ -73,19 +80,62 @@ function elmRecognizedToFunctions(keyframes: Map<string, Keyframe[]>, recognized
     return body;
 }
 
-function elmRecognizedFunction(keyframes: Map<string, Keyframe[]>, elmClassName: string, propertiesBlock: RecognizedDeclaration, docs: DocumentationGenerator): string {
+function elmParameterizedToFunctions(
+    keyframes: Map<string, Keyframe[]>,
+    recognizedBlocksByClass: Map<string, ParameterizedDeclaration>,
+    docs: DocumentationGenerator,
+): string {
+    let body = "";
+    Array.from(recognizedBlocksByClass.keys()).sort().forEach(elmClassName => {
+        body = body + elmParameterizedFunction(keyframes, elmClassName, recognizedBlocksByClass.get(elmClassName), docs);
+    });
+    return body;
+}
+
+function elmRecognizedFunction(
+    keyframes: Map<string, Keyframe[]>,
+    elmClassName: string,
+    propertiesBlock: RecognizedDeclaration,
+    docs: DocumentationGenerator,
+): string {
     return `
 ${docs.utilitiesDefinition(elmClassName, propertiesBlock)}
 ${elmClassName} : Css.Style
 ${elmClassName} =
-${convertDeclarationBlock(keyframes, propertiesBlock)({
+${convertDeclarationBlock(keyframes, {...propertiesBlock, originalColorsReplaced: [] })({
     indentation: 4,
     preindent: true,
 })}
 `;
 }
 
-function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty): generate.Indentable[] {
+function elmParameterizedFunction(
+    keyframes: Map<string, Keyframe[]>,
+    elmClassName: string,
+    propertiesBlock: ParameterizedDeclaration,
+    docs: DocumentationGenerator,
+): string {
+    return `
+${docs.utilitiesParameterizedDefinition(elmClassName, propertiesBlock)}
+${elmClassName} : Color -> Css.Style
+${elmClassName} color =
+${convertDeclarationBlock(keyframes, propertiesBlock)({
+    indentation: 4,
+    preindent: true,
+})}
+`;
+}
+function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty | ParameterizedProperty, cssVarNames: string[]): generate.Indentable[] {
+    if (cssVarNames.includes(declaration.prop)) {
+        // We intentionally drop e.g. "--tw-bg-opacity" properties.
+        // They'll get re-added in `Theme.internal.propertyWithColorEmbedded`, if the color doesn't have an opacity set.
+        return [];
+    }
+
+    if ("valuePrefix" in declaration) {
+        return [convertColorDeclaration(declaration)];
+    }
+
     if (declaration.prop.endsWith("animation") || declaration.prop.endsWith("animation-name")) {
         const animationName = Array.from(keyframes.keys()).find(name => declaration.value.indexOf(name) >= 0);
         if (animationName == null) {
@@ -109,6 +159,30 @@ function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: Css
 
 function convertBasicDeclaration(functionName: string, property: string, value: string): generate.Indentable {
     return generate.singleLine(`${functionName} ${generate.elmString(property)} ${generate.elmString(value)}`);
+}
+
+
+function convertColorDeclaration(property: ParameterizedProperty): generate.Indentable {
+    const propertyName = generate.elmString(property.prop);
+    const valuePrefix = generate.elmString(property.valuePrefix);
+    const valueSuffix = generate.elmString(property.valueSuffix);
+
+    const colorExpression = property.valuePrefix === "" && property.valueSuffix === ""
+        ? "c"
+        : `${valuePrefix} ++ c ++ ${valueSuffix}`;
+
+    if (property.opacity == null) {
+        return generate.singleLine(`Tailwind.Theme.internal.propertyWithColor ${propertyName} (\\c -> ${colorExpression}) Nothing color`)
+    } else if ("variableName" in property.opacity) {
+        const variableName = generate.elmString(property.opacity.variableName);
+        return generate.singleLine(`Tailwind.Theme.internal.propertyWithColor ${propertyName} (\\c -> ${colorExpression}) (Just ${variableName}) color`)
+    } else {
+        const literal = generate.elmString(property.opacity.literal);
+        return generate.elmFunctionCall(
+            `Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity ${literal}) color`,
+            generate.singleLine(`|> Tailwind.Theme.internal.propertyWithColor ${propertyName} (\\c -> ${colorExpression}) Nothing`)
+        );
+    }
 }
 
 function convertProperties(subselector: SubselectorRest, convertedProperties: generate.Indentable[]) {
@@ -189,37 +263,46 @@ function convertMediaQueryWrap(mediaQuery: string, functionName: string, propert
     ]
 }
 
-function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesBlock: RecognizedDeclaration): generate.Indentable {
-    const plainProperties = findPlainProperties(propertiesBlock).flatMap(d => convertDeclaration(keyframes, d));
-    const subselectors = propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
+function convertDeclarationBlock(keyframes: Map<string, Keyframe[]>, propertiesBlock: ParameterizedDeclaration): generate.Indentable {
+    const plainProperties = findPlainProperties(propertiesBlock);
+    const cssVarNames = findColorCssVarNames(plainProperties);
+    const plainPropertiesCode = plainProperties.flatMap(d => convertDeclaration(keyframes, d, cssVarNames));
+
+    const mediaQueriedPropertiesCode = propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
         subselectors.flatMap(subselector => {
             if (subselector.rest.type === "plain" && subselector.mediaQuery == null) {
                 // We've got these covered in "plainProperties"
                 return [];
             }
 
+            const cssVarNames = findColorCssVarNames(properties);
+
             return convertMediaQueryWrap(
                 subselector.mediaQuery,
                 `Css.Media.withMediaQuery`,
                 convertProperties(
                     subselector.rest,
-                    properties.flatMap(d => convertDeclaration(keyframes, d))
+                    properties.flatMap(d => convertDeclaration(keyframes, d, cssVarNames))
                 )
             );
         })
     );
 
-    if (plainProperties.length === 1 && subselectors.length === 0) {
-        return plainProperties[0];
+    return batchIfNeeded(plainPropertiesCode.concat(Array.from(mediaQueriedPropertiesCode).reverse()));
+}
+
+function batchIfNeeded(expressions: generate.Indentable[]): generate.Indentable {
+    if (expressions.length === 1) {
+        return expressions[0];
     }
 
     return generate.elmFunctionCall(
         `Css.batch`,
-        generate.elmList(plainProperties.concat(Array.from(subselectors).reverse()))
+        generate.elmList(expressions)
     );
 }
 
-function findPlainProperties(propertiesBlock: RecognizedDeclaration): CssProperty[] {
+function findPlainProperties(propertiesBlock: ParameterizedDeclaration): (CssProperty | ParameterizedProperty)[] {
     return propertiesBlock.propertiesBySelector.flatMap(({ subselectors, properties }) =>
         subselectors.flatMap(subselector => {
             if (subselector.rest.type === "plain" && subselector.mediaQuery == null) {
@@ -227,6 +310,14 @@ function findPlainProperties(propertiesBlock: RecognizedDeclaration): CssPropert
             }
             return [];
         })
+    );
+}
+
+function findColorCssVarNames(properties: (CssProperty | ParameterizedProperty)[]): string[] {
+    return properties.flatMap(property =>
+        "valuePrefix" in property && property.opacity != null && "variableName" in property.opacity
+            ? [property.opacity.variableName]
+            : []
     );
 }
 
