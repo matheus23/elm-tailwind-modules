@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.0
+
+* Auto-abstraction of colors from tailwind utilities
+  This means your tailwind files are likely *much* smaller.
+  To upgrade, import the new module `Tailwind.Theme` and transform utilities like `bg_blue_500` into calls of the form `bg_color blue_500`.
+
 ## 0.4.1
 
 * Relaxed tailwindcss `peerDependency` version bounds to include `^3.1.6`.

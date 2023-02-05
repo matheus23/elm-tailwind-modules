@@ -76,12 +76,14 @@
 <span style="color: #000000">$ npx elm-tailwind-modules --dir ./gen</span>
 <span style="color: #000000">Saved</span>
 <span style="color: #000000"> - gen/Tailwind/Utilities.elm</span>
+<span style="color: #000000"> - gen/Tailwind/Theme.elm</span>
 <span style="color: #000000"> - gen/Tailwind/Breakpoints.elm</span>
 <span style="color: #000000">$ elm install rtfeldman/elm-css</span>
 </code></pre>
 				<p>This will generate these files:</p>
 				<ul>
 					<li><a href="https://github.com/matheus23/elm-tailwind-modules/blob/master/docs/example/Tailwind/Utilities.elm"><code>gen/Tailwind/Utilities.elm</code></a></li>
+					<li><a href="https://github.com/matheus23/elm-tailwind-modules/blob/master/docs/example/Tailwind/Theme.elm"><code>gen/Tailwind/Theme.elm</code></a></li>
 					<li><a href="https://github.com/matheus23/elm-tailwind-modules/blob/master/docs/example/Tailwind/Breakpoints.elm"><code>gen/Tailwind/Breakpoints.elm</code></a></li>
 				</ul>
 				<a href="#use" id="use" style="color: inherit; text-decoration: none;">
@@ -94,10 +96,12 @@
 <span style="color: #AF00DB">import</span><span style="color: #000000"> Html</span><span style="color: #0000FF">.</span><span style="color: #000000">Styled</span><span style="color: #0000FF">.</span><span style="color: #000000">Attributes </span><span style="color: #AF00DB">as</span><span style="color: #000000"> Attr</span>
 <span style="color: #AF00DB">import</span><span style="color: #000000"> Tailwind</span><span style="color: #0000FF">.</span><span style="color: #000000">Breakpoints </span><span style="color: #AF00DB">as</span><span style="color: #000000"> Breakpoints</span>
 <span style="color: #AF00DB">import</span><span style="color: #000000"> Tailwind</span><span style="color: #0000FF">.</span><span style="color: #000000">Utilities </span><span style="color: #AF00DB">as</span><span style="color: #000000"> Tw</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> Tailwind</span><span style="color: #0000FF">.</span><span style="color: #000000">Theme </span><span style="color: #AF00DB">as</span><span style="color: #000000"> Tw</span>
+
 
 <span style="color: #795E26">main</span><span style="color: #000000"> </span><span style="color: #0000FF">=</span>
 <span style="color: #000000">    Html</span><span style="color: #0000FF">.</span><span style="color: #000000">toUnstyled &lt;|</span>
-<span style="color: #000000">        Html</span><span style="color: #0000FF">.</span><span style="color: #000000">div [ Attr</span><span style="color: #0000FF">.</span><span style="color: #000000">css [ Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">bg_gray_50 ] ]</span>
+<span style="color: #000000">        Html</span><span style="color: #0000FF">.</span><span style="color: #000000">div [ Attr</span><span style="color: #0000FF">.</span><span style="color: #000000">css [ Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">bg_color Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">gray_50 ] ]</span>
 <span style="color: #000000">            [ </span><span style="color: #008000">-- This will give us the standard tailwind style-reset as well as the fonts</span>
 <span style="color: #000000">              Css</span><span style="color: #0000FF">.</span><span style="color: #000000">Global</span><span style="color: #0000FF">.</span><span style="color: #000000">global Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">globalStyles</span>
 <span style="color: #000000">            , Html</span><span style="color: #0000FF">.</span><span style="color: #000000">div</span>
@@ -119,15 +123,15 @@
 <span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">px_5</span>
 <span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">py_3</span>
 <span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">border</span>
-<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">border_transparent</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">border_color Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">transparent</span>
 <span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">text_base</span>
 <span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">font_medium</span>
 <span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">rounded_md</span>
-<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">text_white</span>
-<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">bg_indigo_600</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">text_color Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">white</span>
+<span style="color: #000000">                            , Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">bg_color Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">indigo_600</span>
 
 <span style="color: #000000">                            </span><span style="color: #008000">-- We can use hover styles via elm-css :)</span>
-<span style="color: #000000">                            , Css</span><span style="color: #0000FF">.</span><span style="color: #000000">hover [ Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">bg_indigo_700 ]</span>
+<span style="color: #000000">                            , Css</span><span style="color: #0000FF">.</span><span style="color: #000000">hover [ Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">bg_color Tw</span><span style="color: #0000FF">.</span><span style="color: #000000">indigo_700 ]</span>
 <span style="color: #000000">                            ]</span>
 <span style="color: #000000">                        , Attr</span><span style="color: #0000FF">.</span><span style="color: #000000">href </span><span style="color: #A31515">&quot;#&quot;</span>
 <span style="color: #000000">                        ]</span>
@@ -138,7 +142,7 @@
 </code></pre>
 				<p>The result looks like this:</p>
 				<p><img src="https://raw.githubusercontent.com/matheus23/elm-tailwind-modules/master/test-example/result.png" alt="Screenshot"></p>
-				<p>(For a bigger example, see <a href="https://github.com/matheus23/elm-tailwind-modules/blob/master/test-example/src/Main.elm">test-example/src/Main.elm</a>.)</p>
+				<p>(For a bigger example, see <a href="https://github.com/matheus23/elm-tailwind-modules/blob/master/test-example/src/Main.elm">test-example/src/Main.elm</a> and related files.)</p>
 				<a href="#cli" id="cli" style="color: inherit; text-decoration: none;">
 					<h2>CLI</h2>
 				</a>
