@@ -25883,69 +25883,69 @@ z_auto =
     Css.property "z-index" "auto"
 
 
-accent_WithColor : Color -> Css.Style
-accent_WithColor color =
+accent_color : Color -> Css.Style
+accent_color color =
     Tailwind.Theme.internal.propertyWithColor "accent-color" (\c -> c) Nothing color
 
 
-bg_WithColor : Color -> Css.Style
-bg_WithColor color =
+bg_color : Color -> Css.Style
+bg_color color =
     Tailwind.Theme.internal.propertyWithColor "background-color" (\c -> c) (Just "--tw-bg-opacity") color
 
 
-border_WithColor : Color -> Css.Style
-border_WithColor color =
-    Tailwind.Theme.internal.propertyWithColor "border-color" (\c -> c) (Just "--tw-border-opacity") color
-
-
-border_b_WithColor : Color -> Css.Style
-border_b_WithColor color =
+border_b_color : Color -> Css.Style
+border_b_color color =
     Tailwind.Theme.internal.propertyWithColor "border-bottom-color" (\c -> c) (Just "--tw-border-opacity") color
 
 
-border_l_WithColor : Color -> Css.Style
-border_l_WithColor color =
+border_color : Color -> Css.Style
+border_color color =
+    Tailwind.Theme.internal.propertyWithColor "border-color" (\c -> c) (Just "--tw-border-opacity") color
+
+
+border_l_color : Color -> Css.Style
+border_l_color color =
     Tailwind.Theme.internal.propertyWithColor "border-left-color" (\c -> c) (Just "--tw-border-opacity") color
 
 
-border_r_WithColor : Color -> Css.Style
-border_r_WithColor color =
+border_r_color : Color -> Css.Style
+border_r_color color =
     Tailwind.Theme.internal.propertyWithColor "border-right-color" (\c -> c) (Just "--tw-border-opacity") color
 
 
-border_t_WithColor : Color -> Css.Style
-border_t_WithColor color =
+border_t_color : Color -> Css.Style
+border_t_color color =
     Tailwind.Theme.internal.propertyWithColor "border-top-color" (\c -> c) (Just "--tw-border-opacity") color
 
 
-border_x_WithColor : Color -> Css.Style
-border_x_WithColor color =
+border_x_color : Color -> Css.Style
+border_x_color color =
     Css.batch
         [ Tailwind.Theme.internal.propertyWithColor "border-left-color" (\c -> c) (Just "--tw-border-opacity") color
         , Tailwind.Theme.internal.propertyWithColor "border-right-color" (\c -> c) (Just "--tw-border-opacity") color
         ]
 
 
-border_y_WithColor : Color -> Css.Style
-border_y_WithColor color =
+border_y_color : Color -> Css.Style
+border_y_color color =
     Css.batch
         [ Tailwind.Theme.internal.propertyWithColor "border-top-color" (\c -> c) (Just "--tw-border-opacity") color
         , Tailwind.Theme.internal.propertyWithColor "border-bottom-color" (\c -> c) (Just "--tw-border-opacity") color
         ]
 
 
-caret_WithColor : Color -> Css.Style
-caret_WithColor color =
+caret_color : Color -> Css.Style
+caret_color color =
     Tailwind.Theme.internal.propertyWithColor "caret-color" (\c -> c) Nothing color
 
 
-decoration_WithColor : Color -> Css.Style
-decoration_WithColor color =
+decoration_color : Color -> Css.Style
+decoration_color color =
     Tailwind.Theme.internal.propertyWithColor "text-decoration-color" (\c -> c) Nothing color
 
 
-divide_WithColor : Color -> Css.Style
-divide_WithColor color =
+divide_color : Color -> Css.Style
+divide_color color =
     Css.Global.children
         [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
             [ Tailwind.Theme.internal.propertyWithColor "border-color" (\c -> c) (Just "--tw-divide-opacity") color
@@ -25953,13 +25953,13 @@ divide_WithColor color =
         ]
 
 
-fill_WithColor : Color -> Css.Style
-fill_WithColor color =
+fill_color : Color -> Css.Style
+fill_color color =
     Tailwind.Theme.internal.propertyWithColor "fill" (\c -> c) Nothing color
 
 
-from_WithColor : Color -> Css.Style
-from_WithColor color =
+from_color : Color -> Css.Style
+from_color color =
     Css.batch
         [ Tailwind.Theme.internal.propertyWithColor "--tw-gradient-from" (\c -> c) Nothing color
         , Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity "0") color
@@ -25968,53 +25968,53 @@ from_WithColor color =
         ]
 
 
-outline_WithColor : Color -> Css.Style
-outline_WithColor color =
+outline_color : Color -> Css.Style
+outline_color color =
     Tailwind.Theme.internal.propertyWithColor "outline-color" (\c -> c) Nothing color
 
 
-placeholder_WithColor : Color -> Css.Style
-placeholder_WithColor color =
+placeholder_color : Color -> Css.Style
+placeholder_color color =
     Css.pseudoElement "placeholder"
         [ Tailwind.Theme.internal.propertyWithColor "color" (\c -> c) (Just "--tw-placeholder-opacity") color
         ]
 
 
-ring_WithColor : Color -> Css.Style
-ring_WithColor color =
+ring_color : Color -> Css.Style
+ring_color color =
     Tailwind.Theme.internal.propertyWithColor "--tw-ring-color" (\c -> c) (Just "--tw-ring-opacity") color
 
 
-ring_offset_WithColor : Color -> Css.Style
-ring_offset_WithColor color =
+ring_offset_color : Color -> Css.Style
+ring_offset_color color =
     Tailwind.Theme.internal.propertyWithColor "--tw-ring-offset-color" (\c -> c) Nothing color
 
 
-shadow_WithColor : Color -> Css.Style
-shadow_WithColor color =
+shadow_color : Color -> Css.Style
+shadow_color color =
     Css.batch
         [ Tailwind.Theme.internal.propertyWithColor "--tw-shadow-color" (\c -> c) Nothing color
         , Css.property "--tw-shadow" "var(--tw-shadow-colored)"
         ]
 
 
-stroke_WithColor : Color -> Css.Style
-stroke_WithColor color =
+stroke_color : Color -> Css.Style
+stroke_color color =
     Tailwind.Theme.internal.propertyWithColor "stroke" (\c -> c) Nothing color
 
 
-text_WithColor : Color -> Css.Style
-text_WithColor color =
+text_color : Color -> Css.Style
+text_color color =
     Tailwind.Theme.internal.propertyWithColor "color" (\c -> c) (Just "--tw-text-opacity") color
 
 
-to_WithColor : Color -> Css.Style
-to_WithColor color =
+to_color : Color -> Css.Style
+to_color color =
     Tailwind.Theme.internal.propertyWithColor "--tw-gradient-to" (\c -> c) Nothing color
 
 
-via_WithColor : Color -> Css.Style
-via_WithColor color =
+via_color : Color -> Css.Style
+via_color color =
     Css.batch
         [ Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity "0") color
             |> Tailwind.Theme.internal.propertyWithColor "--tw-gradient-to" (\c -> c) Nothing

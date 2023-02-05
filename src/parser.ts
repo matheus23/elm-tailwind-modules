@@ -418,5 +418,5 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
         return false
     }
 
-    return [`${matches[1]}WithColor`, {...parameterizedDeclaration, originalColorsReplaced }];
+    return [`${matches[1]}color`, {...parameterizedDeclaration, originalColorsReplaced }];
 }

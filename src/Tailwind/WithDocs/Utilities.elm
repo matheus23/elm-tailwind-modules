@@ -1,8 +1,8 @@
 module Tailwind.WithDocs.Utilities exposing
     ( globalStyles
     , absolute
-    , accent_WithColor
     , accent_auto
+    , accent_color
     , align_baseline
     , align_bottom
     , align_middle
@@ -153,7 +153,6 @@ module Tailwind.WithDocs.Utilities exposing
     , basis_auto
     , basis_full
     , basis_px
-    , bg_WithColor
     , bg_auto
     , bg_blend_color
     , bg_blend_color_burn
@@ -177,6 +176,7 @@ module Tailwind.WithDocs.Utilities exposing
     , bg_clip_content
     , bg_clip_padding
     , bg_clip_text
+    , bg_color
     , bg_contain
     , bg_cover
     , bg_fixed
@@ -237,14 +237,14 @@ module Tailwind.WithDocs.Utilities exposing
     , border_2
     , border_4
     , border_8
-    , border_WithColor
     , border_b
     , border_b_0
     , border_b_2
     , border_b_4
     , border_b_8
-    , border_b_WithColor
+    , border_b_color
     , border_collapse
+    , border_color
     , border_dashed
     , border_dotted
     , border_double
@@ -254,7 +254,7 @@ module Tailwind.WithDocs.Utilities exposing
     , border_l_2
     , border_l_4
     , border_l_8
-    , border_l_WithColor
+    , border_l_color
     , border_none
     , border_opacity_0
     , border_opacity_10
@@ -276,7 +276,7 @@ module Tailwind.WithDocs.Utilities exposing
     , border_r_2
     , border_r_4
     , border_r_8
-    , border_r_WithColor
+    , border_r_color
     , border_separate
     , border_solid
     , border_spacing_0
@@ -389,19 +389,19 @@ module Tailwind.WithDocs.Utilities exposing
     , border_t_2
     , border_t_4
     , border_t_8
-    , border_t_WithColor
+    , border_t_color
     , border_x
     , border_x_0
     , border_x_2
     , border_x_4
     , border_x_8
-    , border_x_WithColor
+    , border_x_color
     , border_y
     , border_y_0
     , border_y_2
     , border_y_4
     , border_y_8
-    , border_y_WithColor
+    , border_y_color
     , bottom_0
     , bottom_0_dot_5
     , bottom_1
@@ -484,7 +484,7 @@ module Tailwind.WithDocs.Utilities exposing
     , brightness_90
     , brightness_95
     , capitalize
-    , caret_WithColor
+    , caret_color
     , clear_both
     , clear_left
     , clear_none
@@ -614,9 +614,9 @@ module Tailwind.WithDocs.Utilities exposing
     , decoration_2
     , decoration_4
     , decoration_8
-    , decoration_WithColor
     , decoration_auto
     , decoration_clone
+    , decoration_color
     , decoration_dashed
     , decoration_dotted
     , decoration_double
@@ -633,7 +633,7 @@ module Tailwind.WithDocs.Utilities exposing
     , delay_700
     , delay_75
     , diagonal_fractions
-    , divide_WithColor
+    , divide_color
     , divide_dashed
     , divide_dotted
     , divide_double
@@ -685,7 +685,7 @@ module Tailwind.WithDocs.Utilities exposing
     , ease_in_out
     , ease_linear
     , ease_out
-    , fill_WithColor
+    , fill_color
     , filter
     , filter_none
     , fixed
@@ -721,7 +721,7 @@ module Tailwind.WithDocs.Utilities exposing
     , font_semibold
     , font_serif
     , font_thin
-    , from_WithColor
+    , from_color
     , gap_0
     , gap_0_dot_5
     , gap_1
@@ -2653,7 +2653,7 @@ module Tailwind.WithDocs.Utilities exposing
     , outline_2
     , outline_4
     , outline_8
-    , outline_WithColor
+    , outline_color
     , outline_dashed
     , outline_dotted
     , outline_double
@@ -2811,7 +2811,7 @@ module Tailwind.WithDocs.Utilities exposing
     , place_self_end
     , place_self_start
     , place_self_stretch
-    , placeholder_WithColor
+    , placeholder_color
     , placeholder_opacity_0
     , placeholder_opacity_10
     , placeholder_opacity_100
@@ -3024,14 +3024,14 @@ module Tailwind.WithDocs.Utilities exposing
     , ring_2
     , ring_4
     , ring_8
-    , ring_WithColor
+    , ring_color
     , ring_inset
     , ring_offset_0
     , ring_offset_1
     , ring_offset_2
     , ring_offset_4
     , ring_offset_8
-    , ring_offset_WithColor
+    , ring_offset_color
     , ring_opacity_0
     , ring_opacity_10
     , ring_opacity_100
@@ -3702,7 +3702,7 @@ module Tailwind.WithDocs.Utilities exposing
     , sepia_0
     , shadow
     , shadow_2xl
-    , shadow_WithColor
+    , shadow_color
     , shadow_inner
     , shadow_lg
     , shadow_md
@@ -3815,7 +3815,7 @@ module Tailwind.WithDocs.Utilities exposing
     , stroke_0
     , stroke_1
     , stroke_2
-    , stroke_WithColor
+    , stroke_color
     , subpixel_antialiased
     , table
     , table_auto
@@ -3837,10 +3837,10 @@ module Tailwind.WithDocs.Utilities exposing
     , text_7xl
     , text_8xl
     , text_9xl
-    , text_WithColor
     , text_base
     , text_center
     , text_clip
+    , text_color
     , text_ellipsis
     , text_end
     , text_justify
@@ -3866,7 +3866,7 @@ module Tailwind.WithDocs.Utilities exposing
     , text_start
     , text_xl
     , text_xs
-    , to_WithColor
+    , to_color
     , top_0
     , top_0_dot_5
     , top_1
@@ -4030,7 +4030,7 @@ module Tailwind.WithDocs.Utilities exposing
     , underline_offset_8
     , underline_offset_auto
     , uppercase
-    , via_WithColor
+    , via_color
     , visible
     , w_0
     , w_0_dot_5
@@ -4131,8 +4131,8 @@ This module contains
 
 @docs globalStyles
 @docs absolute
-@docs accent_WithColor
 @docs accent_auto
+@docs accent_color
 @docs align_baseline
 @docs align_bottom
 @docs align_middle
@@ -4283,7 +4283,6 @@ This module contains
 @docs basis_auto
 @docs basis_full
 @docs basis_px
-@docs bg_WithColor
 @docs bg_auto
 @docs bg_blend_color
 @docs bg_blend_color_burn
@@ -4307,6 +4306,7 @@ This module contains
 @docs bg_clip_content
 @docs bg_clip_padding
 @docs bg_clip_text
+@docs bg_color
 @docs bg_contain
 @docs bg_cover
 @docs bg_fixed
@@ -4367,14 +4367,14 @@ This module contains
 @docs border_2
 @docs border_4
 @docs border_8
-@docs border_WithColor
 @docs border_b
 @docs border_b_0
 @docs border_b_2
 @docs border_b_4
 @docs border_b_8
-@docs border_b_WithColor
+@docs border_b_color
 @docs border_collapse
+@docs border_color
 @docs border_dashed
 @docs border_dotted
 @docs border_double
@@ -4384,7 +4384,7 @@ This module contains
 @docs border_l_2
 @docs border_l_4
 @docs border_l_8
-@docs border_l_WithColor
+@docs border_l_color
 @docs border_none
 @docs border_opacity_0
 @docs border_opacity_10
@@ -4406,7 +4406,7 @@ This module contains
 @docs border_r_2
 @docs border_r_4
 @docs border_r_8
-@docs border_r_WithColor
+@docs border_r_color
 @docs border_separate
 @docs border_solid
 @docs border_spacing_0
@@ -4519,19 +4519,19 @@ This module contains
 @docs border_t_2
 @docs border_t_4
 @docs border_t_8
-@docs border_t_WithColor
+@docs border_t_color
 @docs border_x
 @docs border_x_0
 @docs border_x_2
 @docs border_x_4
 @docs border_x_8
-@docs border_x_WithColor
+@docs border_x_color
 @docs border_y
 @docs border_y_0
 @docs border_y_2
 @docs border_y_4
 @docs border_y_8
-@docs border_y_WithColor
+@docs border_y_color
 @docs bottom_0
 @docs bottom_0_dot_5
 @docs bottom_1
@@ -4614,7 +4614,7 @@ This module contains
 @docs brightness_90
 @docs brightness_95
 @docs capitalize
-@docs caret_WithColor
+@docs caret_color
 @docs clear_both
 @docs clear_left
 @docs clear_none
@@ -4744,9 +4744,9 @@ This module contains
 @docs decoration_2
 @docs decoration_4
 @docs decoration_8
-@docs decoration_WithColor
 @docs decoration_auto
 @docs decoration_clone
+@docs decoration_color
 @docs decoration_dashed
 @docs decoration_dotted
 @docs decoration_double
@@ -4763,7 +4763,7 @@ This module contains
 @docs delay_700
 @docs delay_75
 @docs diagonal_fractions
-@docs divide_WithColor
+@docs divide_color
 @docs divide_dashed
 @docs divide_dotted
 @docs divide_double
@@ -4815,7 +4815,7 @@ This module contains
 @docs ease_in_out
 @docs ease_linear
 @docs ease_out
-@docs fill_WithColor
+@docs fill_color
 @docs filter
 @docs filter_none
 @docs fixed
@@ -4851,7 +4851,7 @@ This module contains
 @docs font_semibold
 @docs font_serif
 @docs font_thin
-@docs from_WithColor
+@docs from_color
 @docs gap_0
 @docs gap_0_dot_5
 @docs gap_1
@@ -6783,7 +6783,7 @@ This module contains
 @docs outline_2
 @docs outline_4
 @docs outline_8
-@docs outline_WithColor
+@docs outline_color
 @docs outline_dashed
 @docs outline_dotted
 @docs outline_double
@@ -6941,7 +6941,7 @@ This module contains
 @docs place_self_end
 @docs place_self_start
 @docs place_self_stretch
-@docs placeholder_WithColor
+@docs placeholder_color
 @docs placeholder_opacity_0
 @docs placeholder_opacity_10
 @docs placeholder_opacity_100
@@ -7154,14 +7154,14 @@ This module contains
 @docs ring_2
 @docs ring_4
 @docs ring_8
-@docs ring_WithColor
+@docs ring_color
 @docs ring_inset
 @docs ring_offset_0
 @docs ring_offset_1
 @docs ring_offset_2
 @docs ring_offset_4
 @docs ring_offset_8
-@docs ring_offset_WithColor
+@docs ring_offset_color
 @docs ring_opacity_0
 @docs ring_opacity_10
 @docs ring_opacity_100
@@ -7832,7 +7832,7 @@ This module contains
 @docs sepia_0
 @docs shadow
 @docs shadow_2xl
-@docs shadow_WithColor
+@docs shadow_color
 @docs shadow_inner
 @docs shadow_lg
 @docs shadow_md
@@ -7945,7 +7945,7 @@ This module contains
 @docs stroke_0
 @docs stroke_1
 @docs stroke_2
-@docs stroke_WithColor
+@docs stroke_color
 @docs subpixel_antialiased
 @docs table
 @docs table_auto
@@ -7967,10 +7967,10 @@ This module contains
 @docs text_7xl
 @docs text_8xl
 @docs text_9xl
-@docs text_WithColor
 @docs text_base
 @docs text_center
 @docs text_clip
+@docs text_color
 @docs text_ellipsis
 @docs text_end
 @docs text_justify
@@ -7996,7 +7996,7 @@ This module contains
 @docs text_start
 @docs text_xl
 @docs text_xs
-@docs to_WithColor
+@docs to_color
 @docs top_0
 @docs top_0_dot_5
 @docs top_1
@@ -8160,7 +8160,7 @@ This module contains
 @docs underline_offset_8
 @docs underline_offset_auto
 @docs uppercase
-@docs via_WithColor
+@docs via_color
 @docs visible
 @docs w_0
 @docs w_0_dot_5
@@ -51305,4 +51305,8 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 
 -}
 neg_space_y_3_dot_5 : Css.Style
-neg_space_y_3_dot
+neg_space_y_3_dot_5 =
+    Css.Global.children
+        [ Css.Global.selector ":not([hidden]) ~ :not([hidden])"
+            [ Css.property "--tw-space-y-reverse" "0"
+            , Css.property "margin-to
