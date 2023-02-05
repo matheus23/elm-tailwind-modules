@@ -112,10 +112,10 @@ Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs
 {-| This class has effects of css declarations similar to the following:
 
 \`\`\`css
-${declaration.originalRules.map(rule => rule.toString()).join("\n\n")}
+${replaceOriginalColorsWithPlaceholder(declaration.originalRules.map(rule => rule.toString()).join("\n\n"), declaration.originalColorsReplaced)}
 \`\`\`
 
-Except the color value inside can be replaced with any color value.
+The \`<color>\` can be chosen with the first parameter.
 
 Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
 
@@ -182,4 +182,12 @@ CSS: \`@media (min-width: ${size}) { ... }\`
 Also see the [tailwind documentation](https://tailwindcss.com/docs/responsive-design)
 
 -}`,
+}
+
+
+function replaceOriginalColorsWithPlaceholder(rule: string, originalColorsReplaced: string[]) {
+    for (const replacedColor of originalColorsReplaced) {
+        rule = rule.replace(replacedColor, "<color>");
+    }
+    return rule;
 }

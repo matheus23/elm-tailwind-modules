@@ -160,14 +160,15 @@ export interface PropertiesBySelector {
 }
 
 export interface ParameterizedDeclaration {
-  propertiesBySelector: ParameterizedPropertiesBySelector[],
-  originalRules: (postcss.Rule | postcss.Container<postcss.ChildNode>)[],
-  originalClassName: string,
+    propertiesBySelector: ParameterizedPropertiesBySelector[],
+    originalRules: (postcss.Rule | postcss.Container<postcss.ChildNode>)[],
+    originalColorsReplaced: string[],
+    originalClassName: string,
 }
 
 export interface ParameterizedPropertiesBySelector {
-  subselectors: Subselector[],
-  properties: (CssProperty | ParameterizedProperty)[],
+    subselectors: Subselector[],
+    properties: (CssProperty | ParameterizedProperty)[],
 }
 
 

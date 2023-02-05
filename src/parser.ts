@@ -361,7 +361,7 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
     const parsedColor = color.parseColor(resolvedColor);
     const parsedColorRegex = parsedColor != null ? color.colorDetectionRegex(parsedColor) : null;
 
-    let referencesColor = false;
+    const originalColorsReplaced: string[] = [];
 
     const parameterizedDeclaration = {
         ...declaration,
@@ -376,7 +376,7 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
                     const valuePrefix = property.value.substring(0, matchStartIdx);
                     const valueSuffix = property.value.substring(matchEndIdx);
 
-                    referencesColor = true;
+                    originalColorsReplaced.push(matchResolved[0]);
                     return {
                         prop: property.prop,
                         valuePrefix,
@@ -399,7 +399,7 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
                                 ? { literal: matchParsed.groups.literal }
                                 : undefined;
 
-                        referencesColor = true;
+                        originalColorsReplaced.push(matchParsed[0]);
                         return {
                             prop: property.prop,
                             valuePrefix,
@@ -414,9 +414,9 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
         }))
     };
 
-    if (!referencesColor) {
+    if (originalColorsReplaced.length === 0) {
         return false
     }
 
-    return [`${matches[1]}WithColor`, parameterizedDeclaration];
+    return [`${matches[1]}WithColor`, {...parameterizedDeclaration, originalColorsReplaced }];
 }

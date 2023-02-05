@@ -102,7 +102,7 @@ function elmRecognizedFunction(
 ${docs.utilitiesDefinition(elmClassName, propertiesBlock)}
 ${elmClassName} : Css.Style
 ${elmClassName} =
-${convertDeclarationBlock(keyframes, propertiesBlock)({
+${convertDeclarationBlock(keyframes, {...propertiesBlock, originalColorsReplaced: [] })({
     indentation: 4,
     preindent: true,
 })}
