@@ -1,6 +1,6 @@
 {
   "name": "elm-tailwind-modules",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "author": "Philipp Krüger",
   "description": "Turn your Tailwind CSS into Elm code using Elm-css, which purges using Elm's --optimize!",
   "repository": {
@@ -12,7 +12,7 @@
     "build:cli": "rollup -c cli.rollup.config.ts && chmod +x dist/cli.js",
     "build:lib": "rollup -c rollup.config.ts",
     "docs": "rimraf docs && typedoc src/index.ts --out docs && node dist/cli.js --dir docs/example/",
-    "test": "ava  --serial --timeout=2m",
+    "test": "ava --serial --timeout=2m",
     "test-all": "yarn test:clean && yarn test:elm-compile && yarn test",
     "test:clean": "rimraf test-example/src/Tailwind",
     "test:elm-compile": "ts-node test-example/test-run.ts && cd test-example && elm make src/Main.elm --output=/dev/null",
@@ -57,7 +57,7 @@
   },
   "peerDependencies": {
     "postcss": "^8.2.4",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2 || ^3.1.6"
   },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
