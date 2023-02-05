@@ -17,7 +17,6 @@
     "test:clean": "rimraf test-example/src/Tailwind",
     "test:elm-compile": "ts-node test-example/test-run.ts && cd test-example && elm make src/Main.elm --output=/dev/null",
     "test:node-only": "ts-node test-example/test-run.ts",
-    "test:parameterization": "ts-node test-parameterization/test-run.ts",
     "prepublishOnly": "yarn build && yarn test-all && yarn docs"
   },
   "license": "MIT",

@@ -1,6 +1,0 @@
-{
-    "exclude": [
-        "./src/Tailwind/**/*.elm",
-        "./src/Tailwind/*.elm"
-    ]
-}
