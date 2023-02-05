@@ -4,13 +4,16 @@ import { RecursiveKeyValuePair } from "tailwindcss/types/config";
 import { toElmName } from "../helpers";
 
 // TODO do not expose Opacity(..)?
-const hardcodedNames = ["Color", "Opacity(..)", "toProperty", "withOpacity", "arbitraryRgb", "arbitraryRgba", "arbitraryOpacityPct"];
+const hardcodedTypes = ["Color", "Opacity(..)"];
+const hardcodedNames = ["toProperty", "withOpacity", "arbitraryRgb", "arbitraryRgba", "arbitraryOpacityPct"];
 
 export function generateElmModule(moduleName: string, expandedColors: [string, string][], expandedOpacities: Record<string, string>): string {
+    const definedNames = [...hardcodedNames, ...( expandedColors.map((( [color, _] ) => color)) ), ...Object.keys(expandedOpacities)].sort();
+
     return [
         generate.elmModuleHeader({
             moduleName,
-            exposing: [...hardcodedNames, ...( expandedColors.map((( [color, _] ) => color)) ), ...Object.keys(expandedOpacities)],
+            exposing: [...hardcodedTypes, ...definedNames],
             imports: [
                 generate.singleLine("import Css"),
             ],
@@ -75,7 +78,6 @@ arbitraryRgba r g b alpha =
 arbitraryOpacityPct : Int -> Opacity
 arbitraryOpacityPct pct =
     Opacity (String.fromInt pct ++ "%")
-
 `
 
 }
@@ -85,7 +87,8 @@ function generateColors(expandedColors: [string, string][]) {
         const parsedColor = color.parseColor(colorValue);
 
         if (parsedColor == null) {
-            return `${colorName} : Color
+            return `
+${colorName} : Color
 ${colorName} =
     Keyword "${colorValue}"
 `;
@@ -98,20 +101,22 @@ ${colorName} =
             opacity = `(Opacity "${parsedColor.alpha}")`;
         }
 
-        return `${colorName} : Color
+        return `
+${colorName} : Color
 ${colorName} =
     Color "${parsedColor.mode}" "${r}" "${g}" "${b}" ${opacity}
 `;
-    }).join("\n\n");
+    }).join("\n");
 }
 
 function generateOpacities(opacities: Record<string, string>) {
     return Object.entries(opacities).map(([opacityName, opacityValue]) => {
-        return `${opacityName} : Opacity
+        return `
+${opacityName} : Opacity
 ${opacityName} =
     Opacity "${opacityValue}"
 `;
-    }).join("\n\n");
+    }).join("\n");
 }
 
 export function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair): [string, string][] {
