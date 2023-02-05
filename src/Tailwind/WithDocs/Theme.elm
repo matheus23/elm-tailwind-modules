@@ -262,20 +262,23 @@ type Opacity
 
 
 internal =
-    { -- propertyWithColorEmbedded : String -> (String -> String) -> String -> Color -> Css.Style
-      propertyWithColorEmbedded =
-        \property embedColor variableName color ->
+    -- propertyWithColor : String -> (String -> String) -> Maybe String -> Color -> Css.Style
+    { propertyWithColor =
+        \property embedColor opacityVarName color ->
             case color of
                 Color mode r g b opacity ->
-                    case opacity of
-                        Opacity op ->
+                    case ( opacity, opacityVarName ) of
+                        ( Opacity op, _ ) ->
                             Css.property property (embedColor (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / " ++ op ++ ")"))
 
-                        ViaVariable ->
+                        ( ViaVariable, Just varName ) ->
                             Css.batch
-                                [ Css.property variableName "1"
-                                , Css.property property (embedColor (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ variableName ++ "))"))
+                                [ Css.property varName "1"
+                                , Css.property property (embedColor (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ varName ++ "))"))
                                 ]
+
+                        ( ViaVariable, Nothing ) ->
+                            Css.property property (embedColor (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / 1.0)"))
 
                 Keyword keyword ->
                     Css.property property keyword

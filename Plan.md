@@ -31,7 +31,7 @@
         The idea being that some functions like `viaWithColor` or `fromWithColor` will always overwrite the opacity,
         thus it doesn't make sense to pass opacity in.~~
         Not worth it! Only 2 places in Utilities that override `withOpacity`.
-  * [ ] Think about "Refactor Internal functions like `toProperty` in Theme" (see below)
+  * [X] Think about "Refactor Internal functions like `toProperty` in Theme" (see below)
   * [ ] Publish
   * [X] (optionally: Look at refactoring? E.g. detect & deduplicate outside of `code-generators/` files)
   * [ ] Release new default-tailwind-modules with Tailwind v3
@@ -99,16 +99,3 @@ small things
 
 * [X] Remove double-iteration over rules in parser
 
-
-
-## Refactor Internal functions like `toProperty` in Theme
-
-Idea:
-```elm
-
-internal =
-    { toProperty = \... -> ...
-    , toPropertyWithVariable = \... ->
-    , toPropertyWithOpacity = \ ... -> ...}
-
-```
