@@ -6,10 +6,10 @@ import * as tailwindThemeGeneration from "./code-generators/tailwind-theme";
 import * as tailwindBreakpointsGeneration from "./code-generators/tailwind-breakpoints";
 import * as parser from "./parser";
 // @ts-ignore
-import tailwindcss, { Config } from "tailwindcss";
+import tailwindcss from "tailwindcss";
 // @ts-ignore
 import resolveConfig from "tailwindcss/resolveConfig.js";
-import {LogFunction, NamingOptions} from "./types";
+import {LogFunction} from "./types";
 import * as documentation from "./docs";
 import chalk from "chalk";
 import {isArray, isEmpty} from "lodash";
@@ -32,6 +32,7 @@ export interface RunConfiguration {
 }
 
 export interface RunResult {
+    themeModule: string,
     utilitiesModule: string,
     breakpointsModule: string,
     postcssResult: postcss.Result,
@@ -61,6 +62,7 @@ export async function run({
         ],
         content: tailwindConfig.content || ["intentionally.empty"],
     };
+    let themeModule: undefined | string;
     let utilitiesModule: undefined | string;
     let breakpointsModule: undefined | string;
 
@@ -70,6 +72,7 @@ export async function run({
         generateDocumentation,
         logFunction,
         modulesGeneratedHook: async generated => {
+            themeModule = generated.themeModule;
             utilitiesModule = generated.utilitiesModule;
             breakpointsModule = generated.breakpointsModule;
 
@@ -88,7 +91,7 @@ export async function run({
         afterTailwindPlugin
     ]).process(css, {from, to});
 
-    return {utilitiesModule, breakpointsModule, postcssResult};
+    return {themeModule, utilitiesModule, breakpointsModule, postcssResult};
 }
 
 

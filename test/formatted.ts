@@ -11,22 +11,21 @@ import path from "path";
 
 
 test("output is formatted according to elm-format", async t => {
-    const {utilitiesModule, breakpointsModule} = await elmTailwindModules.run({
-        directory: null,
+    const {themeModule, utilitiesModule, breakpointsModule} = await elmTailwindModules.run({
         moduleName: "Tailwind.Basic",
         postcssPlugins: [],
         tailwindConfig,
         logFunction: t.log,
     });
 
+    await assertFormatted(t, themeModule);
     await assertFormatted(t, breakpointsModule);
     await assertFormatted(t, utilitiesModule);
 });
 
 
 test("output with documentation is formatted according to elm-format", async t => {
-    const {utilitiesModule, breakpointsModule} = await elmTailwindModules.run({
-        directory: null,
+    const {themeModule, utilitiesModule, breakpointsModule} = await elmTailwindModules.run({
         moduleName: "Tailwind.Basic",
         postcssPlugins: [],
         tailwindConfig,
@@ -34,6 +33,7 @@ test("output with documentation is formatted according to elm-format", async t =
         logFunction: t.log,
     });
 
+    await assertFormatted(t, themeModule);
     await assertFormatted(t, breakpointsModule);
     await assertFormatted(t, utilitiesModule);
 });
@@ -48,6 +48,9 @@ async function assertFormatted(t: ExecutionContext, file: string) {
 }
 
 async function elmFormat(fileContents: string): Promise<string> {
+    if (fileContents == null) {
+        throw new Error(`Can't run elm-format: No file passed (fileContents is ${fileContents})`)
+    }
     const output = await execa("./node_modules/.bin/elm-format", ["--stdin"], {
         input: fileContents,
         timeout: 10_000_000,
