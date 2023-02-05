@@ -20,13 +20,13 @@
     * [X] Use `declaration.opacityVariableName`
     * [X] Refactor: Remove `isParameterized` parameter
     * [ ] Look through TODOs in the code
-  * [ ] Generate & use opacity variants: Make `opacity_50` etc. use `Theme.Opacity` instead
-  * [X] Handle naming option in CLI for camel case in isParameterizable in parser code
-    * [ ] Test it!
+  * [X] Generate & use opacity variants: Make `opacity_50` etc. use `Theme.Opacity` instead
+  * [X] ~~Handle naming option in CLI for camel case in isParameterizable in parser code~~ Turns out that has always been disabled. Removed the dead code path
   * [X] Use a non-primitive elm type for colors (instead of String)
   * [X] Get numbers on the size difference (88320 exposed values vs. 3812)
   * [X] Figure out naming. (e.g. parameterized border vs. border property). Have a `WithColor` suffix
-  * [ ] Think about custom documentation support
+  * [X] Think about custom documentation support.
+    * Just ended up adding a separate function
   * [X] ~~Think about whether we want something like `type Color opacity` and `Color ()` or `Color Never`.
         The idea being that some functions like `viaWithColor` or `fromWithColor` will always overwrite the opacity,
         thus it doesn't make sense to pass opacity in.~~
@@ -100,130 +100,6 @@ small things
 * [X] Remove double-iteration over rules in parser
 
 
-## Counterexamples
-
-- Need to detect color properties without "color" suffixes ("stroke", "fill", "--tw-gradient-from")
-- Need to detect parameterizable declarations other than using color name suffixes
-- Need to have a `toProperty` function for properties that don't have an opacity
-
-
-```elm
-
-{-| This class has the effect of following css declaration:
-
-.stroke-rose-900 {
-    stroke: #881337
-}
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-strokeWithColor : Color -> Css.Style
-strokeWithColor color =
-    Css.property "stroke" "#881337"
-
-
-{-| This class has the effect of following css declaration:
-
-.fill-rose-900 {
-    fill: #881337
-}
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-fillWithColor : Color -> Css.Style
-fillWithColor color =
-    Css.property "fill" "#881337"
-
-
-{-| This class has the effect of following css declaration:
-
-.from-rose-900 {
-    --tw-gradient-from: #881337;
-    --tw-gradient-to: rgb(136 19 55 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
-}
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-fromWithColor : Color -> Css.Style
-fromWithColor color =
-    Css.batch
-        [ Css.property "--tw-gradient-from" "#881337"
-        , Css.property "--tw-gradient-to" "rgb(136 19 55 / 0)"
-        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
-        ]
-
-{-| This class has the effect of following css declaration:
-
-.via-rose-900 {
-    --tw-gradient-to: rgb(136 19 55 / 0);
-    --tw-gradient-stops: var(--tw-gradient-from), #881337, var(--tw-gradient-to)
-}
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-viaWithColor : Color -> Css.Style
-viaWithColor color =
-    Css.batch
-        [ Css.property "--tw-gradient-to" "rgb(136 19 55 / 0)"
-        , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), #881337, var(--tw-gradient-to)"
-        ]
-
-```
-
-
-Colors without opacity variables:
-
-```elm
-{-| This class has the effect of following css declaration:
-
-.caret-rose-900 {
-    caret-color: #881337
-}
-
-Make sure to check out the [tailwind documentation](https://tailwindcss.com/docs)!
-
--}
-caretWithColor : Color -> Css.Style
-caretWithColor color =
-    Tailwind.Theme.toProperty "caret-color" "" color
-```
-
-## Abstraction out color ideas
-
-```elm
-
-toProperty : String -> (String -> String) -> String -> Color -> Css.Style
-toProperty propertyName colorEmbeddedInValue variableName color =
-    case color of
-        Color mode r g b opacity ->
-            case opacity of
-                Opacity op ->
-                    Css.property propertyName (colorEmbeddedInValue (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / " ++ op ++ ")"))
-
-                ViaVariable ->
-                    Css.batch
-                        [ Css.property variableName "1"
-                        , Css.property propertyName (colorEmbeddedInValue (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ variableName ++ "))"))
-                        ]
-
-        Keyword keyword ->
-            Css.property propertyName keyword
-
-
-viaWithColor : Color -> Css.Style
-viaWithColor color =
-    Css.batch
-        [ Css.property "--tw-gradient-to" "rgb(136 19 55 / 0)"
-        , toProperty "--tw-gradient-stops" (\color -> "var(--tw-gradient-from), " ++ color ++ ", var(--tw-gradient-to)") "" color
-        ]
-
-```
-
 
 ## Refactor Internal functions like `toProperty` in Theme
 
@@ -233,6 +109,6 @@ Idea:
 internal =
     { toProperty = \... -> ...
     , toPropertyWithVariable = \... ->
-    , toPropertyWithOpacity = \ .. .-> ...}
+    , toPropertyWithOpacity = \ ... -> ...}
 
 ```

@@ -24,7 +24,8 @@ export function generateElmModule(
             .entries(resolvedConfig.theme.screens)
             .map(([screen, size]: [TailwindScreen, string]) =>
                 convertConfigToBreakpoint(screen, size)
-            );
+            )
+            .sort((a, b) => a.name < b.name ? -1 : 1);
 
     return [
         elmHeader(moduleName, breakpoints.map(b => b.name), docs),

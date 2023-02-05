@@ -1,5 +1,6 @@
 module Tailwind.Utilities exposing
-    ( absolute
+    ( globalStyles
+    , absolute
     , accent_WithColor
     , accent_auto
     , align_baseline
@@ -878,7 +879,6 @@ module Tailwind.Utilities exposing
     , gap_y_9
     , gap_y_96
     , gap_y_px
-    , globalStyles
     , grayscale
     , grayscale_0
     , grid
@@ -8410,11 +8410,11 @@ This module contains
 
 -}
 
-import Tailwind.Theme exposing (Color)
 import Css
 import Css.Animations
 import Css.Global
 import Css.Media
+import Tailwind.Theme exposing (Color)
 
 
 {-| This contains tailwind's style reset.

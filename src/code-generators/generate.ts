@@ -79,9 +79,13 @@ export interface HeaderOptions {
 }
 
 export const elmModuleHeader = (header: HeaderOptions): string => {
+    const imports = header.imports
+        .map(i => i({ indentation: 0, preindent: false }))
+        .sort()
+        .join("\n");
     return `module ${header.moduleName}${elmExposing(header.exposing)({ indentation: 0, preindent: false })}
 ${header.moduleDocs == null ? "" : header.moduleDocs}
-${header.imports.map(i => i({ indentation: 0, preindent: false })).join("\n")}
+${imports}
 `;
 }
 
@@ -92,7 +96,7 @@ function elmExposing(exposing: string[] | null): Indentable {
 
     return elmFunctionCall(
         " exposing",
-        elmTuple(exposing.sort().map(singleLine))
+        elmTuple(exposing.map(singleLine))
     );
 }
 

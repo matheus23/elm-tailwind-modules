@@ -6,11 +6,11 @@ import { toElmName } from "../helpers";
 // TODO do not expose Opacity(..)?
 const hardcodedNames = ["Color", "Opacity(..)", "toProperty", "withOpacity", "arbitraryRgb", "arbitraryRgba", "arbitraryOpacityPct"];
 
-export function generateElmModule(moduleName: string, expandedColors: [string, string][]): string {
+export function generateElmModule(moduleName: string, expandedColors: [string, string][], expandedOpacities: Record<string, string>): string {
     return [
         generate.elmModuleHeader({
             moduleName,
-            exposing: [...hardcodedNames, ...( expandedColors.map((( [color, _] ) => color)) )],
+            exposing: [...hardcodedNames, ...( expandedColors.map((( [color, _] ) => color)) ), ...Object.keys(expandedOpacities)],
             imports: [
                 generate.singleLine("import Css"),
             ],
@@ -18,6 +18,7 @@ export function generateElmModule(moduleName: string, expandedColors: [string, s
         }),
         colorType(),
         generateColors(expandedColors),
+        generateOpacities(expandedOpacities),
     ].join("\n");
 }
 
@@ -104,6 +105,15 @@ ${colorName} =
     }).join("\n\n");
 }
 
+function generateOpacities(opacities: Record<string, string>) {
+    return Object.entries(opacities).map(([opacityName, opacityValue]) => {
+        return `${opacityName} : Opacity
+${opacityName} =
+    Opacity "${opacityValue}"
+`;
+    }).join("\n\n");
+}
+
 export function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair): [string, string][] {
     return Object.entries(colors).flatMap(([key, value]) => {
         if (typeof value === 'string') {
@@ -114,4 +124,10 @@ export function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair)
     })
 }
 
-// TODO export function expandOpacities()
+export function expandOpacities(opacities: Record<string, string>): Record<string, string> {
+    const expanded: Record<string, string> = {};
+    for (const [suffix, value] of Object.entries(opacities)) {
+        expanded[`opacity${suffix}`] = value;
+    }
+    return expanded;
+}

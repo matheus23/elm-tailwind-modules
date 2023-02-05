@@ -49,9 +49,9 @@ order of declarations in the generated css, which we don't have.
 
 ### Breakpoints
 
-@docs sm
-@docs md
 @docs lg
+@docs md
+@docs sm
 @docs xl
 @docs xxl
 
@@ -63,16 +63,16 @@ import Css
 import Css.Media
 
 
-{-| Media query breakpoint for minimum width 640px
+{-| Media query breakpoint for minimum width 1024px
 
-CSS: `@media (min-width: 640px) { ... }`
+CSS: `@media (min-width: 1024px) { ... }`
 
 Also see the [tailwind documentation](https://tailwindcss.com/docs/responsive-design)
 
 -}
-sm : List Css.Style -> Css.Style
-sm =
-    Css.Media.withMediaQuery [ "(min-width: 640px)" ]
+lg : List Css.Style -> Css.Style
+lg =
+    Css.Media.withMediaQuery [ "(min-width: 1024px)" ]
 
 
 {-| Media query breakpoint for minimum width 768px
@@ -87,16 +87,16 @@ md =
     Css.Media.withMediaQuery [ "(min-width: 768px)" ]
 
 
-{-| Media query breakpoint for minimum width 1024px
+{-| Media query breakpoint for minimum width 640px
 
-CSS: `@media (min-width: 1024px) { ... }`
+CSS: `@media (min-width: 640px) { ... }`
 
 Also see the [tailwind documentation](https://tailwindcss.com/docs/responsive-design)
 
 -}
-lg : List Css.Style -> Css.Style
-lg =
-    Css.Media.withMediaQuery [ "(min-width: 1024px)" ]
+sm : List Css.Style -> Css.Style
+sm =
+    Css.Media.withMediaQuery [ "(min-width: 640px)" ]
 
 
 {-| Media query breakpoint for minimum width 1280px
