@@ -12,6 +12,7 @@ import path from "path";
 
 test("output is formatted according to elm-format", async t => {
     const {themeModule, utilitiesModule, breakpointsModule} = await elmTailwindModules.run({
+        directory: null,
         moduleName: "Tailwind.Basic",
         postcssPlugins: [],
         tailwindConfig,
@@ -26,6 +27,7 @@ test("output is formatted according to elm-format", async t => {
 
 test("output with documentation is formatted according to elm-format", async t => {
     const {themeModule, utilitiesModule, breakpointsModule} = await elmTailwindModules.run({
+        directory: null,
         moduleName: "Tailwind.Basic",
         postcssPlugins: [],
         tailwindConfig,

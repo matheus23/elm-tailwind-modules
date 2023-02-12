@@ -2,43 +2,85 @@ import * as generate from "./generate";
 import * as color from "../color";
 import { RecursiveKeyValuePair } from "tailwindcss/types/config";
 import { toElmName } from "../helpers";
+import { DocumentationGenerator, themeModuleDocumentation } from "../docs";
 
-// TODO do not expose Opacity(..)?
-const hardcodedTypes = ["Color", "Opacity(..)"];
-const hardcodedNames = ["internal", "withOpacity", "arbitraryRgb", "arbitraryRgba", "arbitraryOpacityPct"];
-
-export function generateElmModule(moduleName: string, expandedColors: [string, string][], expandedOpacities: Record<string, string>): string {
-    const definedNames = [...hardcodedNames, ...( expandedColors.map((( [color, _] ) => color)) ), ...Object.keys(expandedOpacities)].sort();
+export function generateElmModule(
+    moduleName: string,
+    expandedColors: [string, string][],
+    expandedOpacities: Record<string, string>,
+    docs: DocumentationGenerator
+): string {
+    const definedColors = expandedColors.map((( [color, _] ) => color));
+    const definedOpacities = Object.keys(expandedOpacities);
 
     return [
         generate.elmModuleHeader({
             moduleName,
-            exposing: [...hardcodedTypes, ...definedNames],
+            exposing: [
+                "Color",
+                ...definedColors,
+                // TODO do not expose Opacity(..)?
+                "Opacity(..)",
+                "withOpacity",
+                ...definedOpacities,
+                "arbitraryRgb",
+                "arbitraryRgba",
+                "arbitraryOpacityPct",
+                "internal"
+            ],
             imports: [
                 generate.singleLine("import Css"),
             ],
-            moduleDocs: ""
+            moduleDocs: themeModuleDocumentation(definedColors, definedOpacities),
         }),
         colorType(),
-        generateColors(expandedColors),
-        generateOpacities(expandedOpacities),
-    ].join("\n");
+        generateColors(expandedColors, docs),
+        generateOpacities(expandedOpacities, docs),
+    ].join("");
 }
 
 function colorType() {
     return `
+
+{-| The type for tailwind colors.
+
+You should never need to construct values of this type manually.
+If you find the need to do so, use \`arbitraryRgb\` or similar functions instead.
+
+Values of this type can be found in this module.
+
+They can be used with tailwind utility functions like \`bg_color\`.
+
+-}
 type Color
     = Color String String String String Opacity
     | Keyword String
 
 
+{-| The type for tailwind opacities.
+
+You should never construct values of this type manually.
+If you find the need to do so, use \`arbitraryOpacityPct\` instead.
+
+Values of this type can be found in this module.
+
+They can be used to modify the default opacities associated with colors
+using the \`withOpacity\` function.
+
+-}
 type Opacity
     = Opacity String
     | ViaVariable
 
 
+{-| These are internal functions used by elm-tailwind-modules to generate the
+tailwind utilities in \`Utilities.elm\`.
+
+You should never need to use them.
+
+-}
+internal : { propertyWithColor : String -> (String -> String) -> Maybe String -> Color -> Css.Style }
 internal =
-    -- propertyWithColor : String -> (String -> String) -> Maybe String -> Color -> Css.Style
     { propertyWithColor =
         \\property embedColor opacityVarName color ->
             case color of
@@ -61,6 +103,8 @@ internal =
     }
 
 
+{-| Attach an opacity to a color.
+-}
 withOpacity : Opacity -> Color -> Color
 withOpacity opacity color =
     case color of
@@ -71,16 +115,24 @@ withOpacity opacity color =
             Color mode r g b opacity
 
 
+{-| Construct a Color value from red, green, and blue values (each between 0 and 255).
+-}
 arbitraryRgb : Int -> Int -> Int -> Color
 arbitraryRgb r g b =
     Color "rgb" (String.fromInt r) (String.fromInt g) (String.fromInt b) ViaVariable
 
 
+{-| Construct a Color value from red, green, and blue values (each between 0 and 255)
+and an opacity value between 0 and 1.
+-}
 arbitraryRgba : Int -> Int -> Int -> Float -> Color
 arbitraryRgba r g b alpha =
     Color "rgba" (String.fromInt r) (String.fromInt g) (String.fromInt b) (Opacity (String.fromFloat alpha))
 
 
+{-| Construct an Opacity value from a given percentage (between 0 and 100),
+where 0 means transparent and 100 means opaque.
+-}
 arbitraryOpacityPct : Int -> Opacity
 arbitraryOpacityPct pct =
     Opacity (String.fromInt pct ++ "%")
@@ -88,47 +140,50 @@ arbitraryOpacityPct pct =
 
 }
 
-function generateColors(expandedColors: [string, string][]) {
+function generateColors(expandedColors: [string, string][], docs: DocumentationGenerator) {
     return expandedColors.map(([colorName, colorValue]) => {
-        const parsedColor = color.parseColor(colorValue);
+        const elmValue = (() => {
+            const parsedColor = color.parseColor(colorValue);
 
-        if (parsedColor == null) {
-            return `
-${colorName} : Color
-${colorName} =
-    Keyword "${colorValue}"
-`;
-        }
+            if (parsedColor == null) {
+                return `Keyword "${colorValue}"`;
+            }
 
-        const [r, g, b] = parsedColor.color;
+            const [r, g, b] = parsedColor.color;
 
-        let opacity = "ViaVariable";
-        if (parsedColor.alpha != null) {
-            opacity = `(Opacity "${parsedColor.alpha}")`;
-        }
+            let opacity = "ViaVariable";
+            if (parsedColor.alpha != null) {
+                opacity = `(Opacity "${parsedColor.alpha}")`;
+            }
+
+            return `Color "${parsedColor.mode}" "${r}" "${g}" "${b}" ${opacity}`;
+        })();
 
         return `
+${docs.themeColorDefinition(colorName, colorValue)}
 ${colorName} : Color
 ${colorName} =
-    Color "${parsedColor.mode}" "${r}" "${g}" "${b}" ${opacity}
+    ${elmValue}
 `;
-    }).join("\n");
+    }).join("");
 }
 
-function generateOpacities(opacities: Record<string, string>) {
+function generateOpacities(opacities: Record<string, string>, docs: DocumentationGenerator) {
     return Object.entries(opacities).map(([opacityName, opacityValue]) => {
         return `
+${docs.themeOpacityDefinition(opacityName, opacityValue)}
 ${opacityName} : Opacity
 ${opacityName} =
     Opacity "${opacityValue}"
 `;
-    }).join("\n");
+    }).join("");
 }
 
 export function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair): [string, string][] {
     return Object.entries(colors).flatMap(([key, value]) => {
         if (typeof value === 'string') {
-            return [[toElmName([  ...keysSoFar, key ].join('_')), value]]
+            const finalKey = key === "DEFAULT" ? [] : [ key ];
+            return [[toElmName([  ...keysSoFar, ...finalKey ].join('_')), value]]
         } else {
             return expandColors([key, ...keysSoFar], value)
         }

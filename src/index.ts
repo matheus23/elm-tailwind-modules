@@ -23,7 +23,7 @@ export const defaultTailwindConfig: any = {
 export const docs = documentation;
 
 export interface RunConfiguration {
-    directory?: string,
+    directory?: string | null,
     moduleName?: string,
     postcssPlugins?: postcss.AcceptedPlugin[],
     tailwindConfig?: any,
@@ -125,7 +125,7 @@ export function asPostcssPlugin({moduleName, tailwindConfig, generateDocumentati
             const blocksByClass = parser.groupDeclarationBlocksByClass(root, resolvedColors, logFunction);
 
             const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, docGen);
-            const themeModule = tailwindThemeGeneration.generateElmModule(moduleName + ".Theme", resolvedColors, resolvedOpacities);
+            const themeModule = tailwindThemeGeneration.generateElmModule(moduleName + ".Theme", resolvedColors, resolvedOpacities, docGen);
             const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, docGen);
             
             modulesGeneratedHook({utilitiesModule, breakpointsModule, themeModule});

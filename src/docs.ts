@@ -4,33 +4,58 @@ import { Breakpoint, ParameterizedDeclaration, RecognizedDeclaration } from "./t
  * all generated functions.
  */
 export interface DocumentationGenerator {
-    /* Choose the order of definitions in the `exposing` clause for the utilities module.
-     * `null` indicates that `exposing (..)` should be generated. */
+    /**
+     * Choose the order of definitions in the `exposing` clause for the utilities module.
+     * `null` indicates that `exposing (..)` should be generated.
+     */
     utilitiesExposing: (definedNames: string[]) => string[] | null;
-    /* Return a doc string for the utilities module, given all definitions that will be generated.
+    /**
+     * Return a doc string for the utilities module, given all definitions that will be generated.
      * The resulting string has to contain the `{-|` and `-}` parts. 
-     * `null` indicates no documentation should be generated. */
+     * `null` indicates no documentation should be generated.
+     */
     utilitiesModuleDocs: (definedNames: string[]) => string | null;
-    /* Called for documentation generation for the globalStyles definition.
-     * The output string can be empty or otherwise has to contain the `{-|` and `-}` parts. */
+    /**
+     * Called for documentation generation for the globalStyles definition.
+     * The output string can be empty or otherwise has to contain the `{-|` and `-}` parts.
+     */
     utilitiesGlobalStyles: () => string;
-    /* Called for every generated tailwind utility definition.
-     * The output string can be empty or otherwise has to contain the `{-|` and `-}` parts. */
+    /**
+     * Called for every generated tailwind utility definition.
+     * The output string can be empty or otherwise has to contain the `{-|` and `-}` parts.
+     */
     utilitiesDefinition: (name: string, declaration: RecognizedDeclaration) => string;
-    /* Called for groups of abstracted tailwind utility definitions.
-     * The output string can be empty or otherwise has to contian the `{-|` and `-}` parts. */
+    /**
+     * Called for groups of abstracted tailwind utility definitions.
+     * The output string can be empty or otherwise has to contian the `{-|` and `-}` parts.
+     */
     utilitiesParameterizedDefinition: (name: string, declaration: ParameterizedDeclaration) => string;
 
-    /* Choose the order of definitions in the `exposing` clause for the breakpoints module.
-     * `null` indicates that `exposing (..)` should be generated. */
+    /**
+     * Choose the order of definitions in the `exposing` clause for the breakpoints module.
+     * `null` indicates that `exposing (..)` should be generated.
+     */
     breakpointsExposing: (definedNames: string[]) => string[] | null;
-    /* Return a doc string for the breakpoints module, given all definitions that will be generated.
+    /**
+     * Return a doc string for the breakpoints module, given all definitions that will be generated.
      * The resulting string has to contain the `{-|` and `-}` parts. 
-     * `null` indicates no documentation should be generated. */
+     * `null` indicates no documentation should be generated.
+     */
     breakpointsModuleDocs: (definedNames: string[]) => string | null;
-    /* Called for every generated tailwind breakpoints definition.
-     * The output string can be empty or otherwise has to contain the `{-|` and `-}` parts. */
+    /**
+     * Called for every generated tailwind breakpoints definition.
+     * The output string can be empty or otherwise has to contain the `{-|` and `-}` parts.
+     */
     breakpointsDefinition: (breakpoint: Breakpoint) => string;
+
+    /**
+     * Called for every tailwind theme color definition.
+     */
+    themeColorDefinition: (name: string, value: string) => string;
+    /**
+     * Called for every tailwind theme opacity definition.
+     */
+    themeOpacityDefinition: (name: string, value: string) => string;
 }
 
 export const noDocumentationGenerator: DocumentationGenerator = {
@@ -43,6 +68,9 @@ export const noDocumentationGenerator: DocumentationGenerator = {
     breakpointsExposing: _definedNames => null,
     breakpointsModuleDocs: _definedNames => null,
     breakpointsDefinition: (_breakpoint) => "",
+
+    themeColorDefinition: (_name, _value) => "",
+    themeOpacityDefinition: (_name, _value) => "",
 }
 
 
@@ -182,7 +210,68 @@ CSS: \`@media (min-width: ${size}) { ... }\`
 Also see the [tailwind documentation](https://tailwindcss.com/docs/responsive-design)
 
 -}`,
+
+    themeColorDefinition: (name, value) => `
+{-| The color \`${name}\` from the tailwind configuration.
+
+Its value is \`${value}\`.
+
+Also see the [tailwind documentation](https://tailwindcss.com/docs/responsive-design)
+
+-}`,
+
+    themeOpacityDefinition: (name, value) => `
+{-| The opacity \`${name}\` from the tailwind configuration.
+
+It is set to \`${value}\` (likely a number between 0 and 1, where 1 means opaque and 0 means transparent)
+
+Also see the [tailwind documentation](https://tailwindcss.com/docs/responsive-design)
+
+-}`,
 }
+
+export const themeModuleDocumentation = (definedColors: string[], definedOpacities: string[]) => `
+{-|
+
+
+## This Tailwind Theme
+
+This module contains all colors and opacities from your tailwind configuration.
+
+It also contains some internal utilities, which need to be exposed to make them available to
+the \`Utilities.elm\` module, but are only meant for internal usage.
+
+If you want to extend the set of available colors or opacities, take a look [configuring tailwind].
+
+
+### Colors
+
+@docs Color
+${definedColors.map(name => `@docs ${name}`).join("\n")}
+
+
+### Opacities
+
+@docs Opacity
+@docs withOpacity
+${definedOpacities.map(name => `@docs ${name}`).join("\n")}
+
+
+### Custom values
+
+@docs arbitraryRgb
+@docs arbitraryRgba
+@docs arbitraryOpacityPct
+
+
+### Internal
+
+@docs internal
+
+[tailwind documentation]: https://tailwindcss.com/docs/responsive-design
+
+-}
+`;
 
 
 function replaceOriginalColorsWithPlaceholder(rule: string, originalColorsReplaced: string[]) {

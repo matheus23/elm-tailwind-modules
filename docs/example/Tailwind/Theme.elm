@@ -1,121 +1,239 @@
 module Tailwind.Theme exposing
     ( Color
-    , Opacity(..)
-    , amber_100
-    , amber_200
-    , amber_300
-    , amber_400
-    , amber_50
-    , amber_500
-    , amber_600
-    , amber_700
-    , amber_800
-    , amber_900
-    , arbitraryOpacityPct
-    , arbitraryRgb
-    , arbitraryRgba
-    , black
-    , blue_100
-    , blue_200
-    , blue_300
-    , blue_400
-    , blue_50
-    , blue_500
-    , blue_600
-    , blue_700
-    , blue_800
-    , blue_900
+    , inherit
     , current
-    , cyan_100
-    , cyan_200
-    , cyan_300
-    , cyan_400
-    , cyan_50
-    , cyan_500
-    , cyan_600
-    , cyan_700
-    , cyan_800
-    , cyan_900
-    , emerald_100
-    , emerald_200
-    , emerald_300
-    , emerald_400
-    , emerald_50
-    , emerald_500
-    , emerald_600
-    , emerald_700
-    , emerald_800
-    , emerald_900
-    , fuchsia_100
-    , fuchsia_200
-    , fuchsia_300
-    , fuchsia_400
-    , fuchsia_50
-    , fuchsia_500
-    , fuchsia_600
-    , fuchsia_700
-    , fuchsia_800
-    , fuchsia_900
+    , transparent
+    , black
+    , white
+    , slate_50
+    , slate_100
+    , slate_200
+    , slate_300
+    , slate_400
+    , slate_500
+    , slate_600
+    , slate_700
+    , slate_800
+    , slate_900
+    , gray_50
     , gray_100
     , gray_200
     , gray_300
     , gray_400
-    , gray_50
     , gray_500
     , gray_600
     , gray_700
     , gray_800
     , gray_900
-    , green_100
-    , green_200
-    , green_300
-    , green_400
-    , green_50
-    , green_500
-    , green_600
-    , green_700
-    , green_800
-    , green_900
-    , indigo_100
-    , indigo_200
-    , indigo_300
-    , indigo_400
-    , indigo_50
-    , indigo_500
-    , indigo_600
-    , indigo_700
-    , indigo_800
-    , indigo_900
-    , inherit
-    , internal
-    , lime_100
-    , lime_200
-    , lime_300
-    , lime_400
-    , lime_50
-    , lime_500
-    , lime_600
-    , lime_700
-    , lime_800
-    , lime_900
+    , zinc_50
+    , zinc_100
+    , zinc_200
+    , zinc_300
+    , zinc_400
+    , zinc_500
+    , zinc_600
+    , zinc_700
+    , zinc_800
+    , zinc_900
+    , neutral_50
     , neutral_100
     , neutral_200
     , neutral_300
     , neutral_400
-    , neutral_50
     , neutral_500
     , neutral_600
     , neutral_700
     , neutral_800
     , neutral_900
+    , stone_50
+    , stone_100
+    , stone_200
+    , stone_300
+    , stone_400
+    , stone_500
+    , stone_600
+    , stone_700
+    , stone_800
+    , stone_900
+    , red_50
+    , red_100
+    , red_200
+    , red_300
+    , red_400
+    , red_500
+    , red_600
+    , red_700
+    , red_800
+    , red_900
+    , orange_50
+    , orange_100
+    , orange_200
+    , orange_300
+    , orange_400
+    , orange_500
+    , orange_600
+    , orange_700
+    , orange_800
+    , orange_900
+    , amber_50
+    , amber_100
+    , amber_200
+    , amber_300
+    , amber_400
+    , amber_500
+    , amber_600
+    , amber_700
+    , amber_800
+    , amber_900
+    , yellow_50
+    , yellow_100
+    , yellow_200
+    , yellow_300
+    , yellow_400
+    , yellow_500
+    , yellow_600
+    , yellow_700
+    , yellow_800
+    , yellow_900
+    , lime_50
+    , lime_100
+    , lime_200
+    , lime_300
+    , lime_400
+    , lime_500
+    , lime_600
+    , lime_700
+    , lime_800
+    , lime_900
+    , green_50
+    , green_100
+    , green_200
+    , green_300
+    , green_400
+    , green_500
+    , green_600
+    , green_700
+    , green_800
+    , green_900
+    , emerald_50
+    , emerald_100
+    , emerald_200
+    , emerald_300
+    , emerald_400
+    , emerald_500
+    , emerald_600
+    , emerald_700
+    , emerald_800
+    , emerald_900
+    , teal_50
+    , teal_100
+    , teal_200
+    , teal_300
+    , teal_400
+    , teal_500
+    , teal_600
+    , teal_700
+    , teal_800
+    , teal_900
+    , cyan_50
+    , cyan_100
+    , cyan_200
+    , cyan_300
+    , cyan_400
+    , cyan_500
+    , cyan_600
+    , cyan_700
+    , cyan_800
+    , cyan_900
+    , sky_50
+    , sky_100
+    , sky_200
+    , sky_300
+    , sky_400
+    , sky_500
+    , sky_600
+    , sky_700
+    , sky_800
+    , sky_900
+    , blue_50
+    , blue_100
+    , blue_200
+    , blue_300
+    , blue_400
+    , blue_500
+    , blue_600
+    , blue_700
+    , blue_800
+    , blue_900
+    , indigo_50
+    , indigo_100
+    , indigo_200
+    , indigo_300
+    , indigo_400
+    , indigo_500
+    , indigo_600
+    , indigo_700
+    , indigo_800
+    , indigo_900
+    , violet_50
+    , violet_100
+    , violet_200
+    , violet_300
+    , violet_400
+    , violet_500
+    , violet_600
+    , violet_700
+    , violet_800
+    , violet_900
+    , purple_50
+    , purple_100
+    , purple_200
+    , purple_300
+    , purple_400
+    , purple_500
+    , purple_600
+    , purple_700
+    , purple_800
+    , purple_900
+    , fuchsia_50
+    , fuchsia_100
+    , fuchsia_200
+    , fuchsia_300
+    , fuchsia_400
+    , fuchsia_500
+    , fuchsia_600
+    , fuchsia_700
+    , fuchsia_800
+    , fuchsia_900
+    , pink_50
+    , pink_100
+    , pink_200
+    , pink_300
+    , pink_400
+    , pink_500
+    , pink_600
+    , pink_700
+    , pink_800
+    , pink_900
+    , rose_50
+    , rose_100
+    , rose_200
+    , rose_300
+    , rose_400
+    , rose_500
+    , rose_600
+    , rose_700
+    , rose_800
+    , rose_900
+    , Opacity(..)
+    , withOpacity
     , opacity0
+    , opacity5
     , opacity10
-    , opacity100
     , opacity20
     , opacity25
     , opacity30
     , opacity40
-    , opacity5
     , opacity50
     , opacity60
     , opacity70
@@ -123,146 +241,334 @@ module Tailwind.Theme exposing
     , opacity80
     , opacity90
     , opacity95
-    , orange_100
-    , orange_200
-    , orange_300
-    , orange_400
-    , orange_50
-    , orange_500
-    , orange_600
-    , orange_700
-    , orange_800
-    , orange_900
-    , pink_100
-    , pink_200
-    , pink_300
-    , pink_400
-    , pink_50
-    , pink_500
-    , pink_600
-    , pink_700
-    , pink_800
-    , pink_900
-    , purple_100
-    , purple_200
-    , purple_300
-    , purple_400
-    , purple_50
-    , purple_500
-    , purple_600
-    , purple_700
-    , purple_800
-    , purple_900
-    , red_100
-    , red_200
-    , red_300
-    , red_400
-    , red_50
-    , red_500
-    , red_600
-    , red_700
-    , red_800
-    , red_900
-    , rose_100
-    , rose_200
-    , rose_300
-    , rose_400
-    , rose_50
-    , rose_500
-    , rose_600
-    , rose_700
-    , rose_800
-    , rose_900
-    , sky_100
-    , sky_200
-    , sky_300
-    , sky_400
-    , sky_50
-    , sky_500
-    , sky_600
-    , sky_700
-    , sky_800
-    , sky_900
-    , slate_100
-    , slate_200
-    , slate_300
-    , slate_400
-    , slate_50
-    , slate_500
-    , slate_600
-    , slate_700
-    , slate_800
-    , slate_900
-    , stone_100
-    , stone_200
-    , stone_300
-    , stone_400
-    , stone_50
-    , stone_500
-    , stone_600
-    , stone_700
-    , stone_800
-    , stone_900
-    , teal_100
-    , teal_200
-    , teal_300
-    , teal_400
-    , teal_50
-    , teal_500
-    , teal_600
-    , teal_700
-    , teal_800
-    , teal_900
-    , transparent
-    , violet_100
-    , violet_200
-    , violet_300
-    , violet_400
-    , violet_50
-    , violet_500
-    , violet_600
-    , violet_700
-    , violet_800
-    , violet_900
-    , white
-    , withOpacity
-    , yellow_100
-    , yellow_200
-    , yellow_300
-    , yellow_400
-    , yellow_50
-    , yellow_500
-    , yellow_600
-    , yellow_700
-    , yellow_800
-    , yellow_900
-    , zinc_100
-    , zinc_200
-    , zinc_300
-    , zinc_400
-    , zinc_50
-    , zinc_500
-    , zinc_600
-    , zinc_700
-    , zinc_800
-    , zinc_900
+    , opacity100
+    , arbitraryRgb
+    , arbitraryRgba
+    , arbitraryOpacityPct
+    , internal
     )
+
+{-|
+
+
+## This Tailwind Theme
+
+This module contains all colors and opacities from your tailwind configuration.
+
+It also contains some internal utilities, which need to be exposed to make them available to
+the `Utilities.elm` module, but are only meant for internal usage.
+
+If you want to extend the set of available colors or opacities, take a look [configuring tailwind].
+
+
+### Colors
+
+@docs Color
+@docs inherit
+@docs current
+@docs transparent
+@docs black
+@docs white
+@docs slate_50
+@docs slate_100
+@docs slate_200
+@docs slate_300
+@docs slate_400
+@docs slate_500
+@docs slate_600
+@docs slate_700
+@docs slate_800
+@docs slate_900
+@docs gray_50
+@docs gray_100
+@docs gray_200
+@docs gray_300
+@docs gray_400
+@docs gray_500
+@docs gray_600
+@docs gray_700
+@docs gray_800
+@docs gray_900
+@docs zinc_50
+@docs zinc_100
+@docs zinc_200
+@docs zinc_300
+@docs zinc_400
+@docs zinc_500
+@docs zinc_600
+@docs zinc_700
+@docs zinc_800
+@docs zinc_900
+@docs neutral_50
+@docs neutral_100
+@docs neutral_200
+@docs neutral_300
+@docs neutral_400
+@docs neutral_500
+@docs neutral_600
+@docs neutral_700
+@docs neutral_800
+@docs neutral_900
+@docs stone_50
+@docs stone_100
+@docs stone_200
+@docs stone_300
+@docs stone_400
+@docs stone_500
+@docs stone_600
+@docs stone_700
+@docs stone_800
+@docs stone_900
+@docs red_50
+@docs red_100
+@docs red_200
+@docs red_300
+@docs red_400
+@docs red_500
+@docs red_600
+@docs red_700
+@docs red_800
+@docs red_900
+@docs orange_50
+@docs orange_100
+@docs orange_200
+@docs orange_300
+@docs orange_400
+@docs orange_500
+@docs orange_600
+@docs orange_700
+@docs orange_800
+@docs orange_900
+@docs amber_50
+@docs amber_100
+@docs amber_200
+@docs amber_300
+@docs amber_400
+@docs amber_500
+@docs amber_600
+@docs amber_700
+@docs amber_800
+@docs amber_900
+@docs yellow_50
+@docs yellow_100
+@docs yellow_200
+@docs yellow_300
+@docs yellow_400
+@docs yellow_500
+@docs yellow_600
+@docs yellow_700
+@docs yellow_800
+@docs yellow_900
+@docs lime_50
+@docs lime_100
+@docs lime_200
+@docs lime_300
+@docs lime_400
+@docs lime_500
+@docs lime_600
+@docs lime_700
+@docs lime_800
+@docs lime_900
+@docs green_50
+@docs green_100
+@docs green_200
+@docs green_300
+@docs green_400
+@docs green_500
+@docs green_600
+@docs green_700
+@docs green_800
+@docs green_900
+@docs emerald_50
+@docs emerald_100
+@docs emerald_200
+@docs emerald_300
+@docs emerald_400
+@docs emerald_500
+@docs emerald_600
+@docs emerald_700
+@docs emerald_800
+@docs emerald_900
+@docs teal_50
+@docs teal_100
+@docs teal_200
+@docs teal_300
+@docs teal_400
+@docs teal_500
+@docs teal_600
+@docs teal_700
+@docs teal_800
+@docs teal_900
+@docs cyan_50
+@docs cyan_100
+@docs cyan_200
+@docs cyan_300
+@docs cyan_400
+@docs cyan_500
+@docs cyan_600
+@docs cyan_700
+@docs cyan_800
+@docs cyan_900
+@docs sky_50
+@docs sky_100
+@docs sky_200
+@docs sky_300
+@docs sky_400
+@docs sky_500
+@docs sky_600
+@docs sky_700
+@docs sky_800
+@docs sky_900
+@docs blue_50
+@docs blue_100
+@docs blue_200
+@docs blue_300
+@docs blue_400
+@docs blue_500
+@docs blue_600
+@docs blue_700
+@docs blue_800
+@docs blue_900
+@docs indigo_50
+@docs indigo_100
+@docs indigo_200
+@docs indigo_300
+@docs indigo_400
+@docs indigo_500
+@docs indigo_600
+@docs indigo_700
+@docs indigo_800
+@docs indigo_900
+@docs violet_50
+@docs violet_100
+@docs violet_200
+@docs violet_300
+@docs violet_400
+@docs violet_500
+@docs violet_600
+@docs violet_700
+@docs violet_800
+@docs violet_900
+@docs purple_50
+@docs purple_100
+@docs purple_200
+@docs purple_300
+@docs purple_400
+@docs purple_500
+@docs purple_600
+@docs purple_700
+@docs purple_800
+@docs purple_900
+@docs fuchsia_50
+@docs fuchsia_100
+@docs fuchsia_200
+@docs fuchsia_300
+@docs fuchsia_400
+@docs fuchsia_500
+@docs fuchsia_600
+@docs fuchsia_700
+@docs fuchsia_800
+@docs fuchsia_900
+@docs pink_50
+@docs pink_100
+@docs pink_200
+@docs pink_300
+@docs pink_400
+@docs pink_500
+@docs pink_600
+@docs pink_700
+@docs pink_800
+@docs pink_900
+@docs rose_50
+@docs rose_100
+@docs rose_200
+@docs rose_300
+@docs rose_400
+@docs rose_500
+@docs rose_600
+@docs rose_700
+@docs rose_800
+@docs rose_900
+
+
+### Opacities
+
+@docs Opacity
+@docs withOpacity
+@docs opacity0
+@docs opacity5
+@docs opacity10
+@docs opacity20
+@docs opacity25
+@docs opacity30
+@docs opacity40
+@docs opacity50
+@docs opacity60
+@docs opacity70
+@docs opacity75
+@docs opacity80
+@docs opacity90
+@docs opacity95
+@docs opacity100
+
+
+### Custom values
+
+@docs arbitraryRgb
+@docs arbitraryRgba
+@docs arbitraryOpacityPct
+
+
+### Internal
+
+@docs internal
+
+[tailwind documentation]: https://tailwindcss.com/docs/responsive-design
+
+-}
 
 import Css
 
 
+{-| The type for tailwind colors.
+
+You should never need to construct values of this type manually.
+If you find the need to do so, use `arbitraryRgb` or similar functions instead.
+
+Values of this type can be found in this module.
+
+They can be used with tailwind utility functions like `bg_color`.
+
+-}
 type Color
     = Color String String String String Opacity
     | Keyword String
 
 
+{-| The type for tailwind opacities.
+
+You should never construct values of this type manually.
+If you find the need to do so, use `arbitraryOpacityPct` instead.
+
+Values of this type can be found in this module.
+
+They can be used to modify the default opacities associated with colors
+using the `withOpacity` function.
+
+-}
 type Opacity
     = Opacity String
     | ViaVariable
 
 
+{-| These are internal functions used by elm-tailwind-modules to generate the
+tailwind utilities in `Utilities.elm`.
+
+You should never need to use them.
+
+-}
+internal : { propertyWithColor : String -> (String -> String) -> Maybe String -> Color -> Css.Style }
 internal =
-    -- propertyWithColor : String -> (String -> String) -> Maybe String -> Color -> Css.Style
     { propertyWithColor =
         \property embedColor opacityVarName color ->
             case color of
@@ -285,6 +591,8 @@ internal =
     }
 
 
+{-| Attach an opacity to a color.
+-}
 withOpacity : Opacity -> Color -> Color
 withOpacity opacity color =
     case color of
@@ -295,16 +603,24 @@ withOpacity opacity color =
             Color mode r g b opacity
 
 
+{-| Construct a Color value from red, green, and blue values (each between 0 and 255).
+-}
 arbitraryRgb : Int -> Int -> Int -> Color
 arbitraryRgb r g b =
     Color "rgb" (String.fromInt r) (String.fromInt g) (String.fromInt b) ViaVariable
 
 
+{-| Construct a Color value from red, green, and blue values (each between 0 and 255)
+and an opacity value between 0 and 1.
+-}
 arbitraryRgba : Int -> Int -> Int -> Float -> Color
 arbitraryRgba r g b alpha =
     Color "rgba" (String.fromInt r) (String.fromInt g) (String.fromInt b) (Opacity (String.fromFloat alpha))
 
 
+{-| Construct an Opacity value from a given percentage (between 0 and 100),
+where 0 means transparent and 100 means opaque.
+-}
 arbitraryOpacityPct : Int -> Opacity
 arbitraryOpacityPct pct =
     Opacity (String.fromInt pct ++ "%")
