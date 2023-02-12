@@ -8,6 +8,7 @@ import autoprefixer from "autoprefixer";
 
 test("snapshot of generated module", async t => {
     const generatedModules = await elmTailwindModules.run({
+        directory: "./test-example/src/",
         moduleName: "Tailwind.Basic",
         postcssPlugins: [],
         tailwindConfig: {...tailwindConfig, plugins: []},
@@ -20,6 +21,7 @@ test("snapshot of generated module", async t => {
 
 test("snapshot of generated module with documentation", async t => {
     const generatedModules = await elmTailwindModules.run({
+        directory: "./test-example/src/",
         moduleName: "Tailwind.WithDocs",
         postcssPlugins: [],
         tailwindConfig: {...tailwindConfig, plugins: []},
