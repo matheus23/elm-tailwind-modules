@@ -26,6 +26,7 @@ async function generateModulesWithDefaultColorConfig(t: ExecutionContext) {
         postcssPlugins: [],
         tailwindConfig,
         logFunction: t.log,
+        directory: null,
     });
 }
 

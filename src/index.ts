@@ -23,7 +23,7 @@ export const defaultTailwindConfig: any = {
 export const docs = documentation;
 
 export interface RunConfiguration {
-    directory?: string,
+    directory?: string | null,
     moduleName?: string,
     postcssPlugins?: postcss.AcceptedPlugin[],
     tailwindConfig?: any,
