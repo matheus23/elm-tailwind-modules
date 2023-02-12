@@ -2,7 +2,7 @@
 
 ## Auto-abstract css utilities
 
-* [ ] Auto-abstract colors
+* [X] Auto-abstract colors
   * [X] Detect when css uses properties like theme colors
   * [X] Match the abstracted color out of the css property
   * [X] Detect all color-parameterizable properties (maybe detect everything with color suffixes?)
@@ -32,11 +32,17 @@
         thus it doesn't make sense to pass opacity in.~~
         Not worth it! Only 2 places in Utilities that override `withOpacity`.
   * [X] Think about "Refactor Internal functions like `toProperty` in Theme" (see below)
-  * [ ] Publish
+  * [X] Publish
   * [X] (optionally: Look at refactoring? E.g. detect & deduplicate outside of `code-generators/` files)
-  * [ ] Release new default-tailwind-modules with Tailwind v3
+  * [X] Release new default-tailwind-modules with Tailwind v3
   * [ ] Support new API format in https://html-to-elm.com/
 * [ ] Detect when css uses the same spacing values over and over
+
+* [ ] Break `Tailwind.Theme` into two modules: `Tailwind.Internal` and `Tailwind.Theme`.
+      `Tailwind.Theme` then contains symlinks for `type alias Color = Tailwind.Internal.Color` and opacity,
+      as well as all color and opacity definitions.
+      `Tailwind.Internal` contains the actual type definitions and the `toProperty*` functions.
+      Then, in `elm-default-tailwind-modules`, we can export `Tailwind.Theme`, but keep `Tailwind.Internal` private.
 
 ## General
 
