@@ -1,6 +1,6 @@
 {
   "name": "elm-tailwind-modules",
-  "version": "0.5.0-alpha1",
+  "version": "0.5.0-alpha2",
   "author": "Philipp Krüger",
   "description": "Turn your Tailwind CSS into Elm code using Elm-css, which purges using Elm's --optimize!",
   "repository": {
