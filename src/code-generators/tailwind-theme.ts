@@ -128,7 +128,8 @@ ${opacityName} =
 export function expandColors(keysSoFar: string[], colors: RecursiveKeyValuePair): [string, string][] {
     return Object.entries(colors).flatMap(([key, value]) => {
         if (typeof value === 'string') {
-            return [[toElmName([  ...keysSoFar, key ].join('_')), value]]
+            const finalKey = key === "DEFAULT" ? [] : [ key ];
+            return [[toElmName([  ...keysSoFar, ...finalKey ].join('_')), value]]
         } else {
             return expandColors([key, ...keysSoFar], value)
         }
