@@ -567,8 +567,8 @@ tailwind utilities in `Utilities.elm`.
 You should never need to use them.
 
 -}
+internal : { propertyWithColor : String -> (String -> String) -> Maybe String -> Color -> Css.Style }
 internal =
-    -- propertyWithColor : String -> (String -> String) -> Maybe String -> Color -> Css.Style
     { propertyWithColor =
         \property embedColor opacityVarName color ->
             case color of
