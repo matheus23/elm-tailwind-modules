@@ -8,10 +8,17 @@ async function generateModulesWithDefaultColorConfig(t: ExecutionContext) {
     const tailwindConfig: Config = {
         theme: {
             colors: {
-                'tahiti': {
-                    light: '#67e8f9',
-                    DEFAULT: '#06b6d4',
-                    dark: '#0e7490',
+                "tahiti": {
+                    light: "#67e8f9",
+                    DEFAULT: "#06b6d4",
+                    dark: "#0e7490",
+                    "by-name": "rebeccapurple",
+                    "by-hex": "#00ff00",
+                    "by-rgb": "rgb(214, 122, 127)",
+                    "by-hsl": "hsl(30, 100%, 50%)",
+                    "by-hsl-deg": "hsl(30deg 100% 50%)",    
+                    "by-hsla": "hsla(30, 100%, 50%, .3)",
+                    "by-hwb": "hwb(1.5708rad 20% 10% / 0.7)",
                 },
             },
             extend: {},
