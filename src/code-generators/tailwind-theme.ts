@@ -48,8 +48,8 @@ If you want to generate custom values, install the [elm-tailwind-modules-base](h
 library and its utilities like \`arbitraryRgb\`.
 
 -}
-type alias Color
-    = Tw.Color
+type alias Color =
+    Tw.Color
 
 
 {-| The type for tailwind opacities.
@@ -63,8 +63,8 @@ If you want to generate custom values, install the [elm-tailwind-modules-base](h
 library and its utilities like \`arbitraryOpactiyPct\`.
 
 -}
-type alias Opacity
-    = Tw.Opacity
+type alias Opacity =
+    Tw.Opacity
 `
 
 }
