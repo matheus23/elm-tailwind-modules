@@ -15,10 +15,11 @@ type TailwindScreen = string
 
 
 export function generateElmModule(
-    moduleName: string,
+    moduleNamePrefix: string,
     resolvedConfig: TailwindResolvedConfig,
     docs: DocumentationGenerator,
 ): string {
+    const moduleName = `${moduleNamePrefix}.Breakpoints`
     const breakpoints =
         Object
             .entries(resolvedConfig.theme.screens)

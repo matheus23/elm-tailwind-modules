@@ -17,16 +17,18 @@ import { DocumentationGenerator } from "../docs";
 // PUBLIC INTERFACE
 
 
-export function generateElmModule(moduleName: string, blocksByClass: GroupedDeclarations, docs: DocumentationGenerator): string {
+export function generateElmModule(moduleNamePrefix: string, blocksByClass: GroupedDeclarations, docs: DocumentationGenerator): string {
     const sortedClasses = Array.from([...blocksByClass.recognized.keys(), ...blocksByClass.colorParameterized.keys()]).sort();
     const definedNames = ["globalStyles", ...sortedClasses];
+    const moduleName = `${moduleNamePrefix}.Utilities`
 
     return [
         generate.elmModuleHeader({
             moduleName,
             exposing: docs.utilitiesExposing(definedNames),
             imports: [
-                generate.singleLine("import Tailwind.Theme exposing (Color)"),
+                generate.singleLine(`import ${moduleNamePrefix}.Theme exposing (Color)`),
+                generate.singleLine("import Tailwind.Color as Tw"),
                 generate.singleLine("import Css"),
                 generate.singleLine("import Css.Animations"),
                 generate.singleLine("import Css.Global"),
@@ -128,7 +130,7 @@ ${convertDeclarationBlock(keyframes, propertiesBlock)({
 function convertDeclaration(keyframes: Map<string, Keyframe[]>, declaration: CssProperty | ParameterizedProperty, cssVarNames: string[]): generate.Indentable[] {
     if (cssVarNames.includes(declaration.prop)) {
         // We intentionally drop e.g. "--tw-bg-opacity" properties.
-        // They'll get re-added in `Theme.internal.propertyWithColorEmbedded`, if the color doesn't have an opacity set.
+        // They'll get re-added in `Tw.propertyWithColor`, if the color doesn't have an opacity set.
         return [];
     }
 
@@ -172,15 +174,15 @@ function convertColorDeclaration(property: ParameterizedProperty): generate.Inde
         : `${valuePrefix} ++ c ++ ${valueSuffix}`;
 
     if (property.opacity == null) {
-        return generate.singleLine(`Tailwind.Theme.internal.propertyWithColor ${propertyName} (\\c -> ${colorExpression}) Nothing color`)
+        return generate.singleLine(`Tw.propertyWithColor ${propertyName} (\\c -> ${colorExpression}) Nothing color`)
     } else if ("variableName" in property.opacity) {
         const variableName = generate.elmString(property.opacity.variableName);
-        return generate.singleLine(`Tailwind.Theme.internal.propertyWithColor ${propertyName} (\\c -> ${colorExpression}) (Just ${variableName}) color`)
+        return generate.singleLine(`Tw.propertyWithColor ${propertyName} (\\c -> ${colorExpression}) (Just ${variableName}) color`)
     } else {
         const literal = generate.elmString(property.opacity.literal);
         return generate.elmFunctionCall(
-            `Tailwind.Theme.withOpacity (Tailwind.Theme.Opacity ${literal}) color`,
-            generate.singleLine(`|> Tailwind.Theme.internal.propertyWithColor ${propertyName} (\\c -> ${colorExpression}) Nothing`)
+            `Tw.withOpacity (Tw.Opacity ${literal}) color`,
+            generate.singleLine(`|> Tw.propertyWithColor ${propertyName} (\\c -> ${colorExpression}) Nothing`)
         );
     }
 }

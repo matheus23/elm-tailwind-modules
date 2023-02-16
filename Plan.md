@@ -11,7 +11,7 @@
   * [X] Fix exposes with new config
   * [X] Detect transparent colors (e.g. blue-500/95) (use theme.opacity)
   * [X] `withOpacity : Theme.Opacity -> Theme.Color -> Theme.Color` helper
-  * [ ] Look at counterexamples & fix them
+  * [X] Look at counterexamples & fix them
     * [X] Detect color values in 'suspected to be parameterizable' definitions
     * [X] Detect better where/when to replace values with abstract `color` var
       * [X] Handle cases of computed opacity values (opacity replaced with 0)
@@ -19,7 +19,7 @@
     * [X] Handle colors without opacity variables correctly (e.g. caretWithColor)
     * [X] Use `declaration.opacityVariableName`
     * [X] Refactor: Remove `isParameterized` parameter
-    * [ ] Look through TODOs in the code
+    * [X] Look through TODOs in the code
   * [X] Generate & use opacity variants: Make `opacity_50` etc. use `Theme.Opacity` instead
   * [X] ~~Handle naming option in CLI for camel case in isParameterizable in parser code~~ Turns out that has always been disabled. Removed the dead code path
   * [X] Use a non-primitive elm type for colors (instead of String)
