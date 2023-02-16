@@ -225,8 +225,7 @@ module Tailwind.Theme exposing
     , rose_700
     , rose_800
     , rose_900
-    , Opacity(..)
-    , withOpacity
+    , Opacity
     , opacity0
     , opacity5
     , opacity10
@@ -242,10 +241,6 @@ module Tailwind.Theme exposing
     , opacity90
     , opacity95
     , opacity100
-    , arbitraryRgb
-    , arbitraryRgba
-    , arbitraryOpacityPct
-    , internal
     )
 
 {-|
@@ -254,9 +249,6 @@ module Tailwind.Theme exposing
 ## This Tailwind Theme
 
 This module contains all colors and opacities from your tailwind configuration.
-
-It also contains some internal utilities, which need to be exposed to make them available to
-the `Utilities.elm` module, but are only meant for internal usage.
 
 If you want to extend the set of available colors or opacities, take a look [configuring tailwind].
 
@@ -494,7 +486,6 @@ If you want to extend the set of available colors or opacities, take a look [con
 ### Opacities
 
 @docs Opacity
-@docs withOpacity
 @docs opacity0
 @docs opacity5
 @docs opacity10
@@ -511,1316 +502,1238 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs opacity95
 @docs opacity100
 
-
-### Custom values
-
-@docs arbitraryRgb
-@docs arbitraryRgba
-@docs arbitraryOpacityPct
-
-
-### Internal
-
-@docs internal
-
-[tailwind documentation]: https://tailwindcss.com/docs/responsive-design
+[configuring tailwind]: https://tailwindcss.com/docs/responsive-design
 
 -}
 
 import Css
+import Tailwind.Color as Tw
 
 
 {-| The type for tailwind colors.
-
-You should never need to construct values of this type manually.
-If you find the need to do so, use `arbitraryRgb` or similar functions instead.
 
 Values of this type can be found in this module.
 
 They can be used with tailwind utility functions like `bg_color`.
 
+If you want to generate custom values, install the [elm-tailwind-modules-base](https://package.elm-lang.org/packages/matheus23/elm-tailwind-modules-base/latest/)
+library and its utilities like `arbitraryRgb`.
+
 -}
-type Color
-    = Color String String String String Opacity
-    | Keyword String
+type alias Color =
+    Tw.Color
 
 
 {-| The type for tailwind opacities.
-
-You should never construct values of this type manually.
-If you find the need to do so, use `arbitraryOpacityPct` instead.
 
 Values of this type can be found in this module.
 
 They can be used to modify the default opacities associated with colors
 using the `withOpacity` function.
 
--}
-type Opacity
-    = Opacity String
-    | ViaVariable
-
-
-{-| These are internal functions used by elm-tailwind-modules to generate the
-tailwind utilities in `Utilities.elm`.
-
-You should never need to use them.
+If you want to generate custom values, install the [elm-tailwind-modules-base](https://package.elm-lang.org/packages/matheus23/elm-tailwind-modules-base/latest/)
+library and its utilities like `arbitraryOpactiyPct`.
 
 -}
-internal : { propertyWithColor : String -> (String -> String) -> Maybe String -> Color -> Css.Style }
-internal =
-    { propertyWithColor =
-        \property embedColor opacityVarName color ->
-            case color of
-                Color mode r g b opacity ->
-                    case ( opacity, opacityVarName ) of
-                        ( Opacity op, _ ) ->
-                            Css.property property (embedColor (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / " ++ op ++ ")"))
-
-                        ( ViaVariable, Just varName ) ->
-                            Css.batch
-                                [ Css.property varName "1"
-                                , Css.property property (embedColor (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / var(" ++ varName ++ "))"))
-                                ]
-
-                        ( ViaVariable, Nothing ) ->
-                            Css.property property (embedColor (mode ++ "(" ++ r ++ " " ++ g ++ " " ++ b ++ " / 1.0)"))
-
-                Keyword keyword ->
-                    Css.property property keyword
-    }
-
-
-{-| Attach an opacity to a color.
--}
-withOpacity : Opacity -> Color -> Color
-withOpacity opacity color =
-    case color of
-        Keyword k ->
-            Keyword k
-
-        Color mode r g b _ ->
-            Color mode r g b opacity
-
-
-{-| Construct a Color value from red, green, and blue values (each between 0 and 255).
--}
-arbitraryRgb : Int -> Int -> Int -> Color
-arbitraryRgb r g b =
-    Color "rgb" (String.fromInt r) (String.fromInt g) (String.fromInt b) ViaVariable
-
-
-{-| Construct a Color value from red, green, and blue values (each between 0 and 255)
-and an opacity value between 0 and 1.
--}
-arbitraryRgba : Int -> Int -> Int -> Float -> Color
-arbitraryRgba r g b alpha =
-    Color "rgba" (String.fromInt r) (String.fromInt g) (String.fromInt b) (Opacity (String.fromFloat alpha))
-
-
-{-| Construct an Opacity value from a given percentage (between 0 and 100),
-where 0 means transparent and 100 means opaque.
--}
-arbitraryOpacityPct : Int -> Opacity
-arbitraryOpacityPct pct =
-    Opacity (String.fromInt pct ++ "%")
+type alias Opacity =
+    Tw.Opacity
 
 
 inherit : Color
 inherit =
-    Keyword "inherit"
+    Tw.Keyword "inherit"
 
 
 current : Color
 current =
-    Keyword "currentColor"
+    Tw.Keyword "currentColor"
 
 
 transparent : Color
 transparent =
-    Color "rgb" "0" "0" "0" (Opacity "0")
+    Tw.Color "rgb" "0" "0" "0" (Tw.Opacity "0")
 
 
 black : Color
 black =
-    Color "rgb" "0" "0" "0" ViaVariable
+    Tw.Color "rgb" "0" "0" "0" Tw.ViaVariable
 
 
 white : Color
 white =
-    Color "rgb" "255" "255" "255" ViaVariable
+    Tw.Color "rgb" "255" "255" "255" Tw.ViaVariable
 
 
 slate_50 : Color
 slate_50 =
-    Color "rgb" "248" "250" "252" ViaVariable
+    Tw.Color "rgb" "248" "250" "252" Tw.ViaVariable
 
 
 slate_100 : Color
 slate_100 =
-    Color "rgb" "241" "245" "249" ViaVariable
+    Tw.Color "rgb" "241" "245" "249" Tw.ViaVariable
 
 
 slate_200 : Color
 slate_200 =
-    Color "rgb" "226" "232" "240" ViaVariable
+    Tw.Color "rgb" "226" "232" "240" Tw.ViaVariable
 
 
 slate_300 : Color
 slate_300 =
-    Color "rgb" "203" "213" "225" ViaVariable
+    Tw.Color "rgb" "203" "213" "225" Tw.ViaVariable
 
 
 slate_400 : Color
 slate_400 =
-    Color "rgb" "148" "163" "184" ViaVariable
+    Tw.Color "rgb" "148" "163" "184" Tw.ViaVariable
 
 
 slate_500 : Color
 slate_500 =
-    Color "rgb" "100" "116" "139" ViaVariable
+    Tw.Color "rgb" "100" "116" "139" Tw.ViaVariable
 
 
 slate_600 : Color
 slate_600 =
-    Color "rgb" "71" "85" "105" ViaVariable
+    Tw.Color "rgb" "71" "85" "105" Tw.ViaVariable
 
 
 slate_700 : Color
 slate_700 =
-    Color "rgb" "51" "65" "85" ViaVariable
+    Tw.Color "rgb" "51" "65" "85" Tw.ViaVariable
 
 
 slate_800 : Color
 slate_800 =
-    Color "rgb" "30" "41" "59" ViaVariable
+    Tw.Color "rgb" "30" "41" "59" Tw.ViaVariable
 
 
 slate_900 : Color
 slate_900 =
-    Color "rgb" "15" "23" "42" ViaVariable
+    Tw.Color "rgb" "15" "23" "42" Tw.ViaVariable
 
 
 gray_50 : Color
 gray_50 =
-    Color "rgb" "249" "250" "251" ViaVariable
+    Tw.Color "rgb" "249" "250" "251" Tw.ViaVariable
 
 
 gray_100 : Color
 gray_100 =
-    Color "rgb" "243" "244" "246" ViaVariable
+    Tw.Color "rgb" "243" "244" "246" Tw.ViaVariable
 
 
 gray_200 : Color
 gray_200 =
-    Color "rgb" "229" "231" "235" ViaVariable
+    Tw.Color "rgb" "229" "231" "235" Tw.ViaVariable
 
 
 gray_300 : Color
 gray_300 =
-    Color "rgb" "209" "213" "219" ViaVariable
+    Tw.Color "rgb" "209" "213" "219" Tw.ViaVariable
 
 
 gray_400 : Color
 gray_400 =
-    Color "rgb" "156" "163" "175" ViaVariable
+    Tw.Color "rgb" "156" "163" "175" Tw.ViaVariable
 
 
 gray_500 : Color
 gray_500 =
-    Color "rgb" "107" "114" "128" ViaVariable
+    Tw.Color "rgb" "107" "114" "128" Tw.ViaVariable
 
 
 gray_600 : Color
 gray_600 =
-    Color "rgb" "75" "85" "99" ViaVariable
+    Tw.Color "rgb" "75" "85" "99" Tw.ViaVariable
 
 
 gray_700 : Color
 gray_700 =
-    Color "rgb" "55" "65" "81" ViaVariable
+    Tw.Color "rgb" "55" "65" "81" Tw.ViaVariable
 
 
 gray_800 : Color
 gray_800 =
-    Color "rgb" "31" "41" "55" ViaVariable
+    Tw.Color "rgb" "31" "41" "55" Tw.ViaVariable
 
 
 gray_900 : Color
 gray_900 =
-    Color "rgb" "17" "24" "39" ViaVariable
+    Tw.Color "rgb" "17" "24" "39" Tw.ViaVariable
 
 
 zinc_50 : Color
 zinc_50 =
-    Color "rgb" "250" "250" "250" ViaVariable
+    Tw.Color "rgb" "250" "250" "250" Tw.ViaVariable
 
 
 zinc_100 : Color
 zinc_100 =
-    Color "rgb" "244" "244" "245" ViaVariable
+    Tw.Color "rgb" "244" "244" "245" Tw.ViaVariable
 
 
 zinc_200 : Color
 zinc_200 =
-    Color "rgb" "228" "228" "231" ViaVariable
+    Tw.Color "rgb" "228" "228" "231" Tw.ViaVariable
 
 
 zinc_300 : Color
 zinc_300 =
-    Color "rgb" "212" "212" "216" ViaVariable
+    Tw.Color "rgb" "212" "212" "216" Tw.ViaVariable
 
 
 zinc_400 : Color
 zinc_400 =
-    Color "rgb" "161" "161" "170" ViaVariable
+    Tw.Color "rgb" "161" "161" "170" Tw.ViaVariable
 
 
 zinc_500 : Color
 zinc_500 =
-    Color "rgb" "113" "113" "122" ViaVariable
+    Tw.Color "rgb" "113" "113" "122" Tw.ViaVariable
 
 
 zinc_600 : Color
 zinc_600 =
-    Color "rgb" "82" "82" "91" ViaVariable
+    Tw.Color "rgb" "82" "82" "91" Tw.ViaVariable
 
 
 zinc_700 : Color
 zinc_700 =
-    Color "rgb" "63" "63" "70" ViaVariable
+    Tw.Color "rgb" "63" "63" "70" Tw.ViaVariable
 
 
 zinc_800 : Color
 zinc_800 =
-    Color "rgb" "39" "39" "42" ViaVariable
+    Tw.Color "rgb" "39" "39" "42" Tw.ViaVariable
 
 
 zinc_900 : Color
 zinc_900 =
-    Color "rgb" "24" "24" "27" ViaVariable
+    Tw.Color "rgb" "24" "24" "27" Tw.ViaVariable
 
 
 neutral_50 : Color
 neutral_50 =
-    Color "rgb" "250" "250" "250" ViaVariable
+    Tw.Color "rgb" "250" "250" "250" Tw.ViaVariable
 
 
 neutral_100 : Color
 neutral_100 =
-    Color "rgb" "245" "245" "245" ViaVariable
+    Tw.Color "rgb" "245" "245" "245" Tw.ViaVariable
 
 
 neutral_200 : Color
 neutral_200 =
-    Color "rgb" "229" "229" "229" ViaVariable
+    Tw.Color "rgb" "229" "229" "229" Tw.ViaVariable
 
 
 neutral_300 : Color
 neutral_300 =
-    Color "rgb" "212" "212" "212" ViaVariable
+    Tw.Color "rgb" "212" "212" "212" Tw.ViaVariable
 
 
 neutral_400 : Color
 neutral_400 =
-    Color "rgb" "163" "163" "163" ViaVariable
+    Tw.Color "rgb" "163" "163" "163" Tw.ViaVariable
 
 
 neutral_500 : Color
 neutral_500 =
-    Color "rgb" "115" "115" "115" ViaVariable
+    Tw.Color "rgb" "115" "115" "115" Tw.ViaVariable
 
 
 neutral_600 : Color
 neutral_600 =
-    Color "rgb" "82" "82" "82" ViaVariable
+    Tw.Color "rgb" "82" "82" "82" Tw.ViaVariable
 
 
 neutral_700 : Color
 neutral_700 =
-    Color "rgb" "64" "64" "64" ViaVariable
+    Tw.Color "rgb" "64" "64" "64" Tw.ViaVariable
 
 
 neutral_800 : Color
 neutral_800 =
-    Color "rgb" "38" "38" "38" ViaVariable
+    Tw.Color "rgb" "38" "38" "38" Tw.ViaVariable
 
 
 neutral_900 : Color
 neutral_900 =
-    Color "rgb" "23" "23" "23" ViaVariable
+    Tw.Color "rgb" "23" "23" "23" Tw.ViaVariable
 
 
 stone_50 : Color
 stone_50 =
-    Color "rgb" "250" "250" "249" ViaVariable
+    Tw.Color "rgb" "250" "250" "249" Tw.ViaVariable
 
 
 stone_100 : Color
 stone_100 =
-    Color "rgb" "245" "245" "244" ViaVariable
+    Tw.Color "rgb" "245" "245" "244" Tw.ViaVariable
 
 
 stone_200 : Color
 stone_200 =
-    Color "rgb" "231" "229" "228" ViaVariable
+    Tw.Color "rgb" "231" "229" "228" Tw.ViaVariable
 
 
 stone_300 : Color
 stone_300 =
-    Color "rgb" "214" "211" "209" ViaVariable
+    Tw.Color "rgb" "214" "211" "209" Tw.ViaVariable
 
 
 stone_400 : Color
 stone_400 =
-    Color "rgb" "168" "162" "158" ViaVariable
+    Tw.Color "rgb" "168" "162" "158" Tw.ViaVariable
 
 
 stone_500 : Color
 stone_500 =
-    Color "rgb" "120" "113" "108" ViaVariable
+    Tw.Color "rgb" "120" "113" "108" Tw.ViaVariable
 
 
 stone_600 : Color
 stone_600 =
-    Color "rgb" "87" "83" "78" ViaVariable
+    Tw.Color "rgb" "87" "83" "78" Tw.ViaVariable
 
 
 stone_700 : Color
 stone_700 =
-    Color "rgb" "68" "64" "60" ViaVariable
+    Tw.Color "rgb" "68" "64" "60" Tw.ViaVariable
 
 
 stone_800 : Color
 stone_800 =
-    Color "rgb" "41" "37" "36" ViaVariable
+    Tw.Color "rgb" "41" "37" "36" Tw.ViaVariable
 
 
 stone_900 : Color
 stone_900 =
-    Color "rgb" "28" "25" "23" ViaVariable
+    Tw.Color "rgb" "28" "25" "23" Tw.ViaVariable
 
 
 red_50 : Color
 red_50 =
-    Color "rgb" "254" "242" "242" ViaVariable
+    Tw.Color "rgb" "254" "242" "242" Tw.ViaVariable
 
 
 red_100 : Color
 red_100 =
-    Color "rgb" "254" "226" "226" ViaVariable
+    Tw.Color "rgb" "254" "226" "226" Tw.ViaVariable
 
 
 red_200 : Color
 red_200 =
-    Color "rgb" "254" "202" "202" ViaVariable
+    Tw.Color "rgb" "254" "202" "202" Tw.ViaVariable
 
 
 red_300 : Color
 red_300 =
-    Color "rgb" "252" "165" "165" ViaVariable
+    Tw.Color "rgb" "252" "165" "165" Tw.ViaVariable
 
 
 red_400 : Color
 red_400 =
-    Color "rgb" "248" "113" "113" ViaVariable
+    Tw.Color "rgb" "248" "113" "113" Tw.ViaVariable
 
 
 red_500 : Color
 red_500 =
-    Color "rgb" "239" "68" "68" ViaVariable
+    Tw.Color "rgb" "239" "68" "68" Tw.ViaVariable
 
 
 red_600 : Color
 red_600 =
-    Color "rgb" "220" "38" "38" ViaVariable
+    Tw.Color "rgb" "220" "38" "38" Tw.ViaVariable
 
 
 red_700 : Color
 red_700 =
-    Color "rgb" "185" "28" "28" ViaVariable
+    Tw.Color "rgb" "185" "28" "28" Tw.ViaVariable
 
 
 red_800 : Color
 red_800 =
-    Color "rgb" "153" "27" "27" ViaVariable
+    Tw.Color "rgb" "153" "27" "27" Tw.ViaVariable
 
 
 red_900 : Color
 red_900 =
-    Color "rgb" "127" "29" "29" ViaVariable
+    Tw.Color "rgb" "127" "29" "29" Tw.ViaVariable
 
 
 orange_50 : Color
 orange_50 =
-    Color "rgb" "255" "247" "237" ViaVariable
+    Tw.Color "rgb" "255" "247" "237" Tw.ViaVariable
 
 
 orange_100 : Color
 orange_100 =
-    Color "rgb" "255" "237" "213" ViaVariable
+    Tw.Color "rgb" "255" "237" "213" Tw.ViaVariable
 
 
 orange_200 : Color
 orange_200 =
-    Color "rgb" "254" "215" "170" ViaVariable
+    Tw.Color "rgb" "254" "215" "170" Tw.ViaVariable
 
 
 orange_300 : Color
 orange_300 =
-    Color "rgb" "253" "186" "116" ViaVariable
+    Tw.Color "rgb" "253" "186" "116" Tw.ViaVariable
 
 
 orange_400 : Color
 orange_400 =
-    Color "rgb" "251" "146" "60" ViaVariable
+    Tw.Color "rgb" "251" "146" "60" Tw.ViaVariable
 
 
 orange_500 : Color
 orange_500 =
-    Color "rgb" "249" "115" "22" ViaVariable
+    Tw.Color "rgb" "249" "115" "22" Tw.ViaVariable
 
 
 orange_600 : Color
 orange_600 =
-    Color "rgb" "234" "88" "12" ViaVariable
+    Tw.Color "rgb" "234" "88" "12" Tw.ViaVariable
 
 
 orange_700 : Color
 orange_700 =
-    Color "rgb" "194" "65" "12" ViaVariable
+    Tw.Color "rgb" "194" "65" "12" Tw.ViaVariable
 
 
 orange_800 : Color
 orange_800 =
-    Color "rgb" "154" "52" "18" ViaVariable
+    Tw.Color "rgb" "154" "52" "18" Tw.ViaVariable
 
 
 orange_900 : Color
 orange_900 =
-    Color "rgb" "124" "45" "18" ViaVariable
+    Tw.Color "rgb" "124" "45" "18" Tw.ViaVariable
 
 
 amber_50 : Color
 amber_50 =
-    Color "rgb" "255" "251" "235" ViaVariable
+    Tw.Color "rgb" "255" "251" "235" Tw.ViaVariable
 
 
 amber_100 : Color
 amber_100 =
-    Color "rgb" "254" "243" "199" ViaVariable
+    Tw.Color "rgb" "254" "243" "199" Tw.ViaVariable
 
 
 amber_200 : Color
 amber_200 =
-    Color "rgb" "253" "230" "138" ViaVariable
+    Tw.Color "rgb" "253" "230" "138" Tw.ViaVariable
 
 
 amber_300 : Color
 amber_300 =
-    Color "rgb" "252" "211" "77" ViaVariable
+    Tw.Color "rgb" "252" "211" "77" Tw.ViaVariable
 
 
 amber_400 : Color
 amber_400 =
-    Color "rgb" "251" "191" "36" ViaVariable
+    Tw.Color "rgb" "251" "191" "36" Tw.ViaVariable
 
 
 amber_500 : Color
 amber_500 =
-    Color "rgb" "245" "158" "11" ViaVariable
+    Tw.Color "rgb" "245" "158" "11" Tw.ViaVariable
 
 
 amber_600 : Color
 amber_600 =
-    Color "rgb" "217" "119" "6" ViaVariable
+    Tw.Color "rgb" "217" "119" "6" Tw.ViaVariable
 
 
 amber_700 : Color
 amber_700 =
-    Color "rgb" "180" "83" "9" ViaVariable
+    Tw.Color "rgb" "180" "83" "9" Tw.ViaVariable
 
 
 amber_800 : Color
 amber_800 =
-    Color "rgb" "146" "64" "14" ViaVariable
+    Tw.Color "rgb" "146" "64" "14" Tw.ViaVariable
 
 
 amber_900 : Color
 amber_900 =
-    Color "rgb" "120" "53" "15" ViaVariable
+    Tw.Color "rgb" "120" "53" "15" Tw.ViaVariable
 
 
 yellow_50 : Color
 yellow_50 =
-    Color "rgb" "254" "252" "232" ViaVariable
+    Tw.Color "rgb" "254" "252" "232" Tw.ViaVariable
 
 
 yellow_100 : Color
 yellow_100 =
-    Color "rgb" "254" "249" "195" ViaVariable
+    Tw.Color "rgb" "254" "249" "195" Tw.ViaVariable
 
 
 yellow_200 : Color
 yellow_200 =
-    Color "rgb" "254" "240" "138" ViaVariable
+    Tw.Color "rgb" "254" "240" "138" Tw.ViaVariable
 
 
 yellow_300 : Color
 yellow_300 =
-    Color "rgb" "253" "224" "71" ViaVariable
+    Tw.Color "rgb" "253" "224" "71" Tw.ViaVariable
 
 
 yellow_400 : Color
 yellow_400 =
-    Color "rgb" "250" "204" "21" ViaVariable
+    Tw.Color "rgb" "250" "204" "21" Tw.ViaVariable
 
 
 yellow_500 : Color
 yellow_500 =
-    Color "rgb" "234" "179" "8" ViaVariable
+    Tw.Color "rgb" "234" "179" "8" Tw.ViaVariable
 
 
 yellow_600 : Color
 yellow_600 =
-    Color "rgb" "202" "138" "4" ViaVariable
+    Tw.Color "rgb" "202" "138" "4" Tw.ViaVariable
 
 
 yellow_700 : Color
 yellow_700 =
-    Color "rgb" "161" "98" "7" ViaVariable
+    Tw.Color "rgb" "161" "98" "7" Tw.ViaVariable
 
 
 yellow_800 : Color
 yellow_800 =
-    Color "rgb" "133" "77" "14" ViaVariable
+    Tw.Color "rgb" "133" "77" "14" Tw.ViaVariable
 
 
 yellow_900 : Color
 yellow_900 =
-    Color "rgb" "113" "63" "18" ViaVariable
+    Tw.Color "rgb" "113" "63" "18" Tw.ViaVariable
 
 
 lime_50 : Color
 lime_50 =
-    Color "rgb" "247" "254" "231" ViaVariable
+    Tw.Color "rgb" "247" "254" "231" Tw.ViaVariable
 
 
 lime_100 : Color
 lime_100 =
-    Color "rgb" "236" "252" "203" ViaVariable
+    Tw.Color "rgb" "236" "252" "203" Tw.ViaVariable
 
 
 lime_200 : Color
 lime_200 =
-    Color "rgb" "217" "249" "157" ViaVariable
+    Tw.Color "rgb" "217" "249" "157" Tw.ViaVariable
 
 
 lime_300 : Color
 lime_300 =
-    Color "rgb" "190" "242" "100" ViaVariable
+    Tw.Color "rgb" "190" "242" "100" Tw.ViaVariable
 
 
 lime_400 : Color
 lime_400 =
-    Color "rgb" "163" "230" "53" ViaVariable
+    Tw.Color "rgb" "163" "230" "53" Tw.ViaVariable
 
 
 lime_500 : Color
 lime_500 =
-    Color "rgb" "132" "204" "22" ViaVariable
+    Tw.Color "rgb" "132" "204" "22" Tw.ViaVariable
 
 
 lime_600 : Color
 lime_600 =
-    Color "rgb" "101" "163" "13" ViaVariable
+    Tw.Color "rgb" "101" "163" "13" Tw.ViaVariable
 
 
 lime_700 : Color
 lime_700 =
-    Color "rgb" "77" "124" "15" ViaVariable
+    Tw.Color "rgb" "77" "124" "15" Tw.ViaVariable
 
 
 lime_800 : Color
 lime_800 =
-    Color "rgb" "63" "98" "18" ViaVariable
+    Tw.Color "rgb" "63" "98" "18" Tw.ViaVariable
 
 
 lime_900 : Color
 lime_900 =
-    Color "rgb" "54" "83" "20" ViaVariable
+    Tw.Color "rgb" "54" "83" "20" Tw.ViaVariable
 
 
 green_50 : Color
 green_50 =
-    Color "rgb" "240" "253" "244" ViaVariable
+    Tw.Color "rgb" "240" "253" "244" Tw.ViaVariable
 
 
 green_100 : Color
 green_100 =
-    Color "rgb" "220" "252" "231" ViaVariable
+    Tw.Color "rgb" "220" "252" "231" Tw.ViaVariable
 
 
 green_200 : Color
 green_200 =
-    Color "rgb" "187" "247" "208" ViaVariable
+    Tw.Color "rgb" "187" "247" "208" Tw.ViaVariable
 
 
 green_300 : Color
 green_300 =
-    Color "rgb" "134" "239" "172" ViaVariable
+    Tw.Color "rgb" "134" "239" "172" Tw.ViaVariable
 
 
 green_400 : Color
 green_400 =
-    Color "rgb" "74" "222" "128" ViaVariable
+    Tw.Color "rgb" "74" "222" "128" Tw.ViaVariable
 
 
 green_500 : Color
 green_500 =
-    Color "rgb" "34" "197" "94" ViaVariable
+    Tw.Color "rgb" "34" "197" "94" Tw.ViaVariable
 
 
 green_600 : Color
 green_600 =
-    Color "rgb" "22" "163" "74" ViaVariable
+    Tw.Color "rgb" "22" "163" "74" Tw.ViaVariable
 
 
 green_700 : Color
 green_700 =
-    Color "rgb" "21" "128" "61" ViaVariable
+    Tw.Color "rgb" "21" "128" "61" Tw.ViaVariable
 
 
 green_800 : Color
 green_800 =
-    Color "rgb" "22" "101" "52" ViaVariable
+    Tw.Color "rgb" "22" "101" "52" Tw.ViaVariable
 
 
 green_900 : Color
 green_900 =
-    Color "rgb" "20" "83" "45" ViaVariable
+    Tw.Color "rgb" "20" "83" "45" Tw.ViaVariable
 
 
 emerald_50 : Color
 emerald_50 =
-    Color "rgb" "236" "253" "245" ViaVariable
+    Tw.Color "rgb" "236" "253" "245" Tw.ViaVariable
 
 
 emerald_100 : Color
 emerald_100 =
-    Color "rgb" "209" "250" "229" ViaVariable
+    Tw.Color "rgb" "209" "250" "229" Tw.ViaVariable
 
 
 emerald_200 : Color
 emerald_200 =
-    Color "rgb" "167" "243" "208" ViaVariable
+    Tw.Color "rgb" "167" "243" "208" Tw.ViaVariable
 
 
 emerald_300 : Color
 emerald_300 =
-    Color "rgb" "110" "231" "183" ViaVariable
+    Tw.Color "rgb" "110" "231" "183" Tw.ViaVariable
 
 
 emerald_400 : Color
 emerald_400 =
-    Color "rgb" "52" "211" "153" ViaVariable
+    Tw.Color "rgb" "52" "211" "153" Tw.ViaVariable
 
 
 emerald_500 : Color
 emerald_500 =
-    Color "rgb" "16" "185" "129" ViaVariable
+    Tw.Color "rgb" "16" "185" "129" Tw.ViaVariable
 
 
 emerald_600 : Color
 emerald_600 =
-    Color "rgb" "5" "150" "105" ViaVariable
+    Tw.Color "rgb" "5" "150" "105" Tw.ViaVariable
 
 
 emerald_700 : Color
 emerald_700 =
-    Color "rgb" "4" "120" "87" ViaVariable
+    Tw.Color "rgb" "4" "120" "87" Tw.ViaVariable
 
 
 emerald_800 : Color
 emerald_800 =
-    Color "rgb" "6" "95" "70" ViaVariable
+    Tw.Color "rgb" "6" "95" "70" Tw.ViaVariable
 
 
 emerald_900 : Color
 emerald_900 =
-    Color "rgb" "6" "78" "59" ViaVariable
+    Tw.Color "rgb" "6" "78" "59" Tw.ViaVariable
 
 
 teal_50 : Color
 teal_50 =
-    Color "rgb" "240" "253" "250" ViaVariable
+    Tw.Color "rgb" "240" "253" "250" Tw.ViaVariable
 
 
 teal_100 : Color
 teal_100 =
-    Color "rgb" "204" "251" "241" ViaVariable
+    Tw.Color "rgb" "204" "251" "241" Tw.ViaVariable
 
 
 teal_200 : Color
 teal_200 =
-    Color "rgb" "153" "246" "228" ViaVariable
+    Tw.Color "rgb" "153" "246" "228" Tw.ViaVariable
 
 
 teal_300 : Color
 teal_300 =
-    Color "rgb" "94" "234" "212" ViaVariable
+    Tw.Color "rgb" "94" "234" "212" Tw.ViaVariable
 
 
 teal_400 : Color
 teal_400 =
-    Color "rgb" "45" "212" "191" ViaVariable
+    Tw.Color "rgb" "45" "212" "191" Tw.ViaVariable
 
 
 teal_500 : Color
 teal_500 =
-    Color "rgb" "20" "184" "166" ViaVariable
+    Tw.Color "rgb" "20" "184" "166" Tw.ViaVariable
 
 
 teal_600 : Color
 teal_600 =
-    Color "rgb" "13" "148" "136" ViaVariable
+    Tw.Color "rgb" "13" "148" "136" Tw.ViaVariable
 
 
 teal_700 : Color
 teal_700 =
-    Color "rgb" "15" "118" "110" ViaVariable
+    Tw.Color "rgb" "15" "118" "110" Tw.ViaVariable
 
 
 teal_800 : Color
 teal_800 =
-    Color "rgb" "17" "94" "89" ViaVariable
+    Tw.Color "rgb" "17" "94" "89" Tw.ViaVariable
 
 
 teal_900 : Color
 teal_900 =
-    Color "rgb" "19" "78" "74" ViaVariable
+    Tw.Color "rgb" "19" "78" "74" Tw.ViaVariable
 
 
 cyan_50 : Color
 cyan_50 =
-    Color "rgb" "236" "254" "255" ViaVariable
+    Tw.Color "rgb" "236" "254" "255" Tw.ViaVariable
 
 
 cyan_100 : Color
 cyan_100 =
-    Color "rgb" "207" "250" "254" ViaVariable
+    Tw.Color "rgb" "207" "250" "254" Tw.ViaVariable
 
 
 cyan_200 : Color
 cyan_200 =
-    Color "rgb" "165" "243" "252" ViaVariable
+    Tw.Color "rgb" "165" "243" "252" Tw.ViaVariable
 
 
 cyan_300 : Color
 cyan_300 =
-    Color "rgb" "103" "232" "249" ViaVariable
+    Tw.Color "rgb" "103" "232" "249" Tw.ViaVariable
 
 
 cyan_400 : Color
 cyan_400 =
-    Color "rgb" "34" "211" "238" ViaVariable
+    Tw.Color "rgb" "34" "211" "238" Tw.ViaVariable
 
 
 cyan_500 : Color
 cyan_500 =
-    Color "rgb" "6" "182" "212" ViaVariable
+    Tw.Color "rgb" "6" "182" "212" Tw.ViaVariable
 
 
 cyan_600 : Color
 cyan_600 =
-    Color "rgb" "8" "145" "178" ViaVariable
+    Tw.Color "rgb" "8" "145" "178" Tw.ViaVariable
 
 
 cyan_700 : Color
 cyan_700 =
-    Color "rgb" "14" "116" "144" ViaVariable
+    Tw.Color "rgb" "14" "116" "144" Tw.ViaVariable
 
 
 cyan_800 : Color
 cyan_800 =
-    Color "rgb" "21" "94" "117" ViaVariable
+    Tw.Color "rgb" "21" "94" "117" Tw.ViaVariable
 
 
 cyan_900 : Color
 cyan_900 =
-    Color "rgb" "22" "78" "99" ViaVariable
+    Tw.Color "rgb" "22" "78" "99" Tw.ViaVariable
 
 
 sky_50 : Color
 sky_50 =
-    Color "rgb" "240" "249" "255" ViaVariable
+    Tw.Color "rgb" "240" "249" "255" Tw.ViaVariable
 
 
 sky_100 : Color
 sky_100 =
-    Color "rgb" "224" "242" "254" ViaVariable
+    Tw.Color "rgb" "224" "242" "254" Tw.ViaVariable
 
 
 sky_200 : Color
 sky_200 =
-    Color "rgb" "186" "230" "253" ViaVariable
+    Tw.Color "rgb" "186" "230" "253" Tw.ViaVariable
 
 
 sky_300 : Color
 sky_300 =
-    Color "rgb" "125" "211" "252" ViaVariable
+    Tw.Color "rgb" "125" "211" "252" Tw.ViaVariable
 
 
 sky_400 : Color
 sky_400 =
-    Color "rgb" "56" "189" "248" ViaVariable
+    Tw.Color "rgb" "56" "189" "248" Tw.ViaVariable
 
 
 sky_500 : Color
 sky_500 =
-    Color "rgb" "14" "165" "233" ViaVariable
+    Tw.Color "rgb" "14" "165" "233" Tw.ViaVariable
 
 
 sky_600 : Color
 sky_600 =
-    Color "rgb" "2" "132" "199" ViaVariable
+    Tw.Color "rgb" "2" "132" "199" Tw.ViaVariable
 
 
 sky_700 : Color
 sky_700 =
-    Color "rgb" "3" "105" "161" ViaVariable
+    Tw.Color "rgb" "3" "105" "161" Tw.ViaVariable
 
 
 sky_800 : Color
 sky_800 =
-    Color "rgb" "7" "89" "133" ViaVariable
+    Tw.Color "rgb" "7" "89" "133" Tw.ViaVariable
 
 
 sky_900 : Color
 sky_900 =
-    Color "rgb" "12" "74" "110" ViaVariable
+    Tw.Color "rgb" "12" "74" "110" Tw.ViaVariable
 
 
 blue_50 : Color
 blue_50 =
-    Color "rgb" "239" "246" "255" ViaVariable
+    Tw.Color "rgb" "239" "246" "255" Tw.ViaVariable
 
 
 blue_100 : Color
 blue_100 =
-    Color "rgb" "219" "234" "254" ViaVariable
+    Tw.Color "rgb" "219" "234" "254" Tw.ViaVariable
 
 
 blue_200 : Color
 blue_200 =
-    Color "rgb" "191" "219" "254" ViaVariable
+    Tw.Color "rgb" "191" "219" "254" Tw.ViaVariable
 
 
 blue_300 : Color
 blue_300 =
-    Color "rgb" "147" "197" "253" ViaVariable
+    Tw.Color "rgb" "147" "197" "253" Tw.ViaVariable
 
 
 blue_400 : Color
 blue_400 =
-    Color "rgb" "96" "165" "250" ViaVariable
+    Tw.Color "rgb" "96" "165" "250" Tw.ViaVariable
 
 
 blue_500 : Color
 blue_500 =
-    Color "rgb" "59" "130" "246" ViaVariable
+    Tw.Color "rgb" "59" "130" "246" Tw.ViaVariable
 
 
 blue_600 : Color
 blue_600 =
-    Color "rgb" "37" "99" "235" ViaVariable
+    Tw.Color "rgb" "37" "99" "235" Tw.ViaVariable
 
 
 blue_700 : Color
 blue_700 =
-    Color "rgb" "29" "78" "216" ViaVariable
+    Tw.Color "rgb" "29" "78" "216" Tw.ViaVariable
 
 
 blue_800 : Color
 blue_800 =
-    Color "rgb" "30" "64" "175" ViaVariable
+    Tw.Color "rgb" "30" "64" "175" Tw.ViaVariable
 
 
 blue_900 : Color
 blue_900 =
-    Color "rgb" "30" "58" "138" ViaVariable
+    Tw.Color "rgb" "30" "58" "138" Tw.ViaVariable
 
 
 indigo_50 : Color
 indigo_50 =
-    Color "rgb" "238" "242" "255" ViaVariable
+    Tw.Color "rgb" "238" "242" "255" Tw.ViaVariable
 
 
 indigo_100 : Color
 indigo_100 =
-    Color "rgb" "224" "231" "255" ViaVariable
+    Tw.Color "rgb" "224" "231" "255" Tw.ViaVariable
 
 
 indigo_200 : Color
 indigo_200 =
-    Color "rgb" "199" "210" "254" ViaVariable
+    Tw.Color "rgb" "199" "210" "254" Tw.ViaVariable
 
 
 indigo_300 : Color
 indigo_300 =
-    Color "rgb" "165" "180" "252" ViaVariable
+    Tw.Color "rgb" "165" "180" "252" Tw.ViaVariable
 
 
 indigo_400 : Color
 indigo_400 =
-    Color "rgb" "129" "140" "248" ViaVariable
+    Tw.Color "rgb" "129" "140" "248" Tw.ViaVariable
 
 
 indigo_500 : Color
 indigo_500 =
-    Color "rgb" "99" "102" "241" ViaVariable
+    Tw.Color "rgb" "99" "102" "241" Tw.ViaVariable
 
 
 indigo_600 : Color
 indigo_600 =
-    Color "rgb" "79" "70" "229" ViaVariable
+    Tw.Color "rgb" "79" "70" "229" Tw.ViaVariable
 
 
 indigo_700 : Color
 indigo_700 =
-    Color "rgb" "67" "56" "202" ViaVariable
+    Tw.Color "rgb" "67" "56" "202" Tw.ViaVariable
 
 
 indigo_800 : Color
 indigo_800 =
-    Color "rgb" "55" "48" "163" ViaVariable
+    Tw.Color "rgb" "55" "48" "163" Tw.ViaVariable
 
 
 indigo_900 : Color
 indigo_900 =
-    Color "rgb" "49" "46" "129" ViaVariable
+    Tw.Color "rgb" "49" "46" "129" Tw.ViaVariable
 
 
 violet_50 : Color
 violet_50 =
-    Color "rgb" "245" "243" "255" ViaVariable
+    Tw.Color "rgb" "245" "243" "255" Tw.ViaVariable
 
 
 violet_100 : Color
 violet_100 =
-    Color "rgb" "237" "233" "254" ViaVariable
+    Tw.Color "rgb" "237" "233" "254" Tw.ViaVariable
 
 
 violet_200 : Color
 violet_200 =
-    Color "rgb" "221" "214" "254" ViaVariable
+    Tw.Color "rgb" "221" "214" "254" Tw.ViaVariable
 
 
 violet_300 : Color
 violet_300 =
-    Color "rgb" "196" "181" "253" ViaVariable
+    Tw.Color "rgb" "196" "181" "253" Tw.ViaVariable
 
 
 violet_400 : Color
 violet_400 =
-    Color "rgb" "167" "139" "250" ViaVariable
+    Tw.Color "rgb" "167" "139" "250" Tw.ViaVariable
 
 
 violet_500 : Color
 violet_500 =
-    Color "rgb" "139" "92" "246" ViaVariable
+    Tw.Color "rgb" "139" "92" "246" Tw.ViaVariable
 
 
 violet_600 : Color
 violet_600 =
-    Color "rgb" "124" "58" "237" ViaVariable
+    Tw.Color "rgb" "124" "58" "237" Tw.ViaVariable
 
 
 violet_700 : Color
 violet_700 =
-    Color "rgb" "109" "40" "217" ViaVariable
+    Tw.Color "rgb" "109" "40" "217" Tw.ViaVariable
 
 
 violet_800 : Color
 violet_800 =
-    Color "rgb" "91" "33" "182" ViaVariable
+    Tw.Color "rgb" "91" "33" "182" Tw.ViaVariable
 
 
 violet_900 : Color
 violet_900 =
-    Color "rgb" "76" "29" "149" ViaVariable
+    Tw.Color "rgb" "76" "29" "149" Tw.ViaVariable
 
 
 purple_50 : Color
 purple_50 =
-    Color "rgb" "250" "245" "255" ViaVariable
+    Tw.Color "rgb" "250" "245" "255" Tw.ViaVariable
 
 
 purple_100 : Color
 purple_100 =
-    Color "rgb" "243" "232" "255" ViaVariable
+    Tw.Color "rgb" "243" "232" "255" Tw.ViaVariable
 
 
 purple_200 : Color
 purple_200 =
-    Color "rgb" "233" "213" "255" ViaVariable
+    Tw.Color "rgb" "233" "213" "255" Tw.ViaVariable
 
 
 purple_300 : Color
 purple_300 =
-    Color "rgb" "216" "180" "254" ViaVariable
+    Tw.Color "rgb" "216" "180" "254" Tw.ViaVariable
 
 
 purple_400 : Color
 purple_400 =
-    Color "rgb" "192" "132" "252" ViaVariable
+    Tw.Color "rgb" "192" "132" "252" Tw.ViaVariable
 
 
 purple_500 : Color
 purple_500 =
-    Color "rgb" "168" "85" "247" ViaVariable
+    Tw.Color "rgb" "168" "85" "247" Tw.ViaVariable
 
 
 purple_600 : Color
 purple_600 =
-    Color "rgb" "147" "51" "234" ViaVariable
+    Tw.Color "rgb" "147" "51" "234" Tw.ViaVariable
 
 
 purple_700 : Color
 purple_700 =
-    Color "rgb" "126" "34" "206" ViaVariable
+    Tw.Color "rgb" "126" "34" "206" Tw.ViaVariable
 
 
 purple_800 : Color
 purple_800 =
-    Color "rgb" "107" "33" "168" ViaVariable
+    Tw.Color "rgb" "107" "33" "168" Tw.ViaVariable
 
 
 purple_900 : Color
 purple_900 =
-    Color "rgb" "88" "28" "135" ViaVariable
+    Tw.Color "rgb" "88" "28" "135" Tw.ViaVariable
 
 
 fuchsia_50 : Color
 fuchsia_50 =
-    Color "rgb" "253" "244" "255" ViaVariable
+    Tw.Color "rgb" "253" "244" "255" Tw.ViaVariable
 
 
 fuchsia_100 : Color
 fuchsia_100 =
-    Color "rgb" "250" "232" "255" ViaVariable
+    Tw.Color "rgb" "250" "232" "255" Tw.ViaVariable
 
 
 fuchsia_200 : Color
 fuchsia_200 =
-    Color "rgb" "245" "208" "254" ViaVariable
+    Tw.Color "rgb" "245" "208" "254" Tw.ViaVariable
 
 
 fuchsia_300 : Color
 fuchsia_300 =
-    Color "rgb" "240" "171" "252" ViaVariable
+    Tw.Color "rgb" "240" "171" "252" Tw.ViaVariable
 
 
 fuchsia_400 : Color
 fuchsia_400 =
-    Color "rgb" "232" "121" "249" ViaVariable
+    Tw.Color "rgb" "232" "121" "249" Tw.ViaVariable
 
 
 fuchsia_500 : Color
 fuchsia_500 =
-    Color "rgb" "217" "70" "239" ViaVariable
+    Tw.Color "rgb" "217" "70" "239" Tw.ViaVariable
 
 
 fuchsia_600 : Color
 fuchsia_600 =
-    Color "rgb" "192" "38" "211" ViaVariable
+    Tw.Color "rgb" "192" "38" "211" Tw.ViaVariable
 
 
 fuchsia_700 : Color
 fuchsia_700 =
-    Color "rgb" "162" "28" "175" ViaVariable
+    Tw.Color "rgb" "162" "28" "175" Tw.ViaVariable
 
 
 fuchsia_800 : Color
 fuchsia_800 =
-    Color "rgb" "134" "25" "143" ViaVariable
+    Tw.Color "rgb" "134" "25" "143" Tw.ViaVariable
 
 
 fuchsia_900 : Color
 fuchsia_900 =
-    Color "rgb" "112" "26" "117" ViaVariable
+    Tw.Color "rgb" "112" "26" "117" Tw.ViaVariable
 
 
 pink_50 : Color
 pink_50 =
-    Color "rgb" "253" "242" "248" ViaVariable
+    Tw.Color "rgb" "253" "242" "248" Tw.ViaVariable
 
 
 pink_100 : Color
 pink_100 =
-    Color "rgb" "252" "231" "243" ViaVariable
+    Tw.Color "rgb" "252" "231" "243" Tw.ViaVariable
 
 
 pink_200 : Color
 pink_200 =
-    Color "rgb" "251" "207" "232" ViaVariable
+    Tw.Color "rgb" "251" "207" "232" Tw.ViaVariable
 
 
 pink_300 : Color
 pink_300 =
-    Color "rgb" "249" "168" "212" ViaVariable
+    Tw.Color "rgb" "249" "168" "212" Tw.ViaVariable
 
 
 pink_400 : Color
 pink_400 =
-    Color "rgb" "244" "114" "182" ViaVariable
+    Tw.Color "rgb" "244" "114" "182" Tw.ViaVariable
 
 
 pink_500 : Color
 pink_500 =
-    Color "rgb" "236" "72" "153" ViaVariable
+    Tw.Color "rgb" "236" "72" "153" Tw.ViaVariable
 
 
 pink_600 : Color
 pink_600 =
-    Color "rgb" "219" "39" "119" ViaVariable
+    Tw.Color "rgb" "219" "39" "119" Tw.ViaVariable
 
 
 pink_700 : Color
 pink_700 =
-    Color "rgb" "190" "24" "93" ViaVariable
+    Tw.Color "rgb" "190" "24" "93" Tw.ViaVariable
 
 
 pink_800 : Color
 pink_800 =
-    Color "rgb" "157" "23" "77" ViaVariable
+    Tw.Color "rgb" "157" "23" "77" Tw.ViaVariable
 
 
 pink_900 : Color
 pink_900 =
-    Color "rgb" "131" "24" "67" ViaVariable
+    Tw.Color "rgb" "131" "24" "67" Tw.ViaVariable
 
 
 rose_50 : Color
 rose_50 =
-    Color "rgb" "255" "241" "242" ViaVariable
+    Tw.Color "rgb" "255" "241" "242" Tw.ViaVariable
 
 
 rose_100 : Color
 rose_100 =
-    Color "rgb" "255" "228" "230" ViaVariable
+    Tw.Color "rgb" "255" "228" "230" Tw.ViaVariable
 
 
 rose_200 : Color
 rose_200 =
-    Color "rgb" "254" "205" "211" ViaVariable
+    Tw.Color "rgb" "254" "205" "211" Tw.ViaVariable
 
 
 rose_300 : Color
 rose_300 =
-    Color "rgb" "253" "164" "175" ViaVariable
+    Tw.Color "rgb" "253" "164" "175" Tw.ViaVariable
 
 
 rose_400 : Color
 rose_400 =
-    Color "rgb" "251" "113" "133" ViaVariable
+    Tw.Color "rgb" "251" "113" "133" Tw.ViaVariable
 
 
 rose_500 : Color
 rose_500 =
-    Color "rgb" "244" "63" "94" ViaVariable
+    Tw.Color "rgb" "244" "63" "94" Tw.ViaVariable
 
 
 rose_600 : Color
 rose_600 =
-    Color "rgb" "225" "29" "72" ViaVariable
+    Tw.Color "rgb" "225" "29" "72" Tw.ViaVariable
 
 
 rose_700 : Color
 rose_700 =
-    Color "rgb" "190" "18" "60" ViaVariable
+    Tw.Color "rgb" "190" "18" "60" Tw.ViaVariable
 
 
 rose_800 : Color
 rose_800 =
-    Color "rgb" "159" "18" "57" ViaVariable
+    Tw.Color "rgb" "159" "18" "57" Tw.ViaVariable
 
 
 rose_900 : Color
 rose_900 =
-    Color "rgb" "136" "19" "55" ViaVariable
+    Tw.Color "rgb" "136" "19" "55" Tw.ViaVariable
 
 
 opacity0 : Opacity
 opacity0 =
-    Opacity "0"
+    Tw.Opacity "0"
 
 
 opacity5 : Opacity
 opacity5 =
-    Opacity "0.05"
+    Tw.Opacity "0.05"
 
 
 opacity10 : Opacity
 opacity10 =
-    Opacity "0.1"
+    Tw.Opacity "0.1"
 
 
 opacity20 : Opacity
 opacity20 =
-    Opacity "0.2"
+    Tw.Opacity "0.2"
 
 
 opacity25 : Opacity
 opacity25 =
-    Opacity "0.25"
+    Tw.Opacity "0.25"
 
 
 opacity30 : Opacity
 opacity30 =
-    Opacity "0.3"
+    Tw.Opacity "0.3"
 
 
 opacity40 : Opacity
 opacity40 =
-    Opacity "0.4"
+    Tw.Opacity "0.4"
 
 
 opacity50 : Opacity
 opacity50 =
-    Opacity "0.5"
+    Tw.Opacity "0.5"
 
 
 opacity60 : Opacity
 opacity60 =
-    Opacity "0.6"
+    Tw.Opacity "0.6"
 
 
 opacity70 : Opacity
 opacity70 =
-    Opacity "0.7"
+    Tw.Opacity "0.7"
 
 
 opacity75 : Opacity
 opacity75 =
-    Opacity "0.75"
+    Tw.Opacity "0.75"
 
 
 opacity80 : Opacity
 opacity80 =
-    Opacity "0.8"
+    Tw.Opacity "0.8"
 
 
 opacity90 : Opacity
 opacity90 =
-    Opacity "0.9"
+    Tw.Opacity "0.9"
 
 
 opacity95 : Opacity
 opacity95 =
-    Opacity "0.95"
+    Tw.Opacity "0.95"
 
 
 opacity100 : Opacity
 opacity100 =
-    Opacity "1"
+    Tw.Opacity "1"
