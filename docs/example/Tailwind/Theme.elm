@@ -506,7 +506,6 @@ If you want to extend the set of available colors or opacities, take a look [con
 
 -}
 
-import Css
 import Tailwind.Color as Tw
 
 
