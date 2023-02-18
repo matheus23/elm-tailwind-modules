@@ -18,6 +18,7 @@ Saved
  - gen/Tailwind/Theme.elm
  - gen/Tailwind/Breakpoints.elm
 $ elm install rtfeldman/elm-css
+$ elm install matheus23/elm-tailwind-modules-base # used by the generated code internally
 ```
 
 This will generate these files:

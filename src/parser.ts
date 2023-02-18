@@ -344,9 +344,11 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
         return false
     }
 
-    // We don't want to parameterize the opacity-variants of declarations
-    // TODO maybe detect this in a different way. (E.g. capture the regex part after the color name?)
-    if (declarationName.includes("over")) {
+    // We don't want to parameterize the opacity-variants of declarations.
+    // We test this by capturing the regex part after the color name and seeing
+    // if it included the "/" part, which is translated into an "over" str in toElmName.
+    const afterColorNamePart = declarationName.substring(colorName.length + declarationName.lastIndexOf(colorName))
+    if (afterColorNamePart.includes("over")) {
         return null
     }
 

@@ -238,9 +238,6 @@ export const themeModuleDocumentation = (definedColors: string[], definedOpaciti
 
 This module contains all colors and opacities from your tailwind configuration.
 
-It also contains some internal utilities, which need to be exposed to make them available to
-the \`Utilities.elm\` module, but are only meant for internal usage.
-
 If you want to extend the set of available colors or opacities, take a look [configuring tailwind].
 
 
@@ -253,22 +250,9 @@ ${definedColors.map(name => `@docs ${name}`).join("\n")}
 ### Opacities
 
 @docs Opacity
-@docs withOpacity
 ${definedOpacities.map(name => `@docs ${name}`).join("\n")}
 
-
-### Custom values
-
-@docs arbitraryRgb
-@docs arbitraryRgba
-@docs arbitraryOpacityPct
-
-
-### Internal
-
-@docs internal
-
-[tailwind documentation]: https://tailwindcss.com/docs/responsive-design
+[configuring tailwind]: https://tailwindcss.com/docs/responsive-design
 
 -}
 `;

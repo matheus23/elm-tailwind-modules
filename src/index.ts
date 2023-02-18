@@ -82,8 +82,8 @@ export async function run({
         }
     });
 
-    // TODO Remove resolvePostcssFile
-    const {from, file: css} = await resolvePostcssFile(null);
+    const from = "generated in-memory";
+    const css = "@tailwind base;\n@tailwind components;\n@tailwind utilities;";
     const to = "output in-memory";
     const postcssResult = await postcss.default([
         tailwindcss(tailwindConfig_),
@@ -124,9 +124,9 @@ export function asPostcssPlugin({moduleName, tailwindConfig, generateDocumentati
             const resolvedOpacities = tailwindThemeGeneration.expandOpacities(resolvedConfig.theme.opacity);
             const blocksByClass = parser.groupDeclarationBlocksByClass(root, resolvedColors, logFunction);
 
-            const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName + ".Utilities", blocksByClass, docGen);
-            const themeModule = tailwindThemeGeneration.generateElmModule(moduleName + ".Theme", resolvedColors, resolvedOpacities, docGen);
-            const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName + ".Breakpoints", resolvedConfig, docGen);
+            const utilitiesModule = tailwindUtilityGeneration.generateElmModule(moduleName, blocksByClass, docGen);
+            const themeModule = tailwindThemeGeneration.generateElmModule(moduleName, resolvedColors, resolvedOpacities, docGen);
+            const breakpointsModule = tailwindBreakpointsGeneration.generateElmModule(moduleName, resolvedConfig, docGen);
             
             modulesGeneratedHook({utilitiesModule, breakpointsModule, themeModule});
         }
@@ -173,21 +173,6 @@ function warningsTailwindConfig(tailwindConfig: any, logFunction: LogFunction) {
 Instead, you should use elm-css functions like ${chalk.blue("Css.focus")} and ${chalk.blue("Css.hover")}.
 If you still have a usecase that needs variants, please create an issue.`);
     }
-}
-
-
-async function resolvePostcssFile(postcssFile: null | string): Promise<{file: string, from: string}> {
-    if (postcssFile == null) {
-        return {
-            from: "generated in-memory",
-            file: "@tailwind base;\n@tailwind components;\n@tailwind utilities;",
-        };
-    }
-    const content = await fs.readFile(postcssFile, {encoding: "utf-8"});
-    return {
-        from: postcssFile,
-        file: content
-    };
 }
 
 function resolveDocGen(docs: boolean | documentation.DocumentationGenerator): documentation.DocumentationGenerator {
