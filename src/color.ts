@@ -102,13 +102,7 @@ export function formatColor({ mode, color, alpha }: Color) {
 }
 
 export function colorDetectionRegex({ mode, color, alpha }: Color): RegExp {
-    let hasAlpha = alpha !== undefined
-
-    if (hasAlpha) {
-        return new RegExp(String.raw`${mode}\(${color.join(' ')} / ${alpha}\)`)
-    }
-
-    return new RegExp(String.raw`${mode}\(${color.join(' ')} / (:?var\((?<varname>[^)]+)\)|(?<literal>[\d.]+))\)`)
+    return new RegExp(String.raw`${mode}\(${color.join(',?\\s')}((\s/|,)\s(:?var\((?<varname>[^)]+)\)|(?<literal>[\d.]+)))?\)`)
 }
 
 function fromNumbered(rgb: [number, number, number]): RGB {

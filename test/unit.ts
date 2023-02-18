@@ -18,7 +18,7 @@ async function generateModulesWithDefaultColorConfig(t: ExecutionContext) {
                     "by-hsl": "hsl(30, 100%, 50%)",
                     "by-hsl-deg": "hsl(30deg 100% 50%)",    
                     "by-hsla": "hsla(30, 100%, 50%, .3)",
-                    "by-hwb": "hwb(1.5708rad 20% 10% / 0.7)",
+                    // "by-hwb": "hwb(1.5708rad 20% 10% / 0.7)", tailwindcss doesn't support hwb at the moment
                 },
             },
             extend: {},

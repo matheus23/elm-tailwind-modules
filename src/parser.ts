@@ -399,15 +399,15 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
         propertiesBySelector: declaration.propertiesBySelector.map(selector => ({
             ...selector,
             properties: selector.properties.map(property => {
-                // Look for resolvedColor
-                const matchResolved = property.value.match(resolvedColor.original)
-                if (matchResolved) {
-                    const matchStartIdx = matchResolved.index;
-                    const matchEndIdx = matchResolved.index + matchResolved[0].length;
+                // Look for unmodified colors appearing as in the config
+                const matchIndex = property.value.indexOf(resolvedColor.original)
+                if (matchIndex >= 0) {
+                    const matchStartIdx = matchIndex;
+                    const matchEndIdx = matchIndex + resolvedColor.original.length;
                     const valuePrefix = property.value.substring(0, matchStartIdx);
                     const valueSuffix = property.value.substring(matchEndIdx);
 
-                    originalColorsReplaced.push(matchResolved[0]);
+                    originalColorsReplaced.push(resolvedColor.original);
                     return {
                         prop: property.prop,
                         valuePrefix,
@@ -415,7 +415,7 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
                     }
                 }
 
-                // Look for parsedColorRegex
+                // Look for modified colors via regex
                 if (resolvedColor.regex != null) {
                     const matchParsed = property.value.match(resolvedColor.regex)
                     if (matchParsed) {
