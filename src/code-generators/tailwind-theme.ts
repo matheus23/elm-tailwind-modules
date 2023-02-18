@@ -24,7 +24,6 @@ export function generateElmModule(
                 ...definedOpacities,
             ],
             imports: [
-                generate.singleLine("import Css"),
                 generate.singleLine("import Tailwind.Color as Tw"),
             ],
             moduleDocs: themeModuleDocumentation(definedColors, definedOpacities),

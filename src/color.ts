@@ -7,7 +7,10 @@ const namedColors: Record<string, RGB> = Object.entries(allCols)
         {}
     )
 
-// Adapted from https://github.com/tailwindlabs/tailwindcss/blob/547f9f674a28fc46cc4e02b51f9afefc6418a765/src/util/color.js
+export type RGB = [string, string, string];
+export type Color = { mode: string; color: RGB; alpha?: string };
+
+// Adapted from https://github.com/tailwindlabs/tailwindcss/blob/d6121f0ede5f767029bdab9f28b141ed85d543d2/src/util/color.js
 
 let HEX = /^#([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i
 let SHORT_HEX = /^#([a-f\d])([a-f\d])([a-f\d])([a-f\d])?$/i
@@ -17,14 +20,11 @@ let ALPHA_SEP = /\s*[,/]\s*/
 let CUSTOM_PROPERTY = /var\(--(?:[^ )]*?)\)/
 
 let RGB = new RegExp(
-    `^(rgb)a?\\(\\s*(${VALUE.source}|${CUSTOM_PROPERTY.source})(?:${SEP.source}(${VALUE.source}|${CUSTOM_PROPERTY.source}))?(?:${SEP.source}(${VALUE.source}|${CUSTOM_PROPERTY.source}))?(?:${ALPHA_SEP.source}(${VALUE.source}|${CUSTOM_PROPERTY.source}))?\\s*\\)$`
+    `^(rgba?)\\(\\s*(${VALUE.source}|${CUSTOM_PROPERTY.source})(?:${SEP.source}(${VALUE.source}|${CUSTOM_PROPERTY.source}))?(?:${SEP.source}(${VALUE.source}|${CUSTOM_PROPERTY.source}))?(?:${ALPHA_SEP.source}(${VALUE.source}|${CUSTOM_PROPERTY.source}))?\\s*\\)$`
 )
 let HSL = new RegExp(
-    `^(hsl)a?\\(\\s*((?:${VALUE.source})(?:deg|rad|grad|turn)?|${CUSTOM_PROPERTY.source})(?:${SEP.source}(${VALUE.source}|${CUSTOM_PROPERTY.source}))?(?:${SEP.source}(${VALUE.source}|${CUSTOM_PROPERTY.source}))?(?:${ALPHA_SEP.source}(${VALUE.source}|${CUSTOM_PROPERTY.source}))?\\s*\\)$`
+    `^(hsla?)\\(\\s*((?:${VALUE.source})(?:deg|rad|grad|turn)?|${CUSTOM_PROPERTY.source})(?:${SEP.source}(${VALUE.source}|${CUSTOM_PROPERTY.source}))?(?:${SEP.source}(${VALUE.source}|${CUSTOM_PROPERTY.source}))?(?:${ALPHA_SEP.source}(${VALUE.source}|${CUSTOM_PROPERTY.source}))?\\s*\\)$`
 )
-
-export type RGB = [string, string, string];
-export type Color = { mode: string; color: RGB; alpha?: string };
 
 // In "loose" mode the color may contain fewer than 3 parts, as long as at least
 // one of the parts is variable.
@@ -66,6 +66,16 @@ export function parseColor(value: string, { loose = false } = {}): null | Color 
 
     let color = [match[2], match[3], match[4]].filter(Boolean).map((v) => v.toString())
 
+    // rgba(var(--my-color), 0.1)
+    // hsla(var(--my-color), 0.1)
+    if (color.length === 2 && color[0].startsWith('var(')) {
+        return {
+            mode: match[1],
+            color: [color[0], "", ""], // TODO
+            alpha: color[1],
+        }
+    }
+
     if (!loose && color.length !== 3) {
         return null
     }
@@ -83,17 +93,16 @@ export function parseColor(value: string, { loose = false } = {}): null | Color 
 
 export function formatColor({ mode, color, alpha }: Color) {
     let hasAlpha = alpha !== undefined
+
+    if (mode === 'rgba' || mode === 'hsla') {
+        return `${mode}(${color.join(', ')}${hasAlpha ? `, ${alpha}` : ''})`
+    }
+
     return `${mode}(${color.join(' ')}${hasAlpha ? ` / ${alpha}` : ''})`
 }
 
 export function colorDetectionRegex({ mode, color, alpha }: Color): RegExp {
-    let hasAlpha = alpha !== undefined
-    
-    if (hasAlpha) {
-        return new RegExp(String.raw`${mode}\(${color.join(' ')} / ${alpha}\)`)
-    }
-
-    return new RegExp(String.raw`${mode}\(${color.join(' ')} / (:?var\((?<varname>[^)]+)\)|(?<literal>[\d.]+))\)`)
+    return new RegExp(String.raw`${mode}\(${color.join(',?\\s')}((\s/|,)\s(:?var\((?<varname>[^)]+)\)|(?<literal>[\d.]+)))?\)`)
 }
 
 function fromNumbered(rgb: [number, number, number]): RGB {

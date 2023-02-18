@@ -199,9 +199,11 @@ export function groupDeclarationBlocksByClass(
         // in elm-css, yet; for example @font-face rules).
         rule.remove();
     }
+    
+    const colorInfo = parameterizationInfo(resolvedColors);
 
     for (const [elmDeclName, declaration] of recognized) {
-        const parameterizedDeclaration = isParameterizable(elmDeclName, declaration, resolvedColors);
+        const parameterizedDeclaration = isParameterizable(elmDeclName, declaration, colorInfo);
 
         if (parameterizedDeclaration === false) {
             continue;
@@ -328,15 +330,47 @@ function stripClassSelector(
     };
 }
 
-function isParameterizable(declarationName: string, declaration: RecognizedDeclaration, resolvedColors: [string, string][]): false | null | [string, ParameterizedDeclaration] {
+interface ParameterizationInfo {
+    resolvedColors: [string, string][]
+    anyColorName: RegExp
+    colorByName: Record<string, ColorInfo>
+}
+
+interface ColorInfo {
+    original: string
+    parsed: null | color.Color
+    regex: null | RegExp
+}
+
+function parameterizationInfo(resolvedColors: [string, string][]): ParameterizationInfo {
     // If we don't sort by descending color name length, we have this edge-case:
     // e.g. blue_50 & blue_500 both appear in the regex.
     // bg_blue_500 matches with blue_50, but we want to match blue_500,
     // so we need the longest possible match
     const possibleColorNames = resolvedColors.map(([name, _]) => name).sort((a, b) => b.length - a.length);
-    const regex = new RegExp(String.raw`(:?.*)(?<colorName>${possibleColorNames.join('|')}).*$`)
+    const anyColorName = new RegExp(String.raw`(:?.*)(?<colorName>${possibleColorNames.join('|')}).*$`)
 
-    const matches = declarationName.match(regex);
+    const colorByName: Record<string, ColorInfo> = resolvedColors.reduce((acc, [name, original]) => {
+        const parsed = color.parseColor(original);
+        const regex = parsed != null ? color.colorDetectionRegex(parsed) : null;
+    
+        const info = {
+            original,
+            parsed,
+            regex,
+        }
+        return Object.assign(acc, { [name]: info })
+    }, {});
+
+    return {
+        resolvedColors,
+        anyColorName,
+        colorByName,
+    }
+}
+
+function isParameterizable(declarationName: string, declaration: RecognizedDeclaration, colorInfo: ParameterizationInfo): false | null | [string, ParameterizedDeclaration] {
+    const matches = declarationName.match(colorInfo.anyColorName);
 
     const colorName = matches?.groups?.colorName;
 
@@ -351,17 +385,12 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
     if (afterColorNamePart.includes("over")) {
         return null
     }
-
-    const colorByName: Record<string, string> = resolvedColors.reduce((acc, [name, color]) => Object.assign(acc, { [name]: color }), {});
-
-    const resolvedColor = colorByName[colorName];
+    
+    const resolvedColor = colorInfo.colorByName[colorName];
 
     if (resolvedColor == null) {
         console.warn("Couldn't find a color with this name", colorName);
     }
-
-    const parsedColor = color.parseColor(resolvedColor);
-    const parsedColorRegex = parsedColor != null ? color.colorDetectionRegex(parsedColor) : null;
 
     const originalColorsReplaced: string[] = [];
 
@@ -370,15 +399,15 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
         propertiesBySelector: declaration.propertiesBySelector.map(selector => ({
             ...selector,
             properties: selector.properties.map(property => {
-                // Look for resolvedColor
-                const matchResolved = property.value.match(resolvedColor)
-                if (matchResolved) {
-                    const matchStartIdx = matchResolved.index;
-                    const matchEndIdx = matchResolved.index + matchResolved[0].length;
+                // Look for unmodified colors appearing as in the config
+                const matchIndex = property.value.indexOf(resolvedColor.original)
+                if (matchIndex >= 0) {
+                    const matchStartIdx = matchIndex;
+                    const matchEndIdx = matchIndex + resolvedColor.original.length;
                     const valuePrefix = property.value.substring(0, matchStartIdx);
                     const valueSuffix = property.value.substring(matchEndIdx);
 
-                    originalColorsReplaced.push(matchResolved[0]);
+                    originalColorsReplaced.push(resolvedColor.original);
                     return {
                         prop: property.prop,
                         valuePrefix,
@@ -386,9 +415,9 @@ function isParameterizable(declarationName: string, declaration: RecognizedDecla
                     }
                 }
 
-                // Look for parsedColorRegex
-                if (parsedColorRegex != null) {
-                    const matchParsed = property.value.match(parsedColorRegex)
+                // Look for modified colors via regex
+                if (resolvedColor.regex != null) {
+                    const matchParsed = property.value.match(resolvedColor.regex)
                     if (matchParsed) {
                         const matchStartIdx = matchParsed.index;
                         const matchEndIdx = matchParsed.index + matchParsed[0].length;
