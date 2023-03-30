@@ -36,6 +36,8 @@ export function toElmName(cls: string): string {
     elm = elm.replace(/-/g, "_");
     // replace :
     elm = elm.replace(/:/g, "__");
+    // replace %
+    elm = elm.replace(/%/g, "pct");
     // handle fractions
     elm = elm.replace(/\//g, "over");
     // clean up
