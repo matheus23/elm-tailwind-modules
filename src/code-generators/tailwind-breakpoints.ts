@@ -2,12 +2,15 @@ import * as generate from "./generate";
 import { toElmName } from "../helpers";
 import { Breakpoint, NamingOptions } from "../types";
 import { DocumentationGenerator } from "../docs";
+import type { Config, ResolvableTo } from "tailwindcss/types/config";
 
+
+type UnwrapResolvables<T> = {
+    [K in keyof T]: T[K] extends ResolvableTo<infer R> ? R : T[K]
+}
 
 interface TailwindResolvedConfig {
-    theme: {
-        screens: { [_: string]: TailwindScreen },
-    },
+    theme: UnwrapResolvables<Config['theme']>
 }
 
 type TailwindScreen = string

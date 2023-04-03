@@ -56,6 +56,15 @@ test("generated theme module doesn't contain default color key", async t => {
 })
 
 
+test("generated utilities module doesn't contain percent sign in function names", async t => {
+    const generatedModules = await generateModulesWithDefaultColorConfig(t);
+
+    const matches = allMapped(generatedModules.utilitiesModule.matchAll(/^.*%.* : Css.Style$/gm), match => match[0]);
+
+    t.assert(matches.length === 0, `There exist line matches like "${matches[0]}"`);
+})
+
+
 function allMapped<T, S>(source: Iterable<T>, f: (t: T) => S): S[] {
     const arr: S[] = []
 
