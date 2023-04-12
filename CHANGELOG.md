@@ -5,6 +5,8 @@
 * Auto-abstraction of colors from tailwind utilities
   This means your tailwind files are likely *much* smaller.
   To upgrade, import the new module `Tailwind.Theme` and transform utilities like `bg_blue_500` into calls of the form `bg_color blue_500`.
+* Abstracted out commonly used code in all generated code into `matheus23/elm-tailwind-modules-base` package.
+* Support percentage signs in tailwind class names
 
 ## 0.4.1
 

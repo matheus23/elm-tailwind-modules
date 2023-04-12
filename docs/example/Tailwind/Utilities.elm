@@ -25,6 +25,8 @@ globalStyles =
         , Css.property "-moz-tab-size" "4"
         , Css.property "tab-size" "4"
         , Css.property "font-family" "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+        , Css.property "font-feature-settings" "normal"
+        , Css.property "font-variation-settings" "normal"
         ]
     , Css.Global.selector "body"
         [ Css.property "margin" "0"
@@ -151,6 +153,9 @@ globalStyles =
     , Css.Global.selector "img,\nvideo"
         [ Css.property "max-width" "100%"
         , Css.property "height" "auto"
+        ]
+    , Css.Global.selector "[hidden]"
+        [ Css.property "display" "none"
         ]
     , Css.Global.selector "*, ::before, ::after"
         [ Css.property "--tw-border-spacing-x" "0"
@@ -1721,6 +1726,31 @@ border_double =
     Css.property "border-style" "double"
 
 
+border_e : Css.Style
+border_e =
+    Css.property "border-inline-end-width" "1px"
+
+
+border_e_0 : Css.Style
+border_e_0 =
+    Css.property "border-inline-end-width" "0px"
+
+
+border_e_2 : Css.Style
+border_e_2 =
+    Css.property "border-inline-end-width" "2px"
+
+
+border_e_4 : Css.Style
+border_e_4 =
+    Css.property "border-inline-end-width" "4px"
+
+
+border_e_8 : Css.Style
+border_e_8 =
+    Css.property "border-inline-end-width" "8px"
+
+
 border_hidden : Css.Style
 border_hidden =
     Css.property "border-style" "hidden"
@@ -1854,6 +1884,31 @@ border_r_4 =
 border_r_8 : Css.Style
 border_r_8 =
     Css.property "border-right-width" "8px"
+
+
+border_s : Css.Style
+border_s =
+    Css.property "border-inline-start-width" "1px"
+
+
+border_s_0 : Css.Style
+border_s_0 =
+    Css.property "border-inline-start-width" "0px"
+
+
+border_s_2 : Css.Style
+border_s_2 =
+    Css.property "border-inline-start-width" "2px"
+
+
+border_s_4 : Css.Style
+border_s_4 =
+    Css.property "border-inline-start-width" "4px"
+
+
+border_s_8 : Css.Style
+border_s_8 =
+    Css.property "border-inline-start-width" "8px"
 
 
 border_separate : Css.Style
@@ -3186,6 +3241,11 @@ break_inside_avoid_page =
     Css.property "break-inside" "avoid-page"
 
 
+break_keep : Css.Style
+break_keep =
+    Css.property "word-break" "keep-all"
+
+
 break_normal : Css.Style
 break_normal =
     Css.batch
@@ -3290,6 +3350,16 @@ brightness_95 =
 capitalize : Css.Style
 capitalize =
     Css.property "text-transform" "capitalize"
+
+
+caption_bottom : Css.Style
+caption_bottom =
+    Css.property "caption-side" "bottom"
+
+
+caption_top : Css.Style
+caption_top =
+    Css.property "caption-side" "top"
 
 
 clear_both : Css.Style
@@ -3522,6 +3592,11 @@ col_start_auto =
     Css.property "grid-column-start" "auto"
 
 
+collapse : Css.Style
+collapse =
+    Css.property "visibility" "collapse"
+
+
 columns_1 : Css.Style
 columns_1 =
     Css.property "columns" "1"
@@ -3679,6 +3754,11 @@ content_around =
     Css.property "align-content" "space-around"
 
 
+content_baseline : Css.Style
+content_baseline =
+    Css.property "align-content" "baseline"
+
+
 content_between : Css.Style
 content_between =
     Css.property "align-content" "space-between"
@@ -3707,9 +3787,19 @@ content_none =
         ]
 
 
+content_normal : Css.Style
+content_normal =
+    Css.property "align-content" "normal"
+
+
 content_start : Css.Style
 content_start =
     Css.property "align-content" "flex-start"
+
+
+content_stretch : Css.Style
+content_stretch =
+    Css.property "align-content" "stretch"
 
 
 contents : Css.Style
@@ -4021,6 +4111,11 @@ decoration_solid =
 decoration_wavy : Css.Style
 decoration_wavy =
     Css.property "text-decoration-style" "wavy"
+
+
+delay_0 : Css.Style
+delay_0 =
+    Css.property "transition-delay" "0s"
 
 
 delay_100 : Css.Style
@@ -4435,6 +4530,11 @@ drop_shadow_xl =
         ]
 
 
+duration_0 : Css.Style
+duration_0 =
+    Css.property "transition-duration" "0s"
+
+
 duration_100 : Css.Style
 duration_100 =
     Css.property "transition-duration" "100ms"
@@ -4493,6 +4593,226 @@ ease_linear =
 ease_out : Css.Style
 ease_out =
     Css.property "transition-timing-function" "cubic-bezier(0, 0, 0.2, 1)"
+
+
+end_0 : Css.Style
+end_0 =
+    Css.property "inset-inline-end" "0px"
+
+
+end_0_dot_5 : Css.Style
+end_0_dot_5 =
+    Css.property "inset-inline-end" "0.125rem"
+
+
+end_1 : Css.Style
+end_1 =
+    Css.property "inset-inline-end" "0.25rem"
+
+
+end_10 : Css.Style
+end_10 =
+    Css.property "inset-inline-end" "2.5rem"
+
+
+end_11 : Css.Style
+end_11 =
+    Css.property "inset-inline-end" "2.75rem"
+
+
+end_12 : Css.Style
+end_12 =
+    Css.property "inset-inline-end" "3rem"
+
+
+end_14 : Css.Style
+end_14 =
+    Css.property "inset-inline-end" "3.5rem"
+
+
+end_16 : Css.Style
+end_16 =
+    Css.property "inset-inline-end" "4rem"
+
+
+end_1_dot_5 : Css.Style
+end_1_dot_5 =
+    Css.property "inset-inline-end" "0.375rem"
+
+
+end_1over2 : Css.Style
+end_1over2 =
+    Css.property "inset-inline-end" "50%"
+
+
+end_1over3 : Css.Style
+end_1over3 =
+    Css.property "inset-inline-end" "33.333333%"
+
+
+end_1over4 : Css.Style
+end_1over4 =
+    Css.property "inset-inline-end" "25%"
+
+
+end_2 : Css.Style
+end_2 =
+    Css.property "inset-inline-end" "0.5rem"
+
+
+end_20 : Css.Style
+end_20 =
+    Css.property "inset-inline-end" "5rem"
+
+
+end_24 : Css.Style
+end_24 =
+    Css.property "inset-inline-end" "6rem"
+
+
+end_28 : Css.Style
+end_28 =
+    Css.property "inset-inline-end" "7rem"
+
+
+end_2_dot_5 : Css.Style
+end_2_dot_5 =
+    Css.property "inset-inline-end" "0.625rem"
+
+
+end_2over3 : Css.Style
+end_2over3 =
+    Css.property "inset-inline-end" "66.666667%"
+
+
+end_2over4 : Css.Style
+end_2over4 =
+    Css.property "inset-inline-end" "50%"
+
+
+end_3 : Css.Style
+end_3 =
+    Css.property "inset-inline-end" "0.75rem"
+
+
+end_32 : Css.Style
+end_32 =
+    Css.property "inset-inline-end" "8rem"
+
+
+end_36 : Css.Style
+end_36 =
+    Css.property "inset-inline-end" "9rem"
+
+
+end_3_dot_5 : Css.Style
+end_3_dot_5 =
+    Css.property "inset-inline-end" "0.875rem"
+
+
+end_3over4 : Css.Style
+end_3over4 =
+    Css.property "inset-inline-end" "75%"
+
+
+end_4 : Css.Style
+end_4 =
+    Css.property "inset-inline-end" "1rem"
+
+
+end_40 : Css.Style
+end_40 =
+    Css.property "inset-inline-end" "10rem"
+
+
+end_44 : Css.Style
+end_44 =
+    Css.property "inset-inline-end" "11rem"
+
+
+end_48 : Css.Style
+end_48 =
+    Css.property "inset-inline-end" "12rem"
+
+
+end_5 : Css.Style
+end_5 =
+    Css.property "inset-inline-end" "1.25rem"
+
+
+end_52 : Css.Style
+end_52 =
+    Css.property "inset-inline-end" "13rem"
+
+
+end_56 : Css.Style
+end_56 =
+    Css.property "inset-inline-end" "14rem"
+
+
+end_6 : Css.Style
+end_6 =
+    Css.property "inset-inline-end" "1.5rem"
+
+
+end_60 : Css.Style
+end_60 =
+    Css.property "inset-inline-end" "15rem"
+
+
+end_64 : Css.Style
+end_64 =
+    Css.property "inset-inline-end" "16rem"
+
+
+end_7 : Css.Style
+end_7 =
+    Css.property "inset-inline-end" "1.75rem"
+
+
+end_72 : Css.Style
+end_72 =
+    Css.property "inset-inline-end" "18rem"
+
+
+end_8 : Css.Style
+end_8 =
+    Css.property "inset-inline-end" "2rem"
+
+
+end_80 : Css.Style
+end_80 =
+    Css.property "inset-inline-end" "20rem"
+
+
+end_9 : Css.Style
+end_9 =
+    Css.property "inset-inline-end" "2.25rem"
+
+
+end_96 : Css.Style
+end_96 =
+    Css.property "inset-inline-end" "24rem"
+
+
+end_auto : Css.Style
+end_auto =
+    Css.property "inset-inline-end" "auto"
+
+
+end_full : Css.Style
+end_full =
+    Css.property "inset-inline-end" "100%"
+
+
+end_px : Css.Style
+end_px =
+    Css.property "inset-inline-end" "1px"
+
+
+fill_none : Css.Style
+fill_none =
+    Css.property "fill" "none"
 
 
 filter : Css.Style
@@ -4668,6 +4988,111 @@ font_serif =
 font_thin : Css.Style
 font_thin =
     Css.property "font-weight" "100"
+
+
+from_0pct : Css.Style
+from_0pct =
+    Css.property "--tw-gradient-from-position" "0%"
+
+
+from_100pct : Css.Style
+from_100pct =
+    Css.property "--tw-gradient-from-position" "100%"
+
+
+from_10pct : Css.Style
+from_10pct =
+    Css.property "--tw-gradient-from-position" "10%"
+
+
+from_15pct : Css.Style
+from_15pct =
+    Css.property "--tw-gradient-from-position" "15%"
+
+
+from_20pct : Css.Style
+from_20pct =
+    Css.property "--tw-gradient-from-position" "20%"
+
+
+from_25pct : Css.Style
+from_25pct =
+    Css.property "--tw-gradient-from-position" "25%"
+
+
+from_30pct : Css.Style
+from_30pct =
+    Css.property "--tw-gradient-from-position" "30%"
+
+
+from_35pct : Css.Style
+from_35pct =
+    Css.property "--tw-gradient-from-position" "35%"
+
+
+from_40pct : Css.Style
+from_40pct =
+    Css.property "--tw-gradient-from-position" "40%"
+
+
+from_45pct : Css.Style
+from_45pct =
+    Css.property "--tw-gradient-from-position" "45%"
+
+
+from_50pct : Css.Style
+from_50pct =
+    Css.property "--tw-gradient-from-position" "50%"
+
+
+from_55pct : Css.Style
+from_55pct =
+    Css.property "--tw-gradient-from-position" "55%"
+
+
+from_5pct : Css.Style
+from_5pct =
+    Css.property "--tw-gradient-from-position" "5%"
+
+
+from_60pct : Css.Style
+from_60pct =
+    Css.property "--tw-gradient-from-position" "60%"
+
+
+from_65pct : Css.Style
+from_65pct =
+    Css.property "--tw-gradient-from-position" "65%"
+
+
+from_70pct : Css.Style
+from_70pct =
+    Css.property "--tw-gradient-from-position" "70%"
+
+
+from_75pct : Css.Style
+from_75pct =
+    Css.property "--tw-gradient-from-position" "75%"
+
+
+from_80pct : Css.Style
+from_80pct =
+    Css.property "--tw-gradient-from-position" "80%"
+
+
+from_85pct : Css.Style
+from_85pct =
+    Css.property "--tw-gradient-from-position" "85%"
+
+
+from_90pct : Css.Style
+from_90pct =
+    Css.property "--tw-gradient-from-position" "90%"
+
+
+from_95pct : Css.Style
+from_95pct =
+    Css.property "--tw-gradient-from-position" "95%"
 
 
 gap_0 : Css.Style
@@ -5684,6 +6109,21 @@ hue_rotate_90 =
         ]
 
 
+hyphens_auto : Css.Style
+hyphens_auto =
+    Css.property "hyphens" "auto"
+
+
+hyphens_manual : Css.Style
+hyphens_manual =
+    Css.property "hyphens" "manual"
+
+
+hyphens_none : Css.Style
+hyphens_none =
+    Css.property "hyphens" "none"
+
+
 indent_0 : Css.Style
 indent_0 =
     Css.property "text-indent" "0px"
@@ -5886,432 +6326,217 @@ inline_table =
 
 inset_0 : Css.Style
 inset_0 =
-    Css.batch
-        [ Css.property "top" "0px"
-        , Css.property "right" "0px"
-        , Css.property "bottom" "0px"
-        , Css.property "left" "0px"
-        ]
+    Css.property "inset" "0px"
 
 
 inset_0_dot_5 : Css.Style
 inset_0_dot_5 =
-    Css.batch
-        [ Css.property "top" "0.125rem"
-        , Css.property "right" "0.125rem"
-        , Css.property "bottom" "0.125rem"
-        , Css.property "left" "0.125rem"
-        ]
+    Css.property "inset" "0.125rem"
 
 
 inset_1 : Css.Style
 inset_1 =
-    Css.batch
-        [ Css.property "top" "0.25rem"
-        , Css.property "right" "0.25rem"
-        , Css.property "bottom" "0.25rem"
-        , Css.property "left" "0.25rem"
-        ]
+    Css.property "inset" "0.25rem"
 
 
 inset_10 : Css.Style
 inset_10 =
-    Css.batch
-        [ Css.property "top" "2.5rem"
-        , Css.property "right" "2.5rem"
-        , Css.property "bottom" "2.5rem"
-        , Css.property "left" "2.5rem"
-        ]
+    Css.property "inset" "2.5rem"
 
 
 inset_11 : Css.Style
 inset_11 =
-    Css.batch
-        [ Css.property "top" "2.75rem"
-        , Css.property "right" "2.75rem"
-        , Css.property "bottom" "2.75rem"
-        , Css.property "left" "2.75rem"
-        ]
+    Css.property "inset" "2.75rem"
 
 
 inset_12 : Css.Style
 inset_12 =
-    Css.batch
-        [ Css.property "top" "3rem"
-        , Css.property "right" "3rem"
-        , Css.property "bottom" "3rem"
-        , Css.property "left" "3rem"
-        ]
+    Css.property "inset" "3rem"
 
 
 inset_14 : Css.Style
 inset_14 =
-    Css.batch
-        [ Css.property "top" "3.5rem"
-        , Css.property "right" "3.5rem"
-        , Css.property "bottom" "3.5rem"
-        , Css.property "left" "3.5rem"
-        ]
+    Css.property "inset" "3.5rem"
 
 
 inset_16 : Css.Style
 inset_16 =
-    Css.batch
-        [ Css.property "top" "4rem"
-        , Css.property "right" "4rem"
-        , Css.property "bottom" "4rem"
-        , Css.property "left" "4rem"
-        ]
+    Css.property "inset" "4rem"
 
 
 inset_1_dot_5 : Css.Style
 inset_1_dot_5 =
-    Css.batch
-        [ Css.property "top" "0.375rem"
-        , Css.property "right" "0.375rem"
-        , Css.property "bottom" "0.375rem"
-        , Css.property "left" "0.375rem"
-        ]
+    Css.property "inset" "0.375rem"
 
 
 inset_1over2 : Css.Style
 inset_1over2 =
-    Css.batch
-        [ Css.property "top" "50%"
-        , Css.property "right" "50%"
-        , Css.property "bottom" "50%"
-        , Css.property "left" "50%"
-        ]
+    Css.property "inset" "50%"
 
 
 inset_1over3 : Css.Style
 inset_1over3 =
-    Css.batch
-        [ Css.property "top" "33.333333%"
-        , Css.property "right" "33.333333%"
-        , Css.property "bottom" "33.333333%"
-        , Css.property "left" "33.333333%"
-        ]
+    Css.property "inset" "33.333333%"
 
 
 inset_1over4 : Css.Style
 inset_1over4 =
-    Css.batch
-        [ Css.property "top" "25%"
-        , Css.property "right" "25%"
-        , Css.property "bottom" "25%"
-        , Css.property "left" "25%"
-        ]
+    Css.property "inset" "25%"
 
 
 inset_2 : Css.Style
 inset_2 =
-    Css.batch
-        [ Css.property "top" "0.5rem"
-        , Css.property "right" "0.5rem"
-        , Css.property "bottom" "0.5rem"
-        , Css.property "left" "0.5rem"
-        ]
+    Css.property "inset" "0.5rem"
 
 
 inset_20 : Css.Style
 inset_20 =
-    Css.batch
-        [ Css.property "top" "5rem"
-        , Css.property "right" "5rem"
-        , Css.property "bottom" "5rem"
-        , Css.property "left" "5rem"
-        ]
+    Css.property "inset" "5rem"
 
 
 inset_24 : Css.Style
 inset_24 =
-    Css.batch
-        [ Css.property "top" "6rem"
-        , Css.property "right" "6rem"
-        , Css.property "bottom" "6rem"
-        , Css.property "left" "6rem"
-        ]
+    Css.property "inset" "6rem"
 
 
 inset_28 : Css.Style
 inset_28 =
-    Css.batch
-        [ Css.property "top" "7rem"
-        , Css.property "right" "7rem"
-        , Css.property "bottom" "7rem"
-        , Css.property "left" "7rem"
-        ]
+    Css.property "inset" "7rem"
 
 
 inset_2_dot_5 : Css.Style
 inset_2_dot_5 =
-    Css.batch
-        [ Css.property "top" "0.625rem"
-        , Css.property "right" "0.625rem"
-        , Css.property "bottom" "0.625rem"
-        , Css.property "left" "0.625rem"
-        ]
+    Css.property "inset" "0.625rem"
 
 
 inset_2over3 : Css.Style
 inset_2over3 =
-    Css.batch
-        [ Css.property "top" "66.666667%"
-        , Css.property "right" "66.666667%"
-        , Css.property "bottom" "66.666667%"
-        , Css.property "left" "66.666667%"
-        ]
+    Css.property "inset" "66.666667%"
 
 
 inset_2over4 : Css.Style
 inset_2over4 =
-    Css.batch
-        [ Css.property "top" "50%"
-        , Css.property "right" "50%"
-        , Css.property "bottom" "50%"
-        , Css.property "left" "50%"
-        ]
+    Css.property "inset" "50%"
 
 
 inset_3 : Css.Style
 inset_3 =
-    Css.batch
-        [ Css.property "top" "0.75rem"
-        , Css.property "right" "0.75rem"
-        , Css.property "bottom" "0.75rem"
-        , Css.property "left" "0.75rem"
-        ]
+    Css.property "inset" "0.75rem"
 
 
 inset_32 : Css.Style
 inset_32 =
-    Css.batch
-        [ Css.property "top" "8rem"
-        , Css.property "right" "8rem"
-        , Css.property "bottom" "8rem"
-        , Css.property "left" "8rem"
-        ]
+    Css.property "inset" "8rem"
 
 
 inset_36 : Css.Style
 inset_36 =
-    Css.batch
-        [ Css.property "top" "9rem"
-        , Css.property "right" "9rem"
-        , Css.property "bottom" "9rem"
-        , Css.property "left" "9rem"
-        ]
+    Css.property "inset" "9rem"
 
 
 inset_3_dot_5 : Css.Style
 inset_3_dot_5 =
-    Css.batch
-        [ Css.property "top" "0.875rem"
-        , Css.property "right" "0.875rem"
-        , Css.property "bottom" "0.875rem"
-        , Css.property "left" "0.875rem"
-        ]
+    Css.property "inset" "0.875rem"
 
 
 inset_3over4 : Css.Style
 inset_3over4 =
-    Css.batch
-        [ Css.property "top" "75%"
-        , Css.property "right" "75%"
-        , Css.property "bottom" "75%"
-        , Css.property "left" "75%"
-        ]
+    Css.property "inset" "75%"
 
 
 inset_4 : Css.Style
 inset_4 =
-    Css.batch
-        [ Css.property "top" "1rem"
-        , Css.property "right" "1rem"
-        , Css.property "bottom" "1rem"
-        , Css.property "left" "1rem"
-        ]
+    Css.property "inset" "1rem"
 
 
 inset_40 : Css.Style
 inset_40 =
-    Css.batch
-        [ Css.property "top" "10rem"
-        , Css.property "right" "10rem"
-        , Css.property "bottom" "10rem"
-        , Css.property "left" "10rem"
-        ]
+    Css.property "inset" "10rem"
 
 
 inset_44 : Css.Style
 inset_44 =
-    Css.batch
-        [ Css.property "top" "11rem"
-        , Css.property "right" "11rem"
-        , Css.property "bottom" "11rem"
-        , Css.property "left" "11rem"
-        ]
+    Css.property "inset" "11rem"
 
 
 inset_48 : Css.Style
 inset_48 =
-    Css.batch
-        [ Css.property "top" "12rem"
-        , Css.property "right" "12rem"
-        , Css.property "bottom" "12rem"
-        , Css.property "left" "12rem"
-        ]
+    Css.property "inset" "12rem"
 
 
 inset_5 : Css.Style
 inset_5 =
-    Css.batch
-        [ Css.property "top" "1.25rem"
-        , Css.property "right" "1.25rem"
-        , Css.property "bottom" "1.25rem"
-        , Css.property "left" "1.25rem"
-        ]
+    Css.property "inset" "1.25rem"
 
 
 inset_52 : Css.Style
 inset_52 =
-    Css.batch
-        [ Css.property "top" "13rem"
-        , Css.property "right" "13rem"
-        , Css.property "bottom" "13rem"
-        , Css.property "left" "13rem"
-        ]
+    Css.property "inset" "13rem"
 
 
 inset_56 : Css.Style
 inset_56 =
-    Css.batch
-        [ Css.property "top" "14rem"
-        , Css.property "right" "14rem"
-        , Css.property "bottom" "14rem"
-        , Css.property "left" "14rem"
-        ]
+    Css.property "inset" "14rem"
 
 
 inset_6 : Css.Style
 inset_6 =
-    Css.batch
-        [ Css.property "top" "1.5rem"
-        , Css.property "right" "1.5rem"
-        , Css.property "bottom" "1.5rem"
-        , Css.property "left" "1.5rem"
-        ]
+    Css.property "inset" "1.5rem"
 
 
 inset_60 : Css.Style
 inset_60 =
-    Css.batch
-        [ Css.property "top" "15rem"
-        , Css.property "right" "15rem"
-        , Css.property "bottom" "15rem"
-        , Css.property "left" "15rem"
-        ]
+    Css.property "inset" "15rem"
 
 
 inset_64 : Css.Style
 inset_64 =
-    Css.batch
-        [ Css.property "top" "16rem"
-        , Css.property "right" "16rem"
-        , Css.property "bottom" "16rem"
-        , Css.property "left" "16rem"
-        ]
+    Css.property "inset" "16rem"
 
 
 inset_7 : Css.Style
 inset_7 =
-    Css.batch
-        [ Css.property "top" "1.75rem"
-        , Css.property "right" "1.75rem"
-        , Css.property "bottom" "1.75rem"
-        , Css.property "left" "1.75rem"
-        ]
+    Css.property "inset" "1.75rem"
 
 
 inset_72 : Css.Style
 inset_72 =
-    Css.batch
-        [ Css.property "top" "18rem"
-        , Css.property "right" "18rem"
-        , Css.property "bottom" "18rem"
-        , Css.property "left" "18rem"
-        ]
+    Css.property "inset" "18rem"
 
 
 inset_8 : Css.Style
 inset_8 =
-    Css.batch
-        [ Css.property "top" "2rem"
-        , Css.property "right" "2rem"
-        , Css.property "bottom" "2rem"
-        , Css.property "left" "2rem"
-        ]
+    Css.property "inset" "2rem"
 
 
 inset_80 : Css.Style
 inset_80 =
-    Css.batch
-        [ Css.property "top" "20rem"
-        , Css.property "right" "20rem"
-        , Css.property "bottom" "20rem"
-        , Css.property "left" "20rem"
-        ]
+    Css.property "inset" "20rem"
 
 
 inset_9 : Css.Style
 inset_9 =
-    Css.batch
-        [ Css.property "top" "2.25rem"
-        , Css.property "right" "2.25rem"
-        , Css.property "bottom" "2.25rem"
-        , Css.property "left" "2.25rem"
-        ]
+    Css.property "inset" "2.25rem"
 
 
 inset_96 : Css.Style
 inset_96 =
-    Css.batch
-        [ Css.property "top" "24rem"
-        , Css.property "right" "24rem"
-        , Css.property "bottom" "24rem"
-        , Css.property "left" "24rem"
-        ]
+    Css.property "inset" "24rem"
 
 
 inset_auto : Css.Style
 inset_auto =
-    Css.batch
-        [ Css.property "top" "auto"
-        , Css.property "right" "auto"
-        , Css.property "bottom" "auto"
-        , Css.property "left" "auto"
-        ]
+    Css.property "inset" "auto"
 
 
 inset_full : Css.Style
 inset_full =
-    Css.batch
-        [ Css.property "top" "100%"
-        , Css.property "right" "100%"
-        , Css.property "bottom" "100%"
-        , Css.property "left" "100%"
-        ]
+    Css.property "inset" "100%"
 
 
 inset_px : Css.Style
 inset_px =
-    Css.batch
-        [ Css.property "top" "1px"
-        , Css.property "right" "1px"
-        , Css.property "bottom" "1px"
-        , Css.property "left" "1px"
-        ]
+    Css.property "inset" "1px"
 
 
 inset_x_0 : Css.Style
@@ -7108,6 +7333,11 @@ justify_items_stretch =
     Css.property "justify-items" "stretch"
 
 
+justify_normal : Css.Style
+justify_normal =
+    Css.property "justify-content" "normal"
+
+
 justify_self_auto : Css.Style
 justify_self_auto =
     Css.property "justify-self" "auto"
@@ -7136,6 +7366,11 @@ justify_self_stretch =
 justify_start : Css.Style
 justify_start =
     Css.property "justify-content" "flex-start"
+
+
+justify_stretch : Css.Style
+justify_stretch =
+    Css.property "justify-content" "stretch"
 
 
 leading_10 : Css.Style
@@ -7423,6 +7658,76 @@ left_px =
     Css.property "left" "1px"
 
 
+line_clamp_1 : Css.Style
+line_clamp_1 =
+    Css.batch
+        [ Css.property "overflow" "hidden"
+        , Css.property "display" "-webkit-box"
+        , Css.property "-webkit-box-orient" "vertical"
+        , Css.property "-webkit-line-clamp" "1"
+        ]
+
+
+line_clamp_2 : Css.Style
+line_clamp_2 =
+    Css.batch
+        [ Css.property "overflow" "hidden"
+        , Css.property "display" "-webkit-box"
+        , Css.property "-webkit-box-orient" "vertical"
+        , Css.property "-webkit-line-clamp" "2"
+        ]
+
+
+line_clamp_3 : Css.Style
+line_clamp_3 =
+    Css.batch
+        [ Css.property "overflow" "hidden"
+        , Css.property "display" "-webkit-box"
+        , Css.property "-webkit-box-orient" "vertical"
+        , Css.property "-webkit-line-clamp" "3"
+        ]
+
+
+line_clamp_4 : Css.Style
+line_clamp_4 =
+    Css.batch
+        [ Css.property "overflow" "hidden"
+        , Css.property "display" "-webkit-box"
+        , Css.property "-webkit-box-orient" "vertical"
+        , Css.property "-webkit-line-clamp" "4"
+        ]
+
+
+line_clamp_5 : Css.Style
+line_clamp_5 =
+    Css.batch
+        [ Css.property "overflow" "hidden"
+        , Css.property "display" "-webkit-box"
+        , Css.property "-webkit-box-orient" "vertical"
+        , Css.property "-webkit-line-clamp" "5"
+        ]
+
+
+line_clamp_6 : Css.Style
+line_clamp_6 =
+    Css.batch
+        [ Css.property "overflow" "hidden"
+        , Css.property "display" "-webkit-box"
+        , Css.property "-webkit-box-orient" "vertical"
+        , Css.property "-webkit-line-clamp" "6"
+        ]
+
+
+line_clamp_none : Css.Style
+line_clamp_none =
+    Css.batch
+        [ Css.property "overflow" "visible"
+        , Css.property "display" "block"
+        , Css.property "-webkit-box-orient" "horizontal"
+        , Css.property "-webkit-line-clamp" "none"
+        ]
+
+
 line_through : Css.Style
 line_through =
     Css.property "text-decoration-line" "line-through"
@@ -7444,6 +7749,11 @@ list_decimal =
 list_disc : Css.Style
 list_disc =
     Css.property "list-style-type" "disc"
+
+
+list_image_none : Css.Style
+list_image_none =
+    Css.property "list-style-image" "none"
 
 
 list_inside : Css.Style
@@ -7841,6 +8151,11 @@ max_h_min =
     Css.property "max-height" "min-content"
 
 
+max_h_none : Css.Style
+max_h_none =
+    Css.property "max-height" "none"
+
+
 max_h_px : Css.Style
 max_h_px =
     Css.property "max-height" "1px"
@@ -8144,6 +8459,186 @@ mb_auto =
 mb_px : Css.Style
 mb_px =
     Css.property "margin-bottom" "1px"
+
+
+me_0 : Css.Style
+me_0 =
+    Css.property "margin-inline-end" "0px"
+
+
+me_0_dot_5 : Css.Style
+me_0_dot_5 =
+    Css.property "margin-inline-end" "0.125rem"
+
+
+me_1 : Css.Style
+me_1 =
+    Css.property "margin-inline-end" "0.25rem"
+
+
+me_10 : Css.Style
+me_10 =
+    Css.property "margin-inline-end" "2.5rem"
+
+
+me_11 : Css.Style
+me_11 =
+    Css.property "margin-inline-end" "2.75rem"
+
+
+me_12 : Css.Style
+me_12 =
+    Css.property "margin-inline-end" "3rem"
+
+
+me_14 : Css.Style
+me_14 =
+    Css.property "margin-inline-end" "3.5rem"
+
+
+me_16 : Css.Style
+me_16 =
+    Css.property "margin-inline-end" "4rem"
+
+
+me_1_dot_5 : Css.Style
+me_1_dot_5 =
+    Css.property "margin-inline-end" "0.375rem"
+
+
+me_2 : Css.Style
+me_2 =
+    Css.property "margin-inline-end" "0.5rem"
+
+
+me_20 : Css.Style
+me_20 =
+    Css.property "margin-inline-end" "5rem"
+
+
+me_24 : Css.Style
+me_24 =
+    Css.property "margin-inline-end" "6rem"
+
+
+me_28 : Css.Style
+me_28 =
+    Css.property "margin-inline-end" "7rem"
+
+
+me_2_dot_5 : Css.Style
+me_2_dot_5 =
+    Css.property "margin-inline-end" "0.625rem"
+
+
+me_3 : Css.Style
+me_3 =
+    Css.property "margin-inline-end" "0.75rem"
+
+
+me_32 : Css.Style
+me_32 =
+    Css.property "margin-inline-end" "8rem"
+
+
+me_36 : Css.Style
+me_36 =
+    Css.property "margin-inline-end" "9rem"
+
+
+me_3_dot_5 : Css.Style
+me_3_dot_5 =
+    Css.property "margin-inline-end" "0.875rem"
+
+
+me_4 : Css.Style
+me_4 =
+    Css.property "margin-inline-end" "1rem"
+
+
+me_40 : Css.Style
+me_40 =
+    Css.property "margin-inline-end" "10rem"
+
+
+me_44 : Css.Style
+me_44 =
+    Css.property "margin-inline-end" "11rem"
+
+
+me_48 : Css.Style
+me_48 =
+    Css.property "margin-inline-end" "12rem"
+
+
+me_5 : Css.Style
+me_5 =
+    Css.property "margin-inline-end" "1.25rem"
+
+
+me_52 : Css.Style
+me_52 =
+    Css.property "margin-inline-end" "13rem"
+
+
+me_56 : Css.Style
+me_56 =
+    Css.property "margin-inline-end" "14rem"
+
+
+me_6 : Css.Style
+me_6 =
+    Css.property "margin-inline-end" "1.5rem"
+
+
+me_60 : Css.Style
+me_60 =
+    Css.property "margin-inline-end" "15rem"
+
+
+me_64 : Css.Style
+me_64 =
+    Css.property "margin-inline-end" "16rem"
+
+
+me_7 : Css.Style
+me_7 =
+    Css.property "margin-inline-end" "1.75rem"
+
+
+me_72 : Css.Style
+me_72 =
+    Css.property "margin-inline-end" "18rem"
+
+
+me_8 : Css.Style
+me_8 =
+    Css.property "margin-inline-end" "2rem"
+
+
+me_80 : Css.Style
+me_80 =
+    Css.property "margin-inline-end" "20rem"
+
+
+me_9 : Css.Style
+me_9 =
+    Css.property "margin-inline-end" "2.25rem"
+
+
+me_96 : Css.Style
+me_96 =
+    Css.property "margin-inline-end" "24rem"
+
+
+me_auto : Css.Style
+me_auto =
+    Css.property "margin-inline-end" "auto"
+
+
+me_px : Css.Style
+me_px =
+    Css.property "margin-inline-end" "1px"
 
 
 min_h_0 : Css.Style
@@ -8644,6 +9139,186 @@ mr_auto =
 mr_px : Css.Style
 mr_px =
     Css.property "margin-right" "1px"
+
+
+ms_0 : Css.Style
+ms_0 =
+    Css.property "margin-inline-start" "0px"
+
+
+ms_0_dot_5 : Css.Style
+ms_0_dot_5 =
+    Css.property "margin-inline-start" "0.125rem"
+
+
+ms_1 : Css.Style
+ms_1 =
+    Css.property "margin-inline-start" "0.25rem"
+
+
+ms_10 : Css.Style
+ms_10 =
+    Css.property "margin-inline-start" "2.5rem"
+
+
+ms_11 : Css.Style
+ms_11 =
+    Css.property "margin-inline-start" "2.75rem"
+
+
+ms_12 : Css.Style
+ms_12 =
+    Css.property "margin-inline-start" "3rem"
+
+
+ms_14 : Css.Style
+ms_14 =
+    Css.property "margin-inline-start" "3.5rem"
+
+
+ms_16 : Css.Style
+ms_16 =
+    Css.property "margin-inline-start" "4rem"
+
+
+ms_1_dot_5 : Css.Style
+ms_1_dot_5 =
+    Css.property "margin-inline-start" "0.375rem"
+
+
+ms_2 : Css.Style
+ms_2 =
+    Css.property "margin-inline-start" "0.5rem"
+
+
+ms_20 : Css.Style
+ms_20 =
+    Css.property "margin-inline-start" "5rem"
+
+
+ms_24 : Css.Style
+ms_24 =
+    Css.property "margin-inline-start" "6rem"
+
+
+ms_28 : Css.Style
+ms_28 =
+    Css.property "margin-inline-start" "7rem"
+
+
+ms_2_dot_5 : Css.Style
+ms_2_dot_5 =
+    Css.property "margin-inline-start" "0.625rem"
+
+
+ms_3 : Css.Style
+ms_3 =
+    Css.property "margin-inline-start" "0.75rem"
+
+
+ms_32 : Css.Style
+ms_32 =
+    Css.property "margin-inline-start" "8rem"
+
+
+ms_36 : Css.Style
+ms_36 =
+    Css.property "margin-inline-start" "9rem"
+
+
+ms_3_dot_5 : Css.Style
+ms_3_dot_5 =
+    Css.property "margin-inline-start" "0.875rem"
+
+
+ms_4 : Css.Style
+ms_4 =
+    Css.property "margin-inline-start" "1rem"
+
+
+ms_40 : Css.Style
+ms_40 =
+    Css.property "margin-inline-start" "10rem"
+
+
+ms_44 : Css.Style
+ms_44 =
+    Css.property "margin-inline-start" "11rem"
+
+
+ms_48 : Css.Style
+ms_48 =
+    Css.property "margin-inline-start" "12rem"
+
+
+ms_5 : Css.Style
+ms_5 =
+    Css.property "margin-inline-start" "1.25rem"
+
+
+ms_52 : Css.Style
+ms_52 =
+    Css.property "margin-inline-start" "13rem"
+
+
+ms_56 : Css.Style
+ms_56 =
+    Css.property "margin-inline-start" "14rem"
+
+
+ms_6 : Css.Style
+ms_6 =
+    Css.property "margin-inline-start" "1.5rem"
+
+
+ms_60 : Css.Style
+ms_60 =
+    Css.property "margin-inline-start" "15rem"
+
+
+ms_64 : Css.Style
+ms_64 =
+    Css.property "margin-inline-start" "16rem"
+
+
+ms_7 : Css.Style
+ms_7 =
+    Css.property "margin-inline-start" "1.75rem"
+
+
+ms_72 : Css.Style
+ms_72 =
+    Css.property "margin-inline-start" "18rem"
+
+
+ms_8 : Css.Style
+ms_8 =
+    Css.property "margin-inline-start" "2rem"
+
+
+ms_80 : Css.Style
+ms_80 =
+    Css.property "margin-inline-start" "20rem"
+
+
+ms_9 : Css.Style
+ms_9 =
+    Css.property "margin-inline-start" "2.25rem"
+
+
+ms_96 : Css.Style
+ms_96 =
+    Css.property "margin-inline-start" "24rem"
+
+
+ms_auto : Css.Style
+ms_auto =
+    Css.property "margin-inline-start" "auto"
+
+
+ms_px : Css.Style
+ms_px =
+    Css.property "margin-inline-start" "1px"
 
 
 mt_0 : Css.Style
@@ -9660,6 +10335,216 @@ neg_bottom_px =
     Css.property "bottom" "-1px"
 
 
+neg_end_0 : Css.Style
+neg_end_0 =
+    Css.property "inset-inline-end" "-0px"
+
+
+neg_end_0_dot_5 : Css.Style
+neg_end_0_dot_5 =
+    Css.property "inset-inline-end" "-0.125rem"
+
+
+neg_end_1 : Css.Style
+neg_end_1 =
+    Css.property "inset-inline-end" "-0.25rem"
+
+
+neg_end_10 : Css.Style
+neg_end_10 =
+    Css.property "inset-inline-end" "-2.5rem"
+
+
+neg_end_11 : Css.Style
+neg_end_11 =
+    Css.property "inset-inline-end" "-2.75rem"
+
+
+neg_end_12 : Css.Style
+neg_end_12 =
+    Css.property "inset-inline-end" "-3rem"
+
+
+neg_end_14 : Css.Style
+neg_end_14 =
+    Css.property "inset-inline-end" "-3.5rem"
+
+
+neg_end_16 : Css.Style
+neg_end_16 =
+    Css.property "inset-inline-end" "-4rem"
+
+
+neg_end_1_dot_5 : Css.Style
+neg_end_1_dot_5 =
+    Css.property "inset-inline-end" "-0.375rem"
+
+
+neg_end_1over2 : Css.Style
+neg_end_1over2 =
+    Css.property "inset-inline-end" "-50%"
+
+
+neg_end_1over3 : Css.Style
+neg_end_1over3 =
+    Css.property "inset-inline-end" "-33.333333%"
+
+
+neg_end_1over4 : Css.Style
+neg_end_1over4 =
+    Css.property "inset-inline-end" "-25%"
+
+
+neg_end_2 : Css.Style
+neg_end_2 =
+    Css.property "inset-inline-end" "-0.5rem"
+
+
+neg_end_20 : Css.Style
+neg_end_20 =
+    Css.property "inset-inline-end" "-5rem"
+
+
+neg_end_24 : Css.Style
+neg_end_24 =
+    Css.property "inset-inline-end" "-6rem"
+
+
+neg_end_28 : Css.Style
+neg_end_28 =
+    Css.property "inset-inline-end" "-7rem"
+
+
+neg_end_2_dot_5 : Css.Style
+neg_end_2_dot_5 =
+    Css.property "inset-inline-end" "-0.625rem"
+
+
+neg_end_2over3 : Css.Style
+neg_end_2over3 =
+    Css.property "inset-inline-end" "-66.666667%"
+
+
+neg_end_2over4 : Css.Style
+neg_end_2over4 =
+    Css.property "inset-inline-end" "-50%"
+
+
+neg_end_3 : Css.Style
+neg_end_3 =
+    Css.property "inset-inline-end" "-0.75rem"
+
+
+neg_end_32 : Css.Style
+neg_end_32 =
+    Css.property "inset-inline-end" "-8rem"
+
+
+neg_end_36 : Css.Style
+neg_end_36 =
+    Css.property "inset-inline-end" "-9rem"
+
+
+neg_end_3_dot_5 : Css.Style
+neg_end_3_dot_5 =
+    Css.property "inset-inline-end" "-0.875rem"
+
+
+neg_end_3over4 : Css.Style
+neg_end_3over4 =
+    Css.property "inset-inline-end" "-75%"
+
+
+neg_end_4 : Css.Style
+neg_end_4 =
+    Css.property "inset-inline-end" "-1rem"
+
+
+neg_end_40 : Css.Style
+neg_end_40 =
+    Css.property "inset-inline-end" "-10rem"
+
+
+neg_end_44 : Css.Style
+neg_end_44 =
+    Css.property "inset-inline-end" "-11rem"
+
+
+neg_end_48 : Css.Style
+neg_end_48 =
+    Css.property "inset-inline-end" "-12rem"
+
+
+neg_end_5 : Css.Style
+neg_end_5 =
+    Css.property "inset-inline-end" "-1.25rem"
+
+
+neg_end_52 : Css.Style
+neg_end_52 =
+    Css.property "inset-inline-end" "-13rem"
+
+
+neg_end_56 : Css.Style
+neg_end_56 =
+    Css.property "inset-inline-end" "-14rem"
+
+
+neg_end_6 : Css.Style
+neg_end_6 =
+    Css.property "inset-inline-end" "-1.5rem"
+
+
+neg_end_60 : Css.Style
+neg_end_60 =
+    Css.property "inset-inline-end" "-15rem"
+
+
+neg_end_64 : Css.Style
+neg_end_64 =
+    Css.property "inset-inline-end" "-16rem"
+
+
+neg_end_7 : Css.Style
+neg_end_7 =
+    Css.property "inset-inline-end" "-1.75rem"
+
+
+neg_end_72 : Css.Style
+neg_end_72 =
+    Css.property "inset-inline-end" "-18rem"
+
+
+neg_end_8 : Css.Style
+neg_end_8 =
+    Css.property "inset-inline-end" "-2rem"
+
+
+neg_end_80 : Css.Style
+neg_end_80 =
+    Css.property "inset-inline-end" "-20rem"
+
+
+neg_end_9 : Css.Style
+neg_end_9 =
+    Css.property "inset-inline-end" "-2.25rem"
+
+
+neg_end_96 : Css.Style
+neg_end_96 =
+    Css.property "inset-inline-end" "-24rem"
+
+
+neg_end_full : Css.Style
+neg_end_full =
+    Css.property "inset-inline-end" "-100%"
+
+
+neg_end_px : Css.Style
+neg_end_px =
+    Css.property "inset-inline-end" "-1px"
+
+
 neg_hue_rotate_0 : Css.Style
 neg_hue_rotate_0 =
     Css.batch
@@ -9885,422 +10770,212 @@ neg_indent_px =
 
 neg_inset_0 : Css.Style
 neg_inset_0 =
-    Css.batch
-        [ Css.property "top" "-0px"
-        , Css.property "right" "-0px"
-        , Css.property "bottom" "-0px"
-        , Css.property "left" "-0px"
-        ]
+    Css.property "inset" "-0px"
 
 
 neg_inset_0_dot_5 : Css.Style
 neg_inset_0_dot_5 =
-    Css.batch
-        [ Css.property "top" "-0.125rem"
-        , Css.property "right" "-0.125rem"
-        , Css.property "bottom" "-0.125rem"
-        , Css.property "left" "-0.125rem"
-        ]
+    Css.property "inset" "-0.125rem"
 
 
 neg_inset_1 : Css.Style
 neg_inset_1 =
-    Css.batch
-        [ Css.property "top" "-0.25rem"
-        , Css.property "right" "-0.25rem"
-        , Css.property "bottom" "-0.25rem"
-        , Css.property "left" "-0.25rem"
-        ]
+    Css.property "inset" "-0.25rem"
 
 
 neg_inset_10 : Css.Style
 neg_inset_10 =
-    Css.batch
-        [ Css.property "top" "-2.5rem"
-        , Css.property "right" "-2.5rem"
-        , Css.property "bottom" "-2.5rem"
-        , Css.property "left" "-2.5rem"
-        ]
+    Css.property "inset" "-2.5rem"
 
 
 neg_inset_11 : Css.Style
 neg_inset_11 =
-    Css.batch
-        [ Css.property "top" "-2.75rem"
-        , Css.property "right" "-2.75rem"
-        , Css.property "bottom" "-2.75rem"
-        , Css.property "left" "-2.75rem"
-        ]
+    Css.property "inset" "-2.75rem"
 
 
 neg_inset_12 : Css.Style
 neg_inset_12 =
-    Css.batch
-        [ Css.property "top" "-3rem"
-        , Css.property "right" "-3rem"
-        , Css.property "bottom" "-3rem"
-        , Css.property "left" "-3rem"
-        ]
+    Css.property "inset" "-3rem"
 
 
 neg_inset_14 : Css.Style
 neg_inset_14 =
-    Css.batch
-        [ Css.property "top" "-3.5rem"
-        , Css.property "right" "-3.5rem"
-        , Css.property "bottom" "-3.5rem"
-        , Css.property "left" "-3.5rem"
-        ]
+    Css.property "inset" "-3.5rem"
 
 
 neg_inset_16 : Css.Style
 neg_inset_16 =
-    Css.batch
-        [ Css.property "top" "-4rem"
-        , Css.property "right" "-4rem"
-        , Css.property "bottom" "-4rem"
-        , Css.property "left" "-4rem"
-        ]
+    Css.property "inset" "-4rem"
 
 
 neg_inset_1_dot_5 : Css.Style
 neg_inset_1_dot_5 =
-    Css.batch
-        [ Css.property "top" "-0.375rem"
-        , Css.property "right" "-0.375rem"
-        , Css.property "bottom" "-0.375rem"
-        , Css.property "left" "-0.375rem"
-        ]
+    Css.property "inset" "-0.375rem"
 
 
 neg_inset_1over2 : Css.Style
 neg_inset_1over2 =
-    Css.batch
-        [ Css.property "top" "-50%"
-        , Css.property "right" "-50%"
-        , Css.property "bottom" "-50%"
-        , Css.property "left" "-50%"
-        ]
+    Css.property "inset" "-50%"
 
 
 neg_inset_1over3 : Css.Style
 neg_inset_1over3 =
-    Css.batch
-        [ Css.property "top" "-33.333333%"
-        , Css.property "right" "-33.333333%"
-        , Css.property "bottom" "-33.333333%"
-        , Css.property "left" "-33.333333%"
-        ]
+    Css.property "inset" "-33.333333%"
 
 
 neg_inset_1over4 : Css.Style
 neg_inset_1over4 =
-    Css.batch
-        [ Css.property "top" "-25%"
-        , Css.property "right" "-25%"
-        , Css.property "bottom" "-25%"
-        , Css.property "left" "-25%"
-        ]
+    Css.property "inset" "-25%"
 
 
 neg_inset_2 : Css.Style
 neg_inset_2 =
-    Css.batch
-        [ Css.property "top" "-0.5rem"
-        , Css.property "right" "-0.5rem"
-        , Css.property "bottom" "-0.5rem"
-        , Css.property "left" "-0.5rem"
-        ]
+    Css.property "inset" "-0.5rem"
 
 
 neg_inset_20 : Css.Style
 neg_inset_20 =
-    Css.batch
-        [ Css.property "top" "-5rem"
-        , Css.property "right" "-5rem"
-        , Css.property "bottom" "-5rem"
-        , Css.property "left" "-5rem"
-        ]
+    Css.property "inset" "-5rem"
 
 
 neg_inset_24 : Css.Style
 neg_inset_24 =
-    Css.batch
-        [ Css.property "top" "-6rem"
-        , Css.property "right" "-6rem"
-        , Css.property "bottom" "-6rem"
-        , Css.property "left" "-6rem"
-        ]
+    Css.property "inset" "-6rem"
 
 
 neg_inset_28 : Css.Style
 neg_inset_28 =
-    Css.batch
-        [ Css.property "top" "-7rem"
-        , Css.property "right" "-7rem"
-        , Css.property "bottom" "-7rem"
-        , Css.property "left" "-7rem"
-        ]
+    Css.property "inset" "-7rem"
 
 
 neg_inset_2_dot_5 : Css.Style
 neg_inset_2_dot_5 =
-    Css.batch
-        [ Css.property "top" "-0.625rem"
-        , Css.property "right" "-0.625rem"
-        , Css.property "bottom" "-0.625rem"
-        , Css.property "left" "-0.625rem"
-        ]
+    Css.property "inset" "-0.625rem"
 
 
 neg_inset_2over3 : Css.Style
 neg_inset_2over3 =
-    Css.batch
-        [ Css.property "top" "-66.666667%"
-        , Css.property "right" "-66.666667%"
-        , Css.property "bottom" "-66.666667%"
-        , Css.property "left" "-66.666667%"
-        ]
+    Css.property "inset" "-66.666667%"
 
 
 neg_inset_2over4 : Css.Style
 neg_inset_2over4 =
-    Css.batch
-        [ Css.property "top" "-50%"
-        , Css.property "right" "-50%"
-        , Css.property "bottom" "-50%"
-        , Css.property "left" "-50%"
-        ]
+    Css.property "inset" "-50%"
 
 
 neg_inset_3 : Css.Style
 neg_inset_3 =
-    Css.batch
-        [ Css.property "top" "-0.75rem"
-        , Css.property "right" "-0.75rem"
-        , Css.property "bottom" "-0.75rem"
-        , Css.property "left" "-0.75rem"
-        ]
+    Css.property "inset" "-0.75rem"
 
 
 neg_inset_32 : Css.Style
 neg_inset_32 =
-    Css.batch
-        [ Css.property "top" "-8rem"
-        , Css.property "right" "-8rem"
-        , Css.property "bottom" "-8rem"
-        , Css.property "left" "-8rem"
-        ]
+    Css.property "inset" "-8rem"
 
 
 neg_inset_36 : Css.Style
 neg_inset_36 =
-    Css.batch
-        [ Css.property "top" "-9rem"
-        , Css.property "right" "-9rem"
-        , Css.property "bottom" "-9rem"
-        , Css.property "left" "-9rem"
-        ]
+    Css.property "inset" "-9rem"
 
 
 neg_inset_3_dot_5 : Css.Style
 neg_inset_3_dot_5 =
-    Css.batch
-        [ Css.property "top" "-0.875rem"
-        , Css.property "right" "-0.875rem"
-        , Css.property "bottom" "-0.875rem"
-        , Css.property "left" "-0.875rem"
-        ]
+    Css.property "inset" "-0.875rem"
 
 
 neg_inset_3over4 : Css.Style
 neg_inset_3over4 =
-    Css.batch
-        [ Css.property "top" "-75%"
-        , Css.property "right" "-75%"
-        , Css.property "bottom" "-75%"
-        , Css.property "left" "-75%"
-        ]
+    Css.property "inset" "-75%"
 
 
 neg_inset_4 : Css.Style
 neg_inset_4 =
-    Css.batch
-        [ Css.property "top" "-1rem"
-        , Css.property "right" "-1rem"
-        , Css.property "bottom" "-1rem"
-        , Css.property "left" "-1rem"
-        ]
+    Css.property "inset" "-1rem"
 
 
 neg_inset_40 : Css.Style
 neg_inset_40 =
-    Css.batch
-        [ Css.property "top" "-10rem"
-        , Css.property "right" "-10rem"
-        , Css.property "bottom" "-10rem"
-        , Css.property "left" "-10rem"
-        ]
+    Css.property "inset" "-10rem"
 
 
 neg_inset_44 : Css.Style
 neg_inset_44 =
-    Css.batch
-        [ Css.property "top" "-11rem"
-        , Css.property "right" "-11rem"
-        , Css.property "bottom" "-11rem"
-        , Css.property "left" "-11rem"
-        ]
+    Css.property "inset" "-11rem"
 
 
 neg_inset_48 : Css.Style
 neg_inset_48 =
-    Css.batch
-        [ Css.property "top" "-12rem"
-        , Css.property "right" "-12rem"
-        , Css.property "bottom" "-12rem"
-        , Css.property "left" "-12rem"
-        ]
+    Css.property "inset" "-12rem"
 
 
 neg_inset_5 : Css.Style
 neg_inset_5 =
-    Css.batch
-        [ Css.property "top" "-1.25rem"
-        , Css.property "right" "-1.25rem"
-        , Css.property "bottom" "-1.25rem"
-        , Css.property "left" "-1.25rem"
-        ]
+    Css.property "inset" "-1.25rem"
 
 
 neg_inset_52 : Css.Style
 neg_inset_52 =
-    Css.batch
-        [ Css.property "top" "-13rem"
-        , Css.property "right" "-13rem"
-        , Css.property "bottom" "-13rem"
-        , Css.property "left" "-13rem"
-        ]
+    Css.property "inset" "-13rem"
 
 
 neg_inset_56 : Css.Style
 neg_inset_56 =
-    Css.batch
-        [ Css.property "top" "-14rem"
-        , Css.property "right" "-14rem"
-        , Css.property "bottom" "-14rem"
-        , Css.property "left" "-14rem"
-        ]
+    Css.property "inset" "-14rem"
 
 
 neg_inset_6 : Css.Style
 neg_inset_6 =
-    Css.batch
-        [ Css.property "top" "-1.5rem"
-        , Css.property "right" "-1.5rem"
-        , Css.property "bottom" "-1.5rem"
-        , Css.property "left" "-1.5rem"
-        ]
+    Css.property "inset" "-1.5rem"
 
 
 neg_inset_60 : Css.Style
 neg_inset_60 =
-    Css.batch
-        [ Css.property "top" "-15rem"
-        , Css.property "right" "-15rem"
-        , Css.property "bottom" "-15rem"
-        , Css.property "left" "-15rem"
-        ]
+    Css.property "inset" "-15rem"
 
 
 neg_inset_64 : Css.Style
 neg_inset_64 =
-    Css.batch
-        [ Css.property "top" "-16rem"
-        , Css.property "right" "-16rem"
-        , Css.property "bottom" "-16rem"
-        , Css.property "left" "-16rem"
-        ]
+    Css.property "inset" "-16rem"
 
 
 neg_inset_7 : Css.Style
 neg_inset_7 =
-    Css.batch
-        [ Css.property "top" "-1.75rem"
-        , Css.property "right" "-1.75rem"
-        , Css.property "bottom" "-1.75rem"
-        , Css.property "left" "-1.75rem"
-        ]
+    Css.property "inset" "-1.75rem"
 
 
 neg_inset_72 : Css.Style
 neg_inset_72 =
-    Css.batch
-        [ Css.property "top" "-18rem"
-        , Css.property "right" "-18rem"
-        , Css.property "bottom" "-18rem"
-        , Css.property "left" "-18rem"
-        ]
+    Css.property "inset" "-18rem"
 
 
 neg_inset_8 : Css.Style
 neg_inset_8 =
-    Css.batch
-        [ Css.property "top" "-2rem"
-        , Css.property "right" "-2rem"
-        , Css.property "bottom" "-2rem"
-        , Css.property "left" "-2rem"
-        ]
+    Css.property "inset" "-2rem"
 
 
 neg_inset_80 : Css.Style
 neg_inset_80 =
-    Css.batch
-        [ Css.property "top" "-20rem"
-        , Css.property "right" "-20rem"
-        , Css.property "bottom" "-20rem"
-        , Css.property "left" "-20rem"
-        ]
+    Css.property "inset" "-20rem"
 
 
 neg_inset_9 : Css.Style
 neg_inset_9 =
-    Css.batch
-        [ Css.property "top" "-2.25rem"
-        , Css.property "right" "-2.25rem"
-        , Css.property "bottom" "-2.25rem"
-        , Css.property "left" "-2.25rem"
-        ]
+    Css.property "inset" "-2.25rem"
 
 
 neg_inset_96 : Css.Style
 neg_inset_96 =
-    Css.batch
-        [ Css.property "top" "-24rem"
-        , Css.property "right" "-24rem"
-        , Css.property "bottom" "-24rem"
-        , Css.property "left" "-24rem"
-        ]
+    Css.property "inset" "-24rem"
 
 
 neg_inset_full : Css.Style
 neg_inset_full =
-    Css.batch
-        [ Css.property "top" "-100%"
-        , Css.property "right" "-100%"
-        , Css.property "bottom" "-100%"
-        , Css.property "left" "-100%"
-        ]
+    Css.property "inset" "-100%"
 
 
 neg_inset_px : Css.Style
 neg_inset_px =
-    Css.batch
-        [ Css.property "top" "-1px"
-        , Css.property "right" "-1px"
-        , Css.property "bottom" "-1px"
-        , Css.property "left" "-1px"
-        ]
+    Css.property "inset" "-1px"
 
 
 neg_inset_x_0 : Css.Style
@@ -11535,6 +12210,181 @@ neg_mb_px =
     Css.property "margin-bottom" "-1px"
 
 
+neg_me_0 : Css.Style
+neg_me_0 =
+    Css.property "margin-inline-end" "-0px"
+
+
+neg_me_0_dot_5 : Css.Style
+neg_me_0_dot_5 =
+    Css.property "margin-inline-end" "-0.125rem"
+
+
+neg_me_1 : Css.Style
+neg_me_1 =
+    Css.property "margin-inline-end" "-0.25rem"
+
+
+neg_me_10 : Css.Style
+neg_me_10 =
+    Css.property "margin-inline-end" "-2.5rem"
+
+
+neg_me_11 : Css.Style
+neg_me_11 =
+    Css.property "margin-inline-end" "-2.75rem"
+
+
+neg_me_12 : Css.Style
+neg_me_12 =
+    Css.property "margin-inline-end" "-3rem"
+
+
+neg_me_14 : Css.Style
+neg_me_14 =
+    Css.property "margin-inline-end" "-3.5rem"
+
+
+neg_me_16 : Css.Style
+neg_me_16 =
+    Css.property "margin-inline-end" "-4rem"
+
+
+neg_me_1_dot_5 : Css.Style
+neg_me_1_dot_5 =
+    Css.property "margin-inline-end" "-0.375rem"
+
+
+neg_me_2 : Css.Style
+neg_me_2 =
+    Css.property "margin-inline-end" "-0.5rem"
+
+
+neg_me_20 : Css.Style
+neg_me_20 =
+    Css.property "margin-inline-end" "-5rem"
+
+
+neg_me_24 : Css.Style
+neg_me_24 =
+    Css.property "margin-inline-end" "-6rem"
+
+
+neg_me_28 : Css.Style
+neg_me_28 =
+    Css.property "margin-inline-end" "-7rem"
+
+
+neg_me_2_dot_5 : Css.Style
+neg_me_2_dot_5 =
+    Css.property "margin-inline-end" "-0.625rem"
+
+
+neg_me_3 : Css.Style
+neg_me_3 =
+    Css.property "margin-inline-end" "-0.75rem"
+
+
+neg_me_32 : Css.Style
+neg_me_32 =
+    Css.property "margin-inline-end" "-8rem"
+
+
+neg_me_36 : Css.Style
+neg_me_36 =
+    Css.property "margin-inline-end" "-9rem"
+
+
+neg_me_3_dot_5 : Css.Style
+neg_me_3_dot_5 =
+    Css.property "margin-inline-end" "-0.875rem"
+
+
+neg_me_4 : Css.Style
+neg_me_4 =
+    Css.property "margin-inline-end" "-1rem"
+
+
+neg_me_40 : Css.Style
+neg_me_40 =
+    Css.property "margin-inline-end" "-10rem"
+
+
+neg_me_44 : Css.Style
+neg_me_44 =
+    Css.property "margin-inline-end" "-11rem"
+
+
+neg_me_48 : Css.Style
+neg_me_48 =
+    Css.property "margin-inline-end" "-12rem"
+
+
+neg_me_5 : Css.Style
+neg_me_5 =
+    Css.property "margin-inline-end" "-1.25rem"
+
+
+neg_me_52 : Css.Style
+neg_me_52 =
+    Css.property "margin-inline-end" "-13rem"
+
+
+neg_me_56 : Css.Style
+neg_me_56 =
+    Css.property "margin-inline-end" "-14rem"
+
+
+neg_me_6 : Css.Style
+neg_me_6 =
+    Css.property "margin-inline-end" "-1.5rem"
+
+
+neg_me_60 : Css.Style
+neg_me_60 =
+    Css.property "margin-inline-end" "-15rem"
+
+
+neg_me_64 : Css.Style
+neg_me_64 =
+    Css.property "margin-inline-end" "-16rem"
+
+
+neg_me_7 : Css.Style
+neg_me_7 =
+    Css.property "margin-inline-end" "-1.75rem"
+
+
+neg_me_72 : Css.Style
+neg_me_72 =
+    Css.property "margin-inline-end" "-18rem"
+
+
+neg_me_8 : Css.Style
+neg_me_8 =
+    Css.property "margin-inline-end" "-2rem"
+
+
+neg_me_80 : Css.Style
+neg_me_80 =
+    Css.property "margin-inline-end" "-20rem"
+
+
+neg_me_9 : Css.Style
+neg_me_9 =
+    Css.property "margin-inline-end" "-2.25rem"
+
+
+neg_me_96 : Css.Style
+neg_me_96 =
+    Css.property "margin-inline-end" "-24rem"
+
+
+neg_me_px : Css.Style
+neg_me_px =
+    Css.property "margin-inline-end" "-1px"
+
+
 neg_ml_0 : Css.Style
 neg_ml_0 =
     Css.property "margin-left" "-0px"
@@ -11883,6 +12733,181 @@ neg_mr_96 =
 neg_mr_px : Css.Style
 neg_mr_px =
     Css.property "margin-right" "-1px"
+
+
+neg_ms_0 : Css.Style
+neg_ms_0 =
+    Css.property "margin-inline-start" "-0px"
+
+
+neg_ms_0_dot_5 : Css.Style
+neg_ms_0_dot_5 =
+    Css.property "margin-inline-start" "-0.125rem"
+
+
+neg_ms_1 : Css.Style
+neg_ms_1 =
+    Css.property "margin-inline-start" "-0.25rem"
+
+
+neg_ms_10 : Css.Style
+neg_ms_10 =
+    Css.property "margin-inline-start" "-2.5rem"
+
+
+neg_ms_11 : Css.Style
+neg_ms_11 =
+    Css.property "margin-inline-start" "-2.75rem"
+
+
+neg_ms_12 : Css.Style
+neg_ms_12 =
+    Css.property "margin-inline-start" "-3rem"
+
+
+neg_ms_14 : Css.Style
+neg_ms_14 =
+    Css.property "margin-inline-start" "-3.5rem"
+
+
+neg_ms_16 : Css.Style
+neg_ms_16 =
+    Css.property "margin-inline-start" "-4rem"
+
+
+neg_ms_1_dot_5 : Css.Style
+neg_ms_1_dot_5 =
+    Css.property "margin-inline-start" "-0.375rem"
+
+
+neg_ms_2 : Css.Style
+neg_ms_2 =
+    Css.property "margin-inline-start" "-0.5rem"
+
+
+neg_ms_20 : Css.Style
+neg_ms_20 =
+    Css.property "margin-inline-start" "-5rem"
+
+
+neg_ms_24 : Css.Style
+neg_ms_24 =
+    Css.property "margin-inline-start" "-6rem"
+
+
+neg_ms_28 : Css.Style
+neg_ms_28 =
+    Css.property "margin-inline-start" "-7rem"
+
+
+neg_ms_2_dot_5 : Css.Style
+neg_ms_2_dot_5 =
+    Css.property "margin-inline-start" "-0.625rem"
+
+
+neg_ms_3 : Css.Style
+neg_ms_3 =
+    Css.property "margin-inline-start" "-0.75rem"
+
+
+neg_ms_32 : Css.Style
+neg_ms_32 =
+    Css.property "margin-inline-start" "-8rem"
+
+
+neg_ms_36 : Css.Style
+neg_ms_36 =
+    Css.property "margin-inline-start" "-9rem"
+
+
+neg_ms_3_dot_5 : Css.Style
+neg_ms_3_dot_5 =
+    Css.property "margin-inline-start" "-0.875rem"
+
+
+neg_ms_4 : Css.Style
+neg_ms_4 =
+    Css.property "margin-inline-start" "-1rem"
+
+
+neg_ms_40 : Css.Style
+neg_ms_40 =
+    Css.property "margin-inline-start" "-10rem"
+
+
+neg_ms_44 : Css.Style
+neg_ms_44 =
+    Css.property "margin-inline-start" "-11rem"
+
+
+neg_ms_48 : Css.Style
+neg_ms_48 =
+    Css.property "margin-inline-start" "-12rem"
+
+
+neg_ms_5 : Css.Style
+neg_ms_5 =
+    Css.property "margin-inline-start" "-1.25rem"
+
+
+neg_ms_52 : Css.Style
+neg_ms_52 =
+    Css.property "margin-inline-start" "-13rem"
+
+
+neg_ms_56 : Css.Style
+neg_ms_56 =
+    Css.property "margin-inline-start" "-14rem"
+
+
+neg_ms_6 : Css.Style
+neg_ms_6 =
+    Css.property "margin-inline-start" "-1.5rem"
+
+
+neg_ms_60 : Css.Style
+neg_ms_60 =
+    Css.property "margin-inline-start" "-15rem"
+
+
+neg_ms_64 : Css.Style
+neg_ms_64 =
+    Css.property "margin-inline-start" "-16rem"
+
+
+neg_ms_7 : Css.Style
+neg_ms_7 =
+    Css.property "margin-inline-start" "-1.75rem"
+
+
+neg_ms_72 : Css.Style
+neg_ms_72 =
+    Css.property "margin-inline-start" "-18rem"
+
+
+neg_ms_8 : Css.Style
+neg_ms_8 =
+    Css.property "margin-inline-start" "-2rem"
+
+
+neg_ms_80 : Css.Style
+neg_ms_80 =
+    Css.property "margin-inline-start" "-20rem"
+
+
+neg_ms_9 : Css.Style
+neg_ms_9 =
+    Css.property "margin-inline-start" "-2.25rem"
+
+
+neg_ms_96 : Css.Style
+neg_ms_96 =
+    Css.property "margin-inline-start" "-24rem"
+
+
+neg_ms_px : Css.Style
+neg_ms_px =
+    Css.property "margin-inline-start" "-1px"
 
 
 neg_mt_0 : Css.Style
@@ -12693,6 +13718,31 @@ neg_order_last =
 neg_order_none : Css.Style
 neg_order_none =
     Css.property "order" "0"
+
+
+neg_outline_offset_0 : Css.Style
+neg_outline_offset_0 =
+    Css.property "outline-offset" "-0px"
+
+
+neg_outline_offset_1 : Css.Style
+neg_outline_offset_1 =
+    Css.property "outline-offset" "-1px"
+
+
+neg_outline_offset_2 : Css.Style
+neg_outline_offset_2 =
+    Css.property "outline-offset" "-2px"
+
+
+neg_outline_offset_4 : Css.Style
+neg_outline_offset_4 =
+    Css.property "outline-offset" "-4px"
+
+
+neg_outline_offset_8 : Css.Style
+neg_outline_offset_8 =
+    Css.property "outline-offset" "-8px"
 
 
 neg_right_0 : Css.Style
@@ -13577,6 +14627,181 @@ neg_scroll_mb_px =
     Css.property "scroll-margin-bottom" "-1px"
 
 
+neg_scroll_me_0 : Css.Style
+neg_scroll_me_0 =
+    Css.property "scroll-margin-inline-end" "-0px"
+
+
+neg_scroll_me_0_dot_5 : Css.Style
+neg_scroll_me_0_dot_5 =
+    Css.property "scroll-margin-inline-end" "-0.125rem"
+
+
+neg_scroll_me_1 : Css.Style
+neg_scroll_me_1 =
+    Css.property "scroll-margin-inline-end" "-0.25rem"
+
+
+neg_scroll_me_10 : Css.Style
+neg_scroll_me_10 =
+    Css.property "scroll-margin-inline-end" "-2.5rem"
+
+
+neg_scroll_me_11 : Css.Style
+neg_scroll_me_11 =
+    Css.property "scroll-margin-inline-end" "-2.75rem"
+
+
+neg_scroll_me_12 : Css.Style
+neg_scroll_me_12 =
+    Css.property "scroll-margin-inline-end" "-3rem"
+
+
+neg_scroll_me_14 : Css.Style
+neg_scroll_me_14 =
+    Css.property "scroll-margin-inline-end" "-3.5rem"
+
+
+neg_scroll_me_16 : Css.Style
+neg_scroll_me_16 =
+    Css.property "scroll-margin-inline-end" "-4rem"
+
+
+neg_scroll_me_1_dot_5 : Css.Style
+neg_scroll_me_1_dot_5 =
+    Css.property "scroll-margin-inline-end" "-0.375rem"
+
+
+neg_scroll_me_2 : Css.Style
+neg_scroll_me_2 =
+    Css.property "scroll-margin-inline-end" "-0.5rem"
+
+
+neg_scroll_me_20 : Css.Style
+neg_scroll_me_20 =
+    Css.property "scroll-margin-inline-end" "-5rem"
+
+
+neg_scroll_me_24 : Css.Style
+neg_scroll_me_24 =
+    Css.property "scroll-margin-inline-end" "-6rem"
+
+
+neg_scroll_me_28 : Css.Style
+neg_scroll_me_28 =
+    Css.property "scroll-margin-inline-end" "-7rem"
+
+
+neg_scroll_me_2_dot_5 : Css.Style
+neg_scroll_me_2_dot_5 =
+    Css.property "scroll-margin-inline-end" "-0.625rem"
+
+
+neg_scroll_me_3 : Css.Style
+neg_scroll_me_3 =
+    Css.property "scroll-margin-inline-end" "-0.75rem"
+
+
+neg_scroll_me_32 : Css.Style
+neg_scroll_me_32 =
+    Css.property "scroll-margin-inline-end" "-8rem"
+
+
+neg_scroll_me_36 : Css.Style
+neg_scroll_me_36 =
+    Css.property "scroll-margin-inline-end" "-9rem"
+
+
+neg_scroll_me_3_dot_5 : Css.Style
+neg_scroll_me_3_dot_5 =
+    Css.property "scroll-margin-inline-end" "-0.875rem"
+
+
+neg_scroll_me_4 : Css.Style
+neg_scroll_me_4 =
+    Css.property "scroll-margin-inline-end" "-1rem"
+
+
+neg_scroll_me_40 : Css.Style
+neg_scroll_me_40 =
+    Css.property "scroll-margin-inline-end" "-10rem"
+
+
+neg_scroll_me_44 : Css.Style
+neg_scroll_me_44 =
+    Css.property "scroll-margin-inline-end" "-11rem"
+
+
+neg_scroll_me_48 : Css.Style
+neg_scroll_me_48 =
+    Css.property "scroll-margin-inline-end" "-12rem"
+
+
+neg_scroll_me_5 : Css.Style
+neg_scroll_me_5 =
+    Css.property "scroll-margin-inline-end" "-1.25rem"
+
+
+neg_scroll_me_52 : Css.Style
+neg_scroll_me_52 =
+    Css.property "scroll-margin-inline-end" "-13rem"
+
+
+neg_scroll_me_56 : Css.Style
+neg_scroll_me_56 =
+    Css.property "scroll-margin-inline-end" "-14rem"
+
+
+neg_scroll_me_6 : Css.Style
+neg_scroll_me_6 =
+    Css.property "scroll-margin-inline-end" "-1.5rem"
+
+
+neg_scroll_me_60 : Css.Style
+neg_scroll_me_60 =
+    Css.property "scroll-margin-inline-end" "-15rem"
+
+
+neg_scroll_me_64 : Css.Style
+neg_scroll_me_64 =
+    Css.property "scroll-margin-inline-end" "-16rem"
+
+
+neg_scroll_me_7 : Css.Style
+neg_scroll_me_7 =
+    Css.property "scroll-margin-inline-end" "-1.75rem"
+
+
+neg_scroll_me_72 : Css.Style
+neg_scroll_me_72 =
+    Css.property "scroll-margin-inline-end" "-18rem"
+
+
+neg_scroll_me_8 : Css.Style
+neg_scroll_me_8 =
+    Css.property "scroll-margin-inline-end" "-2rem"
+
+
+neg_scroll_me_80 : Css.Style
+neg_scroll_me_80 =
+    Css.property "scroll-margin-inline-end" "-20rem"
+
+
+neg_scroll_me_9 : Css.Style
+neg_scroll_me_9 =
+    Css.property "scroll-margin-inline-end" "-2.25rem"
+
+
+neg_scroll_me_96 : Css.Style
+neg_scroll_me_96 =
+    Css.property "scroll-margin-inline-end" "-24rem"
+
+
+neg_scroll_me_px : Css.Style
+neg_scroll_me_px =
+    Css.property "scroll-margin-inline-end" "-1px"
+
+
 neg_scroll_ml_0 : Css.Style
 neg_scroll_ml_0 =
     Css.property "scroll-margin-left" "-0px"
@@ -13925,6 +15150,181 @@ neg_scroll_mr_96 =
 neg_scroll_mr_px : Css.Style
 neg_scroll_mr_px =
     Css.property "scroll-margin-right" "-1px"
+
+
+neg_scroll_ms_0 : Css.Style
+neg_scroll_ms_0 =
+    Css.property "scroll-margin-inline-start" "-0px"
+
+
+neg_scroll_ms_0_dot_5 : Css.Style
+neg_scroll_ms_0_dot_5 =
+    Css.property "scroll-margin-inline-start" "-0.125rem"
+
+
+neg_scroll_ms_1 : Css.Style
+neg_scroll_ms_1 =
+    Css.property "scroll-margin-inline-start" "-0.25rem"
+
+
+neg_scroll_ms_10 : Css.Style
+neg_scroll_ms_10 =
+    Css.property "scroll-margin-inline-start" "-2.5rem"
+
+
+neg_scroll_ms_11 : Css.Style
+neg_scroll_ms_11 =
+    Css.property "scroll-margin-inline-start" "-2.75rem"
+
+
+neg_scroll_ms_12 : Css.Style
+neg_scroll_ms_12 =
+    Css.property "scroll-margin-inline-start" "-3rem"
+
+
+neg_scroll_ms_14 : Css.Style
+neg_scroll_ms_14 =
+    Css.property "scroll-margin-inline-start" "-3.5rem"
+
+
+neg_scroll_ms_16 : Css.Style
+neg_scroll_ms_16 =
+    Css.property "scroll-margin-inline-start" "-4rem"
+
+
+neg_scroll_ms_1_dot_5 : Css.Style
+neg_scroll_ms_1_dot_5 =
+    Css.property "scroll-margin-inline-start" "-0.375rem"
+
+
+neg_scroll_ms_2 : Css.Style
+neg_scroll_ms_2 =
+    Css.property "scroll-margin-inline-start" "-0.5rem"
+
+
+neg_scroll_ms_20 : Css.Style
+neg_scroll_ms_20 =
+    Css.property "scroll-margin-inline-start" "-5rem"
+
+
+neg_scroll_ms_24 : Css.Style
+neg_scroll_ms_24 =
+    Css.property "scroll-margin-inline-start" "-6rem"
+
+
+neg_scroll_ms_28 : Css.Style
+neg_scroll_ms_28 =
+    Css.property "scroll-margin-inline-start" "-7rem"
+
+
+neg_scroll_ms_2_dot_5 : Css.Style
+neg_scroll_ms_2_dot_5 =
+    Css.property "scroll-margin-inline-start" "-0.625rem"
+
+
+neg_scroll_ms_3 : Css.Style
+neg_scroll_ms_3 =
+    Css.property "scroll-margin-inline-start" "-0.75rem"
+
+
+neg_scroll_ms_32 : Css.Style
+neg_scroll_ms_32 =
+    Css.property "scroll-margin-inline-start" "-8rem"
+
+
+neg_scroll_ms_36 : Css.Style
+neg_scroll_ms_36 =
+    Css.property "scroll-margin-inline-start" "-9rem"
+
+
+neg_scroll_ms_3_dot_5 : Css.Style
+neg_scroll_ms_3_dot_5 =
+    Css.property "scroll-margin-inline-start" "-0.875rem"
+
+
+neg_scroll_ms_4 : Css.Style
+neg_scroll_ms_4 =
+    Css.property "scroll-margin-inline-start" "-1rem"
+
+
+neg_scroll_ms_40 : Css.Style
+neg_scroll_ms_40 =
+    Css.property "scroll-margin-inline-start" "-10rem"
+
+
+neg_scroll_ms_44 : Css.Style
+neg_scroll_ms_44 =
+    Css.property "scroll-margin-inline-start" "-11rem"
+
+
+neg_scroll_ms_48 : Css.Style
+neg_scroll_ms_48 =
+    Css.property "scroll-margin-inline-start" "-12rem"
+
+
+neg_scroll_ms_5 : Css.Style
+neg_scroll_ms_5 =
+    Css.property "scroll-margin-inline-start" "-1.25rem"
+
+
+neg_scroll_ms_52 : Css.Style
+neg_scroll_ms_52 =
+    Css.property "scroll-margin-inline-start" "-13rem"
+
+
+neg_scroll_ms_56 : Css.Style
+neg_scroll_ms_56 =
+    Css.property "scroll-margin-inline-start" "-14rem"
+
+
+neg_scroll_ms_6 : Css.Style
+neg_scroll_ms_6 =
+    Css.property "scroll-margin-inline-start" "-1.5rem"
+
+
+neg_scroll_ms_60 : Css.Style
+neg_scroll_ms_60 =
+    Css.property "scroll-margin-inline-start" "-15rem"
+
+
+neg_scroll_ms_64 : Css.Style
+neg_scroll_ms_64 =
+    Css.property "scroll-margin-inline-start" "-16rem"
+
+
+neg_scroll_ms_7 : Css.Style
+neg_scroll_ms_7 =
+    Css.property "scroll-margin-inline-start" "-1.75rem"
+
+
+neg_scroll_ms_72 : Css.Style
+neg_scroll_ms_72 =
+    Css.property "scroll-margin-inline-start" "-18rem"
+
+
+neg_scroll_ms_8 : Css.Style
+neg_scroll_ms_8 =
+    Css.property "scroll-margin-inline-start" "-2rem"
+
+
+neg_scroll_ms_80 : Css.Style
+neg_scroll_ms_80 =
+    Css.property "scroll-margin-inline-start" "-20rem"
+
+
+neg_scroll_ms_9 : Css.Style
+neg_scroll_ms_9 =
+    Css.property "scroll-margin-inline-start" "-2.25rem"
+
+
+neg_scroll_ms_96 : Css.Style
+neg_scroll_ms_96 =
+    Css.property "scroll-margin-inline-start" "-24rem"
+
+
+neg_scroll_ms_px : Css.Style
+neg_scroll_ms_px =
+    Css.property "scroll-margin-inline-start" "-1px"
 
 
 neg_scroll_mt_0 : Css.Style
@@ -15528,6 +16928,216 @@ neg_space_y_px =
         ]
 
 
+neg_start_0 : Css.Style
+neg_start_0 =
+    Css.property "inset-inline-start" "-0px"
+
+
+neg_start_0_dot_5 : Css.Style
+neg_start_0_dot_5 =
+    Css.property "inset-inline-start" "-0.125rem"
+
+
+neg_start_1 : Css.Style
+neg_start_1 =
+    Css.property "inset-inline-start" "-0.25rem"
+
+
+neg_start_10 : Css.Style
+neg_start_10 =
+    Css.property "inset-inline-start" "-2.5rem"
+
+
+neg_start_11 : Css.Style
+neg_start_11 =
+    Css.property "inset-inline-start" "-2.75rem"
+
+
+neg_start_12 : Css.Style
+neg_start_12 =
+    Css.property "inset-inline-start" "-3rem"
+
+
+neg_start_14 : Css.Style
+neg_start_14 =
+    Css.property "inset-inline-start" "-3.5rem"
+
+
+neg_start_16 : Css.Style
+neg_start_16 =
+    Css.property "inset-inline-start" "-4rem"
+
+
+neg_start_1_dot_5 : Css.Style
+neg_start_1_dot_5 =
+    Css.property "inset-inline-start" "-0.375rem"
+
+
+neg_start_1over2 : Css.Style
+neg_start_1over2 =
+    Css.property "inset-inline-start" "-50%"
+
+
+neg_start_1over3 : Css.Style
+neg_start_1over3 =
+    Css.property "inset-inline-start" "-33.333333%"
+
+
+neg_start_1over4 : Css.Style
+neg_start_1over4 =
+    Css.property "inset-inline-start" "-25%"
+
+
+neg_start_2 : Css.Style
+neg_start_2 =
+    Css.property "inset-inline-start" "-0.5rem"
+
+
+neg_start_20 : Css.Style
+neg_start_20 =
+    Css.property "inset-inline-start" "-5rem"
+
+
+neg_start_24 : Css.Style
+neg_start_24 =
+    Css.property "inset-inline-start" "-6rem"
+
+
+neg_start_28 : Css.Style
+neg_start_28 =
+    Css.property "inset-inline-start" "-7rem"
+
+
+neg_start_2_dot_5 : Css.Style
+neg_start_2_dot_5 =
+    Css.property "inset-inline-start" "-0.625rem"
+
+
+neg_start_2over3 : Css.Style
+neg_start_2over3 =
+    Css.property "inset-inline-start" "-66.666667%"
+
+
+neg_start_2over4 : Css.Style
+neg_start_2over4 =
+    Css.property "inset-inline-start" "-50%"
+
+
+neg_start_3 : Css.Style
+neg_start_3 =
+    Css.property "inset-inline-start" "-0.75rem"
+
+
+neg_start_32 : Css.Style
+neg_start_32 =
+    Css.property "inset-inline-start" "-8rem"
+
+
+neg_start_36 : Css.Style
+neg_start_36 =
+    Css.property "inset-inline-start" "-9rem"
+
+
+neg_start_3_dot_5 : Css.Style
+neg_start_3_dot_5 =
+    Css.property "inset-inline-start" "-0.875rem"
+
+
+neg_start_3over4 : Css.Style
+neg_start_3over4 =
+    Css.property "inset-inline-start" "-75%"
+
+
+neg_start_4 : Css.Style
+neg_start_4 =
+    Css.property "inset-inline-start" "-1rem"
+
+
+neg_start_40 : Css.Style
+neg_start_40 =
+    Css.property "inset-inline-start" "-10rem"
+
+
+neg_start_44 : Css.Style
+neg_start_44 =
+    Css.property "inset-inline-start" "-11rem"
+
+
+neg_start_48 : Css.Style
+neg_start_48 =
+    Css.property "inset-inline-start" "-12rem"
+
+
+neg_start_5 : Css.Style
+neg_start_5 =
+    Css.property "inset-inline-start" "-1.25rem"
+
+
+neg_start_52 : Css.Style
+neg_start_52 =
+    Css.property "inset-inline-start" "-13rem"
+
+
+neg_start_56 : Css.Style
+neg_start_56 =
+    Css.property "inset-inline-start" "-14rem"
+
+
+neg_start_6 : Css.Style
+neg_start_6 =
+    Css.property "inset-inline-start" "-1.5rem"
+
+
+neg_start_60 : Css.Style
+neg_start_60 =
+    Css.property "inset-inline-start" "-15rem"
+
+
+neg_start_64 : Css.Style
+neg_start_64 =
+    Css.property "inset-inline-start" "-16rem"
+
+
+neg_start_7 : Css.Style
+neg_start_7 =
+    Css.property "inset-inline-start" "-1.75rem"
+
+
+neg_start_72 : Css.Style
+neg_start_72 =
+    Css.property "inset-inline-start" "-18rem"
+
+
+neg_start_8 : Css.Style
+neg_start_8 =
+    Css.property "inset-inline-start" "-2rem"
+
+
+neg_start_80 : Css.Style
+neg_start_80 =
+    Css.property "inset-inline-start" "-20rem"
+
+
+neg_start_9 : Css.Style
+neg_start_9 =
+    Css.property "inset-inline-start" "-2.25rem"
+
+
+neg_start_96 : Css.Style
+neg_start_96 =
+    Css.property "inset-inline-start" "-24rem"
+
+
+neg_start_full : Css.Style
+neg_start_full =
+    Css.property "inset-inline-start" "-100%"
+
+
+neg_start_px : Css.Style
+neg_start_px =
+    Css.property "inset-inline-start" "-1px"
+
+
 neg_top_0 : Css.Style
 neg_top_0 =
     Css.property "top" "-0px"
@@ -16830,11 +18440,6 @@ outline_double =
     Css.property "outline-style" "double"
 
 
-outline_hidden : Css.Style
-outline_hidden =
-    Css.property "outline-style" "hidden"
-
-
 outline_none : Css.Style
 outline_none =
     Css.batch
@@ -17348,6 +18953,181 @@ pb_px =
     Css.property "padding-bottom" "1px"
 
 
+pe_0 : Css.Style
+pe_0 =
+    Css.property "padding-inline-end" "0px"
+
+
+pe_0_dot_5 : Css.Style
+pe_0_dot_5 =
+    Css.property "padding-inline-end" "0.125rem"
+
+
+pe_1 : Css.Style
+pe_1 =
+    Css.property "padding-inline-end" "0.25rem"
+
+
+pe_10 : Css.Style
+pe_10 =
+    Css.property "padding-inline-end" "2.5rem"
+
+
+pe_11 : Css.Style
+pe_11 =
+    Css.property "padding-inline-end" "2.75rem"
+
+
+pe_12 : Css.Style
+pe_12 =
+    Css.property "padding-inline-end" "3rem"
+
+
+pe_14 : Css.Style
+pe_14 =
+    Css.property "padding-inline-end" "3.5rem"
+
+
+pe_16 : Css.Style
+pe_16 =
+    Css.property "padding-inline-end" "4rem"
+
+
+pe_1_dot_5 : Css.Style
+pe_1_dot_5 =
+    Css.property "padding-inline-end" "0.375rem"
+
+
+pe_2 : Css.Style
+pe_2 =
+    Css.property "padding-inline-end" "0.5rem"
+
+
+pe_20 : Css.Style
+pe_20 =
+    Css.property "padding-inline-end" "5rem"
+
+
+pe_24 : Css.Style
+pe_24 =
+    Css.property "padding-inline-end" "6rem"
+
+
+pe_28 : Css.Style
+pe_28 =
+    Css.property "padding-inline-end" "7rem"
+
+
+pe_2_dot_5 : Css.Style
+pe_2_dot_5 =
+    Css.property "padding-inline-end" "0.625rem"
+
+
+pe_3 : Css.Style
+pe_3 =
+    Css.property "padding-inline-end" "0.75rem"
+
+
+pe_32 : Css.Style
+pe_32 =
+    Css.property "padding-inline-end" "8rem"
+
+
+pe_36 : Css.Style
+pe_36 =
+    Css.property "padding-inline-end" "9rem"
+
+
+pe_3_dot_5 : Css.Style
+pe_3_dot_5 =
+    Css.property "padding-inline-end" "0.875rem"
+
+
+pe_4 : Css.Style
+pe_4 =
+    Css.property "padding-inline-end" "1rem"
+
+
+pe_40 : Css.Style
+pe_40 =
+    Css.property "padding-inline-end" "10rem"
+
+
+pe_44 : Css.Style
+pe_44 =
+    Css.property "padding-inline-end" "11rem"
+
+
+pe_48 : Css.Style
+pe_48 =
+    Css.property "padding-inline-end" "12rem"
+
+
+pe_5 : Css.Style
+pe_5 =
+    Css.property "padding-inline-end" "1.25rem"
+
+
+pe_52 : Css.Style
+pe_52 =
+    Css.property "padding-inline-end" "13rem"
+
+
+pe_56 : Css.Style
+pe_56 =
+    Css.property "padding-inline-end" "14rem"
+
+
+pe_6 : Css.Style
+pe_6 =
+    Css.property "padding-inline-end" "1.5rem"
+
+
+pe_60 : Css.Style
+pe_60 =
+    Css.property "padding-inline-end" "15rem"
+
+
+pe_64 : Css.Style
+pe_64 =
+    Css.property "padding-inline-end" "16rem"
+
+
+pe_7 : Css.Style
+pe_7 =
+    Css.property "padding-inline-end" "1.75rem"
+
+
+pe_72 : Css.Style
+pe_72 =
+    Css.property "padding-inline-end" "18rem"
+
+
+pe_8 : Css.Style
+pe_8 =
+    Css.property "padding-inline-end" "2rem"
+
+
+pe_80 : Css.Style
+pe_80 =
+    Css.property "padding-inline-end" "20rem"
+
+
+pe_9 : Css.Style
+pe_9 =
+    Css.property "padding-inline-end" "2.25rem"
+
+
+pe_96 : Css.Style
+pe_96 =
+    Css.property "padding-inline-end" "24rem"
+
+
+pe_px : Css.Style
+pe_px =
+    Css.property "padding-inline-end" "1px"
+
+
 pl_0 : Css.Style
 pl_0 =
     Css.property "padding-left" "0px"
@@ -17528,6 +19308,11 @@ place_content_around =
     Css.property "place-content" "space-around"
 
 
+place_content_baseline : Css.Style
+place_content_baseline =
+    Css.property "place-content" "baseline"
+
+
 place_content_between : Css.Style
 place_content_between =
     Css.property "place-content" "space-between"
@@ -17556,6 +19341,11 @@ place_content_start =
 place_content_stretch : Css.Style
 place_content_stretch =
     Css.property "place-content" "stretch"
+
+
+place_items_baseline : Css.Style
+place_items_baseline =
+    Css.property "place-items" "baseline"
 
 
 place_items_center : Css.Style
@@ -17899,6 +19689,181 @@ proportional_nums =
         [ Css.property "--tw-numeric-spacing" "proportional-nums"
         , Css.property "font-variant-numeric" "var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)"
         ]
+
+
+ps_0 : Css.Style
+ps_0 =
+    Css.property "padding-inline-start" "0px"
+
+
+ps_0_dot_5 : Css.Style
+ps_0_dot_5 =
+    Css.property "padding-inline-start" "0.125rem"
+
+
+ps_1 : Css.Style
+ps_1 =
+    Css.property "padding-inline-start" "0.25rem"
+
+
+ps_10 : Css.Style
+ps_10 =
+    Css.property "padding-inline-start" "2.5rem"
+
+
+ps_11 : Css.Style
+ps_11 =
+    Css.property "padding-inline-start" "2.75rem"
+
+
+ps_12 : Css.Style
+ps_12 =
+    Css.property "padding-inline-start" "3rem"
+
+
+ps_14 : Css.Style
+ps_14 =
+    Css.property "padding-inline-start" "3.5rem"
+
+
+ps_16 : Css.Style
+ps_16 =
+    Css.property "padding-inline-start" "4rem"
+
+
+ps_1_dot_5 : Css.Style
+ps_1_dot_5 =
+    Css.property "padding-inline-start" "0.375rem"
+
+
+ps_2 : Css.Style
+ps_2 =
+    Css.property "padding-inline-start" "0.5rem"
+
+
+ps_20 : Css.Style
+ps_20 =
+    Css.property "padding-inline-start" "5rem"
+
+
+ps_24 : Css.Style
+ps_24 =
+    Css.property "padding-inline-start" "6rem"
+
+
+ps_28 : Css.Style
+ps_28 =
+    Css.property "padding-inline-start" "7rem"
+
+
+ps_2_dot_5 : Css.Style
+ps_2_dot_5 =
+    Css.property "padding-inline-start" "0.625rem"
+
+
+ps_3 : Css.Style
+ps_3 =
+    Css.property "padding-inline-start" "0.75rem"
+
+
+ps_32 : Css.Style
+ps_32 =
+    Css.property "padding-inline-start" "8rem"
+
+
+ps_36 : Css.Style
+ps_36 =
+    Css.property "padding-inline-start" "9rem"
+
+
+ps_3_dot_5 : Css.Style
+ps_3_dot_5 =
+    Css.property "padding-inline-start" "0.875rem"
+
+
+ps_4 : Css.Style
+ps_4 =
+    Css.property "padding-inline-start" "1rem"
+
+
+ps_40 : Css.Style
+ps_40 =
+    Css.property "padding-inline-start" "10rem"
+
+
+ps_44 : Css.Style
+ps_44 =
+    Css.property "padding-inline-start" "11rem"
+
+
+ps_48 : Css.Style
+ps_48 =
+    Css.property "padding-inline-start" "12rem"
+
+
+ps_5 : Css.Style
+ps_5 =
+    Css.property "padding-inline-start" "1.25rem"
+
+
+ps_52 : Css.Style
+ps_52 =
+    Css.property "padding-inline-start" "13rem"
+
+
+ps_56 : Css.Style
+ps_56 =
+    Css.property "padding-inline-start" "14rem"
+
+
+ps_6 : Css.Style
+ps_6 =
+    Css.property "padding-inline-start" "1.5rem"
+
+
+ps_60 : Css.Style
+ps_60 =
+    Css.property "padding-inline-start" "15rem"
+
+
+ps_64 : Css.Style
+ps_64 =
+    Css.property "padding-inline-start" "16rem"
+
+
+ps_7 : Css.Style
+ps_7 =
+    Css.property "padding-inline-start" "1.75rem"
+
+
+ps_72 : Css.Style
+ps_72 =
+    Css.property "padding-inline-start" "18rem"
+
+
+ps_8 : Css.Style
+ps_8 =
+    Css.property "padding-inline-start" "2rem"
+
+
+ps_80 : Css.Style
+ps_80 =
+    Css.property "padding-inline-start" "20rem"
+
+
+ps_9 : Css.Style
+ps_9 =
+    Css.property "padding-inline-start" "2.25rem"
+
+
+ps_96 : Css.Style
+ps_96 =
+    Css.property "padding-inline-start" "24rem"
+
+
+ps_px : Css.Style
+ps_px =
+    Css.property "padding-inline-start" "1px"
 
 
 pt_0 : Css.Style
@@ -19284,6 +21249,168 @@ rounded_br_xl =
     Css.property "border-bottom-right-radius" "0.75rem"
 
 
+rounded_e : Css.Style
+rounded_e =
+    Css.batch
+        [ Css.property "border-start-end-radius" "0.25rem"
+        , Css.property "border-end-end-radius" "0.25rem"
+        ]
+
+
+rounded_e_2xl : Css.Style
+rounded_e_2xl =
+    Css.batch
+        [ Css.property "border-start-end-radius" "1rem"
+        , Css.property "border-end-end-radius" "1rem"
+        ]
+
+
+rounded_e_3xl : Css.Style
+rounded_e_3xl =
+    Css.batch
+        [ Css.property "border-start-end-radius" "1.5rem"
+        , Css.property "border-end-end-radius" "1.5rem"
+        ]
+
+
+rounded_e_full : Css.Style
+rounded_e_full =
+    Css.batch
+        [ Css.property "border-start-end-radius" "9999px"
+        , Css.property "border-end-end-radius" "9999px"
+        ]
+
+
+rounded_e_lg : Css.Style
+rounded_e_lg =
+    Css.batch
+        [ Css.property "border-start-end-radius" "0.5rem"
+        , Css.property "border-end-end-radius" "0.5rem"
+        ]
+
+
+rounded_e_md : Css.Style
+rounded_e_md =
+    Css.batch
+        [ Css.property "border-start-end-radius" "0.375rem"
+        , Css.property "border-end-end-radius" "0.375rem"
+        ]
+
+
+rounded_e_none : Css.Style
+rounded_e_none =
+    Css.batch
+        [ Css.property "border-start-end-radius" "0px"
+        , Css.property "border-end-end-radius" "0px"
+        ]
+
+
+rounded_e_sm : Css.Style
+rounded_e_sm =
+    Css.batch
+        [ Css.property "border-start-end-radius" "0.125rem"
+        , Css.property "border-end-end-radius" "0.125rem"
+        ]
+
+
+rounded_e_xl : Css.Style
+rounded_e_xl =
+    Css.batch
+        [ Css.property "border-start-end-radius" "0.75rem"
+        , Css.property "border-end-end-radius" "0.75rem"
+        ]
+
+
+rounded_ee : Css.Style
+rounded_ee =
+    Css.property "border-end-end-radius" "0.25rem"
+
+
+rounded_ee_2xl : Css.Style
+rounded_ee_2xl =
+    Css.property "border-end-end-radius" "1rem"
+
+
+rounded_ee_3xl : Css.Style
+rounded_ee_3xl =
+    Css.property "border-end-end-radius" "1.5rem"
+
+
+rounded_ee_full : Css.Style
+rounded_ee_full =
+    Css.property "border-end-end-radius" "9999px"
+
+
+rounded_ee_lg : Css.Style
+rounded_ee_lg =
+    Css.property "border-end-end-radius" "0.5rem"
+
+
+rounded_ee_md : Css.Style
+rounded_ee_md =
+    Css.property "border-end-end-radius" "0.375rem"
+
+
+rounded_ee_none : Css.Style
+rounded_ee_none =
+    Css.property "border-end-end-radius" "0px"
+
+
+rounded_ee_sm : Css.Style
+rounded_ee_sm =
+    Css.property "border-end-end-radius" "0.125rem"
+
+
+rounded_ee_xl : Css.Style
+rounded_ee_xl =
+    Css.property "border-end-end-radius" "0.75rem"
+
+
+rounded_es : Css.Style
+rounded_es =
+    Css.property "border-end-start-radius" "0.25rem"
+
+
+rounded_es_2xl : Css.Style
+rounded_es_2xl =
+    Css.property "border-end-start-radius" "1rem"
+
+
+rounded_es_3xl : Css.Style
+rounded_es_3xl =
+    Css.property "border-end-start-radius" "1.5rem"
+
+
+rounded_es_full : Css.Style
+rounded_es_full =
+    Css.property "border-end-start-radius" "9999px"
+
+
+rounded_es_lg : Css.Style
+rounded_es_lg =
+    Css.property "border-end-start-radius" "0.5rem"
+
+
+rounded_es_md : Css.Style
+rounded_es_md =
+    Css.property "border-end-start-radius" "0.375rem"
+
+
+rounded_es_none : Css.Style
+rounded_es_none =
+    Css.property "border-end-start-radius" "0px"
+
+
+rounded_es_sm : Css.Style
+rounded_es_sm =
+    Css.property "border-end-start-radius" "0.125rem"
+
+
+rounded_es_xl : Css.Style
+rounded_es_xl =
+    Css.property "border-end-start-radius" "0.75rem"
+
+
 rounded_full : Css.Style
 rounded_full =
     Css.property "border-radius" "9999px"
@@ -19448,9 +21575,171 @@ rounded_r_xl =
         ]
 
 
+rounded_s : Css.Style
+rounded_s =
+    Css.batch
+        [ Css.property "border-start-start-radius" "0.25rem"
+        , Css.property "border-end-start-radius" "0.25rem"
+        ]
+
+
+rounded_s_2xl : Css.Style
+rounded_s_2xl =
+    Css.batch
+        [ Css.property "border-start-start-radius" "1rem"
+        , Css.property "border-end-start-radius" "1rem"
+        ]
+
+
+rounded_s_3xl : Css.Style
+rounded_s_3xl =
+    Css.batch
+        [ Css.property "border-start-start-radius" "1.5rem"
+        , Css.property "border-end-start-radius" "1.5rem"
+        ]
+
+
+rounded_s_full : Css.Style
+rounded_s_full =
+    Css.batch
+        [ Css.property "border-start-start-radius" "9999px"
+        , Css.property "border-end-start-radius" "9999px"
+        ]
+
+
+rounded_s_lg : Css.Style
+rounded_s_lg =
+    Css.batch
+        [ Css.property "border-start-start-radius" "0.5rem"
+        , Css.property "border-end-start-radius" "0.5rem"
+        ]
+
+
+rounded_s_md : Css.Style
+rounded_s_md =
+    Css.batch
+        [ Css.property "border-start-start-radius" "0.375rem"
+        , Css.property "border-end-start-radius" "0.375rem"
+        ]
+
+
+rounded_s_none : Css.Style
+rounded_s_none =
+    Css.batch
+        [ Css.property "border-start-start-radius" "0px"
+        , Css.property "border-end-start-radius" "0px"
+        ]
+
+
+rounded_s_sm : Css.Style
+rounded_s_sm =
+    Css.batch
+        [ Css.property "border-start-start-radius" "0.125rem"
+        , Css.property "border-end-start-radius" "0.125rem"
+        ]
+
+
+rounded_s_xl : Css.Style
+rounded_s_xl =
+    Css.batch
+        [ Css.property "border-start-start-radius" "0.75rem"
+        , Css.property "border-end-start-radius" "0.75rem"
+        ]
+
+
+rounded_se : Css.Style
+rounded_se =
+    Css.property "border-start-end-radius" "0.25rem"
+
+
+rounded_se_2xl : Css.Style
+rounded_se_2xl =
+    Css.property "border-start-end-radius" "1rem"
+
+
+rounded_se_3xl : Css.Style
+rounded_se_3xl =
+    Css.property "border-start-end-radius" "1.5rem"
+
+
+rounded_se_full : Css.Style
+rounded_se_full =
+    Css.property "border-start-end-radius" "9999px"
+
+
+rounded_se_lg : Css.Style
+rounded_se_lg =
+    Css.property "border-start-end-radius" "0.5rem"
+
+
+rounded_se_md : Css.Style
+rounded_se_md =
+    Css.property "border-start-end-radius" "0.375rem"
+
+
+rounded_se_none : Css.Style
+rounded_se_none =
+    Css.property "border-start-end-radius" "0px"
+
+
+rounded_se_sm : Css.Style
+rounded_se_sm =
+    Css.property "border-start-end-radius" "0.125rem"
+
+
+rounded_se_xl : Css.Style
+rounded_se_xl =
+    Css.property "border-start-end-radius" "0.75rem"
+
+
 rounded_sm : Css.Style
 rounded_sm =
     Css.property "border-radius" "0.125rem"
+
+
+rounded_ss : Css.Style
+rounded_ss =
+    Css.property "border-start-start-radius" "0.25rem"
+
+
+rounded_ss_2xl : Css.Style
+rounded_ss_2xl =
+    Css.property "border-start-start-radius" "1rem"
+
+
+rounded_ss_3xl : Css.Style
+rounded_ss_3xl =
+    Css.property "border-start-start-radius" "1.5rem"
+
+
+rounded_ss_full : Css.Style
+rounded_ss_full =
+    Css.property "border-start-start-radius" "9999px"
+
+
+rounded_ss_lg : Css.Style
+rounded_ss_lg =
+    Css.property "border-start-start-radius" "0.5rem"
+
+
+rounded_ss_md : Css.Style
+rounded_ss_md =
+    Css.property "border-start-start-radius" "0.375rem"
+
+
+rounded_ss_none : Css.Style
+rounded_ss_none =
+    Css.property "border-start-start-radius" "0px"
+
+
+rounded_ss_sm : Css.Style
+rounded_ss_sm =
+    Css.property "border-start-start-radius" "0.125rem"
+
+
+rounded_ss_xl : Css.Style
+rounded_ss_xl =
+    Css.property "border-start-start-radius" "0.75rem"
 
 
 rounded_t : Css.Style
@@ -20385,6 +22674,181 @@ scroll_mb_px =
     Css.property "scroll-margin-bottom" "1px"
 
 
+scroll_me_0 : Css.Style
+scroll_me_0 =
+    Css.property "scroll-margin-inline-end" "0px"
+
+
+scroll_me_0_dot_5 : Css.Style
+scroll_me_0_dot_5 =
+    Css.property "scroll-margin-inline-end" "0.125rem"
+
+
+scroll_me_1 : Css.Style
+scroll_me_1 =
+    Css.property "scroll-margin-inline-end" "0.25rem"
+
+
+scroll_me_10 : Css.Style
+scroll_me_10 =
+    Css.property "scroll-margin-inline-end" "2.5rem"
+
+
+scroll_me_11 : Css.Style
+scroll_me_11 =
+    Css.property "scroll-margin-inline-end" "2.75rem"
+
+
+scroll_me_12 : Css.Style
+scroll_me_12 =
+    Css.property "scroll-margin-inline-end" "3rem"
+
+
+scroll_me_14 : Css.Style
+scroll_me_14 =
+    Css.property "scroll-margin-inline-end" "3.5rem"
+
+
+scroll_me_16 : Css.Style
+scroll_me_16 =
+    Css.property "scroll-margin-inline-end" "4rem"
+
+
+scroll_me_1_dot_5 : Css.Style
+scroll_me_1_dot_5 =
+    Css.property "scroll-margin-inline-end" "0.375rem"
+
+
+scroll_me_2 : Css.Style
+scroll_me_2 =
+    Css.property "scroll-margin-inline-end" "0.5rem"
+
+
+scroll_me_20 : Css.Style
+scroll_me_20 =
+    Css.property "scroll-margin-inline-end" "5rem"
+
+
+scroll_me_24 : Css.Style
+scroll_me_24 =
+    Css.property "scroll-margin-inline-end" "6rem"
+
+
+scroll_me_28 : Css.Style
+scroll_me_28 =
+    Css.property "scroll-margin-inline-end" "7rem"
+
+
+scroll_me_2_dot_5 : Css.Style
+scroll_me_2_dot_5 =
+    Css.property "scroll-margin-inline-end" "0.625rem"
+
+
+scroll_me_3 : Css.Style
+scroll_me_3 =
+    Css.property "scroll-margin-inline-end" "0.75rem"
+
+
+scroll_me_32 : Css.Style
+scroll_me_32 =
+    Css.property "scroll-margin-inline-end" "8rem"
+
+
+scroll_me_36 : Css.Style
+scroll_me_36 =
+    Css.property "scroll-margin-inline-end" "9rem"
+
+
+scroll_me_3_dot_5 : Css.Style
+scroll_me_3_dot_5 =
+    Css.property "scroll-margin-inline-end" "0.875rem"
+
+
+scroll_me_4 : Css.Style
+scroll_me_4 =
+    Css.property "scroll-margin-inline-end" "1rem"
+
+
+scroll_me_40 : Css.Style
+scroll_me_40 =
+    Css.property "scroll-margin-inline-end" "10rem"
+
+
+scroll_me_44 : Css.Style
+scroll_me_44 =
+    Css.property "scroll-margin-inline-end" "11rem"
+
+
+scroll_me_48 : Css.Style
+scroll_me_48 =
+    Css.property "scroll-margin-inline-end" "12rem"
+
+
+scroll_me_5 : Css.Style
+scroll_me_5 =
+    Css.property "scroll-margin-inline-end" "1.25rem"
+
+
+scroll_me_52 : Css.Style
+scroll_me_52 =
+    Css.property "scroll-margin-inline-end" "13rem"
+
+
+scroll_me_56 : Css.Style
+scroll_me_56 =
+    Css.property "scroll-margin-inline-end" "14rem"
+
+
+scroll_me_6 : Css.Style
+scroll_me_6 =
+    Css.property "scroll-margin-inline-end" "1.5rem"
+
+
+scroll_me_60 : Css.Style
+scroll_me_60 =
+    Css.property "scroll-margin-inline-end" "15rem"
+
+
+scroll_me_64 : Css.Style
+scroll_me_64 =
+    Css.property "scroll-margin-inline-end" "16rem"
+
+
+scroll_me_7 : Css.Style
+scroll_me_7 =
+    Css.property "scroll-margin-inline-end" "1.75rem"
+
+
+scroll_me_72 : Css.Style
+scroll_me_72 =
+    Css.property "scroll-margin-inline-end" "18rem"
+
+
+scroll_me_8 : Css.Style
+scroll_me_8 =
+    Css.property "scroll-margin-inline-end" "2rem"
+
+
+scroll_me_80 : Css.Style
+scroll_me_80 =
+    Css.property "scroll-margin-inline-end" "20rem"
+
+
+scroll_me_9 : Css.Style
+scroll_me_9 =
+    Css.property "scroll-margin-inline-end" "2.25rem"
+
+
+scroll_me_96 : Css.Style
+scroll_me_96 =
+    Css.property "scroll-margin-inline-end" "24rem"
+
+
+scroll_me_px : Css.Style
+scroll_me_px =
+    Css.property "scroll-margin-inline-end" "1px"
+
+
 scroll_ml_0 : Css.Style
 scroll_ml_0 =
     Css.property "scroll-margin-left" "0px"
@@ -20733,6 +23197,181 @@ scroll_mr_96 =
 scroll_mr_px : Css.Style
 scroll_mr_px =
     Css.property "scroll-margin-right" "1px"
+
+
+scroll_ms_0 : Css.Style
+scroll_ms_0 =
+    Css.property "scroll-margin-inline-start" "0px"
+
+
+scroll_ms_0_dot_5 : Css.Style
+scroll_ms_0_dot_5 =
+    Css.property "scroll-margin-inline-start" "0.125rem"
+
+
+scroll_ms_1 : Css.Style
+scroll_ms_1 =
+    Css.property "scroll-margin-inline-start" "0.25rem"
+
+
+scroll_ms_10 : Css.Style
+scroll_ms_10 =
+    Css.property "scroll-margin-inline-start" "2.5rem"
+
+
+scroll_ms_11 : Css.Style
+scroll_ms_11 =
+    Css.property "scroll-margin-inline-start" "2.75rem"
+
+
+scroll_ms_12 : Css.Style
+scroll_ms_12 =
+    Css.property "scroll-margin-inline-start" "3rem"
+
+
+scroll_ms_14 : Css.Style
+scroll_ms_14 =
+    Css.property "scroll-margin-inline-start" "3.5rem"
+
+
+scroll_ms_16 : Css.Style
+scroll_ms_16 =
+    Css.property "scroll-margin-inline-start" "4rem"
+
+
+scroll_ms_1_dot_5 : Css.Style
+scroll_ms_1_dot_5 =
+    Css.property "scroll-margin-inline-start" "0.375rem"
+
+
+scroll_ms_2 : Css.Style
+scroll_ms_2 =
+    Css.property "scroll-margin-inline-start" "0.5rem"
+
+
+scroll_ms_20 : Css.Style
+scroll_ms_20 =
+    Css.property "scroll-margin-inline-start" "5rem"
+
+
+scroll_ms_24 : Css.Style
+scroll_ms_24 =
+    Css.property "scroll-margin-inline-start" "6rem"
+
+
+scroll_ms_28 : Css.Style
+scroll_ms_28 =
+    Css.property "scroll-margin-inline-start" "7rem"
+
+
+scroll_ms_2_dot_5 : Css.Style
+scroll_ms_2_dot_5 =
+    Css.property "scroll-margin-inline-start" "0.625rem"
+
+
+scroll_ms_3 : Css.Style
+scroll_ms_3 =
+    Css.property "scroll-margin-inline-start" "0.75rem"
+
+
+scroll_ms_32 : Css.Style
+scroll_ms_32 =
+    Css.property "scroll-margin-inline-start" "8rem"
+
+
+scroll_ms_36 : Css.Style
+scroll_ms_36 =
+    Css.property "scroll-margin-inline-start" "9rem"
+
+
+scroll_ms_3_dot_5 : Css.Style
+scroll_ms_3_dot_5 =
+    Css.property "scroll-margin-inline-start" "0.875rem"
+
+
+scroll_ms_4 : Css.Style
+scroll_ms_4 =
+    Css.property "scroll-margin-inline-start" "1rem"
+
+
+scroll_ms_40 : Css.Style
+scroll_ms_40 =
+    Css.property "scroll-margin-inline-start" "10rem"
+
+
+scroll_ms_44 : Css.Style
+scroll_ms_44 =
+    Css.property "scroll-margin-inline-start" "11rem"
+
+
+scroll_ms_48 : Css.Style
+scroll_ms_48 =
+    Css.property "scroll-margin-inline-start" "12rem"
+
+
+scroll_ms_5 : Css.Style
+scroll_ms_5 =
+    Css.property "scroll-margin-inline-start" "1.25rem"
+
+
+scroll_ms_52 : Css.Style
+scroll_ms_52 =
+    Css.property "scroll-margin-inline-start" "13rem"
+
+
+scroll_ms_56 : Css.Style
+scroll_ms_56 =
+    Css.property "scroll-margin-inline-start" "14rem"
+
+
+scroll_ms_6 : Css.Style
+scroll_ms_6 =
+    Css.property "scroll-margin-inline-start" "1.5rem"
+
+
+scroll_ms_60 : Css.Style
+scroll_ms_60 =
+    Css.property "scroll-margin-inline-start" "15rem"
+
+
+scroll_ms_64 : Css.Style
+scroll_ms_64 =
+    Css.property "scroll-margin-inline-start" "16rem"
+
+
+scroll_ms_7 : Css.Style
+scroll_ms_7 =
+    Css.property "scroll-margin-inline-start" "1.75rem"
+
+
+scroll_ms_72 : Css.Style
+scroll_ms_72 =
+    Css.property "scroll-margin-inline-start" "18rem"
+
+
+scroll_ms_8 : Css.Style
+scroll_ms_8 =
+    Css.property "scroll-margin-inline-start" "2rem"
+
+
+scroll_ms_80 : Css.Style
+scroll_ms_80 =
+    Css.property "scroll-margin-inline-start" "20rem"
+
+
+scroll_ms_9 : Css.Style
+scroll_ms_9 =
+    Css.property "scroll-margin-inline-start" "2.25rem"
+
+
+scroll_ms_96 : Css.Style
+scroll_ms_96 =
+    Css.property "scroll-margin-inline-start" "24rem"
+
+
+scroll_ms_px : Css.Style
+scroll_ms_px =
+    Css.property "scroll-margin-inline-start" "1px"
 
 
 scroll_mt_0 : Css.Style
@@ -21820,6 +24459,181 @@ scroll_pb_px =
     Css.property "scroll-padding-bottom" "1px"
 
 
+scroll_pe_0 : Css.Style
+scroll_pe_0 =
+    Css.property "scroll-padding-inline-end" "0px"
+
+
+scroll_pe_0_dot_5 : Css.Style
+scroll_pe_0_dot_5 =
+    Css.property "scroll-padding-inline-end" "0.125rem"
+
+
+scroll_pe_1 : Css.Style
+scroll_pe_1 =
+    Css.property "scroll-padding-inline-end" "0.25rem"
+
+
+scroll_pe_10 : Css.Style
+scroll_pe_10 =
+    Css.property "scroll-padding-inline-end" "2.5rem"
+
+
+scroll_pe_11 : Css.Style
+scroll_pe_11 =
+    Css.property "scroll-padding-inline-end" "2.75rem"
+
+
+scroll_pe_12 : Css.Style
+scroll_pe_12 =
+    Css.property "scroll-padding-inline-end" "3rem"
+
+
+scroll_pe_14 : Css.Style
+scroll_pe_14 =
+    Css.property "scroll-padding-inline-end" "3.5rem"
+
+
+scroll_pe_16 : Css.Style
+scroll_pe_16 =
+    Css.property "scroll-padding-inline-end" "4rem"
+
+
+scroll_pe_1_dot_5 : Css.Style
+scroll_pe_1_dot_5 =
+    Css.property "scroll-padding-inline-end" "0.375rem"
+
+
+scroll_pe_2 : Css.Style
+scroll_pe_2 =
+    Css.property "scroll-padding-inline-end" "0.5rem"
+
+
+scroll_pe_20 : Css.Style
+scroll_pe_20 =
+    Css.property "scroll-padding-inline-end" "5rem"
+
+
+scroll_pe_24 : Css.Style
+scroll_pe_24 =
+    Css.property "scroll-padding-inline-end" "6rem"
+
+
+scroll_pe_28 : Css.Style
+scroll_pe_28 =
+    Css.property "scroll-padding-inline-end" "7rem"
+
+
+scroll_pe_2_dot_5 : Css.Style
+scroll_pe_2_dot_5 =
+    Css.property "scroll-padding-inline-end" "0.625rem"
+
+
+scroll_pe_3 : Css.Style
+scroll_pe_3 =
+    Css.property "scroll-padding-inline-end" "0.75rem"
+
+
+scroll_pe_32 : Css.Style
+scroll_pe_32 =
+    Css.property "scroll-padding-inline-end" "8rem"
+
+
+scroll_pe_36 : Css.Style
+scroll_pe_36 =
+    Css.property "scroll-padding-inline-end" "9rem"
+
+
+scroll_pe_3_dot_5 : Css.Style
+scroll_pe_3_dot_5 =
+    Css.property "scroll-padding-inline-end" "0.875rem"
+
+
+scroll_pe_4 : Css.Style
+scroll_pe_4 =
+    Css.property "scroll-padding-inline-end" "1rem"
+
+
+scroll_pe_40 : Css.Style
+scroll_pe_40 =
+    Css.property "scroll-padding-inline-end" "10rem"
+
+
+scroll_pe_44 : Css.Style
+scroll_pe_44 =
+    Css.property "scroll-padding-inline-end" "11rem"
+
+
+scroll_pe_48 : Css.Style
+scroll_pe_48 =
+    Css.property "scroll-padding-inline-end" "12rem"
+
+
+scroll_pe_5 : Css.Style
+scroll_pe_5 =
+    Css.property "scroll-padding-inline-end" "1.25rem"
+
+
+scroll_pe_52 : Css.Style
+scroll_pe_52 =
+    Css.property "scroll-padding-inline-end" "13rem"
+
+
+scroll_pe_56 : Css.Style
+scroll_pe_56 =
+    Css.property "scroll-padding-inline-end" "14rem"
+
+
+scroll_pe_6 : Css.Style
+scroll_pe_6 =
+    Css.property "scroll-padding-inline-end" "1.5rem"
+
+
+scroll_pe_60 : Css.Style
+scroll_pe_60 =
+    Css.property "scroll-padding-inline-end" "15rem"
+
+
+scroll_pe_64 : Css.Style
+scroll_pe_64 =
+    Css.property "scroll-padding-inline-end" "16rem"
+
+
+scroll_pe_7 : Css.Style
+scroll_pe_7 =
+    Css.property "scroll-padding-inline-end" "1.75rem"
+
+
+scroll_pe_72 : Css.Style
+scroll_pe_72 =
+    Css.property "scroll-padding-inline-end" "18rem"
+
+
+scroll_pe_8 : Css.Style
+scroll_pe_8 =
+    Css.property "scroll-padding-inline-end" "2rem"
+
+
+scroll_pe_80 : Css.Style
+scroll_pe_80 =
+    Css.property "scroll-padding-inline-end" "20rem"
+
+
+scroll_pe_9 : Css.Style
+scroll_pe_9 =
+    Css.property "scroll-padding-inline-end" "2.25rem"
+
+
+scroll_pe_96 : Css.Style
+scroll_pe_96 =
+    Css.property "scroll-padding-inline-end" "24rem"
+
+
+scroll_pe_px : Css.Style
+scroll_pe_px =
+    Css.property "scroll-padding-inline-end" "1px"
+
+
 scroll_pl_0 : Css.Style
 scroll_pl_0 =
     Css.property "scroll-padding-left" "0px"
@@ -22168,6 +24982,181 @@ scroll_pr_96 =
 scroll_pr_px : Css.Style
 scroll_pr_px =
     Css.property "scroll-padding-right" "1px"
+
+
+scroll_ps_0 : Css.Style
+scroll_ps_0 =
+    Css.property "scroll-padding-inline-start" "0px"
+
+
+scroll_ps_0_dot_5 : Css.Style
+scroll_ps_0_dot_5 =
+    Css.property "scroll-padding-inline-start" "0.125rem"
+
+
+scroll_ps_1 : Css.Style
+scroll_ps_1 =
+    Css.property "scroll-padding-inline-start" "0.25rem"
+
+
+scroll_ps_10 : Css.Style
+scroll_ps_10 =
+    Css.property "scroll-padding-inline-start" "2.5rem"
+
+
+scroll_ps_11 : Css.Style
+scroll_ps_11 =
+    Css.property "scroll-padding-inline-start" "2.75rem"
+
+
+scroll_ps_12 : Css.Style
+scroll_ps_12 =
+    Css.property "scroll-padding-inline-start" "3rem"
+
+
+scroll_ps_14 : Css.Style
+scroll_ps_14 =
+    Css.property "scroll-padding-inline-start" "3.5rem"
+
+
+scroll_ps_16 : Css.Style
+scroll_ps_16 =
+    Css.property "scroll-padding-inline-start" "4rem"
+
+
+scroll_ps_1_dot_5 : Css.Style
+scroll_ps_1_dot_5 =
+    Css.property "scroll-padding-inline-start" "0.375rem"
+
+
+scroll_ps_2 : Css.Style
+scroll_ps_2 =
+    Css.property "scroll-padding-inline-start" "0.5rem"
+
+
+scroll_ps_20 : Css.Style
+scroll_ps_20 =
+    Css.property "scroll-padding-inline-start" "5rem"
+
+
+scroll_ps_24 : Css.Style
+scroll_ps_24 =
+    Css.property "scroll-padding-inline-start" "6rem"
+
+
+scroll_ps_28 : Css.Style
+scroll_ps_28 =
+    Css.property "scroll-padding-inline-start" "7rem"
+
+
+scroll_ps_2_dot_5 : Css.Style
+scroll_ps_2_dot_5 =
+    Css.property "scroll-padding-inline-start" "0.625rem"
+
+
+scroll_ps_3 : Css.Style
+scroll_ps_3 =
+    Css.property "scroll-padding-inline-start" "0.75rem"
+
+
+scroll_ps_32 : Css.Style
+scroll_ps_32 =
+    Css.property "scroll-padding-inline-start" "8rem"
+
+
+scroll_ps_36 : Css.Style
+scroll_ps_36 =
+    Css.property "scroll-padding-inline-start" "9rem"
+
+
+scroll_ps_3_dot_5 : Css.Style
+scroll_ps_3_dot_5 =
+    Css.property "scroll-padding-inline-start" "0.875rem"
+
+
+scroll_ps_4 : Css.Style
+scroll_ps_4 =
+    Css.property "scroll-padding-inline-start" "1rem"
+
+
+scroll_ps_40 : Css.Style
+scroll_ps_40 =
+    Css.property "scroll-padding-inline-start" "10rem"
+
+
+scroll_ps_44 : Css.Style
+scroll_ps_44 =
+    Css.property "scroll-padding-inline-start" "11rem"
+
+
+scroll_ps_48 : Css.Style
+scroll_ps_48 =
+    Css.property "scroll-padding-inline-start" "12rem"
+
+
+scroll_ps_5 : Css.Style
+scroll_ps_5 =
+    Css.property "scroll-padding-inline-start" "1.25rem"
+
+
+scroll_ps_52 : Css.Style
+scroll_ps_52 =
+    Css.property "scroll-padding-inline-start" "13rem"
+
+
+scroll_ps_56 : Css.Style
+scroll_ps_56 =
+    Css.property "scroll-padding-inline-start" "14rem"
+
+
+scroll_ps_6 : Css.Style
+scroll_ps_6 =
+    Css.property "scroll-padding-inline-start" "1.5rem"
+
+
+scroll_ps_60 : Css.Style
+scroll_ps_60 =
+    Css.property "scroll-padding-inline-start" "15rem"
+
+
+scroll_ps_64 : Css.Style
+scroll_ps_64 =
+    Css.property "scroll-padding-inline-start" "16rem"
+
+
+scroll_ps_7 : Css.Style
+scroll_ps_7 =
+    Css.property "scroll-padding-inline-start" "1.75rem"
+
+
+scroll_ps_72 : Css.Style
+scroll_ps_72 =
+    Css.property "scroll-padding-inline-start" "18rem"
+
+
+scroll_ps_8 : Css.Style
+scroll_ps_8 =
+    Css.property "scroll-padding-inline-start" "2rem"
+
+
+scroll_ps_80 : Css.Style
+scroll_ps_80 =
+    Css.property "scroll-padding-inline-start" "20rem"
+
+
+scroll_ps_9 : Css.Style
+scroll_ps_9 =
+    Css.property "scroll-padding-inline-start" "2.25rem"
+
+
+scroll_ps_96 : Css.Style
+scroll_ps_96 =
+    Css.property "scroll-padding-inline-start" "24rem"
+
+
+scroll_ps_px : Css.Style
+scroll_ps_px =
+    Css.property "scroll-padding-inline-start" "1px"
 
 
 scroll_pt_0 : Css.Style
@@ -24033,6 +27022,221 @@ stacked_fractions =
         ]
 
 
+start_0 : Css.Style
+start_0 =
+    Css.property "inset-inline-start" "0px"
+
+
+start_0_dot_5 : Css.Style
+start_0_dot_5 =
+    Css.property "inset-inline-start" "0.125rem"
+
+
+start_1 : Css.Style
+start_1 =
+    Css.property "inset-inline-start" "0.25rem"
+
+
+start_10 : Css.Style
+start_10 =
+    Css.property "inset-inline-start" "2.5rem"
+
+
+start_11 : Css.Style
+start_11 =
+    Css.property "inset-inline-start" "2.75rem"
+
+
+start_12 : Css.Style
+start_12 =
+    Css.property "inset-inline-start" "3rem"
+
+
+start_14 : Css.Style
+start_14 =
+    Css.property "inset-inline-start" "3.5rem"
+
+
+start_16 : Css.Style
+start_16 =
+    Css.property "inset-inline-start" "4rem"
+
+
+start_1_dot_5 : Css.Style
+start_1_dot_5 =
+    Css.property "inset-inline-start" "0.375rem"
+
+
+start_1over2 : Css.Style
+start_1over2 =
+    Css.property "inset-inline-start" "50%"
+
+
+start_1over3 : Css.Style
+start_1over3 =
+    Css.property "inset-inline-start" "33.333333%"
+
+
+start_1over4 : Css.Style
+start_1over4 =
+    Css.property "inset-inline-start" "25%"
+
+
+start_2 : Css.Style
+start_2 =
+    Css.property "inset-inline-start" "0.5rem"
+
+
+start_20 : Css.Style
+start_20 =
+    Css.property "inset-inline-start" "5rem"
+
+
+start_24 : Css.Style
+start_24 =
+    Css.property "inset-inline-start" "6rem"
+
+
+start_28 : Css.Style
+start_28 =
+    Css.property "inset-inline-start" "7rem"
+
+
+start_2_dot_5 : Css.Style
+start_2_dot_5 =
+    Css.property "inset-inline-start" "0.625rem"
+
+
+start_2over3 : Css.Style
+start_2over3 =
+    Css.property "inset-inline-start" "66.666667%"
+
+
+start_2over4 : Css.Style
+start_2over4 =
+    Css.property "inset-inline-start" "50%"
+
+
+start_3 : Css.Style
+start_3 =
+    Css.property "inset-inline-start" "0.75rem"
+
+
+start_32 : Css.Style
+start_32 =
+    Css.property "inset-inline-start" "8rem"
+
+
+start_36 : Css.Style
+start_36 =
+    Css.property "inset-inline-start" "9rem"
+
+
+start_3_dot_5 : Css.Style
+start_3_dot_5 =
+    Css.property "inset-inline-start" "0.875rem"
+
+
+start_3over4 : Css.Style
+start_3over4 =
+    Css.property "inset-inline-start" "75%"
+
+
+start_4 : Css.Style
+start_4 =
+    Css.property "inset-inline-start" "1rem"
+
+
+start_40 : Css.Style
+start_40 =
+    Css.property "inset-inline-start" "10rem"
+
+
+start_44 : Css.Style
+start_44 =
+    Css.property "inset-inline-start" "11rem"
+
+
+start_48 : Css.Style
+start_48 =
+    Css.property "inset-inline-start" "12rem"
+
+
+start_5 : Css.Style
+start_5 =
+    Css.property "inset-inline-start" "1.25rem"
+
+
+start_52 : Css.Style
+start_52 =
+    Css.property "inset-inline-start" "13rem"
+
+
+start_56 : Css.Style
+start_56 =
+    Css.property "inset-inline-start" "14rem"
+
+
+start_6 : Css.Style
+start_6 =
+    Css.property "inset-inline-start" "1.5rem"
+
+
+start_60 : Css.Style
+start_60 =
+    Css.property "inset-inline-start" "15rem"
+
+
+start_64 : Css.Style
+start_64 =
+    Css.property "inset-inline-start" "16rem"
+
+
+start_7 : Css.Style
+start_7 =
+    Css.property "inset-inline-start" "1.75rem"
+
+
+start_72 : Css.Style
+start_72 =
+    Css.property "inset-inline-start" "18rem"
+
+
+start_8 : Css.Style
+start_8 =
+    Css.property "inset-inline-start" "2rem"
+
+
+start_80 : Css.Style
+start_80 =
+    Css.property "inset-inline-start" "20rem"
+
+
+start_9 : Css.Style
+start_9 =
+    Css.property "inset-inline-start" "2.25rem"
+
+
+start_96 : Css.Style
+start_96 =
+    Css.property "inset-inline-start" "24rem"
+
+
+start_auto : Css.Style
+start_auto =
+    Css.property "inset-inline-start" "auto"
+
+
+start_full : Css.Style
+start_full =
+    Css.property "inset-inline-start" "100%"
+
+
+start_px : Css.Style
+start_px =
+    Css.property "inset-inline-start" "1px"
+
+
 static : Css.Style
 static =
     Css.property "position" "static"
@@ -24056,6 +27260,11 @@ stroke_1 =
 stroke_2 : Css.Style
 stroke_2 =
     Css.property "stroke-width" "2"
+
+
+stroke_none : Css.Style
+stroke_none =
+    Css.property "stroke" "none"
 
 
 subpixel_antialiased : Css.Style
@@ -24346,6 +27555,111 @@ text_xs =
         [ Css.property "font-size" "0.75rem"
         , Css.property "line-height" "1rem"
         ]
+
+
+to_0pct : Css.Style
+to_0pct =
+    Css.property "--tw-gradient-to-position" "0%"
+
+
+to_100pct : Css.Style
+to_100pct =
+    Css.property "--tw-gradient-to-position" "100%"
+
+
+to_10pct : Css.Style
+to_10pct =
+    Css.property "--tw-gradient-to-position" "10%"
+
+
+to_15pct : Css.Style
+to_15pct =
+    Css.property "--tw-gradient-to-position" "15%"
+
+
+to_20pct : Css.Style
+to_20pct =
+    Css.property "--tw-gradient-to-position" "20%"
+
+
+to_25pct : Css.Style
+to_25pct =
+    Css.property "--tw-gradient-to-position" "25%"
+
+
+to_30pct : Css.Style
+to_30pct =
+    Css.property "--tw-gradient-to-position" "30%"
+
+
+to_35pct : Css.Style
+to_35pct =
+    Css.property "--tw-gradient-to-position" "35%"
+
+
+to_40pct : Css.Style
+to_40pct =
+    Css.property "--tw-gradient-to-position" "40%"
+
+
+to_45pct : Css.Style
+to_45pct =
+    Css.property "--tw-gradient-to-position" "45%"
+
+
+to_50pct : Css.Style
+to_50pct =
+    Css.property "--tw-gradient-to-position" "50%"
+
+
+to_55pct : Css.Style
+to_55pct =
+    Css.property "--tw-gradient-to-position" "55%"
+
+
+to_5pct : Css.Style
+to_5pct =
+    Css.property "--tw-gradient-to-position" "5%"
+
+
+to_60pct : Css.Style
+to_60pct =
+    Css.property "--tw-gradient-to-position" "60%"
+
+
+to_65pct : Css.Style
+to_65pct =
+    Css.property "--tw-gradient-to-position" "65%"
+
+
+to_70pct : Css.Style
+to_70pct =
+    Css.property "--tw-gradient-to-position" "70%"
+
+
+to_75pct : Css.Style
+to_75pct =
+    Css.property "--tw-gradient-to-position" "75%"
+
+
+to_80pct : Css.Style
+to_80pct =
+    Css.property "--tw-gradient-to-position" "80%"
+
+
+to_85pct : Css.Style
+to_85pct =
+    Css.property "--tw-gradient-to-position" "85%"
+
+
+to_90pct : Css.Style
+to_90pct =
+    Css.property "--tw-gradient-to-position" "90%"
+
+
+to_95pct : Css.Style
+to_95pct =
+    Css.property "--tw-gradient-to-position" "95%"
 
 
 top_0 : Css.Style
@@ -25464,6 +28778,111 @@ uppercase =
     Css.property "text-transform" "uppercase"
 
 
+via_0pct : Css.Style
+via_0pct =
+    Css.property "--tw-gradient-via-position" "0%"
+
+
+via_100pct : Css.Style
+via_100pct =
+    Css.property "--tw-gradient-via-position" "100%"
+
+
+via_10pct : Css.Style
+via_10pct =
+    Css.property "--tw-gradient-via-position" "10%"
+
+
+via_15pct : Css.Style
+via_15pct =
+    Css.property "--tw-gradient-via-position" "15%"
+
+
+via_20pct : Css.Style
+via_20pct =
+    Css.property "--tw-gradient-via-position" "20%"
+
+
+via_25pct : Css.Style
+via_25pct =
+    Css.property "--tw-gradient-via-position" "25%"
+
+
+via_30pct : Css.Style
+via_30pct =
+    Css.property "--tw-gradient-via-position" "30%"
+
+
+via_35pct : Css.Style
+via_35pct =
+    Css.property "--tw-gradient-via-position" "35%"
+
+
+via_40pct : Css.Style
+via_40pct =
+    Css.property "--tw-gradient-via-position" "40%"
+
+
+via_45pct : Css.Style
+via_45pct =
+    Css.property "--tw-gradient-via-position" "45%"
+
+
+via_50pct : Css.Style
+via_50pct =
+    Css.property "--tw-gradient-via-position" "50%"
+
+
+via_55pct : Css.Style
+via_55pct =
+    Css.property "--tw-gradient-via-position" "55%"
+
+
+via_5pct : Css.Style
+via_5pct =
+    Css.property "--tw-gradient-via-position" "5%"
+
+
+via_60pct : Css.Style
+via_60pct =
+    Css.property "--tw-gradient-via-position" "60%"
+
+
+via_65pct : Css.Style
+via_65pct =
+    Css.property "--tw-gradient-via-position" "65%"
+
+
+via_70pct : Css.Style
+via_70pct =
+    Css.property "--tw-gradient-via-position" "70%"
+
+
+via_75pct : Css.Style
+via_75pct =
+    Css.property "--tw-gradient-via-position" "75%"
+
+
+via_80pct : Css.Style
+via_80pct =
+    Css.property "--tw-gradient-via-position" "80%"
+
+
+via_85pct : Css.Style
+via_85pct =
+    Css.property "--tw-gradient-via-position" "85%"
+
+
+via_90pct : Css.Style
+via_90pct =
+    Css.property "--tw-gradient-via-position" "90%"
+
+
+via_95pct : Css.Style
+via_95pct =
+    Css.property "--tw-gradient-via-position" "95%"
+
+
 visible : Css.Style
 visible =
     Css.property "visibility" "visible"
@@ -25804,6 +29223,11 @@ w_screen =
     Css.property "width" "100vw"
 
 
+whitespace_break_spaces : Css.Style
+whitespace_break_spaces =
+    Css.property "white-space" "break-spaces"
+
+
 whitespace_normal : Css.Style
 whitespace_normal =
     Css.property "white-space" "normal"
@@ -25904,6 +29328,11 @@ border_color color =
     Tw.propertyWithColor "border-color" (\c -> c) (Just "--tw-border-opacity") color
 
 
+border_e_color : Color -> Css.Style
+border_e_color color =
+    Tw.propertyWithColor "border-inline-end-color" (\c -> c) (Just "--tw-border-opacity") color
+
+
 border_l_color : Color -> Css.Style
 border_l_color color =
     Tw.propertyWithColor "border-left-color" (\c -> c) (Just "--tw-border-opacity") color
@@ -25912,6 +29341,11 @@ border_l_color color =
 border_r_color : Color -> Css.Style
 border_r_color color =
     Tw.propertyWithColor "border-right-color" (\c -> c) (Just "--tw-border-opacity") color
+
+
+border_s_color : Color -> Css.Style
+border_s_color color =
+    Tw.propertyWithColor "border-inline-start-color" (\c -> c) (Just "--tw-border-opacity") color
 
 
 border_t_color : Color -> Css.Style
@@ -25962,9 +29396,11 @@ fill_color color =
 from_color : Color -> Css.Style
 from_color color =
     Css.batch
-        [ Tw.propertyWithColor "--tw-gradient-from" (\c -> c) Nothing color
+        [ Tw.propertyWithColor "--tw-gradient-from" (\c -> "" ++ c ++ " var(--tw-gradient-from-position)") Nothing color
+        , Css.property "--tw-gradient-from-position" " "
         , Tw.withOpacity (Tw.Opacity "0") color
-            |> Tw.propertyWithColor "--tw-gradient-to" (\c -> c) Nothing
+            |> Tw.propertyWithColor "--tw-gradient-to" (\c -> "" ++ c ++ "  var(--tw-gradient-from-position)") Nothing
+        , Css.property "--tw-gradient-to-position" " "
         , Css.property "--tw-gradient-stops" "var(--tw-gradient-from), var(--tw-gradient-to)"
         ]
 
@@ -26011,13 +29447,18 @@ text_color color =
 
 to_color : Color -> Css.Style
 to_color color =
-    Tw.propertyWithColor "--tw-gradient-to" (\c -> c) Nothing color
+    Css.batch
+        [ Tw.propertyWithColor "--tw-gradient-to" (\c -> "" ++ c ++ " var(--tw-gradient-to-position)") Nothing color
+        , Css.property "--tw-gradient-to-position" " "
+        ]
 
 
 via_color : Color -> Css.Style
 via_color color =
     Css.batch
-        [ Tw.withOpacity (Tw.Opacity "0") color
-            |> Tw.propertyWithColor "--tw-gradient-to" (\c -> c) Nothing
-        , Tw.propertyWithColor "--tw-gradient-stops" (\c -> "var(--tw-gradient-from), " ++ c ++ ", var(--tw-gradient-to)") Nothing color
+        [ Css.property "--tw-gradient-via-position" " "
+        , Tw.withOpacity (Tw.Opacity "0") color
+            |> Tw.propertyWithColor "--tw-gradient-to" (\c -> "" ++ c ++ "  var(--tw-gradient-to-position)") Nothing
+        , Css.property "--tw-gradient-to-position" " "
+        , Tw.propertyWithColor "--tw-gradient-stops" (\c -> "var(--tw-gradient-from), " ++ c ++ " var(--tw-gradient-via-position), var(--tw-gradient-to)") Nothing color
         ]

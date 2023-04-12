@@ -15,6 +15,7 @@ module Tailwind.Theme exposing
     , slate_700
     , slate_800
     , slate_900
+    , slate_950
     , gray_50
     , gray_100
     , gray_200
@@ -25,6 +26,7 @@ module Tailwind.Theme exposing
     , gray_700
     , gray_800
     , gray_900
+    , gray_950
     , zinc_50
     , zinc_100
     , zinc_200
@@ -35,6 +37,7 @@ module Tailwind.Theme exposing
     , zinc_700
     , zinc_800
     , zinc_900
+    , zinc_950
     , neutral_50
     , neutral_100
     , neutral_200
@@ -45,6 +48,7 @@ module Tailwind.Theme exposing
     , neutral_700
     , neutral_800
     , neutral_900
+    , neutral_950
     , stone_50
     , stone_100
     , stone_200
@@ -55,6 +59,7 @@ module Tailwind.Theme exposing
     , stone_700
     , stone_800
     , stone_900
+    , stone_950
     , red_50
     , red_100
     , red_200
@@ -65,6 +70,7 @@ module Tailwind.Theme exposing
     , red_700
     , red_800
     , red_900
+    , red_950
     , orange_50
     , orange_100
     , orange_200
@@ -75,6 +81,7 @@ module Tailwind.Theme exposing
     , orange_700
     , orange_800
     , orange_900
+    , orange_950
     , amber_50
     , amber_100
     , amber_200
@@ -85,6 +92,7 @@ module Tailwind.Theme exposing
     , amber_700
     , amber_800
     , amber_900
+    , amber_950
     , yellow_50
     , yellow_100
     , yellow_200
@@ -95,6 +103,7 @@ module Tailwind.Theme exposing
     , yellow_700
     , yellow_800
     , yellow_900
+    , yellow_950
     , lime_50
     , lime_100
     , lime_200
@@ -105,6 +114,7 @@ module Tailwind.Theme exposing
     , lime_700
     , lime_800
     , lime_900
+    , lime_950
     , green_50
     , green_100
     , green_200
@@ -115,6 +125,7 @@ module Tailwind.Theme exposing
     , green_700
     , green_800
     , green_900
+    , green_950
     , emerald_50
     , emerald_100
     , emerald_200
@@ -125,6 +136,7 @@ module Tailwind.Theme exposing
     , emerald_700
     , emerald_800
     , emerald_900
+    , emerald_950
     , teal_50
     , teal_100
     , teal_200
@@ -135,6 +147,7 @@ module Tailwind.Theme exposing
     , teal_700
     , teal_800
     , teal_900
+    , teal_950
     , cyan_50
     , cyan_100
     , cyan_200
@@ -145,6 +158,7 @@ module Tailwind.Theme exposing
     , cyan_700
     , cyan_800
     , cyan_900
+    , cyan_950
     , sky_50
     , sky_100
     , sky_200
@@ -155,6 +169,7 @@ module Tailwind.Theme exposing
     , sky_700
     , sky_800
     , sky_900
+    , sky_950
     , blue_50
     , blue_100
     , blue_200
@@ -165,6 +180,7 @@ module Tailwind.Theme exposing
     , blue_700
     , blue_800
     , blue_900
+    , blue_950
     , indigo_50
     , indigo_100
     , indigo_200
@@ -175,6 +191,7 @@ module Tailwind.Theme exposing
     , indigo_700
     , indigo_800
     , indigo_900
+    , indigo_950
     , violet_50
     , violet_100
     , violet_200
@@ -185,6 +202,7 @@ module Tailwind.Theme exposing
     , violet_700
     , violet_800
     , violet_900
+    , violet_950
     , purple_50
     , purple_100
     , purple_200
@@ -195,6 +213,7 @@ module Tailwind.Theme exposing
     , purple_700
     , purple_800
     , purple_900
+    , purple_950
     , fuchsia_50
     , fuchsia_100
     , fuchsia_200
@@ -205,6 +224,7 @@ module Tailwind.Theme exposing
     , fuchsia_700
     , fuchsia_800
     , fuchsia_900
+    , fuchsia_950
     , pink_50
     , pink_100
     , pink_200
@@ -215,6 +235,7 @@ module Tailwind.Theme exposing
     , pink_700
     , pink_800
     , pink_900
+    , pink_950
     , rose_50
     , rose_100
     , rose_200
@@ -225,6 +246,7 @@ module Tailwind.Theme exposing
     , rose_700
     , rose_800
     , rose_900
+    , rose_950
     , Opacity
     , opacity0
     , opacity5
@@ -271,6 +293,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs slate_700
 @docs slate_800
 @docs slate_900
+@docs slate_950
 @docs gray_50
 @docs gray_100
 @docs gray_200
@@ -281,6 +304,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs gray_700
 @docs gray_800
 @docs gray_900
+@docs gray_950
 @docs zinc_50
 @docs zinc_100
 @docs zinc_200
@@ -291,6 +315,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs zinc_700
 @docs zinc_800
 @docs zinc_900
+@docs zinc_950
 @docs neutral_50
 @docs neutral_100
 @docs neutral_200
@@ -301,6 +326,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs neutral_700
 @docs neutral_800
 @docs neutral_900
+@docs neutral_950
 @docs stone_50
 @docs stone_100
 @docs stone_200
@@ -311,6 +337,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs stone_700
 @docs stone_800
 @docs stone_900
+@docs stone_950
 @docs red_50
 @docs red_100
 @docs red_200
@@ -321,6 +348,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs red_700
 @docs red_800
 @docs red_900
+@docs red_950
 @docs orange_50
 @docs orange_100
 @docs orange_200
@@ -331,6 +359,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs orange_700
 @docs orange_800
 @docs orange_900
+@docs orange_950
 @docs amber_50
 @docs amber_100
 @docs amber_200
@@ -341,6 +370,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs amber_700
 @docs amber_800
 @docs amber_900
+@docs amber_950
 @docs yellow_50
 @docs yellow_100
 @docs yellow_200
@@ -351,6 +381,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs yellow_700
 @docs yellow_800
 @docs yellow_900
+@docs yellow_950
 @docs lime_50
 @docs lime_100
 @docs lime_200
@@ -361,6 +392,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs lime_700
 @docs lime_800
 @docs lime_900
+@docs lime_950
 @docs green_50
 @docs green_100
 @docs green_200
@@ -371,6 +403,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs green_700
 @docs green_800
 @docs green_900
+@docs green_950
 @docs emerald_50
 @docs emerald_100
 @docs emerald_200
@@ -381,6 +414,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs emerald_700
 @docs emerald_800
 @docs emerald_900
+@docs emerald_950
 @docs teal_50
 @docs teal_100
 @docs teal_200
@@ -391,6 +425,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs teal_700
 @docs teal_800
 @docs teal_900
+@docs teal_950
 @docs cyan_50
 @docs cyan_100
 @docs cyan_200
@@ -401,6 +436,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs cyan_700
 @docs cyan_800
 @docs cyan_900
+@docs cyan_950
 @docs sky_50
 @docs sky_100
 @docs sky_200
@@ -411,6 +447,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs sky_700
 @docs sky_800
 @docs sky_900
+@docs sky_950
 @docs blue_50
 @docs blue_100
 @docs blue_200
@@ -421,6 +458,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs blue_700
 @docs blue_800
 @docs blue_900
+@docs blue_950
 @docs indigo_50
 @docs indigo_100
 @docs indigo_200
@@ -431,6 +469,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs indigo_700
 @docs indigo_800
 @docs indigo_900
+@docs indigo_950
 @docs violet_50
 @docs violet_100
 @docs violet_200
@@ -441,6 +480,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs violet_700
 @docs violet_800
 @docs violet_900
+@docs violet_950
 @docs purple_50
 @docs purple_100
 @docs purple_200
@@ -451,6 +491,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs purple_700
 @docs purple_800
 @docs purple_900
+@docs purple_950
 @docs fuchsia_50
 @docs fuchsia_100
 @docs fuchsia_200
@@ -461,6 +502,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs fuchsia_700
 @docs fuchsia_800
 @docs fuchsia_900
+@docs fuchsia_950
 @docs pink_50
 @docs pink_100
 @docs pink_200
@@ -471,6 +513,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs pink_700
 @docs pink_800
 @docs pink_900
+@docs pink_950
 @docs rose_50
 @docs rose_100
 @docs rose_200
@@ -481,6 +524,7 @@ If you want to extend the set of available colors or opacities, take a look [con
 @docs rose_700
 @docs rose_800
 @docs rose_900
+@docs rose_950
 
 
 ### Opacities
@@ -613,6 +657,11 @@ slate_900 =
     Tw.Color "rgb" "15" "23" "42" Tw.ViaVariable
 
 
+slate_950 : Color
+slate_950 =
+    Tw.Color "rgb" "2" "6" "23" Tw.ViaVariable
+
+
 gray_50 : Color
 gray_50 =
     Tw.Color "rgb" "249" "250" "251" Tw.ViaVariable
@@ -661,6 +710,11 @@ gray_800 =
 gray_900 : Color
 gray_900 =
     Tw.Color "rgb" "17" "24" "39" Tw.ViaVariable
+
+
+gray_950 : Color
+gray_950 =
+    Tw.Color "rgb" "3" "7" "18" Tw.ViaVariable
 
 
 zinc_50 : Color
@@ -713,6 +767,11 @@ zinc_900 =
     Tw.Color "rgb" "24" "24" "27" Tw.ViaVariable
 
 
+zinc_950 : Color
+zinc_950 =
+    Tw.Color "rgb" "9" "9" "11" Tw.ViaVariable
+
+
 neutral_50 : Color
 neutral_50 =
     Tw.Color "rgb" "250" "250" "250" Tw.ViaVariable
@@ -761,6 +820,11 @@ neutral_800 =
 neutral_900 : Color
 neutral_900 =
     Tw.Color "rgb" "23" "23" "23" Tw.ViaVariable
+
+
+neutral_950 : Color
+neutral_950 =
+    Tw.Color "rgb" "10" "10" "10" Tw.ViaVariable
 
 
 stone_50 : Color
@@ -813,6 +877,11 @@ stone_900 =
     Tw.Color "rgb" "28" "25" "23" Tw.ViaVariable
 
 
+stone_950 : Color
+stone_950 =
+    Tw.Color "rgb" "12" "10" "9" Tw.ViaVariable
+
+
 red_50 : Color
 red_50 =
     Tw.Color "rgb" "254" "242" "242" Tw.ViaVariable
@@ -861,6 +930,11 @@ red_800 =
 red_900 : Color
 red_900 =
     Tw.Color "rgb" "127" "29" "29" Tw.ViaVariable
+
+
+red_950 : Color
+red_950 =
+    Tw.Color "rgb" "69" "10" "10" Tw.ViaVariable
 
 
 orange_50 : Color
@@ -913,6 +987,11 @@ orange_900 =
     Tw.Color "rgb" "124" "45" "18" Tw.ViaVariable
 
 
+orange_950 : Color
+orange_950 =
+    Tw.Color "rgb" "67" "20" "7" Tw.ViaVariable
+
+
 amber_50 : Color
 amber_50 =
     Tw.Color "rgb" "255" "251" "235" Tw.ViaVariable
@@ -961,6 +1040,11 @@ amber_800 =
 amber_900 : Color
 amber_900 =
     Tw.Color "rgb" "120" "53" "15" Tw.ViaVariable
+
+
+amber_950 : Color
+amber_950 =
+    Tw.Color "rgb" "69" "26" "3" Tw.ViaVariable
 
 
 yellow_50 : Color
@@ -1013,6 +1097,11 @@ yellow_900 =
     Tw.Color "rgb" "113" "63" "18" Tw.ViaVariable
 
 
+yellow_950 : Color
+yellow_950 =
+    Tw.Color "rgb" "66" "32" "6" Tw.ViaVariable
+
+
 lime_50 : Color
 lime_50 =
     Tw.Color "rgb" "247" "254" "231" Tw.ViaVariable
@@ -1061,6 +1150,11 @@ lime_800 =
 lime_900 : Color
 lime_900 =
     Tw.Color "rgb" "54" "83" "20" Tw.ViaVariable
+
+
+lime_950 : Color
+lime_950 =
+    Tw.Color "rgb" "26" "46" "5" Tw.ViaVariable
 
 
 green_50 : Color
@@ -1113,6 +1207,11 @@ green_900 =
     Tw.Color "rgb" "20" "83" "45" Tw.ViaVariable
 
 
+green_950 : Color
+green_950 =
+    Tw.Color "rgb" "5" "46" "22" Tw.ViaVariable
+
+
 emerald_50 : Color
 emerald_50 =
     Tw.Color "rgb" "236" "253" "245" Tw.ViaVariable
@@ -1161,6 +1260,11 @@ emerald_800 =
 emerald_900 : Color
 emerald_900 =
     Tw.Color "rgb" "6" "78" "59" Tw.ViaVariable
+
+
+emerald_950 : Color
+emerald_950 =
+    Tw.Color "rgb" "2" "44" "34" Tw.ViaVariable
 
 
 teal_50 : Color
@@ -1213,6 +1317,11 @@ teal_900 =
     Tw.Color "rgb" "19" "78" "74" Tw.ViaVariable
 
 
+teal_950 : Color
+teal_950 =
+    Tw.Color "rgb" "4" "47" "46" Tw.ViaVariable
+
+
 cyan_50 : Color
 cyan_50 =
     Tw.Color "rgb" "236" "254" "255" Tw.ViaVariable
@@ -1261,6 +1370,11 @@ cyan_800 =
 cyan_900 : Color
 cyan_900 =
     Tw.Color "rgb" "22" "78" "99" Tw.ViaVariable
+
+
+cyan_950 : Color
+cyan_950 =
+    Tw.Color "rgb" "8" "51" "68" Tw.ViaVariable
 
 
 sky_50 : Color
@@ -1313,6 +1427,11 @@ sky_900 =
     Tw.Color "rgb" "12" "74" "110" Tw.ViaVariable
 
 
+sky_950 : Color
+sky_950 =
+    Tw.Color "rgb" "8" "47" "73" Tw.ViaVariable
+
+
 blue_50 : Color
 blue_50 =
     Tw.Color "rgb" "239" "246" "255" Tw.ViaVariable
@@ -1361,6 +1480,11 @@ blue_800 =
 blue_900 : Color
 blue_900 =
     Tw.Color "rgb" "30" "58" "138" Tw.ViaVariable
+
+
+blue_950 : Color
+blue_950 =
+    Tw.Color "rgb" "23" "37" "84" Tw.ViaVariable
 
 
 indigo_50 : Color
@@ -1413,6 +1537,11 @@ indigo_900 =
     Tw.Color "rgb" "49" "46" "129" Tw.ViaVariable
 
 
+indigo_950 : Color
+indigo_950 =
+    Tw.Color "rgb" "30" "27" "75" Tw.ViaVariable
+
+
 violet_50 : Color
 violet_50 =
     Tw.Color "rgb" "245" "243" "255" Tw.ViaVariable
@@ -1461,6 +1590,11 @@ violet_800 =
 violet_900 : Color
 violet_900 =
     Tw.Color "rgb" "76" "29" "149" Tw.ViaVariable
+
+
+violet_950 : Color
+violet_950 =
+    Tw.Color "rgb" "46" "16" "101" Tw.ViaVariable
 
 
 purple_50 : Color
@@ -1513,6 +1647,11 @@ purple_900 =
     Tw.Color "rgb" "88" "28" "135" Tw.ViaVariable
 
 
+purple_950 : Color
+purple_950 =
+    Tw.Color "rgb" "59" "7" "100" Tw.ViaVariable
+
+
 fuchsia_50 : Color
 fuchsia_50 =
     Tw.Color "rgb" "253" "244" "255" Tw.ViaVariable
@@ -1561,6 +1700,11 @@ fuchsia_800 =
 fuchsia_900 : Color
 fuchsia_900 =
     Tw.Color "rgb" "112" "26" "117" Tw.ViaVariable
+
+
+fuchsia_950 : Color
+fuchsia_950 =
+    Tw.Color "rgb" "74" "4" "78" Tw.ViaVariable
 
 
 pink_50 : Color
@@ -1613,6 +1757,11 @@ pink_900 =
     Tw.Color "rgb" "131" "24" "67" Tw.ViaVariable
 
 
+pink_950 : Color
+pink_950 =
+    Tw.Color "rgb" "80" "7" "36" Tw.ViaVariable
+
+
 rose_50 : Color
 rose_50 =
     Tw.Color "rgb" "255" "241" "242" Tw.ViaVariable
@@ -1661,6 +1810,11 @@ rose_800 =
 rose_900 : Color
 rose_900 =
     Tw.Color "rgb" "136" "19" "55" Tw.ViaVariable
+
+
+rose_950 : Color
+rose_950 =
+    Tw.Color "rgb" "76" "5" "25" Tw.ViaVariable
 
 
 opacity0 : Opacity
